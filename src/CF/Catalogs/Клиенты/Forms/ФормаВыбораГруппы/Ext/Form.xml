@@ -18,7 +18,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Выбрать группу</v8:content>
+						<v8:content>Выбрать группу Клиентов</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -124,7 +124,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -350,6 +350,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -395,97 +396,166 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="37">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="40">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="38"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="42"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="40">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="43">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="41"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="43">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="46">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="44"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="48"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Наименование" id="5">
-					<DataPath>Список.Description</DataPath>
-					<DefaultItem>true</DefaultItem>
+				<LabelField name="Ссылка" id="37">
+					<DataPath>Список.Ref</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Име</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Найменне</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Name</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Name</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Nazwa</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Nume</v8:content>
+							<v8:content>Группы клиентов</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>UK</v8:lang>
-							<v8:content>Найменування</v8:content>
+							<v8:content>Договору</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>ชื่อ</v8:content>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Grupy klientów</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>名称</v8:content>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Customer Groups</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>Атау</v8:content>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Клиентски групи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Kundengruppen</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="НаименованиеКонтекстноеМеню" id="6"/>
-					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="7"/>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="39"/>
 				</LabelField>
 				<LabelField name="ПроцентСкидки" id="8">
 					<DataPath>Список.ПроцентСкидки</DataPath>
-					<Width>12</Width>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>% скидки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>% Отстъпка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>% Скідкі</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>% Rabatt</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>% Discount</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>% Rabat</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>% Reducere</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>% Знижки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ส่วนลด%</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>％折扣</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ПроцентСкидкиКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ПроцентСкидкиРасширеннаяПодсказка" id="10"/>
 				</LabelField>
 				<LabelField name="ВидЦен" id="11">
 					<DataPath>Список.ВидЦен</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид Цен группы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Вижте Цена клиентска група</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Выгляд Коштаў кліентаў групы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Ansicht Preis Kundengruppe</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>View Price customer group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zobacz Cena grupa klientów</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Vezi Pret grup de clienți</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вид Цін клієнтів групи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ดูกลุ่มลูกค้าราคา</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>查看价格客户群</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="ВидЦенКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="ВидЦенРасширеннаяПодсказка" id="13"/>
 				</LabelField>
+				<LabelField name="СрокОплатыВДняхПоУмолчанию" id="49">
+					<DataPath>Список.СрокОплатыВДняхПоУмолчанию</DataPath>
+					<ContextMenu name="СрокОплатыВДняхПоУмолчаниюКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="СрокОплатыВДняхПоУмолчаниюРасширеннаяПодсказка" id="51"/>
+				</LabelField>
 				<LabelField name="Комментарий" id="14">
 					<DataPath>Список.Комментарий</DataPath>
+					<Height>1</Height>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="16"/>
 				</LabelField>

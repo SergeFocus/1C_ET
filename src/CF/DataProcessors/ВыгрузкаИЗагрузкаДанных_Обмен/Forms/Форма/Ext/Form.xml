@@ -220,7 +220,7 @@
 					<v8:content>การประมวลผลหน้า</v8:content>
 				</v8:item>
 			</Title>
-			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -834,6 +834,7 @@
 									<v8:content>หน้าดาวน์โหลด</v8:content>
 								</v8:item>
 							</Title>
+							<TitleFont ref="style:LargeTextFont" height="12" kind="StyleItem"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1329,6 +1330,21 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 											<CommandName>Form.Command.ВыгрузитьНастройкиПрограммы</CommandName>
 											<ExtendedTooltip name="ВыгрузитьНастройкиПрограммыРасширеннаяПодсказка" id="217"/>
 										</Button>
+										<LabelDecoration name="Декорация6" id="273">
+											<ContextMenu name="Декорация6КонтекстноеМеню" id="274"/>
+											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="275"/>
+										</LabelDecoration>
+										<InputField name="ВидЦенДляКартотеки" id="276">
+											<DataPath>ВидЦенДляКартотеки</DataPath>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ВидЦенДляКартотекиКонтекстноеМеню" id="277"/>
+											<ExtendedTooltip name="ВидЦенДляКартотекиРасширеннаяПодсказка" id="278"/>
+										</InputField>
+										<Button name="ВыгрузитьКартотекуНоменклатуры" id="271">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВыгрузитьКартотекуНоменклатуры</CommandName>
+											<ExtendedTooltip name="ВыгрузитьКартотекуНоменклатурыРасширеннаяПодсказка" id="272"/>
+										</Button>
 										<LabelDecoration name="Декорация3" id="232">
 											<ContextMenu name="Декорация3КонтекстноеМеню" id="233"/>
 											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="234"/>
@@ -1648,6 +1664,7 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 									<v8:content>หน้าดาวน์โหลด</v8:content>
 								</v8:item>
 							</Title>
+							<TitleFont ref="style:LargeTextFont" height="12" kind="StyleItem"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1842,6 +1859,7 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 													<v8:content>แง่ของการโหลดข้อมูล</v8:content>
 												</v8:item>
 											</Title>
+											<TitleFont ref="style:LargeTextFont" height="12" kind="StyleItem"/>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -2197,12 +2215,14 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 																</CheckBoxField>
 																<InputField name="УстановитьСклад" id="94">
 																	<DataPath>Объект.УстановитьСклад</DataPath>
+																	<HorizontalStretch>false</HorizontalStretch>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="УстановитьСкладКонтекстноеМеню" id="95"/>
 																	<ExtendedTooltip name="УстановитьСкладРасширеннаяПодсказка" id="96"/>
 																</InputField>
 																<InputField name="УстановитьКлиента" id="97">
 																	<DataPath>Объект.УстановитьКлиента</DataPath>
+																	<HorizontalStretch>false</HorizontalStretch>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="УстановитьКлиентаКонтекстноеМеню" id="98"/>
 																	<ExtendedTooltip name="УстановитьКлиентаРасширеннаяПодсказка" id="99"/>
@@ -2364,18 +2384,21 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 														</CheckBoxField>
 														<InputField name="ГруппаНовойНоменклатуры" id="130">
 															<DataPath>Объект.ГруппаНовойНоменклатуры</DataPath>
+															<HorizontalStretch>false</HorizontalStretch>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="ГруппаНовойНоменклатурыКонтекстноеМеню" id="131"/>
 															<ExtendedTooltip name="ГруппаНовойНоменклатурыРасширеннаяПодсказка" id="132"/>
 														</InputField>
 														<InputField name="НоменклатурнаяГруппаНовойНоменклатуры" id="133">
 															<DataPath>Объект.НоменклатурнаяГруппаНовойНоменклатуры</DataPath>
+															<HorizontalStretch>false</HorizontalStretch>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="НоменклатурнаяГруппаНовойНоменклатурыКонтекстноеМеню" id="134"/>
 															<ExtendedTooltip name="НоменклатурнаяГруппаНовойНоменклатурыРасширеннаяПодсказка" id="135"/>
 														</InputField>
 														<InputField name="ПроизводительНовойНоменклатуры" id="136">
 															<DataPath>Объект.ПроизводительНовойНоменклатуры</DataPath>
+															<HorizontalStretch>false</HorizontalStretch>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="ПроизводительНовойНоменклатурыКонтекстноеМеню" id="137"/>
 															<ExtendedTooltip name="ПроизводительНовойНоменклатурыРасширеннаяПодсказка" id="138"/>
@@ -2490,6 +2513,7 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 														</CheckBoxField>
 														<InputField name="ВидЦенДляУстановкиПриЗагрузке" id="145">
 															<DataPath>Объект.ВидЦенДляУстановкиПриЗагрузке</DataPath>
+															<HorizontalStretch>false</HorizontalStretch>
 															<ContextMenu name="ВидЦенДляУстановкиПриЗагрузкеКонтекстноеМеню" id="146"/>
 															<ExtendedTooltip name="ВидЦенДляУстановкиПриЗагрузкеРасширеннаяПодсказка" id="147"/>
 														</InputField>
@@ -2648,6 +2672,7 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 														</CheckBoxField>
 														<InputField name="ГруппаНовыхКлиентов" id="158">
 															<DataPath>Объект.ГруппаНовыхКлиентов</DataPath>
+															<HorizontalStretch>false</HorizontalStretch>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="ГруппаНовыхКлиентовКонтекстноеМеню" id="159"/>
 															<ExtendedTooltip name="ГруппаНовыхКлиентовРасширеннаяПодсказка" id="160"/>
@@ -2661,6 +2686,7 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 														</InputField>
 														<InputField name="ВидЦенДляНовыхКлиентов" id="164">
 															<DataPath>Объект.ВидЦенДляНовыхКлиентов</DataPath>
+															<HorizontalStretch>false</HorizontalStretch>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="ВидЦенДляНовыхКлиентовКонтекстноеМеню" id="165"/>
 															<ExtendedTooltip name="ВидЦенДляНовыхКлиентовРасширеннаяПодсказка" id="166"/>
@@ -3238,6 +3264,15 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 											<ContextMenu name="Декорация5КонтекстноеМеню" id="244"/>
 											<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="245"/>
 										</LabelDecoration>
+										<Button name="ЗагрузитьКартотекуНоменклатуры" id="279">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЗагрузитьКартотекуНоменклатуры</CommandName>
+											<ExtendedTooltip name="ЗагрузитьКартотекуНоменклатурыРасширеннаяПодсказка" id="280"/>
+										</Button>
+										<LabelDecoration name="Декорация7" id="281">
+											<ContextMenu name="Декорация7КонтекстноеМеню" id="282"/>
+											<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="283"/>
+										</LabelDecoration>
 										<Button name="ЗагрузитьНастройкиПрограммы" id="225">
 											<Type>UsualButton</Type>
 											<CommandName>Form.Command.ЗагрузитьНастройкиПрограммы</CommandName>
@@ -3283,29 +3318,29 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 								<Autofill>false</Autofill>
 							</AutoCommandBar>
 							<ExtendedTooltip name="СозданныеДокументыРасширеннаяПодсказка" id="109"/>
-							<SearchStringAddition name="СозданныеДокументыСтрокаПоиска" id="263">
+							<SearchStringAddition name="СозданныеДокументыСтрокаПоиска" id="284">
 								<AdditionSource>
 									<Item>СозданныеДокументы</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="СозданныеДокументыСтрокаПоискаКонтекстноеМеню" id="264"/>
-								<ExtendedTooltip name="СозданныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="265"/>
+								<ContextMenu name="СозданныеДокументыСтрокаПоискаКонтекстноеМеню" id="285"/>
+								<ExtendedTooltip name="СозданныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="286"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="СозданныеДокументыСостояниеПросмотра" id="266">
+							<ViewStatusAddition name="СозданныеДокументыСостояниеПросмотра" id="287">
 								<AdditionSource>
 									<Item>СозданныеДокументы</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="СозданныеДокументыСостояниеПросмотраКонтекстноеМеню" id="267"/>
-								<ExtendedTooltip name="СозданныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="268"/>
+								<ContextMenu name="СозданныеДокументыСостояниеПросмотраКонтекстноеМеню" id="288"/>
+								<ExtendedTooltip name="СозданныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="289"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="СозданныеДокументыУправлениеПоиском" id="269">
+							<SearchControlAddition name="СозданныеДокументыУправлениеПоиском" id="290">
 								<AdditionSource>
 									<Item>СозданныеДокументы</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="СозданныеДокументыУправлениеПоискомКонтекстноеМеню" id="270"/>
-								<ExtendedTooltip name="СозданныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="271"/>
+								<ContextMenu name="СозданныеДокументыУправлениеПоискомКонтекстноеМеню" id="291"/>
+								<ExtendedTooltip name="СозданныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="292"/>
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="СозданныеДокументыНомерСтроки" id="110">
@@ -3366,6 +3401,7 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 									<ChoiceButton>false</ChoiceButton>
 									<ClearButton>false</ClearButton>
 									<OpenButton>true</OpenButton>
+									<ChooseType>false</ChooseType>
 									<ContextMenu name="СозданныеДокументыДокументКонтекстноеМеню" id="114"/>
 									<ExtendedTooltip name="СозданныеДокументыДокументРасширеннаяПодсказка" id="115"/>
 								</InputField>
@@ -3640,31 +3676,82 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 													</Button>
 												</ChildItems>
 											</ContextMenu>
-											<AutoCommandBar name="ОтборПоСкладамКоманднаяПанель" id="16"/>
+											<AutoCommandBar name="ОтборПоСкладамКоманднаяПанель" id="16">
+												<ChildItems>
+													<Button name="ОтборПоСкладамДобавить" id="263">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.ОтборПоСкладам.StandardCommand.Add</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Добавить</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BG</v8:lang>
+																<v8:content>Добави</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BL</v8:lang>
+																<v8:content>Дадаць</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Hinzufügen</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Add</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>PL</v8:lang>
+																<v8:content>Dodać</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>RO</v8:lang>
+																<v8:content>Adăuga</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Додати</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>TH</v8:lang>
+																<v8:content>เพิ่ม</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ZH</v8:lang>
+																<v8:content>加</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ОтборПоСкладамДобавитьРасширеннаяПодсказка" id="264"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
 											<ExtendedTooltip name="ОтборПоСкладамРасширеннаяПодсказка" id="17"/>
-											<SearchStringAddition name="ОтборПоСкладамСтрокаПоиска" id="272">
+											<SearchStringAddition name="ОтборПоСкладамСтрокаПоиска" id="293">
 												<AdditionSource>
 													<Item>ОтборПоСкладам</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоСкладамСтрокаПоискаКонтекстноеМеню" id="273"/>
-												<ExtendedTooltip name="ОтборПоСкладамСтрокаПоискаРасширеннаяПодсказка" id="274"/>
+												<ContextMenu name="ОтборПоСкладамСтрокаПоискаКонтекстноеМеню" id="294"/>
+												<ExtendedTooltip name="ОтборПоСкладамСтрокаПоискаРасширеннаяПодсказка" id="295"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ОтборПоСкладамСостояниеПросмотра" id="275">
+											<ViewStatusAddition name="ОтборПоСкладамСостояниеПросмотра" id="296">
 												<AdditionSource>
 													<Item>ОтборПоСкладам</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоСкладамСостояниеПросмотраКонтекстноеМеню" id="276"/>
-												<ExtendedTooltip name="ОтборПоСкладамСостояниеПросмотраРасширеннаяПодсказка" id="277"/>
+												<ContextMenu name="ОтборПоСкладамСостояниеПросмотраКонтекстноеМеню" id="297"/>
+												<ExtendedTooltip name="ОтборПоСкладамСостояниеПросмотраРасширеннаяПодсказка" id="298"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ОтборПоСкладамУправлениеПоиском" id="278">
+											<SearchControlAddition name="ОтборПоСкладамУправлениеПоиском" id="299">
 												<AdditionSource>
 													<Item>ОтборПоСкладам</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоСкладамУправлениеПоискомКонтекстноеМеню" id="279"/>
-												<ExtendedTooltip name="ОтборПоСкладамУправлениеПоискомРасширеннаяПодсказка" id="280"/>
+												<ContextMenu name="ОтборПоСкладамУправлениеПоискомКонтекстноеМеню" id="300"/>
+												<ExtendedTooltip name="ОтборПоСкладамУправлениеПоискомРасширеннаяПодсказка" id="301"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ОтборПоСкладамНомерСтроки" id="18">
@@ -3675,6 +3762,32 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 												</LabelField>
 												<InputField name="ОтборПоСкладамСклад" id="21">
 													<DataPath>Объект.ОтборПоСкладам.Склад</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Склады</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Складове</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Склади</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Warehouses</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Magazyny</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Laden Sie die Karteikarte Nomenklatur</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ОтборПоСкладамСкладКонтекстноеМеню" id="22"/>
 													<ExtendedTooltip name="ОтборПоСкладамСкладРасширеннаяПодсказка" id="23"/>
@@ -3755,31 +3868,40 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 													</Button>
 												</ChildItems>
 											</ContextMenu>
-											<AutoCommandBar name="ОтборПоНоменклатурнымГруппамКоманднаяПанель" id="28"/>
+											<AutoCommandBar name="ОтборПоНоменклатурнымГруппамКоманднаяПанель" id="28">
+												<ChildItems>
+													<Button name="ОтборПоНоменклатурнымГруппамДобавить" id="265">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.ОтборПоНоменклатурнымГруппам.StandardCommand.Add</CommandName>
+														<ExtendedTooltip name="ОтборПоНоменклатурнымГруппамДобавитьРасширеннаяПодсказка" id="266"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
 											<ExtendedTooltip name="ОтборПоНоменклатурнымГруппамРасширеннаяПодсказка" id="29"/>
-											<SearchStringAddition name="ОтборПоНоменклатурнымГруппамСтрокаПоиска" id="281">
+											<SearchStringAddition name="ОтборПоНоменклатурнымГруппамСтрокаПоиска" id="302">
 												<AdditionSource>
 													<Item>ОтборПоНоменклатурнымГруппам</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоНоменклатурнымГруппамСтрокаПоискаКонтекстноеМеню" id="282"/>
-												<ExtendedTooltip name="ОтборПоНоменклатурнымГруппамСтрокаПоискаРасширеннаяПодсказка" id="283"/>
+												<ContextMenu name="ОтборПоНоменклатурнымГруппамСтрокаПоискаКонтекстноеМеню" id="303"/>
+												<ExtendedTooltip name="ОтборПоНоменклатурнымГруппамСтрокаПоискаРасширеннаяПодсказка" id="304"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ОтборПоНоменклатурнымГруппамСостояниеПросмотра" id="284">
+											<ViewStatusAddition name="ОтборПоНоменклатурнымГруппамСостояниеПросмотра" id="305">
 												<AdditionSource>
 													<Item>ОтборПоНоменклатурнымГруппам</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоНоменклатурнымГруппамСостояниеПросмотраКонтекстноеМеню" id="285"/>
-												<ExtendedTooltip name="ОтборПоНоменклатурнымГруппамСостояниеПросмотраРасширеннаяПодсказка" id="286"/>
+												<ContextMenu name="ОтборПоНоменклатурнымГруппамСостояниеПросмотраКонтекстноеМеню" id="306"/>
+												<ExtendedTooltip name="ОтборПоНоменклатурнымГруппамСостояниеПросмотраРасширеннаяПодсказка" id="307"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ОтборПоНоменклатурнымГруппамУправлениеПоиском" id="287">
+											<SearchControlAddition name="ОтборПоНоменклатурнымГруппамУправлениеПоиском" id="308">
 												<AdditionSource>
 													<Item>ОтборПоНоменклатурнымГруппам</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоНоменклатурнымГруппамУправлениеПоискомКонтекстноеМеню" id="288"/>
-												<ExtendedTooltip name="ОтборПоНоменклатурнымГруппамУправлениеПоискомРасширеннаяПодсказка" id="289"/>
+												<ContextMenu name="ОтборПоНоменклатурнымГруппамУправлениеПоискомКонтекстноеМеню" id="309"/>
+												<ExtendedTooltip name="ОтборПоНоменклатурнымГруппамУправлениеПоискомРасширеннаяПодсказка" id="310"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ОтборПоНоменклатурнымГруппамНомерСтроки" id="30">
@@ -3790,6 +3912,32 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 												</LabelField>
 												<InputField name="ОтборПоНоменклатурнымГруппамНоменклатурнаяГруппа" id="33">
 													<DataPath>Объект.ОтборПоНоменклатурнымГруппам.НоменклатурнаяГруппа</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Номенклатурные группы</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Номенклатура Group</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Номенклатурні групи</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Nomenclature Group</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Grupa nomenklatura</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Gewerberäume</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ОтборПоНоменклатурнымГруппамНоменклатурнаяГруппаКонтекстноеМеню" id="34"/>
 													<ExtendedTooltip name="ОтборПоНоменклатурнымГруппамНоменклатурнаяГруппаРасширеннаяПодсказка" id="35"/>
@@ -3870,31 +4018,40 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 													</Button>
 												</ChildItems>
 											</ContextMenu>
-											<AutoCommandBar name="ОтборПоПроизводителямКоманднаяПанель" id="40"/>
+											<AutoCommandBar name="ОтборПоПроизводителямКоманднаяПанель" id="40">
+												<ChildItems>
+													<Button name="Добавить" id="267">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.ОтборПоПроизводителям.StandardCommand.Add</CommandName>
+														<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="268"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
 											<ExtendedTooltip name="ОтборПоПроизводителямРасширеннаяПодсказка" id="41"/>
-											<SearchStringAddition name="ОтборПоПроизводителямСтрокаПоиска" id="290">
+											<SearchStringAddition name="ОтборПоПроизводителямСтрокаПоиска" id="311">
 												<AdditionSource>
 													<Item>ОтборПоПроизводителям</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоПроизводителямСтрокаПоискаКонтекстноеМеню" id="291"/>
-												<ExtendedTooltip name="ОтборПоПроизводителямСтрокаПоискаРасширеннаяПодсказка" id="292"/>
+												<ContextMenu name="ОтборПоПроизводителямСтрокаПоискаКонтекстноеМеню" id="312"/>
+												<ExtendedTooltip name="ОтборПоПроизводителямСтрокаПоискаРасширеннаяПодсказка" id="313"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ОтборПоПроизводителямСостояниеПросмотра" id="293">
+											<ViewStatusAddition name="ОтборПоПроизводителямСостояниеПросмотра" id="314">
 												<AdditionSource>
 													<Item>ОтборПоПроизводителям</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоПроизводителямСостояниеПросмотраКонтекстноеМеню" id="294"/>
-												<ExtendedTooltip name="ОтборПоПроизводителямСостояниеПросмотраРасширеннаяПодсказка" id="295"/>
+												<ContextMenu name="ОтборПоПроизводителямСостояниеПросмотраКонтекстноеМеню" id="315"/>
+												<ExtendedTooltip name="ОтборПоПроизводителямСостояниеПросмотраРасширеннаяПодсказка" id="316"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ОтборПоПроизводителямУправлениеПоиском" id="296">
+											<SearchControlAddition name="ОтборПоПроизводителямУправлениеПоиском" id="317">
 												<AdditionSource>
 													<Item>ОтборПоПроизводителям</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоПроизводителямУправлениеПоискомКонтекстноеМеню" id="297"/>
-												<ExtendedTooltip name="ОтборПоПроизводителямУправлениеПоискомРасширеннаяПодсказка" id="298"/>
+												<ContextMenu name="ОтборПоПроизводителямУправлениеПоискомКонтекстноеМеню" id="318"/>
+												<ExtendedTooltip name="ОтборПоПроизводителямУправлениеПоискомРасширеннаяПодсказка" id="319"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ОтборПоПроизводителямНомерСтроки" id="42">
@@ -3905,6 +4062,32 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 												</LabelField>
 												<InputField name="ОтборПоПроизводителямПроизводитель" id="45">
 													<DataPath>Объект.ОтборПоПроизводителям.Производитель</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Производители</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Производители</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Виробники</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Manufacturers</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Producenci</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Nomenklatur-Gruppe</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ОтборПоПроизводителямПроизводительКонтекстноеМеню" id="46"/>
 													<ExtendedTooltip name="ОтборПоПроизводителямПроизводительРасширеннаяПодсказка" id="47"/>
@@ -3985,31 +4168,40 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 													</Button>
 												</ChildItems>
 											</ContextMenu>
-											<AutoCommandBar name="ОтборПоРегионамКоманднаяПанель" id="52"/>
+											<AutoCommandBar name="ОтборПоРегионамКоманднаяПанель" id="52">
+												<ChildItems>
+													<Button name="ОтборПоРегионамДобавить" id="269">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.ОтборПоРегионам.StandardCommand.Add</CommandName>
+														<ExtendedTooltip name="ОтборПоРегионамДобавитьРасширеннаяПодсказка" id="270"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
 											<ExtendedTooltip name="ОтборПоРегионамРасширеннаяПодсказка" id="53"/>
-											<SearchStringAddition name="ОтборПоРегионамСтрокаПоиска" id="299">
+											<SearchStringAddition name="ОтборПоРегионамСтрокаПоиска" id="320">
 												<AdditionSource>
 													<Item>ОтборПоРегионам</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоРегионамСтрокаПоискаКонтекстноеМеню" id="300"/>
-												<ExtendedTooltip name="ОтборПоРегионамСтрокаПоискаРасширеннаяПодсказка" id="301"/>
+												<ContextMenu name="ОтборПоРегионамСтрокаПоискаКонтекстноеМеню" id="321"/>
+												<ExtendedTooltip name="ОтборПоРегионамСтрокаПоискаРасширеннаяПодсказка" id="322"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ОтборПоРегионамСостояниеПросмотра" id="302">
+											<ViewStatusAddition name="ОтборПоРегионамСостояниеПросмотра" id="323">
 												<AdditionSource>
 													<Item>ОтборПоРегионам</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоРегионамСостояниеПросмотраКонтекстноеМеню" id="303"/>
-												<ExtendedTooltip name="ОтборПоРегионамСостояниеПросмотраРасширеннаяПодсказка" id="304"/>
+												<ContextMenu name="ОтборПоРегионамСостояниеПросмотраКонтекстноеМеню" id="324"/>
+												<ExtendedTooltip name="ОтборПоРегионамСостояниеПросмотраРасширеннаяПодсказка" id="325"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ОтборПоРегионамУправлениеПоиском" id="305">
+											<SearchControlAddition name="ОтборПоРегионамУправлениеПоиском" id="326">
 												<AdditionSource>
 													<Item>ОтборПоРегионам</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ОтборПоРегионамУправлениеПоискомКонтекстноеМеню" id="306"/>
-												<ExtendedTooltip name="ОтборПоРегионамУправлениеПоискомРасширеннаяПодсказка" id="307"/>
+												<ContextMenu name="ОтборПоРегионамУправлениеПоискомКонтекстноеМеню" id="327"/>
+												<ExtendedTooltip name="ОтборПоРегионамУправлениеПоискомРасширеннаяПодсказка" id="328"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ОтборПоРегионамНомерСтроки" id="54">
@@ -4020,6 +4212,32 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 												</LabelField>
 												<InputField name="ОтборПоРегионамРегион" id="57">
 													<DataPath>Объект.ОтборПоРегионам.Регион</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Регионы</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Региони</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Регіони</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Regions</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Regiony</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Hersteller</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ОтборПоРегионамРегионКонтекстноеМеню" id="58"/>
 													<ExtendedTooltip name="ОтборПоРегионамРегионРасширеннаяПодсказка" id="59"/>
@@ -4066,8 +4284,6 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 				<Field>Объект.НоменклатурнаяГруппаНовойНоменклатуры</Field>
 				<Field>Объект.ЗаменитьДанныеВСуществующихКарточкахСправочников</Field>
 				<Field>Объект.ЗаменитьВсеДанныеВСуществующихДокументах</Field>
-				<Field>Объект.ДатаОкончания</Field>
-				<Field>Объект.ДатаНачала</Field>
 				<Field>Объект.ГруппаНовыхКлиентов</Field>
 				<Field>Объект.ГруппаНовойНоменклатуры</Field>
 				<Field>Объект.ВидЦенДляУстановкиПриЗагрузке</Field>
@@ -4560,10 +4776,10 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 				</v8:StringQualifiers>
 			</Type>
 			<FunctionalOptions>
-				<Item>FunctionalOption.ВестиУчетРегионовДляКонтрагентовИПроизводителей</Item>
+				<Item>FunctionalOption.ВестиУчетРегионов</Item>
 			</FunctionalOptions>
 		</Attribute>
-		<Attribute name="ВестиУчетРегионовДляКонтрагентовИПроизводителей" id="11">
+		<Attribute name="ВестиУчетРегионов" id="11">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -5091,6 +5307,43 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 			<Save>
 				<Field>НеВыводитьСообщенияИПредупрежденияПриЗагрузке</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="ВидЦенДляКартотеки" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид цен для картотеки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Виж цените за каталози</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вид цін для картотеки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>View prices for catalogs</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Zobacz ceny w katalogach</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Die Anzahl der Dezimalstellen für die Nummer (0-6)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВидЦенДляКартотеки</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСложныйМеханизмЦен</Item>
+			</FunctionalOptions>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -5892,6 +6145,132 @@ Banii depozit de stat și de decontare nu sunt pe locul doi.</v8:content>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ЗагрузитьДанныеОбОстатках</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыгрузитьКартотекуНоменклатуры" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить картотеку номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Разтоварете картотека номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вивантажити картотеку номенклатури</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Unload card index nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Szafa rozładować złożenia nomenklaturę</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Preise für Kataloge</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить картотеку номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Разтоварете картотека номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вивантажити картотеку номенклатури</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Unload card index nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Szafa rozładować złożenia nomenklaturę</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entladen Aktenschrank Nomenklatur</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Номенклатура</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыгрузитьКартотекуНоменклатуры</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьШтрихКоды</Item>
+			</FunctionalOptions>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗагрузитьКартотекуНоменклатуры" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить картотеку номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изтегляне на номенклатурата на картотека</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Завантажити картотеку номенклатури</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Download the index card nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Pobierz nomenklaturę karty Indeks</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entladen Aktenschrank Nomenklatur</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить картотеку номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изтегляне на номенклатурата на картотека</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Завантажити картотеку номенклатури</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Download the index card nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Pobierz nomenklaturę karty Indeks</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Laden Sie die Karteikarte Nomenklatur</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Номенклатура</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьКартотекуНоменклатуры</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьШтрихКоды</Item>
+			</FunctionalOptions>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>

@@ -120,7 +120,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -293,6 +293,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -336,29 +337,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="44">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="47">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="45"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="49"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="47">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="50">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="48"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="52"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="50">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="53">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="51"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="54"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="55"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Дата" id="5">
@@ -470,6 +471,59 @@
 					</Title>
 					<ContextMenu name="СкладКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="13"/>
+				</LabelField>
+				<LabelField name="ДатаПрибытия" id="44">
+					<DataPath>Список.ДатаПрибытия</DataPath>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДатаПрибытияКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ДатаПрибытияРасширеннаяПодсказка" id="46"/>
 				</LabelField>
 				<LabelField name="СкладКуда" id="14">
 					<DataPath>Список.СкладКуда</DataPath>

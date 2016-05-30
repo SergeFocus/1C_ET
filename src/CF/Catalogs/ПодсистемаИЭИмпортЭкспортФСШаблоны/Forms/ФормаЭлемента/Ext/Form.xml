@@ -545,10 +545,11 @@
 									<v8:content>Атау</v8:content>
 								</v8:item>
 							</Title>
-							<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 							<EditMode>EnterOnInput</EditMode>
 							<AutoMarkIncomplete>true</AutoMarkIncomplete>
-							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<TextColor>#800000</TextColor>
+							<BorderColor>style:FieldBackColor</BorderColor>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
 							<ExtendedTooltip name="НаименованиеExtendedTooltip" id="467"/>
 							<Events>
@@ -716,29 +717,29 @@
 			</ContextMenu>
 			<AutoCommandBar name="НаименованияНаДругихЯзыкахКоманднаяПанель" id="763"/>
 			<ExtendedTooltip name="НаименованияНаДругихЯзыкахРасширеннаяПодсказка" id="764"/>
-			<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="779">
+			<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="799">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="780"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="781"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="800"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="801"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="782">
+			<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="802">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="783"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="784"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="803"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="804"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="785">
+			<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="805">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="786"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="787"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="806"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="807"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="OnChange">НаименованияНаДругихЯзыкахПриИзменении</Event>
@@ -861,7 +862,7 @@
 			<ChildItems>
 				<InputField name="ВидШаблона" id="57">
 					<DataPath>Объект.ВидШаблона</DataPath>
-					<Width>35</Width>
+					<HorizontalStretch>false</HorizontalStretch>
 					<BackColor>style:ToolTipBackColor</BackColor>
 					<ContextMenu name="ВидШаблонаКонтекстноеМеню" id="58"/>
 					<ExtendedTooltip name="ВидШаблонаExtendedTooltip" id="473"/>
@@ -871,8 +872,8 @@
 				</InputField>
 				<InputField name="ИмяТаблицыШаблонаФайла" id="101">
 					<DataPath>Объект.ИмяТаблицыШаблонаФайла</DataPath>
-					<Width>25</Width>
 					<HorizontalStretch>false</HorizontalStretch>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<ContextMenu name="ИмяТаблицыШаблонаФайлаКонтекстноеМеню" id="102"/>
 					<ExtendedTooltip name="ИмяТаблицыШаблонаФайлаExtendedTooltip" id="474"/>
 				</InputField>
@@ -935,6 +936,7 @@
 					<v8:content>บัตรหน้าแม่</v8:content>
 				</v8:item>
 			</Title>
+			<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1125,6 +1127,7 @@
 									<v8:content>ไฟล์ stranitsyparametrov กลุ่ม</v8:content>
 								</v8:item>
 							</Title>
+							<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1388,6 +1391,7 @@
 											<TitleLocation>Top</TitleLocation>
 											<ChoiceButton>true</ChoiceButton>
 											<ClearButton>true</ClearButton>
+											<TextColor>#800000</TextColor>
 											<ContextMenu name="АдресФайлаБезВыбораКонтекстноеМеню" id="52"/>
 											<ExtendedTooltip name="АдресФайлаБезВыбораExtendedTooltip" id="483"/>
 											<Events>
@@ -1500,6 +1504,8 @@
 												</CheckBoxField>
 												<InputField name="ПарольАрхива" id="419">
 													<DataPath>Объект.ПарольАрхива</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<BorderColor>style:FieldBackColor</BorderColor>
 													<ContextMenu name="ПарольАрхиваКонтекстноеМеню" id="420"/>
 													<ExtendedTooltip name="ПарольАрхиваExtendedTooltip" id="486"/>
 												</InputField>
@@ -1734,7 +1740,7 @@
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>или конкретная кодировка</v8:content>
+																	<v8:content> конкретная кодировка</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
@@ -2054,8 +2060,8 @@
 												</UsualGroup>
 												<InputField name="ФорматПолейДаты" id="43">
 													<DataPath>Объект.ФорматПолейДаты</DataPath>
-													<Width>24</Width>
 													<HorizontalStretch>false</HorizontalStretch>
+													<BorderColor>style:FieldBackColor</BorderColor>
 													<ContextMenu name="ФорматПолейДатыКонтекстноеМеню" id="44"/>
 													<ExtendedTooltip name="ФорматПолейДатыExtendedTooltip" id="494"/>
 												</InputField>
@@ -2159,11 +2165,13 @@
 													<ChildItems>
 														<InputField name="РазделительДаты" id="85">
 															<DataPath>Объект.РазделительДаты</DataPath>
+															<BorderColor>style:FieldBackColor</BorderColor>
 															<ContextMenu name="РазделительДатыКонтекстноеМеню" id="86"/>
 															<ExtendedTooltip name="РазделительДатыExtendedTooltip" id="496"/>
 														</InputField>
 														<InputField name="РазделительЧисел" id="61">
 															<DataPath>Объект.РазделительЧисел</DataPath>
+															<BorderColor>style:FieldBackColor</BorderColor>
 															<ContextMenu name="РазделительЧиселКонтекстноеМеню" id="62"/>
 															<ExtendedTooltip name="РазделительЧиселExtendedTooltip" id="497"/>
 														</InputField>
@@ -3194,6 +3202,7 @@
 									<v8:content>ลำดับกลุ่มเพจ</v8:content>
 								</v8:item>
 							</Title>
+							<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -3354,6 +3363,13 @@
 											<ContextMenu name="ПоследовательностьПолейВФайлеКонтекстноеМеню" id="16"/>
 											<AutoCommandBar name="ПоследовательностьПолейВФайлеКоманднаяПанель" id="17">
 												<ChildItems>
+													<Button name="ПоследовательностьПолейВФайлеДобавить" id="797">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ПоследовательностьПолейВФайле.StandardCommand.Add</CommandName>
+														<ExtendedTooltip name="ПоследовательностьПолейВФайлеДобавитьРасширеннаяПодсказка" id="798"/>
+													</Button>
 													<Button name="ПоследовательностьПолейВФайлеОценитьФайл1" id="60">
 														<Type>CommandBarButton</Type>
 														<Representation>PictureAndText</Representation>
@@ -3388,29 +3404,29 @@
 												</ChildItems>
 											</AutoCommandBar>
 											<ExtendedTooltip name="ПоследовательностьПолейВФайлеExtendedTooltip" id="532"/>
-											<SearchStringAddition name="ПоследовательностьПолейВФайлеСтрокаПоиска" id="788">
+											<SearchStringAddition name="ПоследовательностьПолейВФайлеСтрокаПоиска" id="808">
 												<AdditionSource>
 													<Item>ПоследовательностьПолейВФайле</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ПоследовательностьПолейВФайлеСтрокаПоискаКонтекстноеМеню" id="789"/>
-												<ExtendedTooltip name="ПоследовательностьПолейВФайлеСтрокаПоискаРасширеннаяПодсказка" id="790"/>
+												<ContextMenu name="ПоследовательностьПолейВФайлеСтрокаПоискаКонтекстноеМеню" id="809"/>
+												<ExtendedTooltip name="ПоследовательностьПолейВФайлеСтрокаПоискаРасширеннаяПодсказка" id="810"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ПоследовательностьПолейВФайлеСостояниеПросмотра" id="791">
+											<ViewStatusAddition name="ПоследовательностьПолейВФайлеСостояниеПросмотра" id="811">
 												<AdditionSource>
 													<Item>ПоследовательностьПолейВФайле</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ПоследовательностьПолейВФайлеСостояниеПросмотраКонтекстноеМеню" id="792"/>
-												<ExtendedTooltip name="ПоследовательностьПолейВФайлеСостояниеПросмотраРасширеннаяПодсказка" id="793"/>
+												<ContextMenu name="ПоследовательностьПолейВФайлеСостояниеПросмотраКонтекстноеМеню" id="812"/>
+												<ExtendedTooltip name="ПоследовательностьПолейВФайлеСостояниеПросмотраРасширеннаяПодсказка" id="813"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ПоследовательностьПолейВФайлеУправлениеПоиском" id="794">
+											<SearchControlAddition name="ПоследовательностьПолейВФайлеУправлениеПоиском" id="814">
 												<AdditionSource>
 													<Item>ПоследовательностьПолейВФайле</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ПоследовательностьПолейВФайлеУправлениеПоискомКонтекстноеМеню" id="795"/>
-												<ExtendedTooltip name="ПоследовательностьПолейВФайлеУправлениеПоискомРасширеннаяПодсказка" id="796"/>
+												<ContextMenu name="ПоследовательностьПолейВФайлеУправлениеПоискомКонтекстноеМеню" id="815"/>
+												<ExtendedTooltip name="ПоследовательностьПолейВФайлеУправлениеПоискомРасширеннаяПодсказка" id="816"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ПоследовательностьПолейВФайлеНомерСтроки" id="18">
@@ -4182,29 +4198,29 @@
 													<ContextMenu name="ЗаголовокБлокаДанныхШаблонаКонтекстноеМеню" id="278"/>
 													<AutoCommandBar name="ЗаголовокБлокаДанныхШаблонаКоманднаяПанель" id="279"/>
 													<ExtendedTooltip name="ЗаголовокБлокаДанныхШаблонаExtendedTooltip" id="551"/>
-													<SearchStringAddition name="ЗаголовокБлокаДанныхШаблонаСтрокаПоиска" id="797">
+													<SearchStringAddition name="ЗаголовокБлокаДанныхШаблонаСтрокаПоиска" id="817">
 														<AdditionSource>
 															<Item>ЗаголовокБлокаДанныхШаблона</Item>
 															<Type>SearchStringRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ЗаголовокБлокаДанныхШаблонаСтрокаПоискаКонтекстноеМеню" id="798"/>
-														<ExtendedTooltip name="ЗаголовокБлокаДанныхШаблонаСтрокаПоискаРасширеннаяПодсказка" id="799"/>
+														<ContextMenu name="ЗаголовокБлокаДанныхШаблонаСтрокаПоискаКонтекстноеМеню" id="818"/>
+														<ExtendedTooltip name="ЗаголовокБлокаДанныхШаблонаСтрокаПоискаРасширеннаяПодсказка" id="819"/>
 													</SearchStringAddition>
-													<ViewStatusAddition name="ЗаголовокБлокаДанныхШаблонаСостояниеПросмотра" id="800">
+													<ViewStatusAddition name="ЗаголовокБлокаДанныхШаблонаСостояниеПросмотра" id="820">
 														<AdditionSource>
 															<Item>ЗаголовокБлокаДанныхШаблона</Item>
 															<Type>ViewStatusRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ЗаголовокБлокаДанныхШаблонаСостояниеПросмотраКонтекстноеМеню" id="801"/>
-														<ExtendedTooltip name="ЗаголовокБлокаДанныхШаблонаСостояниеПросмотраРасширеннаяПодсказка" id="802"/>
+														<ContextMenu name="ЗаголовокБлокаДанныхШаблонаСостояниеПросмотраКонтекстноеМеню" id="821"/>
+														<ExtendedTooltip name="ЗаголовокБлокаДанныхШаблонаСостояниеПросмотраРасширеннаяПодсказка" id="822"/>
 													</ViewStatusAddition>
-													<SearchControlAddition name="ЗаголовокБлокаДанныхШаблонаУправлениеПоиском" id="803">
+													<SearchControlAddition name="ЗаголовокБлокаДанныхШаблонаУправлениеПоиском" id="823">
 														<AdditionSource>
 															<Item>ЗаголовокБлокаДанныхШаблона</Item>
 															<Type>SearchControl</Type>
 														</AdditionSource>
-														<ContextMenu name="ЗаголовокБлокаДанныхШаблонаУправлениеПоискомКонтекстноеМеню" id="804"/>
-														<ExtendedTooltip name="ЗаголовокБлокаДанныхШаблонаУправлениеПоискомРасширеннаяПодсказка" id="805"/>
+														<ContextMenu name="ЗаголовокБлокаДанныхШаблонаУправлениеПоискомКонтекстноеМеню" id="824"/>
+														<ExtendedTooltip name="ЗаголовокБлокаДанныхШаблонаУправлениеПоискомРасширеннаяПодсказка" id="825"/>
 													</SearchControlAddition>
 													<ChildItems>
 														<LabelField name="ЗаголовокБлокаДанныхШаблонаНомерСтроки" id="280">
@@ -4979,10 +4995,57 @@
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>NormalSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="СоставноеИмяExtendedTooltip" id="570"/>
 											<ChildItems>
+												<LabelDecoration name="ТолькоДляСправочников" id="779">
+													<TextColor>#000066</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Только для справочников:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Само за справка:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>Толькі для даведнікаў:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Nur als Referenz:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Just for reference:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Tylko dla odniesienia:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>Doar pentru referință:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Тільки для довідників:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>เพียงแค่สำหรับการอ้างอิง:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>仅供参考：</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ТолькоДляСправочниковКонтекстноеМеню" id="780"/>
+													<ExtendedTooltip name="ТолькоДляСправочниковРасширеннаяПодсказка" id="781"/>
+												</LabelDecoration>
 												<InputField name="СоставлятьНаименованиеПоВыражениюИзИменПолей" id="152">
 													<DataPath>Объект.СоставлятьНаименованиеПоВыражениюИзИменПолей</DataPath>
 													<ClearButton>true</ClearButton>
@@ -5422,27 +5485,32 @@
 														</InputField>
 														<InputField name="ТипНоменклатуры" id="145">
 															<DataPath>Объект.ТипНоменклатуры</DataPath>
+															<Visible>false</Visible>
 															<ContextMenu name="ТипНоменклатурыКонтекстноеМеню" id="146"/>
 															<ExtendedTooltip name="ТипНоменклатурыExtendedTooltip" id="581"/>
 														</InputField>
 														<InputField name="СчетУчетаТоваров" id="141">
 															<DataPath>Объект.СчетУчетаТоваров</DataPath>
+															<Visible>false</Visible>
 															<ContextMenu name="СчетУчетаТоваровКонтекстноеМеню" id="142"/>
 															<ExtendedTooltip name="СчетУчетаТоваровРасширеннаяПодсказка" id="582"/>
 														</InputField>
 														<InputField name="СпособПополненияНоменклатуры" id="139">
 															<DataPath>Объект.СпособПополненияНоменклатуры</DataPath>
+															<Visible>false</Visible>
 															<ContextMenu name="СпособПополненияНоменклатурыКонтекстноеМеню" id="140"/>
 															<ExtendedTooltip name="СпособПополненияНоменклатурыExtendedTooltip" id="583"/>
 														</InputField>
 														<InputField name="НаправленияДеятельности" id="192">
 															<DataPath>Объект.НаправлениеДеятельности</DataPath>
+															<Visible>false</Visible>
 															<OpenButton>true</OpenButton>
 															<ContextMenu name="НаправленияДеятельностиКонтекстноеМеню" id="193"/>
 															<ExtendedTooltip name="НаправленияДеятельностиExtendedTooltip" id="584"/>
 														</InputField>
 														<InputField name="СпособСписания" id="190">
 															<DataPath>Объект.СпособСписания</DataPath>
+															<Visible>false</Visible>
 															<ContextMenu name="СпособСписанияКонтекстноеМеню" id="191"/>
 															<ExtendedTooltip name="СпособСписанияExtendedTooltip" id="585"/>
 														</InputField>
@@ -5554,12 +5622,14 @@
 														</InputField>
 														<InputField name="СоставлятьХарактеристикуПоВыражениюИзИменПолей" id="160">
 															<DataPath>Объект.СоставлятьХарактеристикуПоВыражениюИзИменПолей</DataPath>
+															<Visible>false</Visible>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="СоставлятьХарактеристикуПоВыражениюИзИменПолейКонтекстноеМеню" id="161"/>
 															<ExtendedTooltip name="СоставлятьХарактеристикуПоВыражениюИзИменПолейExtendedTooltip" id="588"/>
 														</InputField>
 														<InputField name="СчетУчетаЗатрат" id="143">
 															<DataPath>Объект.СчетУчетаЗатрат</DataPath>
+															<Visible>false</Visible>
 															<ContextMenu name="СчетУчетаЗатратКонтекстноеМеню" id="144"/>
 															<ExtendedTooltip name="СчетУчетаЗатратExtendedTooltip" id="589"/>
 														</InputField>
@@ -5570,6 +5640,7 @@
 														</InputField>
 														<InputField name="ЕдиницаИзмеренияНоменклатуры" id="137">
 															<DataPath>Объект.ЕдиницаИзмеренияНоменклатуры</DataPath>
+															<Visible>false</Visible>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="ЕдиницаИзмеренияНоменклатурыКонтекстноеМеню" id="138"/>
 															<ExtendedTooltip name="ЕдиницаИзмеренияНоменклатурыExtendedTooltip" id="591"/>
@@ -6953,29 +7024,29 @@
 															<ContextMenu name="ОтборПоОрганизациямКонтекстноеМеню" id="226"/>
 															<AutoCommandBar name="ОтборПоОрганизациямКоманднаяПанель" id="227"/>
 															<ExtendedTooltip name="ОтборПоОрганизациямExtendedTooltip" id="625"/>
-															<SearchStringAddition name="ОтборПоОрганизациямСтрокаПоиска" id="806">
+															<SearchStringAddition name="ОтборПоОрганизациямСтрокаПоиска" id="826">
 																<AdditionSource>
 																	<Item>ОтборПоОрганизациям</Item>
 																	<Type>SearchStringRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="ОтборПоОрганизациямСтрокаПоискаКонтекстноеМеню" id="807"/>
-																<ExtendedTooltip name="ОтборПоОрганизациямСтрокаПоискаРасширеннаяПодсказка" id="808"/>
+																<ContextMenu name="ОтборПоОрганизациямСтрокаПоискаКонтекстноеМеню" id="827"/>
+																<ExtendedTooltip name="ОтборПоОрганизациямСтрокаПоискаРасширеннаяПодсказка" id="828"/>
 															</SearchStringAddition>
-															<ViewStatusAddition name="ОтборПоОрганизациямСостояниеПросмотра" id="809">
+															<ViewStatusAddition name="ОтборПоОрганизациямСостояниеПросмотра" id="829">
 																<AdditionSource>
 																	<Item>ОтборПоОрганизациям</Item>
 																	<Type>ViewStatusRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="ОтборПоОрганизациямСостояниеПросмотраКонтекстноеМеню" id="810"/>
-																<ExtendedTooltip name="ОтборПоОрганизациямСостояниеПросмотраРасширеннаяПодсказка" id="811"/>
+																<ContextMenu name="ОтборПоОрганизациямСостояниеПросмотраКонтекстноеМеню" id="830"/>
+																<ExtendedTooltip name="ОтборПоОрганизациямСостояниеПросмотраРасширеннаяПодсказка" id="831"/>
 															</ViewStatusAddition>
-															<SearchControlAddition name="ОтборПоОрганизациямУправлениеПоиском" id="812">
+															<SearchControlAddition name="ОтборПоОрганизациямУправлениеПоиском" id="832">
 																<AdditionSource>
 																	<Item>ОтборПоОрганизациям</Item>
 																	<Type>SearchControl</Type>
 																</AdditionSource>
-																<ContextMenu name="ОтборПоОрганизациямУправлениеПоискомКонтекстноеМеню" id="813"/>
-																<ExtendedTooltip name="ОтборПоОрганизациямУправлениеПоискомРасширеннаяПодсказка" id="814"/>
+																<ContextMenu name="ОтборПоОрганизациямУправлениеПоискомКонтекстноеМеню" id="833"/>
+																<ExtendedTooltip name="ОтборПоОрганизациямУправлениеПоискомРасширеннаяПодсказка" id="834"/>
 															</SearchControlAddition>
 															<ChildItems>
 																<LabelField name="ОтборПоОрганизациямНомерСтроки" id="228">
@@ -7006,29 +7077,29 @@
 															<ContextMenu name="ОтборПоСчетамИКассамКонтекстноеМеню" id="233"/>
 															<AutoCommandBar name="ОтборПоСчетамИКассамКоманднаяПанель" id="234"/>
 															<ExtendedTooltip name="ОтборПоСчетамИКассамExtendedTooltip" id="628"/>
-															<SearchStringAddition name="ОтборПоСчетамИКассамСтрокаПоиска" id="815">
+															<SearchStringAddition name="ОтборПоСчетамИКассамСтрокаПоиска" id="835">
 																<AdditionSource>
 																	<Item>ОтборПоСчетамИКассам</Item>
 																	<Type>SearchStringRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="ОтборПоСчетамИКассамСтрокаПоискаКонтекстноеМеню" id="816"/>
-																<ExtendedTooltip name="ОтборПоСчетамИКассамСтрокаПоискаРасширеннаяПодсказка" id="817"/>
+																<ContextMenu name="ОтборПоСчетамИКассамСтрокаПоискаКонтекстноеМеню" id="836"/>
+																<ExtendedTooltip name="ОтборПоСчетамИКассамСтрокаПоискаРасширеннаяПодсказка" id="837"/>
 															</SearchStringAddition>
-															<ViewStatusAddition name="ОтборПоСчетамИКассамСостояниеПросмотра" id="818">
+															<ViewStatusAddition name="ОтборПоСчетамИКассамСостояниеПросмотра" id="838">
 																<AdditionSource>
 																	<Item>ОтборПоСчетамИКассам</Item>
 																	<Type>ViewStatusRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="ОтборПоСчетамИКассамСостояниеПросмотраКонтекстноеМеню" id="819"/>
-																<ExtendedTooltip name="ОтборПоСчетамИКассамСостояниеПросмотраРасширеннаяПодсказка" id="820"/>
+																<ContextMenu name="ОтборПоСчетамИКассамСостояниеПросмотраКонтекстноеМеню" id="839"/>
+																<ExtendedTooltip name="ОтборПоСчетамИКассамСостояниеПросмотраРасширеннаяПодсказка" id="840"/>
 															</ViewStatusAddition>
-															<SearchControlAddition name="ОтборПоСчетамИКассамУправлениеПоиском" id="821">
+															<SearchControlAddition name="ОтборПоСчетамИКассамУправлениеПоиском" id="841">
 																<AdditionSource>
 																	<Item>ОтборПоСчетамИКассам</Item>
 																	<Type>SearchControl</Type>
 																</AdditionSource>
-																<ContextMenu name="ОтборПоСчетамИКассамУправлениеПоискомКонтекстноеМеню" id="822"/>
-																<ExtendedTooltip name="ОтборПоСчетамИКассамУправлениеПоискомРасширеннаяПодсказка" id="823"/>
+																<ContextMenu name="ОтборПоСчетамИКассамУправлениеПоискомКонтекстноеМеню" id="842"/>
+																<ExtendedTooltip name="ОтборПоСчетамИКассамУправлениеПоискомРасширеннаяПодсказка" id="843"/>
 															</SearchControlAddition>
 															<ChildItems>
 																<LabelField name="ОтборПоСчетамИКассамНомерСтроки" id="235">
@@ -7634,29 +7705,29 @@
 											<ContextMenu name="ПараметрыПроизвольногоЗапросаКонтекстноеМеню" id="391"/>
 											<AutoCommandBar name="ПараметрыПроизвольногоЗапросаКоманднаяПанель" id="392"/>
 											<ExtendedTooltip name="ПараметрыПроизвольногоЗапросаExtendedTooltip" id="649"/>
-											<SearchStringAddition name="ПараметрыПроизвольногоЗапросаСтрокаПоиска" id="824">
+											<SearchStringAddition name="ПараметрыПроизвольногоЗапросаСтрокаПоиска" id="844">
 												<AdditionSource>
 													<Item>ПараметрыПроизвольногоЗапроса</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ПараметрыПроизвольногоЗапросаСтрокаПоискаКонтекстноеМеню" id="825"/>
-												<ExtendedTooltip name="ПараметрыПроизвольногоЗапросаСтрокаПоискаРасширеннаяПодсказка" id="826"/>
+												<ContextMenu name="ПараметрыПроизвольногоЗапросаСтрокаПоискаКонтекстноеМеню" id="845"/>
+												<ExtendedTooltip name="ПараметрыПроизвольногоЗапросаСтрокаПоискаРасширеннаяПодсказка" id="846"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ПараметрыПроизвольногоЗапросаСостояниеПросмотра" id="827">
+											<ViewStatusAddition name="ПараметрыПроизвольногоЗапросаСостояниеПросмотра" id="847">
 												<AdditionSource>
 													<Item>ПараметрыПроизвольногоЗапроса</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ПараметрыПроизвольногоЗапросаСостояниеПросмотраКонтекстноеМеню" id="828"/>
-												<ExtendedTooltip name="ПараметрыПроизвольногоЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="829"/>
+												<ContextMenu name="ПараметрыПроизвольногоЗапросаСостояниеПросмотраКонтекстноеМеню" id="848"/>
+												<ExtendedTooltip name="ПараметрыПроизвольногоЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="849"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ПараметрыПроизвольногоЗапросаУправлениеПоиском" id="830">
+											<SearchControlAddition name="ПараметрыПроизвольногоЗапросаУправлениеПоиском" id="850">
 												<AdditionSource>
 													<Item>ПараметрыПроизвольногоЗапроса</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ПараметрыПроизвольногоЗапросаУправлениеПоискомКонтекстноеМеню" id="831"/>
-												<ExtendedTooltip name="ПараметрыПроизвольногоЗапросаУправлениеПоискомРасширеннаяПодсказка" id="832"/>
+												<ContextMenu name="ПараметрыПроизвольногоЗапросаУправлениеПоискомКонтекстноеМеню" id="851"/>
+												<ExtendedTooltip name="ПараметрыПроизвольногоЗапросаУправлениеПоискомРасширеннаяПодсказка" id="852"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ПараметрыПроизвольногоЗапросаНомерСтроки" id="393">
@@ -7974,7 +8045,7 @@
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Допольнительное поведение</v8:content>
+											<v8:content>Дополнительное поведение</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>en</v8:lang>
@@ -7986,7 +8057,7 @@
 										</v8:item>
 										<v8:item>
 											<v8:lang>bl</v8:lang>
-											<v8:content>Допольнительное паводзіны</v8:content>
+											<v8:content>Дополнительное паводзіны</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>zh</v8:lang>
@@ -8010,7 +8081,7 @@
 										</v8:item>
 										<v8:item>
 											<v8:lang>kk</v8:lang>
-											<v8:content>Допольнительное тәртіп</v8:content>
+											<v8:content>Дополнительное тәртіп</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>th</v8:lang>
@@ -8032,29 +8103,29 @@
 											<ContextMenu name="ИспользоватьДополнительноПоведениеКонтекстноеМеню" id="206"/>
 											<AutoCommandBar name="ИспользоватьДополнительноПоведениеКоманднаяПанель" id="207"/>
 											<ExtendedTooltip name="ИспользоватьДополнительноПоведениеExtendedTooltip" id="661"/>
-											<SearchStringAddition name="ИспользоватьДополнительноПоведениеСтрокаПоиска" id="833">
+											<SearchStringAddition name="ИспользоватьДополнительноПоведениеСтрокаПоиска" id="853">
 												<AdditionSource>
 													<Item>ИспользоватьДополнительноПоведение</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ИспользоватьДополнительноПоведениеСтрокаПоискаКонтекстноеМеню" id="834"/>
-												<ExtendedTooltip name="ИспользоватьДополнительноПоведениеСтрокаПоискаРасширеннаяПодсказка" id="835"/>
+												<ContextMenu name="ИспользоватьДополнительноПоведениеСтрокаПоискаКонтекстноеМеню" id="854"/>
+												<ExtendedTooltip name="ИспользоватьДополнительноПоведениеСтрокаПоискаРасширеннаяПодсказка" id="855"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ИспользоватьДополнительноПоведениеСостояниеПросмотра" id="836">
+											<ViewStatusAddition name="ИспользоватьДополнительноПоведениеСостояниеПросмотра" id="856">
 												<AdditionSource>
 													<Item>ИспользоватьДополнительноПоведение</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ИспользоватьДополнительноПоведениеСостояниеПросмотраКонтекстноеМеню" id="837"/>
-												<ExtendedTooltip name="ИспользоватьДополнительноПоведениеСостояниеПросмотраРасширеннаяПодсказка" id="838"/>
+												<ContextMenu name="ИспользоватьДополнительноПоведениеСостояниеПросмотраКонтекстноеМеню" id="857"/>
+												<ExtendedTooltip name="ИспользоватьДополнительноПоведениеСостояниеПросмотраРасширеннаяПодсказка" id="858"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ИспользоватьДополнительноПоведениеУправлениеПоиском" id="839">
+											<SearchControlAddition name="ИспользоватьДополнительноПоведениеУправлениеПоиском" id="859">
 												<AdditionSource>
 													<Item>ИспользоватьДополнительноПоведение</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ИспользоватьДополнительноПоведениеУправлениеПоискомКонтекстноеМеню" id="840"/>
-												<ExtendedTooltip name="ИспользоватьДополнительноПоведениеУправлениеПоискомРасширеннаяПодсказка" id="841"/>
+												<ContextMenu name="ИспользоватьДополнительноПоведениеУправлениеПоискомКонтекстноеМеню" id="860"/>
+												<ExtendedTooltip name="ИспользоватьДополнительноПоведениеУправлениеПоискомРасширеннаяПодсказка" id="861"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ИспользоватьДополнительноПоведениеНомерСтроки" id="208">
@@ -8167,7 +8238,7 @@
 										</v8:item>
 									</ToolTip>
 									<Picture>
-										<xr:Ref>CommonPicture.SZПрограммныйКод</xr:Ref>
+										<xr:Ref>CommonPicture.ПрограммныйКод</xr:Ref>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</Picture>
 									<ExtendedTooltip name="ПрограммныйКодExtendedTooltip" id="664"/>
@@ -8594,6 +8665,105 @@
 														</InputField>
 													</ChildItems>
 												</Page>
+												<Page name="КодДляСправки" id="782">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Код для справки</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Код за Помощ</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>Код для даведкі</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Code für Hilfe</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Code for Help</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Kod Pomoc</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>Cod pentru Ajutor</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Код для довідки</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>สำหรับความช่วยเหลือ</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>代码说明</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Код для справки</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Код за Помощ</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>Код для даведкі</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Code für Hilfe</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Code for Help</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Kod Pomoc</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>Cod pentru Ajutor</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Код для довідки</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>สำหรับความช่วยเหลือ</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>代码说明</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Picture>
+														<xr:Ref>StdPicture.Help</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="КодДляСправкиРасширеннаяПодсказка" id="783"/>
+													<ChildItems>
+														<InputField name="КодДляСправки1" id="794">
+															<DataPath>КодДляСправки</DataPath>
+															<MultiLine>true</MultiLine>
+															<ContextMenu name="КодДляСправки1КонтекстноеМеню" id="795"/>
+															<ExtendedTooltip name="КодДляСправки1РасширеннаяПодсказка" id="796"/>
+														</InputField>
+													</ChildItems>
+												</Page>
 											</ChildItems>
 										</Pages>
 									</ChildItems>
@@ -8787,29 +8957,29 @@
 												</ChildItems>
 											</AutoCommandBar>
 											<ExtendedTooltip name="ТолькоДляОбъектовСРеквизитамиExtendedTooltip" id="681"/>
-											<SearchStringAddition name="ТолькоДляОбъектовСРеквизитамиСтрокаПоиска" id="842">
+											<SearchStringAddition name="ТолькоДляОбъектовСРеквизитамиСтрокаПоиска" id="862">
 												<AdditionSource>
 													<Item>ТолькоДляОбъектовСРеквизитами</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ТолькоДляОбъектовСРеквизитамиСтрокаПоискаКонтекстноеМеню" id="843"/>
-												<ExtendedTooltip name="ТолькоДляОбъектовСРеквизитамиСтрокаПоискаРасширеннаяПодсказка" id="844"/>
+												<ContextMenu name="ТолькоДляОбъектовСРеквизитамиСтрокаПоискаКонтекстноеМеню" id="863"/>
+												<ExtendedTooltip name="ТолькоДляОбъектовСРеквизитамиСтрокаПоискаРасширеннаяПодсказка" id="864"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ТолькоДляОбъектовСРеквизитамиСостояниеПросмотра" id="845">
+											<ViewStatusAddition name="ТолькоДляОбъектовСРеквизитамиСостояниеПросмотра" id="865">
 												<AdditionSource>
 													<Item>ТолькоДляОбъектовСРеквизитами</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ТолькоДляОбъектовСРеквизитамиСостояниеПросмотраКонтекстноеМеню" id="846"/>
-												<ExtendedTooltip name="ТолькоДляОбъектовСРеквизитамиСостояниеПросмотраРасширеннаяПодсказка" id="847"/>
+												<ContextMenu name="ТолькоДляОбъектовСРеквизитамиСостояниеПросмотраКонтекстноеМеню" id="866"/>
+												<ExtendedTooltip name="ТолькоДляОбъектовСРеквизитамиСостояниеПросмотраРасширеннаяПодсказка" id="867"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ТолькоДляОбъектовСРеквизитамиУправлениеПоиском" id="848">
+											<SearchControlAddition name="ТолькоДляОбъектовСРеквизитамиУправлениеПоиском" id="868">
 												<AdditionSource>
 													<Item>ТолькоДляОбъектовСРеквизитами</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ТолькоДляОбъектовСРеквизитамиУправлениеПоискомКонтекстноеМеню" id="849"/>
-												<ExtendedTooltip name="ТолькоДляОбъектовСРеквизитамиУправлениеПоискомРасширеннаяПодсказка" id="850"/>
+												<ContextMenu name="ТолькоДляОбъектовСРеквизитамиУправлениеПоискомКонтекстноеМеню" id="869"/>
+												<ExtendedTooltip name="ТолькоДляОбъектовСРеквизитамиУправлениеПоискомРасширеннаяПодсказка" id="870"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ТолькоДляОбъектовСРеквизитамиНомерСтроки" id="335">
@@ -9112,29 +9282,29 @@
 												</ChildItems>
 											</AutoCommandBar>
 											<ExtendedTooltip name="ДополнительноеЗаполнениеРеквизитовExtendedTooltip" id="692"/>
-											<SearchStringAddition name="ДополнительноеЗаполнениеРеквизитовСтрокаПоиска" id="851">
+											<SearchStringAddition name="ДополнительноеЗаполнениеРеквизитовСтрокаПоиска" id="871">
 												<AdditionSource>
 													<Item>ДополнительноеЗаполнениеРеквизитов</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ДополнительноеЗаполнениеРеквизитовСтрокаПоискаКонтекстноеМеню" id="852"/>
-												<ExtendedTooltip name="ДополнительноеЗаполнениеРеквизитовСтрокаПоискаРасширеннаяПодсказка" id="853"/>
+												<ContextMenu name="ДополнительноеЗаполнениеРеквизитовСтрокаПоискаКонтекстноеМеню" id="872"/>
+												<ExtendedTooltip name="ДополнительноеЗаполнениеРеквизитовСтрокаПоискаРасширеннаяПодсказка" id="873"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ДополнительноеЗаполнениеРеквизитовСостояниеПросмотра" id="854">
+											<ViewStatusAddition name="ДополнительноеЗаполнениеРеквизитовСостояниеПросмотра" id="874">
 												<AdditionSource>
 													<Item>ДополнительноеЗаполнениеРеквизитов</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ДополнительноеЗаполнениеРеквизитовСостояниеПросмотраКонтекстноеМеню" id="855"/>
-												<ExtendedTooltip name="ДополнительноеЗаполнениеРеквизитовСостояниеПросмотраРасширеннаяПодсказка" id="856"/>
+												<ContextMenu name="ДополнительноеЗаполнениеРеквизитовСостояниеПросмотраКонтекстноеМеню" id="875"/>
+												<ExtendedTooltip name="ДополнительноеЗаполнениеРеквизитовСостояниеПросмотраРасширеннаяПодсказка" id="876"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ДополнительноеЗаполнениеРеквизитовУправлениеПоиском" id="857">
+											<SearchControlAddition name="ДополнительноеЗаполнениеРеквизитовУправлениеПоиском" id="877">
 												<AdditionSource>
 													<Item>ДополнительноеЗаполнениеРеквизитов</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ДополнительноеЗаполнениеРеквизитовУправлениеПоискомКонтекстноеМеню" id="858"/>
-												<ExtendedTooltip name="ДополнительноеЗаполнениеРеквизитовУправлениеПоискомРасширеннаяПодсказка" id="859"/>
+												<ContextMenu name="ДополнительноеЗаполнениеРеквизитовУправлениеПоискомКонтекстноеМеню" id="878"/>
+												<ExtendedTooltip name="ДополнительноеЗаполнениеРеквизитовУправлениеПоискомРасширеннаяПодсказка" id="879"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ДополнительноеЗаполнениеРеквизитовНомерСтроки" id="358">
@@ -9441,29 +9611,29 @@
 											</ContextMenu>
 											<AutoCommandBar name="УсловияФильтраКоманднаяПанель" id="117"/>
 											<ExtendedTooltip name="УсловияФильтраExtendedTooltip" id="701"/>
-											<SearchStringAddition name="УсловияФильтраСтрокаПоиска" id="860">
+											<SearchStringAddition name="УсловияФильтраСтрокаПоиска" id="880">
 												<AdditionSource>
 													<Item>УсловияФильтра</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="УсловияФильтраСтрокаПоискаКонтекстноеМеню" id="861"/>
-												<ExtendedTooltip name="УсловияФильтраСтрокаПоискаРасширеннаяПодсказка" id="862"/>
+												<ContextMenu name="УсловияФильтраСтрокаПоискаКонтекстноеМеню" id="881"/>
+												<ExtendedTooltip name="УсловияФильтраСтрокаПоискаРасширеннаяПодсказка" id="882"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="УсловияФильтраСостояниеПросмотра" id="863">
+											<ViewStatusAddition name="УсловияФильтраСостояниеПросмотра" id="883">
 												<AdditionSource>
 													<Item>УсловияФильтра</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="УсловияФильтраСостояниеПросмотраКонтекстноеМеню" id="864"/>
-												<ExtendedTooltip name="УсловияФильтраСостояниеПросмотраРасширеннаяПодсказка" id="865"/>
+												<ContextMenu name="УсловияФильтраСостояниеПросмотраКонтекстноеМеню" id="884"/>
+												<ExtendedTooltip name="УсловияФильтраСостояниеПросмотраРасширеннаяПодсказка" id="885"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="УсловияФильтраУправлениеПоиском" id="866">
+											<SearchControlAddition name="УсловияФильтраУправлениеПоиском" id="886">
 												<AdditionSource>
 													<Item>УсловияФильтра</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="УсловияФильтраУправлениеПоискомКонтекстноеМеню" id="867"/>
-												<ExtendedTooltip name="УсловияФильтраУправлениеПоискомРасширеннаяПодсказка" id="868"/>
+												<ContextMenu name="УсловияФильтраУправлениеПоискомКонтекстноеМеню" id="887"/>
+												<ExtendedTooltip name="УсловияФильтраУправлениеПоискомРасширеннаяПодсказка" id="888"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="УсловияФильтраНомерСтроки" id="118">
@@ -11008,6 +11178,57 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="КодДляСправки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код для справки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Код за Помощ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Код для даведкі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Code für Hilfe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Code for Help</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Kod Pomoc</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Cod pentru Ajutor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Код для довідки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>สำหรับความช่วยเหลือ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>代码说明</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ОценитьФайлКакТаблицуТовары" id="1">
@@ -11897,7 +12118,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>CommonPicture.SZПроверитьЗапрос</xr:Ref>
+				<xr:Ref>CommonPicture.ПроверитьЗапрос</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 				<xr:TransparentPixel x="5" y="3"/>
 			</Picture>
@@ -11999,7 +12220,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+Shift+F4</Shortcut>
 			<Picture>
-				<xr:Ref>CommonPicture.SZНеИспользоватьДанноеПоле</xr:Ref>
+				<xr:Ref>CommonPicture.НеИспользоватьДанноеПоле</xr:Ref>
 				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>НеИспользоватьДанноеПоле</Action>
@@ -12100,7 +12321,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+Shift+N</Shortcut>
 			<Picture>
-				<xr:Ref>CommonPicture.SZБыстроСоздатьНовоеПоле</xr:Ref>
+				<xr:Ref>CommonPicture.БыстроСоздатьНовоеПоле</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 				<xr:TransparentPixel x="11" y="0"/>
 			</Picture>
@@ -12201,7 +12422,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>CommonPicture.SZСоздатьПоляФайлаПоРезультатамЗапроса</xr:Ref>
+				<xr:Ref>CommonPicture.СоздатьПоляФайлаПоРезультатамЗапроса</xr:Ref>
 				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>СоздатьПоляФайлаПоРезультатамЗапроса</Action>
@@ -12301,7 +12522,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>CommonPicture.SZПараметрыЗапроса</xr:Ref>
+				<xr:Ref>CommonPicture.ПараметрыЗапроса</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 				<xr:TransparentPixel x="12" y="2"/>
 			</Picture>
@@ -12498,7 +12719,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>CommonPicture.SZСохранитьШаблоныВФайл</xr:Ref>
+				<xr:Ref>CommonPicture.СохранитьШаблоныВФайл</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВыгрузитьЭтотШаблонВФайл</Action>
@@ -12620,6 +12841,14 @@
 			</Item>
 			<Item>
 				<Command>InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenByValue.ОбъектВладелец</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>

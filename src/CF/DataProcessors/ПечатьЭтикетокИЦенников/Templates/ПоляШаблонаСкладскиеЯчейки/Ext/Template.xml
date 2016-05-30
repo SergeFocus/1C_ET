@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ячейка</dataPath>
+			<field>Ячейка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Штрихкод</dataPath>
+			<field>Штрихкод</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ИсходныеДанные.Ячейка КАК Ячейка,
+	ИсходныеДанные.Порядок КАК Порядок,
+	ИсходныеДанные.Штрихкод КАК Штрихкод
+ПОМЕСТИТЬ ИсходныеДанные
+ИЗ
+	(ВЫБРАТЬ
+		ЗНАЧЕНИЕ(Справочник.СкладскиеЯчейки.ПустаяСсылка) КАК Ячейка,
+		"" КАК Штрихкод,
+		0 КАК Порядок) КАК ИсходныеДанные
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИсходныеДанныеПоследнийЗапрос.Ячейка КАК Ячейка,
+	ИсходныеДанныеПоследнийЗапрос.Штрихкод КАК Штрихкод,
+	ИсходныеДанныеПоследнийЗапрос.Порядок КАК Порядок
+{ВЫБРАТЬ
+	Ячейка.*,
+	Штрихкод}
+ИЗ
+	ИсходныеДанные КАК ИсходныеДанныеПоследнийЗапрос
+{ГДЕ
+	ИсходныеДанныеПоследнийЗапрос.Ячейка.* КАК Ячейка,
+	ИсходныеДанныеПоследнийЗапрос.Штрихкод КАК Штрихкод}
+
+УПОРЯДОЧИТЬ ПО
+	ИсходныеДанныеПоследнийЗапрос.Порядок</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Поля шаблону складські осередку</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Główny</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Main</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Основен</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Feldvorlage Serie Nomenklatur</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Ячейка</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Штрихкод</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

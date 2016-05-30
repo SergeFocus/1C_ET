@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -13,7 +14,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать новый Вид Цен</v8:content>
+						<v8:content>Добавить Вид Цен</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -239,6 +240,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -334,38 +336,38 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="65">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="68">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="66"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="67"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="69"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="70"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="68">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="71">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="69"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="72"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="73"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="71">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="74">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="72"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="73"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="75"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="76"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="7">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Ref</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Наименование видов цен</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
@@ -545,7 +547,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Цел.</v8:content>
+							<v8:content>В целых</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -592,8 +594,40 @@
 					<ContextMenu name="ЦенаВЦелыхЕдиницахКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ЦенаВЦелыхЕдиницахРасширеннаяПодсказка" id="24"/>
 				</CheckBoxField>
+				<CheckBoxField name="ЦенаВДесятых" id="65">
+					<DataPath>Список.ЦенаВДесятых</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В десятых</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>В десетата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>У десятих</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>In the tenth</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>W dziesiątej</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>In der zehnten</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЦенаВДесятыхКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ЦенаВДесятыхРасширеннаяПодсказка" id="67"/>
+				</CheckBoxField>
 				<LabelField name="ПроцентСкидкиДляРасчетаЛьготнойЦены" id="40">
-					<DataPath>1/39</DataPath>
+					<DataPath>Список.ПроцентСкидкиДляРасчетаЛьготнойЦены</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -721,7 +755,8 @@
 	СправочникВидыЦен.ВалютаЦены,
 	СправочникВидыЦен.ПроцентСкидкиДляРасчетаЛьготнойЦены,
 	СправочникВидыЦен.ПроцентОтБазовойЦены КАК Процент,
-	СправочникВидыЦен.ФормулаРасчетаОтБазовогоВидаЦены КАК Формула
+	СправочникВидыЦен.ФормулаРасчетаОтБазовогоВидаЦены КАК Формула,
+	СправочникВидыЦен.ЦенаВДесятых
 ИЗ
 	Справочник.ВидыЦен КАК СправочникВидыЦен</QueryText>
 				<MainTable>Catalog.ВидыЦен</MainTable>

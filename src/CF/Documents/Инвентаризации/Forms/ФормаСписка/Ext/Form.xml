@@ -66,7 +66,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -288,10 +288,25 @@
 				</Title>
 				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="61"/>
 			</Button>
+			<Button name="ФормаИзменитьФорму" id="86">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="87"/>
+			</Button>
+			<Button name="ФормаСправка" id="84">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="85"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -334,29 +349,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="75">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="88">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="76"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="77"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="89"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="90"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="78">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="91">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="79"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="80"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="92"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="93"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="81">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="94">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="82"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="95"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="96"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<ColumnGroup name="ГруппаДатаНомер" id="47">
@@ -705,6 +720,7 @@
 							<v8:content>ความเห็น</v8:content>
 						</v8:item>
 					</Title>
+					<Height>1</Height>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="16"/>
 				</LabelField>
@@ -803,6 +819,13 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаСуммаИКвоРасширеннаяПодсказка" id="46"/>
 					<ChildItems>
+						<LabelField name="ТовараВКоличестве" id="20">
+							<DataPath>Список.ТовараВКоличестве</DataPath>
+							<Width>12</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ТовараВКоличествеКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ТовараВКоличествеРасширеннаяПодсказка" id="22"/>
+						</LabelField>
 						<LabelField name="ТовараНаСумму" id="17">
 							<DataPath>Список.ТовараНаСумму</DataPath>
 							<TitleBackColor>#FFFFF5</TitleBackColor>
@@ -810,13 +833,6 @@
 							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="ТовараНаСуммуКонтекстноеМеню" id="18"/>
 							<ExtendedTooltip name="ТовараНаСуммуРасширеннаяПодсказка" id="19"/>
-						</LabelField>
-						<LabelField name="ТовараВКоличестве" id="20">
-							<DataPath>Список.ТовараВКоличестве</DataPath>
-							<Width>12</Width>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ContextMenu name="ТовараВКоличествеКонтекстноеМеню" id="21"/>
-							<ExtendedTooltip name="ТовараВКоличествеРасширеннаяПодсказка" id="22"/>
 						</LabelField>
 					</ChildItems>
 				</ColumnGroup>

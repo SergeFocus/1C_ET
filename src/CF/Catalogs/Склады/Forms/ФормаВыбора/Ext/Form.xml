@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -248,6 +249,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -289,38 +291,38 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="34">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="49">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="35"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="51"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="37">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="52">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="38"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="40">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="55">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="41"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="57"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="5">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Ref</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Наименование складов</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
@@ -371,7 +373,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Вид Цен реализации</v8:content>
+							<v8:content>Вид Цен реализации склада</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -417,6 +419,38 @@
 					<ContextMenu name="ВидЦенРеализацииСЭтогоСкладаКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ВидЦенРеализацииСЭтогоСкладаРасширеннаяПодсказка" id="10"/>
 				</LabelField>
+				<CheckBoxField name="СДанногоСкладаПродаватьЗапрещено" id="46">
+					<DataPath>Список.СДанногоСкладаПродаватьЗапрещено</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без продаж</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Без продажів</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Bez sprzedaży</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Without sales</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Без продажби</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Ohne Verkaufs</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СДанногоСкладаПродаватьЗапрещеноКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СДанногоСкладаПродаватьЗапрещеноРасширеннаяПодсказка" id="48"/>
+				</CheckBoxField>
 				<LabelField name="ОтветственныйСотрудник" id="11">
 					<DataPath>Список.ОтветственныйСотрудник</DataPath>
 					<Title>
@@ -467,6 +501,26 @@
 					</Title>
 					<ContextMenu name="ОтветственныйСотрудникКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="ОтветственныйСотрудникРасширеннаяПодсказка" id="13"/>
+				</LabelField>
+				<LabelField name="Вес" id="37">
+					<DataPath>Список.Вес</DataPath>
+					<ContextMenu name="ВесКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ВесРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="Длина" id="40">
+					<DataPath>Список.Длина</DataPath>
+					<ContextMenu name="ДлинаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ДлинаРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="Ширина" id="43">
+					<DataPath>Список.Ширина</DataPath>
+					<ContextMenu name="ШиринаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ШиринаРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="Высота" id="34">
+					<DataPath>Список.Высота</DataPath>
+					<ContextMenu name="ВысотаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ВысотаРасширеннаяПодсказка" id="36"/>
 				</LabelField>
 			</ChildItems>
 		</Table>

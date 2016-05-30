@@ -1,0 +1,1472 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Исполнение списка имортно-экспортных операций с файлами</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>BG</v8:lang>
+			<v8:content>Списък за изпълнение операции imortno-износ с файлове</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>BL</v8:lang>
+			<v8:content>Выкананне спісу имортно-экспартных аперацый з файламі</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>DE</v8:lang>
+			<v8:content>Execution Liste imortno-Export-Operationen mit Dateien</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>EN</v8:lang>
+			<v8:content>Execution list imortno-export operations with files</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>PL</v8:lang>
+			<v8:content>Lista wykonanie operacji imortno-eksport z plików</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>RO</v8:lang>
+			<v8:content>Lista de executare operațiuni de imortno-export cu fișiere</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>UK</v8:lang>
+			<v8:content>Виконання списку імортно-експортних операцій з файлами</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>TH</v8:lang>
+			<v8:content>รายการการดำเนินการการดำเนินงาน imortno ส่งออกกับไฟล์</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ZH</v8:lang>
+			<v8:content>使用文件执行列表imortno出口业务</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoFillCheck>false</AutoFillCheck>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьОбменСпискаЗадач" id="14">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<DefaultItem>true</DefaultItem>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.Command.ВыполнитьОбменСпискаЗадач</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаВыполнитьОбменСпискаЗадачExtendedTooltip" id="40"/>
+			</Button>
+			<Button name="ФормаВыполнитьВсеОперацииИмпорта" id="32">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.Command.ВыполнитьВсеОперацииИмпорта</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ПодсистемаИЭЗагрузитьСписок</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаВыполнитьВсеОперацииИмпортаExtendedTooltip" id="41"/>
+			</Button>
+			<Button name="ФормаВыполнитьВсеОперацииЭкспорта" id="33">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.Command.ВыполнитьВсеОперацииЭкспорта</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ПодсистемаИЭВыгрузитьСписок</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаВыполнитьВсеОперацииЭкспортаExtendedTooltip" id="42"/>
+			</Button>
+			<Button name="ФормаСохранитьЗначения" id="71">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.SaveValues</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьЗначенияРасширеннаяПодсказка" id="72"/>
+			</Button>
+			<Button name="ФормаВосстановитьЗначения" id="73">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.RestoreValues</CommandName>
+				<ExtendedTooltip name="ФормаВосстановитьЗначенияРасширеннаяПодсказка" id="74"/>
+			</Button>
+			<ButtonGroup name="ФормаГруппаГлоб" id="75">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>Образуват група от Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BL</v8:lang>
+						<v8:content>Форма група Глоба</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Bilden eine Gruppe von Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>EN</v8:lang>
+						<v8:content>Form a group of Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>Tworzą grupę Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>RO</v8:lang>
+						<v8:content>Formează un grup de Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>UK</v8:lang>
+						<v8:content>Форма група глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>TH</v8:lang>
+						<v8:content>แบบกลุ่มของโลก</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ZH</v8:lang>
+						<v8:content>形成一批地球的</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>Образуват група от Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BL</v8:lang>
+						<v8:content>Форма група Глоба</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Bilden eine Gruppe von Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>EN</v8:lang>
+						<v8:content>Form a group of Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>Tworzą grupę Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>RO</v8:lang>
+						<v8:content>Formează un grup de Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>UK</v8:lang>
+						<v8:content>Форма група глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>TH</v8:lang>
+						<v8:content>แบบกลุ่มของโลก</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ZH</v8:lang>
+						<v8:content>形成一批地球的</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ФормаГруппаГлобРасширеннаяПодсказка" id="76"/>
+			</ButtonGroup>
+			<Button name="ФормаЗакрыть" id="67">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>Близо</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BL</v8:lang>
+						<v8:content>Зачыніць</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Schließen</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>EN</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>Blisko</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>RO</v8:lang>
+						<v8:content>Închide</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>UK</v8:lang>
+						<v8:content>Закрити</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>TH</v8:lang>
+						<v8:content>ใกล้</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ZH</v8:lang>
+						<v8:content>关闭</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="68"/>
+			</Button>
+			<Button name="ФормаИзменитьФорму" id="69">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="70"/>
+			</Button>
+			<Button name="ФормаСправка" id="65">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="66"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="ОбменДокументамиДенежныхСредств" id="25">
+			<DataPath>Объект.ОбменДокументамиДенежныхСредств</DataPath>
+			<Visible>false</Visible>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОбменДокументамиДенежныхСредствКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ОбменДокументамиДенежныхСредствExtendedTooltip" id="43"/>
+			<Events>
+				<Event name="OnChange">ОбменДокументамиДенежныхСредствПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ПериодДляДокументов" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период для документов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Период за документи</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Перыяд для дакументаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zeitraum für Dokumente</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Period for documents</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Okres na dokumenty</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Perioada de documente</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Період для документів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ระยะเวลาสำหรับเอกสาร</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>期文件</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период для документов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Период за документи</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Перыяд для дакументаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zeitraum für Dokumente</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Period for documents</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Okres na dokumenty</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Perioada de documente</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Період для документів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ระยะเวลาสำหรับเอกสาร</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>期文件</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="ПериодДляДокументовExtendedTooltip" id="44"/>
+			<ChildItems>
+				<InputField name="ДатаНачала" id="19">
+					<DataPath>Объект.ДатаНачала</DataPath>
+					<ClearButton>true</ClearButton>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДатаНачалаExtendedTooltip" id="45"/>
+					<Events>
+						<Event name="OnChange">ДатаНачалаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаОкончания" id="21">
+					<DataPath>Объект.ДатаОкончания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>окончания</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>закриване</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>заканчэння</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Schließung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>closure</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>zamknięcie</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>închidere</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>закінчення</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>การปิด</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>关闭</v8:content>
+						</v8:item>
+					</Title>
+					<ClearButton>true</ClearButton>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ДатаОкончанияExtendedTooltip" id="46"/>
+					<Events>
+						<Event name="OnChange">ДатаОкончанияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="Сегодня" id="34">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.Command.Сегодня</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Сегодня</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СегодняExtendedTooltip" id="47"/>
+				</Button>
+				<Button name="ВыбратьПериод" id="28">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ВыбратьПериод</CommandName>
+					<ExtendedTooltip name="ВыбратьПериодExtendedTooltip" id="48"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ЗадачиИмпортаЭкспорта" id="1">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ЗадачиИмпортаЭкспорта</DataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.ПодсистемаИЭШаблон</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗадачиИмпортаЭкспортаКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ЗадачиИмпортаЭкспортаКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="ЗадачиИмпортаЭкспортаДобавить" id="77">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.ЗадачиИмпортаЭкспорта.StandardCommand.Add</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Добави</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BL</v8:lang>
+								<v8:content>Дадаць</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Hinzufügen</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Add</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>PL</v8:lang>
+								<v8:content>Dodać</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>RO</v8:lang>
+								<v8:content>Adăuga</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Додати</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>TH</v8:lang>
+								<v8:content>เพิ่ม</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ZH</v8:lang>
+								<v8:content>加</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ЗадачиИмпортаЭкспортаДобавитьРасширеннаяПодсказка" id="78"/>
+					</Button>
+					<Button name="ЗадачиИмпортаЭкспортаУстановитьВсеНаИсполнение" id="39">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьВсеНаИсполнение</CommandName>
+						<ExtendedTooltip name="ЗадачиИмпортаЭкспортаУстановитьВсеНаИсполнениеExtendedTooltip" id="49"/>
+					</Button>
+					<Button name="ЗадачиИмпортаЭкспортаСнятьВсеСИсполнения" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьВсеСИсполнения</CommandName>
+						<ExtendedTooltip name="ЗадачиИмпортаЭкспортаСнятьВсеСИсполненияExtendedTooltip" id="50"/>
+					</Button>
+					<Button name="ЗадачиИмпортаЭкспортаУдалитьБанковскиеПлатежныеДокументыЗаПериод" id="29">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.УдалитьБанковскиеПлатежныеДокументыЗаПериод</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ЗадачиИмпортаЭкспортаУдалитьБанковскиеПлатежныеДокументыЗаПериодExtendedTooltip" id="51"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЗадачиИмпортаЭкспортаExtendedTooltip" id="52"/>
+			<SearchStringAddition name="ЗадачиИмпортаЭкспортаСтрокаПоиска" id="79">
+				<AdditionSource>
+					<Item>ЗадачиИмпортаЭкспорта</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиИмпортаЭкспортаСтрокаПоискаКонтекстноеМеню" id="80"/>
+				<ExtendedTooltip name="ЗадачиИмпортаЭкспортаСтрокаПоискаРасширеннаяПодсказка" id="81"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗадачиИмпортаЭкспортаСостояниеПросмотра" id="82">
+				<AdditionSource>
+					<Item>ЗадачиИмпортаЭкспорта</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиИмпортаЭкспортаСостояниеПросмотраКонтекстноеМеню" id="83"/>
+				<ExtendedTooltip name="ЗадачиИмпортаЭкспортаСостояниеПросмотраРасширеннаяПодсказка" id="84"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗадачиИмпортаЭкспортаУправлениеПоиском" id="85">
+				<AdditionSource>
+					<Item>ЗадачиИмпортаЭкспорта</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиИмпортаЭкспортаУправлениеПоискомКонтекстноеМеню" id="86"/>
+				<ExtendedTooltip name="ЗадачиИмпортаЭкспортаУправлениеПоискомРасширеннаяПодсказка" id="87"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<ColumnGroup name="ЗадачиИмпортаЭкспортаГруппа2" id="37">
+					<ExtendedTooltip name="ЗадачиИмпортаЭкспортаГруппа2ExtendedTooltip" id="53"/>
+					<ChildItems>
+						<CheckBoxField name="ЗадачиИмпортаЭкспортаИсполнять" id="30">
+							<DataPath>Объект.ЗадачиИмпортаЭкспорта.Исполнять</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗадачиИмпортаЭкспортаИсполнятьКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ЗадачиИмпортаЭкспортаИсполнятьExtendedTooltip" id="54"/>
+						</CheckBoxField>
+						<LabelField name="ЗадачиИмпортаЭкспортаНомерСтроки" id="4">
+							<DataPath>Объект.ЗадачиИмпортаЭкспорта.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЗадачиИмпортаЭкспортаНомерСтрокиКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ЗадачиИмпортаЭкспортаНомерСтрокиExtendedTooltip" id="55"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<CheckBoxField name="ЗадачиИмпортаЭкспортаСписокНеКарточка" id="23">
+					<DataPath>Объект.ЗадачиИмпортаЭкспорта.СписокНеКарточка</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗадачиИмпортаЭкспортаСписокНеКарточкаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЗадачиИмпортаЭкспортаСписокНеКарточкаExtendedTooltip" id="56"/>
+				</CheckBoxField>
+				<ColumnGroup name="ЗадачиИмпортаЭкспортаГруппа1" id="36">
+					<ExtendedTooltip name="ЗадачиИмпортаЭкспортаГруппа1ExtendedTooltip" id="57"/>
+					<ChildItems>
+						<InputField name="ЗадачиИмпортаЭкспортаШаблонФайла" id="10">
+							<DataPath>Объект.ЗадачиИмпортаЭкспорта.ШаблонФайла</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЗадачиИмпортаЭкспортаШаблонФайлаКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ЗадачиИмпортаЭкспортаШаблонФайлаExtendedTooltip" id="58"/>
+							<Events>
+								<Event name="OnChange">ЗадачиИмпортаЭкспортаШаблонФайлаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="ЗадачиИмпортаЭкспортаИмпорт" id="17">
+							<DataPath>Объект.ЗадачиИмпортаЭкспорта.ИмпортНеЭкспорт</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗадачиИмпортаЭкспортаИмпортКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ЗадачиИмпортаЭкспортаИмпортExtendedTooltip" id="59"/>
+						</CheckBoxField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ЗадачиИмпортаЭкспортаАдресФайла" id="12">
+					<DataPath>Объект.ЗадачиИмпортаЭкспорта.АдресФайла</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="ЗадачиИмпортаЭкспортаАдресФайлаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ЗадачиИмпортаЭкспортаАдресФайлаExtendedTooltip" id="60"/>
+					<Events>
+						<Event name="StartChoice">ЗадачиИмпортаЭкспортаАдресФайлаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<ColumnGroup name="ТипОбъектаИИмяТаблицы" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип объекта и имя таблицы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Тип на обекта и името на таблицата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Тып аб'екта і імя табліцы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Objekttyp und Name der Tabelle</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Object type and name of the table</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Typ obiektu i nazwa tabeli</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Tip de obiect și numele tabelului</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Тип об'єкту і ім'я таблиці</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ชนิดของวัตถุและชื่อของตาราง</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>该表的对象类型和名称</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип объекта и имя таблицы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Тип на обекта и името на таблицата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Тып аб'екта і імя табліцы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Objekttyp und Name der Tabelle</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Object type and name of the table</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Typ obiektu i nazwa tabeli</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Tip de obiect și numele tabelului</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Тип об'єкту і ім'я таблиці</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ชนิดของวัตถุและชื่อของตาราง</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>该表的对象类型和名称</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТипОбъектаИИмяТаблицыExtendedTooltip" id="61"/>
+					<ChildItems>
+						<InputField name="ЗадачиИмпортаЭкспортаТипОбъекта" id="6">
+							<DataPath>Объект.ЗадачиИмпортаЭкспорта.ТипОбъектаОперации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="ЗадачиИмпортаЭкспортаТипОбъектаКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ЗадачиИмпортаЭкспортаТипОбъектаExtendedTooltip" id="62"/>
+						</InputField>
+						<InputField name="ЗадачиИмпортаЭкспортаИмяТаблицыШаблонаФайла" id="8">
+							<DataPath>Объект.ЗадачиИмпортаЭкспорта.ИмяТаблицыШаблонаФайла</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЗадачиИмпортаЭкспортаИмяТаблицыШаблонаФайлаКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ЗадачиИмпортаЭкспортаИмяТаблицыШаблонаФайлаExtendedTooltip" id="63"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+		<CheckBoxField name="РежимТестирования" id="15">
+			<DataPath>Объект.РежимТестирования</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РежимТестированияКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="РежимТестированияExtendedTooltip" id="64"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ИмпортЭкспортПакетноеИсполнение</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>Объект.ЭлементСоставаОпределяетсяПоАртикулу</Field>
+				<Field>Объект.ТипОбъектаОперации</Field>
+				<Field>Объект.РежимТестирования</Field>
+				<Field>Объект.ОбъектОперации</Field>
+				<Field>Объект.ОбменДокументамиДенежныхСредств</Field>
+				<Field>Объект.ЗагружаемыйВидДокументов</Field>
+				<Field>Объект.ДляТаблицыМатериалы</Field>
+				<Field>Объект.ДатаОкончания</Field>
+				<Field>Объект.ДатаНачала</Field>
+				<Field>Объект.ДатаАктуальности</Field>
+				<Field>Объект.ВладелецСпецификаций</Field>
+				<Field>Объект.БезОграниченияПоПериоду</Field>
+				<Field>Объект.АдресФайла</Field>
+				<Field>Объект.АдресВторогоФайла</Field>
+				<Field>1/0:e8c0bd5d-e9ee-4bd8-a678-a0cb74c27280</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ПодсистемаИЭИмпортЭкспорт</Item>
+			</FunctionalOptions>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьОбменСпискаЗадач" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен списка задач</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>За да общуват в списъка на задачите</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выканаць абмен спісу задач</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Um die Liste der Aufgaben kommunizieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>To communicate the list of tasks</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Komunikować listę zadań</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Pentru a comunica lista de sarcini</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Виконати обмін списку завдань</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ในการติดต่อสื่อสารรายการของงาน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>进行通信的任务列表</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен списка задач</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>За да общуват в списъка на задачите</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выканаць абмен спісу задач</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Um die Liste der Aufgaben kommunizieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>To communicate the list of tasks</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Komunikować listę zadań</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Pentru a comunica lista de sarcini</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Виконати обмін списку завдань</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ในการติดต่อสื่อสารรายการของงาน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>进行通信的任务列表</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьОбменСпискаЗадач</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ПодсистемаИЭИмпортЭкспорт</Item>
+			</FunctionalOptions>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыбратьПериод" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изберете период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выбраць перыяд</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zeitraum wählen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Choose period</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Wybierz okres</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Alege perioada</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вибрати період</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เลือกวันที่</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>选择期</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изберете период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выбраць перыяд</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zeitraum wählen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Choose period</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Wybierz okres</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Alege perioada</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вибрати період</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เลือกวันที่</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>选择期</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionDataParameters</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьПериод</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УдалитьБанковскиеПлатежныеДокументыЗаПериод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить банковские платежные документы за период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Премахнете банкови платежни документи за периода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выдаліць банкаўскія аплатныя дакументы за перыяд</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entfernen Bank Zahlungsbelege für den Zeitraum</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Remove bank payment documents for the period</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Usuń dokumenty płatności za okres</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Scoateți documentele de plată bancar pentru perioada</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Видалити банківські платіжні документи за період</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เอาเอกสารการชำระเงินธนาคารเป็นระยะเวลา</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>除去银行付款单据期内</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить банковские платежные документы за период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Премахнете банкови платежни документи за периода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выдаліць банкаўскія аплатныя дакументы за перыяд</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entfernen Bank Zahlungsbelege für den Zeitraum</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Remove bank payment documents for the period</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Usuń dokumenty płatności za okres</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Scoateți documentele de plată bancar pentru perioada</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Видалити банківські платіжні документи за період</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เอาเอกสารการชำระเงินธนาคารเป็นระยะเวลา</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>除去银行付款单据期内</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьБанковскиеПлатежныеДокументыЗаПериод</Action>
+		</Command>
+		<Command name="ВыполнитьВсеОперацииИмпорта" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Вносът</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Імпарт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Importe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Imports</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Import</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Importurile</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Імпорт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>การนำเข้า</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>进口</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить все операции импорта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Завършете операцията за импортиране</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выканаць усе аперацыі імпарту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Füllen Sie alle den Importvorgang</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Complete all the import operation</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Ukończ wszystkie operację importowania</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Completați toate operațiunea de import</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Виконати всі операції імпорту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ทั้งหมดการดำเนินการนำเข้าเสร็จสมบูรณ์</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>完成所有的导入操作</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+I</Shortcut>
+			<Action>ВыполнитьВсеОперацииИмпорта</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыполнитьВсеОперацииЭкспорта" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспорт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Износ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Экспарт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Export</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Export</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Eksport</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Export</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Експорт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ส่งออก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>出口</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить все операции экспорта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Попълнете цялата износна операция</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выканаць усе аперацыі экспарту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Füllen Sie alle Exportvorgang</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Complete all export operation</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Ukończ wszystkie operację eksportowania</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Completați toate operațiune de export</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Виконати всі операції експорту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เสร็จสิ้นการดำเนินการส่งออกทั้งหมด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>完成所有导出操作</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+E</Shortcut>
+			<Action>ВыполнитьВсеОперацииЭкспорта</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Сегодня" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегодня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Днес</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Сёння</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Heute</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Today</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Dzisiaj</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Azi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Сьогодні</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>วันนี้</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>今天</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегодня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Днес</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Сёння</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Heute</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Today</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Dzisiaj</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Azi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Сьогодні</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>วันนี้</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>今天</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+T</Shortcut>
+			<Action>Сегодня</Action>
+		</Command>
+		<Command name="СнятьВсеСИсполнения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Премахване на всички</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Зняць усе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entfernen Sie alle</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Remove all</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Usuń wszystko</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Elimina toate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Зняти все</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ลบทั้งหมด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>删除所有</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все с исполнения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Извадете всичко от изпълнение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Зняць усе з выканання</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entfernen Sie alles von der Ausführung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Remove everything from execution</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Usuń wszystko z egzekucji</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Scoateți totul, de la execuție</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Зняти всі з виконання</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เอาทุกอย่างจากการทำงาน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>从执行删除一切</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсеСИсполнения</Action>
+		</Command>
+		<Command name="УстановитьВсеНаИсполнение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Инсталирайте всички</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Ўсталяваць усе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Installieren Sie alle</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Install all</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Zainstalować wszystkie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Instala toate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Встановити все</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ติดตั้งทั้งหมด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>安装所有</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все на исполнение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Инсталирай всичко производителност</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Ўсталяваць усё на выкананне</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Installieren Sie die gesamte Leistungs</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Install all performance</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Zainstaluj wszystkie wyniki</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Instalați toate performanță</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Встановити все на виконання</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ติดตั้งการทำงานทั้งหมด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>安装所有的性能</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьВсеНаИсполнение</Action>
+		</Command>
+	</Commands>
+</Form>

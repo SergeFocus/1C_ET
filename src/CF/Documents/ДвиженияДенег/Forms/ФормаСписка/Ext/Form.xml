@@ -289,7 +289,7 @@
 						</v8:item>
 					</Title>
 					<HorizontalAlign>Right</HorizontalAlign>
-					<Width>15</Width>
+					<Width>12</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<MarkNegatives>true</MarkNegatives>
 					<Format>
@@ -310,7 +310,7 @@
 					<DataPath>НаименованиеОсновнойВалюты</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<HorizontalAlign>Left</HorizontalAlign>
-					<Width>8</Width>
+					<Width>6</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="НаименованиеОсновнойВалютыКонтекстноеМеню" id="179"/>
 					<ExtendedTooltip name="НаименованиеОсновнойВалютыРасширеннаяПодсказка" id="180"/>
@@ -326,6 +326,11 @@
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.СоздатьРасходПриходДокументОбменаВалют</CommandName>
 					<ExtendedTooltip name="СоздатьРасходПриходДокументОбменаВалютРасширеннаяПодсказка" id="131"/>
+				</Button>
+				<Button name="ОбработкаИмпортЭкспортПакетноеИсполнениеОткрытьСписокЗадачОбменаДокументамиДС" id="375">
+					<Type>UsualButton</Type>
+					<CommandName>DataProcessor.ИмпортЭкспортПакетноеИсполнение.Command.ОткрытьСписокЗадачОбменаДокументамиДС</CommandName>
+					<ExtendedTooltip name="ОбработкаИмпортЭкспортПакетноеИсполнениеОткрытьСписокЗадачОбменаДокументамиДСРасширеннаяПодсказка" id="376"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>
@@ -439,6 +444,7 @@
 				</InputField>
 				<InputField name="ОтборПоХранилищуДенег" id="357">
 					<DataPath>ОтборПоХранилищуДенег</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ClearButton>true</ClearButton>
 					<ContextMenu name="ОтборПоХранилищуДенегКонтекстноеМеню" id="358"/>
 					<ExtendedTooltip name="ОтборПоХранилищуДенегРасширеннаяПодсказка" id="359"/>
@@ -674,10 +680,19 @@
 										<CommandName>Form.Item.Список.StandardCommand.OutputList</CommandName>
 										<ExtendedTooltip name="СписокКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="219"/>
 									</Button>
+									<Button name="СписокКонтекстноеМенюПровести" id="404">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Список.StandardCommand.Post</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюПровестиРасширеннаяПодсказка" id="405"/>
+									</Button>
+									<Button name="СписокКонтекстноеМенюОтменаПроведения" id="406">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Список.StandardCommand.UndoPosting</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюОтменаПроведенияРасширеннаяПодсказка" id="407"/>
+									</Button>
 								</ChildItems>
 							</ContextMenu>
 							<AutoCommandBar name="СписокКоманднаяПанель" id="66">
-								<Autofill>false</Autofill>
 								<ChildItems>
 									<Button name="СписокСоздать" id="185">
 										<Type>CommandBarButton</Type>
@@ -799,29 +814,29 @@
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="67"/>
-							<SearchStringAddition name="СписокСтрокаПоиска" id="373">
+							<SearchStringAddition name="СписокСтрокаПоиска" id="377">
 								<AdditionSource>
 									<Item>Список</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="374"/>
-								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="375"/>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="378"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="379"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="СписокСостояниеПросмотра" id="376">
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="380">
 								<AdditionSource>
 									<Item>Список</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="377"/>
-								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="378"/>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="381"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="382"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="СписокУправлениеПоиском" id="379">
+							<SearchControlAddition name="СписокУправлениеПоиском" id="383">
 								<AdditionSource>
 									<Item>Список</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="380"/>
-								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="381"/>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="384"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="385"/>
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="Дата" id="68">
@@ -885,7 +900,32 @@
 								</LabelField>
 								<LabelField name="ВидДокумента" id="172">
 									<DataPath>Список.ВидДокумента</DataPath>
-									<Width>14</Width>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид документов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Тип на документи</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Вид документів</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Type of documents</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Rodzaj dokumentów</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Entfernen</v8:content>
+										</v8:item>
+									</Title>
 									<ContextMenu name="ВидДокументаКонтекстноеМеню" id="173"/>
 									<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="174"/>
 								</LabelField>
@@ -925,7 +965,8 @@
 								</LabelField>
 								<LabelField name="ВалютаПриход" id="147">
 									<DataPath>Список.ВалютаПриход</DataPath>
-									<Width>10</Width>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="ВалютаПриходКонтекстноеМеню" id="148"/>
 									<ExtendedTooltip name="ВалютаПриходРасширеннаяПодсказка" id="149"/>
@@ -1195,11 +1236,20 @@
 								<CommandName>Form.Item.Расходы.StandardCommand.OutputList</CommandName>
 								<ExtendedTooltip name="РасходыКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="221"/>
 							</Button>
+							<Button name="РасходыКонтекстноеМенюПровести" id="408">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Расходы.StandardCommand.Post</CommandName>
+								<ExtendedTooltip name="РасходыКонтекстноеМенюПровестиРасширеннаяПодсказка" id="409"/>
+							</Button>
+							<Button name="РасходыКонтекстноеМенюОтменаПроведения" id="410">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Расходы.StandardCommand.UndoPosting</CommandName>
+								<ExtendedTooltip name="РасходыКонтекстноеМенюОтменаПроведенияРасширеннаяПодсказка" id="411"/>
+							</Button>
 						</ChildItems>
 					</ContextMenu>
 					<AutoCommandBar name="РасходыКоманднаяПанель" id="27">
 						<HorizontalAlign>Right</HorizontalAlign>
-						<Autofill>false</Autofill>
 						<ChildItems>
 							<Button name="РасходыСоздатьРасход" id="102">
 								<Type>CommandBarButton</Type>
@@ -1315,32 +1365,40 @@
 								<CommandName>Form.Item.Расходы.StandardCommand.OutputList</CommandName>
 								<ExtendedTooltip name="РасходыВывестиСписокРасширеннаяПодсказка" id="214"/>
 							</Button>
+							<Button name="РасходыСоздать" id="373">
+								<Type>CommandBarButton</Type>
+								<Visible>false</Visible>
+								<Representation>PictureAndText</Representation>
+								<OnlyInAllActions>false</OnlyInAllActions>
+								<CommandName>Form.Item.Расходы.StandardCommand.Create</CommandName>
+								<ExtendedTooltip name="РасходыСоздатьРасширеннаяПодсказка" id="374"/>
+							</Button>
 						</ChildItems>
 					</AutoCommandBar>
 					<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="28"/>
-					<SearchStringAddition name="РасходыСтрокаПоиска" id="382">
+					<SearchStringAddition name="РасходыСтрокаПоиска" id="386">
 						<AdditionSource>
 							<Item>Расходы</Item>
 							<Type>SearchStringRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="РасходыСтрокаПоискаКонтекстноеМеню" id="383"/>
-						<ExtendedTooltip name="РасходыСтрокаПоискаРасширеннаяПодсказка" id="384"/>
+						<ContextMenu name="РасходыСтрокаПоискаКонтекстноеМеню" id="387"/>
+						<ExtendedTooltip name="РасходыСтрокаПоискаРасширеннаяПодсказка" id="388"/>
 					</SearchStringAddition>
-					<ViewStatusAddition name="РасходыСостояниеПросмотра" id="385">
+					<ViewStatusAddition name="РасходыСостояниеПросмотра" id="389">
 						<AdditionSource>
 							<Item>Расходы</Item>
 							<Type>ViewStatusRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="РасходыСостояниеПросмотраКонтекстноеМеню" id="386"/>
-						<ExtendedTooltip name="РасходыСостояниеПросмотраРасширеннаяПодсказка" id="387"/>
+						<ContextMenu name="РасходыСостояниеПросмотраКонтекстноеМеню" id="390"/>
+						<ExtendedTooltip name="РасходыСостояниеПросмотраРасширеннаяПодсказка" id="391"/>
 					</ViewStatusAddition>
-					<SearchControlAddition name="РасходыУправлениеПоиском" id="388">
+					<SearchControlAddition name="РасходыУправлениеПоиском" id="392">
 						<AdditionSource>
 							<Item>Расходы</Item>
 							<Type>SearchControl</Type>
 						</AdditionSource>
-						<ContextMenu name="РасходыУправлениеПоискомКонтекстноеМеню" id="389"/>
-						<ExtendedTooltip name="РасходыУправлениеПоискомРасширеннаяПодсказка" id="390"/>
+						<ContextMenu name="РасходыУправлениеПоискомКонтекстноеМеню" id="393"/>
+						<ExtendedTooltip name="РасходыУправлениеПоискомРасширеннаяПодсказка" id="394"/>
 					</SearchControlAddition>
 					<ChildItems>
 						<LabelField name="РасходыДата" id="29">
@@ -1404,7 +1462,32 @@
 						</LabelField>
 						<LabelField name="РасходыВидДокумента" id="175">
 							<DataPath>Расходы.ВидДокумента</DataPath>
-							<Width>14</Width>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид документов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Тип на документи</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Вид документів</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Type of documents</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Rodzaj dokumentów</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Art der Dokumente</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="РасходыВидДокументаКонтекстноеМеню" id="176"/>
 							<ExtendedTooltip name="РасходыВидДокументаРасширеннаяПодсказка" id="177"/>
 						</LabelField>
@@ -1444,7 +1527,8 @@
 						</LabelField>
 						<LabelField name="РасходыВалюта" id="141">
 							<DataPath>Расходы.Валюта</DataPath>
-							<Width>10</Width>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<Width>8</Width>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="РасходыВалютаКонтекстноеМеню" id="142"/>
 							<ExtendedTooltip name="РасходыВалютаРасширеннаяПодсказка" id="143"/>
@@ -1765,6 +1849,16 @@
 								<CommandName>Form.Item.СписокВОднуКолонку.StandardCommand.OutputList</CommandName>
 								<ExtendedTooltip name="СписокВОднуКолонкуКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="315"/>
 							</Button>
+							<Button name="СписокВОднуКолонкуКонтекстноеМенюПровести" id="412">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокВОднуКолонку.StandardCommand.Post</CommandName>
+								<ExtendedTooltip name="СписокВОднуКолонкуКонтекстноеМенюПровестиРасширеннаяПодсказка" id="413"/>
+							</Button>
+							<Button name="СписокВОднуКолонкуКонтекстноеМенюОтменаПроведения" id="414">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокВОднуКолонку.StandardCommand.UndoPosting</CommandName>
+								<ExtendedTooltip name="СписокВОднуКолонкуКонтекстноеМенюОтменаПроведенияРасширеннаяПодсказка" id="415"/>
+							</Button>
 						</ChildItems>
 					</ContextMenu>
 					<AutoCommandBar name="СписокВОднуКолонкуКоманднаяПанель" id="231">
@@ -1994,29 +2088,29 @@
 						</ChildItems>
 					</AutoCommandBar>
 					<ExtendedTooltip name="СписокВОднуКолонкуРасширеннаяПодсказка" id="232"/>
-					<SearchStringAddition name="СписокВОднуКолонкуСтрокаПоиска" id="391">
+					<SearchStringAddition name="СписокВОднуКолонкуСтрокаПоиска" id="395">
 						<AdditionSource>
 							<Item>СписокВОднуКолонку</Item>
 							<Type>SearchStringRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="СписокВОднуКолонкуСтрокаПоискаКонтекстноеМеню" id="392"/>
-						<ExtendedTooltip name="СписокВОднуКолонкуСтрокаПоискаРасширеннаяПодсказка" id="393"/>
+						<ContextMenu name="СписокВОднуКолонкуСтрокаПоискаКонтекстноеМеню" id="396"/>
+						<ExtendedTooltip name="СписокВОднуКолонкуСтрокаПоискаРасширеннаяПодсказка" id="397"/>
 					</SearchStringAddition>
-					<ViewStatusAddition name="СписокВОднуКолонкуСостояниеПросмотра" id="394">
+					<ViewStatusAddition name="СписокВОднуКолонкуСостояниеПросмотра" id="398">
 						<AdditionSource>
 							<Item>СписокВОднуКолонку</Item>
 							<Type>ViewStatusRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="СписокВОднуКолонкуСостояниеПросмотраКонтекстноеМеню" id="395"/>
-						<ExtendedTooltip name="СписокВОднуКолонкуСостояниеПросмотраРасширеннаяПодсказка" id="396"/>
+						<ContextMenu name="СписокВОднуКолонкуСостояниеПросмотраКонтекстноеМеню" id="399"/>
+						<ExtendedTooltip name="СписокВОднуКолонкуСостояниеПросмотраРасширеннаяПодсказка" id="400"/>
 					</ViewStatusAddition>
-					<SearchControlAddition name="СписокВОднуКолонкуУправлениеПоиском" id="397">
+					<SearchControlAddition name="СписокВОднуКолонкуУправлениеПоиском" id="401">
 						<AdditionSource>
 							<Item>СписокВОднуКолонку</Item>
 							<Type>SearchControl</Type>
 						</AdditionSource>
-						<ContextMenu name="СписокВОднуКолонкуУправлениеПоискомКонтекстноеМеню" id="398"/>
-						<ExtendedTooltip name="СписокВОднуКолонкуУправлениеПоискомРасширеннаяПодсказка" id="399"/>
+						<ContextMenu name="СписокВОднуКолонкуУправлениеПоискомКонтекстноеМеню" id="402"/>
+						<ExtendedTooltip name="СписокВОднуКолонкуУправлениеПоискомРасширеннаяПодсказка" id="403"/>
 					</SearchControlAddition>
 					<ChildItems>
 						<LabelField name="СписокВОднуКолонкуДата" id="233">
@@ -2908,7 +3002,7 @@
 				<Field>ОтборПоХранилищуДенег</Field>
 			</Save>
 			<FunctionalOptions>
-				<Item>FunctionalOption.УчитыватьДеньгиВНесколькихХранилищах</Item>
+				<Item>FunctionalOption.ВестиУчетДенегВНесколькихХранилищах</Item>
 			</FunctionalOptions>
 		</Attribute>
 	</Attributes>
@@ -3207,7 +3301,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>CommonPicture.Обмен</xr:Ref>
+				<xr:Ref>CommonPicture.ОбменВалют</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОстаткиПоВалютам</Action>
@@ -3311,7 +3405,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+Shift+O</Shortcut>
 			<Picture>
-				<xr:Ref>CommonPicture.Обмен</xr:Ref>
+				<xr:Ref>CommonPicture.ОбменВалют</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СоздатьРасходПриходДокументОбменаВалют</Action>
@@ -3427,48 +3521,48 @@
 		<Command name="СоздатьДокументНачисленияИВыдачиЗаработнойПлаты" id="6">
 			<Title>
 				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать Начисление и Выдачу заработной платы</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Create accrual and payment of wages</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Crearea de angajamente și de plată a salariilor</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>bl</v8:lang>
 					<v8:content>Стварыць Налічэнне і Выдачу заработнай платы</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>zh</v8:lang>
-					<v8:content>建立权责发生制和工资支付</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Створити Нарахування та Видачу заробітної плати</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>BG</v8:lang>
+					<v8:lang>bg</v8:lang>
 					<v8:content>Създаване на начисляване и изплащане на заплатите</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Erstellen Abgrenzung und Zahlung der Löhne</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Tworzenie naliczania i wypłaty wynagrodzeń</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Жаса- начисление және ұстап бер- қызметақы</v8:content>
 				</v8:item>
 				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>建立权责发生制和工资支付</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Erstellen Abgrenzung und Zahlung der Löhne</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Tworzenie naliczania i wypłaty wynagrodzeń</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Crearea de angajamente și de plată a salariilor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документ заработной платы</v8:content>
+				</v8:item>
+				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>สร้างการคำนวณและการชำระเงินของค่าจ้าง</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Створити Нарахування та Видачу заробітної плати</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

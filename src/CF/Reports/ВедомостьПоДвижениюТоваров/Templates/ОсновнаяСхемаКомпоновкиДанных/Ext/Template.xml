@@ -734,6 +734,36 @@
 			<dataPath>СерияНоменклатуры</dataPath>
 			<field>СерияНоменклатуры</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Ціна</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Price</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Cena</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>In der Nähe</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	Товары.Период,
@@ -784,7 +814,16 @@
 	МЕСЯЦ(Товары.Период) КАК МесяцДвижения,
 	ГОД(Товары.Период) КАК ГодДвижения,
 	Товары.Комментарий,
-	Товары.СерияНоменклатуры
+	Товары.СерияНоменклатуры,
+	ВЫБОР
+		КОГДА Товары.ВидДвижения = &amp;Приход
+			ТОГДА Товары.Сумма
+		ИНАЧЕ -Товары.Сумма
+	КОНЕЦ / ВЫБОР
+		КОГДА Товары.Количество = 0
+			ТОГДА 1
+		ИНАЧЕ Товары.Количество
+	КОНЕЦ КАК Цена
 ИЗ
 	РегистрНакопления.Товары КАК Товары
 ГДЕ
@@ -822,6 +861,7 @@
 	NULL,
 	NULL,
 	&amp;ТекстОстатокНаНачало,
+	NULL,
 	NULL
 ИЗ
 	РегистрНакопления.Товары.Остатки(
@@ -858,6 +898,7 @@
 	NULL,
 	NULL,
 	&amp;ТекстОстатокНаКонец,
+	NULL,
 	NULL
 ИЗ
 	РегистрНакопления.Товары.Остатки(
@@ -906,6 +947,10 @@
 	<totalField>
 		<dataPath>СуммаОстатокНаНачало</dataPath>
 		<expression>Сумма(СуммаОстатокНаНачало)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Цена</dataPath>
+		<expression>Среднее(Цена)</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаНачала</name>
@@ -1557,6 +1602,10 @@
 					<dcsset:use>false</dcsset:use>
 					<dcsset:field>СерияНоменклатуры</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1641,6 +1690,9 @@
 						</dcsset:item>
 						<dcsset:item>
 							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Цена</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter/>
@@ -2556,6 +2608,9 @@
 					<dcsset:use>false</dcsset:use>
 					<dcsset:field>СуммаОстатокНаКонец</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -2646,6 +2701,9 @@
 						</dcsset:item>
 						<dcsset:item>
 							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Цена</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter/>
@@ -4099,7 +4157,7 @@
 					<dcscor:value xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Даграмма. Оброт за день</v8:content>
+							<v8:content>Диаграмма. Оборот за день</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>EN</v8:lang>
@@ -4107,7 +4165,7 @@
 						</v8:item>
 						<v8:item>
 							<v8:lang>UK</v8:lang>
-							<v8:content>Даграмма. Обротов за день</v8:content>
+							<v8:content>Диаграмма. Оборотов за день</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BL</v8:lang>
@@ -4135,7 +4193,7 @@
 						</v8:item>
 						<v8:item>
 							<v8:lang>kk</v8:lang>
-							<v8:content>Даграмма. Оброт үшін күнді</v8:content>
+							<v8:content>Диаграмма. Оборот үшін күнді</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>th</v8:lang>

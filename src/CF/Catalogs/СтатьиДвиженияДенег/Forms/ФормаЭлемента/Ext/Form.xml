@@ -340,7 +340,7 @@
 			<ChildItems>
 				<PictureDecoration name="СимволСправочника" id="38">
 					<Width>4</Width>
-					<Height>1</Height>
+					<Height>2</Height>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -497,7 +497,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Наименование</v8:content>
+									<v8:content>Наименование статьи движения денег</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>BG</v8:lang>
@@ -540,11 +540,12 @@
 									<v8:content>Атау</v8:content>
 								</v8:item>
 							</Title>
-							<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<TitleLocation>Top</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
-							<Width>70</Width>
 							<HorizontalStretch>false</HorizontalStretch>
 							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<TextColor>#800000</TextColor>
+							<BorderColor>style:FieldBackColor</BorderColor>
 							<Font ref="style:LargeTextFont" kind="StyleItem"/>
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
@@ -554,7 +555,9 @@
 						</InputField>
 						<Button name="ПредставлениеНаДругихЯзыках" id="43">
 							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
 							<Width>4</Width>
+							<Height>2</Height>
 							<CommandName>Form.Command.ПредставлениеНаДругихЯзыках</CommandName>
 							<ExtendedTooltip name="ПредставлениеНаДругихЯзыкахРасширеннаяПодсказка" id="44"/>
 						</Button>
@@ -781,19 +784,21 @@
 					<ContextMenu name="РодительКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="6"/>
 				</InputField>
-				<InputField name="Код" id="23">
-					<DataPath>Объект.Code</DataPath>
-					<SkipOnInput>true</SkipOnInput>
-					<ContextMenu name="КодКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="25"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="Код" id="23">
+			<DataPath>Объект.Code</DataPath>
+			<SkipOnInput>true</SkipOnInput>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<ContextMenu name="КодКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="25"/>
+		</InputField>
 		<InputField name="Комментарий" id="7">
 			<DataPath>Объект.Комментарий</DataPath>
 			<DefaultItem>true</DefaultItem>
 			<EditMode>EnterOnInput</EditMode>
-			<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="9"/>
 		</InputField>
@@ -1566,6 +1571,14 @@
 			</Item>
 			<Item>
 				<Command>InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenByValue.ОбъектВладелец</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>

@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Удаление помеченных объектов</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>EN</v8:lang>
+			<v8:content>Delete marked objects</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>UK</v8:lang>
+			<v8:content>Видалення помічених об'єктів</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoFillCheck>false</AutoFillCheck>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ScalingMode>Compact</ScalingMode>
+	<CommandSet>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницыФормы" id="1">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>page forms</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Сторінки форми</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>page forms</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Сторінки форми</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыФормыExtendedTooltip" id="65"/>
+			<ChildItems>
+				<Page name="ВыборРежимаУдаления" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбор режима удаления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>mode selection</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вибір режиму видалення</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбор режима удаления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>mode selection delete delete</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вибір режиму видалення</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ВыборРежимаУдаленияExtendedTooltip" id="66"/>
+					<ChildItems>
+						<RadioButtonField name="РежимУдаления" id="15">
+							<DataPath>РежимУдаления</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выберите режим удаления</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>select delete mode</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Виберіть режим видалення</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Автоматическое удаление всех отмеченных объектов</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Полный</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выборочное удаление объектов</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Выборочный</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="РежимУдаленияКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="РежимУдаленияExtendedTooltip" id="67"/>
+							<Events>
+								<Event name="OnChange">РежимУдаленияПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</Page>
+				<Page name="ПомеченныеНаУдаление" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Помеченные на удаление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>marked for deletion</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Позначені на видалення</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Помеченные на удаление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>are marked for deletion</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Позначені на видалення</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПомеченныеНаУдалениеExtendedTooltip" id="68"/>
+					<ChildItems>
+						<Table name="СписокПомеченныхНаУдаление" id="26">
+							<Representation>Tree</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<CommandBarLocation>Top</CommandBarLocation>
+							<SkipOnInput>false</SkipOnInput>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>СписокПомеченныхНаУдаление</DataPath>
+							<BorderColor>style:BorderColor</BorderColor>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пометьте объекты для удаления</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>mark objects to delete</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Помітьте об'єкти для видалення</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="СписокПомеченныхНаУдалениеКонтекстноеМеню" id="27"/>
+							<AutoCommandBar name="СписокПомеченныхНаУдалениеКоманднаяПанель" id="28">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<ButtonGroup name="КомандыВыбора" id="57">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Команды выбора</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>EN</v8:lang>
+												<v8:content>selection commands</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>UK</v8:lang>
+												<v8:content>Команди вибору</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Команды выбора</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>EN</v8:lang>
+												<v8:content>Command select</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>UK</v8:lang>
+												<v8:content>Команди вибору</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="КомандыВыбораExtendedTooltip" id="69"/>
+										<ChildItems>
+											<Button name="КомандаСписокПомеченныхУстановитьВсе" id="37">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.КомандаСписокПомеченныхУстановитьВсе</CommandName>
+												<TextColor>style:ButtonTextColor</TextColor>
+												<BackColor>style:ButtonBackColor</BackColor>
+												<BorderColor>style:BorderColor</BorderColor>
+												<ExtendedTooltip name="КомандаСписокПомеченныхУстановитьВсеExtendedTooltip" id="70"/>
+											</Button>
+											<Button name="КомандаСписокПомеченныхСнятьВсе" id="38">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.КомандаСписокПомеченныхСнятьВсе</CommandName>
+												<TextColor>style:ButtonTextColor</TextColor>
+												<BackColor>style:ButtonBackColor</BackColor>
+												<BorderColor>style:BorderColor</BorderColor>
+												<ExtendedTooltip name="КомандаСписокПомеченныхСнятьВсеExtendedTooltip" id="71"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="СтандартныеКоманды" id="56">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Стандартные команды</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>EN</v8:lang>
+												<v8:content>standard commands</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>UK</v8:lang>
+												<v8:content>Стандартні команди</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Стандартные команды</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>EN</v8:lang>
+												<v8:content>standard command</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>UK</v8:lang>
+												<v8:content>Стандартні команди</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Item.СписокПомеченныхНаУдаление</CommandSource>
+										<ExtendedTooltip name="СтандартныеКомандыExtendedTooltip" id="72"/>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокПомеченныхНаУдалениеExtendedTooltip" id="73"/>
+							<SearchStringAddition name="СписокПомеченныхНаУдалениеSearchString" id="74">
+								<AdditionSource>
+									<Item>СписокПомеченныхНаУдаление</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПомеченныхНаУдалениеSearchStringContextMenu" id="75"/>
+								<ExtendedTooltip name="СписокПомеченныхНаУдалениеSearchStringExtendedTooltip" id="76"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокПомеченныхНаУдалениеViewStatus" id="77">
+								<AdditionSource>
+									<Item>СписокПомеченныхНаУдаление</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПомеченныхНаУдалениеViewStatusContextMenu" id="78"/>
+								<ExtendedTooltip name="СписокПомеченныхНаУдалениеViewStatusExtendedTooltip" id="79"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокПомеченныхНаУдалениеSearchControl" id="80">
+								<AdditionSource>
+									<Item>СписокПомеченныхНаУдаление</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПомеченныхНаУдалениеSearchControlContextMenu" id="81"/>
+								<ExtendedTooltip name="СписокПомеченныхНаУдалениеSearchControlExtendedTooltip" id="82"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокПомеченныхНаУдалениеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="СтрокаСпискаПомеченных" id="29">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка списка помеченных</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>line list marked</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Рядок списку помічених</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка списка помеченных</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>list line marked with</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Рядок списку помічених</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="СтрокаСпискаПомеченныхExtendedTooltip" id="83"/>
+									<ChildItems>
+										<CheckBoxField name="Пометка" id="30">
+											<DataPath>СписокПомеченныхНаУдаление.Пометка</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<ShowInFooter>false</ShowInFooter>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПометкаКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="ПометкаExtendedTooltip" id="84"/>
+											<Events>
+												<Event name="OnChange">ПометкаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="Представление" id="32">
+											<DataPath>СписокПомеченныхНаУдаление.Представление</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<ShowInFooter>false</ShowInFooter>
+											<Wrap>false</Wrap>
+											<BorderColor>style:BorderColor</BorderColor>
+											<ContextMenu name="ПредставлениеКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ПредставлениеExtendedTooltip" id="85"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ПричиныНевозможностиУдаления" id="39">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причины невозможности удаления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>reasons for the inability Remove</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Причини неможливості видалення</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причины невозможности удаления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>the reasons for it is impossible to delete</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Причини неможливості видалення</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПричиныНевозможностиУдаленияExtendedTooltip" id="86"/>
+					<ChildItems>
+						<Table name="ДеревоОставшихсяОбъектов" id="40">
+							<Representation>Tree</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<SkipOnInput>false</SkipOnInput>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>ДеревоОставшихсяОбъектов</DataPath>
+							<RowPictureDataPath>ДеревоОставшихсяОбъектов.НомерКартинки</RowPictureDataPath>
+							<BorderColor>style:BorderColor</BorderColor>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Объекты, которые невозможно удалить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>objects that you cannot delete</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Об'єкти, які неможливо видалити</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ДеревоОставшихсяОбъектовКонтекстноеМеню" id="41"/>
+							<AutoCommandBar name="ДеревоОставшихсяОбъектовКоманднаяПанель" id="42">
+								<ChildItems>
+									<Button name="ДеревоОставшихсяОбъектовИзменить" id="58">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.ДеревоОставшихсяОбъектов.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="ДеревоОставшихсяОбъектовИзменитьExtendedTooltip" id="87"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоОставшихсяОбъектовExtendedTooltip" id="88"/>
+							<SearchStringAddition name="ДеревоОставшихсяОбъектовSearchString" id="89">
+								<AdditionSource>
+									<Item>ДеревоОставшихсяОбъектов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоОставшихсяОбъектовSearchStringContextMenu" id="90"/>
+								<ExtendedTooltip name="ДеревоОставшихсяОбъектовSearchStringExtendedTooltip" id="91"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоОставшихсяОбъектовViewStatus" id="92">
+								<AdditionSource>
+									<Item>ДеревоОставшихсяОбъектов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоОставшихсяОбъектовViewStatusContextMenu" id="93"/>
+								<ExtendedTooltip name="ДеревоОставшихсяОбъектовViewStatusExtendedTooltip" id="94"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоОставшихсяОбъектовSearchControl" id="95">
+								<AdditionSource>
+									<Item>ДеревоОставшихсяОбъектов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоОставшихсяОбъектовSearchControlContextMenu" id="96"/>
+								<ExtendedTooltip name="ДеревоОставшихсяОбъектовSearchControlExtendedTooltip" id="97"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДеревоОставшихсяОбъектовВыбор</Event>
+								<Event name="BeforeRowChange">ДеревоОставшихсяОбъектовПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПредставлениеОставшегося" id="43">
+									<DataPath>ДеревоОставшихсяОбъектов.Представление</DataPath>
+									<Wrap>false</Wrap>
+									<BorderColor>style:BorderColor</BorderColor>
+									<ContextMenu name="ПредставлениеОставшегосяКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ПредставлениеОставшегосяExtendedTooltip" id="98"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ДлительнаяОперация" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Длительная операция</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>the prolonged operation</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Тривала операція</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Длительная операция</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>time-consuming operation</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Тривала операція</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДлительнаяОперацияExtendedTooltip" id="99"/>
+					<ChildItems>
+						<UsualGroup name="ОсновнаяГруппаДлительнойОперации" id="62">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основная группа длительной операции</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>the main group long-term operations</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Основна група тривалої операції</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основная группа длительной операции</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>the main group long operations</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Основна група тривалої операції</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОсновнаяГруппаДлительнойОперацииExtendedTooltip" id="100"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаДлительнаяОперация" id="60">
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка длительная операция</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КартинкаДлительнаяОперацияКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="КартинкаДлительнаяОперацияExtendedTooltip" id="101"/>
+								</PictureDecoration>
+								<LabelDecoration name="УдалениеПомеченныхОбъектов" id="63">
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удаление помеченных объектов</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="УдалениеПомеченныхОбъектовКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="УдалениеПомеченныхОбъектовExtendedTooltip" id="102"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="КомандыФормы" id="2">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды формы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Command forms of the command</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Команди форми</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды формы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>forms </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Команди форми</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="КомандыФормыExtendedTooltip" id="103"/>
+			<ChildItems>
+				<Button name="КомандаНазад" id="52">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<Enabled>false</Enabled>
+					<CommandName>Form.Command.КомандаНазад</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;&lt; Назад</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>lt; &lt; Back Next</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>&lt;&lt; Назад</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КомандаНазадExtendedTooltip" id="104"/>
+				</Button>
+				<Button name="КомандаДалее" id="3">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<Enabled>false</Enabled>
+					<CommandName>Form.Command.КомандаДалее</CommandName>
+					<TextColor>style:ButtonTextColor</TextColor>
+					<BackColor>style:ButtonBackColor</BackColor>
+					<BorderColor>style:BorderColor</BorderColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Далее &gt;&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>&gt; &gt; Close</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Далі &gt;&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КомандаДалееExtendedTooltip" id="105"/>
+				</Button>
+				<Button name="КомандаУдалить" id="45">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.КомандаУдалить</CommandName>
+					<TextColor>style:ButtonTextColor</TextColor>
+					<BackColor>style:ButtonBackColor</BackColor>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ExtendedTooltip name="КомандаУдалитьExtendedTooltip" id="106"/>
+				</Button>
+				<Button name="Закрыть" id="4">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<TextColor>style:ButtonTextColor</TextColor>
+					<BackColor>style:ButtonBackColor</BackColor>
+					<BorderColor>style:BorderColor</BorderColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закрыть</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Close</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Закрити</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="107"/>
+				</Button>
+				<Button name="Справка" id="5">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<TextColor>style:ButtonTextColor</TextColor>
+					<BackColor>style:ButtonBackColor</BackColor>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="108"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УдалениеПомеченныхОбъектов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РежимУдаления" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим удаления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>delete mode</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Режим видалення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПустаяСтрока" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустая строка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>an empty string</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Порожній рядок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокПомеченныхНаУдаление" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список помеченных на удаление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>the list marked for deletion</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Список помічених на видалення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>to mark</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Позначка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>the</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Значення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>tree view</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Подання</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДеревоОставшихсяОбъектов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево оставшихся объектов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>the remaining objects</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Дерево об'єктів, що залишилися</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерКартинки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер картинки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>picture number</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Номер картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>value</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Значення</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>of</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Подання</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Надпись" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надпись</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>the label</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Напис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоНеУдаленныхОбъектов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество оставшихся (не удаленных) объектов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>the number of remaining (not remote) objects</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Кількість решти (не видалених) об'єктів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтрокаРезультатов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка результатов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>string of results</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Рядок результатів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УдаленныхОбъектов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удаленных объектов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>remote objects</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Віддалених об'єктів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоУровнейПомеченныхНаУдаление" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество уровней помеченных на удаление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>are marked with the number of levels in the delete</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Кількість рівнів помічених на видалення</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыОбработчикаОжидания" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры обработчика ожидания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>options standby handler</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Параметри обробника очікування</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>job id</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Ідентифікатор завдання</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="АдресХранилища" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>storage address</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Адреса сховища</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаДалее" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>further</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Далі</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьДалее</Action>
+		</Command>
+		<Command name="КомандаСписокПомеченныхУстановитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить все объекты на удаление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>mark all of the objects on the deletion</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Помітити всі об'єкти на видалення</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить все объекты на удаление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>mark all objects to delete</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Помітити всі об'єкти на видалення</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСписокПомеченныхУстановитьВсе</Action>
+		</Command>
+		<Command name="КомандаСписокПомеченныхСнятьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки удаления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>remove all tags remove</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Зняти всі позначки видалення</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки удаления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>remove all tags delete</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Зняти всі позначки видалення</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСписокПомеченныхСнятьВсе</Action>
+		</Command>
+		<Command name="КомандаУдалить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>are you sure you want to delete</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Видалити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить помеченные объекты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>are you sure you want to delete marked objects</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Видалити помічені об'єкти</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьУдаление</Action>
+		</Command>
+		<Command name="КомандаНазад" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда назад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Command is back</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Команда назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда назад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>command back</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Команда назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьНазад</Action>
+		</Command>
+	</Commands>
+</Form>

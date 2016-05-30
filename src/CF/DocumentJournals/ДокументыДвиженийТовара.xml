@@ -67,6 +67,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещенияТовара</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетКомиссионера</xr:Item>
 			</RegisteredDocuments>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<StandardAttributes>
@@ -226,57 +227,641 @@
 			<Explanation/>
 		</Properties>
 		<ChildObjects>
-			<Column uuid="b96db043-06e8-47e7-a14f-b1ed97348d20">
+			<Column uuid="6c043550-9c9a-4590-9e5f-421b533d566d">
 				<Properties>
-					<Name>Склад</Name>
+					<Name>ВалютаДенег</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Склад</v8:content>
+							<v8:content>Валюта денег</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
-							<v8:content>Склад</v8:content>
+							<v8:content>Валута пари</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BL</v8:lang>
-							<v8:content>Склад</v8:content>
+							<v8:content>Валюта грошай</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>DE</v8:lang>
-							<v8:content>Lager</v8:content>
+							<v8:content>Währung Geld</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>EN</v8:lang>
-							<v8:content>Warehouse</v8:content>
+							<v8:content>Currency money</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
-							<v8:content>Magazyn</v8:content>
+							<v8:content>Pieniędzmi waluty</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>RO</v8:lang>
-							<v8:content>Depozit</v8:content>
+							<v8:content>Bani valută</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>UK</v8:lang>
-							<v8:content>Склад</v8:content>
+							<v8:content>Валюта грошей</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>TH</v8:lang>
-							<v8:content>คลังสินค้า</v8:content>
+							<v8:content>เงินสกุลเงิน</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ZH</v8:lang>
-							<v8:content>仓库</v8:content>
+							<v8:content>货币资金</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Indexing>DontIndex</Indexing>
 					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещенияТовара.Attribute.Склад</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Склад</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Склад</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Валюта</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Валюта</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="f382466d-118c-49be-b494-5841bf76385c">
+				<Properties>
+					<Name>ВидДокумента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Виж документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Выгляд дакумента</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Sichten des Dokuments</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>View the document</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zobacz dokument</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Afișează documentul</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ดูเอกสาร</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>查看文档</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ВидДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ВидДокумента</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="cc222473-62ec-4b52-8cbc-e1d4d12f6fd3">
+				<Properties>
+					<Name>ВидЦен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид цен</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Виж цените</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Выгляд коштаў</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Preise anzeigen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>View prices</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zobacz ceny</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Vezi prețurile</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вид цін</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ดูราคา</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>查看价格</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещенияТовара.Attribute.ВидЦен</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ВидЦен</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ВидЦен</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="4503a0c6-154e-40fe-8326-78262beffe4b">
+				<Properties>
+					<Name>ДвижениеДенег</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Движение денег</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Парична движение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Рух грошай</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Währungs Bewegung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Monetary movement</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Ruch pieniężnej</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Circulație monetară</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Рух грошей</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>การเคลื่อนไหวทางการเงิน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>货币运动</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ВыбылоДенег</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ПоступилоДенег</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="f94d975b-0117-4b8d-a245-be9490a4592c">
+				<Properties>
+					<Name>Договор</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Дагавор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Vertrag</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Contract</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Umowa</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Contract</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Договір</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>สัญญา</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>合同</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Договор</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Договор</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="f5c97140-b785-49f1-a616-a805a1c82664">
+				<Properties>
+					<Name>ЗаказДатаПлана</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ дата плана</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Дата на поръчката план</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Заказ дата плана</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Bestelldatum Plan</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Order date plan</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Plan daty zamówienia</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Planul data pentru</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Замовлення дата плану</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>แผนวันที่สั่งซื้อ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>订购日期计划</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказДатаПлана</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказДатаПлана</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="e05093a7-8e7a-4b78-8bff-72f6cda1a1a2">
+				<Properties>
+					<Name>ЗаказДатаФакта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ дата факта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Дата Ред факти</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Заказ дата факту</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Bestelldatum Fakten</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Order date facts</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Data zamówienia fakty</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Fapte data pentru</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Замовлення дата факту</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ข้อเท็จจริงวันที่สั่งซื้อ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>订购日期事实</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказДатаФакта</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказДатаФакта</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="8aee8739-ee39-426f-906a-2a497eaa90dc">
+				<Properties>
+					<Name>ЗаказКлиента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ клиента</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Customer Поръчка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Заказ кліента</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Kundenauftrag</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Customer Order</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zamówienie klienta</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Client comandă</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Замовлення клієнта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>การสั่งซื้อของลูกค้า</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>客户订单</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказКлиента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказКлиента</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="cf64609f-4c9a-4e3d-b3bb-b6b5115cdb0f">
+				<Properties>
+					<Name>ЗаказНомерПриРегистрации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ номер при регистрации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Пореден номер, когато се регистрират</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Заказ нумар пры рэгістрацыі</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Bestellnummer bei der Registrierung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Order number when registering</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zamów numeru przy rejestracji</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Număr de comandă atunci când înregistrarea</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Замовлення номер при реєстрації</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>สั่งซื้อจำนวนเมื่อลงทะเบียน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>报名时订购数量</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказНомерПриРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказНомерПриРегистрации</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="ea855645-ea20-42a6-b2c5-04415b60a843">
+				<Properties>
+					<Name>ЗаказОплачен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ оплачен</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Поръчки платени</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Заказ аплочаны</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Bestellungen bezahlt</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Orders paid</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zamówienia opłacane</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Ordine de plată</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Замовлення оплачений</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>การสั่งจ่ายเงิน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>订单支付</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказОплачен</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказОплачен</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="e1136e93-ae7e-4e75-83a5-bdf912b3b785">
+				<Properties>
+					<Name>ЗаказСогласован</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ согласован</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Поръчка съгласи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Заказ узгоднены</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Bestellung vereinbart</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Order agreed</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zamówienie zgodził</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Scopul a fost de acord</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Замовлення узгоджений</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>การสั่งซื้อสินค้าที่ตกลงกันไว้</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>为了同意</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказСогласован</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказСогласован</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="6b564193-9035-422f-a179-02ff79261d6a">
+				<Properties>
+					<Name>Комментарий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Коментар</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Каментар</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Kommentar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Comment</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Komentarz</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Comentariu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Коментар</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ความเห็น</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>评论</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещенияТовара.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Комментарий</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -330,6 +915,113 @@
 					<References>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.КлиентПоставщик</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.КлиентПоставщик</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="b5b794df-4df2-4fe2-824f-59f8520dff57">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Арганізацыя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Organisation</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Organization</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Organizacja</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Organizație</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Організація</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>องค์กร</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>组织</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Организация</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="b96db043-06e8-47e7-a14f-b1ed97348d20">
+				<Properties>
+					<Name>Склад</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Lager</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Warehouse</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Magazyn</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Depozit</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>คลังสินค้า</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>仓库</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещенияТовара.Attribute.Склад</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Склад</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Склад</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -441,378 +1133,6 @@
 					</References>
 				</Properties>
 			</Column>
-			<Column uuid="cc222473-62ec-4b52-8cbc-e1d4d12f6fd3">
-				<Properties>
-					<Name>ВидЦен</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Вид цен</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Виж цените</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Выгляд коштаў</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Preise anzeigen</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>View prices</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Zobacz ceny</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Vezi prețurile</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Вид цін</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>ดูราคา</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>查看价格</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещенияТовара.Attribute.ВидЦен</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ВидЦен</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ВидЦен</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="4503a0c6-154e-40fe-8326-78262beffe4b">
-				<Properties>
-					<Name>ДвижениеДенег</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Движение денег</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Парична движение</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Рух грошай</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Währungs Bewegung</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Monetary movement</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Ruch pieniężnej</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Circulație monetară</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Рух грошей</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>การเคลื่อนไหวทางการเงิน</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>货币运动</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ВыбылоДенег</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ПоступилоДенег</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="6c043550-9c9a-4590-9e5f-421b533d566d">
-				<Properties>
-					<Name>ВалютаДенег</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Валюта денег</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Валута пари</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Валюта грошай</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Währung Geld</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Currency money</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Pieniędzmi waluty</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Bani valută</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Валюта грошей</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>เงินสกุลเงิน</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>货币资金</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Валюта</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Валюта</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="f382466d-118c-49be-b494-5841bf76385c">
-				<Properties>
-					<Name>ВидДокумента</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Вид документа</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Виж документа</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Выгляд дакумента</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Sichten des Dokuments</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>View the document</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Zobacz dokument</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Afișează documentul</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Вид документа</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>ดูเอกสาร</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>查看文档</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ВидДокумента</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ВидДокумента</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="b5b794df-4df2-4fe2-824f-59f8520dff57">
-				<Properties>
-					<Name>Организация</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Организация</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Организация</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Арганізацыя</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Organisation</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Organization</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Organizacja</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Organizație</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Організація</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>องค์กร</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>组织</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Организация</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Организация</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="f94d975b-0117-4b8d-a245-be9490a4592c">
-				<Properties>
-					<Name>Договор</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Договор</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Договор</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Дагавор</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Vertrag</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Contract</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Umowa</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Contract</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Договір</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>สัญญา</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>合同</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Договор</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Договор</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="8aee8739-ee39-426f-906a-2a497eaa90dc">
-				<Properties>
-					<Name>ЗаказКлиента</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заказ клиента</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Customer Поръчка</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Заказ кліента</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Kundenauftrag</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Customer Order</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Zamówienie klienta</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Client comandă</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Замовлення клієнта</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>การสั่งซื้อของลูกค้า</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>客户订单</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказКлиента</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказКлиента</xr:Item>
-					</References>
-				</Properties>
-			</Column>
 			<Column uuid="a07a06fb-4736-4a70-99d8-8e2cfb396dc4">
 				<Properties>
 					<Name>ЭтоЗаказ</Name>
@@ -863,325 +1183,6 @@
 					<References>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЭтоЗаказ</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЭтоЗаказ</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="e1136e93-ae7e-4e75-83a5-bdf912b3b785">
-				<Properties>
-					<Name>ЗаказСогласован</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заказ согласован</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Поръчка съгласи</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Заказ узгоднены</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Bestellung vereinbart</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Order agreed</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Zamówienie zgodził</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Scopul a fost de acord</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Замовлення узгоджений</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>การสั่งซื้อสินค้าที่ตกลงกันไว้</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>为了同意</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказСогласован</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказСогласован</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="ea855645-ea20-42a6-b2c5-04415b60a843">
-				<Properties>
-					<Name>ЗаказОплачен</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заказ оплачен</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Поръчки платени</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Заказ аплочаны</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Bestellungen bezahlt</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Orders paid</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Zamówienia opłacane</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Ordine de plată</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Замовлення оплачений</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>การสั่งจ่ายเงิน</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>订单支付</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказОплачен</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказОплачен</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="f5c97140-b785-49f1-a616-a805a1c82664">
-				<Properties>
-					<Name>ЗаказДатаПлана</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заказ дата плана</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Дата на поръчката план</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Заказ дата плана</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Bestelldatum Plan</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Order date plan</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Plan daty zamówienia</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Planul data pentru</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Замовлення дата плану</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>แผนวันที่สั่งซื้อ</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>订购日期计划</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказДатаПлана</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказДатаПлана</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="e05093a7-8e7a-4b78-8bff-72f6cda1a1a2">
-				<Properties>
-					<Name>ЗаказДатаФакта</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заказ дата факта</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Дата Ред факти</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Заказ дата факту</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Bestelldatum Fakten</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Order date facts</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Data zamówienia fakty</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Fapte data pentru</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Замовлення дата факту</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>ข้อเท็จจริงวันที่สั่งซื้อ</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>订购日期事实</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказДатаФакта</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказДатаФакта</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="cf64609f-4c9a-4e3d-b3bb-b6b5115cdb0f">
-				<Properties>
-					<Name>ЗаказНомерПриРегистрации</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заказ номер при регистрации</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Пореден номер, когато се регистрират</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Заказ нумар пры рэгістрацыі</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Bestellnummer bei der Registrierung</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Order number when registering</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Zamów numeru przy rejestracji</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Număr de comandă atunci când înregistrarea</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Замовлення номер при реєстрації</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>สั่งซื้อจำนวนเมื่อลงทะเบียน</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>报名时订购数量</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.ЗаказНомерПриРегистрации</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.ЗаказНомерПриРегистрации</xr:Item>
-					</References>
-				</Properties>
-			</Column>
-			<Column uuid="6b564193-9035-422f-a179-02ff79261d6a">
-				<Properties>
-					<Name>Комментарий</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Комментарий</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Коментар</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Каментар</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Kommentar</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Comment</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Komentarz</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Comentariu</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Коментар</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>ความเห็น</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>评论</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Indexing>DontIndex</Indexing>
-					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещенияТовара.Attribute.Комментарий</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступленияТовара.Attribute.Комментарий</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходыТовара.Attribute.Комментарий</xr:Item>
 					</References>
 				</Properties>
 			</Column>

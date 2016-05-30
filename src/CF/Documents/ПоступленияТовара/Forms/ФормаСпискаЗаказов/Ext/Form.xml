@@ -1,0 +1,1367 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Заказы Поставщикам</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>UK</v8:lang>
+			<v8:content>Замовлення Постачальникам</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ZH</v8:lang>
+			<v8:content>订单供应商</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>TH</v8:lang>
+			<v8:content>ผู้สั่งซื้อ</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>RO</v8:lang>
+			<v8:content>Comenzi Furnizori</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>PL</v8:lang>
+			<v8:content>Zamówienia Dostawcy</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>EN</v8:lang>
+			<v8:content>Orders Suppliers</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>DE</v8:lang>
+			<v8:content>Bestellungen Lieferanten</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>BL</v8:lang>
+			<v8:content>Заказы Пастаўшчыкам</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>BG</v8:lang>
+			<v8:content>Поръчки Доставчици</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>kk</v8:lang>
+			<v8:content>Тапсырыстар поставщикам</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСоздатьЗаказ" id="95">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СоздатьЗаказ</CommandName>
+				<ExtendedTooltip name="ФормаСоздатьЗаказРасширеннаяПодсказка" id="96"/>
+			</Button>
+			<Button name="ФормаСкопировать" id="83">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>0:342c531d-dc73-458a-8ac4-6a746916a33b</CommandName>
+				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="84"/>
+			</Button>
+			<Button name="ФормаИзменить" id="85">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Change</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьРасширеннаяПодсказка" id="86"/>
+			</Button>
+			<Button name="ФормаПровести" id="52">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="53"/>
+			</Button>
+			<Button name="ФормаОтменаПроведения" id="54">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.UndoPosting</CommandName>
+				<ExtendedTooltip name="ФормаОтменаПроведенияРасширеннаяПодсказка" id="55"/>
+			</Button>
+			<Button name="ФормаУстановитьПометкуУдаления" id="50">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>0:2e86453d-8958-4c9a-a1b4-b15215eedc2e</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьПометкуУдаленияРасширеннаяПодсказка" id="51"/>
+			</Button>
+			<Button name="ФормаНайти" id="56">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Find</CommandName>
+				<ExtendedTooltip name="ФормаНайтиРасширеннаяПодсказка" id="57"/>
+			</Button>
+			<Button name="ФормаОтменитьПоиск" id="58">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.CancelSearch</CommandName>
+				<ExtendedTooltip name="ФормаОтменитьПоискРасширеннаяПодсказка" id="59"/>
+			</Button>
+			<Button name="ФормаНастройкаСписка" id="60">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.ListSettings</CommandName>
+				<ExtendedTooltip name="ФормаНастройкаСпискаРасширеннаяПодсказка" id="61"/>
+			</Button>
+			<Button name="ФормаУстановитьИнтервал" id="46">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.SetDateInterval</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>За период</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Over a period</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Peste o perioadă</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>bl</v8:lang>
+						<v8:content>За перыяд</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>zh</v8:lang>
+						<v8:content>过了一段</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>За період</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>През определен период</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Über einen Zeitraum</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>W ciągu</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>kk</v8:lang>
+						<v8:content>Үшін кезді</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>th</v8:lang>
+						<v8:content>ในช่วง</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="47"/>
+			</Button>
+			<Button name="ФормаПометитьНаУдалениеСнятьПометку" id="100">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПометитьНаУдалениеСнятьПометку</CommandName>
+				<ExtendedTooltip name="ФормаПометитьНаУдалениеСнятьПометкуРасширеннаяПодсказка" id="101"/>
+			</Button>
+			<ButtonGroup name="ФормаГруппаГлоб" id="68">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Form a group of Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Formează un grup de Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>bl</v8:lang>
+						<v8:content>Форма група Глоба</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>zh</v8:lang>
+						<v8:content>地球形成一组</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Форма група глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>Образуват група от Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Bilden eine Gruppe von Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>Tworzą grupę Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>kk</v8:lang>
+						<v8:content>Пішін глоб тобы</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>th</v8:lang>
+						<v8:content>แบบกลุ่มของโลก</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Form a group of Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Formează un grup de Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>bl</v8:lang>
+						<v8:content>Форма група Глоба</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>zh</v8:lang>
+						<v8:content>地球形成一组</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Форма група глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>Образуват група от Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Bilden eine Gruppe von Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>Tworzą grupę Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>kk</v8:lang>
+						<v8:content>Пішін глоб тобы</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>th</v8:lang>
+						<v8:content>แบบกลุ่มของโลก</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ФормаГруппаГлобРасширеннаяПодсказка" id="69"/>
+				<ChildItems>
+					<Button name="ОбработкаФормированиеЗаказовПоставщикамОткрыть" id="107">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>DataProcessor.ФормированиеЗаказовПоставщикам.StandardCommand.Open</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ФормированиеЗаказовПоставщикам</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ОбработкаФормированиеЗаказовПоставщикамОткрытьРасширеннаяПодсказка" id="108"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="ФормаОбновить" id="102">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.Item.Список.StandardCommand.Refresh</CommandName>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="103"/>
+			</Button>
+			<Button name="ФормаВывестиСписок" id="70">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.OutputList</CommandName>
+				<ExtendedTooltip name="ФормаВывестиСписокРасширеннаяПодсказка" id="71"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="66">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>Близо</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BL</v8:lang>
+						<v8:content>Зачыніць</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Schließen</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>EN</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>Blisko</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>RO</v8:lang>
+						<v8:content>Închide</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>UK</v8:lang>
+						<v8:content>Закрити</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>TH</v8:lang>
+						<v8:content>ใกล้</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ZH</v8:lang>
+						<v8:content>关闭</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>kk</v8:lang>
+						<v8:content>Жап-</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="67"/>
+			</Button>
+			<Button name="ФормаИзменитьФорму" id="64">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="65"/>
+			</Button>
+			<Button name="ФормаСправка" id="62">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="63"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group customization</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Personalizare grup</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Група карыстацкіх налад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>集团定制</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група користувача налаштувань</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Група персонализиране</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Gruppe individuell</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Grupa dostosowywania</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Пользовательских настроек тобы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>การปรับแต่งกลุ่ม</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<ChangeRowSet>false</ChangeRowSet>
+			<Width>10</Width>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialListView>End</InitialListView>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>true</AutoRefresh>
+			<AutoRefreshPeriod>300</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>true</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4">
+				<ChildItems>
+					<Button name="СписокКонтекстноеМенюВывестиСписок" id="72">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="73"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="130">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="131"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="132"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="133">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="134"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="135"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="136">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="137"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="138"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Дата" id="7">
+					<DataPath>Список.Date</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+				<LabelField name="Номер" id="10">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="12"/>
+				</LabelField>
+				<LabelField name="ВидДокумента" id="115">
+					<DataPath>Список.ВидДокумента</DataPath>
+					<ContextMenu name="ВидДокументаКонтекстноеМеню" id="116"/>
+					<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="117"/>
+				</LabelField>
+				<LabelField name="ЗаказНомерПриРегистрации" id="97">
+					<DataPath>Список.ЗаказНомерПриРегистрации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>при регистрации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Когато се регистрирате</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Пры рэгістрацыі</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Wenn Sie sich registrieren</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>When you register</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Podczas rejestracji</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Când vă înregistrați</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>При реєстрації</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>เมื่อคุณลงทะเบียน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>当您注册</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>При тірке-</v8:content>
+						</v8:item>
+					</Title>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ЗаказНомерПриРегистрацииКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="ЗаказНомерПриРегистрацииРасширеннаяПодсказка" id="99"/>
+				</LabelField>
+				<LabelField name="КлиентПоставщик" id="31">
+					<DataPath>Список.КлиентПоставщик</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Постачальник</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>提供者</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ผู้จัดจำหน่าย</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Furnizor</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Dostawca</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Supplier</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Lieferant</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Пастаўшчык</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Доставчик</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КлиентПоставщикКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КлиентПоставщикРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="Склад" id="13">
+					<DataPath>Список.Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="15"/>
+				</LabelField>
+				<LabelField name="ТовараВКоличестве" id="25">
+					<DataPath>Список.ТовараВКоличестве</DataPath>
+					<Width>12</Width>
+					<ContextMenu name="ТовараВКоличествеКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ТовараВКоличествеРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="ТовараНаСумму" id="28">
+					<DataPath>Список.ТовараНаСумму</DataPath>
+					<TitleBackColor>style:ButtonBackColor</TitleBackColor>
+					<Width>12</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ТовараНаСуммуКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ТовараНаСуммуРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="ЗаказДатаПлана" id="87">
+					<DataPath>Список.ЗаказДатаПлана</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Plan</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>План</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>计划</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Plan</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>План</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>План</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Plan</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Plan</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>วางแผน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Жоспар</v8:content>
+						</v8:item>
+					</Title>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ЗаказДатаПланаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ЗаказДатаПланаРасширеннаяПодсказка" id="89"/>
+				</LabelField>
+				<LabelField name="ЗаказДатаФакта" id="90">
+					<DataPath>Список.ЗаказДатаФакта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Факт</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Fact</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Факт</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>事实</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Fapt</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Факт</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Факт</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Tatsache</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Fakt</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ความจริง</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Дерек</v8:content>
+						</v8:item>
+					</Title>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ЗаказДатаФактаКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ЗаказДатаФактаРасширеннаяПодсказка" id="92"/>
+				</LabelField>
+				<LabelField name="ВыбылоДенег" id="16">
+					<DataPath>Список.ВыбылоДенег</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предоплата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Prepayment</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Передоплата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>预付款项</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Plata anticipată</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Перадаплата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Предплащане</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Vorauszahlung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Przedpłata</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>เงินที่ชำระล่วงหน้า</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Алдын ала төлеу</v8:content>
+						</v8:item>
+					</Title>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ВыбылоДенегКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВыбылоДенегРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Валюта" id="40">
+					<DataPath>Список.Валюта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбыло валюта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Пенсиониран валута</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Выбыла валюта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Retired Währung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Retired currency</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Emerytowany waluty</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Valută retras</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вибуло валюта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>สกุลเงินเกษียณ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>退休货币</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="ЗаказПокупателя" id="77">
+					<DataPath>Список.ЗаказКлиента</DataPath>
+					<ContextMenu name="ЗаказПокупателяКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ЗаказПокупателяРасширеннаяПодсказка" id="79"/>
+				</LabelField>
+				<LabelField name="Договор" id="112">
+					<DataPath>Список.Договор</DataPath>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="114"/>
+				</LabelField>
+				<LabelField name="Организация" id="109">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="111"/>
+				</LabelField>
+				<LabelField name="Сотрудник" id="104">
+					<DataPath>Список.Сотрудник</DataPath>
+					<ContextMenu name="СотрудникКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="106"/>
+				</LabelField>
+				<CheckBoxField name="ТоварОтправлен" id="127">
+					<DataPath>Список.ТоварОтправлен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТоварОтправленКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="ТоварОтправленРасширеннаяПодсказка" id="129"/>
+				</CheckBoxField>
+				<LabelField name="Комментарий" id="22">
+					<DataPath>Список.Комментарий</DataPath>
+					<Height>1</Height>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Ответственный" id="34">
+					<DataPath>Список.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="ДатаРедакции" id="37">
+					<DataPath>Список.ДатаРедакции</DataPath>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДатаРедакцииКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДатаРедакцииРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.ПоступленияТовара</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоЗаказ</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьЗаказ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить заказ Поставщику</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Add your Supplier</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Додати замовлення Постачальнику</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>添加您的供应商</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Adauga Furnizor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Дадаць заказ Пастаўшчыку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Добавете доставчик</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Fügen Sie Ihre Lieferanten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Dodaj swoją Dostawca</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เพิ่มซัพพลายเออร์ของคุณ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Үсте- тапсырыс поставщику</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать заказ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Create order</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Створити замовлення</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>创建订单</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Crea ordine</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Стварыць заказ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Създаване на ред</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Ordnung zu schaffen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Tworzenie zlecenia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>สร้างคำสั่ง</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Жаса- тапсырыс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьЗаказ</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПометитьНаУдалениеСнятьПометку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление / снять пометку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Флаг за изтриване / махнете</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Пазначыць на выдаленне / зняць пазнаку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Flag zum Löschen / deaktivieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Flag for deletion / uncheck</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Oznacz do usunięcia / odznacz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Flag de ștergere / debifeaza</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Помітити на видалення / зняти позначку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ธงประจำชาติสำหรับการลบ / ยกเลิก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>标志为删除/取消选中</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Аулақтауға / деген пометить шеш- белгі</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление / снять пометку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Флаг за изтриване / махнете</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Пазначыць на выдаленне / зняць пазнаку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Flag zum Löschen / deaktivieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Flag for deletion / uncheck</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Oznacz do usunięcia / odznacz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Flag de ștergere / debifeaza</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Помітити на видалення / зняти позначку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ธงประจำชาติสำหรับการลบ / ยกเลิก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>标志为删除/取消选中</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Аулақтауға / деген пометить шеш- белгі</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометитьНаУдалениеСнятьПометку</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

@@ -299,6 +299,7 @@
 			<ChildItems>
 				<InputField name="ПериодДляОтчета" id="10">
 					<DataPath>ПериодДляОтчета</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ПериодДляОтчетаКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="ПериодДляОтчетаРасширеннаяПодсказка" id="12"/>
 					<Events>
@@ -471,6 +472,7 @@
 			<ChildItems>
 				<InputField name="ОтборПоКлиенту" id="45">
 					<DataPath>ОтборПоКлиенту</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ClearButton>true</ClearButton>
 					<ContextMenu name="ОтборПоКлиентуКонтекстноеМеню" id="46"/>
 					<ExtendedTooltip name="ОтборПоКлиентуРасширеннаяПодсказка" id="47"/>
@@ -481,6 +483,7 @@
 				</InputField>
 				<InputField name="ОтборПоНоменклатуре" id="48">
 					<DataPath>ОтборПоНоменклатуре</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ClearButton>true</ClearButton>
 					<ContextMenu name="ОтборПоНоменклатуреКонтекстноеМеню" id="49"/>
 					<ExtendedTooltip name="ОтборПоНоменклатуреРасширеннаяПодсказка" id="50"/>
@@ -687,7 +690,207 @@
 			<Width>100</Width>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="6"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="7"/>
+			<Events>
+				<Event name="OnActivateArea">РезультатПриАктивизацииОбласти</Event>
+			</Events>
 		</SpreadSheetDocumentField>
+		<UsualGroup name="ГруппаСуммВыделеныхЯчеек" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сумм выделеных ячеек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group amounts of selected cells</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Sumele grup de celule selectate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Група сум вылучаных клетак</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>集团之选定的单元格</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група сум виділених осередків</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Група количества от избраните клетки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Gruppe Mengen an ausgewählten Zellen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Kwoty grupy wybranych komórek</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Выделеных ячеек сомасының тобы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ผลรวมของกลุ่มเซลล์ที่เลือก</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сумм выделеных ячеек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group amounts of selected cells</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Sumele grup de celule selectate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Група сум вылучаных клетак</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>集团之选定的单元格</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група сум виділених осередків</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Група количества от избраните клетки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Gruppe Mengen an ausgewählten Zellen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Kwoty grupy wybranych komórek</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Выделеных ячеек сомасының тобы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ผลรวมของกลุ่มเซลล์ที่เลือก</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>#F5FFFF</BackColor>
+			<ExtendedTooltip name="ГруппаСуммВыделеныхЯчеекРасширеннаяПодсказка" id="72"/>
+			<ChildItems>
+				<InputField name="СуммаЯчеек" id="73">
+					<DataPath>СуммаЯчеек</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Width>15</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
+					<Font ref="style:LargeTextFont" kind="StyleItem"/>
+					<ContextMenu name="СуммаЯчеекКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="СуммаЯчеекРасширеннаяПодсказка" id="75"/>
+				</InputField>
+				<InputField name="СреднееЗначение" id="76">
+					<DataPath>СреднееЗначение</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
+					<ContextMenu name="СреднееЗначениеКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="СреднееЗначениеРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<InputField name="ВыделеноЯчеек" id="79">
+					<DataPath>ВыделеноЯчеек</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
+					<ContextMenu name="ВыделеноЯчеекКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ВыделеноЯчеекРасширеннаяПодсказка" id="81"/>
+				</InputField>
+				<LabelDecoration name="Декорация1" id="82">
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="84"/>
+				</LabelDecoration>
+				<Button name="ФормаЗакрыть1" id="85">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Close</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закрыть</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Близо</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Зачыніць</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Schließen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Close</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Blisko</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Închide</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Закрити</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ใกล้</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>关闭</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Жап-</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаЗакрыть1РасширеннаяПодсказка" id="86"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Отчет" id="1">
@@ -1032,6 +1235,230 @@
 			<Save>
 				<Field>ОтборПоНоменклатуре</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="СуммаЯчеек" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма выделенных ячеек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sum of selected cells</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Suma de celule selectate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Сума вылучаных вочак</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>选定单元格的总和</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сума виділених осередків</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Сума на избраните клетки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Summe der markierten Zellen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Suma zaznaczonych komórek</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Выделенных ячеек сомасы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ผลรวมของเซลล์ที่เลือก</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СреднееЗначение" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Среднее значение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mean</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Însemna</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Сярэдняе значэнне</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>意味着</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Середнє значення</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Средна</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Bedeuten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Oznaczać</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Ортаның мағынасы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>หมายความ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоЧисел" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество чисел</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The number of integers</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Numărul de numere întregi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Колькасць лікаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>整数的数目</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість чисел</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Броят на числа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Die Anzahl der ganzen Zahlen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Ilość liczb całkowitych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Санның саны</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>จำนวนของคุณสมบัติ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыделеноЯчеек" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделено ячеек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Highlighted cells</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Celulele evidențiate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Выдзелена вочак</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>突出显示单元格</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виділено осередків</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Маркираните клетки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Hervorgehoben Zellen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Podświetlone komórki</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Выделено ячеек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เซลล์จัดสรร</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

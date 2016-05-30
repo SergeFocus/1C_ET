@@ -190,29 +190,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ОстаткиРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="ОстаткиСтрокаПоиска" id="57">
+			<SearchStringAddition name="ОстаткиСтрокаПоиска" id="60">
 				<AdditionSource>
 					<Item>Остатки</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ОстаткиСтрокаПоискаКонтекстноеМеню" id="58"/>
-				<ExtendedTooltip name="ОстаткиСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+				<ContextMenu name="ОстаткиСтрокаПоискаКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="ОстаткиСтрокаПоискаРасширеннаяПодсказка" id="62"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="ОстаткиСостояниеПросмотра" id="60">
+			<ViewStatusAddition name="ОстаткиСостояниеПросмотра" id="63">
 				<AdditionSource>
 					<Item>Остатки</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ОстаткиСостояниеПросмотраКонтекстноеМеню" id="61"/>
-				<ExtendedTooltip name="ОстаткиСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+				<ContextMenu name="ОстаткиСостояниеПросмотраКонтекстноеМеню" id="64"/>
+				<ExtendedTooltip name="ОстаткиСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="ОстаткиУправлениеПоиском" id="63">
+			<SearchControlAddition name="ОстаткиУправлениеПоиском" id="66">
 				<AdditionSource>
 					<Item>Остатки</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="ОстаткиУправлениеПоискомКонтекстноеМеню" id="64"/>
-				<ExtendedTooltip name="ОстаткиУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+				<ContextMenu name="ОстаткиУправлениеПоискомКонтекстноеМеню" id="67"/>
+				<ExtendedTooltip name="ОстаткиУправлениеПоискомРасширеннаяПодсказка" id="68"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="Selection">ОстаткиВыбор</Event>
@@ -373,6 +373,39 @@
 					</Format>
 					<ContextMenu name="ОстаткиСуммаОстатокКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="ОстаткиСуммаОстатокРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="ОСтроке" id="57">
+					<DataPath>Остатки.ОСтроке</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Список довідників</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Button-Gruppe</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ОСтрокеКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ОСтрокеРасширеннаяПодсказка" id="59"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -572,7 +605,8 @@
 	ДеньгиОстатки.ФормаОплаты,
 	ДеньгиОстатки.СуммаОстаток КАК СуммаОстаток,
 	ДеньгиОстатки.СуммаВВалютеОстаток КАК СуммаВВалютеОстаток,
-	ДеньгиОстатки.ХранилищеДенег
+	ДеньгиОстатки.ХранилищеДенег,
+	"" КАК ОСтроке
 ИЗ
 	РегистрНакопления.Деньги.Остатки(, ) КАК ДеньгиОстатки</QueryText>
 				<MainTable>AccumulationRegister.Деньги.Balance</MainTable>
@@ -785,7 +819,7 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="УчитыватьДеньгиВНесколькихХранилищах" id="5">
+		<Attribute name="ВестиУчетДенегВНесколькихХранилищах" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>

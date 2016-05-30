@@ -180,6 +180,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -223,38 +224,38 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="41">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="47">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="42"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="49"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="44">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="50">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="45"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="52"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="47">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="53">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="48"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="54"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="55"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="5">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Ref</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Наименование видов цен</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
@@ -520,7 +521,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Цел.</v8:content>
+							<v8:content>В целых</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -567,6 +568,69 @@
 					<ContextMenu name="ЦенаВЦелыхЕдиницахКонтекстноеМеню" id="37"/>
 					<ExtendedTooltip name="ЦенаВЦелыхЕдиницахРасширеннаяПодсказка" id="38"/>
 				</CheckBoxField>
+				<CheckBoxField name="ЦенаВДесятых" id="41">
+					<DataPath>Список.ЦенаВДесятых</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В десятых</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>В десетата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>У десятих</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>In the tenth</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>W dziesiątej</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>In der zehnten</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЦенаВДесятыхКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ЦенаВДесятыхРасширеннаяПодсказка" id="43"/>
+				</CheckBoxField>
+				<LabelField name="ПроцентСкидкиДляРасчетаЛьготнойЦены" id="44">
+					<DataPath>Список.ПроцентСкидкиДляРасчетаЛьготнойЦены</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коэф. льг.цен</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Коефициенти. lg.tsen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Коеф. льг.цен</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Odds. lg.tsen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Kurs. lg.tsen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Quoten. lg.tsen</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПроцентСкидкиДляРасчетаЛьготнойЦеныКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПроцентСкидкиДляРасчетаЛьготнойЦеныРасширеннаяПодсказка" id="46"/>
+				</LabelField>
 				<LabelField name="Комментарий" id="11">
 					<DataPath>Список.Комментарий</DataPath>
 					<Height>1</Height>

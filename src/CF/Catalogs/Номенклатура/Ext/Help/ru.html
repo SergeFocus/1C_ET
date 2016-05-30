@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.16476"></meta><style>A {
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.16663"></meta><style>A {
 	TEXT-DECORATION: none
 }
 </style></head><body>
@@ -21,12 +21,13 @@
 <p align="justify"><font size="2"><strong>НЕ Отслеживать остаток (услуга) </strong>следует назначать для тех товаров и работ, где остатки не нужны. Например для работ по комплектации (сборке) или упаковке, доставке. Другой пример: для товаров типа "упаковка", если учет их числа не ведется. Этот признак нельзя изменить для номенклатуры, если она уже участвует в проведенных <a href="Subsystem.ЭлементарнаяТорговля/Help">документах</a>, их все следует отменить.</font></p>
 <p align="justify"><font size="2"><strong>Рекомендуемый минимальный остаток</strong>. В </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">настройках программы</font></a><font size="2"> можно указать поведение при расходовании товара меньше этого показателя минимального остатка - игнорирование/предупреждение/отказ. Не используется для "наборов".</font></p>
 <p align="justify"><font size="2"><strong>Планка количества для продажи по льготной цене</strong> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">если включен этот механизм</font></a><font size="2">) указывает на такое количество товара при продаже которого (или больше) будет назначена льготная цена. Коэффициент такой цены можно установить </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">в настройках программы</font></a><font size="2"> или в карточке </font><a href="Catalog.ВидыЦен/Help"><font size="2">Вида Цен</font></a><font size="2"> при сложном механизме ценообразования.</font></p>
+<p align="justify"><font size="2"><strong>Количество по умолчанию -</strong> позволяет оперировать упаковками номенклатуры. Например при продаже сигарет по-штучно, можно поставить "20" для реализвуции пачками. Программа будет везде подставлять это количество. И при необходимости его можно скорректировать.</font></p>
 <dl dir="ltr"><dt>
 <div align="justify"><font size="2">Номенклатура может быть "<strong>набором</strong>" из конкретных товаров (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">если включен механизм</font></a><font size="2">). В этом случае программа не учитывает остатки и обороты "набора". Учет остатков ведется для всех элементов его состава. Но при этом учет </font><a href="Report.ОтчетПоПродажам/Help"><font size="2">продаж</font></a><font size="2"> ведется по "наборам".</font> <font size="2">Набором не может стать номенклатура, которая уже была указана в каком либо документе.</font></div>
 </dt><dl><dt>
 <div align="justify"><font size="2">Реализация набора означает, что его "собрали" из указанного состава товаров и продали целиком, разумеется израсходовав все товары состава. Возвраты от покупателей необходимо фиксировать так же "наборами". </font></div>
 <dt>
-<div align="justify"><font size="2">Автоматическое ценообразование для "набора" использует сумму цен всех элементов его состава. <font size="2">При использовании <a href="Catalog.ВидыЦен/Help">Сложного механизма </a>учета цен, рекомендуется устанавливать цены для "наборов" специальной подпрограммой документа <a href="Document.УстановкиЦен/Help">Установка цен</a> - кнопкой "Заполнить таблицу наборами и расчитать им цены".</font></font></div>
+<div align="justify"><font size="2">Автоматическое ценообразование для "набора" использует сумму цен всех элементов его состава. <font size="2">При использовании <a href="Catalog.ВидыЦен/Help">Сложного механизма </a>учета цен, рекомендуется устанавливать цены для "наборов" специальной подпрограммой документа <a href="Document.УстановкиЦен/Help">Установка цен</a> - кнопкой "Заполнить таблицу наборами и рассчитать им цены".</font></font></div>
 <dt>
 <div align="justify"><font size="2">После указания "набора" в каком либо документе изменение его состава невозможно. Следует создавать другие наборы с другим составом. </font><font size="2">Наборы могут быть вложенными, как элементы другого набора. Но это может быть сложно для учета и визуализации. </font></div>
 <dt>
@@ -40,26 +41,6 @@
 <p align="justify"><font size="2">Если номенклатура уже использовалась, назначить ее серийной нельзя. Следует создавать новую номенклатуру.</font></p>
 <p align="justify"><font size="2">Условия серийного учета могут быть также продиктованы группой номенклатуры или <a href="Catalog.НоменклатурныеГруппы/Help">номенклатурной группой</a>.</font></p>
 <p align="justify"><font size="2">Невозможно использовать серии для номенклатуры с параметром "Не отслеживать остаток".</font></p>
-<p align="justify"><font size="2">Средняя цена приобретений это вся сумма стоимости приобретений поделенная на все количество приобретения. используется как оценка для расчета валовой прибыли в отсутствии партионного учета</font></p></blockquote>
-<p dir="ltr" align="justify"><font size="2"><font size="2">
-<hr></hr><a href="Configuration.ElementalTradeFREE/Help"><font color="#413003" face="Calibri"><em>ЭЛЕМЕНТАРНАЯ ТОРГОВЛЯ</em></font></a><font face="Calibri"><em>, 2013</em></font> 
-<p></p>
-<div dir="ltr">
-<p dir="ltr"></p><pre><font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.SZ64" width="64" align="middle" height="64"></img>  </font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">sza@ukr.net</font></a><font face="Calibri"> </font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri">http://www.ELTR.od.ua</font></a></pre>
-<p></p></div>
-<blockquote style="MARGIN-RIGHT: 0px" dir="ltr"></blockquote></font>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p></font>
-</p><p></p>
-<p></p>
-<p></p>
-<p></p></body></html>
+<p align="justify"><font size="2">Средняя цена приобретений это вся сумма стоимости приобретений поделенная на все количество приобретения. используется как оценка для расчета валовой прибыли в отсутствии партионного учета.</font></p>
+<p align="justify"><font size="2">Для группы номенклатуры может быть установлен <strong>Процент комиссионного вознаграждения </strong>для комиссионеров.</font></p></blockquote>
+<hr></hr><a href="Configuration.ElementalTradeFREE/Help"><font color="#413003" face="Calibri"><em>ЭЛЕМЕНТАРНАЯ ТОРГОВЛЯ</em></font></a><font face="Calibri"><em>, 2013</em></font><br><p> <font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.SZ64" width="64" align="middle" height="64"></img>  </font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">sza@ukr.net</font></a><font face="Calibri"> </font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri">http://www.ELTR.od.ua</font></a> </p></body></html>

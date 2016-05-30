@@ -16,7 +16,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Записать группу и закрыть</v8:content>
+						<v8:content>Записать группу Статей и закрыть</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -345,7 +345,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование группы статей</v8:content>
+							<v8:content>Наименование группы статей движения денег</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -388,10 +388,11 @@
 							<v8:content>ชื่อของกลุ่ม</v8:content>
 						</v8:item>
 					</Title>
-					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<TitleLocation>Top</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<Font ref="style:LargeTextFont" kind="StyleItem"/>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
@@ -627,17 +628,20 @@
 					<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
 				</InputField>
-				<InputField name="Код" id="1">
-					<DataPath>Объект.Code</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
 		<InputField name="Комментарий" id="21">
 			<DataPath>Объект.Комментарий</DataPath>
 			<DefaultItem>true</DefaultItem>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="22"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="23"/>
 		</InputField>

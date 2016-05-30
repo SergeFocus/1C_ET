@@ -115,7 +115,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -394,6 +394,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -438,29 +439,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="78">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="93">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="79"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="94"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="95"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="81">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="96">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="82"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="97"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="84">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="99">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="85"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="100"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="101"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Дата" id="5">
@@ -521,6 +522,38 @@
 					<DataPath>Список.Number</DataPath>
 					<ContextMenu name="НомерКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="10"/>
+				</LabelField>
+				<LabelField name="ЗаказНомерПриРегистрации" id="78">
+					<DataPath>Список.ЗаказНомерПриРегистрации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>при регистрации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>при регистриране</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>при реєстрації</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>when registering</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>podczas rejestracji</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Art der Dokumente</v8:content>
+						</v8:item>
+					</Title>
+					<Width>20</Width>
+					<ContextMenu name="ЗаказНомерПриРегистрацииКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ЗаказНомерПриРегистрацииРасширеннаяПодсказка" id="80"/>
 				</LabelField>
 				<LabelField name="ЗаказДатаПлана" id="67">
 					<DataPath>Список.ЗаказДатаПлана</DataPath>
@@ -679,6 +712,45 @@
 					<ContextMenu name="КлиентПоставщикКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="КлиентПоставщикРасширеннаяПодсказка" id="16"/>
 				</LabelField>
+				<LabelField name="Склад" id="11">
+					<DataPath>Список.Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="13"/>
+				</LabelField>
+				<LabelField name="ТовараВКоличестве" id="26">
+					<DataPath>Список.ТовараВКоличестве</DataPath>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТовараВКоличествеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТовараВКоличествеРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="ТовараНаСумму" id="23">
+					<DataPath>Список.ТовараНаСумму</DataPath>
+					<TitleBackColor>#FFFAFA</TitleBackColor>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ТовараНаСуммуКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТовараНаСуммуРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<LabelField name="ЗаказПокупателя" id="58">
+					<DataPath>Список.ЗаказКлиента</DataPath>
+					<ContextMenu name="ЗаказПокупателяКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ЗаказПокупателяРасширеннаяПодсказка" id="60"/>
+				</LabelField>
 				<LabelField name="Договор" id="55">
 					<DataPath>Список.Договор</DataPath>
 					<ContextMenu name="ДоговорКонтекстноеМеню" id="56"/>
@@ -735,50 +807,17 @@
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="54"/>
 				</LabelField>
-				<LabelField name="Склад" id="11">
-					<DataPath>Список.Склад</DataPath>
-					<ContextMenu name="СкладКонтекстноеМеню" id="12"/>
-					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="13"/>
-				</LabelField>
-				<LabelField name="ТовараНаСумму" id="23">
-					<DataPath>Список.ТовараНаСумму</DataPath>
-					<TitleBackColor>#FFFAFA</TitleBackColor>
-					<Width>12</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<Format>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
-						</v8:item>
-					</Format>
-					<ContextMenu name="ТовараНаСуммуКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ТовараНаСуммуРасширеннаяПодсказка" id="25"/>
-				</LabelField>
-				<LabelField name="ТовараВКоличестве" id="26">
-					<DataPath>Список.ТовараВКоличестве</DataPath>
-					<Width>12</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="ТовараВКоличествеКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="ТовараВКоличествеРасширеннаяПодсказка" id="28"/>
-				</LabelField>
-				<LabelField name="ЗаказПокупателя" id="58">
-					<DataPath>Список.ЗаказКлиента</DataPath>
-					<ContextMenu name="ЗаказПокупателяКонтекстноеМеню" id="59"/>
-					<ExtendedTooltip name="ЗаказПокупателяРасширеннаяПодсказка" id="60"/>
-				</LabelField>
 				<LabelField name="Сотрудник" id="75">
 					<DataPath>Список.Сотрудник</DataPath>
 					<ContextMenu name="СотрудникКонтекстноеМеню" id="76"/>
 					<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="77"/>
 				</LabelField>
+				<CheckBoxField name="ТоварОтправлен" id="90">
+					<DataPath>Список.ТоварОтправлен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТоварОтправленКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ТоварОтправленРасширеннаяПодсказка" id="92"/>
+				</CheckBoxField>
 				<LabelField name="Комментарий" id="20">
 					<DataPath>Список.Комментарий</DataPath>
 					<Height>1</Height>
@@ -795,47 +834,16 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>true</ManualQuery>
+				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<QueryText>ВЫБРАТЬ
-	ДокументПоступленияТовара.Ссылка,
-	ДокументПоступленияТовара.ПометкаУдаления,
-	ДокументПоступленияТовара.Номер,
-	ДокументПоступленияТовара.Дата,
-	ДокументПоступленияТовара.Проведен,
-	ДокументПоступленияТовара.Склад,
-	ДокументПоступленияТовара.УстанавливатьЦенуУказаннуюВТаблицеВКачествеЦеныДляРеализацииТовара,
-	ДокументПоступленияТовара.ВыбылоДенег,
-	ДокументПоступленияТовара.КлиентПоставщик,
-	ДокументПоступленияТовара.ВидЦен,
-	ДокументПоступленияТовара.Валюта,
-	ДокументПоступленияТовара.Курс,
-	ДокументПоступленияТовара.Комментарий,
-	ДокументПоступленияТовара.ВидДокумента,
-	ДокументПоступленияТовара.ТовараНаСумму,
-	ДокументПоступленияТовара.ТовараВКоличестве,
-	ДокументПоступленияТовара.ПартияПриобретения,
-	ДокументПоступленияТовара.Организация,
-	ДокументПоступленияТовара.Договор,
-	ДокументПоступленияТовара.ХранилищеДенег,
-	ДокументПоступленияТовара.ЗаказКлиента,
-	ДокументПоступленияТовара.ЭтоЗаказ,
-	ДокументПоступленияТовара.ЗаказСогласован,
-	ДокументПоступленияТовара.ЗаказОплачен,
-	ДокументПоступленияТовара.ЗаказДатаПлана,
-	ДокументПоступленияТовара.ЗаказДатаФакта,
-	ДокументПоступленияТовара.ЗаказПоставщику,
-	ДокументПоступленияТовара.Ответственный,
-	ДокументПоступленияТовара.ДатаСоздания,
-	ДокументПоступленияТовара.ДатаРедакции,
-	ДокументПоступленияТовара.Сотрудник
-ИЗ
-	Документ.ПоступленияТовара КАК ДокументПоступленияТовара
-ГДЕ
-	ДокументПоступленияТовара.ЭтоЗаказ = ИСТИНА</QueryText>
 				<MainTable>Document.ПоступленияТовара</MainTable>
 				<ListSettings>
 					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоЗаказ</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>

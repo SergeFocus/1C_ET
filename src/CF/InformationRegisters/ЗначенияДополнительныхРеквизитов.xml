@@ -82,8 +82,8 @@
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
 			<EditType>InDialog</EditType>
-			<DefaultRecordForm/>
-			<DefaultListForm/>
+			<DefaultRecordForm>InformationRegister.ЗначенияДополнительныхРеквизитов.Form.ФормаЗаписи</DefaultRecordForm>
+			<DefaultListForm>InformationRegister.ЗначенияДополнительныхРеквизитов.Form.ФормаСписка</DefaultListForm>
 			<AuxiliaryRecordForm/>
 			<AuxiliaryListForm/>
 			<StandardAttributes>
@@ -262,7 +262,7 @@
 						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
 						<v8:NumberQualifiers>
 							<v8:Digits>15</v8:Digits>
-							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:FractionDigits>3</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
 						<v8:StringQualifiers>
@@ -543,6 +543,148 @@
 					<FullTextSearch>Use</FullTextSearch>
 				</Properties>
 			</Dimension>
+			<Form>ФормаЗаписи</Form>
+			<Form>ФормаСписка</Form>
+			<Command uuid="bda0f7a7-27cb-4999-a1b9-6e4529934808">
+				<Properties>
+					<Name>ДополнительныеРеквизиты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные реквизиты</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Повече детайли</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Дадатковыя рэквізіты</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Mehr Details</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>More details</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Więcej szczegółów</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Mai multe detalii</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Додаткові реквізити</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>รายละเอียดเพิ่มเติม</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>更多细节</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Қосымша деректемелер</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.СредстваПредприятия</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВыполненияРабот</v8:Type>
+						<v8:Type>cfg:DocumentRef.КорректировкиИРегистрацияОстатков</v8:Type>
+						<v8:Type>cfg:DocumentRef.ДвиженияДенег</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПланыПродаж</v8:Type>
+						<v8:Type>cfg:CatalogRef.Изображения</v8:Type>
+						<v8:Type>cfg:CatalogRef.Спецификации</v8:Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+						<v8:Type>cfg:CatalogRef.ГруппыАналогов</v8:Type>
+						<v8:Type>cfg:DocumentRef.Инвентаризации</v8:Type>
+						<v8:Type>cfg:CatalogRef.Поставщики</v8:Type>
+						<v8:Type>cfg:CatalogRef.Производители</v8:Type>
+						<v8:Type>cfg:CatalogRef.ХранилищаДенег</v8:Type>
+						<v8:Type>cfg:CatalogRef.Договора</v8:Type>
+						<v8:Type>cfg:CatalogRef.Подразделения</v8:Type>
+						<v8:Type>cfg:CatalogRef.Регионы</v8:Type>
+						<v8:Type>cfg:CatalogRef.Клиенты</v8:Type>
+						<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
+						<v8:Type>cfg:CatalogRef.ЗаметкиИНапоминания</v8:Type>
+						<v8:Type>cfg:DocumentRef.РасходыТовара</v8:Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+						<v8:Type>cfg:CatalogRef.СтатьиДвиженияДенег</v8:Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+						<v8:Type>cfg:DocumentRef.УстановкиЦен</v8:Type>
+						<v8:Type>cfg:CatalogRef.СертификатыГигиеническиеЗаключения</v8:Type>
+						<v8:Type>cfg:CatalogRef.ПартииПриобретения</v8:Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+						<v8:Type>cfg:CatalogRef.ОбъектыКлиентов</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПоступленияТовара</v8:Type>
+						<v8:Type>cfg:DocumentRef.ОказанияУслугЗаВремя</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПеремещенияТовара</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Picture</Representation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные реквизиты</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Повече детайли</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Дадатковыя рэквізіты</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Mehr Details</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>More details</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Więcej szczegółów</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Mai multe detalii</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Додаткові реквізити</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>รายละเอียดเพิ่มเติม</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>更多细节</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Қосымша деректемелер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ДополнительныеРеквизиты</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Shortcut>Ctrl+Shift+D</Shortcut>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>

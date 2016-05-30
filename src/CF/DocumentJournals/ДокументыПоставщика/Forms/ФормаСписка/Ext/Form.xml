@@ -14,7 +14,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти документ</v8:content>
+						<v8:content>Найти документ..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -59,13 +59,6 @@
 				</Title>
 				<ExtendedTooltip name="ФормаНайтиРасширеннаяПодсказка" id="34"/>
 			</Button>
-			<Button name="ФормаОтменитьПоиск" id="35">
-				<Type>CommandBarButton</Type>
-				<Representation>Picture</Representation>
-				<OnlyInAllActions>true</OnlyInAllActions>
-				<CommandName>Form.Item.Список.StandardCommand.CancelSearch</CommandName>
-				<ExtendedTooltip name="ФормаОтменитьПоискРасширеннаяПодсказка" id="36"/>
-			</Button>
 			<Button name="ФормаНастройкаСписка" id="37">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -74,7 +67,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Отбор</v8:content>
+						<v8:content>Отбор..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -171,6 +164,13 @@
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="42"/>
+			</Button>
+			<Button name="ФормаОтменитьПоиск" id="35">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.Item.Список.StandardCommand.CancelSearch</CommandName>
+				<ExtendedTooltip name="ФормаОтменитьПоискРасширеннаяПодсказка" id="36"/>
 			</Button>
 			<Button name="ФормаСоздать" id="31">
 				<Type>CommandBarButton</Type>
@@ -622,29 +622,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="63">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="66">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="64"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="67"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="68"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="66">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="69">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="67"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="70"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="69">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="72">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="70"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="73"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="74"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Дата" id="7">
@@ -712,7 +712,7 @@
 					<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="15"/>
 				</LabelField>
 				<LabelField name="Клиент" id="16">
-					<DataPath>1/8</DataPath>
+					<DataPath>Список.DeletionMark</DataPath>
 					<ContextMenu name="КлиентКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="18"/>
 				</LabelField>
@@ -721,19 +721,53 @@
 					<ContextMenu name="ДоговорКонтекстноеМеню" id="52"/>
 					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="53"/>
 				</LabelField>
-				<LabelField name="Сумма" id="19">
-					<DataPath>Список.Сумма</DataPath>
-					<Width>10</Width>
+				<LabelField name="Количество" id="63">
+					<DataPath>Список.Количество</DataPath>
+					<Width>12</Width>
 					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="СуммаКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="21"/>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="65"/>
 				</LabelField>
 				<LabelField name="СтоимостьТовара" id="22">
 					<DataPath>Список.СтоимостьТовара</DataPath>
-					<Width>10</Width>
+					<TitleBackColor>#FAFFF5</TitleBackColor>
+					<Width>12</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="СтоимостьТовараКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="СтоимостьТовараРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Сумма" id="19">
+					<DataPath>Список.Сумма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Деньги</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Пари</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Гроші</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Pieniądze</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Geld</v8:content>
+						</v8:item>
+					</Title>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="СуммаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="21"/>
 				</LabelField>
 				<LabelField name="Аналитика" id="25">
 					<DataPath>Список.Аналитика</DataPath>
@@ -764,7 +798,8 @@
 	ДокументыПоставщика.Тип,
 	ДокументыПоставщика.Поставщик,
 	ДокументыПоставщика.Договор,
-	ДокументыПоставщика.Организация
+	ДокументыПоставщика.Организация,
+	ДокументыПоставщика.Количество
 ИЗ
 	ЖурналДокументов.ДокументыПоставщика КАК ДокументыПоставщика
 ГДЕ

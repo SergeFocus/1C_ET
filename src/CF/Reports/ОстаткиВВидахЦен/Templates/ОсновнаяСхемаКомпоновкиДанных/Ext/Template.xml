@@ -1300,7 +1300,10 @@
 					КурсыВалютСрезПоследних.Курс КАК Курс
 				ИЗ
 					РегистрСведений.КурсыВалют.СрезПоследних(&amp;ДатаОкончания, ) КАК КурсыВалютСрезПоследних) КАК ВложенныйЗапрос
-				ПО ЦеныСрезПоследних.ВидЦен.ВалютаЦены = ВложенныйЗапрос.ВалютаКурса) КАК ВложенныйЗапрос
+				ПО ЦеныСрезПоследних.ВидЦен.ВалютаЦены = ВложенныйЗапрос.ВалютаКурса
+		ГДЕ
+			(НЕ &amp;ОтборПоВидуЦен
+					ИЛИ ЦеныСрезПоследних.ВидЦен = &amp;ВидЦен)) КАК ВложенныйЗапрос
 		ПО ТоварыОстаткиИОбороты.Номенклатура = ВложенныйЗапрос.НоменклатураЦены</query>
 	</dataSet>
 	<totalField>
@@ -2387,7 +2390,7 @@
 							<dcscor:value xsi:type="v8:LocalStringType">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ЧЦ=10; ЧДЦ=3</v8:content>
+									<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
 								</v8:item>
 							</dcscor:value>
 						</dcscor:item>
@@ -2846,7 +2849,7 @@
 							<dcscor:value xsi:type="v8:LocalStringType">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ЧЦ=10; ЧДЦ=3</v8:content>
+									<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
 								</v8:item>
 							</dcscor:value>
 						</dcscor:item>
@@ -3333,7 +3336,7 @@
 							<dcscor:value xsi:type="v8:LocalStringType">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ЧЦ=10; ЧДЦ=3</v8:content>
+									<v8:content>ЧЦ=12; ЧДЦ=2</v8:content>
 								</v8:item>
 							</dcscor:value>
 						</dcscor:item>

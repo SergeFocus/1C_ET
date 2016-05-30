@@ -190,6 +190,7 @@
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -198,7 +199,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Наименование</v8:content>
+					<v8:content>Наименование группы полей</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>BG</v8:lang>
@@ -243,6 +244,8 @@
 			</Title>
 			<TitleLocation>Top</TitleLocation>
 			<EditMode>EnterOnInput</EditMode>
+			<TextColor>#800000</TextColor>
+			<BorderColor>style:FieldBackColor</BorderColor>
 			<Font ref="style:LargeTextFont" kind="StyleItem"/>
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
@@ -296,6 +299,7 @@
 				</v8:item>
 			</Title>
 			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>false</HorizontalStretch>
 			<ClearButton>true</ClearButton>
 			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
@@ -349,12 +353,29 @@
 				</v8:item>
 			</Title>
 			<EditMode>EnterOnInput</EditMode>
+			<BorderColor>style:FieldBackColor</BorderColor>
 			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 		</InputField>
 		<InputField name="Комментарий" id="10">
 			<DataPath>Объект.Комментарий</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий к группе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Commentary to the group</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Коментар до групи</v8:content>
+				</v8:item>
+			</Title>
 			<EditMode>EnterOnInput</EditMode>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="12"/>
 		</InputField>

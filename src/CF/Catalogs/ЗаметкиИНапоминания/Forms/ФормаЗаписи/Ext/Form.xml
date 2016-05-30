@@ -403,6 +403,8 @@
 					<DataPath>Запись.ТипЗаметки</DataPath>
 					<HorizontalStretch>false</HorizontalStretch>
 					<QuickChoice>true</QuickChoice>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<Font ref="style:NormalTextFont" kind="StyleItem"/>
 					<ContextMenu name="ТипЗаметкиКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ТипЗаметкиРасширеннаяПодсказка" id="3"/>
@@ -674,6 +676,8 @@
 						</v8:item>
 					</Title>
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<Font ref="style:LargeTextFont" kind="StyleItem"/>
 					<ContextMenu name="НаименованиеЗаметкиКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="НаименованиеЗаметкиРасширеннаяПодсказка" id="9"/>
@@ -711,29 +715,29 @@
 			</ContextMenu>
 			<AutoCommandBar name="НаименованияНаДругихЯзыкахКоманднаяПанель" id="144"/>
 			<ExtendedTooltip name="НаименованияНаДругихЯзыкахРасширеннаяПодсказка" id="145"/>
-			<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="186">
+			<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="244">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="187"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="188"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="245"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="246"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="189">
+			<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="247">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="190"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="191"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="248"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="249"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="192">
+			<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="250">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="193"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="194"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="251"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="252"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="OnChange">НаименованияНаДругихЯзыкахПриИзменении</Event>
@@ -1003,6 +1007,7 @@
 									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
 								</v8:item>
 							</EditFormat>
+							<Font ref="style:LargeTextFont" height="12" kind="StyleItem"/>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="11"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="12"/>
 							<Events>
@@ -1942,10 +1947,12 @@
 					<ChildItems>
 						<InputField name="ТекстЗаметки" id="13">
 							<DataPath>Запись.ТекстЗаметки</DataPath>
+							<TextColor>#800000</TextColor>
 							<ContextMenu name="ТекстЗаметкиКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="ТекстЗаметкиРасширеннаяПодсказка" id="15"/>
 						</InputField>
 						<Table name="ВыполняемыеЗадачи" id="109">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -1965,6 +1972,55 @@
 							</ContextMenu>
 							<AutoCommandBar name="ВыполняемыеЗадачиКоманднаяПанель" id="111">
 								<ChildItems>
+									<Button name="ВыполняемыеЗадачиДобавить" id="186">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ВыполняемыеЗадачи.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить задачу</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BG</v8:lang>
+												<v8:content>Добавяне на задача</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BL</v8:lang>
+												<v8:content>Дадаць задачу</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>DE</v8:lang>
+												<v8:content>Aufgabe hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>EN</v8:lang>
+												<v8:content>Add task</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>PL</v8:lang>
+												<v8:content>Dodaj zadanie</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>RO</v8:lang>
+												<v8:content>Adauga sarcină</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>UK</v8:lang>
+												<v8:content>Додати завдання</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>TH</v8:lang>
+												<v8:content>เพิ่มงาน</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ZH</v8:lang>
+												<v8:content>添加任务</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ВыполняемыеЗадачиДобавитьРасширеннаяПодсказка" id="187"/>
+									</Button>
 									<Button name="ВыполняемыеЗадачиВыполнитьСейчас" id="128">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ВыполнитьСейчас</CommandName>
@@ -1973,29 +2029,29 @@
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ВыполняемыеЗадачиРасширеннаяПодсказка" id="112"/>
-							<SearchStringAddition name="ВыполняемыеЗадачиСтрокаПоиска" id="195">
+							<SearchStringAddition name="ВыполняемыеЗадачиСтрокаПоиска" id="253">
 								<AdditionSource>
 									<Item>ВыполняемыеЗадачи</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ВыполняемыеЗадачиСтрокаПоискаКонтекстноеМеню" id="196"/>
-								<ExtendedTooltip name="ВыполняемыеЗадачиСтрокаПоискаРасширеннаяПодсказка" id="197"/>
+								<ContextMenu name="ВыполняемыеЗадачиСтрокаПоискаКонтекстноеМеню" id="254"/>
+								<ExtendedTooltip name="ВыполняемыеЗадачиСтрокаПоискаРасширеннаяПодсказка" id="255"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ВыполняемыеЗадачиСостояниеПросмотра" id="198">
+							<ViewStatusAddition name="ВыполняемыеЗадачиСостояниеПросмотра" id="256">
 								<AdditionSource>
 									<Item>ВыполняемыеЗадачи</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ВыполняемыеЗадачиСостояниеПросмотраКонтекстноеМеню" id="199"/>
-								<ExtendedTooltip name="ВыполняемыеЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="200"/>
+								<ContextMenu name="ВыполняемыеЗадачиСостояниеПросмотраКонтекстноеМеню" id="257"/>
+								<ExtendedTooltip name="ВыполняемыеЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="258"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ВыполняемыеЗадачиУправлениеПоиском" id="201">
+							<SearchControlAddition name="ВыполняемыеЗадачиУправлениеПоиском" id="259">
 								<AdditionSource>
 									<Item>ВыполняемыеЗадачи</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ВыполняемыеЗадачиУправлениеПоискомКонтекстноеМеню" id="202"/>
-								<ExtendedTooltip name="ВыполняемыеЗадачиУправлениеПоискомРасширеннаяПодсказка" id="203"/>
+								<ContextMenu name="ВыполняемыеЗадачиУправлениеПоискомКонтекстноеМеню" id="260"/>
+								<ExtendedTooltip name="ВыполняемыеЗадачиУправлениеПоискомРасширеннаяПодсказка" id="261"/>
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ВыполняемыеЗадачиНомерСтроки" id="113">
@@ -2006,7 +2062,7 @@
 								</LabelField>
 								<InputField name="ВыполняемыеЗадачиТипЗадачи" id="116">
 									<DataPath>Запись.ВыполняемыеЗадачи.ТипЗадачи</DataPath>
-									<EditMode>EnterOnInput</EditMode>
+									<EditMode>Directly</EditMode>
 									<ContextMenu name="ВыполняемыеЗадачиТипЗадачиКонтекстноеМеню" id="117"/>
 									<ExtendedTooltip name="ВыполняемыеЗадачиТипЗадачиРасширеннаяПодсказка" id="118"/>
 									<Events>
@@ -2205,6 +2261,7 @@
 									<v8:content>Тоқулы суреттер</v8:content>
 								</v8:item>
 							</Title>
+							<TitleTextColor>#000080</TitleTextColor>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -2246,7 +2303,7 @@
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Найти</v8:content>
+												<v8:content>Найти..</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>BG</v8:lang>
@@ -2306,29 +2363,29 @@
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ИзображенияРасширеннаяПодсказка" id="163"/>
-							<SearchStringAddition name="ИзображенияСтрокаПоиска" id="204">
+							<SearchStringAddition name="ИзображенияСтрокаПоиска" id="262">
 								<AdditionSource>
 									<Item>Изображения</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ИзображенияСтрокаПоискаКонтекстноеМеню" id="205"/>
-								<ExtendedTooltip name="ИзображенияСтрокаПоискаРасширеннаяПодсказка" id="206"/>
+								<ContextMenu name="ИзображенияСтрокаПоискаКонтекстноеМеню" id="263"/>
+								<ExtendedTooltip name="ИзображенияСтрокаПоискаРасширеннаяПодсказка" id="264"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ИзображенияСостояниеПросмотра" id="207">
+							<ViewStatusAddition name="ИзображенияСостояниеПросмотра" id="265">
 								<AdditionSource>
 									<Item>Изображения</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ИзображенияСостояниеПросмотраКонтекстноеМеню" id="208"/>
-								<ExtendedTooltip name="ИзображенияСостояниеПросмотраРасширеннаяПодсказка" id="209"/>
+								<ContextMenu name="ИзображенияСостояниеПросмотраКонтекстноеМеню" id="266"/>
+								<ExtendedTooltip name="ИзображенияСостояниеПросмотраРасширеннаяПодсказка" id="267"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ИзображенияУправлениеПоиском" id="210">
+							<SearchControlAddition name="ИзображенияУправлениеПоиском" id="268">
 								<AdditionSource>
 									<Item>Изображения</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ИзображенияУправлениеПоискомКонтекстноеМеню" id="211"/>
-								<ExtendedTooltip name="ИзображенияУправлениеПоискомРасширеннаяПодсказка" id="212"/>
+								<ContextMenu name="ИзображенияУправлениеПоискомКонтекстноеМеню" id="269"/>
+								<ExtendedTooltip name="ИзображенияУправлениеПоискомРасширеннаяПодсказка" id="270"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="OnActivateRow">ИзображенияПриАктивизацииСтроки</Event>
@@ -2403,10 +2460,108 @@
 						</HTMLDocumentField>
 					</ChildItems>
 				</UsualGroup>
+				<Table name="ДополнительнаяИнформация" id="215">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ДополнительнаяИнформация</DataPath>
+					<TitleTextColor>#800000</TitleTextColor>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="216"/>
+					<AutoCommandBar name="ДополнительнаяИнформацияКоманднаяПанель" id="217">
+						<ChildItems>
+							<Button name="ДополнительнаяИнформацияДобавить" id="240">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.ДополнительнаяИнформация.StandardCommand.Add</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Добавить</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>UK</v8:lang>
+										<v8:content>Додати</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>EN</v8:lang>
+										<v8:content>Add</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>DE</v8:lang>
+										<v8:content>Hinzufügen</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ДополнительнаяИнформацияДобавитьРасширеннаяПодсказка" id="241"/>
+							</Button>
+							<Button name="ДополнительнаяИнформацияУдалить" id="242">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.ДополнительнаяИнформация.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="ДополнительнаяИнформацияУдалитьРасширеннаяПодсказка" id="243"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДополнительнаяИнформацияРасширеннаяПодсказка" id="218"/>
+					<SearchStringAddition name="ДополнительнаяИнформацияСтрокаПоиска" id="271">
+						<AdditionSource>
+							<Item>ДополнительнаяИнформация</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДополнительнаяИнформацияСтрокаПоискаКонтекстноеМеню" id="272"/>
+						<ExtendedTooltip name="ДополнительнаяИнформацияСтрокаПоискаРасширеннаяПодсказка" id="273"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДополнительнаяИнформацияСостояниеПросмотра" id="274">
+						<AdditionSource>
+							<Item>ДополнительнаяИнформация</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДополнительнаяИнформацияСостояниеПросмотраКонтекстноеМеню" id="275"/>
+						<ExtendedTooltip name="ДополнительнаяИнформацияСостояниеПросмотраРасширеннаяПодсказка" id="276"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДополнительнаяИнформацияУправлениеПоиском" id="277">
+						<AdditionSource>
+							<Item>ДополнительнаяИнформация</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДополнительнаяИнформацияУправлениеПоискомКонтекстноеМеню" id="278"/>
+						<ExtendedTooltip name="ДополнительнаяИнформацияУправлениеПоискомРасширеннаяПодсказка" id="279"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">ДополнительнаяИнформацияПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ДополнительнаяИнформацияВидИнформации" id="234">
+							<DataPath>ДополнительнаяИнформация.ВидИнформации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДополнительнаяИнформацияВидИнформацииКонтекстноеМеню" id="235"/>
+							<ExtendedTooltip name="ДополнительнаяИнформацияВидИнформацииРасширеннаяПодсказка" id="236"/>
+							<Events>
+								<Event name="StartChoice">ДополнительнаяИнформацияВидИнформацииНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДополнительнаяИнформацияИнформация" id="237">
+							<DataPath>ДополнительнаяИнформация.Информация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДополнительнаяИнформацияИнформацияКонтекстноеМеню" id="238"/>
+							<ExtendedTooltip name="ДополнительнаяИнформацияИнформацияРасширеннаяПодсказка" id="239"/>
+						</InputField>
+					</ChildItems>
+				</Table>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="Комментарий" id="25">
 			<DataPath>Запись.Комментарий</DataPath>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="27"/>
 		</InputField>
@@ -3270,22 +3425,15 @@
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	СправочникИзображения.Ссылка,
-	СправочникИзображения.ПометкаУдаления,
-	СправочникИзображения.Предопределенный,
-	СправочникИзображения.Родитель,
-	СправочникИзображения.ЭтоГруппа,
-	СправочникИзображения.Код,
 	СправочникИзображения.Наименование,
 	СправочникИзображения.СсылкаНаИзображение,
 	СправочникИзображения.ИмяФайлаИзображения,
-	СправочникИзображения.Комментарий,
-	СправочникИзображения.Ответственный,
-	СправочникИзображения.ДатаСоздания,
-	СправочникИзображения.ДатаРедакции
+	СправочникИзображения.Комментарий
 ИЗ
 	Справочник.Изображения КАК СправочникИзображения
 ГДЕ
-	СправочникИзображения.СвязанныйОбъект = &amp;Владелец</QueryText>
+	СправочникИзображения.СвязанныйОбъект = &amp;Владелец
+	И СправочникИзображения.ЭтоГруппа = ЛОЖЬ</QueryText>
 				<MainTable>Catalog.Изображения</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -3404,6 +3552,130 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ДопИнформацияИзменена" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительная информация изменена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Додаткова інформація змінена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Additional information changed</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zusätzliche Informationen geändert</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДопИнфоТипВладельца" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп инфо тип владельца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Доп інфо тип власника</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Additional information owner type</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zusätzliche Informationen Besitzertyp</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ОбъектыДляДополнительныхРеквизитов</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДополнительнаяИнформация" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительная информация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Додаткова інформація</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Additional information</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zusätzliche Informationen</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных</Item>
+			</FunctionalOptions>
+			<Columns>
+				<Column name="ВидИнформации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид информации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вид інформації</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Type of Information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Art der Information</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДополнительныеРеквизиты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Информация" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Інформація</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Information</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -5252,6 +5524,8 @@
 			<Item>
 				<Command>InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenByValue.ОбъектВладелец</Command>
 				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>
 					<xr:Common>false</xr:Common>
@@ -5260,6 +5534,17 @@
 			<Item>
 				<Command>InformationRegister.ЗначенияНаДругихЯзыках.StandardCommand.OpenByValue.ОбъектБазыДанных</Command>
 				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>
 					<xr:Common>false</xr:Common>

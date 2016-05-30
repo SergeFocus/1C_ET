@@ -438,6 +438,30 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Просрочено</dataPath>
+			<field>Просрочено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просрочено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>the current date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Прострочено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	Расчеты.Период,
@@ -464,7 +488,16 @@
 	ЕСТЬNULL(Расчеты.Договор.Организация, &amp;ОсновнаяОрганизация) КАК Организация,
 	Расчеты.Клиент.ДатаРождения,
 	ДЕНЬ(Расчеты.Клиент.ДатаРождения) КАК ДатаРождения,
-	МЕСЯЦ(Расчеты.Клиент.ДатаРождения) КАК МесяцРождения
+	МЕСЯЦ(Расчеты.Клиент.ДатаРождения) КАК МесяцРождения,
+	ВЫБОР
+		КОГДА ДОБАВИТЬКДАТЕ(Расчеты.Период, ДЕНЬ, ЕСТЬNULL(Расчеты.Договор.УстанавливаетСрокОплатыВДнях, 0)) &lt; &amp;ТекущаяДата
+			ТОГДА ВЫБОР
+					КОГДА Расчеты.ВидДвижения = &amp;Приход
+						ТОГДА Расчеты.Сумма
+					ИНАЧЕ -Расчеты.Сумма
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ КАК Просрочено
 ИЗ
 	РегистрНакопления.Расчеты КАК Расчеты
 ГДЕ
@@ -492,7 +525,8 @@
 	NULL,
 	NULL,
 	ДЕНЬ(РасчетыОстатки.Клиент.ДатаРождения),
-	МЕСЯЦ(РасчетыОстатки.Клиент.ДатаРождения)
+	МЕСЯЦ(РасчетыОстатки.Клиент.ДатаРождения),
+	NULL
 ИЗ
 	РегистрНакопления.Расчеты.Остатки(
 			&amp;ДатаНачала,
@@ -518,7 +552,8 @@
 	NULL,
 	NULL,
 	ДЕНЬ(РасчетыОстатки.Клиент.ДатаРождения),
-	МЕСЯЦ(РасчетыОстатки.Клиент.ДатаРождения)
+	МЕСЯЦ(РасчетыОстатки.Клиент.ДатаРождения),
+	NULL
 ИЗ
 	РегистрНакопления.Расчеты.Остатки(
 			КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ),
@@ -540,6 +575,10 @@
 	<totalField>
 		<dataPath>Оплачено</dataPath>
 		<expression>Сумма(Оплачено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Просрочено</dataPath>
+		<expression>Сумма(Просрочено)</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаНачала</name>
@@ -1042,6 +1081,31 @@
 			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
 		</valueType>
 		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ОсновноеПредприятие</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>has expired</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Поточна дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
 	</parameter>
 	<settingsVariant>

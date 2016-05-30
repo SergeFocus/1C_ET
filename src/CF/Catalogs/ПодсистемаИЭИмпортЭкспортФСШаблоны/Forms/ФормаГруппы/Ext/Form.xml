@@ -234,6 +234,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -389,7 +390,9 @@
 					<TitleLocation>Top</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
-					<Font ref="style:NormalTextFont" kind="StyleItem"/>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
+					<Font ref="style:LargeTextFont" kind="StyleItem"/>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
 					<Events>

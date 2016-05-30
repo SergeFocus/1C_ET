@@ -1,0 +1,960 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='dd.MM.yy ЧЧ:мм'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МоментВремени</dataPath>
+			<field>МоментВремени</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проведен</dataPath>
+			<field>Проведен</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Актуален</dataPath>
+			<field>Актуален</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БезПлана</dataPath>
+			<field>БезПлана</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЦен</dataPath>
+			<field>ВидЦен</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПлан</dataPath>
+			<field>ДатаПлан</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='dd.MM.yy ЧЧ:мм'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРедакции</dataPath>
+			<field>ДатаРедакции</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказКлиента</dataPath>
+			<field>ЗаказКлиента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Оплаты</dataPath>
+			<field>Оплаты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.НомерСтроки</dataPath>
+			<field>Оплаты.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.Ссылка</dataPath>
+			<field>Оплаты.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.Валюта</dataPath>
+			<field>Оплаты.Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.Дата</dataPath>
+			<field>Оплаты.Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.ДатаПлан</dataPath>
+			<field>Оплаты.ДатаПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.Курс</dataPath>
+			<field>Оплаты.Курс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.ОСтроке</dataPath>
+			<field>Оплаты.ОСтроке</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.План</dataPath>
+			<field>Оплаты.План</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.Сумма</dataPath>
+			<field>Оплаты.Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.ФормаОплаты</dataPath>
+			<field>Оплаты.ФормаОплаты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплаты.ХранилищеДенег</dataPath>
+			<field>Оплаты.ХранилищеДенег</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Расходы</dataPath>
+			<field>Расходы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.НомерСтроки</dataPath>
+			<field>Расходы.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.Ссылка</dataPath>
+			<field>Расходы.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.Валюта</dataPath>
+			<field>Расходы.Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.Дата</dataPath>
+			<field>Расходы.Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.ДатаПлан</dataPath>
+			<field>Расходы.ДатаПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.Договор</dataPath>
+			<field>Расходы.Договор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.Курс</dataPath>
+			<field>Расходы.Курс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.ОСтроке</dataPath>
+			<field>Расходы.ОСтроке</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.План</dataPath>
+			<field>Расходы.План</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.Поставщик</dataPath>
+			<field>Расходы.Поставщик</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.Сотрудник</dataPath>
+			<field>Расходы.Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.Статья</dataPath>
+			<field>Расходы.Статья</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.Сумма</dataPath>
+			<field>Расходы.Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.ФормаОплаты</dataPath>
+			<field>Расходы.ФормаОплаты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы.ХранилищеДенег</dataPath>
+			<field>Расходы.ХранилищеДенег</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Результат</dataPath>
+			<field>Результат</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезультатПлан</dataPath>
+			<field>РезультатПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХранилищеДенег</dataPath>
+			<field>ХранилищеДенег</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезультатРазница</dataPath>
+			<field>РезультатРазница</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат разница</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Разлика Резултат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Вынік розніца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Ergebnis Unterschied</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Result difference</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Różnica wynik</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Diferența rezultat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Результат різниця</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ความแตกต่างผล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>结果差异</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыдачиОбъектаРаботКлиентуОбратно</dataPath>
+			<field>ДатаВыдачиОбъектаРаботКлиентуОбратно</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоступленияОбъектаРаботНаНашСклад</dataPath>
+			<field>ДатаПоступленияОбъектаРаботНаНашСклад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КомментарийПриВыдачеОбъектаРабот</dataPath>
+			<field>КомментарийПриВыдачеОбъектаРабот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КомментарийПриПоступленииОбъектаРабот</dataPath>
+			<field>КомментарийПриПоступленииОбъектаРабот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СкладДляОбъектаВыполненияРабот</dataPath>
+			<field>СкладДляОбъектаВыполненияРабот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Товары</dataPath>
+			<field>Товары</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.НомерСтроки</dataPath>
+			<field>Товары.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.Ссылка</dataPath>
+			<field>Товары.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.Дата</dataPath>
+			<field>Товары.Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.ДатаПлан</dataPath>
+			<field>Товары.ДатаПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.Количество</dataPath>
+			<field>Товары.Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.Номенклатура</dataPath>
+			<field>Товары.Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.ОСтроке</dataPath>
+			<field>Товары.ОСтроке</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.План</dataPath>
+			<field>Товары.План</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.ПроцентСкидки</dataPath>
+			<field>Товары.ПроцентСкидки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.СерияНоменклатуры</dataPath>
+			<field>Товары.СерияНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.Склад</dataPath>
+			<field>Товары.Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.Сотрудник</dataPath>
+			<field>Товары.Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.Сумма</dataPath>
+			<field>Товары.Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.СуммаБезСкидки</dataPath>
+			<field>Товары.СуммаБезСкидки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Товары.Цена</dataPath>
+			<field>Товары.Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектКлиента</dataPath>
+			<field>ОбъектКлиента</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВыполненияРабот.Ссылка,
+	ВыполненияРабот.ВерсияДанных,
+	ВыполненияРабот.ПометкаУдаления,
+	ВыполненияРабот.Номер,
+	ВыполненияРабот.Дата,
+	ВыполненияРабот.Проведен,
+	ВыполненияРабот.Клиент,
+	ВыполненияРабот.Организация,
+	ВыполненияРабот.Договор,
+	ВыполненияРабот.ЗаказКлиента,
+	ВыполненияРабот.ВидЦен,
+	ВыполненияРабот.Результат,
+	ВыполненияРабот.ХранилищеДенег,
+	ВыполненияРабот.ДатаПлан,
+	ВыполненияРабот.РезультатПлан,
+	ВыполненияРабот.Актуален,
+	ВыполненияРабот.БезПлана,
+	ВыполненияРабот.Номенклатура,
+	ВыполненияРабот.СерияНоменклатуры,
+	ВыполненияРабот.Комментарий,
+	ВыполненияРабот.Ответственный,
+	ВыполненияРабот.ДатаСоздания,
+	ВыполненияРабот.ДатаРедакции,
+	ВыполненияРабот.Товары.(
+		Ссылка,
+		НомерСтроки,
+		ДатаПлан,
+		Дата,
+		Склад,
+		Номенклатура,
+		СерияНоменклатуры,
+		Сотрудник,
+		Количество,
+		Цена,
+		План,
+		Сумма,
+		ПроцентСкидки,
+		СуммаБезСкидки,
+		ОСтроке
+	),
+	ВыполненияРабот.Оплаты.(
+		Ссылка,
+		НомерСтроки,
+		ДатаПлан,
+		Дата,
+		План,
+		Сумма,
+		Валюта,
+		Курс,
+		ХранилищеДенег,
+		ФормаОплаты,
+		ОСтроке
+	),
+	ВыполненияРабот.Расходы.(
+		Ссылка,
+		НомерСтроки,
+		ДатаПлан,
+		Дата,
+		Поставщик,
+		Статья,
+		План,
+		Сумма,
+		Валюта,
+		Курс,
+		ХранилищеДенег,
+		ФормаОплаты,
+		Договор,
+		Сотрудник,
+		ОСтроке
+	),
+	ВыполненияРабот.Представление,
+	ВыполненияРабот.МоментВремени,
+	ВыполненияРабот.Результат - ВыполненияРабот.РезультатПлан КАК РезультатРазница,
+	ВыполненияРабот.ДатаПоступленияОбъектаРаботНаНашСклад,
+	ВыполненияРабот.КомментарийПриПоступленииОбъектаРабот,
+	ВыполненияРабот.ДатаВыдачиОбъектаРаботКлиентуОбратно,
+	ВыполненияРабот.КомментарийПриВыдачеОбъектаРабот,
+	ВыполненияРабот.СкладДляОбъектаВыполненияРабот,
+	ВыполненияРабот.Сотрудник,
+	ВыполненияРабот.ОбъектКлиента
+ИЗ
+	Документ.ВыполненияРабот КАК ВыполненияРабот</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Результат</dataPath>
+		<expression>Сумма(Результат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РезультатПлан</dataPath>
+		<expression>Сумма(РезультатПлан)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РезультатРазница</dataPath>
+		<expression>Сумма(РезультатРазница)</expression>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По Клиентам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Чрез Клиенти</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BL</v8:lang>
+				<v8:content>Па Кліентам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Durch Clients</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>By Clients</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Przez Klientów</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>RO</v8:lang>
+				<v8:content>De Clienti</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>За Клієнтам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>TH</v8:lang>
+				<v8:content>โดยลูกค้า</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ZH</v8:lang>
+				<v8:content>通过客户端</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Актуален</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъектКлиента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СерияНоменклатуры</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Результат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>РезультатПлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>РезультатРазница</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Ссылка</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>перейти к документу</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>отидете на документ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>перайсці да дакумента</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>gehen, um Dokument</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>go to document</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Do dokumentu</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>du-te la documentul</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>перейти до документа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>ไปที่เอกสาร</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>去文件</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Результат</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РезультатПлан</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РезультатРазница</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнение работ По Клиентам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Извършване на строителни работи по желание на клиента</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Выкананне работ Па Кліентам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Durchführen von Arbeiten durch den Kunden</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Performing works by customer</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Wykonywania prac przez klienta</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Efectuarea lucrărilor de către client</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Виконання робіт За Клієнтам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>การแสดงผลงานของลูกค้า</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>由客户进行工程</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Клиент</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПоОбъектамКлиента</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По объектам Клиентов</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Чрез клиентски обекти</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BL</v8:lang>
+				<v8:content>Па аб'ектах Кліентаў</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Durch die Client-Objekte</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>By client objects</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Przez obiekty klienckich</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>RO</v8:lang>
+				<v8:content>Pe obiecte de client</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>По об'єктах Клієнтів</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>TH</v8:lang>
+				<v8:content>โดยวัตถุที่ลูกค้า</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ZH</v8:lang>
+				<v8:content>通过客户端对象</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Актуален</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Клиент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СерияНоменклатуры</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Результат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>РезультатПлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>РезультатРазница</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Ссылка</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>перейти к документу</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>отидете на документ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>перайсці да дакумента</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>gehen, um Dokument</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>go to document</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Do dokumentu</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>du-te la documentul</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>перейти до документа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>ไปที่เอกสาร</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>去文件</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Результат</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РезультатПлан</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РезультатРазница</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнение работ По Клиентам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Извършване на строителни работи по желание на клиента</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Выкананне работ Па Кліентам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Durchführen von Arbeiten durch den Kunden</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Performing works by customer</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Wykonywania prac przez klienta</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Efectuarea lucrărilor de către client</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Виконання робіт За Клієнтам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>การแสดงผลงานของลูกค้า</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>由客户进行工程</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ОбъектКлиента</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

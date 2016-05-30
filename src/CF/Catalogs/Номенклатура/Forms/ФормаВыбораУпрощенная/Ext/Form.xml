@@ -75,7 +75,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -135,7 +135,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать</v8:content>
+						<v8:content>Добавить</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -419,30 +419,33 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="14"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="88">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="164">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="89"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="90"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="165"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="166"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="91">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="167">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="92"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="93"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="168"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="169"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="94">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="170">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="95"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="96"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="171"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="172"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="Код" id="6">
 					<DataPath>Список.Code</DataPath>
@@ -450,60 +453,82 @@
 					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="КодExtendedTooltip" id="15"/>
 				</LabelField>
-				<LabelField name="Наименование" id="12">
-					<DataPath>Список.Description</DataPath>
+				<LabelField name="Ссылка" id="159">
+					<DataPath>Список.Ref</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Име</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Найменне</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Name</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Name</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Nazwa</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Nume</v8:content>
+							<v8:content>Наименование номенклатуры</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>UK</v8:lang>
-							<v8:content>Найменування</v8:content>
+							<v8:content>Вибрати аналог</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>ชื่อ</v8:content>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Nomenklatura</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>名称</v8:content>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Nomenclature</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>Атау</v8:content>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Nomenklatur</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="НаименованиеКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="16"/>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="160"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="161"/>
 				</LabelField>
 				<LabelField name="ПроцентСкидки" id="23">
 					<DataPath>Список.ПроцентСкидки</DataPath>
-					<Width>12</Width>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>% скидки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>% Отстъпка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>% Скідкі</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>% Rabatt</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>% Discount</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>% Rabat</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>% Reducere</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>% Знижки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ส่วนลด%</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>％折扣</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ПроцентСкидкиКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="ПроцентСкидкиРасширеннаяПодсказка" id="25"/>
@@ -518,7 +543,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Это Набор</v8:content>
+							<v8:content>Набор</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -669,6 +694,288 @@
 					<ContextMenu name="НеОтслеживатьОстатокКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="НеОтслеживатьОстатокРасширеннаяПодсказка" id="42"/>
 				</CheckBoxField>
+				<LabelField name="Вес" id="88">
+					<DataPath>Список.Вес</DataPath>
+					<ContextMenu name="ВесКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="ВесРасширеннаяПодсказка" id="90"/>
+				</LabelField>
+				<LabelField name="Длина" id="91">
+					<DataPath>Список.Длина</DataPath>
+					<ContextMenu name="ДлинаКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ДлинаРасширеннаяПодсказка" id="93"/>
+				</LabelField>
+				<LabelField name="Ширина" id="94">
+					<DataPath>Список.Ширина</DataPath>
+					<ContextMenu name="ШиринаКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="ШиринаРасширеннаяПодсказка" id="96"/>
+				</LabelField>
+				<LabelField name="Высота" id="97">
+					<DataPath>Список.Высота</DataPath>
+					<ContextMenu name="ВысотаКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="ВысотаРасширеннаяПодсказка" id="99"/>
+				</LabelField>
+				<LabelField name="НоменклатурнаяГруппа" id="103">
+					<DataPath>Список.НоменклатурнаяГруппа</DataPath>
+					<ContextMenu name="НоменклатурнаяГруппаКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="НоменклатурнаяГруппаРасширеннаяПодсказка" id="105"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы1" id="106">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы1КонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы1РасширеннаяПодсказка" id="108"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы2" id="112">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы2КонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы2РасширеннаяПодсказка" id="114"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы3" id="115">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы3КонтекстноеМеню" id="116"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы3РасширеннаяПодсказка" id="117"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы4" id="118">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы4</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы4КонтекстноеМеню" id="119"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы4РасширеннаяПодсказка" id="120"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы5" id="121">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы5</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы5КонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы5РасширеннаяПодсказка" id="123"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы6" id="124">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы6</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы6КонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы6РасширеннаяПодсказка" id="126"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы7" id="127">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы7</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы7КонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы7РасширеннаяПодсказка" id="129"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы8" id="130">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы8</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы8КонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы8РасширеннаяПодсказка" id="132"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы9" id="133">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы9</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы9КонтекстноеМеню" id="134"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы9РасширеннаяПодсказка" id="135"/>
+				</LabelField>
+				<LabelField name="РеквизитНоменклатурнойГруппы10" id="109">
+					<DataPath>Список.РеквизитНоменклатурнойГруппы10</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РеквизитНоменклатурнойГруппы10КонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="РеквизитНоменклатурнойГруппы10РасширеннаяПодсказка" id="111"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="100">
+					<DataPath>Список.Комментарий</DataPath>
+					<Height>1</Height>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="102"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<Table name="Аналоги" id="136">
+			<Visible>false</Visible>
+			<ChangeRowSet>false</ChangeRowSet>
+			<Height>5</Height>
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Аналоги</DataPath>
+			<RowPictureDataPath>Аналоги.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="АналогиКонтекстноеМеню" id="137"/>
+			<AutoCommandBar name="АналогиКоманднаяПанель" id="138">
+				<ChildItems>
+					<Button name="АналогиВыбрать" id="162">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.Аналоги.StandardCommand.Choose</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выбрать аналог</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Знайти ..</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>PL</v8:lang>
+								<v8:content>Wybierz analogowy</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Select analog</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Изберете аналогов</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Wählen Sie Analog</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="АналогиВыбратьРасширеннаяПодсказка" id="163"/>
+					</Button>
+					<Button name="АналогиНайти" id="155">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.Аналоги.StandardCommand.Find</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Найти..</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Аналоги</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>PL</v8:lang>
+								<v8:content>Znaleźć ..</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Find ..</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Намери ..</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Suche ..</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="АналогиНайтиРасширеннаяПодсказка" id="156"/>
+					</Button>
+					<Button name="АналогиОтменитьПоиск" id="157">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.Аналоги.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="АналогиОтменитьПоискРасширеннаяПодсказка" id="158"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="АналогиРасширеннаяПодсказка" id="139"/>
+			<SearchStringAddition name="АналогиСтрокаПоиска" id="173">
+				<AdditionSource>
+					<Item>Аналоги</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="АналогиСтрокаПоискаКонтекстноеМеню" id="174"/>
+				<ExtendedTooltip name="АналогиСтрокаПоискаРасширеннаяПодсказка" id="175"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="АналогиСостояниеПросмотра" id="176">
+				<AdditionSource>
+					<Item>Аналоги</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="АналогиСостояниеПросмотраКонтекстноеМеню" id="177"/>
+				<ExtendedTooltip name="АналогиСостояниеПросмотраРасширеннаяПодсказка" id="178"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="АналогиУправлениеПоиском" id="179">
+				<AdditionSource>
+					<Item>Аналоги</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="АналогиУправлениеПоискомКонтекстноеМеню" id="180"/>
+				<ExtendedTooltip name="АналогиУправлениеПоискомРасширеннаяПодсказка" id="181"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ValueChoice">АналогиВыборЗначения</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="АналогиГруппаАналогов" id="140">
+					<DataPath>Аналоги.ГруппаАналогов</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="АналогиГруппаАналоговКонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="АналогиГруппаАналоговРасширеннаяПодсказка" id="142"/>
+				</LabelField>
+				<InputField name="АналогиНоменклатура" id="149">
+					<DataPath>Аналоги.Номенклатура</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аналоги</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Од.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Analogi</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Analogs</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Аналози</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Analoga</v8:content>
+						</v8:item>
+					</Title>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="АналогиНоменклатураКонтекстноеМеню" id="150"/>
+					<ExtendedTooltip name="АналогиНоменклатураРасширеннаяПодсказка" id="151"/>
+				</InputField>
+				<LabelField name="АналогиЕдиницаИзмерения" id="143">
+					<DataPath>Аналоги.ЕдиницаИзмерения</DataPath>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="АналогиЕдиницаИзмеренияКонтекстноеМеню" id="144"/>
+					<ExtendedTooltip name="АналогиЕдиницаИзмеренияРасширеннаяПодсказка" id="145"/>
+				</LabelField>
+				<LabelField name="АналогиКоличество" id="146">
+					<DataPath>Аналоги.Количество</DataPath>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="АналогиКоличествоКонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="АналогиКоличествоРасширеннаяПодсказка" id="148"/>
+				</LabelField>
+				<LabelField name="АналогиОСтроке" id="152">
+					<DataPath>Аналоги.ОСтроке</DataPath>
+					<ContextMenu name="АналогиОСтрокеКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="АналогиОСтрокеРасширеннаяПодсказка" id="154"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -1046,6 +1353,140 @@
 				<v8:DateQualifiers>
 					<v8:DateFractions>DateTime</v8:DateFractions>
 				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Аналоги" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналоги</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Аналоги є</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Analogi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Analogs</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Аналози</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Analoga</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьМеханизмАналоговДляНоменклатуры</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ГруппыАналоговТовары.Номенклатура,
+	ГруппыАналоговТовары.ЕдиницаИзмерения,
+	ГруппыАналоговТовары.Количество,
+	ВЫРАЗИТЬ(ГруппыАналоговТовары.ОСтроке КАК СТРОКА(1000)) КАК ОСтроке,
+	ГруппыАналоговТовары.Ссылка КАК ГруппаАналогов
+ИЗ
+	(ВЫБРАТЬ
+		ГруппыАналоговТовары.Ссылка КАК Ссылка
+	ИЗ
+		Справочник.ГруппыАналогов.Товары КАК ГруппыАналоговТовары
+	ГДЕ
+		ГруппыАналоговТовары.Номенклатура = &amp;Номенклатура) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ГруппыАналогов.Товары КАК ГруппыАналоговТовары
+		ПО (ГруппыАналоговТовары.Ссылка = ВложенныйЗапрос.Ссылка)
+ГДЕ
+	ГруппыАналоговТовары.Номенклатура &lt;&gt; &amp;Номенклатура</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="АналогиЕсть" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналоги есть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Використовувати механізм аналогів для номенклатури</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Analogi mają</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Analogs have</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Аналози</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Analoga</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьМеханизмАналоговДляНоменклатуры</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИспользоватьМеханизмАналоговДляНоменклатуры" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать механизм аналогов для номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Найменування номенклатури</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Użyj mechanizm analogów dla nomenklatury</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Use the mechanism of analogs for nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Използвайте механизма на аналози за номенклатурата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Verwenden Sie den Mechanismus der Analoga für Nomenklatur</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

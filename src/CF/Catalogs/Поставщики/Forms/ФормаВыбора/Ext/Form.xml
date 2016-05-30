@@ -327,6 +327,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
@@ -430,7 +431,7 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаГоризонтШапкаРасширеннаяПодсказка" id="60"/>
 			<ChildItems>
-				<LabelDecoration name="ДоглОтображаетсяНаТекущийМомент" id="56">
+				<LabelDecoration name="ДолгОтображаетсяНаТекущийМомент" id="56">
 					<Visible>false</Visible>
 					<HorizontalStretch>true</HorizontalStretch>
 					<TextColor>#000064</TextColor>
@@ -480,11 +481,54 @@
 							<v8:content>Қарыз на ағымдық кезді кейіптеледі</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ДоглОтображаетсяНаТекущийМоментКонтекстноеМеню" id="57"/>
-					<ExtendedTooltip name="ДоглОтображаетсяНаТекущийМоментРасширеннаяПодсказка" id="58"/>
+					<ContextMenu name="ДолгОтображаетсяНаТекущийМоментКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ДолгОтображаетсяНаТекущийМоментРасширеннаяПодсказка" id="58"/>
 				</LabelDecoration>
 				<CheckBoxField name="ИспользуютсяИзображения" id="64">
 					<DataPath>ИспользуютсяИзображения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изображение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Изображение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Малюнак</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Bild</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Image</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Obraz</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Imagine</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Зображення</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ภาพ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>图像</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ИспользуютсяИзображенияКонтекстноеМеню" id="65"/>
 					<ExtendedTooltip name="ИспользуютсяИзображенияРасширеннаяПодсказка" id="66"/>
@@ -661,12 +705,12 @@
 					</Events>
 					<ChildItems>
 						<LabelField name="Наименование" id="7">
-							<DataPath>Список.Description</DataPath>
+							<DataPath>Список.Ref</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Наименование</v8:content>
+									<v8:content>Наименование поставщиков</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>BG</v8:lang>
@@ -723,7 +767,49 @@
 							<ExtendedTooltip name="ТекущийДолгРасширеннаяПодсказка" id="24"/>
 						</LabelField>
 						<LabelField name="ПроцентСкидки" id="13">
-							<DataPath>1/13</DataPath>
+							<DataPath>Список.Телефон</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>% скидки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>% Отстъпка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>% Скідкі</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>% Rabatt</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>% Discount</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>% Rabat</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>% Reducere</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>% Знижки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>ส่วนลด%</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>％折扣</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ПроцентСкидкиКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="ПроцентСкидкиРасширеннаяПодсказка" id="15"/>
 						</LabelField>
@@ -925,25 +1011,14 @@
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	СправочникПоставщики.Ссылка,
-	СправочникПоставщики.ПометкаУдаления,
-	СправочникПоставщики.Родитель,
-	СправочникПоставщики.ЭтоГруппа,
-	СправочникПоставщики.Код,
-	СправочникПоставщики.Наименование,
 	СправочникПоставщики.Адрес,
 	СправочникПоставщики.Комментарий,
-	СправочникПоставщики.НаименованиеДляПечати,
 	СправочникПоставщики.Регион,
 	СправочникПоставщики.Телефон,
 	СправочникПоставщики.ЭлектроннаяПочта,
-	СправочникПоставщики.ПравовойСтатус,
-	СправочникПоставщики.Предопределенный,
 	ЕСТЬNULL(ВложенныйЗапрос.СуммаОстаток, 0) КАК ТекущийДолг,
 	СправочникПоставщики.ВидЦен,
-	СправочникПоставщики.ОКПО,
-	СправочникПоставщики.ОсновнаяВалюта,
-	СправочникПоставщики.ЭтоСотрудник,
-	СправочникПоставщики.Производитель
+	СправочникПоставщики.ОКПО
 ИЗ
 	Справочник.Поставщики КАК СправочникПоставщики
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
@@ -1174,6 +1249,142 @@
 			<FunctionalOptions>
 				<Item>FunctionalOption.СопровождатьПоставщиковИзображениями</Item>
 			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИспользоватьШтрихКодыДляИдентификацииКонтрагентов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать штрих коды для идентификации контрагентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Използвайте бар кодове, за да се идентифицират контрагенти</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Використовувати штрих коди для ідентифікації контрагентів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Use bar codes to identify counterparties</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Użyj kodów kreskowych do identyfikacji kontrahentów</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Verwenden Sie Strichcodes an Gegenparteien identifizieren</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьШтрихКоды</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИспользоватьПодключаемоеОборудование" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать подключаемое оборудование</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use the connected equipment</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Utilizați echipamentul conectat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Выкарыстоўваць падключаецца абсталяванне</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>使用连接的设备</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Використовувати підключається обладнання</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Използвайте свързаното оборудване</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Verwenden Sie die angeschlossenen Geräte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Użyj podłączonego sprzętu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Пайдалан- подключаемое жабдықты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ใช้อุปกรณ์ที่เชื่อมต่อ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьМагнитныеКартыКлиентов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать магнитные карты клиентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use magnetic card customers</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Utilizați clienți carduri magnetice</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Выкарыстоўваць магнітныя карты кліентаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>使用磁卡客户</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Використовувати магнітні картки клієнтів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Използвайте магнитни клиенти карти</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Verwenden Magnetkarte Kunden</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Użyj karty magnetycznej klientów</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Пайдалан- клиентов магнитные карталарын</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ลูกค้าใช้บัตรแม่เหล็ก</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>

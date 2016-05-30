@@ -51,7 +51,6 @@
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
 		<ChildItems>
 			<Button name="ФормаНайти" id="67">
 				<Type>CommandBarButton</Type>
@@ -62,7 +61,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -386,12 +385,12 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="4">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Ref</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Наименование поставщиков</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
@@ -511,7 +510,7 @@
 					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="29"/>
 				</LabelField>
 				<LabelField name="ВидЦен" id="45">
-					<DataPath>1/98</DataPath>
+					<DataPath>Список.ВидЦен</DataPath>
 					<ContextMenu name="ВидЦенКонтекстноеМеню" id="46"/>
 					<ExtendedTooltip name="ВидЦенРасширеннаяПодсказка" id="47"/>
 				</LabelField>
@@ -647,6 +646,11 @@
 					<ContextMenu name="ВсегоДолгПоставщиковКонтекстноеМеню" id="49"/>
 					<ExtendedTooltip name="ВсегоДолгПоставщиковРасширеннаяПодсказка" id="50"/>
 				</LabelField>
+				<LabelField name="ВсегоПросрочено" id="96">
+					<DataPath>ВсегоПросрочено</DataPath>
+					<ContextMenu name="ВсегоПросроченоКонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="ВсегоПросроченоРасширеннаяПодсказка" id="98"/>
+				</LabelField>
 				<LabelField name="НаименованиеОсновнойВалюты" id="55">
 					<DataPath>НаименованиеОсновнойВалюты</DataPath>
 					<TitleLocation>None</TitleLocation>
@@ -680,28 +684,15 @@
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	Поставщики.Ссылка,
-	Поставщики.ПометкаУдаления,
-	Поставщики.Родитель,
-	Поставщики.ЭтоГруппа,
-	Поставщики.Код,
-	Поставщики.Наименование,
 	Поставщики.Адрес,
 	Поставщики.Комментарий,
-	Поставщики.НаименованиеДляПечати,
 	Поставщики.Регион,
 	Поставщики.Телефон,
 	Поставщики.ЭлектроннаяПочта,
 	Поставщики.ПравовойСтатус,
-	Поставщики.Предопределенный,
 	ЕСТЬNULL(ВложенныйЗапрос.СуммаОстаток, 0) КАК ТекущийДолг,
 	Поставщики.ОКПО,
-	Поставщики.ВидЦен,
-	Поставщики.Ответственный,
-	Поставщики.ДатаСоздания,
-	Поставщики.ДатаРедакции,
-	Поставщики.ОсновнаяВалюта,
-	Поставщики.ЭтоСотрудник,
-	Поставщики.Производитель
+	Поставщики.ВидЦен
 ИЗ
 	Справочник.Поставщики КАК Поставщики
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
@@ -889,6 +880,33 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="ВсегоПросрочено" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего просрочено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>the entire overdue</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Всього прострочено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВестиУчетОтдельныхДоговоровСКонтрагентами</Item>
+			</FunctionalOptions>
 		</Attribute>
 	</Attributes>
 	<Commands>

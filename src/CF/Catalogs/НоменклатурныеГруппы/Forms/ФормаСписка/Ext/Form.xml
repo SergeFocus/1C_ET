@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -12,7 +13,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать номенклатурную группу</v8:content>
+						<v8:content>Добавить Номенклатурную группу</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -171,6 +172,13 @@
 				</ToolTip>
 				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
 				<ExtendedTooltip name="ФормаГруппаГлобРасширеннаяПодсказка" id="47"/>
+				<ChildItems>
+					<Button name="ПереименоватьПоФормулеВсюНоменклатуру" id="48">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПереименоватьПоФормулеВсюНоменклатуру</CommandName>
+						<ExtendedTooltip name="ПереименоватьПоФормулеВсюНоменклатуруРасширеннаяПодсказка" id="49"/>
+					</Button>
+				</ChildItems>
 			</ButtonGroup>
 			<Button name="ФормаВывестиСписок" id="38">
 				<Type>CommandBarButton</Type>
@@ -246,6 +254,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -288,38 +297,38 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="48">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="50">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="49"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="52"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="51">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="53">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="52"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="54"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="55"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="54">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="56">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="55"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="57"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="58"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="7">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Ref</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Наименование номенклатурных групп</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
@@ -427,7 +436,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Серийная</v8:content>
+							<v8:content>Для серийной</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>UK</v8:lang>
@@ -476,6 +485,7 @@
 				</CheckBoxField>
 				<LabelField name="Комментарий" id="24">
 					<DataPath>Список.Комментарий</DataPath>
+					<Height>1</Height>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="25"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="26"/>
 				</LabelField>
@@ -567,4 +577,69 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ПереименоватьПоФормулеВсюНоменклатуру" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переименовать по формуле всю номенклатуру</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Преименуване на цялата гама от формулата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Перейменувати за формулою всю номенклатуру</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Rename the entire range of the formula</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Zmień nazwę całą gamę wzorze</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Benennen Sie die gesamte Palette der Formel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переименовать по формуле всю номенклатуру</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Преименуване на цялата гама от формулата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Перейменувати за формулою всю номенклатуру</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Rename the entire range of the formula</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Zmień nazwę całą gamę wzorze</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Benennen Sie die gesamte Palette der Formel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЛайтБолт</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереименоватьПоФормулеВсюНоменклатуру</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьФормулыАвтоНаименованияФормированияШтрихКодаИТекстаСШтрихКодом</Item>
+			</FunctionalOptions>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
 </Form>

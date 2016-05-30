@@ -9,8 +9,52 @@
 			<Button name="ФормаЗакрыть" id="4">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<DefaultItem>true</DefaultItem>
 				<OnlyInAllActions>true</OnlyInAllActions>
 				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>Близо</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BL</v8:lang>
+						<v8:content>Зачыніць</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Schließen</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>EN</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>Blisko</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>RO</v8:lang>
+						<v8:content>Închide</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>UK</v8:lang>
+						<v8:content>Закрити</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>TH</v8:lang>
+						<v8:content>ใกล้</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ZH</v8:lang>
+						<v8:content>关闭</v8:content>
+					</v8:item>
+				</Title>
 				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="5"/>
 			</Button>
 			<Button name="ФормаСправка" id="6">
@@ -30,13 +74,55 @@
 	<ChildItems>
 		<InputField name="Наименование" id="1">
 			<DataPath>Объект.Description</DataPath>
-			<DefaultItem>true</DefaultItem>
 			<ReadOnly>true</ReadOnly>
-			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование пользователя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Потребителско име</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Найменне карыстальніка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Benutzername</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>User Name</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Nazwa użytkownika</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Nume utilizator</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Найменування користувача</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ชื่อผู้ใช้</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>用户名</v8:content>
+				</v8:item>
+			</Title>
 			<TitleLocation>Top</TitleLocation>
 			<EditMode>EnterOnInput</EditMode>
 			<Width>50</Width>
 			<HorizontalStretch>false</HorizontalStretch>
+			<TextColor>#800000</TextColor>
+			<BorderColor>style:FieldBackColor</BorderColor>
 			<Font ref="style:LargeTextFont" kind="StyleItem"/>
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
@@ -63,6 +149,22 @@
 			</Item>
 			<Item>
 				<Command>InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenByValue.ОбъектВладелец</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.СообщенияПользователюОтСистемы.StandardCommand.OpenByValue.Пользователь</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>

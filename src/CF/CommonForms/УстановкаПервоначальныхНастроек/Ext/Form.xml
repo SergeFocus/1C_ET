@@ -541,10 +541,12 @@
 							<ChildItems>
 								<InputField name="НаименованиеПредприятия" id="668">
 									<DataPath>НаименованиеПредприятия</DataPath>
-									<TitleFont ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+									<TitleFont ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
 									<TitleLocation>Top</TitleLocation>
 									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<TextColor>#800000</TextColor>
 									<BackColor>#F0FFF0</BackColor>
+									<BorderColor>style:FieldBackColor</BorderColor>
 									<Font ref="style:LargeTextFont" kind="StyleItem"/>
 									<ContextMenu name="НаименованиеПредприятияКонтекстноеМеню" id="669"/>
 									<ExtendedTooltip name="НаименованиеПредприятияРасширеннаяПодсказка" id="670"/>
@@ -647,6 +649,8 @@
 								<InputField name="ОтКого" id="796">
 									<DataPath>ОтКого</DataPath>
 									<HorizontalStretch>false</HorizontalStretch>
+									<TextColor>#800000</TextColor>
+									<BorderColor>style:FieldBackColor</BorderColor>
 									<ContextMenu name="ОтКогоКонтекстноеМеню" id="797"/>
 									<ExtendedTooltip name="ОтКогоРасширеннаяПодсказка" id="798"/>
 								</InputField>
@@ -667,7 +671,6 @@
 				</UsualGroup>
 				<LabelDecoration name="Декорация3" id="130">
 					<TextColor>#003366</TextColor>
-					<Font ref="sys:DefaultGUIFont" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1075,13 +1078,13 @@
 								<Event name="OnChange">ВестиУчетДенегПриИзменении</Event>
 							</Events>
 						</CheckBoxField>
-						<CheckBoxField name="ПриниматьИОтдаватьДеньгиМожноПрямоВДокументахРасходаИПрихода" id="719">
-							<DataPath>ПриниматьИОтдаватьДеньгиМожноПрямоВДокументахРасходаИПрихода</DataPath>
+						<CheckBoxField name="ИспользоватьРегистрациюПриемаИВыдачиДенегПрямоВДокументахРасходаИПрихода" id="719">
+							<DataPath>ИспользоватьРегистрациюПриемаИВыдачиДенегПрямоВДокументахРасходаИПрихода</DataPath>
 							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ПриниматьИОтдаватьДеньгиМожноПрямоВДокументахРасходаИПриходаКонтекстноеМеню" id="720"/>
-							<ExtendedTooltip name="ПриниматьИОтдаватьДеньгиМожноПрямоВДокументахРасходаИПриходаРасширеннаяПодсказка" id="721"/>
+							<ContextMenu name="ИспользоватьРегистрациюПриемаИВыдачиДенегПрямоВДокументахРасходаИПриходаКонтекстноеМеню" id="720"/>
+							<ExtendedTooltip name="ИспользоватьРегистрациюПриемаИВыдачиДенегПрямоВДокументахРасходаИПриходаРасширеннаяПодсказка" id="721"/>
 							<Events>
-								<Event name="OnChange">ПриниматьИОтдаватьДеньгиМожноПрямоВДокументахРасходаИПриходаПриИзменении</Event>
+								<Event name="OnChange">ИспользоватьРегистрациюПриемаИВыдачиДенегПрямоВДокументахРасходаИПриходаПриИзменении</Event>
 							</Events>
 						</CheckBoxField>
 						<LabelDecoration name="Декорация11" id="154">
@@ -1147,6 +1150,8 @@
 						<InputField name="НаименованиеВашейОсновнойВалюты" id="5">
 							<DataPath>НаименованиеВашейОсновнойВалюты</DataPath>
 							<HorizontalStretch>false</HorizontalStretch>
+							<TextColor>#800000</TextColor>
+							<BorderColor>style:FieldBackColor</BorderColor>
 							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 							<ContextMenu name="НаименованиеВашейОсновнойВалютыКонтекстноеМеню" id="6"/>
 							<ExtendedTooltip name="НаименованиеВашейОсновнойВалютыРасширеннаяПодсказка" id="7"/>
@@ -1420,7 +1425,7 @@
 									<Representation>PictureAndText</Representation>
 									<CommandName>InformationRegister.КурсыВалют.StandardCommand.OpenList</CommandName>
 									<Picture>
-										<xr:Ref>CommonPicture.Обмен</xr:Ref>
+										<xr:Ref>CommonPicture.ОбменВалют</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</Picture>
 									<ExtendedTooltip name="РегистрСведенийКурсыВалютОткрытьСписокРасширеннаяПодсказка" id="22"/>
@@ -2141,6 +2146,8 @@
 									<DataPath>НаименованиеВашегоОсновногоСклада</DataPath>
 									<Width>35</Width>
 									<HorizontalStretch>false</HorizontalStretch>
+									<TextColor>#800000</TextColor>
+									<BorderColor>style:FieldBackColor</BorderColor>
 									<ContextMenu name="НаименованиеВашегоОсновногоСкладаКонтекстноеМеню" id="41"/>
 									<ExtendedTooltip name="НаименованиеВашегоОсновногоСкладаРасширеннаяПодсказка" id="42"/>
 									<Events>
@@ -2576,7 +2583,9 @@
 									<DataPath>НаименованиеБазовогоВидаЦен</DataPath>
 									<Width>35</Width>
 									<HorizontalStretch>false</HorizontalStretch>
+									<TextColor>#800000</TextColor>
 									<BackColor>#FFFFF0</BackColor>
+									<BorderColor>style:FieldBackColor</BorderColor>
 									<ContextMenu name="НаименованиеБазовогоВидаЦенКонтекстноеМеню" id="134"/>
 									<ExtendedTooltip name="НаименованиеБазовогоВидаЦенРасширеннаяПодсказка" id="135"/>
 									<Events>
@@ -3178,10 +3187,6 @@
 										<Event name="OnChange">ВестиУчетВаловойПрибылиПриИзменении</Event>
 									</Events>
 								</CheckBoxField>
-								<LabelDecoration name="Декорация8" id="145">
-									<ContextMenu name="Декорация8КонтекстноеМеню" id="146"/>
-									<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="147"/>
-								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаШК" id="114">
@@ -3340,6 +3345,42 @@
 								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
+						<CheckBoxField name="ИспользоватьКомплектацию" id="825">
+							<DataPath>ИспользоватьКомплектацию</DataPath>
+							<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=НЕТ; БИ=ДА</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>БЛ='NO'; БИ='YES'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>БЛ='НІ'; БИ='ТАК'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>БЛ='NO'; БИ='YES'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>БЛ='NIE'; БИ='TAK'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>БЛ='Halten Sie eine Aufzeichnung der Kommissionierung'; БИ='NO'</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ИспользоватьКомплектациюКонтекстноеМеню" id="826"/>
+							<ExtendedTooltip name="ИспользоватьКомплектациюРасширеннаяПодсказка" id="827"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьКомплектациюПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
 						<LabelDecoration name="Декорация7" id="104">
 							<ContextMenu name="Декорация7КонтекстноеМеню" id="105"/>
 							<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="106"/>
@@ -3577,12 +3618,252 @@
 							<DataPath>НаименованиеДляЧастногоПокупателя</DataPath>
 							<Width>50</Width>
 							<HorizontalStretch>false</HorizontalStretch>
+							<TextColor>#800000</TextColor>
+							<BorderColor>style:FieldBackColor</BorderColor>
 							<ContextMenu name="НаименованиеДляЧастногоПокупателяКонтекстноеМеню" id="54"/>
 							<ExtendedTooltip name="НаименованиеДляЧастногоПокупателяРасширеннаяПодсказка" id="55"/>
 							<Events>
 								<Event name="OnChange">НаименованиеДляЧастногоПокупателяПриИзменении</Event>
 							</Events>
 						</InputField>
+						<UsualGroup name="ГруппаВыполненияРабот" id="817">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выполнения работ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Група на строителството</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група выканання работ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppe von Werken</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group of works</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Grupa robót</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Grup de lucrări</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група виконання робіт</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>กลุ่มงาน</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>工作组</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выполнения работ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Група на строителството</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група выканання работ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppe von Werken</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group of works</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Grupa robót</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Grup de lucrări</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група виконання робіт</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>กลุ่มงาน</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>工作组</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВыполненияРаботРасширеннаяПодсказка" id="818"/>
+							<ChildItems>
+								<LabelDecoration name="ДокументыВыполненияРаботПозволяютЗарегистрироватьВсеОперацииСопутствующиеВыполнениюРаботДляКлиентаВОдномМесте" id="814">
+									<TextColor>#000064</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документы выполнения работ позволяют зарегистрировать все операции сопутствующие выполнению работ для клиента в одном месте</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Документи за разрешително за работа, се регистрират всички операции, свързани извършват работа за един клиент на едно място</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Дакументы выканання работ дазваляюць зарэгістраваць усе аперацыі спадарожныя выкананню работ для кліента ў адным месцы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Dokumente der Arbeitserlaubnis registrieren alle Operationen durchführen verbundenen Arbeit für einen Kunden an einem Ort</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Documents of work permit register all operations associated perform work for a client in one place</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Dokumenty o pozwolenie na pracę zarejestrować wszystkie operacje związane wykonywania pracy dla klienta w jednym miejscu</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Documente de permis de muncă înregistrează toate operațiunile asociate efectua munca pentru un client într-un singur loc</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Документи виконання робіт дозволяють зареєструвати всі операції супутні виконанню робіт для клієнта в одному місці</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>เอกสารใบอนุญาตทำงานลงทะเบียนการดำเนินงานทั้งหมดที่เกี่ยวข้องในการทำงานสำหรับลูกค้าในสถานที่หนึ่ง</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>工作许可证的登记文件相关的所有操作在一个地方进行工作为客户端</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДокументыВыполненияРаботПозволяютЗарегистрироватьВсеОперацииСопутствующиеВыполнениюРаботДляКлиентаВОдномМестеКонтекстноеМеню" id="815"/>
+									<ExtendedTooltip name="ДокументыВыполненияРаботПозволяютЗарегистрироватьВсеОперацииСопутствующиеВыполнениюРаботДляКлиентаВОдномМестеРасширеннаяПодсказка" id="816"/>
+								</LabelDecoration>
+								<CheckBoxField name="ИспользоватьВидДокументовВыполненияРабот" id="808">
+									<DataPath>ИспользоватьВидДокументовВыполненияРабот</DataPath>
+									<CheckBoxType>Tumbler</CheckBoxType>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=НЕТ; БИ=ДА</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>БЛ='NO'; БИ='YES'</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>БЛ='НЕ'; БИ='ТАК'</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>БЛ='NO'; БИ='JA'</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>БЛ='NO'; БИ='YES'</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>БЛ='NIE'; БИ='TAK'</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>БЛ='NO'; БИ='DA'</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>БЛ='НІ'; БИ='ТАК'</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>БЛ='NO'; БИ='ใช่'</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>БЛ='NO'; БИ='YES'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ИспользоватьВидДокументовВыполненияРаботКонтекстноеМеню" id="809"/>
+									<ExtendedTooltip name="ИспользоватьВидДокументовВыполненияРаботРасширеннаяПодсказка" id="810"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="УчетОказанияУслугЗаВремя" id="822">
+							<DataPath>ВестиУчетОказанияУслугЗаВремя</DataPath>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=НЕТ; БИ=ДА</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>БЛ='NO'; БИ='YES'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>БЛ='НЕ'; БИ='ТАК'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>БЛ='NO'; БИ='JA'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>БЛ='NO'; БИ='YES'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>БЛ='NIE'; БИ='TAK'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>БЛ='NO'; БИ='DA'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>БЛ='НІ'; БИ='ТАК'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>БЛ='NO'; БИ='ใช่'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>БЛ='NO'; БИ='YES'</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="УчетОказанияУслугЗаВремяКонтекстноеМеню" id="823"/>
+							<ExtendedTooltip name="УчетОказанияУслугЗаВремяРасширеннаяПодсказка" id="824"/>
+							<Events>
+								<Event name="OnChange">УчетОказанияУслугЗаВремяПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
 						<CheckBoxField name="ВестиУчетЗаказовКлиентов" id="775">
 							<DataPath>ВестиУчетЗаказовКлиентов</DataPath>
 							<TitleLocation>Right</TitleLocation>
@@ -3657,6 +3938,8 @@
 							<DataPath>НаименованиеДляПрочегоПоставщика</DataPath>
 							<Width>50</Width>
 							<HorizontalStretch>false</HorizontalStretch>
+							<TextColor>#800000</TextColor>
+							<BorderColor>style:FieldBackColor</BorderColor>
 							<ContextMenu name="НаименованиеДляПрочегоПоставщикаКонтекстноеМеню" id="60"/>
 							<ExtendedTooltip name="НаименованиеДляПрочегоПоставщикаРасширеннаяПодсказка" id="61"/>
 							<Events>
@@ -3873,8 +4156,8 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ВестиУчетПоДоговорамРасширеннаяПодсказка" id="699"/>
 									<ChildItems>
-										<CheckBoxField name="ВестиУчетОтдельныхДоговоровСИКонтрагентами" id="695">
-											<DataPath>ВестиУчетОтдельныхДоговоровСИКонтрагентами</DataPath>
+										<CheckBoxField name="ВестиУчетОтдельныхДоговоровСКонтрагентами" id="695">
+											<DataPath>ВестиУчетОтдельныхДоговоровСКонтрагентами</DataPath>
 											<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 											<CheckBoxType>Tumbler</CheckBoxType>
 											<EditFormat>
@@ -3923,10 +4206,10 @@
 													<v8:content>БЛ='NO'; БИ='ใช่'</v8:content>
 												</v8:item>
 											</EditFormat>
-											<ContextMenu name="ВестиУчетОтдельныхДоговоровСИКонтрагентамиКонтекстноеМеню" id="696"/>
-											<ExtendedTooltip name="ВестиУчетОтдельныхДоговоровСИКонтрагентамиРасширеннаяПодсказка" id="697"/>
+											<ContextMenu name="ВестиУчетОтдельныхДоговоровСКонтрагентамиКонтекстноеМеню" id="696"/>
+											<ExtendedTooltip name="ВестиУчетОтдельныхДоговоровСКонтрагентамиРасширеннаяПодсказка" id="697"/>
 											<Events>
-												<Event name="OnChange">ВестиУчетОтдельныхДоговоровСИКонтрагентамиПриИзменении</Event>
+												<Event name="OnChange">ВестиУчетОтдельныхДоговоровСКонтрагентамиПриИзменении</Event>
 											</Events>
 										</CheckBoxField>
 										<Button name="СправочникДоговораОткрытьСписок" id="700">
@@ -3942,10 +4225,6 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
-								<LabelDecoration name="Декорация20" id="725">
-									<ContextMenu name="Декорация20КонтекстноеМеню" id="726"/>
-									<ExtendedTooltip name="Декорация20РасширеннаяПодсказка" id="727"/>
-								</LabelDecoration>
 								<UsualGroup name="ВестиУчетСобственныхЮридическихЛиц" id="683">
 									<Title>
 										<v8:item>
@@ -4380,7 +4659,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>CommonPicture.SZПараметрыЗапроса</xr:Ref>
+						<xr:Ref>CommonPicture.ПараметрыЗапроса</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<ExtendedTooltip name="ДругиеНастройкиПрограммыРасширеннаяПодсказка" id="194"/>
@@ -4471,7 +4750,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
-							<Representation>None</Representation>
+							<Representation>NormalSeparation</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаРезервированияРасширеннаяПодсказка" id="807"/>
 							<ChildItems>
@@ -4493,9 +4772,52 @@
 										<Event name="Opening">КаталогДляРезервированияБазыДанныхОткрытие</Event>
 									</Events>
 								</InputField>
-								<LabelDecoration name="Декорация13" id="803">
-									<ContextMenu name="Декорация13КонтекстноеМеню" id="804"/>
-									<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="805"/>
+								<LabelDecoration name="Например" id="819">
+									<TextColor>#000064</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Например: C:\BackUP\ - каталог в котором каждый день будет создаваться копия базы данных</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Например: C: \ Backup \ - директорията, в която всеки ден ще се създаде копие на базата данни</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Напрыклад: C: \ BackUP \ - каталог у якім кожны дзень будзе стварацца копія базы дадзеных</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Zum Beispiel: C: \ Backup \ - das Verzeichnis, in dem jeden Tag wird eine Kopie der Datenbank zu erstellen</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>For example: C: \ BackUP \ - the directory in which every day will create a copy of the database</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Na przykład: C: \ Backup \ - katalog, w którym na co dzień tworzy kopię bazy danych</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>De exemplu: C: \ Backup \ - directorul în care în fiecare zi se va crea o copie a bazei de date</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Наприклад: C: \ BackUP \ - каталог в якому кожен день буде створюватися копія бази даних</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>ตัวอย่างเช่น C: \ \ Backup - ไดเรกทอรีที่ทุกวันจะสร้างสำเนาของฐานข้อมูล</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>例如：C：\ BACKUP \  - 在每一天都会创建数据库副本的目录</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НапримерКонтекстноеМеню" id="820"/>
+									<ExtendedTooltip name="НапримерРасширеннаяПодсказка" id="821"/>
 								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
@@ -4736,10 +5058,10 @@
 											<CommandName>Constant.ВестиУчетПартийПриобретения.StandardCommand.Open</CommandName>
 											<ExtendedTooltip name="КонстантаВестиУчетПартийПриобретенияОткрытьРасширеннаяПодсказка" id="764"/>
 										</Button>
-										<Button name="КонстантаВключитьСерийныйУчетНоменклатурыОткрыть" id="767">
+										<Button name="КонстантаВестиУчетСерийНоменклатурыОткрыть" id="767">
 											<Type>Hyperlink</Type>
-											<CommandName>Constant.ВключитьСерийныйУчетНоменклатуры.StandardCommand.Open</CommandName>
-											<ExtendedTooltip name="КонстантаВключитьСерийныйУчетНоменклатурыОткрытьРасширеннаяПодсказка" id="768"/>
+											<CommandName>Constant.ВестиУчетСерийНоменклатуры.StandardCommand.Open</CommandName>
+											<ExtendedTooltip name="КонстантаВестиУчетСерийНоменклатурыОткрытьРасширеннаяПодсказка" id="768"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
@@ -4783,10 +5105,10 @@
 									<CommandName>Constant.ДляУскоренияРаботыСБазойДанныхНеВыводитьДополнительныхДанных.StandardCommand.Open</CommandName>
 									<ExtendedTooltip name="КонстантаДляУскоренияРаботыСБазойДанныхНеВыводитьДополнительныхДанныхОткрытьРасширеннаяПодсказка" id="782"/>
 								</Button>
-								<Button name="КонстантаВключитьЛичныеНастройкиПользователейОткрыть" id="794">
+								<Button name="КонстантаИспользоватьЛичныеНастройкиПользователейОткрыть" id="794">
 									<Type>Hyperlink</Type>
-									<CommandName>Constant.ВключитьЛичныеНастройкиПользователей.StandardCommand.Open</CommandName>
-									<ExtendedTooltip name="КонстантаВключитьЛичныеНастройкиПользователейОткрытьРасширеннаяПодсказка" id="795"/>
+									<CommandName>Constant.ИспользоватьЛичныеНастройкиПользователей.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="КонстантаИспользоватьЛичныеНастройкиПользователейОткрытьРасширеннаяПодсказка" id="795"/>
 								</Button>
 							</ChildItems>
 						</UsualGroup>
@@ -5767,7 +6089,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Ваш язык русский, но вы работаете на Украине?</v8:content>
+					<v8:content>Ваш язык русский, но Вы работаете на Украине?</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -6076,7 +6398,7 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ВестиУчетОтдельныхДоговоровСИКонтрагентами" id="21">
+		<Attribute name="ВестиУчетОтдельныхДоговоровСКонтрагентами" id="21">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -6233,7 +6555,7 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ПриниматьИОтдаватьДеньгиМожноПрямоВДокументахРасходаИПрихода" id="24">
+		<Attribute name="ИспользоватьРегистрациюПриемаИВыдачиДенегПрямоВДокументахРасходаИПрихода" id="24">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -6599,6 +6921,131 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ИспользоватьВидДокументовВыполненияРабот" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать вид документов "Выполнение работ"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Използвайте тип документ "Works"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выкарыстоўваць выгляд дакументаў "Выкананне работ"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Verwenden Sie Dokumenttyp "Works"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Use document type "Works"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Użyj typ dokumentu "prace"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Folosiți tip de documente "Works"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Використовувати вид документів "Виконання робіт"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ใช้ชนิดของเอกสาร "ผลงาน"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>使用文档类型“作品”</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВестиУчетОказанияУслугЗаВремя" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вести учет оказания услуг Клиентам за время</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Пазете записи за обслужване на клиенти по време на</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Весці ўлік аказання паслуг Кліентам за час</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Bewahren Sie die Aufzeichnungen von Kundendienst während</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Keep records of client service during</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Prowadzenia ewidencji obsługi klienta podczas</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Ține evidența serviciului de client în timpul</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вести облік надання послуг Клієнтам за час</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ให้มีการบันทึกของการบริการลูกค้าในระหว่าง</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>保持客户服务的过程中记录</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьКомплектацию" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вести учет комплектации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Записвайте си на бране</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вести облік комплектації</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Keep a record of picking</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Zapisuj zbierając</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Aussehen</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВалютыИКурсы" id="1">
@@ -6789,7 +7236,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>CommonPicture.Обмен</xr:Ref>
+				<xr:Ref>CommonPicture.ОбменВалют</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Representation>TextPicture</Representation>
@@ -6898,7 +7345,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть форму "настроек учета, программы"</v8:content>
+					<v8:content>Далее: Открыть форму "настроек учета, программы"</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>

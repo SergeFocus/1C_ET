@@ -29,11 +29,37 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
+		<Command name="CommonCommand.СоздатьНовыйДокумент">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+			</Visibility>
+		</Command>
 		<Command name="Document.РасходыТовара.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ВыполненияРабот.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ОказанияУслугЗаВремя.Command.УслугиЗаВремя">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.Клиенты.StandardCommand.OpenList">
@@ -129,9 +155,12 @@
 		</Command>
 		<Command name="Catalog.НоменклатурныеГруппы.StandardCommand.OpenList">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="0">
@@ -295,13 +324,6 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Document.ПланыПродаж.StandardCommand.OpenList">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
-			</Visibility>
-		</Command>
 		<Command name="InformationRegister.ТекстыНаДругихЯзыках.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -363,13 +385,6 @@
 				<xr:Common>false</xr:Common>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-			</Visibility>
-		</Command>
-		<Command name="Catalog.Договора.StandardCommand.OpenList">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.Организации.StandardCommand.OpenList">
@@ -435,6 +450,20 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
+		<Command name="Document.РасходыТовара.Command.ЗаказыКлиентов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПоступленияТовара.Command.ЗаказыПоставщикам">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+			</Visibility>
+		</Command>
 		<Command name="InformationRegister.СостоянияЗаказов.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -442,11 +471,24 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="0">
+		<Command name="Catalog.ОбъектыКлиентов.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СертификатыГигиеническиеЗаключения.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.Изображения.StandardCommand.OpenList">
@@ -454,13 +496,6 @@
 				<xr:Common>false</xr:Common>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-			</Visibility>
-		</Command>
-		<Command name="0">
-			<Visibility>
-				<xr:Common>true</xr:Common>
-				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="InformationRegister.ЗначенияНаДругихЯзыках.StandardCommand.OpenList">
@@ -484,14 +519,6 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="DocumentJournal.ДокументыДвиженийТовара.StandardCommand.OpenList">
-			<Visibility>
-				<xr:Common>true</xr:Common>
-				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
-				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
-			</Visibility>
-		</Command>
 		<Command name="AccumulationRegister.ПродажиСотрудников.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -506,6 +533,7 @@
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="InformationRegister.ОтветственныеЗаСредства.StandardCommand.OpenList">
@@ -514,22 +542,275 @@
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПечатьШтрихкода.Command.ПечатьШтрихкода">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ОказанияУслугЗаВремя.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ВидыДокументаСертификатаИлиГигиеническогоЗаключения.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.ЗагрузкаПозицийНомеровПриОказанииУслугЗаВремя.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.НаборЗначенийДополнительныхРеквизитов.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Договора.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="AccumulationRegister.ТоварыПереданныеНаКомиссию.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="71c70403-cfaf-4d03-81cb-81a34144dbf6">false</xr:Value>
+				<xr:Value name="9785dcbf-8901-4245-8586-a6b6cd88cdc7">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ОтчетКомиссионера.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="71c70403-cfaf-4d03-81cb-81a34144dbf6">false</xr:Value>
+				<xr:Value name="9785dcbf-8901-4245-8586-a6b6cd88cdc7">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПланыПродаж.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПланыДоходовИРасходовДенег.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПозицииДляОказанияУслугЗаВремяНомера.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ЕдиницыИзмерения.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ТаблицыДанных.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.ДополнительныеШтрихКоды.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="AccumulationRegister.Комплектации.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ГруппыАналогов.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Подразделения.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.СредстваПредприятия.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Document.ВыполнениеРабот.StandardCommand.OpenList">
+		<Command name="Catalog.Спецификации.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.Комплектация.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СпособыДоставки.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.АссортиментДляРабочегоМестаКассира.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="9785dcbf-8901-4245-8586-a6b6cd88cdc7">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DocumentJournal.ДокументыДвиженийТовара.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
-				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DocumentJournal.ПолныйЖурнал.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Enum.ОбъектыДляДополнительныхРеквизитов.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="AccumulationRegister.РасчетыСОтсрочкой.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="AccumulationRegister.РасчетыСПоставщикамиСОтсрочкой.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Document.КорректировкиИРегистрацияОстатков.StandardCommand.Create">
@@ -966,6 +1247,198 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
+		<Command name="InformationRegister.ОтветственныеЗаСредства.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СредстваПредприятия.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ВыполненияРабот.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.РасходыТовара.Command.СоздатьЗаказКлиента">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ОказанияУслугЗаВремя.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ВидыДокументаСертификатаИлиГигиеническогоЗаключения.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СертификатыГигиеническиеЗаключения.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СертификатыГигиеническиеЗаключения.StandardCommand.CreateFolder">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ОбъектыКлиентов.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ОбъектыКлиентов.StandardCommand.CreateFolder">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.НаборЗначенийДополнительныхРеквизитов.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПозицииДляОказанияУслугЗаВремяНомера.StandardCommand.CreateFolder">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПозицииДляОказанияУслугЗаВремяНомера.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ЕдиницыИзмерения.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ТаблицыДанных.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.ДополнительныеШтрихКоды.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.Комплектация.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Спецификации.StandardCommand.CreateFolder">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Спецификации.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ГруппыАналогов.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ГруппыАналогов.StandardCommand.CreateFolder">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Подразделения.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПланыДоходовИРасходовДенег.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СпособыДоставки.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СпособыДоставки.StandardCommand.CreateFolder">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
 		<Command name="CommonCommand.ВыборОтчета">
 			<Visibility>
 				<xr:Common>true</xr:Common>
@@ -985,6 +1458,13 @@
 				<xr:Common>false</xr:Common>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.Клиенты.Command.Должники">
@@ -1013,6 +1493,13 @@
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Catalog.Поставщики.Command.НашиДолги">
@@ -1218,7 +1705,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Report.ПереченьНоменклатуры.Command.печатьПереченьНоменклатуры">
+		<Command name="Report.ПереченьНоменклатуры.Command.ПечатьПереченьНоменклатуры">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
@@ -1239,6 +1726,26 @@
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Report.ОтчетРуководителю.Command.ОтчетРуководителю">
@@ -1246,6 +1753,7 @@
 				<xr:Common>true</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="0">
@@ -1253,6 +1761,71 @@
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОстаткиИОбороты.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоВыполнениюРабот.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОстаткиВВидахЦенСНулевыми.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Constant.ПодсистемаИЭИмпортЭкспортАдресФайла.StandardCommand.Open">
@@ -1528,7 +2101,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Constant.ВестиУчетРегионовДляКонтрагентовИПроизводителей.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетРегионов.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
@@ -1549,7 +2122,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="DataProcessor.СменаМеханизмаУчетаЦен.StandardCommand.Open">
+		<Command name="DataProcessor.СменаУсловийУчета.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
@@ -1641,34 +2214,6 @@
 			</Visibility>
 		</Command>
 		<Command name="Constant.ВестиУчетНоменклатурыВРазрезеНоменклатурныхГрупп.StandardCommand.Open">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
-			</Visibility>
-		</Command>
-		<Command name="100">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
-			</Visibility>
-		</Command>
-		<Command name="100">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
-			</Visibility>
-		</Command>
-		<Command name="100">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
-				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
-			</Visibility>
-		</Command>
-		<Command name="100">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
@@ -2032,7 +2577,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="0">
+		<Command name="0:cfcea847-b557-486f-af5f-4ed7ad5fdfbd">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
@@ -2228,6 +2773,13 @@
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 			</Visibility>
 		</Command>
+		<Command name="Document.ТаблицыДанных.Command.ПроизвольныеТаблицыДанных">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">true</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+			</Visibility>
+		</Command>
 		<Command name="Constant.ЭлектроннаяПочтаКопироватьВТекстПисьмаСодержаниеДокумента.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -2265,7 +2817,7 @@
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Constant.ВестиУчетОтдельныхДоговоровСИКонтрагентами.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетОтдельныхДоговоровСКонтрагентами.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
@@ -2336,7 +2888,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Constant.ВключитьКомандыИзмененийИЗаполненияДляТаблицыТовары.StandardCommand.Open">
+		<Command name="Constant.ИспользоватьКомандыИзмененийИЗаполненияДляТаблицыТовары.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="Role.СохранениеДанныхПользователя">false</xr:Value>
@@ -2356,6 +2908,16 @@
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ФормированиеЗаказовПоставщикам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="CommonForm.НастройкиБазыДанных.StandardCommand.Open">
@@ -2388,6 +2950,16 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
 			</Visibility>
 		</Command>
+		<Command name="DataProcessor.ФормированиеЗаказовПоставщикам.Command.ФормированиеЗаказовПоставщикам">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
 		<Command name="DataProcessor.БлокироватьПрограмму.Command.БлокироватьПрограмму">
 			<Visibility>
 				<xr:Common>true</xr:Common>
@@ -2395,7 +2967,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">true</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Constant.ВключитьСерийныйУчетНоменклатуры.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетСерийНоменклатуры.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
@@ -2409,7 +2981,7 @@
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Constant.ПриниматьИОтдаватьДеньгиМожноПрямоВДокументахРасходаИПрихода.StandardCommand.Open">
+		<Command name="Constant.ИспользоватьРегистрациюПриемаИВыдачиДенегПрямоВДокументахРасходаИПрихода.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
@@ -2437,7 +3009,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Constant.УчитыватьДеньгиВНесколькихХранилищах.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетДенегВНесколькихХранилищах.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
@@ -2661,15 +3233,17 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Constant.ВключитьЛичныеНастройкиПользователей.StandardCommand.Open">
+		<Command name="Constant.ИспользоватьЛичныеНастройкиПользователей.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
 				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Constant.РегистрироватьВКачествеЗакупочнойСтрогоЦенуПоставщикаНезависимоОтНаличияДополнительныхРасходов.StandardCommand.Open">
@@ -2679,6 +3253,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
 				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Constant.ТипШтрихКодов.StandardCommand.Open">
@@ -2688,6 +3263,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Constant.ИндивидуальныйТекстВШапкеПечатнойФормыЗаказаКлиента.StandardCommand.Open">
@@ -2697,6 +3273,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Constant.РазрешитьМеханизмРегистрацииРеализацииЗаСчетПериодическойИнвентаризацииСклада.StandardCommand.Open">
@@ -2706,6 +3283,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Constant.ВПриходномДокументеНеЗаполнятьЗакупочнуюЦену.StandardCommand.Open">
@@ -2715,6 +3293,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Constant.ПоказыватьОкноВводаКурсовВалютКаждыйДеньПриЗапускеПрограммы.StandardCommand.Open">
@@ -2724,6 +3303,7 @@
 				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
 				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Constant.ВестиУчетПродажПоСотрудникам.StandardCommand.Open">
@@ -2836,7 +3416,7 @@
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Constant.УчетСредствПредприятия.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетСредствПредприятия.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
@@ -2886,6 +3466,946 @@
 				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
 			</Visibility>
 		</Command>
+		<Command name="Report.ОстаткиИОбороты.Command.ОстаткиИОбороты">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПредлагатьВосстанавливатьПоказателиВаловойПрибылиСразуПриПроведенииПриходногоДокументаЗаднимЧислом.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ОтключитьПланированиеВДокументеВыполненияРабот.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.НеИспользоватьПеремещениеТовараЧерезСкладТоварВПути.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьМеханизмыПечатиНалоговойНакладнойДляУкраины.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПечатьШтрихкода.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.АльтернативныйСпособФормированияШтрихКодаНаЭтикетках.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ДобавитьФункцииПриемаИВыдачиОбъектаРаботДокументуВыполненияРабот.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.СкладДляОбъектовКлиентаПоУмолчанию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПечататьРегламентированныйДокументРасходнойНакладной.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиУчетОказанияУслугЗаВремя.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ДляДокументовДемонстрироватьСамыеСвежиеСертификатыНоменклатуры.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ИмпортЭкспортПакетноеИсполнение.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиУчетСертификатовНоменклатуры.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ИмпортЭкспортПакетноеИсполнение.Command.ОткрытьСписокЗадачОбменаСПОDBF">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ОбработкаДокументовИСправочников.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.МинимальнаяСуммаОказанияУслуг.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.МинимальныйОбъемОказанияУслуг.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиУчетОбъектовКлиентов.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьДополнительныеРеквизитыНоменклатурныхГрупп.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиУчетРазмеровИВесаТоваров.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиУчетОказанияУслугЗаВремяСОпределеннымиПозициямиНомерами.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПочтовыйБланкАдресОтправитель.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьКомандуПечатиПочтовогоБланкаДляКонтрагентов.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПочтовыйБланкИндексОтправитель.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПочтовыйБланкТекстОтправитель.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПочтовыйБланкТекстОценка.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ЛистА5Повернутый.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.НазначатьРазличныеСпособыФормированияЦеныДляНоменклатурныхГрупп.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ЕстьПринтер.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.РазрешеноПриниматьПриРеализацииДеньгиСразуВНесколькихВалютах.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПравовойСтатусПоставщикаПоУмолчанию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьШтрихКодыДляИдентификацииКонтрагентов.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.КоличествоНоменклатурыМожетБытьДробным.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьЕдиницыИзмеренияНоменклатуры.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьДополнительныеУстаревшиеШтрихКодыНоменклатуры.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.НаименованиеОсновнойЕдиницыИзмеренияПоУмолчанию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьКомплектацию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.НеВыводитьНаПечатьДанныеОСкидкеПриПечатиРасходногоДокумента.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьОтдельныеПоляАдресаИТелефонаВЗаказахКлиентов.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПоказыватьСуммуРасходногоДокументаТакжеВВалюте.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.СкладПроизводства.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПоискИЗаменаЗначений.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ОбводитьРамкамиТекстовыеПоляВФормах.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьСистемуУправленияДоступом.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПриОтказеВДоступеВыводитьСообщение.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ЧислоЗнаковПослеЗапятойДляКоличества.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьМеханизмАналоговДляНоменклатуры.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.РамкиТекстовыхПолейВФормахРазличногоЦвета.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьМеханизмыПечатиФормыТОРГ12.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВыводитьВРасходномДокументеЕдиницуИзмеренияОтдельнойКолонкой.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиУчетПодразделений.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.РедактироватьАдресИТелефонКлиентаПрямоВДокументахРеализации.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПечататьЧек.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="100">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.СтрогоеИмяНефискальногоПринтераЧеков.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляВыполненияРабот.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляДвиженияДенег.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляИнвентаризации.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляКомплектаций.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляОказанияУслугЗаВремя.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляПеремещения.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляПоступления.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляРасхода.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляУстановкиЦен.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.УчитыватьИнформациюОДоставкеВДокументахПоступления.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.УчитыватьИнформациюОДоставкеВДокументахРасхода.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВестиУчетПлановДоходоВИРасходов.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.СпособДоставкиПоУмолчанию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьМеханизмОтсрочкиПлатежа.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ЧислоДнейОтсрочкиКлиентамПоУмолчанию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ЧислоДнейОтсрочкиПередПоставщикамиПоУмолчанию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.УдалениеПомеченныхОбъектов.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.НеСпрашиватьПодтверждениеПриВыходеИзПрограммы.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ВидЦенДляРеализацииНаРабочемМестеОператораКассы.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ИспользоватьИнструментРабочееМестоОператораКассы.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ХранилищеДенегДляРабочегоМестаОператораКассы.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ЗачислятьТоварПереданныйКомиссионерамВКачествеПроданногоПриОтчетеКомиссионера.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.КомиссионерыОтчитываютсяПоОтдельнымДокументамПередачиНаКоммиссию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ПроцентКомиссионногоВознагражденияПоУмолчанию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.СрокОтчетаКомиссионераПоОтдельномуДокументуПередачиТоваровПоУмолчаниюВДнях.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.УчетТоваровПереданныхОтНасКомиссионерамДляКомиссионнойТорговли.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ЗапретитьРазукомплектацию.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="aaa4504c-1173-43bd-8455-c85fe25c901f">false</xr:Value>
+				<xr:Value name="7a63c218-e7ae-4cf7-b586-fcd717d7ffdf">false</xr:Value>
+				<xr:Value name="2607f736-0f40-4851-b052-f7037b0f7d7e">false</xr:Value>
+				<xr:Value name="e4d4b26e-ad39-4517-ad8a-fdb099d1e0ca">false</xr:Value>
+				<xr:Value name="ad967a42-ce67-482a-99e0-2b5d70a1107b">false</xr:Value>
+			</Visibility>
+		</Command>
 	</CommandsVisibility>
 	<CommandsOrder>
 		<Command name="AccumulationRegister.ВаловаяПрибыль.StandardCommand.OpenList">
@@ -2897,7 +4417,16 @@
 		<Command name="0">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
+		<Command name="CommonCommand.СоздатьНовыйДокумент">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
 		<Command name="Document.РасходыТовара.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ВыполненияРабот.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ОказанияУслугЗаВремя.Command.УслугиЗаВремя">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Клиенты.StandardCommand.OpenList">
@@ -3011,9 +4540,6 @@
 		<Command name="InformationRegister.ЖурналСобытий.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Document.ПланыПродаж.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
 		<Command name="InformationRegister.ТекстыНаДругихЯзыках.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
@@ -3039,9 +4565,6 @@
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.ПартииПриобретения.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
-		<Command name="Catalog.Договора.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Организации.StandardCommand.OpenList">
@@ -3071,16 +4594,22 @@
 		<Command name="AccumulationRegister.ОплатаПоЗаказам.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
+		<Command name="Document.РасходыТовара.Command.ЗаказыКлиентов">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ПоступленияТовара.Command.ЗаказыПоставщикам">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
 		<Command name="InformationRegister.СостоянияЗаказов.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="0">
+		<Command name="Catalog.ОбъектыКлиентов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.СертификатыГигиеническиеЗаключения.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Изображения.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
-		<Command name="0">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="InformationRegister.ЗначенияНаДругихЯзыках.StandardCommand.OpenList">
@@ -3092,9 +4621,6 @@
 		<Command name="InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="DocumentJournal.ДокументыДвиженийТовара.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
 		<Command name="AccumulationRegister.ПродажиСотрудников.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
@@ -3104,10 +4630,85 @@
 		<Command name="InformationRegister.ОтветственныеЗаСредства.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
+		<Command name="DataProcessor.ПечатьШтрихкода.Command.ПечатьШтрихкода">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ОказанияУслугЗаВремя.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ВидыДокументаСертификатаИлиГигиеническогоЗаключения.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.ЗагрузкаПозицийНомеровПриОказанииУслугЗаВремя.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.НаборЗначенийДополнительныхРеквизитов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Договора.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="AccumulationRegister.ТоварыПереданныеНаКомиссию.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ОтчетКомиссионера.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ПланыПродаж.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ПланыДоходовИРасходовДенег.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ПозицииДляОказанияУслугЗаВремяНомера.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ЕдиницыИзмерения.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ТаблицыДанных.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.ДополнительныеШтрихКоды.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="AccumulationRegister.Комплектации.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ГруппыАналогов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Подразделения.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
 		<Command name="Catalog.СредстваПредприятия.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Document.ВыполнениеРабот.StandardCommand.OpenList">
+		<Command name="Catalog.Спецификации.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.Комплектация.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.СпособыДоставки.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.АссортиментДляРабочегоМестаКассира.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DocumentJournal.ДокументыДвиженийТовара.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DocumentJournal.ПолныйЖурнал.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Enum.ОбъектыДляДополнительныхРеквизитов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="AccumulationRegister.РасчетыСОтсрочкой.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="AccumulationRegister.РасчетыСПоставщикамиСОтсрочкой.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Document.КорректировкиИРегистрацияОстатков.StandardCommand.Create">
@@ -3302,7 +4903,82 @@
 		<Command name="Catalog.СредстваПредприятия.StandardCommand.Create">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 		</Command>
-		<Command name="Document.ВыполнениеРабот.StandardCommand.Create">
+		<Command name="Document.ВыполненияРабот.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Document.РасходыТовара.Command.СоздатьЗаказКлиента">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Document.ОказанияУслугЗаВремя.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.ВидыДокументаСертификатаИлиГигиеническогоЗаключения.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.СертификатыГигиеническиеЗаключения.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.СертификатыГигиеническиеЗаключения.StandardCommand.CreateFolder">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.ОбъектыКлиентов.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.ОбъектыКлиентов.StandardCommand.CreateFolder">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.НаборЗначенийДополнительныхРеквизитов.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.ПозицииДляОказанияУслугЗаВремяНомера.StandardCommand.CreateFolder">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.ПозицииДляОказанияУслугЗаВремяНомера.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.ЕдиницыИзмерения.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Document.ТаблицыДанных.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.ДополнительныеШтрихКоды.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Document.Комплектация.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.Спецификации.StandardCommand.CreateFolder">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.Спецификации.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.ГруппыАналогов.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.ГруппыАналогов.StandardCommand.CreateFolder">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.Подразделения.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Document.ПланыДоходовИРасходовДенег.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.СпособыДоставки.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.СпособыДоставки.StandardCommand.CreateFolder">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.АссортиментДляРабочегоМестаКассира.StandardCommand.CreateFolder">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.АссортиментДляРабочегоМестаКассира.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Document.ОтчетКомиссионера.StandardCommand.Create">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 		</Command>
 		<Command name="CommonCommand.ВыборОтчета">
@@ -3312,6 +4988,9 @@
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.РасчетыСКлиентами.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Catalog.Клиенты.Command.Должники">
@@ -3324,6 +5003,9 @@
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.РасчетыСПоставщиками.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Catalog.Поставщики.Command.НашиДолги">
@@ -3413,7 +5095,13 @@
 		<Command name="0">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.ПереченьНоменклатуры.Command.печатьПереченьНоменклатуры">
+		<Command name="Report.ПереченьНоменклатуры.Command.ПечатьПереченьНоменклатуры">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="0">
@@ -3423,6 +5111,27 @@
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.ОтчетРуководителю.Command.ОтчетРуководителю">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОстаткиИОбороты.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоВыполнениюРабот.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОстаткиВВидахЦенСНулевыми.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="0">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="0">
@@ -3545,7 +5254,7 @@
 		<Command name="Constant.РегионПоУмолчанию.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="Constant.ВестиУчетРегионовДляКонтрагентовИПроизводителей.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетРегионов.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="0">
@@ -3554,7 +5263,7 @@
 		<Command name="Constant.СкладПоУмолчанию.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="DataProcessor.СменаМеханизмаУчетаЦен.StandardCommand.Open">
+		<Command name="DataProcessor.СменаУсловийУчета.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Constant.СортироватьНоменклатуруПоНаименованиюПередЗаписьюДокументов.StandardCommand.Open">
@@ -3594,18 +5303,6 @@
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Constant.ВестиУчетНоменклатурыВРазрезеНоменклатурныхГрупп.StandardCommand.Open">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
-		</Command>
-		<Command name="100">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
-		</Command>
-		<Command name="100">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
-		</Command>
-		<Command name="100">
-			<CommandGroup>ActionsPanelTools</CommandGroup>
-		</Command>
-		<Command name="100">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="100">
@@ -3761,7 +5458,7 @@
 		<Command name="Document.УстановкиЦен.Command.ДокументыУстановкиЦен">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="0">
+		<Command name="0:cfcea847-b557-486f-af5f-4ed7ad5fdfbd">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Document.КорректировкиИРегистрацияОстатков.Command.Корректировки">
@@ -3845,6 +5542,9 @@
 		<Command name="Constant.ДемонстрироватьИнформационнуюКолонкуОстатокТовараСУчетомДокументаВНепроведенныхДокументах.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
+		<Command name="Document.ТаблицыДанных.Command.ПроизвольныеТаблицыДанных">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
 		<Command name="Constant.ЭлектроннаяПочтаКопироватьВТекстПисьмаСодержаниеДокумента.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
@@ -3860,7 +5560,7 @@
 		<Command name="Constant.ПроверятьНаличиеНовойВерсииКонфигурацииПриЗапуске.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="Constant.ВестиУчетОтдельныхДоговоровСИКонтрагентами.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетОтдельныхДоговоровСКонтрагентами.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Constant.ВестиУчетСобственныхЮридическихЛиц.StandardCommand.Open">
@@ -3890,13 +5590,16 @@
 		<Command name="Constant.ИспользоватьМеханизмЗаметокИНапоминаний.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="Constant.ВключитьКомандыИзмененийИЗаполненияДляТаблицыТовары.StandardCommand.Open">
+		<Command name="Constant.ИспользоватьКомандыИзмененийИЗаполненияДляТаблицыТовары.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Constant.НеОтправлятьСтатистикуАвторуПрограммыПриПервомЗапускеИОбновлении.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="DataProcessor.БлокироватьПрограмму.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ФормированиеЗаказовПоставщикам.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="CommonForm.НастройкиБазыДанных.StandardCommand.Open">
@@ -3911,16 +5614,19 @@
 		<Command name="InformationRegister.НастройкиПользователей.Command.ЛичныеНастройки">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
+		<Command name="DataProcessor.ФормированиеЗаказовПоставщикам.Command.ФормированиеЗаказовПоставщикам">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
 		<Command name="DataProcessor.БлокироватьПрограмму.Command.БлокироватьПрограмму">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="Constant.ВключитьСерийныйУчетНоменклатуры.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетСерийНоменклатуры.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Constant.ШтрихКодомМожетВыступатьСерияИлиКодПродукта.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="Constant.ПриниматьИОтдаватьДеньгиМожноПрямоВДокументахРасходаИПрихода.StandardCommand.Open">
+		<Command name="Constant.ИспользоватьРегистрациюПриемаИВыдачиДенегПрямоВДокументахРасходаИПрихода.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="0">
@@ -3932,7 +5638,7 @@
 		<Command name="Constant.ОрганизацияПоУмолчанию.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="Constant.УчитыватьДеньгиВНесколькихХранилищах.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетДенегВНесколькихХранилищах.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Constant.ОсновноеХранилищеДенег.StandardCommand.Open">
@@ -4028,7 +5734,7 @@
 		<Command name="Constant.НеПоказыватьКомандуДобавленияНоменклатурыСКоличеством.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="Constant.ВключитьЛичныеНастройкиПользователей.StandardCommand.Open">
+		<Command name="Constant.ИспользоватьЛичныеНастройкиПользователей.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Constant.РегистрироватьВКачествеЗакупочнойСтрогоЦенуПоставщикаНезависимоОтНаличияДополнительныхРасходов.StandardCommand.Open">
@@ -4082,7 +5788,7 @@
 		<Command name="Constant.ПредставлятьСерииНоменклатурыВДокументахОтдельнымОкном.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="Constant.УчетСредствПредприятия.StandardCommand.Open">
+		<Command name="Constant.ВестиУчетСредствПредприятия.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Constant.НеРегистрироватьЦеныЗаСчетДокументовПоступления.StandardCommand.Open">
@@ -4095,6 +5801,288 @@
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="Constant.ИспользоватьДокументыВыполненияРабот.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Report.ОстаткиИОбороты.Command.ОстаткиИОбороты">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПредлагатьВосстанавливатьПоказателиВаловойПрибылиСразуПриПроведенииПриходногоДокументаЗаднимЧислом.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ОтключитьПланированиеВДокументеВыполненияРабот.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.НеИспользоватьПеремещениеТовараЧерезСкладТоварВПути.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьМеханизмыПечатиНалоговойНакладнойДляУкраины.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПечатьШтрихкода.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.АльтернативныйСпособФормированияШтрихКодаНаЭтикетках.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ДобавитьФункцииПриемаИВыдачиОбъектаРаботДокументуВыполненияРабот.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.СкладДляОбъектовКлиентаПоУмолчанию.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПечататьРегламентированныйДокументРасходнойНакладной.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиУчетОказанияУслугЗаВремя.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ДляДокументовДемонстрироватьСамыеСвежиеСертификатыНоменклатуры.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ИмпортЭкспортПакетноеИсполнение.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиУчетСертификатовНоменклатуры.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ИмпортЭкспортПакетноеИсполнение.Command.ОткрытьСписокЗадачОбменаСПОDBF">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ОбработкаДокументовИСправочников.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.МинимальнаяСуммаОказанияУслуг.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.МинимальныйОбъемОказанияУслуг.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиУчетОбъектовКлиентов.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьДополнительныеРеквизитыНоменклатурныхГрупп.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиУчетРазмеровИВесаТоваров.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиУчетОказанияУслугЗаВремяСОпределеннымиПозициямиНомерами.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПочтовыйБланкАдресОтправитель.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьКомандуПечатиПочтовогоБланкаДляКонтрагентов.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПочтовыйБланкИндексОтправитель.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПочтовыйБланкТекстОтправитель.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПочтовыйБланкТекстОценка.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ЛистА5Повернутый.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.НазначатьРазличныеСпособыФормированияЦеныДляНоменклатурныхГрупп.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ЕстьПринтер.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.РазрешеноПриниматьПриРеализацииДеньгиСразуВНесколькихВалютах.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПравовойСтатусПоставщикаПоУмолчанию.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьШтрихКодыДляИдентификацииКонтрагентов.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.КоличествоНоменклатурыМожетБытьДробным.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьЕдиницыИзмеренияНоменклатуры.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьДополнительныеУстаревшиеШтрихКодыНоменклатуры.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.НаименованиеОсновнойЕдиницыИзмеренияПоУмолчанию.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьКомплектацию.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.НеВыводитьНаПечатьДанныеОСкидкеПриПечатиРасходногоДокумента.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьОтдельныеПоляАдресаИТелефонаВЗаказахКлиентов.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПоказыватьСуммуРасходногоДокументаТакжеВВалюте.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.СкладПроизводства.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПоискИЗаменаЗначений.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ОбводитьРамкамиТекстовыеПоляВФормах.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьСистемуУправленияДоступом.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПриОтказеВДоступеВыводитьСообщение.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="0">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ЧислоЗнаковПослеЗапятойДляКоличества.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьМеханизмАналоговДляНоменклатуры.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.РамкиТекстовыхПолейВФормахРазличногоЦвета.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьМеханизмыПечатиФормыТОРГ12.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВыводитьВРасходномДокументеЕдиницуИзмеренияОтдельнойКолонкой.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиУчетПодразделений.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.РедактироватьАдресИТелефонКлиентаПрямоВДокументахРеализации.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПечататьЧек.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="100">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.СтрогоеИмяНефискальногоПринтераЧеков.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляВыполненияРабот.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляДвиженияДенег.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляИнвентаризации.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляКомплектаций.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляОказанияУслугЗаВремя.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляПеремещения.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляПоступления.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляРасхода.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиДополнительнуюИнформациюДляУстановкиЦен.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.УчитыватьИнформациюОДоставкеВДокументахПоступления.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.УчитыватьИнформациюОДоставкеВДокументахРасхода.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВестиУчетПлановДоходоВИРасходов.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.СпособДоставкиПоУмолчанию.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьМеханизмОтсрочкиПлатежа.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ЧислоДнейОтсрочкиКлиентамПоУмолчанию.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ЧислоДнейОтсрочкиПередПоставщикамиПоУмолчанию.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.УдалениеПомеченныхОбъектов.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.НеСпрашиватьПодтверждениеПриВыходеИзПрограммы.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ВидЦенДляРеализацииНаРабочемМестеОператораКассы.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ИспользоватьИнструментРабочееМестоОператораКассы.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ХранилищеДенегДляРабочегоМестаОператораКассы.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ЗачислятьТоварПереданныйКомиссионерамВКачествеПроданногоПриОтчетеКомиссионера.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.КомиссионерыОтчитываютсяПоОтдельнымДокументамПередачиНаКоммиссию.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ПроцентКомиссионногоВознагражденияПоУмолчанию.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.СрокОтчетаКомиссионераПоОтдельномуДокументуПередачиТоваровПоУмолчаниюВДнях.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.УчетТоваровПереданныхОтНасКомиссионерамДляКомиссионнойТорговли.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Constant.ЗапретитьРазукомплектацию.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 	</CommandsOrder>

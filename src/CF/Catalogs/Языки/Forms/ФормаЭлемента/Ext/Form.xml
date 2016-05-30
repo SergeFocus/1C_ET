@@ -5,7 +5,6 @@
 	<ScalingMode>Compact</ScalingMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
 		<ChildItems>
 			<Button name="ФормаЗаписатьИЗакрыть" id="17">
 				<Type>CommandBarButton</Type>
@@ -354,7 +353,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Язык</v8:content>
+							<v8:content>Язык мира</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
@@ -397,12 +396,13 @@
 							<v8:content>Тіл</v8:content>
 						</v8:item>
 					</Title>
-					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<TitleLocation>Top</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<Width>38</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<Font ref="style:LargeTextFont" kind="StyleItem"/>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
@@ -417,59 +417,6 @@
 					<CommandName>Form.Command.ПредставлениеНаДругихЯзыках</CommandName>
 					<ExtendedTooltip name="ПредставлениеНаДругихЯзыкахРасширеннаяПодсказка" id="16"/>
 				</Button>
-				<InputField name="Код" id="9">
-					<DataPath>Объект.Code</DataPath>
-					<SkipOnInput>true</SkipOnInput>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Code</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Code</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Kod</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Cod</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>รหัส</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>码</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-					</Title>
-					<TitleLocation>Top</TitleLocation>
-					<ContextMenu name="КодКонтекстноеМеню" id="10"/>
-					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="11"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<Table name="НаименованияНаДругихЯзыках" id="29">
@@ -540,9 +487,63 @@
 				</InputField>
 			</ChildItems>
 		</Table>
+		<InputField name="Код" id="9">
+			<DataPath>Объект.Code</DataPath>
+			<SkipOnInput>true</SkipOnInput>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Code</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Code</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Kod</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Cod</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>รหัส</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>码</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+			</Title>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<ContextMenu name="КодКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="11"/>
+		</InputField>
 		<InputField name="Комментарий" id="4">
 			<DataPath>Объект.Комментарий</DataPath>
-			<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="6"/>
 		</InputField>
@@ -1043,6 +1044,14 @@
 			</Item>
 			<Item>
 				<Command>InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenByValue.ОбъектВладелец</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>

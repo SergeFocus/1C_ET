@@ -14,7 +14,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать Регион</v8:content>
+						<v8:content>Добавить Регион</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -88,7 +88,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -314,6 +314,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -426,11 +427,11 @@
 					</SearchControlAddition>
 					<ChildItems>
 						<LabelField name="ДеревоНаименование" id="7">
-							<DataPath>Дерево.Description</DataPath>
+							<DataPath>Дерево.Ref</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группы</v8:content>
+									<v8:content>Группы регионов</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>BG</v8:lang>
@@ -540,12 +541,12 @@
 					</SearchControlAddition>
 					<ChildItems>
 						<LabelField name="Наименование" id="14">
-							<DataPath>Список.Description</DataPath>
+							<DataPath>Список.Ref</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Наименование</v8:content>
+									<v8:content>Наименование регионов</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>BG</v8:lang>

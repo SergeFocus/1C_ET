@@ -51,7 +51,7 @@
 	<AutoTitle>false</AutoTitle>
 	<ScalingMode>Normal</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
+		<HorizontalAlign>Right</HorizontalAlign>
 		<ChildItems>
 			<Button name="ФормаЗакрыть" id="95">
 				<Type>CommandBarButton</Type>
@@ -191,6 +191,7 @@
 						<v8:content>形成一批地球的</v8:content>
 					</v8:item>
 				</ToolTip>
+				<HorizontalStretch>true</HorizontalStretch>
 				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
 				<ExtendedTooltip name="ФормаГруппаГлобРасширеннаяПодсказка" id="140"/>
 			</ButtonGroup>
@@ -457,6 +458,11 @@
 							<CommandName>Report.ТоварыОстаткиИОбороты.StandardCommand.Open</CommandName>
 							<ExtendedTooltip name="ОтчетТоварыОстаткиИОборотыОткрытьРасширеннаяПодсказка" id="38"/>
 						</Button>
+						<Button name="ОтчетОстаткиИОборотыОстаткиИОбороты" id="141">
+							<Type>UsualButton</Type>
+							<CommandName>Report.ОстаткиИОбороты.Command.ОстаткиИОбороты</CommandName>
+							<ExtendedTooltip name="ОтчетОстаткиИОборотыОстаткиИОборотыРасширеннаяПодсказка" id="142"/>
+						</Button>
 						<Button name="ОтчетОстаткиВВидахЦенОткрыть" id="99">
 							<Type>UsualButton</Type>
 							<Representation>PictureAndText</Representation>
@@ -466,6 +472,23 @@
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ExtendedTooltip name="ОтчетОстаткиВВидахЦенОткрытьРасширеннаяПодсказка" id="100"/>
+						</Button>
+						<Button name="ОтчетОстаткиВВидахЦенСНулевымиОткрыть" id="145">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>Report.ОстаткиВВидахЦенСНулевыми.StandardCommand.Open</CommandName>
+							<ExtendedTooltip name="ОтчетОстаткиВВидахЦенСНулевымиОткрытьРасширеннаяПодсказка" id="146"/>
+						</Button>
+						<Button name="ОтчетОтчетПоКомплектацииОткрыть" id="153">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>0</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Комплектация</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОтчетОтчетПоКомплектацииОткрытьРасширеннаяПодсказка" id="154"/>
 						</Button>
 						<Button name="СправочникНоменклатураОткрытьСписок" id="70">
 							<Type>UsualButton</Type>
@@ -634,6 +657,26 @@
 							<CommandName>Report.ОтчетПоНаборам.Command.ПродажиНаборов</CommandName>
 							<ExtendedTooltip name="ОтчетОтчетПоНаборамПродажиНаборовРасширеннаяПодсказка" id="98"/>
 						</Button>
+						<Button name="ДокументВыполненияРаботОткрытьСписок" id="143">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Report.ОтчетПоВыполнениюРабот.StandardCommand.Open</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ВыполненияРабот</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ДокументВыполненияРаботОткрытьСписокРасширеннаяПодсказка" id="144"/>
+						</Button>
+						<Button name="ОтчетОказаниеУслугПоПозициямНомерамОткрыть1" id="151">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>0</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.УслугиЗаВремя</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОтчетОказаниеУслугПоПозициямНомерамОткрыть1РасширеннаяПодсказка" id="152"/>
+						</Button>
 						<Button name="ОтчетДиаграммаПродажОткрыть" id="89">
 							<Type>UsualButton</Type>
 							<Representation>PictureAndText</Representation>
@@ -658,9 +701,34 @@
 							<ContextMenu name="Декорация4КонтекстноеМеню" id="73"/>
 							<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="74"/>
 						</LabelDecoration>
-						<Button name="ОтчетПоПродажамСотрудниковОткрыть" id="121">
+						<Button name="ОтчетВедомостьПоДвижениюТоваровУКомиссионеровОткрыть" id="166">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>0</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ПередачаНаКомиссию</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОтчетВедомостьПоДвижениюТоваровУКомиссионеровОткрытьРасширеннаяПодсказка" id="167"/>
+						</Button>
+						<Button name="ОтчетТоварыУКомиссионеровОстаткиИОборотыОткрыть" id="168">
 							<Type>UsualButton</Type>
 							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ОтчетТоварыУКомиссионеровОстаткиИОборотыОткрытьРасширеннаяПодсказка" id="169"/>
+						</Button>
+						<LabelDecoration name="Декорация10" id="163">
+							<ContextMenu name="Декорация10КонтекстноеМеню" id="164"/>
+							<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="165"/>
+						</LabelDecoration>
+						<Button name="ОтчетПоПродажамСотрудниковОткрыть" id="121">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>0</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Сотрудники</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
 							<ExtendedTooltip name="ОтчетПоПродажамСотрудниковОткрытьРасширеннаяПодсказка" id="122"/>
 						</Button>
 						<Button name="ОтчетПланФактныйАнализПродажОткрыть" id="45">
@@ -884,6 +952,17 @@
 							<CommandName>Report.ДеньгиОстаткиИОборотыВВалюте.StandardCommand.Open</CommandName>
 							<ExtendedTooltip name="ОтчетДеньгиОстаткиИОборотыВВалютеОткрытьРасширеннаяПодсказка" id="58"/>
 						</Button>
+						<Button name="ОтчетПланФактныйАнализДоходовИРасходовОткрыть" id="157">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>0</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ПланыДоходовИРасходов</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОтчетПланФактныйАнализДоходовИРасходовОткрытьРасширеннаяПодсказка" id="158"/>
+						</Button>
 					</ChildItems>
 				</Page>
 				<Page name="ПоВзаиморасчетамСКлиентами" id="7">
@@ -995,6 +1074,17 @@
 							<CommandName>Report.ВедомостьПоВзаиморасчетамСКлиентами.StandardCommand.Open</CommandName>
 							<ExtendedTooltip name="ОтчетВедомостьПоВзаиморасчетамСКлиентамиОткрытьРасширеннаяПодсказка" id="14"/>
 						</Button>
+						<Button name="РегистрНакопленияРасчетыСОтсрочкойОткрытьСписок" id="159">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>AccumulationRegister.РасчетыСОтсрочкой.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Задолженность</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="РегистрНакопленияРасчетыСОтсрочкойОткрытьСписокРасширеннаяПодсказка" id="160"/>
+						</Button>
 						<Button name="ОтчетРасчетыСКлиентамиОткрыть" id="15">
 							<Type>UsualButton</Type>
 							<CommandName>Report.РасчетыСКлиентами.StandardCommand.Open</CommandName>
@@ -1028,6 +1118,17 @@
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ExtendedTooltip name="ОтчетПоЗаказамКлиентовОткрытьРасширеннаяПодсказка" id="110"/>
+						</Button>
+						<Button name="ОтчетОказаниеУслугПоПозициямНомерамОткрыть" id="149">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>0</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.УслугиЗаВремя</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОтчетОказаниеУслугПоПозициямНомерамОткрытьРасширеннаяПодсказка" id="150"/>
 						</Button>
 					</ChildItems>
 				</Page>
@@ -1139,6 +1240,17 @@
 							<Type>UsualButton</Type>
 							<CommandName>Report.ВедомостьПоВзаиморасчетамСПоставщиками.StandardCommand.Open</CommandName>
 							<ExtendedTooltip name="ОтчетВедомостьПоВзаиморасчетамСПоставщикамиОткрытьРасширеннаяПодсказка" id="22"/>
+						</Button>
+						<Button name="РегистрНакопленияРасчетыСПоставщикамиСОтсрочкойОткрытьСписок" id="161">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>AccumulationRegister.РасчетыСПоставщикамиСОтсрочкой.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Задолженность</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="РегистрНакопленияРасчетыСПоставщикамиСОтсрочкойОткрытьСписокРасширеннаяПодсказка" id="162"/>
 						</Button>
 						<Button name="ОтчетРасчетыСПоставщикамиОткрыть" id="23">
 							<Type>UsualButton</Type>
@@ -1435,6 +1547,17 @@
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ExtendedTooltip name="ОтчетДвиженияДокументаОткрытьРасширеннаяПодсказка" id="104"/>
+						</Button>
+						<Button name="ОтчетОтчетПоУсловиямДоступаОткрыть" id="155">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>0</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ЗнакSTOP</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОтчетОтчетПоУсловиямДоступаОткрытьРасширеннаяПодсказка" id="156"/>
 						</Button>
 						<LabelDecoration name="Декорация9" id="136">
 							<ContextMenu name="Декорация9КонтекстноеМеню" id="137"/>

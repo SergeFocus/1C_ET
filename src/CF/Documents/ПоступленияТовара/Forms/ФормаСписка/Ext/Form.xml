@@ -347,6 +347,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -443,29 +444,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="92">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="98">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="93"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="94"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="99"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="100"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="95">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="101">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="96"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="97"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="102"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="103"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="98">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="104">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="99"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="100"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="105"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="106"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Дата" id="7">
@@ -529,7 +530,32 @@
 				</LabelField>
 				<LabelField name="ВидДокумента" id="43">
 					<DataPath>Список.ВидДокумента</DataPath>
-					<Width>14</Width>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Тип на документи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вид документів</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Type of documents</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Rodzaj dokumentów</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Entfernen</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="ВидДокументаКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="45"/>
 				</LabelField>
@@ -545,7 +571,7 @@
 				</LabelField>
 				<LabelField name="ТовараВКоличестве" id="25">
 					<DataPath>Список.ТовараВКоличестве</DataPath>
-					<Width>10</Width>
+					<Width>12</Width>
 					<ContextMenu name="ТовараВКоличествеКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ТовараВКоличествеРасширеннаяПодсказка" id="27"/>
 				</LabelField>
@@ -671,15 +697,20 @@
 					<ContextMenu name="ВалютаКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="42"/>
 				</LabelField>
-				<LabelField name="Заказ" id="74">
-					<DataPath>Список.ЗаказПоставщику</DataPath>
-					<ContextMenu name="ЗаказКонтекстноеМеню" id="75"/>
-					<ExtendedTooltip name="ЗаказРасширеннаяПодсказка" id="76"/>
-				</LabelField>
 				<LabelField name="ЗаказПокупателя" id="77">
 					<DataPath>Список.ЗаказКлиента</DataPath>
 					<ContextMenu name="ЗаказПокупателяКонтекстноеМеню" id="78"/>
 					<ExtendedTooltip name="ЗаказПокупателяРасширеннаяПодсказка" id="79"/>
+				</LabelField>
+				<LabelField name="Договор" id="95">
+					<DataPath>Список.Договор</DataPath>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="97"/>
+				</LabelField>
+				<LabelField name="Организация" id="92">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="94"/>
 				</LabelField>
 				<LabelField name="Сотрудник" id="89">
 					<DataPath>Список.Сотрудник</DataPath>
@@ -759,30 +790,13 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<Columns>
-				<AdditionalColumns table="Список.ТовараВКоличестве">
-					<Column name="Реквизит1" id="1">
-						<Type>
-							<v8:Type>xs:string</v8:Type>
-							<v8:StringQualifiers>
-								<v8:Length>0</v8:Length>
-								<v8:AllowedLength>Variable</v8:AllowedLength>
-							</v8:StringQualifiers>
-						</Type>
-					</Column>
-				</AdditionalColumns>
-			</Columns>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
-	ДокументПоступленияТовара.Ссылка,
-	ДокументПоступленияТовара.ПометкаУдаления,
 	ДокументПоступленияТовара.Номер,
 	ДокументПоступленияТовара.Дата,
-	ДокументПоступленияТовара.Проведен,
 	ДокументПоступленияТовара.Склад,
-	ДокументПоступленияТовара.УстанавливатьЦенуУказаннуюВТаблицеВКачествеЦеныДляРеализацииТовара,
 	ДокументПоступленияТовара.ВыбылоДенег,
 	ДокументПоступленияТовара.КлиентПоставщик,
 	ДокументПоступленияТовара.ВидЦен,
@@ -795,18 +809,13 @@
 	ДокументПоступленияТовара.ПартияПриобретения,
 	ДокументПоступленияТовара.Организация,
 	ДокументПоступленияТовара.Договор,
-	ДокументПоступленияТовара.ХранилищеДенег,
 	ДокументПоступленияТовара.ЗаказКлиента,
-	ДокументПоступленияТовара.ЭтоЗаказ,
-	ДокументПоступленияТовара.ЗаказСогласован,
-	ДокументПоступленияТовара.ЗаказОплачен,
-	ДокументПоступленияТовара.ЗаказДатаПлана,
-	ДокументПоступленияТовара.ЗаказДатаФакта,
-	ДокументПоступленияТовара.ЗаказПоставщику,
 	ДокументПоступленияТовара.Ответственный,
 	ДокументПоступленияТовара.ДатаСоздания,
 	ДокументПоступленияТовара.ДатаРедакции,
-	ДокументПоступленияТовара.Сотрудник
+	ДокументПоступленияТовара.Сотрудник,
+	ДокументПоступленияТовара.ТоварОтправлен,
+	ДокументПоступленияТовара.ДатаОтсрочки
 ИЗ
 	Документ.ПоступленияТовара КАК ДокументПоступленияТовара
 ГДЕ

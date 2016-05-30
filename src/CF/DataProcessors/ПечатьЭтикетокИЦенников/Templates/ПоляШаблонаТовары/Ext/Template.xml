@@ -1,0 +1,973 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Упаковка</dataPath>
+			<field>Упаковка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Штрихкод</dataPath>
+			<field>Штрихкод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокНаСкладе</dataPath>
+			<field>ОстатокНаСкладе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток на складе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Кількість цінників для друку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Wagi w magazynie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Balance in stock</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Баланс на склад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Feldvorlage Speicherzelle</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЦенниковДляПечати</dataPath>
+			<field>КоличествоЦенниковДляПечати</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ценников для печати</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Кількість етикеток для друку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Liczba metki do druku</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Number of price tags for printing</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Брой на етикетите с цените за печат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Balancieren auf Lager</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЭтикетокДляПечати</dataPath>
+			<field>КоличествоЭтикетокДляПечати</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество этикеток для печати</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Шаблон цінника для друку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Liczba etykiet do druku</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Number of labels to print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Брой на етикетите, за да отпечатате</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Anzahl der Preisschilder für den Druck</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШаблонЦенникаДляПечати</dataPath>
+			<field>ШаблонЦенникаДляПечати</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон ценника для печати</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Шаблон етикетки для друку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Szablon do druku metka</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Template price tag for printing</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Template цена маркер за печат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Anzahl der Etiketten, Druck</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШаблонЭтикеткиДляПечати</dataPath>
+			<field>ШаблонЭтикеткиДляПечати</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон этикетки для печати</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вид ціни</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Szablon etykiety do druku</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Label template for printing</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Шаблон Label за печат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Template Preisschild für Druck</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЦены</dataPath>
+			<field>ВидЦены</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Організація</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Zobacz ceny</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>View prices</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Виж цените</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Label-Vorlage für den Druck</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Поточний час</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Organizacja</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Organization</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Preise anzeigen</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущееВремя</dataPath>
+			<field>ТекущееВремя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее время</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Поточний користувач</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Aktualny czas</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Present time</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Текущо време</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Organisation</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПользователь</dataPath>
+			<field>ТекущийПользователь</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Упаковка (од. ізм.)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Bieżący użytkownik</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Current user</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Текущия потребител</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Gegenwart</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоследнегоИзмененияЦены</dataPath>
+			<field>ДатаПоследнегоИзмененияЦены</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковкаЕдиницаИзмерения</dataPath>
+			<field>УпаковкаЕдиницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковка (Ед. изм.)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вид ціни</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Opakowanie (unit.)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Packaging (Unit.)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Опаковка (Unit.)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Aktueller Benutzer</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодПодключаемогоОборудованияOffline</dataPath>
+			<field>КодПодключаемогоОборудованияOffline</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Весовой</dataPath>
+			<field>Весовой</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СегментНоменклатуры</dataPath>
+			<field>СегментНоменклатуры</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Сегменты.Номенклатура,
+	Сегменты.Характеристика,
+	ИСТИНА КАК ИспользуетсяОтборПоСегментуНоменклатуры
+ПОМЕСТИТЬ ОтборПоСегментуНоменклатуры
+ИЗ
+	РегистрСведений.НоменклатураСегмента КАК Сегменты
+{ГДЕ
+	Сегменты.Сегмент.* КАК СегментНоменклатуры,
+	Сегменты.Номенклатура.* КАК Номенклатура,
+	Сегменты.Характеристика.* КАК Характеристика}
+
+ИНДЕКСИРОВАТЬ ПО
+	Сегменты.Номенклатура,
+	Сегменты.Характеристика,
+	ИспользуетсяОтборПоСегментуНоменклатуры
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИсходныеДанные.Номенклатура КАК Номенклатура,
+	ИсходныеДанные.Характеристика КАК Характеристика,
+	ИсходныеДанные.Упаковка КАК Упаковка,
+	ИсходныеДанные.Количество КАК Количество,
+	ИсходныеДанные.Порядок КАК Порядок,
+	"КоличествоЦенников" КАК КоличествоЦенниковДляПечати,
+	"КоличествоЭтикеток" КАК КоличествоЭтикетокДляПечати,
+	"ШаблонЭтикетки" КАК ШаблонЭтикеткиДляПечати,
+	"ШаблонЦенника" КАК ШаблонЦенникаДляПечати
+ПОМЕСТИТЬ ИсходныеДанные
+ИЗ
+	(ВЫБРАТЬ
+		ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка) КАК Номенклатура,
+		ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка) КАК Характеристика,
+		ЗНАЧЕНИЕ(Справочник.УпаковкиНоменклатуры.ПустаяСсылка) КАК Упаковка,
+		0 КАК Порядок,
+		0 КАК Количество) КАК ИсходныеДанные
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Характеристика,
+	Упаковка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Штрихкоды.Номенклатура КАК Номенклатура,
+	Штрихкоды.Характеристика КАК Характеристика,
+	Штрихкоды.Упаковка КАК Упаковка,
+	МАКСИМУМ(Штрихкоды.Штрихкод) КАК Штрихкод
+ПОМЕСТИТЬ ШтрихкодыНоменклатуры
+ИЗ
+	РегистрСведений.ШтрихкодыНоменклатуры КАК Штрихкоды
+ГДЕ
+	(Штрихкоды.Номенклатура, Штрихкоды.Характеристика, Штрихкоды.Упаковка) В
+			(ВЫБРАТЬ
+				ИсходныеДанные.Номенклатура,
+				ИсходныеДанные.Характеристика,
+				ИсходныеДанные.Упаковка
+			ИЗ
+				ИсходныеДанные)
+{ГДЕ
+	Штрихкоды.Номенклатура.*,
+	Штрихкоды.Характеристика.*,
+	Штрихкоды.Упаковка.*,
+	((Штрихкоды.Номенклатура, Штрихкоды.Номенклатура) В
+			(ВЫБРАТЬ
+				ОтборПоСегментуНоменклатуры.Номенклатура,
+				ОтборПоСегментуНоменклатуры.Характеристика
+			ИЗ
+				ОтборПоСегментуНоменклатуры
+			ГДЕ
+				ОтборПоСегментуНоменклатуры.ИспользуетсяОтборПоСегментуНоменклатуры = &amp;ИспользуетсяОтборПоСегментуНоменклатуры))}
+
+СГРУППИРОВАТЬ ПО
+	Штрихкоды.Номенклатура,
+	Штрихкоды.Характеристика,
+	Штрихкоды.Упаковка
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Характеристика,
+	Упаковка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИсходныеДанныеПоследнийЗапрос.Порядок КАК Порядок,
+	ИсходныеДанныеПоследнийЗапрос.Номенклатура КАК Номенклатура,
+	ИсходныеДанныеПоследнийЗапрос.Характеристика КАК Характеристика,
+	ИсходныеДанныеПоследнийЗапрос.Упаковка КАК Упаковка,
+	ВЫБОР
+		КОГДА ИсходныеДанныеПоследнийЗапрос.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиНоменклатуры.ПустаяСсылка)
+			ТОГДА ИсходныеДанныеПоследнийЗапрос.Номенклатура.ЕдиницаИзмерения
+		ИНАЧЕ ИсходныеДанныеПоследнийЗапрос.Упаковка
+	КОНЕЦ КАК УпаковкаЕдиницаИзмерения,
+	ВЫБОР
+		КОГДА ИсходныеДанныеПоследнийЗапрос.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиНоменклатуры.ПустаяСсылка)
+			ТОГДА ВЫБОР
+					КОГДА ИсходныеДанныеПоследнийЗапрос.Номенклатура.ЕдиницаИзмерения.ТипЕдиницыИзмерения = ЗНАЧЕНИЕ(Перечисление.ТипыЕдиницИзмерения.Весовая)
+						ТОГДА ИСТИНА
+					ИНАЧЕ ЛОЖЬ
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ИсходныеДанныеПоследнийЗапрос.Упаковка.ЕдиницаИзмерения.ТипЕдиницыИзмерения = ЗНАЧЕНИЕ(Перечисление.ТипыЕдиницИзмерения.Весовая)
+					ТОГДА ИСТИНА
+				ИНАЧЕ ЛОЖЬ
+			КОНЕЦ
+	КОНЕЦ КАК Весовой,
+	МАКСИМУМ(ИсходныеДанныеПоследнийЗапрос.Количество) КАК Количество,
+	МАКСИМУМ(ИсходныеДанныеПоследнийЗапрос.КоличествоЦенниковДляПечати) КАК КоличествоЦенниковДляПечати,
+	МАКСИМУМ(ИсходныеДанныеПоследнийЗапрос.КоличествоЭтикетокДляПечати) КАК КоличествоЭтикетокДляПечати,
+	МАКСИМУМ(ИсходныеДанныеПоследнийЗапрос.ШаблонЭтикеткиДляПечати) КАК ШаблонЭтикеткиДляПечати,
+	МАКСИМУМ(ИсходныеДанныеПоследнийЗапрос.ШаблонЦенникаДляПечати) КАК ШаблонЦенникаДляПечати,
+	МАКСИМУМ(ШтрихкодыНоменклатуры.Штрихкод) КАК Штрихкод,
+	МАКСИМУМ(КодыТоваровПодключаемогоОборудованияOffline.Код) КАК КодПодключаемогоОборудованияOffline,
+	МАКСИМУМ(ВидыЦен.Ссылка) КАК ВидЦены,
+	МАКСИМУМ(Организации.Ссылка) КАК Организация,
+	МАКСИМУМ(ЦеныНоменклатурыСрезПоследних.Цена) КАК Цена,
+	МАКСИМУМ(ЦеныНоменклатурыСрезПоследних.Период) КАК ДатаПоследнегоИзмененияЦены,
+	МАКСИМУМ(ТоварыНаСкладахОстатки.ВНаличииОстаток) КАК ОстатокНаСкладе,
+	МАКСИМУМ(&amp;ТекущееВремя) КАК ТекущееВремя,
+	МАКСИМУМ(Пользователи.Ссылка) КАК ТекущийПользователь
+{ВЫБРАТЬ
+	Номенклатура.*,
+	Характеристика.*,
+	Упаковка.*,
+	УпаковкаЕдиницаИзмерения,
+	Весовой,
+	Количество,
+	КоличествоЦенниковДляПечати,
+	КоличествоЭтикетокДляПечати,
+	ШаблонЦенникаДляПечати,
+	ШаблонЭтикеткиДляПечати,
+	Штрихкод,
+	КодПодключаемогоОборудованияOffline,
+	ВидЦены.*,
+	Организация.*,
+	Цена,
+	ДатаПоследнегоИзмененияЦены,
+	ОстатокНаСкладе,
+	ТекущееВремя,
+	ТекущийПользователь.*}
+ИЗ
+	ИсходныеДанные КАК ИсходныеДанныеПоследнийЗапрос
+		{ЛЕВОЕ СОЕДИНЕНИЕ ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура
+			И ИсходныеДанныеПоследнийЗапрос.Характеристика = ШтрихкодыНоменклатуры.Характеристика
+			И ИсходныеДанныеПоследнийЗапрос.Упаковка = ШтрихкодыНоменклатуры.Упаковка}
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КодыТоваровПодключаемогоОборудованияOffline КАК КодыТоваровПодключаемогоОборудованияOffline
+		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = КодыТоваровПодключаемогоОборудованияOffline.Номенклатура
+			И ИсходныеДанныеПоследнийЗапрос.Характеристика = КодыТоваровПодключаемогоОборудованияOffline.Характеристика
+			И ИсходныеДанныеПоследнийЗапрос.Упаковка = КодыТоваровПодключаемогоОборудованияOffline.Упаковка
+			И (&amp;ПравилоОбмена = КодыТоваровПодключаемогоОборудованияOffline.ПравилоОбмена)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры.СрезПоследних(КОНЕЦПЕРИОДА(&amp;Дата, ДЕНЬ), ВидЦены = &amp;ВидЦены {(Номенклатура).* КАК Номенклатура, (Характеристика).* КАК Характеристика}) КАК ЦеныНоменклатурыСрезПоследних
+		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = ЦеныНоменклатурыСрезПоследних.Номенклатура
+			И ИсходныеДанныеПоследнийЗапрос.Характеристика = ЦеныНоменклатурыСрезПоследних.Характеристика}
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЦен КАК ВидыЦен
+		ПО (ВидыЦен.Ссылка = &amp;ВидЦены)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Организации КАК Организации
+		ПО (Организации.Ссылка = &amp;Организация)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Пользователи КАК Пользователи
+		ПО (Пользователи.Ссылка = &amp;ТекущийПользователь)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ТоварыНаСкладах.Остатки(, {(Склад).* КАК Склад, (Номенклатура).* КАК Номенклатура, (Характеристика).* КАК Характеристика}) КАК ТоварыНаСкладахОстатки
+		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = ТоварыНаСкладахОстатки.Номенклатура
+			И ИсходныеДанныеПоследнийЗапрос.Характеристика = ТоварыНаСкладахОстатки.Характеристика
+			И (ИсходныеДанныеПоследнийЗапрос.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиНоменклатуры.ПустаяСсылка))}
+{ГДЕ
+	ИсходныеДанныеПоследнийЗапрос.Номенклатура.* КАК Номенклатура,
+	ИсходныеДанныеПоследнийЗапрос.Характеристика.* КАК Характеристика,
+	ИсходныеДанныеПоследнийЗапрос.Упаковка.* КАК Упаковка,
+	ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод,
+	КодыТоваровПодключаемогоОборудованияOffline.Код КАК КодПодключаемогоОборудованияOffline,
+	ЦеныНоменклатурыСрезПоследних.Цена КАК Цена,
+	ЦеныНоменклатурыСрезПоследних.Период КАК ДатаПоследнегоИзмененияЦены,
+	ТоварыНаСкладахОстатки.ВНаличииОстаток КАК ОстатокНаСкладе,
+	((ИсходныеДанныеПоследнийЗапрос.Номенклатура, ИсходныеДанныеПоследнийЗапрос.Номенклатура) В
+			(ВЫБРАТЬ
+				ОтборПоСегментуНоменклатуры.Номенклатура,
+				ОтборПоСегментуНоменклатуры.Характеристика
+			ИЗ
+				ОтборПоСегментуНоменклатуры
+			ГДЕ
+				ОтборПоСегментуНоменклатуры.ИспользуетсяОтборПоСегментуНоменклатуры = &amp;ИспользуетсяОтборПоСегментуНоменклатуры)),
+	(ВЫБОР
+			КОГДА ИсходныеДанныеПоследнийЗапрос.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиНоменклатуры.ПустаяСсылка)
+				ТОГДА ВЫБОР
+						КОГДА ИсходныеДанныеПоследнийЗапрос.Номенклатура.ЕдиницаИзмерения.ТипЕдиницыИзмерения = ЗНАЧЕНИЕ(Перечисление.ТипыЕдиницИзмерения.Весовая)
+							ТОГДА ИСТИНА
+						ИНАЧЕ ЛОЖЬ
+					КОНЕЦ
+			ИНАЧЕ ВЫБОР
+					КОГДА ИсходныеДанныеПоследнийЗапрос.Упаковка.ЕдиницаИзмерения.ТипЕдиницыИзмерения = ЗНАЧЕНИЕ(Перечисление.ТипыЕдиницИзмерения.Весовая)
+						ТОГДА ИСТИНА
+					ИНАЧЕ ЛОЖЬ
+				КОНЕЦ
+		КОНЕЦ) КАК Весовой}
+
+СГРУППИРОВАТЬ ПО
+	ИсходныеДанныеПоследнийЗапрос.Порядок,
+	ИсходныеДанныеПоследнийЗапрос.Номенклатура,
+	ИсходныеДанныеПоследнийЗапрос.Характеристика,
+	ИсходныеДанныеПоследнийЗапрос.Упаковка,
+	ВЫБОР
+		КОГДА ИсходныеДанныеПоследнийЗапрос.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиНоменклатуры.ПустаяСсылка)
+			ТОГДА ИсходныеДанныеПоследнийЗапрос.Номенклатура.ЕдиницаИзмерения
+		ИНАЧЕ ИсходныеДанныеПоследнийЗапрос.Упаковка
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ИсходныеДанныеПоследнийЗапрос.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиНоменклатуры.ПустаяСсылка)
+			ТОГДА ВЫБОР
+					КОГДА ИсходныеДанныеПоследнийЗапрос.Номенклатура.ЕдиницаИзмерения.ТипЕдиницыИзмерения = ЗНАЧЕНИЕ(Перечисление.ТипыЕдиницИзмерения.Весовая)
+						ТОГДА ИСТИНА
+					ИНАЧЕ ЛОЖЬ
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ИсходныеДанныеПоследнийЗапрос.Упаковка.ЕдиницаИзмерения.ТипЕдиницыИзмерения = ЗНАЧЕНИЕ(Перечисление.ТипыЕдиницИзмерения.Весовая)
+					ТОГДА ИСТИНА
+				ИНАЧЕ ЛОЖЬ
+			КОНЕЦ
+	КОНЕЦ
+
+УПОРЯДОЧИТЬ ПО
+	ИсходныеДанныеПоследнийЗапрос.Порядок</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<parameter>
+		<name>ВидЦены</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид цены</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Організація</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Zobacz ceny</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>View prices</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Виж цените</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Verpackung (Unit.)</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ВидыЦен.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Поточний час</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Organizacja</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Organization</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Preise anzeigen</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ВидыЦен.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТекущееВремя</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущее время</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Поточний користувач</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Aktualny czas</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Present time</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Текущо време</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Organisation</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТекущийПользователь</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущий пользователь</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Bieżący użytkownik</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Current user</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Текущия потребител</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Gegenwart</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Дата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Правило обміну</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Data</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Aktueller Benutzer</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПравилоОбмена</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Правило обмена</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Використовується відбір по сегменту номенклатури</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Zasada wymiany</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Rule exchange</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Обмен Правило</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Datum</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ПравилаОбменаСПодключаемымОборудованиемOffline.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ИспользуетсяОтборПоСегментуНоменклатуры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Используется отбор по сегменту номенклатуры</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Основний</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Wybór jest stosowany do segmentu nomenklatury</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Selection is used for the segment nomenclature</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Селекцията се използва за номенклатурата на сегмент</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Regel Austausch</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Ваговий товар</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Główny</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Main</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Основен</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Die Auswahl wird für das Segment Nomenklatur</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Склад</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Склады.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Штрихкод</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.ЦеноваяГруппа</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЦеновыеГруппы.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Штрихкод</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="xs:string">Только со штрихкодом</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Цена</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="xs:string">Только с ценами</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ОстатокНаСкладе</dcsset:left>
+					<dcsset:comparisonType>Greater</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					<dcsset:presentation xsi:type="xs:string">Только с остатками на складе</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Весовой</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Весовой товар</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Поля шаблону товари</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Szt. Waga</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Weight items</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Тегло елементи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Main</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

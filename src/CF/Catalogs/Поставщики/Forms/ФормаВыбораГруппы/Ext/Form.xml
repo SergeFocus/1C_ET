@@ -70,7 +70,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать группу</v8:content>
+						<v8:content>Добавить группу</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -123,7 +123,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -342,6 +342,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -413,12 +414,12 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="5">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Ref</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Наименование групп поставщиков</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
@@ -466,8 +467,61 @@
 				</LabelField>
 				<LabelField name="ВидЦен" id="8">
 					<DataPath>Список.ВидЦен</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид Цен Поставщиков группы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Вижте Цена Доставчици Group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Выгляд Коштаў Пастаўшчыкоў групы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Ansicht Preis Suppliers Group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>View Price Suppliers Group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zobacz Cena Dostawcy Grupa</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Vezi Pret Furnizori Group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вид Цін Постачальників групи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>กลุ่ม View ราคาผู้ซื้อผู้ขาย</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>查看价格供应国集团</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="ВидЦенКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ВидЦенРасширеннаяПодсказка" id="10"/>
+				</LabelField>
+				<LabelField name="СрокОплатыВДняхПоУмолчанию" id="38">
+					<DataPath>Список.СрокОплатыВДняхПоУмолчанию</DataPath>
+					<ContextMenu name="СрокОплатыВДняхПоУмолчаниюКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СрокОплатыВДняхПоУмолчаниюРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="41">
+					<DataPath>Список.Комментарий</DataPath>
+					<Height>1</Height>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="43"/>
 				</LabelField>
 			</ChildItems>
 		</Table>

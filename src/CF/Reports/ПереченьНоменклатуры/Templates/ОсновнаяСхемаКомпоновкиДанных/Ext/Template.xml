@@ -170,6 +170,42 @@
 			<dataPath>СерийныйУчет</dataPath>
 			<field>СерийныйУчет</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вес</dataPath>
+			<field>Вес</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Высота</dataPath>
+			<field>Высота</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Длина</dataPath>
+			<field>Длина</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодУКТВЭД</dataPath>
+			<field>КодУКТВЭД</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПоУмолчанию</dataPath>
+			<field>КоличествоПоУмолчанию</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодОказанияУслугиЗаВремя</dataPath>
+			<field>ПериодОказанияУслугиЗаВремя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ширина</dataPath>
+			<field>Ширина</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсновнаяЕдиницаИзмерения</dataPath>
+			<field>ОсновнаяЕдиницаИзмерения</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	Номенклатура.Ссылка КАК Номенклатура,
@@ -194,7 +230,16 @@
 		ИНАЧЕ Номенклатура.НаименованиеДляПечати
 	КОНЕЦ КАК Наименование,
 	Номенклатура.СерийныйУчет,
-	Номенклатура.ЗапретитьУказаниеБезСерии
+	Номенклатура.ЗапретитьУказаниеБезСерии,
+	Номенклатура.Высота,
+	Номенклатура.Ширина,
+	Номенклатура.Длина,
+	Номенклатура.Вес,
+	Номенклатура.КодУКТВЭД,
+	Номенклатура.СтавкаНДС,
+	Номенклатура.ПериодОказанияУслугиЗаВремя,
+	Номенклатура.КоличествоПоУмолчанию,
+	Номенклатура.ОсновнаяЕдиницаИзмерения
 ИЗ
 	Справочник.Номенклатура КАК Номенклатура
 ГДЕ
@@ -261,6 +306,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Наименование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсновнаяЕдиницаИзмерения</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:use>false</dcsset:use>
@@ -445,6 +493,9 @@
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Наименование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсновнаяЕдиницаИзмерения</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:use>false</dcsset:use>
@@ -641,6 +692,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Наименование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсновнаяЕдиницаИзмерения</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Артикул</dcsset:field>

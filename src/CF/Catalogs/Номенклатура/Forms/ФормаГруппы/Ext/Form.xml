@@ -386,13 +386,69 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="56"/>
 			<ChildItems>
+				<PictureDecoration name="СимволСправочника" id="78">
+					<Width>4</Width>
+					<Height>2</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Символ справочника</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Символ довідника</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Symbol Directory</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Сімвал даведніка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Symbol-Verzeichnis</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Symbol klasyfikacji</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Simbol Directory</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>符号目录</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Symbol Directory</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ไดเรกทอรีสัญลักษณ์</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Анықтағыштың түртіндісі</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Номенклатура</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="СимволСправочникаКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="СимволСправочникаРасширеннаяПодсказка" id="80"/>
+				</PictureDecoration>
 				<InputField name="Наименование" id="1">
 					<DataPath>Наименование</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование Группы</v8:content>
+							<v8:content>Наименование Группы номенклатуры</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -435,10 +491,12 @@
 							<v8:content>ชื่อกลุ่ม</v8:content>
 						</v8:item>
 					</Title>
-					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<TitleLocation>Top</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<Font ref="style:LargeTextFont" kind="StyleItem"/>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
@@ -478,29 +536,29 @@
 			</ContextMenu>
 			<AutoCommandBar name="НаименованияНаДругихЯзыкахКоманднаяПанель" id="61"/>
 			<ExtendedTooltip name="НаименованияНаДругихЯзыкахРасширеннаяПодсказка" id="62"/>
-			<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="78">
+			<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="125">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="79"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="126"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="127"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="81">
+			<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="128">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="82"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="129"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="130"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="84">
+			<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="131">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="85"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="132"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="133"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="OnChange">НаименованияНаДругихЯзыкахПриИзменении</Event>
@@ -524,692 +582,909 @@
 				</InputField>
 			</ChildItems>
 		</Table>
-		<UsualGroup name="ГруппаНазначаемыхНастроек" id="30">
+		<Pages name="ГруппаСтраниц" id="90">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа назначаемых настроек</v8:content>
+					<v8:content>Группа страниц</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Group appointed by the settings</v8:content>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Група сторінок</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Grup numit de setările</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bl</v8:lang>
-					<v8:content>Група прызначаных налад</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>zh</v8:lang>
-					<v8:content>集团委任的设置</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Група призначуваних налаштувань</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Група, назначена от настройките</v8:content>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Group pages</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>DE</v8:lang>
-					<v8:content>Gruppe durch die Einstellungen ernannt</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Grupa mianowany przez ustawienia</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>kk</v8:lang>
-					<v8:content>Тағайында- настроек тобы</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>th</v8:lang>
-					<v8:content>การตั้งค่ากลุ่มได้รับการแต่งตั้ง</v8:content>
+					<v8:content>Gruppenseiten</v8:content>
 				</v8:item>
 			</Title>
+			<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа назначаемых настроек</v8:content>
+					<v8:content>Группа страниц</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Group appointed by the settings</v8:content>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Група сторінок</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Grup numit de setările</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bl</v8:lang>
-					<v8:content>Група прызначаных налад</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>zh</v8:lang>
-					<v8:content>集团委任的设置</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Група призначуваних налаштувань</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Група, назначена от настройките</v8:content>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Group pages</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>DE</v8:lang>
-					<v8:content>Gruppe durch die Einstellungen ernannt</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Grupa mianowany przez ustawienia</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>kk</v8:lang>
-					<v8:content>Тағайында- настроек тобы</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>th</v8:lang>
-					<v8:content>การตั้งค่ากลุ่มได้รับการแต่งตั้ง</v8:content>
+					<v8:content>Gruppenseiten</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Vertical</Group>
-			<Representation>StrongSeparation</Representation>
-			<ShowTitle>false</ShowTitle>
-			<BackColor>#FFFAFA</BackColor>
-			<ExtendedTooltip name="ГруппаНазначаемыхНастроекРасширеннаяПодсказка" id="31"/>
+			<ExtendedTooltip name="ГруппаСтраницРасширеннаяПодсказка" id="91"/>
 			<ChildItems>
-				<LabelDecoration name="ВниманиеУстановленныеНижеНастройкиНазначатсяДляВсейНоменклатурыГруппы" id="27">
-					<TextColor>#000064</TextColor>
-					<Title formatted="false">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Внимание! Установленные ниже настройки назначатся для всей номенклатуры группы..</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Attention! Set the following settings will appoint for the whole range of ..</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>Atenție! Setați următoarele setări vor desemna, pentru întreaga gamă de ..</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bl</v8:lang>
-							<v8:content>Увага! Устаноўленыя ніжэй налады прызначаць для ўсёй наменклатуры групы ..</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>zh</v8:lang>
-							<v8:content>注意！进行以下设置将任命为整个范围..</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Увага! Встановлені нижче налаштування призначать для всієї номенклатури групи ..</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Внимание! Определете следните настройки ще назначи за цялата гама от ..</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Achtung! Legen Sie die folgenden Einstellungen werden für den gesamten Bereich der ernennen ..</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Uwaga! Ustaw następujące ustawienia wyznaczy dla całego zakresu ..</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>Көңіл! Аласа тағайынды настройки топтың барлық жиынтығы үшін тағайындайды.</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>th</v8:lang>
-							<v8:content>โปรดทราบ! ตั้งค่าต่อไปนี้สำหรับช่วงทั้งหมดของกลุ่มแต่งตั้ง ..</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="ВниманиеУстановленныеНижеНастройкиНазначатсяДляВсейНоменклатурыГруппыКонтекстноеМеню" id="28"/>
-					<ExtendedTooltip name="ВниманиеУстановленныеНижеНастройкиНазначатсяДляВсейНоменклатурыГруппыРасширеннаяПодсказка" id="29"/>
-				</LabelDecoration>
-				<CheckBoxField name="НеОтслеживатьОстаток" id="21">
-					<DataPath>Объект.НеОтслеживатьОстаток</DataPath>
+				<Page name="ГруппаНазначаемыхНастроек" id="30">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Назначить признак "НЕ отслеживать остатки" для всей номенклатуры группы (например для услуг)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Assign a sign "DO NOT track balances" for the whole range of groups (eg for services)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>Atribui un semn "NU urmări soldurile" pentru întreaga gamă de grupuri (de exemplu, pentru servicii)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bl</v8:lang>
-							<v8:content>Прызначыць прыкмета "НЕ адсочваць рэшткі" для ўсёй наменклатуры групы (напрыклад для паслуг)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>zh</v8:lang>
-							<v8:content>分配的一个标志“请勿跟踪结余”的整个范围内的群体（如服务）</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Призначити ознака "НЕ відстежувати залишки" для всієї номенклатури групи (наприклад для послуг)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Присвояване на знак "НЕ следите салда" за целия спектър от групи (например за услуги)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Weisen Sie ein Schild "Do Not Track balances" für die gesamte Palette von Gruppen (zB für Dienstleistungen)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Przypisywanie znak "NIE śledzenia sald" na całym szeregu grup (np. dla usług)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>Тағайында- белгі "отслеживать қалдықтар" топтың (мысалы қызмет атқарулар үшін) барлық жиынтығы үшін</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>th</v8:lang>
-							<v8:content>แต่งตั้งป้าย "DO NOT ติดตามยอด" สำหรับทั้งช่วงของกลุ่ม (เช่นการให้บริการ)</v8:content>
-						</v8:item>
-					</Title>
-					<CheckBoxType>CheckBox</CheckBoxType>
-					<ContextMenu name="НеОтслеживатьОстатокКонтекстноеМеню" id="22"/>
-					<ExtendedTooltip name="НеОтслеживатьОстатокРасширеннаяПодсказка" id="23"/>
-					<Events>
-						<Event name="OnChange">НеОтслеживатьОстатокПриИзменении</Event>
-					</Events>
-				</CheckBoxField>
-				<InputField name="ПланкаКоличестваДляЛьготнойЦены" id="18">
-					<DataPath>Объект.ПланкаКоличестваДляЛьготнойЦены</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Назначить Планку количества для продажи по льготной цене для всей номенклатуры группы (0 - нет льг.цен)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Assign Planck quantities for sale at a reduced price for the whole range of (0 - no lg.tsen)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>Atribuirii de cantități Planck pentru vânzare la un preț redus pentru toata gama de (0 - fără lg.tsen)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bl</v8:lang>
-							<v8:content>Прызначыць Планку колькасці для продажу па льготнай цане для ўсёй наменклатуры групы (0 - няма льг.цен)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>zh</v8:lang>
-							<v8:content>普朗克数量分配，以较低的价格出售的整个范围（0  - 无lg.tsen）</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Призначити Планку кількості для продажу за пільговою ціною для всієї номенклатури групи (0 - немає льг.цен)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Присвояване Планк количества за продажба на намалени цени за цялата гама от (0 - не lg.tsen)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Weisen Planck Mengen zum Verkauf zu einem reduzierten Preis für den gesamten Bereich der (0 - keine lg.tsen)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Przypisywanie ilości Plancka do sprzedaży po obniżonej cenie dla całego zakresu (0 - brak lg.tsen)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>Тағайында- санның планку сат- үшін ша жеңілдікті бағаға топтың (0 - бол- льг.бағалардың) барлық жиынтығы үшін</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>th</v8:lang>
-							<v8:content>กำหนดปริมาณพลังค์สำหรับการขายในราคาที่ลดลงสำหรับทั้งช่วงของกลุ่ม (0 - ไม่ lg.tsen)</v8:content>
-						</v8:item>
-					</Title>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ChoiceButton>true</ChoiceButton>
-					<ClearButton>true</ClearButton>
-					<SpinButton>true</SpinButton>
-					<ContextMenu name="ПланкаКоличестваДляЛьготнойЦеныКонтекстноеМеню" id="19"/>
-					<ExtendedTooltip name="ПланкаКоличестваДляЛьготнойЦеныРасширеннаяПодсказка" id="20"/>
-				</InputField>
-				<InputField name="РекомендуемыйМинимальныйОстатокТовара" id="24">
-					<DataPath>Объект.РекомендуемыйМинимальныйОстатокТовара</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Назначить рекомендуемый минимальный остаток товара для всей номенклатуры группы (0 -не установлен)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Appoint the recommended minimum balance for the entire product range of groups (0-not installed)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>Numească soldul minim recomandat pentru toata gama de produse de grupuri (0-nu este instalat)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bl</v8:lang>
-							<v8:content>Прызначыць рэкамендуемы мінімальны рэшту тавару для ўсёй наменклатуры групы (0-не ўстаноўлены)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>zh</v8:lang>
-							<v8:content>委任组的整个产品范围建议的最低余额为（0，而不是安装）</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Призначити рекомендований мінімальний залишок товару для всієї номенклатури групи (0-не встановлений)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Назначава препоръчителната минимално салдо за цялата продуктова гама на групи (0-не се инсталира)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Benennen Sie die empfohlene Mindest Saldo für die gesamte Produktpalette von Gruppen (0-nicht installiert)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Wyznacz zalecanego okresu minimalnego dla całej gamy produktów z grupy (0-nie jest zainstalowany)</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>Тағайында- тауардың ұсын- ең төмен қалдығын топтың (0 -не тағайынды) барлық жиынтығы үшін</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>th</v8:lang>
-							<v8:content>แต่งตั้งยอดขั้นต่ำที่แนะนำสำหรับช่วงทั้งหมดของกลุ่มผลิตภัณฑ์ (0-ไม่ได้ติดตั้ง)</v8:content>
-						</v8:item>
-					</Title>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ChoiceButton>true</ChoiceButton>
-					<ClearButton>true</ClearButton>
-					<SpinButton>true</SpinButton>
-					<ContextMenu name="РекомендуемыйМинимальныйОстатокТовараКонтекстноеМеню" id="25"/>
-					<ExtendedTooltip name="РекомендуемыйМинимальныйОстатокТовараРасширеннаяПодсказка" id="26"/>
-					<Events>
-						<Event name="OnChange">РекомендуемыйМинимальныйОстатокТовараПриИзменении</Event>
-					</Events>
-				</InputField>
-				<UsualGroup name="ГруппаСерии" id="53">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа серии</v8:content>
+							<v8:content>Назначаемые настройки</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>UK</v8:lang>
-							<v8:content>Група серії</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Група Series</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Група серыі</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Gruppe Serie</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Seria grupa</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Grup Series</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>组系列</v8:content>
+							<v8:content>Призначувані настройки</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>EN</v8:lang>
-							<v8:content>Group Series</v8:content>
+							<v8:content>Appointed settings</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>th</v8:lang>
-							<v8:content>กลุ่มซีรีส์</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>Топтаманың тобы</v8:content>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Amtsantritt Einstellungen</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа серии</v8:content>
+							<v8:content>Группа назначаемых настроек</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Група серії</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group appointed by the settings</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Grup numit de setările</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Група прызначаных налад</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>集团委任的设置</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група призначуваних налаштувань</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
-							<v8:content>Група Series</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Група серыі</v8:content>
+							<v8:content>Група, назначена от настройките</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>DE</v8:lang>
-							<v8:content>Gruppe Serie</v8:content>
+							<v8:content>Gruppe durch die Einstellungen ernannt</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
-							<v8:content>Seria grupa</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Grup Series</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>组系列</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Group Series</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>th</v8:lang>
-							<v8:content>กลุ่มซีรีส์</v8:content>
+							<v8:content>Grupa mianowany przez ustawienia</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>kk</v8:lang>
-							<v8:content>Топтаманың тобы</v8:content>
+							<v8:content>Тағайында- настроек тобы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การตั้งค่ากลุ่มได้รับการแต่งตั้ง</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Group>Vertical</Group>
-					<Representation>NormalSeparation</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаСерииРасширеннаяПодсказка" id="54"/>
+					<ExtendedTooltip name="ГруппаНазначаемыхНастроекРасширеннаяПодсказка" id="31"/>
 					<ChildItems>
-						<CheckBoxField name="СерийныйУчет" id="47">
-							<DataPath>Объект.СерийныйУчет</DataPath>
-							<Title>
+						<LabelDecoration name="ВниманиеУстановленныеНижеНастройкиНазначатсяДляВсейНоменклатурыГруппы" id="27">
+							<TextColor>#000064</TextColor>
+							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Назначить Серийный учет для всей номенклатуры группы</v8:content>
+									<v8:content>Внимание! Установленные ниже настройки назначатся для всей номенклатуры группы..</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>UK</v8:lang>
-									<v8:content>Призначити Серійний облік для всієї номенклатури групи</v8:content>
+									<v8:lang>en</v8:lang>
+									<v8:content>Attention! Set the following settings will appoint for the whole range of ..</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Atenție! Setați următoarele setări vor desemna, pentru întreaga gamă de ..</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Увага! Устаноўленыя ніжэй налады прызначаць для ўсёй наменклатуры групы ..</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>注意！进行以下设置将任命为整个范围..</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Увага! Встановлені нижче налаштування призначать для всієї номенклатури групи ..</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>BG</v8:lang>
-									<v8:content>Присвояване Serial сметка за цялата гама от група</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>BL</v8:lang>
-									<v8:content>Прызначыць Серыйны ўлік для ўсёй наменклатуры групы</v8:content>
+									<v8:content>Внимание! Определете следните настройки ще назначи за цялата гама от ..</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>DE</v8:lang>
-									<v8:content>Weisen Serien Konto für den gesamten Bereich der Gruppe</v8:content>
+									<v8:content>Achtung! Legen Sie die folgenden Einstellungen werden für den gesamten Bereich der ernennen ..</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
-									<v8:content>Przypisać konto seryjny dla całego zakresu grupy</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>RO</v8:lang>
-									<v8:content>Atribui cont serial pentru intreaga gama de grup</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ZH</v8:lang>
-									<v8:content>分配序列账户组的整个范围</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>EN</v8:lang>
-									<v8:content>Assign Serial account for the entire range of group</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>th</v8:lang>
-									<v8:content>กำหนดบัญชีอนุกรมสำหรับช่วงทั้งหมดของกลุ่ม</v8:content>
+									<v8:content>Uwaga! Ustaw następujące ustawienia wyznaczy dla całego zakresu ..</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>kk</v8:lang>
-									<v8:content>Тағайында- топтаманың учет топтың барлық жиынтығы үшін</v8:content>
+									<v8:content>Көңіл! Аласа тағайынды настройки топтың барлық жиынтығы үшін тағайындайды.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>โปรดทราบ! ตั้งค่าต่อไปนี้สำหรับช่วงทั้งหมดของกลุ่มแต่งตั้ง ..</v8:content>
 								</v8:item>
 							</Title>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="СерийныйУчетКонтекстноеМеню" id="48"/>
-							<ExtendedTooltip name="СерийныйУчетРасширеннаяПодсказка" id="49"/>
+							<ContextMenu name="ВниманиеУстановленныеНижеНастройкиНазначатсяДляВсейНоменклатурыГруппыКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ВниманиеУстановленныеНижеНастройкиНазначатсяДляВсейНоменклатурыГруппыРасширеннаяПодсказка" id="29"/>
+						</LabelDecoration>
+						<CheckBoxField name="НеОтслеживатьОстаток" id="21">
+							<DataPath>Объект.НеОтслеживатьОстаток</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Назначить признак "НЕ отслеживать остатки" для всей номенклатуры группы (например для услуг)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Assign a sign "DO NOT track balances" for the whole range of groups (eg for services)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Atribui un semn "NU urmări soldurile" pentru întreaga gamă de grupuri (de exemplu, pentru servicii)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Прызначыць прыкмета "НЕ адсочваць рэшткі" для ўсёй наменклатуры групы (напрыклад для паслуг)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>分配的一个标志“请勿跟踪结余”的整个范围内的群体（如服务）</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Призначити ознака "НЕ відстежувати залишки" для всієї номенклатури групи (наприклад для послуг)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Присвояване на знак "НЕ следите салда" за целия спектър от групи (например за услуги)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Weisen Sie ein Schild "Do Not Track balances" für die gesamte Palette von Gruppen (zB für Dienstleistungen)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Przypisywanie znak "NIE śledzenia sald" na całym szeregu grup (np. dla usług)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Тағайында- белгі "отслеживать қалдықтар" топтың (мысалы қызмет атқарулар үшін) барлық жиынтығы үшін</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>แต่งตั้งป้าย "DO NOT ติดตามยอด" สำหรับทั้งช่วงของกลุ่ม (เช่นการให้บริการ)</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>CheckBox</CheckBoxType>
+							<ContextMenu name="НеОтслеживатьОстатокКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="НеОтслеживатьОстатокРасширеннаяПодсказка" id="23"/>
 							<Events>
-								<Event name="OnChange">СерийныйУчетПриИзменении</Event>
+								<Event name="OnChange">НеОтслеживатьОстатокПриИзменении</Event>
 							</Events>
 						</CheckBoxField>
-						<CheckBoxField name="ЗапретитьУказаниеБезСерии" id="50">
-							<DataPath>Объект.ЗапретитьУказаниеБезСерии</DataPath>
+						<InputField name="ПланкаКоличестваДляЛьготнойЦены" id="18">
+							<DataPath>Объект.ПланкаКоличестваДляЛьготнойЦены</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Назначить запрет указания данной номенклатуры Без Серии</v8:content>
+									<v8:content>Назначить Планку количества для продажи по льготной цене для всей номенклатуры группы (0 - нет льг.цен)</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>UK</v8:lang>
-									<v8:content>Призначити заборону вказівки даної номенклатури Без Серії</v8:content>
+									<v8:lang>en</v8:lang>
+									<v8:content>Assign Planck quantities for sale at a reduced price for the whole range of (0 - no lg.tsen)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Atribuirii de cantități Planck pentru vânzare la un preț redus pentru toata gama de (0 - fără lg.tsen)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Прызначыць Планку колькасці для продажу па льготнай цане для ўсёй наменклатуры групы (0 - няма льг.цен)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>普朗克数量分配，以较低的价格出售的整个范围（0  - 无lg.tsen）</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Призначити Планку кількості для продажу за пільговою ціною для всієї номенклатури групи (0 - немає льг.цен)</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>BG</v8:lang>
-									<v8:content>Присвояване инструкции забрана дадени номенклатура Без Series</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>BL</v8:lang>
-									<v8:content>Прызначыць забарона ўказанні дадзенай наменклатуры Без Серыі</v8:content>
+									<v8:content>Присвояване Планк количества за продажба на намалени цени за цялата гама от (0 - не lg.tsen)</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>DE</v8:lang>
-									<v8:content>Weisen Verbot Anweisungen gegeben Nomenklatur Ohne Series</v8:content>
+									<v8:content>Weisen Planck Mengen zum Verkauf zu einem reduzierten Preis für den gesamten Bereich der (0 - keine lg.tsen)</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
-									<v8:content>Przypisać instrukcji zakazu podane nomenklatura Bez Series</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>RO</v8:lang>
-									<v8:content>Atribui instrucțiuni ban date nomenclatura Fără Series</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ZH</v8:lang>
-									<v8:content>分配给命名没有系列禁令指示</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>EN</v8:lang>
-									<v8:content>Assign ban instructions given nomenclature Without Series</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>th</v8:lang>
-									<v8:content>กำหนดห้ามให้คำแนะนำโดยไม่ต้องมีการตั้งชื่อชุด</v8:content>
+									<v8:content>Przypisywanie ilości Plancka do sprzedaży po obniżonej cenie dla całego zakresu (0 - brak lg.tsen)</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>kk</v8:lang>
-									<v8:content>Тағайында- айтылмыш жиынтықтың нұсқауының тыйымын топтамамен</v8:content>
+									<v8:content>Тағайында- санның планку сат- үшін ша жеңілдікті бағаға топтың (0 - бол- льг.бағалардың) барлық жиынтығы үшін</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>กำหนดปริมาณพลังค์สำหรับการขายในราคาที่ลดลงสำหรับทั้งช่วงของกลุ่ม (0 - ไม่ lg.tsen)</v8:content>
 								</v8:item>
 							</Title>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ЗапретитьУказаниеБезСерииКонтекстноеМеню" id="51"/>
-							<ExtendedTooltip name="ЗапретитьУказаниеБезСерииРасширеннаяПодсказка" id="52"/>
-						</CheckBoxField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаКоличество" id="76">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа количество</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Брой Group</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Група колькасць</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Gruppennummer</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Group number</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Numer grupy</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Număr de grup</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Група кількість</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>จำนวนกลุ่ม</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>组号</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа количество</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Брой Group</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Група колькасць</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Gruppennummer</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Group number</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Numer grupy</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Număr de grup</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Група кількість</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>จำนวนกลุ่ม</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>组号</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ChildItemsWidth>Equal</ChildItemsWidth>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаКоличествоРасширеннаяПодсказка" id="77"/>
-					<ChildItems>
-						<InputField name="КоличествоПоУмолчанию" id="73">
-							<DataPath>Объект.КоличествоПоУмолчанию</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ChoiceButton>true</ChoiceButton>
 							<ClearButton>true</ClearButton>
 							<SpinButton>true</SpinButton>
-							<ContextMenu name="КоличествоПоУмолчаниюКонтекстноеМеню" id="74"/>
-							<ExtendedTooltip name="КоличествоПоУмолчаниюРасширеннаяПодсказка" id="75"/>
+							<ContextMenu name="ПланкаКоличестваДляЛьготнойЦеныКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ПланкаКоличестваДляЛьготнойЦеныРасширеннаяПодсказка" id="20"/>
+						</InputField>
+						<InputField name="РекомендуемыйМинимальныйОстатокТовара" id="24">
+							<DataPath>Объект.РекомендуемыйМинимальныйОстатокТовара</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Назначить рекомендуемый минимальный остаток товара для всей номенклатуры группы (0 -не установлен)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Appoint the recommended minimum balance for the entire product range of groups (0-not installed)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Numească soldul minim recomandat pentru toata gama de produse de grupuri (0-nu este instalat)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Прызначыць рэкамендуемы мінімальны рэшту тавару для ўсёй наменклатуры групы (0-не ўстаноўлены)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>委任组的整个产品范围建议的最低余额为（0，而不是安装）</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Призначити рекомендований мінімальний залишок товару для всієї номенклатури групи (0-не встановлений)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Назначава препоръчителната минимално салдо за цялата продуктова гама на групи (0-не се инсталира)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Benennen Sie die empfohlene Mindest Saldo für die gesamte Produktpalette von Gruppen (0-nicht installiert)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Wyznacz zalecanego okresu minimalnego dla całej gamy produktów z grupy (0-nie jest zainstalowany)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Тағайында- тауардың ұсын- ең төмен қалдығын топтың (0 -не тағайынды) барлық жиынтығы үшін</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>แต่งตั้งยอดขั้นต่ำที่แนะนำสำหรับช่วงทั้งหมดของกลุ่มผลิตภัณฑ์ (0-ไม่ได้ติดตั้ง)</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="РекомендуемыйМинимальныйОстатокТовараКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="РекомендуемыйМинимальныйОстатокТовараРасширеннаяПодсказка" id="26"/>
+							<Events>
+								<Event name="OnChange">РекомендуемыйМинимальныйОстатокТовараПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаСерии" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа серии</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група серії</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Група Series</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група серыі</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppe Serie</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Seria grupa</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Grup Series</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>组系列</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group Series</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>กลุ่มซีรีส์</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Топтаманың тобы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа серии</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група серії</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Група Series</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група серыі</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppe Serie</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Seria grupa</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Grup Series</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>组系列</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group Series</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>กลุ่มซีรีส์</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Топтаманың тобы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСерииРасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<CheckBoxField name="СерийныйУчет" id="47">
+									<DataPath>Объект.СерийныйУчет</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Назначить Серийный учет для всей номенклатуры группы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Призначити Серійний облік для всієї номенклатури групи</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Присвояване Serial сметка за цялата гама от група</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Прызначыць Серыйны ўлік для ўсёй наменклатуры групы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Weisen Serien Konto für den gesamten Bereich der Gruppe</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Przypisać konto seryjny dla całego zakresu grupy</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Atribui cont serial pentru intreaga gama de grup</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>分配序列账户组的整个范围</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Assign Serial account for the entire range of group</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>กำหนดบัญชีอนุกรมสำหรับช่วงทั้งหมดของกลุ่ม</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>Тағайында- топтаманың учет топтың барлық жиынтығы үшін</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СерийныйУчетКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="СерийныйУчетРасширеннаяПодсказка" id="49"/>
+									<Events>
+										<Event name="OnChange">СерийныйУчетПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ЗапретитьУказаниеБезСерии" id="50">
+									<DataPath>Объект.ЗапретитьУказаниеБезСерии</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Назначить запрет указания данной номенклатуры Без Серии</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Призначити заборону вказівки даної номенклатури Без Серії</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Присвояване инструкции забрана дадени номенклатура Без Series</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Прызначыць забарона ўказанні дадзенай наменклатуры Без Серыі</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Weisen Verbot Anweisungen gegeben Nomenklatur Ohne Series</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Przypisać instrukcji zakazu podane nomenklatura Bez Series</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Atribui instrucțiuni ban date nomenclatura Fără Series</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>分配给命名没有系列禁令指示</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Assign ban instructions given nomenclature Without Series</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>กำหนดห้ามให้คำแนะนำโดยไม่ต้องมีการตั้งชื่อชุด</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>Тағайында- айтылмыш жиынтықтың нұсқауының тыйымын топтамамен</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗапретитьУказаниеБезСерииКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ЗапретитьУказаниеБезСерииРасширеннаяПодсказка" id="52"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКоличество" id="76">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа количество</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Брой Group</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група колькасць</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppennummer</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group number</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Numer grupy</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Număr de grup</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група кількість</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>จำนวนกลุ่ม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>组号</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа количество</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Брой Group</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група колькасць</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppennummer</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group number</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Numer grupy</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Număr de grup</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група кількість</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>จำนวนกลุ่ม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>组号</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКоличествоРасширеннаяПодсказка" id="77"/>
+							<ChildItems>
+								<InputField name="КоличествоПоУмолчанию" id="73">
+									<DataPath>Объект.КоличествоПоУмолчанию</DataPath>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="КоличествоПоУмолчаниюКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="КоличествоПоУмолчаниюРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<InputField name="ПроцентКомиссионногоВознаграждения" id="143">
+									<DataPath>Объект.ПроцентКомиссионногоВознаграждения</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ПроцентКомиссионногоВознагражденияКонтекстноеМеню" id="144"/>
+									<ExtendedTooltip name="ПроцентКомиссионногоВознагражденияРасширеннаяПодсказка" id="145"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДополнительно" id="92">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Додатково</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Additionally</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Zusätzlich</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дополнительно</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Сторінка додатково</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Page also</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Seite auch</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДополнительноРасширеннаяПодсказка" id="93"/>
+					<ChildItems>
+						<InputField name="Родитель" id="4">
+							<DataPath>Объект.Parent</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа (верхнего уровня)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group (upper level)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Grup (nivel superior)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Група (верхняга ўзроўня)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>集团（上层）</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група (верхнього рівня)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Group (горно ниво)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Group (Oberstufe)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Group (górny poziom)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Топ (сырттың деңгейдің)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>กลุ่ม (ระดับบนสุด)</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="РодительКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Комментарий" id="42">
+							<DataPath>Объект.Комментарий</DataPath>
+							<BorderColor>style:FieldBackColor</BorderColor>
+							<Font ref="style:NormalTextFont" kind="StyleItem"/>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="44"/>
 						</InputField>
 					</ChildItems>
-				</UsualGroup>
+				</Page>
+				<Page name="СтраницаДополнительнаяИнформация" id="119">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Додаткова інформація</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Additional information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Zusätzliche Informationen</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дополнительная информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Сторінка додаткова інформація</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>MORE INFORMATION</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Weitere Informationen</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ДополнительнаяИнформация</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаДополнительнаяИнформацияРасширеннаяПодсказка" id="120"/>
+					<ChildItems>
+						<Table name="ДополнительнаяИнформация" id="94">
+							<Representation>List</Representation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДополнительнаяИнформация</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="95"/>
+							<AutoCommandBar name="ДополнительнаяИнформацияКоманднаяПанель" id="96">
+								<ChildItems>
+									<Button name="ДополнительнаяИнформацияДобавить" id="121">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ДополнительнаяИнформация.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить информацию</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>UK</v8:lang>
+												<v8:content>Додати інформацію</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>EN</v8:lang>
+												<v8:content>Add information</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>DE</v8:lang>
+												<v8:content>Informationen hinzufügen</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ДополнительнаяИнформацияДобавитьРасширеннаяПодсказка" id="122"/>
+									</Button>
+									<Button name="ДополнительнаяИнформацияУдалить" id="123">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ДополнительнаяИнформация.StandardCommand.Delete</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Удалить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>UK</v8:lang>
+												<v8:content>Видалити</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>EN</v8:lang>
+												<v8:content>Remove</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>DE</v8:lang>
+												<v8:content>Entfernen</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ДополнительнаяИнформацияУдалитьРасширеннаяПодсказка" id="124"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДополнительнаяИнформацияРасширеннаяПодсказка" id="97"/>
+							<SearchStringAddition name="ДополнительнаяИнформацияСтрокаПоиска" id="134">
+								<AdditionSource>
+									<Item>ДополнительнаяИнформация</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительнаяИнформацияСтрокаПоискаКонтекстноеМеню" id="135"/>
+								<ExtendedTooltip name="ДополнительнаяИнформацияСтрокаПоискаРасширеннаяПодсказка" id="136"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДополнительнаяИнформацияСостояниеПросмотра" id="137">
+								<AdditionSource>
+									<Item>ДополнительнаяИнформация</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительнаяИнформацияСостояниеПросмотраКонтекстноеМеню" id="138"/>
+								<ExtendedTooltip name="ДополнительнаяИнформацияСостояниеПросмотраРасширеннаяПодсказка" id="139"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДополнительнаяИнформацияУправлениеПоиском" id="140">
+								<AdditionSource>
+									<Item>ДополнительнаяИнформация</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительнаяИнформацияУправлениеПоискомКонтекстноеМеню" id="141"/>
+								<ExtendedTooltip name="ДополнительнаяИнформацияУправлениеПоискомРасширеннаяПодсказка" id="142"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ДополнительнаяИнформацияПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ДополнительнаяИнформацияВидИнформации" id="113">
+									<DataPath>ДополнительнаяИнформация.ВидИнформации</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДополнительнаяИнформацияВидИнформацииКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ДополнительнаяИнформацияВидИнформацииРасширеннаяПодсказка" id="115"/>
+									<Events>
+										<Event name="StartChoice">ДополнительнаяИнформацияВидИнформацииНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДополнительнаяИнформацияИнформация" id="116">
+									<DataPath>ДополнительнаяИнформация.Информация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДополнительнаяИнформацияИнформацияКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ДополнительнаяИнформацияИнформацияРасширеннаяПодсказка" id="118"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</UsualGroup>
-		<InputField name="Родитель" id="4">
-			<DataPath>Объект.Parent</DataPath>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа (верхнего уровня)</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Group (upper level)</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Grup (nivel superior)</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bl</v8:lang>
-					<v8:content>Група (верхняга ўзроўня)</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>zh</v8:lang>
-					<v8:content>集团（上层）</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Група (верхнього рівня)</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Group (горно ниво)</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Group (Oberstufe)</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Group (górny poziom)</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>kk</v8:lang>
-					<v8:content>Топ (сырттың деңгейдің)</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>th</v8:lang>
-					<v8:content>กลุ่ม (ระดับบนสุด)</v8:content>
-				</v8:item>
-			</Title>
-			<EditMode>EnterOnInput</EditMode>
-			<ClearButton>true</ClearButton>
-			<ContextMenu name="РодительКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="6"/>
-		</InputField>
-		<InputField name="Комментарий" id="42">
-			<DataPath>Объект.Комментарий</DataPath>
-			<ContextMenu name="КомментарийКонтекстноеМеню" id="43"/>
-			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="44"/>
-		</InputField>
+		</Pages>
 		<UsualGroup name="ГруппаСтандартныхРеквизитов" id="7">
 			<Title>
 				<v8:item>
@@ -1949,6 +2224,130 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ДопИнформацияИзменена" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительная информация изменена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Додаткова інформація змінена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Additional information changed</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zusätzliche Informationen geändert</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДопИнфоТипВладельца" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп инфо тип владельца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Доп інфо тип власника</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Additional information owner type</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zusätzliche Informationen Besitzertyp</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ОбъектыДляДополнительныхРеквизитов</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДополнительнаяИнформация" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительная информация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Додаткова інформація</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Additional information</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zusätzliche Informationen</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных</Item>
+			</FunctionalOptions>
+			<Columns>
+				<Column name="ВидИнформации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид информации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вид інформації</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Type of Information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Art der Information</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДополнительныеРеквизиты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Информация" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Інформація</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Information</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>

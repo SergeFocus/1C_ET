@@ -15,7 +15,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать Поставщика</v8:content>
+						<v8:content>Добавить Поставщика</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -75,7 +75,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать группу</v8:content>
+						<v8:content>Добавить группу поставщиков</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -120,6 +120,13 @@
 				</Title>
 				<ExtendedTooltip name="ФормаСоздатьГруппуРасширеннаяПодсказка" id="57"/>
 			</Button>
+			<Button name="ФормаИзменить" id="98">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Change</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьРасширеннаяПодсказка" id="99"/>
+			</Button>
 			<Button name="ФормаУстановитьПометкуУдаления" id="60">
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
@@ -135,7 +142,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -506,7 +513,9 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -547,34 +556,76 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="16"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="98">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="100">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="99"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="100"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="101"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="102"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="101">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="103">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="102"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="103"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="104"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="105"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="104">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="106">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="105"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="106"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="107"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="108"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="4">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Ref</DataPath>
 					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование поставщиков</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Наименование на доставчика</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Найменне пастаўшчыкоў</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Name des Lieferanten</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Name of supplier</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Nazwa dostawcy</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Nume de furnizor</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Найменування постачальників</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ชื่อของผู้จัดจำหน่าย</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>供应商名称</v8:content>
+						</v8:item>
+					</Title>
 					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="17"/>
@@ -594,11 +645,6 @@
 					<DataPath>Список.Регион</DataPath>
 					<ContextMenu name="РегионКонтекстноеМеню" id="25"/>
 					<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="26"/>
-				</LabelField>
-				<LabelField name="Код" id="6">
-					<DataPath>Список.Code</DataPath>
-					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="КодExtendedTooltip" id="18"/>
 				</LabelField>
 				<LabelField name="ОКПО" id="39">
 					<DataPath>Список.ОКПО</DataPath>
@@ -672,6 +718,12 @@
 					<Height>1</Height>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="22"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="23"/>
+				</LabelField>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Code</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="18"/>
 				</LabelField>
 				<LabelField name="Ответственный" id="48">
 					<DataPath>Список.Ответственный</DataPath>
@@ -1003,6 +1055,40 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьШтрихКодыДляИдентификацииКонтрагентов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать штрих коды для идентификации контрагентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Използвайте бар кодове, за да се идентифицират контрагенти</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Використовувати штрих коди для ідентифікації контрагентів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Use bar codes to identify counterparties</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Użyj kodów kreskowych do identyfikacji kontrahentów</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Verwenden Sie Strichcodes an Gegenparteien identifizieren</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьШтрихКоды</Item>
+			</FunctionalOptions>
 		</Attribute>
 	</Attributes>
 </Form>

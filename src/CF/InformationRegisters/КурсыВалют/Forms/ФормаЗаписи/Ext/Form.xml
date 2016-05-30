@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -81,6 +82,13 @@
 				</ToolTip>
 				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
 				<ExtendedTooltip name="ФормаГруппаГлобРасширеннаяПодсказка" id="49"/>
+				<ChildItems>
+					<Button name="РасчитатьВсеЗависимыеЦены1" id="66">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РасчитатьВсеЗависимыеЦены</CommandName>
+						<ExtendedTooltip name="РасчитатьВсеЗависимыеЦены1РасширеннаяПодсказка" id="67"/>
+					</Button>
+				</ChildItems>
 			</ButtonGroup>
 			<Button name="ФормаЗакрыть" id="46">
 				<Type>CommandBarButton</Type>
@@ -337,17 +345,116 @@
 						</Button>
 					</ChildItems>
 				</UsualGroup>
-				<InputField name="Валюта" id="1">
-					<DataPath>Запись.Валюта</DataPath>
-					<Width>17</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<Font ref="style:LargeTextFont" kind="StyleItem"/>
-					<ContextMenu name="ВалютаКонтекстноеМеню" id="2"/>
-					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="3"/>
-					<Events>
-						<Event name="OnChange">ВалютаПриИзменении</Event>
-					</Events>
-				</InputField>
+				<UsualGroup name="ГруппаВалютаИКод" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа валюта и код</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Група валута и код</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Група валюта і код</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Konzernwährung und Code</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Group currency and code</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Grupa i kod waluty</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Valută și codul de grup</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Група валюта і код</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>สกุลเงินของกลุ่มและรหัส</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>集团货币及代码</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа валюта и код</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Коментар</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Каментар</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Kommentar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Comment</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Komentarz</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Comentariu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Коментар</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ความเห็น</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>评论</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВалютаИКодРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<InputField name="Валюта" id="1">
+							<DataPath>Запись.Валюта</DataPath>
+							<Width>17</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<BackColor>#FFFAFF</BackColor>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
+							<ContextMenu name="ВалютаКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="OnChange">ВалютаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelField name="ВалютаКод" id="56">
+							<DataPath>Запись.Валюта.Code</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ВалютаКодКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ВалютаКодРасширеннаяПодсказка" id="58"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаПодвал" id="25">
@@ -602,7 +709,7 @@
 									<v8:content>ข้อตกลงใหม่</v8:content>
 								</v8:item>
 							</Title>
-							<Width>17</Width>
+							<Width>18</Width>
 							<SpinButton>true</SpinButton>
 							<BackColor>#FFFFFF</BackColor>
 							<Font ref="style:LargeTextFont" kind="StyleItem"/>
@@ -613,7 +720,8 @@
 							</Events>
 						</InputField>
 						<LabelDecoration name="На1Валюту" id="32">
-							<HorizontalStretch>true</HorizontalStretch>
+							<Width>21</Width>
+							<HorizontalStretch>false</HorizontalStretch>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -720,6 +828,15 @@
 			<ContextMenu name="ОбратныйПересчетКонтекстноеМеню" id="36"/>
 			<ExtendedTooltip name="ОбратныйПересчетРасширеннаяПодсказка" id="37"/>
 		</LabelDecoration>
+		<InputField name="Комментарий" id="59">
+			<DataPath>Запись.Комментарий</DataPath>
+			<Width>50</Width>
+			<Height>2</Height>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="61"/>
+		</InputField>
 		<UsualGroup name="ГруппаСтандартныхРеквизитов" id="7">
 			<Title>
 				<v8:item>
@@ -824,108 +941,168 @@
 					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="10"/>
 					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="11"/>
 				</LabelField>
-				<LabelField name="ДатаСоздания" id="12">
-					<DataPath>Запись.ДатаСоздания</DataPath>
-					<Format>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bl</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bg</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>zh</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>de</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>pl</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
+				<UsualGroup name="ГруппаСозданияРедакции" id="62">
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+							<v8:content>Группа создания редакции</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>th</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Създаване на Група издание</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-					</Format>
-					<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="14"/>
-				</LabelField>
-				<LabelField name="ДатаРедакции" id="15">
-					<DataPath>Запись.ДатаРедакции</DataPath>
-					<Format>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Група створення редакції</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>bl</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Group creation edition</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>bg</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Utworzenie grupy wydanie</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Berechnen Sie alle abhängigen Preise</v8:content>
 						</v8:item>
-						<v8:item>
-							<v8:lang>zh</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>de</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>pl</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
+					</Title>
+					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+							<v8:content>Группа создания редакции</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>th</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Създаване на Група издание</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Група створення редакції</v8:content>
 						</v8:item>
-					</Format>
-					<ContextMenu name="ДатаРедакцииКонтекстноеМеню" id="16"/>
-					<ExtendedTooltip name="ДатаРедакцииРасширеннаяПодсказка" id="17"/>
-				</LabelField>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Group creation edition</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Utworzenie grupy wydanie</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Gruppe Schaffung Ausgabe</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСозданияРедакцииРасширеннаяПодсказка" id="63"/>
+					<ChildItems>
+						<LabelField name="ДатаСоздания" id="12">
+							<DataPath>Запись.ДатаСоздания</DataPath>
+							<Format>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="14"/>
+						</LabelField>
+						<LabelField name="ДатаРедакции" id="15">
+							<DataPath>Запись.ДатаРедакции</DataPath>
+							<Format>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаРедакцииКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ДатаРедакцииРасширеннаяПодсказка" id="17"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -997,7 +1174,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Наименование базововй валюты</v8:content>
+					<v8:content>Наименование базововой валюты</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -1009,7 +1186,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>bl</v8:lang>
-					<v8:content>Найменне базововй валюты</v8:content>
+					<v8:content>Найменне базововой валюты</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>zh</v8:lang>
@@ -1017,7 +1194,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>uk</v8:lang>
-					<v8:content>Найменування базововй валюти</v8:content>
+					<v8:content>Найменування базововой валюти</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>BG</v8:lang>
@@ -1056,6 +1233,42 @@
 					<v8:lang>uk</v8:lang>
 					<v8:content>начало месяца</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На начало месяца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>В началото на месец</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>На пачатак месяца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Am Anfang des Monats</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>At the beginning of the month</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Na początku miesiąca</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>La începutul lunii</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ที่จุดเริ่มต้นของเดือน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>在每月的开始</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -1063,7 +1276,75 @@
 					<v8:content>На начало месяца</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Back</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>НаНачалоМесяца</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="РасчитатьВсеЗависимыеЦены" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать все зависимые цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Сформувати</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Obliczyć wszystkie ceny zależne</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Calculate all dependent prices</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изчислява всички зависими цени</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Währungen</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать все зависимые цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вибрати варіант</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Obliczyć wszystkie ceny zależne</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Calculate all dependent prices</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изчислява всички зависими цени</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Berechnen Sie alle abhängigen Preise</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВидыЦен</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РасчитатьВсеЗависимыеЦены</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСложныйМеханизмЦен</Item>
+			</FunctionalOptions>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 	<Parameters>

@@ -271,6 +271,7 @@
 						</InputField>
 						<InputField name="Артикул" id="87">
 							<DataPath>Артикул</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
 							<OpenButton>true</OpenButton>
 							<ContextMenu name="АртикулКонтекстноеМеню" id="88"/>
 							<ExtendedTooltip name="АртикулРасширеннаяПодсказка" id="89"/>
@@ -281,12 +282,29 @@
 						</InputField>
 						<InputField name="Номенклатура" id="7">
 							<DataPath>Номенклатура</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="НоменклатураКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="9"/>
 							<Events>
 								<Event name="OnChange">НоменклатураПриИзменении</Event>
 								<Event name="StartChoice">НоменклатураНачалоВыбора</Event>
 								<Event name="TextEditEnd">НоменклатураОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЕдиницаИзмерения" id="120">
+							<DataPath>ЕдиницаИзмерения</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Номенклатура</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="121"/>
+							<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="122"/>
+							<Events>
+								<Event name="OnChange">ЕдиницаИзмеренияПриИзменении</Event>
 							</Events>
 						</InputField>
 						<LabelField name="НоменклатураКоличествоПоУмолчанию" id="117">
@@ -297,6 +315,7 @@
 						</LabelField>
 						<InputField name="СерияНоменклатуры" id="96">
 							<DataPath>СерияНоменклатуры</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ChoiceParameterLinks>
 								<xr:Link>
 									<xr:Name>Отбор.Владелец</xr:Name>
@@ -1402,8 +1421,8 @@
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
-					<v8:Digits>10</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>6</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
@@ -1991,8 +2010,8 @@
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
-					<v8:Digits>12</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
@@ -2050,8 +2069,8 @@
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
-					<v8:Digits>12</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
@@ -2372,7 +2391,41 @@
 				<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
 			</Type>
 			<FunctionalOptions>
-				<Item>FunctionalOption.ВключитьСерийныйУчетНоменклатуры</Item>
+				<Item>FunctionalOption.ВестиУчетСерийНоменклатуры</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ЕдиницаИзмерения" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ед.изм.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Unit.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Од.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Unit.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Jednostka.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Ladetisch barcode - Zahl</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЕдиницыИзмерения</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьЕдиницыИзмеренияНоменклатуры</Item>
 			</FunctionalOptions>
 		</Attribute>
 		<ConditionalAppearance>
@@ -2599,6 +2652,68 @@
 			</Picture>
 			<Action>Отмена</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПодобратьАналог" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать аналог номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Підібрати аналог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Podnieś nomenklaturę analogowej</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Pick up analogue nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Вдигни аналог номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Einheit.</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать аналог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Pick up analog</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Pick up analogue</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Вдигни аналог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Pick up analogen Nomenklatur</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Аналоги</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьМеханизмАналоговДляНоменклатуры</Item>
+			</FunctionalOptions>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 	<Parameters>

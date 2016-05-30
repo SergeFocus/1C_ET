@@ -59,7 +59,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать Номенклатуру</v8:content>
+						<v8:content>Добавить Номенклатуру</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -112,7 +112,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать группу</v8:content>
+						<v8:content>Добавить группу</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -631,126 +631,269 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаГоризонтРасширеннаяПодсказка" id="50"/>
 			<ChildItems>
-				<Table name="ИерархияНоменклатуры" id="51">
-					<Representation>Tree</Representation>
-					<ChangeRowOrder>false</ChangeRowOrder>
-					<SelectionMode>SingleRow</SelectionMode>
-					<UseAlternationRowColor>true</UseAlternationRowColor>
-					<InitialTreeView>ExpandAllLevels</InitialTreeView>
-					<EnableStartDrag>true</EnableStartDrag>
-					<EnableDrag>true</EnableDrag>
-					<DataPath>ИерархияНоменклатуры</DataPath>
-					<RowPictureDataPath>ИерархияНоменклатуры.DefaultPicture</RowPictureDataPath>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
-					<AutoRefresh>true</AutoRefresh>
-					<AutoRefreshPeriod>60</AutoRefreshPeriod>
-					<Period>
-						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-					</Period>
-					<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
-					<RestoreCurrentRow>true</RestoreCurrentRow>
-					<TopLevelParent xsi:nil="true"/>
-					<ShowRoot>true</ShowRoot>
-					<AllowRootChoice>true</AllowRootChoice>
-					<UpdateOnDataChange>Auto</UpdateOnDataChange>
-					<ContextMenu name="ИерархияНоменклатурыКонтекстноеМеню" id="52">
-						<ChildItems>
-							<Button name="ИерархияНоменклатурыКонтекстноеМенюСоздатьГруппу" id="58">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Item.ИерархияНоменклатуры.StandardCommand.CreateFolder</CommandName>
-								<ExtendedTooltip name="ИерархияНоменклатурыКонтекстноеМенюСоздатьГруппуExtendedTooltip" id="59"/>
-							</Button>
-						</ChildItems>
-					</ContextMenu>
-					<AutoCommandBar name="ИерархияНоменклатурыКоманднаяПанель" id="53">
-						<Autofill>false</Autofill>
-					</AutoCommandBar>
-					<ExtendedTooltip name="ИерархияНоменклатурыРасширеннаяПодсказка" id="54"/>
-					<SearchStringAddition name="ИерархияНоменклатурыСтрокаПоиска" id="236">
-						<AdditionSource>
-							<Item>ИерархияНоменклатуры</Item>
-							<Type>SearchStringRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="ИерархияНоменклатурыСтрокаПоискаКонтекстноеМеню" id="237"/>
-						<ExtendedTooltip name="ИерархияНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="238"/>
-					</SearchStringAddition>
-					<ViewStatusAddition name="ИерархияНоменклатурыСостояниеПросмотра" id="239">
-						<AdditionSource>
-							<Item>ИерархияНоменклатуры</Item>
-							<Type>ViewStatusRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="ИерархияНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="240"/>
-						<ExtendedTooltip name="ИерархияНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="241"/>
-					</ViewStatusAddition>
-					<SearchControlAddition name="ИерархияНоменклатурыУправлениеПоиском" id="242">
-						<AdditionSource>
-							<Item>ИерархияНоменклатуры</Item>
-							<Type>SearchControl</Type>
-						</AdditionSource>
-						<ContextMenu name="ИерархияНоменклатурыУправлениеПоискомКонтекстноеМеню" id="243"/>
-						<ExtendedTooltip name="ИерархияНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="244"/>
-					</SearchControlAddition>
-					<Events>
-						<Event name="OnActivateRow">ИерархияНоменклатурыПриАктивизацииСтроки</Event>
-					</Events>
+				<UsualGroup name="КолонкаГрупп" id="236">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка групп</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Колона групи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Калонка груп</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Spaltengruppen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Column groups</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Grupy kolumn</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Grupuri de coloane</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Колонка груп</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>กลุ่มคอลัมน์</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>列组</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка групп</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Колона групи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Калонка груп</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Spaltengruppen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Column groups</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Grupy kolumn</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Grupuri de coloane</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Колонка груп</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>กลุ่มคอลัมน์</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>列组</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КолонкаГруппРасширеннаяПодсказка" id="237"/>
 					<ChildItems>
-						<LabelField name="ГруппаНоменклатуры" id="60">
-							<DataPath>ИерархияНоменклатуры.Ref</DataPath>
+						<Table name="ИерархияНоменклатуры" id="51">
+							<Representation>Tree</Representation>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ИерархияНоменклатуры</DataPath>
+							<RowPictureDataPath>ИерархияНоменклатуры.DefaultPicture</RowPictureDataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группы</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Group</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ro</v8:lang>
-									<v8:content>Grup</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>bl</v8:lang>
-									<v8:content>Групы</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>zh</v8:lang>
-									<v8:content>组</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Групи</v8:content>
+									<v8:content>Группы номенклатуры</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>BG</v8:lang>
-									<v8:content>Група</v8:content>
+									<v8:content>Номенклатура Group</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Групы наменклатуры</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>DE</v8:lang>
-									<v8:content>Gruppe</v8:content>
+									<v8:content>Gruppe Nomenklatur</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group nomenclature</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
-									<v8:content>Grupa</v8:content>
+									<v8:content>Grupa nomenklatura</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>kk</v8:lang>
-									<v8:content>Топтар</v8:content>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Nomenclatura de grup</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>th</v8:lang>
-									<v8:content>กลุ่ม</v8:content>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Групи номенклатури</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>ศัพท์เฉพาะกลุ่ม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>集团命名</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ГруппаНоменклатурыКонтекстноеМеню" id="61"/>
-							<ExtendedTooltip name="ГруппаНоменклатурыРасширеннаяПодсказка" id="62"/>
-						</LabelField>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>true</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>true</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ИерархияНоменклатурыКонтекстноеМеню" id="52">
+								<ChildItems>
+									<Button name="ИерархияНоменклатурыКонтекстноеМенюСоздатьГруппу" id="58">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ИерархияНоменклатуры.StandardCommand.CreateFolder</CommandName>
+										<ExtendedTooltip name="ИерархияНоменклатурыКонтекстноеМенюСоздатьГруппуExtendedTooltip" id="59"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ИерархияНоменклатурыКоманднаяПанель" id="53">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИерархияНоменклатурыРасширеннаяПодсказка" id="54"/>
+							<SearchStringAddition name="ИерархияНоменклатурыСтрокаПоиска" id="324">
+								<AdditionSource>
+									<Item>ИерархияНоменклатуры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИерархияНоменклатурыСтрокаПоискаКонтекстноеМеню" id="325"/>
+								<ExtendedTooltip name="ИерархияНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="326"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИерархияНоменклатурыСостояниеПросмотра" id="327">
+								<AdditionSource>
+									<Item>ИерархияНоменклатуры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИерархияНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="328"/>
+								<ExtendedTooltip name="ИерархияНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="329"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИерархияНоменклатурыУправлениеПоиском" id="330">
+								<AdditionSource>
+									<Item>ИерархияНоменклатуры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИерархияНоменклатурыУправлениеПоискомКонтекстноеМеню" id="331"/>
+								<ExtendedTooltip name="ИерархияНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="332"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">ИерархияНоменклатурыПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ГруппаНоменклатуры" id="60">
+									<DataPath>ИерархияНоменклатуры.Ref</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группы номенклатуры</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Grup</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>Групы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>组</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Групи</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Група</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Gruppe</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Grupa</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>Топтар</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>กลุ่ม</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГруппаНоменклатурыКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ГруппаНоменклатурыРасширеннаяПодсказка" id="62"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<InputField name="ОтобратьОстаткиПоСкладу" id="238">
+							<DataPath>ОтобратьОстаткиПоСкладу</DataPath>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ОтобратьОстаткиПоСкладуКонтекстноеМеню" id="239"/>
+							<ExtendedTooltip name="ОтобратьОстаткиПоСкладуРасширеннаяПодсказка" id="240"/>
+							<Events>
+								<Event name="OnChange">ОтобратьОстаткиПоСкладуПриИзменении</Event>
+							</Events>
+						</InputField>
 					</ChildItems>
-				</Table>
+				</UsualGroup>
 				<UsualGroup name="ГруппаНоменклатура" id="63">
 					<Title>
 						<v8:item>
@@ -1032,6 +1175,48 @@
 								</InputField>
 								<CheckBoxField name="НайтиПоТочномуСоответствию" id="46">
 									<DataPath>НайтиПоТочномуСоответствию</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Точное соответствие</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Точно съвпадение</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Дакладнае адпаведнасць</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Genaue Übereinstimmung</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Exact Match</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Dokładne dopasowanie</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Potrivire exactă</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Точна відповідність</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>การแข่งขันที่แน่นอน</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>完全匹配</v8:content>
+										</v8:item>
+									</Title>
 									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="НайтиПоТочномуСоответствиюКонтекстноеМеню" id="47"/>
@@ -1047,6 +1232,49 @@
 								</Button>
 								<CheckBoxField name="ИспользуютсяИзображения" id="224">
 									<DataPath>ИспользуютсяИзображения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Изображение</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Изображение</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Малюнак</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Bild</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Image</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Obraz</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Imagine</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Зображення</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>ภาพ</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>图像</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ИспользуютсяИзображенияКонтекстноеМеню" id="225"/>
 									<ExtendedTooltip name="ИспользуютсяИзображенияРасширеннаяПодсказка" id="226"/>
@@ -1056,109 +1284,68 @@
 								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаГоризонтТаблицы" id="231">
+						<UsualGroup name="ГруппаСписков" id="308">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа горизонт таблицы</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>EN</v8:lang>
-									<v8:content>Group horizon table</v8:content>
+									<v8:content>Группа списков</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>UK</v8:lang>
-									<v8:content>Група горизонт таблиці</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ZH</v8:lang>
-									<v8:content>集团地平线表</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>RO</v8:lang>
-									<v8:content>Masă orizont de grup</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>BL</v8:lang>
-									<v8:content>Група гарызонт табліцы</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>BG</v8:lang>
-									<v8:content>Трапезни Група хоризонт</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Gruppe Horizont Tabelle</v8:content>
+									<v8:content>Група списків</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
-									<v8:content>Tabela grupy horyzont</v8:content>
+									<v8:content>Listy grupowe</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>TH</v8:lang>
-									<v8:content>ตารางขอบฟ้ากลุ่ม</v8:content>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group lists</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>kk</v8:lang>
-									<v8:content>Топ кестенің көкжиегі</v8:content>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Група списъци</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppenlisten</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа горизонт таблицы</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>EN</v8:lang>
-									<v8:content>Group horizon table</v8:content>
+									<v8:content>Группа списков</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>UK</v8:lang>
-									<v8:content>Група горизонт таблиці</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ZH</v8:lang>
-									<v8:content>集团地平线表</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>RO</v8:lang>
-									<v8:content>Masă orizont de grup</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>BL</v8:lang>
-									<v8:content>Група гарызонт табліцы</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>BG</v8:lang>
-									<v8:content>Трапезни Група хоризонт</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Gruppe Horizont Tabelle</v8:content>
+									<v8:content>Найменування</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
-									<v8:content>Tabela grupy horyzont</v8:content>
+									<v8:content>Listy grupowe</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>TH</v8:lang>
-									<v8:content>ตารางขอบฟ้ากลุ่ม</v8:content>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group lists</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>kk</v8:lang>
-									<v8:content>Топ кестенің көкжиегі</v8:content>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Група списъци</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppenlisten</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>Horizontal</Group>
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаГоризонтТаблицыРасширеннаяПодсказка" id="232"/>
+							<ExtendedTooltip name="ГруппаСписковРасширеннаяПодсказка" id="309"/>
 							<ChildItems>
 								<Table name="Список" id="71">
 									<Representation>List</Representation>
 									<CommandBarLocation>Top</CommandBarLocation>
 									<DefaultItem>true</DefaultItem>
-									<Height>1</Height>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -1193,39 +1380,39 @@
 										<Autofill>false</Autofill>
 									</AutoCommandBar>
 									<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="74"/>
-									<SearchStringAddition name="СписокСтрокаПоиска" id="245">
+									<SearchStringAddition name="СписокСтрокаПоиска" id="333">
 										<AdditionSource>
 											<Item>Список</Item>
 											<Type>SearchStringRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="246"/>
-										<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="247"/>
+										<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="334"/>
+										<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="335"/>
 									</SearchStringAddition>
-									<ViewStatusAddition name="СписокСостояниеПросмотра" id="248">
+									<ViewStatusAddition name="СписокСостояниеПросмотра" id="336">
 										<AdditionSource>
 											<Item>Список</Item>
 											<Type>ViewStatusRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="249"/>
-										<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="250"/>
+										<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="337"/>
+										<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="338"/>
 									</ViewStatusAddition>
-									<SearchControlAddition name="СписокУправлениеПоиском" id="251">
+									<SearchControlAddition name="СписокУправлениеПоиском" id="339">
 										<AdditionSource>
 											<Item>Список</Item>
 											<Type>SearchControl</Type>
 										</AdditionSource>
-										<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="252"/>
-										<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="253"/>
+										<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="340"/>
+										<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="341"/>
 									</SearchControlAddition>
 									<Events>
 										<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
 									</Events>
 									<ChildItems>
-										<LabelField name="СписокСложнаяЦенаНаименование" id="81">
+										<LabelField name="Ссылка" id="321">
 											<DataPath>Список.Ref</DataPath>
 											<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-											<ContextMenu name="СписокСложнаяЦенаНаименованиеКонтекстноеМеню" id="82"/>
-											<ExtendedTooltip name="СписокСложнаяЦенаНаименованиеРасширеннаяПодсказка" id="83"/>
+											<ContextMenu name="СсылкаКонтекстноеМеню" id="322"/>
+											<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="323"/>
 										</LabelField>
 										<LabelField name="СписокСложнаяЦенаКод" id="75">
 											<DataPath>Список.Code</DataPath>
@@ -1282,7 +1469,7 @@
 												</v8:item>
 											</Title>
 											<TitleBackColor>#FFFFF5</TitleBackColor>
-											<Width>12</Width>
+											<Width>10</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<ContextMenu name="СписокСложнаяЦенаЦенаКонтекстноеМеню" id="130"/>
 											<ExtendedTooltip name="СписокСложнаяЦенаЦенаРасширеннаяПодсказка" id="131"/>
@@ -1399,6 +1586,66 @@
 											<ContextMenu name="СписокСложнаяЦенаНоменклатурнаяГруппаКонтекстноеМеню" id="112"/>
 											<ExtendedTooltip name="СписокСложнаяЦенаНоменклатурнаяГруппаРасширеннаяПодсказка" id="113"/>
 										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы1" id="241">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы1</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы1КонтекстноеМеню" id="242"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы1РасширеннаяПодсказка" id="243"/>
+										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы2" id="247">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы2</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы2КонтекстноеМеню" id="248"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы2РасширеннаяПодсказка" id="249"/>
+										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы3" id="250">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы3</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы3КонтекстноеМеню" id="251"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы3РасширеннаяПодсказка" id="252"/>
+										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы4" id="253">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы4</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы4КонтекстноеМеню" id="254"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы4РасширеннаяПодсказка" id="255"/>
+										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы5" id="256">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы5</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы5КонтекстноеМеню" id="257"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы5РасширеннаяПодсказка" id="258"/>
+										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы6" id="259">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы6</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы6КонтекстноеМеню" id="260"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы6РасширеннаяПодсказка" id="261"/>
+										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы7" id="262">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы7</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы7КонтекстноеМеню" id="263"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы7РасширеннаяПодсказка" id="264"/>
+										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы8" id="265">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы8</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы8КонтекстноеМеню" id="266"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы8РасширеннаяПодсказка" id="267"/>
+										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы9" id="268">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы9</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы9КонтекстноеМеню" id="269"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы9РасширеннаяПодсказка" id="270"/>
+										</LabelField>
+										<LabelField name="РеквизитНоменклатурнойГруппы10" id="244">
+											<DataPath>Список.РеквизитНоменклатурнойГруппы10</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="РеквизитНоменклатурнойГруппы10КонтекстноеМеню" id="245"/>
+											<ExtendedTooltip name="РеквизитНоменклатурнойГруппы10РасширеннаяПодсказка" id="246"/>
+										</LabelField>
 										<LabelField name="СписокСложнаяЦенаПроизводитель" id="120">
 											<DataPath>Список.Производитель</DataPath>
 											<ContextMenu name="СписокСложнаяЦенаПроизводительКонтекстноеМеню" id="121"/>
@@ -1406,6 +1653,48 @@
 										</LabelField>
 										<LabelField name="СписокСложнаяЦенаПроцентСкидки" id="123">
 											<DataPath>Список.ПроцентСкидки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>% скидки</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>% Отстъпка</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BL</v8:lang>
+													<v8:content>% Скідкі</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>% Rabatt</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>% Discount</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>% Rabat</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>RO</v8:lang>
+													<v8:content>% Reducere</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>UK</v8:lang>
+													<v8:content>% Знижки</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>TH</v8:lang>
+													<v8:content>ส่วนลด%</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ZH</v8:lang>
+													<v8:content>％折扣</v8:content>
+												</v8:item>
+											</Title>
 											<ContextMenu name="СписокСложнаяЦенаПроцентСкидкиКонтекстноеМеню" id="124"/>
 											<ExtendedTooltip name="СписокСложнаяЦенаПроцентСкидкиРасширеннаяПодсказка" id="125"/>
 										</LabelField>
@@ -1617,11 +1906,6 @@
 											<ContextMenu name="НеОтслеживатьОстатокКонтекстноеМеню" id="147"/>
 											<ExtendedTooltip name="НеОтслеживатьОстатокРасширеннаяПодсказка" id="148"/>
 										</CheckBoxField>
-										<LabelField name="СписокСложнаяЦенаКодПроизводителя" id="102">
-											<DataPath>Список.КодПроизводителя</DataPath>
-											<ContextMenu name="СписокСложнаяЦенаКодПроизводителяКонтекстноеМеню" id="103"/>
-											<ExtendedTooltip name="СписокСложнаяЦенаКодПроизводителяРасширеннаяПодсказка" id="104"/>
-										</LabelField>
 										<LabelField name="СписокСложнаяЦенаКомментарий" id="105">
 											<DataPath>Список.Комментарий</DataPath>
 											<Height>1</Height>
@@ -1629,7 +1913,7 @@
 											<ExtendedTooltip name="СписокСложнаяЦенаКомментарийРасширеннаяПодсказка" id="107"/>
 										</LabelField>
 										<LabelField name="СписокСложнаяЦенаОсновнойШтрихКод" id="114">
-											<DataPath>Список.ОсновнойШтрихКод</DataPath>
+											<DataPath>7/51</DataPath>
 											<Visible>false</Visible>
 											<ContextMenu name="СписокСложнаяЦенаОсновнойШтрихКодКонтекстноеМеню" id="115"/>
 											<ExtendedTooltip name="СписокСложнаяЦенаОсновнойШтрихКодРасширеннаяПодсказка" id="116"/>
@@ -1695,7 +1979,7 @@
 											<ExtendedTooltip name="ДатаРедакцииРасширеннаяПодсказка" id="140"/>
 										</LabelField>
 										<CheckBoxField name="ЭтоГруппа" id="181">
-											<DataPath>Список.IsFolder</DataPath>
+											<DataPath>7/45</DataPath>
 											<ShowInHeader>false</ShowInHeader>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ЭтоГруппаКонтекстноеМеню" id="182"/>
@@ -1703,6 +1987,284 @@
 										</CheckBoxField>
 									</ChildItems>
 								</Table>
+								<Table name="ОстаткиВЕдиницахИзмерения" id="271">
+									<Visible>false</Visible>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ReadOnly>true</ReadOnly>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Height>3</Height>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<VerticalStretch>false</VerticalStretch>
+									<DataPath>ОстаткиВЕдиницахИзмерения</DataPath>
+									<RowPictureDataPath>ОстаткиВЕдиницахИзмерения.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="ОстаткиВЕдиницахИзмеренияКонтекстноеМеню" id="272">
+										<ChildItems>
+											<Button name="ОстаткиВЕдиницахИзмеренияКонтекстноеМенюВывестиСписок" id="319">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ОстаткиВЕдиницахИзмерения.StandardCommand.OutputList</CommandName>
+												<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="320"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="ОстаткиВЕдиницахИзмеренияКоманднаяПанель" id="273"/>
+									<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияРасширеннаяПодсказка" id="274"/>
+									<SearchStringAddition name="ОстаткиВЕдиницахИзмеренияСтрокаПоиска" id="342">
+										<AdditionSource>
+											<Item>ОстаткиВЕдиницахИзмерения</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОстаткиВЕдиницахИзмеренияСтрокаПоискаКонтекстноеМеню" id="343"/>
+										<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияСтрокаПоискаРасширеннаяПодсказка" id="344"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ОстаткиВЕдиницахИзмеренияСостояниеПросмотра" id="345">
+										<AdditionSource>
+											<Item>ОстаткиВЕдиницахИзмерения</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОстаткиВЕдиницахИзмеренияСостояниеПросмотраКонтекстноеМеню" id="346"/>
+										<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияСостояниеПросмотраРасширеннаяПодсказка" id="347"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ОстаткиВЕдиницахИзмеренияУправлениеПоиском" id="348">
+										<AdditionSource>
+											<Item>ОстаткиВЕдиницахИзмерения</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ОстаткиВЕдиницахИзмеренияУправлениеПоискомКонтекстноеМеню" id="349"/>
+										<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияУправлениеПоискомРасширеннаяПодсказка" id="350"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ОстаткиВЕдиницахИзмеренияНаименование" id="275">
+											<DataPath>ОстаткиВЕдиницахИзмерения.Ref</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>UK</v8:lang>
+													<v8:content>У одиниці</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Nazwa</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>Name</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Име</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Name</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ОстаткиВЕдиницахИзмеренияНаименованиеКонтекстноеМеню" id="276"/>
+											<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияНаименованиеРасширеннаяПодсказка" id="277"/>
+										</LabelField>
+										<LabelField name="ОстаткиВЕдиницахИзмеренияКоличество" id="290">
+											<DataPath>ОстаткиВЕдиницахИзмерения.Количество</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В единице</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>UK</v8:lang>
+													<v8:content>Аналоги</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>W jednym</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>In one</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>В едно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>In einer</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ОстаткиВЕдиницахИзмеренияКоличествоКонтекстноеМеню" id="291"/>
+											<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияКоличествоРасширеннаяПодсказка" id="292"/>
+										</LabelField>
+										<LabelField name="ОстаткиВЕдиницахИзмеренияОстаток" id="316">
+											<DataPath>ОстаткиВЕдиницахИзмерения.Остаток</DataPath>
+											<TitleBackColor>#F5FAF5</TitleBackColor>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ОстаткиВЕдиницахИзмеренияОстатокКонтекстноеМеню" id="317"/>
+											<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияОстатокРасширеннаяПодсказка" id="318"/>
+										</LabelField>
+										<LabelField name="ОстаткиВЕдиницахИзмеренияНаСумму" id="313">
+											<DataPath>ОстаткиВЕдиницахИзмерения.НаСумму</DataPath>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ОстаткиВЕдиницахИзмеренияНаСуммуКонтекстноеМеню" id="314"/>
+											<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияНаСуммуРасширеннаяПодсказка" id="315"/>
+										</LabelField>
+										<LabelField name="ОстаткиВЕдиницахИзмеренияВес" id="281">
+											<DataPath>ОстаткиВЕдиницахИзмерения.Вес</DataPath>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ОстаткиВЕдиницахИзмеренияВесКонтекстноеМеню" id="282"/>
+											<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияВесРасширеннаяПодсказка" id="283"/>
+										</LabelField>
+										<LabelField name="ОстаткиВЕдиницахИзмеренияВысота" id="284">
+											<DataPath>ОстаткиВЕдиницахИзмерения.Высота</DataPath>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ОстаткиВЕдиницахИзмеренияВысотаКонтекстноеМеню" id="285"/>
+											<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияВысотаРасширеннаяПодсказка" id="286"/>
+										</LabelField>
+										<LabelField name="ОстаткиВЕдиницахИзмеренияДлина" id="287">
+											<DataPath>ОстаткиВЕдиницахИзмерения.Длина</DataPath>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ОстаткиВЕдиницахИзмеренияДлинаКонтекстноеМеню" id="288"/>
+											<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияДлинаРасширеннаяПодсказка" id="289"/>
+										</LabelField>
+										<LabelField name="ОстаткиВЕдиницахИзмеренияШирина" id="302">
+											<DataPath>ОстаткиВЕдиницахИзмерения.Ширина</DataPath>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ОстаткиВЕдиницахИзмеренияШиринаКонтекстноеМеню" id="303"/>
+											<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияШиринаРасширеннаяПодсказка" id="304"/>
+										</LabelField>
+										<LabelField name="ОстаткиВЕдиницахИзмеренияКомментарий" id="293">
+											<DataPath>ОстаткиВЕдиницахИзмерения.Комментарий</DataPath>
+											<Height>1</Height>
+											<ContextMenu name="ОстаткиВЕдиницахИзмеренияКомментарийКонтекстноеМеню" id="294"/>
+											<ExtendedTooltip name="ОстаткиВЕдиницахИзмеренияКомментарийРасширеннаяПодсказка" id="295"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаГоризонтТаблицы" id="231">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа горизонт таблицы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group horizon table</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група горизонт таблиці</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>集团地平线表</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Masă orizont de grup</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група гарызонт табліцы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Трапезни Група хоризонт</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppe Horizont Tabelle</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Tabela grupy horyzont</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>ตารางขอบฟ้ากลุ่ม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Топ кестенің көкжиегі</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа горизонт таблицы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group horizon table</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група горизонт таблиці</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>集团地平线表</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Masă orizont de grup</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група гарызонт табліцы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Трапезни Група хоризонт</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Gruppe Horizont Tabelle</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Tabela grupy horyzont</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>ตารางขอบฟ้ากลุ่ม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Топ кестенің көкжиегі</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГоризонтТаблицыРасширеннаяПодсказка" id="232"/>
+							<ChildItems>
 								<UsualGroup name="ГруппаИзображения" id="227">
 									<Title>
 										<v8:item>
@@ -2170,57 +2732,6 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ПодборПоискНеУдачный" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Подбор поиск не удачный</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Selection of search is not successful</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Selecția de căutare nu este de succes</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bl</v8:lang>
-					<v8:content>Падбор пошук ня ўдалы</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>zh</v8:lang>
-					<v8:content>选择搜索没有成功</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Підбір критеріями нічого не вдалий</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Избор на търсене не е успешно</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Auswahl Suche nicht erfolgreich</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Wybór wyszukiwanie się nie powiedzie</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>kk</v8:lang>
-					<v8:content>Подбор сәтті ізденіс</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>th</v8:lang>
-					<v8:content>การเลือกของการค้นหาไม่ประสบความสำเร็จ</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="ИерархияНоменклатуры" id="5">
 			<Title>
 				<v8:item>
@@ -2403,16 +2914,11 @@
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	СправочникНоменклатура.Ссылка,
-	СправочникНоменклатура.ПометкаУдаления,
-	СправочникНоменклатура.Родитель,
-	СправочникНоменклатура.ЭтоГруппа,
 	СправочникНоменклатура.Код,
 	СправочникНоменклатура.Наименование,
 	СправочникНоменклатура.НоменклатурнаяГруппа,
 	СправочникНоменклатура.Производитель,
 	СправочникНоменклатура.Комментарий,
-	СправочникНоменклатура.ОсновнойШтрихКод,
-	СправочникНоменклатура.Предопределенный,
 	ВЫБОР
 		КОГДА СправочникНоменклатура.Предопределенный
 				ИЛИ СправочникНоменклатура.ЭтоНабор
@@ -2421,7 +2927,6 @@
 		ИНАЧЕ ЕСТЬNULL(ТоварыОстатки.КоличествоОстаток, 0)
 	КОНЕЦ КАК Остаток,
 	СправочникНоменклатура.Артикул,
-	ЕСТЬNULL(СправочникНоменклатура.Производитель.Код, "") КАК КодПроизводителя,
 	СправочникНоменклатура.ПроцентСкидки,
 	СправочникНоменклатура.РекомендуемыйМинимальныйОстатокТовара,
 	ВЫБОР
@@ -2448,10 +2953,27 @@
 		КОГДА &amp;ИспользоватьСложныйМеханизмЦен
 			ТОГДА ЕСТЬNULL(ВложенныйЗапрос.Цена, 0)
 		ИНАЧЕ СправочникНоменклатура.Цена
-	КОНЕЦ КАК Цена
+	КОНЕЦ КАК Цена,
+	СправочникНоменклатура.Вес,
+	СправочникНоменклатура.Длина,
+	СправочникНоменклатура.Ширина,
+	СправочникНоменклатура.Высота,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы1,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы2,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы3,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы4,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы5,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы6,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы7,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы8,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы9,
+	СправочникНоменклатура.РеквизитНоменклатурнойГруппы10
 ИЗ
 	Справочник.Номенклатура КАК СправочникНоменклатура
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Товары.Остатки(&amp;датаОстатка, ) КАК ТоварыОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Товары.Остатки(
+				&amp;датаОстатка,
+				&amp;НетОтбораПоСкладу
+					ИЛИ Склад = &amp;ОтборПоСкладу) КАК ТоварыОстатки
 		ПО (ТоварыОстатки.Номенклатура = СправочникНоменклатура.Ссылка)
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
 			ЦеныСрезПоследних.Цена КАК Цена,
@@ -3116,6 +3638,197 @@
 			<FunctionalOptions>
 				<Item>FunctionalOption.СопровождатьНоменклатуруИзображениями</Item>
 			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ОтобратьОстаткиПоСкладу" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобрать остатки по складу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Премахнете остатъците от склада</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Адабраць рэшткі па складзе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entfernen Sie die Überreste des Lagers</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Remove the remains of the warehouse</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Usunąć resztki magazynie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Îndepărtați resturile de depozit</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Відібрати залишки по складу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เอาซากของคลังสินค้า</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>取出仓库的遗骸</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтобратьОстаткиПоСкладу</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВестиУчетПоСкладам</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ОстаткиВЕдиницахИзмерения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки в единицах измерения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Використовувати одиниці виміру номенклатури</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Pozostaje w jednostkach</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Remains in units</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Остава в единици</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Bleibt in Einheiten</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьЕдиницыИзмеренияНоменклатуры</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникЕдиницыИзмерения.Ссылка,
+	СправочникЕдиницыИзмерения.Количество,
+	СправочникЕдиницыИзмерения.Вес,
+	СправочникЕдиницыИзмерения.Длина,
+	СправочникЕдиницыИзмерения.Ширина,
+	СправочникЕдиницыИзмерения.Высота,
+	СправочникЕдиницыИзмерения.Комментарий,
+	ВЫБОР
+		КОГДА СправочникЕдиницыИзмерения.Владелец.Предопределенный
+				ИЛИ СправочникЕдиницыИзмерения.Владелец.ЭтоНабор
+				ИЛИ СправочникЕдиницыИзмерения.Владелец.НеОтслеживатьОстаток
+			ТОГДА "-"
+		ИНАЧЕ ЕСТЬNULL(ВложенныйЗапрос.КоличествоОстаток, 0) * СправочникЕдиницыИзмерения.Количество
+	КОНЕЦ КАК Остаток,
+	ВЫБОР
+		КОГДА СправочникЕдиницыИзмерения.Владелец.Предопределенный
+				ИЛИ СправочникЕдиницыИзмерения.Владелец.ЭтоНабор
+				ИЛИ СправочникЕдиницыИзмерения.Владелец.НеОтслеживатьОстаток
+			ТОГДА "X"
+		ИНАЧЕ ВЫБОР
+				КОГДА &amp;ИспользоватьСложныйМеханизмЦен
+					ТОГДА ВЫБОР
+							КОГДА ЕСТЬNULL(ВложенныйЗапрос1.Цена, 0) = 0
+								ТОГДА ВложенныйЗапрос.СуммаОстаток
+							ИНАЧЕ ЕСТЬNULL(ВложенныйЗапрос1.Цена, 0) / ЕСТЬNULL(СправочникЕдиницыИзмерения.Количество, 1) * ЕСТЬNULL(ВложенныйЗапрос.КоличествоОстаток, 0)
+						КОНЕЦ
+				ИНАЧЕ СправочникЕдиницыИзмерения.Владелец.Цена / ЕСТЬNULL(СправочникЕдиницыИзмерения.Количество, 1) * ЕСТЬNULL(ВложенныйЗапрос.КоличествоОстаток, 0)
+			КОНЕЦ
+	КОНЕЦ КАК НаСумму
+ИЗ
+	Справочник.ЕдиницыИзмерения КАК СправочникЕдиницыИзмерения
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ТоварыОстатки.КоличествоОстаток КАК КоличествоОстаток,
+			ТоварыОстатки.СуммаОстаток КАК СуммаОстаток,
+			ТоварыОстатки.Номенклатура КАК Номенклатура
+		ИЗ
+			РегистрНакопления.Товары.Остатки(
+					&amp;ДатаОстатка,
+					Номенклатура = &amp;Номенклатура
+						И (&amp;НетОтбораПоСкладу
+							ИЛИ Склад = &amp;ОтборПоСкладу)) КАК ТоварыОстатки) КАК ВложенныйЗапрос
+		ПО СправочникЕдиницыИзмерения.Владелец = ВложенныйЗапрос.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ЦеныСрезПоследних.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+			ЦеныСрезПоследних.Цена КАК Цена
+		ИЗ
+			РегистрСведений.Цены.СрезПоследних(
+					&amp;ДатаОстатка,
+					Номенклатура = &amp;Номенклатура
+						И ВидЦен = &amp;ВидЦен) КАК ЦеныСрезПоследних) КАК ВложенныйЗапрос1
+		ПО СправочникЕдиницыИзмерения.Ссылка = ВложенныйЗапрос1.ЕдиницаИзмерения
+ГДЕ
+	СправочникЕдиницыИзмерения.Владелец = &amp;Номенклатура</QueryText>
+				<MainTable>Catalog.ЕдиницыИзмерения</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ИспользоватьЕдиницыИзмеренияНоменклатуры" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать единицы измерения номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Група списків</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Aparaty pracują nomenklaturę</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Use units nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Използвайте единици номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Verwenden Einheiten Nomenklatur</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

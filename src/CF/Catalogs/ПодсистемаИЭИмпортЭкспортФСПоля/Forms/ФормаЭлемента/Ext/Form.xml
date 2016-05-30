@@ -491,10 +491,11 @@
 							<v8:content>ชื่อเขตข้อมูล</v8:content>
 						</v8:item>
 					</Title>
-					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<TitleLocation>Top</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
-					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
+					<Font ref="style:LargeTextFont" kind="StyleItem"/>
 					<ContextMenu name="НаименованиеПоляКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="НаименованиеПоляExtendedTooltip" id="38"/>
 					<Events>
@@ -506,7 +507,7 @@
 		<LabelDecoration name="МожноИспользоватьТочкуДляСубРеквизитов" id="29">
 			<HorizontalStretch>false</HorizontalStretch>
 			<TextColor>style:FieldSelectionBackColor</TextColor>
-			<Font ref="sys:DefaultGUIFont" bold="false" italic="true" underline="false" strikeout="false" kind="WindowsFont"/>
+			<Font ref="sys:DefaultGUIFont" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -562,6 +563,8 @@
 			<EditMode>EnterOnInput</EditMode>
 			<Height>2</Height>
 			<MultiLine>true</MultiLine>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="КомментарийExtendedTooltip" id="40"/>
 		</InputField>
@@ -612,6 +615,7 @@
 					<v8:content>รูปแบบส่วนแบ่ง</v8:content>
 				</v8:item>
 			</Title>
+			<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -816,6 +820,8 @@
 						<InputField name="ЗаголовокПоляПоУмолчанию" id="26">
 							<DataPath>Объект.ЗаголовокПоляПоУмолчанию</DataPath>
 							<TitleLocation>Top</TitleLocation>
+							<TextColor>#800000</TextColor>
+							<BorderColor>style:FieldBackColor</BorderColor>
 							<ContextMenu name="ЗаголовокПоляПоУмолчаниюКонтекстноеМеню" id="27"/>
 							<ExtendedTooltip name="ЗаголовокПоляПоУмолчаниюExtendedTooltip" id="44"/>
 						</InputField>
@@ -1300,6 +1306,9 @@
 								<InputField name="ТипТут" id="9">
 									<DataPath>Объект.ТипТут</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<TextColor>#800000</TextColor>
+									<BorderColor>style:FieldBackColor</BorderColor>
+									<Font ref="style:LargeTextFont" height="12" kind="StyleItem"/>
 									<ContextMenu name="ТипТутКонтекстноеМеню" id="10"/>
 									<ExtendedTooltip name="ТипТутExtendedTooltip" id="55"/>
 								</InputField>
@@ -1470,13 +1479,14 @@
 						</v8:item>
 					</Title>
 					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
 					<ExtendedTooltip name="РодительExtendedTooltip" id="59"/>
 				</InputField>
 				<InputField name="Код" id="1">
 					<DataPath>Объект.Code</DataPath>
-					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="КодExtendedTooltip" id="60"/>
 				</InputField>
@@ -2213,6 +2223,14 @@
 			</Item>
 			<Item>
 				<Command>InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenByValue.ОбъектВладелец</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>

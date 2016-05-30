@@ -187,6 +187,12 @@
 					<v8:content>Иемден- ортаның бағасы</v8:content>
 				</v8:item>
 			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=4</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СуммаПриобретения</dataPath>
@@ -257,14 +263,23 @@
 	ВаловаяПрибыль.НомерСтроки,
 	ВаловаяПрибыль.ВидДвижения,
 	ВаловаяПрибыль.Номенклатура,
-	ВаловаяПрибыль.Сумма,
-	ВаловаяПрибыль.ПроцентНаценки,
+	ВЫБОР
+		КОГДА ВаловаяПрибыль.ВидДвижения = &amp;Приход
+			ТОГДА ВаловаяПрибыль.Сумма
+		ИНАЧЕ -ВаловаяПрибыль.Сумма
+	КОНЕЦ КАК Сумма,
+	ВЫБОР
+		КОГДА ВаловаяПрибыль.ВидДвижения = &amp;Приход
+			ТОГДА ВаловаяПрибыль.ПроцентНаценки
+		ИНАЧЕ -ВаловаяПрибыль.ПроцентНаценки
+	КОНЕЦ КАК ПроцентНаценки,
 	ВаловаяПрибыль.Комментарий,
 	ВаловаяПрибыль.Номенклатура.НаименованиеДляПечати,
 	ЕСТЬNULL(ВложенныйЗапрос.КоличествоПриобретения, 0) КАК КоличествоПриобретения,
 	ЕСТЬNULL(ВложенныйЗапрос.СуммаПриобретения, 0) КАК СуммаПриобретения,
 	ЕСТЬNULL(ВложенныйЗапрос.СредняяЦенаПриобретения, 0) КАК СредняяЦенаПриобретения,
-	ВаловаяПрибыль.РентабельностьПродаж
+	ВаловаяПрибыль.РентабельностьПродаж,
+	ВаловаяПрибыль.Склад
 ИЗ
 	РегистрНакопления.ВаловаяПрибыль КАК ВаловаяПрибыль
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
@@ -282,7 +297,9 @@
 ГДЕ
 	ВаловаяПрибыль.Период МЕЖДУ &amp;ДатаНачала И КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ)
 	И (НЕ &amp;ОтборПоНоменклатуре
-			ИЛИ ВаловаяПрибыль.Номенклатура = &amp;Номенклатура)</query>
+			ИЛИ ВаловаяПрибыль.Номенклатура = &amp;Номенклатура)
+	И (НЕ &amp;ОтборПоСкладу
+			ИЛИ ВаловаяПрибыль.Склад = &amp;Склад)</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Сумма</dataPath>
@@ -295,6 +312,18 @@
 	<totalField>
 		<dataPath>РентабельностьПродаж</dataPath>
 		<expression>Среднее(РентабельностьПродаж)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СредняяЦенаПриобретения</dataPath>
+		<expression>Среднее(СредняяЦенаПриобретения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПриобретения</dataPath>
+		<expression>Сумма(СуммаПриобретения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПриобретения</dataPath>
+		<expression>Сумма(КоличествоПриобретения)</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаНачала</name>
@@ -624,6 +653,128 @@
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
 	</parameter>
+	<parameter>
+		<name>ОтборПоСкладу</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор по складу</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Справянето склада</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BL</v8:lang>
+				<v8:content>Адбор па складзе</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Die Bekämpfung der Lager</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Tackling the warehouse</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Walka z magazynu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>RO</v8:lang>
+				<v8:content>Abordarea depozit</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Відбір по складу</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>TH</v8:lang>
+				<v8:content>การแก้ปัญหาคลังสินค้า</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ZH</v8:lang>
+				<v8:content>解决仓库</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Склад</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Склад</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Склад</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BL</v8:lang>
+				<v8:content>Склад</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Lager</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Warehouse</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Magazyn</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>RO</v8:lang>
+				<v8:content>Depozit</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Склад</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>TH</v8:lang>
+				<v8:content>คลังสินค้า</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ZH</v8:lang>
+				<v8:content>仓库</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Склады</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Приход</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Приход</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Coming</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Прихід</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise">d4p1:AccumulationRecordType</v8:Type>
+		</valueType>
+		<value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d3p1:AccumulationRecordType">Receipt</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
@@ -676,6 +827,9 @@
 						</dcsset:item>
 						<dcsset:item>
 							<dcsset:field>РентабельностьПродаж</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter/>
@@ -733,6 +887,20 @@
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>Шрифт</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>
@@ -902,8 +1070,8 @@
 			</dcsset:filter>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Сумма</dcsset:field>
-					<dcsset:orderType>Desc</dcsset:orderType>
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 			</dcsset:order>
 			<dcsset:conditionalAppearance>
@@ -914,6 +1082,9 @@
 						</dcsset:item>
 						<dcsset:item>
 							<dcsset:field>РентабельностьПродаж</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter/>
@@ -971,6 +1142,20 @@
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>Шрифт</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>
@@ -1167,6 +1352,9 @@
 						<dcsset:item>
 							<dcsset:field>РентабельностьПродаж</dcsset:field>
 						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
+						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter/>
 					<dcsset:appearance>
@@ -1223,6 +1411,20 @@
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>Шрифт</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>
@@ -1301,6 +1503,540 @@
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ОсновнойПоСкладам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По складам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Склад</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BL</v8:lang>
+				<v8:content>Па складах</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Lager</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Warehouse</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Magazyn</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>RO</v8:lang>
+				<v8:content>Depozit</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>По складах</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>TH</v8:lang>
+				<v8:content>คลังสินค้า</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ZH</v8:lang>
+				<v8:content>仓库</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентНаценки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РентабельностьПродаж</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прибыль</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>NotInListByHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПроцентНаценки</dcsset:left>
+					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Сумма</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПроцентНаценки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РентабельностьПродаж</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=12; ЧДЦ=4</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПроцентНаценки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Номенклатура</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Номенклатура.ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валовая прибыль по складам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Gross profit for the period</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Валовий прибуток за період</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Валавы прыбытак за перыяд</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>毛利期内</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Profitului brut pentru perioada</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zysk brutto za okres</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Брутна печалба за периода</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Der Bruttogewinn für den Zeitraum</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Жалпы пайда үшін кезді</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>กำไรขั้นต้นสำหรับงวด</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Склад</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Номенклатура</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПодробныйПОСкладам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Подробный по складам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BG</v8:lang>
+				<v8:content>Подробна Warehouse</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>BL</v8:lang>
+				<v8:content>Падрабязны па складах</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>DE</v8:lang>
+				<v8:content>Detaillierte Lager</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>EN</v8:lang>
+				<v8:content>Detailed Warehouse</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>PL</v8:lang>
+				<v8:content>Szczegółowy Magazyn</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>RO</v8:lang>
+				<v8:content>Depozit detaliat</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>UK</v8:lang>
+				<v8:content>Докладний по складам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>TH</v8:lang>
+				<v8:content>โกดังที่รายละเอียดของ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ZH</v8:lang>
+				<v8:content>详细仓库</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентНаценки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РентабельностьПродаж</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прибыль</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>NotInListByHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПроцентНаценки</dcsset:left>
+					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Сумма</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПроцентНаценки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РентабельностьПродаж</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=12; ЧДЦ=4</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПроцентНаценки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Номенклатура</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Номенклатура.ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СредняяЦенаПриобретения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валовая прибыль за период по Складам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Gross profit for the period</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Валовий прибуток за період</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Валавы прыбытак за перыяд</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>毛利期内</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Profitului brut pentru perioada</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Zysk brutto za okres</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Брутна печалба за периода</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Der Bruttogewinn für den Zeitraum</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Жалпы пайда үшін кезді</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>กำไรขั้นต้นสำหรับงวด</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Склад</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Номенклатура</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
 				</dcsset:item>
 			</dcsset:item>
 		</dcsset:settings>

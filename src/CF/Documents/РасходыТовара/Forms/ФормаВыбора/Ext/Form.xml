@@ -68,7 +68,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Найти</v8:content>
+						<v8:content>Найти..</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -361,6 +361,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -404,29 +405,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="68">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="86">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="69"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="70"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="87"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="88"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="71">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="89">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="72"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="73"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="90"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="91"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="74">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="92">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="75"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="76"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="93"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="94"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Дата" id="5">
@@ -490,6 +491,32 @@
 				</LabelField>
 				<LabelField name="ВидДокумента" id="62">
 					<DataPath>Список.ВидДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Тип на документи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вид документів</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Type of documents</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Rodzaj dokumentów</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Einheit.</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="ВидДокументаКонтекстноеМеню" id="63"/>
 					<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="64"/>
 				</LabelField>
@@ -498,20 +525,37 @@
 					<ContextMenu name="КлиентПоставщикКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="КлиентПоставщикРасширеннаяПодсказка" id="16"/>
 				</LabelField>
-				<LabelField name="Договор" id="57">
-					<DataPath>Список.Договор</DataPath>
-					<ContextMenu name="ДоговорКонтекстноеМеню" id="58"/>
-					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="59"/>
-				</LabelField>
-				<LabelField name="Организация" id="54">
-					<DataPath>Список.Организация</DataPath>
-					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="55"/>
-					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="56"/>
-				</LabelField>
 				<LabelField name="Склад" id="11">
 					<DataPath>Список.Склад</DataPath>
 					<ContextMenu name="СкладКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="13"/>
+				</LabelField>
+				<CheckBoxField name="ПередачаДляКомиссионнойТорговли" id="95">
+					<DataPath>Список.ПередачаДляКомиссионнойТорговли</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для Комиссии</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>For the Commission</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Для Комісії</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПередачаДляКомиссионнойТорговлиКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="ПередачаДляКомиссионнойТорговлиРасширеннаяПодсказка" id="97"/>
+				</CheckBoxField>
+				<LabelField name="ТовараВКоличестве" id="26">
+					<DataPath>Список.ТовараВКоличестве</DataPath>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТовараВКоличествеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТовараВКоличествеРасширеннаяПодсказка" id="28"/>
 				</LabelField>
 				<LabelField name="ТовараНаСумму" id="23">
 					<DataPath>Список.ТовараНаСумму</DataPath>
@@ -535,13 +579,6 @@
 					<ContextMenu name="ТовараНаСуммуКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="ТовараНаСуммуРасширеннаяПодсказка" id="25"/>
 				</LabelField>
-				<LabelField name="ТовараВКоличестве" id="26">
-					<DataPath>Список.ТовараВКоличестве</DataPath>
-					<Width>12</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="ТовараВКоличествеКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="ТовараВКоличествеРасширеннаяПодсказка" id="28"/>
-				</LabelField>
 				<LabelField name="ПоступилоДенег" id="17">
 					<DataPath>Список.ПоступилоДенег</DataPath>
 					<Width>12</Width>
@@ -563,10 +600,37 @@
 					<ContextMenu name="ПоступилоДенегКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="ПоступилоДенегРасширеннаяПодсказка" id="19"/>
 				</LabelField>
+				<LabelField name="Организация" id="54">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="56"/>
+				</LabelField>
+				<LabelField name="Договор" id="57">
+					<DataPath>Список.Договор</DataPath>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="59"/>
+				</LabelField>
 				<LabelField name="Сотрудник" id="65">
 					<DataPath>Список.Сотрудник</DataPath>
 					<ContextMenu name="СотрудникКонтекстноеМеню" id="66"/>
 					<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<CheckBoxField name="ТоварОтправлен" id="80">
+					<DataPath>Список.ТоварОтправлен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТоварОтправленКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ТоварОтправленРасширеннаяПодсказка" id="82"/>
+				</CheckBoxField>
+				<CheckBoxField name="КлиентОповещен" id="83">
+					<DataPath>Список.КлиентОповещен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КлиентОповещенКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="КлиентОповещенРасширеннаяПодсказка" id="85"/>
+				</CheckBoxField>
+				<LabelField name="ТалонТрек" id="77">
+					<DataPath>Список.ТалонТрек</DataPath>
+					<ContextMenu name="ТалонТрекКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ТалонТрекРасширеннаяПодсказка" id="79"/>
 				</LabelField>
 				<LabelField name="Комментарий" id="20">
 					<DataPath>Список.Комментарий</DataPath>
@@ -587,8 +651,6 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
-	ДокументРасходыТовара.Ссылка,
-	ДокументРасходыТовара.ПометкаУдаления,
 	ДокументРасходыТовара.Номер,
 	ДокументРасходыТовара.Дата,
 	ДокументРасходыТовара.Проведен,
@@ -605,17 +667,12 @@
 	ДокументРасходыТовара.ПартияПриобретения,
 	ДокументРасходыТовара.Организация,
 	ДокументРасходыТовара.Договор,
-	ДокументРасходыТовара.ХранилищеДенег,
 	ДокументРасходыТовара.ЗаказКлиента,
-	ДокументРасходыТовара.ЭтоЗаказ,
-	ДокументРасходыТовара.ЗаказСогласован,
-	ДокументРасходыТовара.ЗаказОплачен,
-	ДокументРасходыТовара.ЗаказДатаПлана,
-	ДокументРасходыТовара.ЗаказДатаФакта,
-	ДокументРасходыТовара.Ответственный,
-	ДокументРасходыТовара.ДатаСоздания,
-	ДокументРасходыТовара.ДатаРедакции,
-	ДокументРасходыТовара.Сотрудник
+	ДокументРасходыТовара.Сотрудник,
+	ДокументРасходыТовара.ТалонТрек,
+	ДокументРасходыТовара.КлиентОповещен,
+	ДокументРасходыТовара.ТоварОтправлен,
+	ДокументРасходыТовара.ПередачаДляКомиссионнойТорговли
 ИЗ
 	Документ.РасходыТовара КАК ДокументРасходыТовара
 ГДЕ

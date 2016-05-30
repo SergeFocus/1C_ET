@@ -162,6 +162,13 @@
 				</ToolTip>
 				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
 				<ExtendedTooltip name="ФормаГруппаГлобРасширеннаяПодсказка" id="61"/>
+				<ChildItems>
+					<Button name="РасчитатьВсеЗависимыеЦены" id="82">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РасчитатьВсеЗависимыеЦены</CommandName>
+						<ExtendedTooltip name="РасчитатьВсеЗависимыеЦеныРасширеннаяПодсказка" id="83"/>
+					</Button>
+				</ChildItems>
 			</ButtonGroup>
 			<Button name="ФормаЗакрыть" id="44">
 				<Type>CommandBarButton</Type>
@@ -442,11 +449,11 @@
 							<v8:content>เงินตรา</v8:content>
 						</v8:item>
 					</Title>
-					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<EditMode>EnterOnInput</EditMode>
-					<Width>15</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<Font ref="style:LargeTextFont" kind="StyleItem"/>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
@@ -460,64 +467,6 @@
 					<CommandName>Form.Command.ПредставлениеНаДругихЯзыках</CommandName>
 					<ExtendedTooltip name="ПредставлениеНаДругихЯзыкахРасширеннаяПодсказка" id="81"/>
 				</Button>
-				<LabelDecoration name="Декорация1" id="82">
-					<HorizontalStretch>true</HorizontalStretch>
-					<ContextMenu name="Декорация1КонтекстноеМеню" id="83"/>
-					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="84"/>
-				</LabelDecoration>
-				<InputField name="Код" id="1">
-					<DataPath>Объект.Code</DataPath>
-					<SkipOnInput>true</SkipOnInput>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Code</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Code</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Kod</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Cod</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>รหัส</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>码</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>kk</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<Table name="НаименованияНаДругихЯзыках" id="62">
@@ -543,29 +492,29 @@
 			</ContextMenu>
 			<AutoCommandBar name="НаименованияНаДругихЯзыкахКоманднаяПанель" id="64"/>
 			<ExtendedTooltip name="НаименованияНаДругихЯзыкахРасширеннаяПодсказка" id="65"/>
-			<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="85">
+			<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="84">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="86"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="87"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="85"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="86"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="88">
+			<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="87">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="89"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="88"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="89"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="91">
+			<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="90">
 				<AdditionSource>
 					<Item>НаименованияНаДругихЯзыках</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="92"/>
-				<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="93"/>
+				<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="91"/>
+				<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="92"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="OnChange">НаименованияНаДругихЯзыкахПриИзменении</Event>
@@ -589,6 +538,61 @@
 				</InputField>
 			</ChildItems>
 		</Table>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<SkipOnInput>true</SkipOnInput>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Code</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Code</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Kod</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Cod</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>รหัส</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>码</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Код</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:LargeTextFont" height="12" kind="StyleItem"/>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
 		<UsualGroup name="ГруппаНаименование" id="50">
 			<Title>
 				<v8:item>
@@ -690,8 +694,10 @@
 			<ChildItems>
 				<LabelField name="ТекущийКурс" id="29">
 					<DataPath>ТекущийКурс</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<TitleHeight>2</TitleHeight>
 					<HorizontalAlign>Left</HorizontalAlign>
-					<HorizontalStretch>true</HorizontalStretch>
+					<HorizontalStretch>false</HorizontalStretch>
 					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<ContextMenu name="ТекущийКурсКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ТекущийКурсРасширеннаяПодсказка" id="31"/>
@@ -700,6 +706,10 @@
 					<DataPath>Объект.Комментарий</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<TitleLocation>Top</TitleLocation>
+					<Width>40</Width>
+					<Height>2</Height>
+					<BorderColor>style:FieldBackColor</BorderColor>
+					<Font ref="style:NormalTextFont" kind="StyleItem"/>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="55"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="56"/>
 				</InputField>
@@ -1296,20 +1306,77 @@
 			</FunctionalOptions>
 			<Representation>Picture</Representation>
 		</Command>
+		<Command name="РасчитатьВсеЗависимыеЦены" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать все зависимые цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Розрахувати всі залежні ціни</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Obliczyć wszystkie ceny zależne</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Calculate all dependent prices</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изчислява всички зависими цени</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Berechnen Sie alle abhängigen Preise</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать все зависимые цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вибрати групу аналогів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Obliczyć wszystkie ceny zależne</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Calculate all dependent prices</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изчислява всички зависими цени</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Berechnen Sie alle abhängigen Preise</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВидыЦен</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РасчитатьВсеЗависимыеЦены</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСложныйМеханизмЦен</Item>
+			</FunctionalOptions>
+			<Representation>Picture</Representation>
+		</Command>
 	</Commands>
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>
-				<Command>InformationRegister.КурсыВалют.StandardCommand.OpenByValue.Валюта</Command>
-				<Type>Auto</Type>
-				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
-				<Visible>
-					<xr:Common>false</xr:Common>
-				</Visible>
-			</Item>
-			<Item>
 				<Command>InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenByValue.ОбъектВладелец</Command>
 				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>
 					<xr:Common>false</xr:Common>
@@ -1318,6 +1385,18 @@
 			<Item>
 				<Command>InformationRegister.ЗначенияНаДругихЯзыках.StandardCommand.OpenByValue.ОбъектБазыДанных</Command>
 				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>3</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>
 					<xr:Common>false</xr:Common>

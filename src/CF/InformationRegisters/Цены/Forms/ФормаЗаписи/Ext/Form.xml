@@ -520,6 +520,7 @@
 		</UsualGroup>
 		<InputField name="Номенклатура" id="4">
 			<DataPath>Запись.Номенклатура</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
 			<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
 			<ContextMenu name="НоменклатураКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="6"/>
@@ -527,8 +528,15 @@
 				<Event name="OnChange">НоменклатураПриИзменении</Event>
 			</Events>
 		</InputField>
+		<InputField name="ЕдиницаИзмерения" id="61">
+			<DataPath>Запись.ЕдиницаИзмерения</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="62"/>
+			<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="63"/>
+		</InputField>
 		<InputField name="ВидЦен" id="7">
 			<DataPath>Запись.ВидЦен</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
 			<BackColor>#FFFFF0</BackColor>
 			<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
 			<ContextMenu name="ВидЦенКонтекстноеМеню" id="8"/>
@@ -537,13 +545,6 @@
 				<Event name="OnChange">ВидЦенПриИзменении</Event>
 			</Events>
 		</InputField>
-		<CheckBoxField name="Вручную" id="55">
-			<DataPath>Запись.Вручную</DataPath>
-			<Enabled>false</Enabled>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ВручнуюКонтекстноеМеню" id="56"/>
-			<ExtendedTooltip name="ВручнуюРасширеннаяПодсказка" id="57"/>
-		</CheckBoxField>
 		<UsualGroup name="ГруппаЦенаВалюта" id="36">
 			<Title>
 				<v8:item>
@@ -704,6 +705,7 @@
 					<Width>15</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<SpinButton>true</SpinButton>
+					<BackColor>#FFF4FF</BackColor>
 					<Font ref="sys:DefaultGUIFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<ContextMenu name="ЦенаКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="ЦенаРасширеннаяПодсказка" id="12"/>
@@ -719,6 +721,98 @@
 					<ContextMenu name="ВидЦенВалютаЦеныКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="ВидЦенВалютаЦеныРасширеннаяПодсказка" id="40"/>
 				</LabelField>
+				<CheckBoxField name="Вручную" id="55">
+					<DataPath>Запись.Вручную</DataPath>
+					<Enabled>false</Enabled>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена зарегистрирована вручную</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Не</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Няма</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Nicht</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>No</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Nie</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Nu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Ні</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>ไม่</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>无</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>БЛ='Да'; БИ='Запис и затваряне'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>БЛ='Ды'; БИ='Запісаць і зачыніць'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>БЛ='Ja'; БИ='Aufnahme und in der Nähe'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>БЛ='Yes'; БИ='Record and close'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>БЛ='Tak'; БИ=', Blisko rekordu'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>БЛ='Da'; БИ='Înregistrare și aproape'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>БЛ='Так'; БИ='Записати і закрити'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>БЛ='ใช่'; БИ='บันทึกและปิด'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>БЛ='是的'; БИ='记录并关闭'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ВручнуюКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ВручнуюРасширеннаяПодсказка" id="57"/>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="ДокументРегистрации" id="13">
@@ -730,7 +824,8 @@
 		</InputField>
 		<InputField name="Комментарий" id="16">
 			<DataPath>Запись.Комментарий</DataPath>
-			<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
 		</InputField>

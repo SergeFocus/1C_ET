@@ -67,7 +67,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать шаблон</v8:content>
+						<v8:content>Добавить шаблон</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -114,13 +114,13 @@
 			</Button>
 			<Button name="ФормаСоздатьГруппу" id="31">
 				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
+				<Representation>Picture</Representation>
 				<OnlyInAllActions>true</OnlyInAllActions>
 				<CommandName>Form.StandardCommand.CreateFolder</CommandName>
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать группу</v8:content>
+						<v8:content>Добавить группу</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>BG</v8:lang>
@@ -171,6 +171,13 @@
 				<OnlyInAllActions>true</OnlyInAllActions>
 				<CommandName>Form.StandardCommand.Copy</CommandName>
 				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="50"/>
+			</Button>
+			<Button name="ФормаУстановитьПометкуУдаления" id="53">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.SetDeletionMark</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьПометкуУдаленияРасширеннаяПодсказка" id="54"/>
 			</Button>
 			<Button name="ФормаИзменить" id="51">
 				<Type>CommandBarButton</Type>
@@ -463,29 +470,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="18"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="53">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="55">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="54"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="55"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="57"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="56">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="58">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="57"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="58"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="59">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="61">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="60"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="61"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="62"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="63"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="4">
@@ -494,7 +501,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Наименование шаблонов</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>

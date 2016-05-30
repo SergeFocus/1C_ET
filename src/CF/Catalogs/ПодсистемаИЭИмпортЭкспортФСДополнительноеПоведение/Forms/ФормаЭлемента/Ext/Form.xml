@@ -401,7 +401,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование правила поведения для шаблинов импорта-экспорта</v8:content>
+							<v8:content>Наименование правила поведения для шаблонов импорта-экспорта</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -413,7 +413,7 @@
 						</v8:item>
 						<v8:item>
 							<v8:lang>bl</v8:lang>
-							<v8:content>Найменне правілы паводзінаў для шаблинов імпарту-экспарту</v8:content>
+							<v8:content>Найменне правілы паводзінаў для шаблонов імпарту-экспарту</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>zh</v8:lang>
@@ -444,9 +444,10 @@
 							<v8:content>ชื่อของกฎระเบียบของการปฏิบัติสำหรับการนำเข้าและการส่งออก Shablin</v8:content>
 						</v8:item>
 					</Title>
-					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<TitleLocation>Top</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="37"/>
@@ -553,6 +554,8 @@
 					<DataPath>Объект.ИмяРеквизита</DataPath>
 					<TitleLocation>Top</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<TextColor>#800000</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
 					<ContextMenu name="ИмяРеквизитаКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ИмяРеквизитаExtendedTooltip" id="39"/>
 				</InputField>
@@ -787,6 +790,7 @@
 					<v8:content>หน้าของฟอร์ม</v8:content>
 				</v8:item>
 			</Title>
+			<TitleFont ref="style:LargeTextFont" height="12" kind="StyleItem"/>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -996,31 +1000,83 @@
 									</Button>
 								</ChildItems>
 							</ContextMenu>
-							<AutoCommandBar name="ТаблицаПоведенияКоманднаяПанель" id="14"/>
+							<AutoCommandBar name="ТаблицаПоведенияКоманднаяПанель" id="14">
+								<ChildItems>
+									<Button name="ТаблицаПоведенияДобавить" id="86">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ТаблицаПоведения.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить поведение</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BG</v8:lang>
+												<v8:content>Добави Behavior</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BL</v8:lang>
+												<v8:content>Дадаць паводзіны</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>DE</v8:lang>
+												<v8:content>Verhalten hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>EN</v8:lang>
+												<v8:content>Add Behavior</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>PL</v8:lang>
+												<v8:content>Dodaj Zachowanie</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>RO</v8:lang>
+												<v8:content>Adauga Comportamentul</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>UK</v8:lang>
+												<v8:content>Додати поведінку</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>TH</v8:lang>
+												<v8:content>เพิ่มพฤติกรรม</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ZH</v8:lang>
+												<v8:content>添加行为</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТаблицаПоведенияДобавитьРасширеннаяПодсказка" id="87"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблицаПоведенияExtendedTooltip" id="45"/>
-							<SearchStringAddition name="ТаблицаПоведенияСтрокаПоиска" id="86">
+							<SearchStringAddition name="ТаблицаПоведенияСтрокаПоиска" id="88">
 								<AdditionSource>
 									<Item>ТаблицаПоведения</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ТаблицаПоведенияСтрокаПоискаКонтекстноеМеню" id="87"/>
-								<ExtendedTooltip name="ТаблицаПоведенияСтрокаПоискаРасширеннаяПодсказка" id="88"/>
+								<ContextMenu name="ТаблицаПоведенияСтрокаПоискаКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="ТаблицаПоведенияСтрокаПоискаРасширеннаяПодсказка" id="90"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ТаблицаПоведенияСостояниеПросмотра" id="89">
+							<ViewStatusAddition name="ТаблицаПоведенияСостояниеПросмотра" id="91">
 								<AdditionSource>
 									<Item>ТаблицаПоведения</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ТаблицаПоведенияСостояниеПросмотраКонтекстноеМеню" id="90"/>
-								<ExtendedTooltip name="ТаблицаПоведенияСостояниеПросмотраРасширеннаяПодсказка" id="91"/>
+								<ContextMenu name="ТаблицаПоведенияСостояниеПросмотраКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="ТаблицаПоведенияСостояниеПросмотраРасширеннаяПодсказка" id="93"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ТаблицаПоведенияУправлениеПоиском" id="92">
+							<SearchControlAddition name="ТаблицаПоведенияУправлениеПоиском" id="94">
 								<AdditionSource>
 									<Item>ТаблицаПоведения</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ТаблицаПоведенияУправлениеПоискомКонтекстноеМеню" id="93"/>
-								<ExtendedTooltip name="ТаблицаПоведенияУправлениеПоискомРасширеннаяПодсказка" id="94"/>
+								<ContextMenu name="ТаблицаПоведенияУправлениеПоискомКонтекстноеМеню" id="95"/>
+								<ExtendedTooltip name="ТаблицаПоведенияУправлениеПоискомРасширеннаяПодсказка" id="96"/>
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="УстанавливатьЗначенияНомерСтроки" id="15">
@@ -1453,7 +1509,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>CommonPicture.SZПрограммныйКод</xr:Ref>
+						<xr:Ref>CommonPicture.ПрограммныйКод</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
 					<ExtendedTooltip name="ИсполнениеПрограммногоКодаExtendedTooltip" id="52"/>
@@ -1462,6 +1518,8 @@
 							<DataPath>Объект.ПрограммныйКод</DataPath>
 							<MultiLine>true</MultiLine>
 							<ExtendedEdit>true</ExtendedEdit>
+							<BorderColor>style:FieldBackColor</BorderColor>
+							<Font ref="sys:ANSIFixedFont" height="10" kind="WindowsFont"/>
 							<ContextMenu name="ПрограммныйКодКонтекстноеМеню" id="28"/>
 							<ExtendedTooltip name="ПрограммныйКодExtendedTooltip" id="53"/>
 						</InputField>
@@ -1565,6 +1623,8 @@
 						<InputField name="Описание1" id="35">
 							<DataPath>Объект.Описание</DataPath>
 							<TitleLocation>None</TitleLocation>
+							<BorderColor>style:FieldBackColor</BorderColor>
+							<Font ref="style:NormalTextFont" kind="StyleItem"/>
 							<ContextMenu name="Описание1КонтекстноеМеню" id="36"/>
 							<ExtendedTooltip name="Описание1ExtendedTooltip" id="55"/>
 						</InputField>
@@ -1710,6 +1770,14 @@
 			</Item>
 			<Item>
 				<Command>InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenByValue.ОбъектВладелец</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>

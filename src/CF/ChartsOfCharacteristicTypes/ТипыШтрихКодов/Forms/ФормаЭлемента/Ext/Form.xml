@@ -4,7 +4,102 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<ScalingMode>Compact</ScalingMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="7">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="9">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<ButtonGroup name="ФормаГруппаГлоб" id="17">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>Образуват група от Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>UK</v8:lang>
+						<v8:content>Форма група глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>EN</v8:lang>
+						<v8:content>Form a group of Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>Tworzą grupę Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Arten von Barcodes</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>Образуват група от Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>UK</v8:lang>
+						<v8:content>Форма група глоб</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>EN</v8:lang>
+						<v8:content>Form a group of Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>PL</v8:lang>
+						<v8:content>Tworzą grupę Globe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Bilden eine Gruppe von Globe</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ФормаГруппаГлобРасширеннаяПодсказка" id="18"/>
+			</ButtonGroup>
+			<Button name="ФормаЗакрыть" id="15">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="16"/>
+			</Button>
+			<Button name="ФормаИзменитьФорму" id="13">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="ФормаСправка" id="11">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="12"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
@@ -13,12 +108,16 @@
 		<InputField name="Наименование" id="1">
 			<DataPath>Объект.Description</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<TextColor>#800000</TextColor>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:LargeTextFont" kind="StyleItem"/>
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
 		</InputField>
 		<InputField name="ТипЗначения" id="4">
 			<DataPath>Объект.ValueType</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="ТипЗначенияКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ТипЗначенияРасширеннаяПодсказка" id="6"/>
 		</InputField>

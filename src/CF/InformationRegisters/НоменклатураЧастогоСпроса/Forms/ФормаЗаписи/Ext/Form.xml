@@ -286,13 +286,6 @@
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Позиция" id="1">
-			<DataPath>Запись.Позиция</DataPath>
-			<SpinButton>true</SpinButton>
-			<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
-			<ContextMenu name="ПозицияКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ПозицияРасширеннаяПодсказка" id="3"/>
-		</InputField>
 		<UsualGroup name="ГруппаНаименования" id="31">
 			<Title>
 				<v8:item>
@@ -447,18 +440,34 @@
 					<ContextMenu name="СимволСправочникаКонтекстноеМеню" id="34"/>
 					<ExtendedTooltip name="СимволСправочникаРасширеннаяПодсказка" id="35"/>
 				</PictureDecoration>
-				<InputField name="Номенклатура" id="4">
-					<DataPath>Запись.Номенклатура</DataPath>
-					<CreateButton>true</CreateButton>
-					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+				<InputField name="Позиция" id="1">
+					<DataPath>Запись.Позиция</DataPath>
+					<SpinButton>true</SpinButton>
 					<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
-					<ContextMenu name="НоменклатураКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="6"/>
+					<ContextMenu name="ПозицияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПозицияРасширеннаяПодсказка" id="3"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="Номенклатура" id="4">
+			<DataPath>Запись.Номенклатура</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<CreateButton>true</CreateButton>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ЕдиницаИзмерения" id="38">
+			<DataPath>Запись.ЕдиницаИзмерения</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="40"/>
+		</InputField>
 		<InputField name="Комментарий" id="7">
 			<DataPath>Запись.Комментарий</DataPath>
+			<BorderColor>style:FieldBackColor</BorderColor>
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="9"/>
 		</InputField>

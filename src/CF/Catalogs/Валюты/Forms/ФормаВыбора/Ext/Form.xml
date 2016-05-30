@@ -412,12 +412,12 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="5">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Ref</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Наименование валют</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>BG</v8:lang>
@@ -617,13 +617,10 @@
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
+				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	СправочникВалюты.Ссылка,
-	СправочникВалюты.ПометкаУдаления,
-	СправочникВалюты.Предопределенный,
 	СправочникВалюты.Код,
-	СправочникВалюты.Наименование,
 	ЕСТЬNULL(ВложенныйЗапрос.Курс, 0) КАК ТекущийКурс,
 	СправочникВалюты.Комментарий,
 	ЕСТЬNULL(ВложенныйЗапрос.Установлен, "") КАК Установлен

@@ -13,7 +13,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Создать Новый Курс</v8:content>
+						<v8:content>Создать запись о Новом Курсе</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -166,9 +166,31 @@
 			</Button>
 			<Button name="ФормаУстановитьИнтервал" id="29">
 				<Type>CommandBarButton</Type>
-				<Representation>Picture</Representation>
+				<Representation>PictureAndText</Representation>
 				<OnlyInAllActions>true</OnlyInAllActions>
 				<CommandName>Form.StandardCommand.SetDateInterval</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>За период</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>BG</v8:lang>
+						<v8:content>През определен период от време</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>UK</v8:lang>
+						<v8:content>За період</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>EN</v8:lang>
+						<v8:content>Over a period</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>DE</v8:lang>
+						<v8:content>Gruppe Schaffung Ausgabe</v8:content>
+					</v8:item>
+				</Title>
 				<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="30"/>
 			</Button>
 			<Button name="ФормаНастройкаСписка" id="31">
@@ -345,6 +367,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -386,29 +409,29 @@
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="43">
+			<SearchStringAddition name="СписокСтрокаПоиска" id="82">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="44"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="83"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="84"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="46">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="85">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="47"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="86"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="87"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="49">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="88">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="50"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="89"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="90"/>
 			</SearchControlAddition>
 			<Events>
 				<Event name="AfterDeleteRow">СписокПослеУдаления</Event>
@@ -482,6 +505,12 @@
 					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<ContextMenu name="КурсКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="КурсРасширеннаяПодсказка" id="13"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="43">
+					<DataPath>Список.Комментарий</DataPath>
+					<Height>1</Height>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="45"/>
 				</LabelField>
 				<LabelField name="Ответственный" id="14">
 					<DataPath>Список.Ответственный</DataPath>
@@ -596,6 +625,122 @@
 				</LabelField>
 			</ChildItems>
 		</Table>
+		<Table name="Отбор" id="55">
+			<Representation>Tree</Representation>
+			<Autofill>true</Autofill>
+			<Height>6</Height>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Список.Filter</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ViewMode>All</ViewMode>
+			<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+			<ContextMenu name="ОтборКонтекстноеМеню" id="56"/>
+			<AutoCommandBar name="ОтборКоманднаяПанель" id="57">
+				<ChildItems>
+					<Button name="ОтборДобавитьЭлементОтбора" id="74">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.Отбор.StandardCommand.AddFilterItem</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить элемент отбора</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Добави селекция т.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Додати елемент відбору</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Add item selection</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Über einen Zeitraum</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ОтборДобавитьЭлементОтбораРасширеннаяПодсказка" id="75"/>
+					</Button>
+					<Button name="ОтборСгруппироватьЭлементыОтбора" id="76">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.Отбор.StandardCommand.GroupFilterItems</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сгруппировать условия</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Група условия</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Згрупувати умови</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Group conditions</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Artikelauswahl hinzufügen</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ОтборСгруппироватьЭлементыОтбораРасширеннаяПодсказка" id="77"/>
+					</Button>
+					<Button name="ОтборУдалить" id="78">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.Отбор.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="ОтборУдалитьРасширеннаяПодсказка" id="79"/>
+					</Button>
+					<Button name="ОтборСвойстваЭлементаПользовательскойНастройки" id="80">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.Отбор.StandardCommand.UserSettingItemProperties</CommandName>
+						<ExtendedTooltip name="ОтборСвойстваЭлементаПользовательскойНастройкиРасширеннаяПодсказка" id="81"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОтборРасширеннаяПодсказка" id="58"/>
+			<SearchStringAddition name="ОтборСтрокаПоиска" id="91">
+				<AdditionSource>
+					<Item>Отбор</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОтборСтрокаПоискаКонтекстноеМеню" id="92"/>
+				<ExtendedTooltip name="ОтборСтрокаПоискаРасширеннаяПодсказка" id="93"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОтборСостояниеПросмотра" id="94">
+				<AdditionSource>
+					<Item>Отбор</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОтборСостояниеПросмотраКонтекстноеМеню" id="95"/>
+				<ExtendedTooltip name="ОтборСостояниеПросмотраРасширеннаяПодсказка" id="96"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОтборУправлениеПоиском" id="97">
+				<AdditionSource>
+					<Item>Отбор</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОтборУправлениеПоискомКонтекстноеМеню" id="98"/>
+				<ExtendedTooltip name="ОтборУправлениеПоискомРасширеннаяПодсказка" id="99"/>
+			</SearchControlAddition>
+		</Table>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Список" id="1">
@@ -609,6 +754,20 @@
 				<MainTable>InformationRegister.КурсыВалют</MainTable>
 				<ListSettings>
 					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Валюта</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Период</dcsset:left>
+							<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="v8:StandardBeginningDate">
+								<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+								<v8:date>0001-01-01T00:00:00</v8:date>
+							</dcsset:right>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
@@ -620,6 +779,17 @@
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Валюта</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
 				</ListSettings>
 			</Settings>
 		</Attribute>

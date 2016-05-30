@@ -561,7 +561,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Наименование</v8:content>
+											<v8:content>Наименование поставщика</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>en</v8:lang>
@@ -604,11 +604,12 @@
 											<v8:content>ชื่อ</v8:content>
 										</v8:item>
 									</Title>
-									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 									<TitleLocation>Top</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<HorizontalStretch>false</HorizontalStretch>
 									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<TextColor>#800000</TextColor>
+									<BorderColor>style:FieldBackColor</BorderColor>
 									<Font ref="style:LargeTextFont" kind="StyleItem"/>
 									<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
 									<ExtendedTooltip name="НаименованиеExtendedTooltip" id="45"/>
@@ -620,6 +621,7 @@
 									<Type>UsualButton</Type>
 									<TitleHeight>2</TitleHeight>
 									<Width>4</Width>
+									<Height>2</Height>
 									<CommandName>Form.Command.ПредставлениеНаДругихЯзыках</CommandName>
 									<ExtendedTooltip name="ПредставлениеНаДругихЯзыкахРасширеннаяПодсказка" id="379"/>
 								</Button>
@@ -639,29 +641,29 @@
 							<ContextMenu name="НаименованияНаДругихЯзыкахКонтекстноеМеню" id="381"/>
 							<AutoCommandBar name="НаименованияНаДругихЯзыкахКоманднаяПанель" id="382"/>
 							<ExtendedTooltip name="НаименованияНаДругихЯзыкахРасширеннаяПодсказка" id="383"/>
-							<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="427">
+							<SearchStringAddition name="НаименованияНаДругихЯзыкахСтрокаПоиска" id="635">
 								<AdditionSource>
 									<Item>НаименованияНаДругихЯзыках</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="428"/>
-								<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="429"/>
+								<ContextMenu name="НаименованияНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="636"/>
+								<ExtendedTooltip name="НаименованияНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="637"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="430">
+							<ViewStatusAddition name="НаименованияНаДругихЯзыкахСостояниеПросмотра" id="638">
 								<AdditionSource>
 									<Item>НаименованияНаДругихЯзыках</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="431"/>
-								<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="432"/>
+								<ContextMenu name="НаименованияНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="639"/>
+								<ExtendedTooltip name="НаименованияНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="640"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="433">
+							<SearchControlAddition name="НаименованияНаДругихЯзыкахУправлениеПоиском" id="641">
 								<AdditionSource>
 									<Item>НаименованияНаДругихЯзыках</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="434"/>
-								<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="435"/>
+								<ContextMenu name="НаименованияНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="642"/>
+								<ExtendedTooltip name="НаименованияНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="643"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="OnChange">НаименованияНаДругихЯзыкахПриИзменении</Event>
@@ -731,969 +733,1568 @@
 								</InputField>
 							</ChildItems>
 						</Table>
-						<UsualGroup name="ГруппаОсновные" id="33">
+						<Pages name="ГруппаСтраниц" id="430">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Основные</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>The main</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ro</v8:lang>
-									<v8:content>Principalul</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>bl</v8:lang>
-									<v8:content>Асноўныя</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>zh</v8:lang>
-									<v8:content>的主要</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Основні</v8:content>
+									<v8:content>Группа страниц</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>BG</v8:lang>
-									<v8:content>Основната</v8:content>
+									<v8:content>Група страници</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група старонак</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>DE</v8:lang>
-									<v8:content>Die wichtigsten</v8:content>
+									<v8:content>Gruppenseiten</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group pages</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
-									<v8:content>Głównym</v8:content>
+									<v8:content>Grupa stron</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>kk</v8:lang>
-									<v8:content>Бастар</v8:content>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Pagini de grup</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>th</v8:lang>
-									<v8:content>ขั้นพื้นฐาน</v8:content>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група сторінок</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>หน้ากลุ่ม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>集团网页</v8:content>
 								</v8:item>
 							</Title>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаОсновныеExtendedTooltip" id="43"/>
-							<ChildItems>
-								<UsualGroup name="Группа2" id="193">
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="194"/>
-									<ChildItems>
-										<InputField name="ВидЦен" id="163">
-											<DataPath>Объект.ВидЦен</DataPath>
-											<ClearButton>true</ClearButton>
-											<BackColor>#FFFFF5</BackColor>
-											<ContextMenu name="ВидЦенКонтекстноеМеню" id="164"/>
-											<ExtendedTooltip name="ВидЦенРасширеннаяПодсказка" id="165"/>
-										</InputField>
-										<LabelField name="ВидЦенВалютаЦены" id="195">
-											<DataPath>Объект.ВидЦен.ВалютаЦены</DataPath>
-											<SkipOnInput>true</SkipOnInput>
-											<TitleLocation>None</TitleLocation>
-											<Width>6</Width>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ContextMenu name="ВидЦенВалютаЦеныКонтекстноеМеню" id="196"/>
-											<ExtendedTooltip name="ВидЦенВалютаЦеныРасширеннаяПодсказка" id="197"/>
-										</LabelField>
-									</ChildItems>
-								</UsualGroup>
-								<InputField name="ОсновнаяВалюта" id="177">
-									<DataPath>Объект.ОсновнаяВалюта</DataPath>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ClearButton>true</ClearButton>
-									<ContextMenu name="ОсновнаяВалютаКонтекстноеМеню" id="178"/>
-									<ExtendedTooltip name="ОсновнаяВалютаРасширеннаяПодсказка" id="179"/>
-								</InputField>
-								<InputField name="Производитель" id="218">
-									<DataPath>Объект.Производитель</DataPath>
-									<ClearButton>true</ClearButton>
-									<ContextMenu name="ПроизводительКонтекстноеМеню" id="219"/>
-									<ExtendedTooltip name="ПроизводительРасширеннаяПодсказка" id="220"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="АдресаИКонтакты" id="36">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Адреса и контакты</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Addresses and contacts</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ro</v8:lang>
-									<v8:content>Adrese și contacte</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>bl</v8:lang>
-									<v8:content>Адрасы і кантакты</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>zh</v8:lang>
-									<v8:content>地址和联系人</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Адреси та контакти</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>BG</v8:lang>
-									<v8:content>Адреси и контакти</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Adressen und Kontakte</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>PL</v8:lang>
-									<v8:content>Adresy i kontakty</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>kk</v8:lang>
-									<v8:content>Мекенжай және қарым-қатынастар</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>th</v8:lang>
-									<v8:content>ที่อยู่และรายชื่อ</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ChildItemsWidth>Equal</ChildItemsWidth>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="АдресаИКонтактыExtendedTooltip" id="53"/>
-							<ChildItems>
-								<InputField name="Регион" id="11">
-									<DataPath>Объект.Регион</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ChoiceButton>true</ChoiceButton>
-									<OpenButton>true</OpenButton>
-									<QuickChoice>true</QuickChoice>
-									<ChoiceListButton>false</ChoiceListButton>
-									<ContextMenu name="РегионКонтекстноеМеню" id="12"/>
-									<ExtendedTooltip name="РегионExtendedTooltip" id="56"/>
-								</InputField>
-								<InputField name="АдресСтрока" id="69">
-									<DataPath>Объект.Адрес</DataPath>
-									<Height>1</Height>
-									<ContextMenu name="АдресСтрокаКонтекстноеМеню" id="70"/>
-									<ExtendedTooltip name="АдресСтрокаРасширеннаяПодсказка" id="71"/>
-								</InputField>
-								<InputField name="Телефон" id="25">
-									<DataPath>Объект.Телефон</DataPath>
-									<DefaultItem>true</DefaultItem>
-									<EditMode>EnterOnInput</EditMode>
-									<Width>40</Width>
-									<BackColor>#F0FFFF</BackColor>
-									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-									<ContextMenu name="ТелефонКонтекстноеМеню" id="26"/>
-									<ExtendedTooltip name="ТелефонExtendedTooltip" id="65"/>
-								</InputField>
-								<InputField name="ЭлектроннаяПочта" id="27">
-									<DataPath>Объект.ЭлектроннаяПочта</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>e-mail</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>e-mail</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ro</v8:lang>
-											<v8:content>e-mail</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>bl</v8:lang>
-											<v8:content>e-mail</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>zh</v8:lang>
-											<v8:content>电子邮件</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>e-mail</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>BG</v8:lang>
-											<v8:content>електронна поща</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>E-Mail</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>e-mail</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>kk</v8:lang>
-											<v8:content>e - mail</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>th</v8:lang>
-											<v8:content>อีเมล</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ЭлектроннаяПочтаКонтекстноеМеню" id="28"/>
-									<ExtendedTooltip name="ЭлектроннаяПочтаExtendedTooltip" id="64"/>
-									<Events>
-										<Event name="OnChange">ЭлектроннаяПочтаПриИзменении</Event>
-									</Events>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="Дополнительно" id="148">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Дополнительно</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Additionally</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ro</v8:lang>
-									<v8:content>În plus,</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>bl</v8:lang>
-									<v8:content>Дадаткова</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>zh</v8:lang>
-									<v8:content>另外</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Додатково</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>BG</v8:lang>
-									<v8:content>Освен това</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Zusätzlich</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>PL</v8:lang>
-									<v8:content>Dodatkowo</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>kk</v8:lang>
-									<v8:content>Қосымша</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>th</v8:lang>
-									<v8:content>นอกจากนี้</v8:content>
-								</v8:item>
-							</Title>
+							<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Дополнительно</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Additionally</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ro</v8:lang>
-									<v8:content>În plus,</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>bl</v8:lang>
-									<v8:content>Дадаткова</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>zh</v8:lang>
-									<v8:content>另外</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Додатково</v8:content>
+									<v8:content>Группа страниц</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>BG</v8:lang>
-									<v8:content>Освен това</v8:content>
+									<v8:content>Група страници</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Група старонак</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>DE</v8:lang>
-									<v8:content>Zusätzlich</v8:content>
+									<v8:content>Gruppenseiten</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Group pages</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
-									<v8:content>Dodatkowo</v8:content>
+									<v8:content>Grupa stron</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>kk</v8:lang>
-									<v8:content>Қосымша</v8:content>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Pagini de grup</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>th</v8:lang>
-									<v8:content>นอกจากนี้</v8:content>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Група сторінок</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>หน้ากลุ่ม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>集团网页</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>Vertical</Group>
-							<Behavior>Collapsible</Behavior>
-							<Collapsed>true</Collapsed>
-							<ControlRepresentation>Picture</ControlRepresentation>
-							<Representation>None</Representation>
-							<BackColor>#FAFAFA</BackColor>
-							<ExtendedTooltip name="ДополнительноРасширеннаяПодсказка" id="149"/>
+							<ExtendedTooltip name="ГруппаСтраницРасширеннаяПодсказка" id="431"/>
 							<ChildItems>
-								<InputField name="ОКПО" id="133">
-									<DataPath>Объект.ОКПО</DataPath>
-									<Width>24</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ОКПОКонтекстноеМеню" id="134"/>
-									<ExtendedTooltip name="ОКПОРасширеннаяПодсказка" id="135"/>
-								</InputField>
-								<InputField name="ПравовойСтатус" id="7">
-									<DataPath>Объект.ПравовойСтатус</DataPath>
+								<Page name="Основное" id="432">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Правовой статус</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Legal status</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ro</v8:lang>
-											<v8:content>Statutul juridic</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>bl</v8:lang>
-											<v8:content>Прававы статус</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>zh</v8:lang>
-											<v8:content>法律地位</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Правовий статус</v8:content>
+											<v8:content>Основное</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>BG</v8:lang>
-											<v8:content>Правен статут</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Rechtsstand</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Status prawny</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>kk</v8:lang>
-											<v8:content>Құқықтықтың мәртебесі</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>th</v8:lang>
-											<v8:content>สถานะทางกฎหมาย</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<Width>24</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ПравовойСтатусКонтекстноеМеню" id="8"/>
-									<ExtendedTooltip name="ПравовойСтатусРасширеннаяПодсказка" id="52"/>
-								</InputField>
-								<UsualGroup name="ГруппаНаименованияДляПечати" id="390">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа наименования для печати</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>UK</v8:lang>
-											<v8:content>Група найменування для друку</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ZH</v8:lang>
-											<v8:content>打印组名</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>TH</v8:lang>
-											<v8:content>ชื่อกลุ่มสำหรับการพิมพ์</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>RO</v8:lang>
-											<v8:content>Nume de grup pentru imprimare</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Nazwy grup do druku</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>EN</v8:lang>
-											<v8:content>Group names for printing</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Gruppennamen für den Druck</v8:content>
+											<v8:content>Основен</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>BL</v8:lang>
-											<v8:content>Група найменні для друку</v8:content>
+											<v8:content>Асноўнае</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>BG</v8:lang>
-											<v8:content>Имена на групи за печат</v8:content>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Main</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>kk</v8:lang>
-											<v8:content>Атаудың тобы мөрлік</v8:content>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Main</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Główny</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Principal</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Основне</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>หลัก</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>主</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа наименования для печати</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>UK</v8:lang>
-											<v8:content>Група найменування для друку</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ZH</v8:lang>
-											<v8:content>打印组名</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>TH</v8:lang>
-											<v8:content>ชื่อกลุ่มสำหรับการพิมพ์</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>RO</v8:lang>
-											<v8:content>Nume de grup pentru imprimare</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Nazwy grup do druku</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>EN</v8:lang>
-											<v8:content>Group names for printing</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Gruppennamen für den Druck</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>BL</v8:lang>
-											<v8:content>Група найменні для друку</v8:content>
+											<v8:content>Основное</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>BG</v8:lang>
-											<v8:content>Имена на групи за печат</v8:content>
+											<v8:content>Основен</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>kk</v8:lang>
-											<v8:content>Атаудың тобы мөрлік</v8:content>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Асноўнае</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Main</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Main</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Główny</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Principal</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Основне</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>หลัก</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>主</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаНаименованияДляПечатиРасширеннаяПодсказка" id="391"/>
+									<ExtendedTooltip name="ОсновноеРасширеннаяПодсказка" id="433"/>
 									<ChildItems>
-										<InputField name="НаименованиеДляПечати" id="156">
-											<DataPath>НаименованиеДляПечати</DataPath>
-											<TitleLocation>Top</TitleLocation>
-											<ContextMenu name="НаименованиеДляПечатиКонтекстноеМеню" id="157"/>
-											<ExtendedTooltip name="НаименованиеДляПечатиРасширеннаяПодсказка" id="158"/>
-											<Events>
-												<Event name="OnChange">НаименованиеДляПечатиПриИзменении</Event>
-											</Events>
-										</InputField>
-										<Button name="НаименованиеДляПечатиНаДругихЯзыках" id="392">
-											<Type>UsualButton</Type>
-											<TitleHeight>2</TitleHeight>
-											<Width>4</Width>
-											<CommandName>Form.Command.НаименованиеДляПечатиНаДругихЯзыках</CommandName>
-											<ExtendedTooltip name="НаименованиеДляПечатиНаДругихЯзыкахРасширеннаяПодсказка" id="393"/>
-										</Button>
-									</ChildItems>
-								</UsualGroup>
-								<Table name="НаименованияДляПечатиНаДругихЯзыках" id="394">
-									<Representation>List</Representation>
-									<Visible>false</Visible>
-									<AutoInsertNewRow>true</AutoInsertNewRow>
-									<EnableStartDrag>true</EnableStartDrag>
-									<EnableDrag>true</EnableDrag>
-									<DataPath>НаименованияДляПечатиНаДругихЯзыках</DataPath>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
-									<RowFilter xsi:nil="true"/>
-									<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахКонтекстноеМеню" id="395"/>
-									<AutoCommandBar name="НаименованияДляПечатиНаДругихЯзыкахКоманднаяПанель" id="396"/>
-									<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахРасширеннаяПодсказка" id="397"/>
-									<SearchStringAddition name="НаименованияДляПечатиНаДругихЯзыкахСтрокаПоиска" id="436">
-										<AdditionSource>
-											<Item>НаименованияДляПечатиНаДругихЯзыках</Item>
-											<Type>SearchStringRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="437"/>
-										<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="438"/>
-									</SearchStringAddition>
-									<ViewStatusAddition name="НаименованияДляПечатиНаДругихЯзыкахСостояниеПросмотра" id="439">
-										<AdditionSource>
-											<Item>НаименованияДляПечатиНаДругихЯзыках</Item>
-											<Type>ViewStatusRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="440"/>
-										<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="441"/>
-									</ViewStatusAddition>
-									<SearchControlAddition name="НаименованияДляПечатиНаДругихЯзыкахУправлениеПоиском" id="442">
-										<AdditionSource>
-											<Item>НаименованияДляПечатиНаДругихЯзыках</Item>
-											<Type>SearchControl</Type>
-										</AdditionSource>
-										<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="443"/>
-										<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="444"/>
-									</SearchControlAddition>
-									<Events>
-										<Event name="OnChange">НаименованияДляПечатиНаДругихЯзыкахПриИзменении</Event>
-									</Events>
-									<ChildItems>
-										<InputField name="НаименованияДляПечатиНаДругихЯзыкахЯзык" id="398">
-											<DataPath>НаименованияДляПечатиНаДругихЯзыках.Язык</DataPath>
+										<UsualGroup name="ГруппаОсновные" id="33">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>На других языках</v8:content>
+													<v8:content>Основные</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>UK</v8:lang>
-													<v8:content>На інших мовах</v8:content>
+													<v8:lang>en</v8:lang>
+													<v8:content>The main</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>ZH</v8:lang>
-													<v8:content>在其他语言</v8:content>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Principalul</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>TH</v8:lang>
-													<v8:content>ในภาษาอื่น ๆ</v8:content>
+													<v8:lang>bl</v8:lang>
+													<v8:content>Асноўныя</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>RO</v8:lang>
-													<v8:content>În alte limbi</v8:content>
+													<v8:lang>zh</v8:lang>
+													<v8:content>的主要</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>PL</v8:lang>
-													<v8:content>W innych językach</v8:content>
-												</v8:item>
-												<v8:item>
-													<v8:lang>EN</v8:lang>
-													<v8:content>In other languages</v8:content>
-												</v8:item>
-												<v8:item>
-													<v8:lang>DE</v8:lang>
-													<v8:content>In anderen Sprachen</v8:content>
-												</v8:item>
-												<v8:item>
-													<v8:lang>BL</v8:lang>
-													<v8:content>На іншых мовах</v8:content>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Основні</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>BG</v8:lang>
-													<v8:content>На други езици</v8:content>
+													<v8:content>Основната</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Die wichtigsten</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Głównym</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>kk</v8:lang>
-													<v8:content>Жат тілдерде</v8:content>
+													<v8:content>Бастар</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>th</v8:lang>
+													<v8:content>ขั้นพื้นฐาน</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОсновныеExtendedTooltip" id="43"/>
+											<ChildItems>
+												<UsualGroup name="Группа2" id="193">
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="194"/>
+													<ChildItems>
+														<InputField name="ВидЦен" id="163">
+															<DataPath>Объект.ВидЦен</DataPath>
+															<ClearButton>true</ClearButton>
+															<BackColor>#FFFFF5</BackColor>
+															<ContextMenu name="ВидЦенКонтекстноеМеню" id="164"/>
+															<ExtendedTooltip name="ВидЦенРасширеннаяПодсказка" id="165"/>
+														</InputField>
+														<LabelField name="ВидЦенВалютаЦены" id="195">
+															<DataPath>Объект.ВидЦен.ВалютаЦены</DataPath>
+															<SkipOnInput>true</SkipOnInput>
+															<TitleLocation>None</TitleLocation>
+															<Width>6</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="ВидЦенВалютаЦеныКонтекстноеМеню" id="196"/>
+															<ExtendedTooltip name="ВидЦенВалютаЦеныРасширеннаяПодсказка" id="197"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="ОсновнаяВалюта" id="177">
+													<DataPath>Объект.ОсновнаяВалюта</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="ОсновнаяВалютаКонтекстноеМеню" id="178"/>
+													<ExtendedTooltip name="ОсновнаяВалютаРасширеннаяПодсказка" id="179"/>
+												</InputField>
+												<InputField name="Производитель" id="218">
+													<DataPath>Объект.Производитель</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="ПроизводительКонтекстноеМеню" id="219"/>
+													<ExtendedTooltip name="ПроизводительРасширеннаяПодсказка" id="220"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="АдресаИКонтакты" id="36">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адреса и контакты</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Addresses and contacts</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Adrese și contacte</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>bl</v8:lang>
+													<v8:content>Адрасы і кантакты</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>zh</v8:lang>
+													<v8:content>地址和联系人</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Адреси та контакти</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Адреси и контакти</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Adressen und Kontakte</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Adresy i kontakty</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>kk</v8:lang>
+													<v8:content>Мекенжай және қарым-қатынастар</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>th</v8:lang>
+													<v8:content>ที่อยู่และรายชื่อ</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ChildItemsWidth>Equal</ChildItemsWidth>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="АдресаИКонтактыExtendedTooltip" id="53"/>
+											<ChildItems>
+												<InputField name="Телефон" id="25">
+													<DataPath>Объект.Телефон</DataPath>
+													<DefaultItem>true</DefaultItem>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>40</Width>
+													<BackColor>#F0FFFF</BackColor>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+													<ContextMenu name="ТелефонКонтекстноеМеню" id="26"/>
+													<ExtendedTooltip name="ТелефонExtendedTooltip" id="65"/>
+												</InputField>
+												<InputField name="Регион" id="11">
+													<DataPath>Объект.Регион</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ChoiceButton>true</ChoiceButton>
+													<OpenButton>true</OpenButton>
+													<QuickChoice>true</QuickChoice>
+													<ChoiceListButton>false</ChoiceListButton>
+													<ContextMenu name="РегионКонтекстноеМеню" id="12"/>
+													<ExtendedTooltip name="РегионExtendedTooltip" id="56"/>
+												</InputField>
+												<InputField name="АдресСтрока" id="69">
+													<DataPath>Объект.Адрес</DataPath>
+													<TitleLocation>Left</TitleLocation>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<Font ref="style:NormalTextFont" kind="StyleItem"/>
+													<ContextMenu name="АдресСтрокаКонтекстноеМеню" id="70"/>
+													<ExtendedTooltip name="АдресСтрокаРасширеннаяПодсказка" id="71"/>
+												</InputField>
+												<InputField name="ПочтовыйИндес" id="450">
+													<DataPath>Объект.ПочтовыйИндес</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="ПочтовыйИндесКонтекстноеМеню" id="451"/>
+													<ExtendedTooltip name="ПочтовыйИндесРасширеннаяПодсказка" id="452"/>
+												</InputField>
+												<UsualGroup name="ГруппаИмениПолучателя" id="453">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа имени получателя</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Група име на получателя</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>Група імя атрымальніка</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Gruppenname des Empfängers</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Group name of the recipient</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Grupa odbiorcy</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>Numele grupului a destinatarului</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Група імені одержувача</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>ชื่อของผู้รับกลุ่ม</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>收件人的群组名称</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа имени получателя</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Група име на получателя</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>Група імя атрымальніка</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Gruppenname des Empfängers</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Group name of the recipient</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Grupa odbiorcy</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>Numele grupului a destinatarului</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Група імені одержувача</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>ชื่อของผู้รับกลุ่ม</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>收件人的群组名称</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаИмениПолучателяРасширеннаяПодсказка" id="454"/>
+													<ChildItems>
+														<Button name="СкопироватьИмяПолучателя" id="458">
+															<Type>UsualButton</Type>
+															<Width>4</Width>
+															<CommandName>Form.Command.СкопироватьИмяПолучателя</CommandName>
+															<ExtendedTooltip name="СкопироватьИмяПолучателяРасширеннаяПодсказка" id="459"/>
+														</Button>
+														<InputField name="ИмяПолучателя" id="455">
+															<DataPath>Объект.ИмяПолучателя</DataPath>
+															<TextColor>#800000</TextColor>
+															<BorderColor>style:FieldBackColor</BorderColor>
+															<ContextMenu name="ИмяПолучателяКонтекстноеМеню" id="456"/>
+															<ExtendedTooltip name="ИмяПолучателяРасширеннаяПодсказка" id="457"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="ЭлектроннаяПочта" id="27">
+													<DataPath>Объект.ЭлектроннаяПочта</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>e-mail</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>e-mail</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>e-mail</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bl</v8:lang>
+															<v8:content>e-mail</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>zh</v8:lang>
+															<v8:content>电子邮件</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>e-mail</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>електронна поща</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>E-Mail</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>e-mail</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>kk</v8:lang>
+															<v8:content>e - mail</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>th</v8:lang>
+															<v8:content>อีเมล</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="ЭлектроннаяПочтаКонтекстноеМеню" id="28"/>
+													<ExtendedTooltip name="ЭлектроннаяПочтаExtendedTooltip" id="64"/>
+													<Events>
+														<Event name="OnChange">ЭлектроннаяПочтаПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаНаименованияДляПечати" id="390">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа наименования для печати</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>UK</v8:lang>
+													<v8:content>Група найменування для друку</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ZH</v8:lang>
+													<v8:content>打印组名</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>TH</v8:lang>
+													<v8:content>ชื่อกลุ่มสำหรับการพิมพ์</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>RO</v8:lang>
+													<v8:content>Nume de grup pentru imprimare</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Nazwy grup do druku</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>Group names for printing</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Gruppennamen für den Druck</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BL</v8:lang>
+													<v8:content>Група найменні для друку</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Имена на групи за печат</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>kk</v8:lang>
+													<v8:content>Атаудың тобы мөрлік</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа наименования для печати</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>UK</v8:lang>
+													<v8:content>Група найменування для друку</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ZH</v8:lang>
+													<v8:content>打印组名</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>TH</v8:lang>
+													<v8:content>ชื่อกลุ่มสำหรับการพิมพ์</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>RO</v8:lang>
+													<v8:content>Nume de grup pentru imprimare</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Nazwy grup do druku</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>Group names for printing</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Gruppennamen für den Druck</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BL</v8:lang>
+													<v8:content>Група найменні для друку</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Имена на групи за печат</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>kk</v8:lang>
+													<v8:content>Атаудың тобы мөрлік</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаНаименованияДляПечатиРасширеннаяПодсказка" id="391"/>
+											<ChildItems>
+												<Button name="СформироватьСложноеПолноеНаименование" id="528">
+													<Type>UsualButton</Type>
+													<TitleHeight>2</TitleHeight>
+													<Width>4</Width>
+													<Height>2</Height>
+													<CommandName>Form.Command.СформироватьСложноеПолноеНаименование</CommandName>
+													<ExtendedTooltip name="СформироватьСложноеПолноеНаименованиеРасширеннаяПодсказка" id="529"/>
+												</Button>
+												<InputField name="НаименованиеДляПечати" id="156">
+													<DataPath>НаименованиеДляПечати</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Наименование для печати (полное наименование)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Print Наименование (пълно име)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>Найменне для друку (поўная назва)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Drucken Name (vollständiger Name)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Print Name (full name)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Drukuj Nazwa (imię i nazwisko)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>Print Name (numele complet)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Найменування для друку (повне найменування)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>ชื่อพิมพ์ (ชื่อเต็ม)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>打印名称（全称）</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<TextColor>#800000</TextColor>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="НаименованиеДляПечатиКонтекстноеМеню" id="157"/>
+													<ExtendedTooltip name="НаименованиеДляПечатиРасширеннаяПодсказка" id="158"/>
+													<Events>
+														<Event name="OnChange">НаименованиеДляПечатиПриИзменении</Event>
+													</Events>
+												</InputField>
+												<Button name="НаименованиеДляПечатиНаДругихЯзыках" id="392">
+													<Type>UsualButton</Type>
+													<TitleHeight>2</TitleHeight>
+													<Width>4</Width>
+													<CommandName>Form.Command.НаименованиеДляПечатиНаДругихЯзыках</CommandName>
+													<ExtendedTooltip name="НаименованиеДляПечатиНаДругихЯзыкахРасширеннаяПодсказка" id="393"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="НаименованияДляПечатиНаДругихЯзыках" id="394">
+											<Representation>List</Representation>
+											<Visible>false</Visible>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>НаименованияДляПечатиНаДругихЯзыках</DataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахКонтекстноеМеню" id="395"/>
+											<AutoCommandBar name="НаименованияДляПечатиНаДругихЯзыкахКоманднаяПанель" id="396"/>
+											<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахРасширеннаяПодсказка" id="397"/>
+											<SearchStringAddition name="НаименованияДляПечатиНаДругихЯзыкахСтрокаПоиска" id="644">
+												<AdditionSource>
+													<Item>НаименованияДляПечатиНаДругихЯзыках</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахСтрокаПоискаКонтекстноеМеню" id="645"/>
+												<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахСтрокаПоискаРасширеннаяПодсказка" id="646"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="НаименованияДляПечатиНаДругихЯзыкахСостояниеПросмотра" id="647">
+												<AdditionSource>
+													<Item>НаименованияДляПечатиНаДругихЯзыках</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахСостояниеПросмотраКонтекстноеМеню" id="648"/>
+												<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахСостояниеПросмотраРасширеннаяПодсказка" id="649"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="НаименованияДляПечатиНаДругихЯзыкахУправлениеПоиском" id="650">
+												<AdditionSource>
+													<Item>НаименованияДляПечатиНаДругихЯзыках</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахУправлениеПоискомКонтекстноеМеню" id="651"/>
+												<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахУправлениеПоискомРасширеннаяПодсказка" id="652"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnChange">НаименованияДляПечатиНаДругихЯзыкахПриИзменении</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="НаименованияДляПечатиНаДругихЯзыкахЯзык" id="398">
+													<DataPath>НаименованияДляПечатиНаДругихЯзыках.Язык</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>На других языках</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>На інших мовах</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>在其他语言</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>ในภาษาอื่น ๆ</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>În alte limbi</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>W innych językach</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>In other languages</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>In anderen Sprachen</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>На іншых мовах</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>На други езици</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>kk</v8:lang>
+															<v8:content>Жат тілдерде</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахЯзыкКонтекстноеМеню" id="399"/>
+													<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахЯзыкРасширеннаяПодсказка" id="400"/>
+												</InputField>
+												<InputField name="НаименованияДляПечатиНаДругихЯзыкахНаЯзыке" id="401">
+													<DataPath>НаименованияДляПечатиНаДругихЯзыках.НаЯзыке</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахНаЯзыкеКонтекстноеМеню" id="402"/>
+													<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахНаЯзыкеРасширеннаяПодсказка" id="403"/>
+													<Events>
+														<Event name="OnChange">НаименованияДляПечатиНаДругихЯзыкахНаЯзыкеПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ДополнительныеРеквизиты" id="434">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Освен това</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Дадаткова</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Zusätzlich</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Additionally</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Dodatkowo</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>În plus,</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Додатково</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>นอกจากนี้</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>另外</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительные реквизиты</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Повече детайли</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Дадатковыя рэквізіты</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Mehr Details</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>More details</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Więcej szczegółów</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Mai multe detalii</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Додаткові реквізити</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>รายละเอียดเพิ่มเติม</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>更多细节</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ДополнительныеРеквизитыРасширеннаяПодсказка" id="435"/>
+									<ChildItems>
+										<UsualGroup name="Дополнительно" id="148">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Additionally</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>În plus,</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>bl</v8:lang>
+													<v8:content>Дадаткова</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>zh</v8:lang>
+													<v8:content>另外</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Додатково</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Освен това</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Zusätzlich</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Dodatkowo</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>kk</v8:lang>
+													<v8:content>Қосымша</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>th</v8:lang>
+													<v8:content>นอกจากนี้</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительно</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Additionally</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>În plus,</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>bl</v8:lang>
+													<v8:content>Дадаткова</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>zh</v8:lang>
+													<v8:content>另外</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Додатково</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Освен това</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Zusätzlich</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Dodatkowo</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>kk</v8:lang>
+													<v8:content>Қосымша</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>th</v8:lang>
+													<v8:content>นอกจากนี้</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<ControlRepresentation>Picture</ControlRepresentation>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>#FAFAFA</BackColor>
+											<ExtendedTooltip name="ДополнительноРасширеннаяПодсказка" id="149"/>
+											<ChildItems>
+												<InputField name="НомерКарты" id="463">
+													<DataPath>Объект.НомерКарты</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="НомерКартыКонтекстноеМеню" id="464"/>
+													<ExtendedTooltip name="НомерКартыРасширеннаяПодсказка" id="465"/>
+												</InputField>
+												<InputField name="Склад" id="139">
+													<DataPath>Объект.Склад</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="СкладКонтекстноеМеню" id="140"/>
+													<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="141"/>
+												</InputField>
+												<InputField name="ХранилищеДенег" id="338">
+													<DataPath>Объект.ХранилищеДенег</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="ХранилищеДенегКонтекстноеМеню" id="339"/>
+													<ExtendedTooltip name="ХранилищеДенегРасширеннаяПодсказка" id="340"/>
+												</InputField>
+												<CheckBoxField name="ЭтоСотрудник" id="180">
+													<DataPath>Объект.ЭтоСотрудник</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<CheckBoxType>Tumbler</CheckBoxType>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>БЛ='This is a common supplier'; БИ='This is our employee'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bl</v8:lang>
+															<v8:content>БЛ='Гэта звычайны пастаўшчык'; БИ='Гэта НАШ Супрацоўнік'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>БЛ='"Aceasta este furnizor de obicei"'; БИ='"Aceasta este angajat nostru"'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>БЛ='Это обычный поставщик'; БИ='Это НАШ Сотрудник'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>zh</v8:lang>
+															<v8:content>БЛ='“这是一般的供应商”'; БИ='“这是我们的员工”'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>uk</v8:lang>
+															<v8:content>БЛ='Це звичайний постачальник'; БИ='Це НАШ Співробітник'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>БЛ='"Това е обичайната доставчик"'; БИ='"Това е наш служител"'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>БЛ='Dies ist die übliche Lieferanten'; БИ='"Das ist unser Mitarbeiter"'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>БЛ='"To jest zwykły dostawca"'; БИ='"To jest nasz pracownik"'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>kk</v8:lang>
+															<v8:content>БЛ='Осы әдеттегі жеткізуші'; БИ='Осы біздің қызметкеріміз'</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>th</v8:lang>
+															<v8:content>БЛ='นี้เป็นผู้จัดจำหน่ายตามปกติ'; БИ='นี่คือการทำงานของพนักงานของเรา'</v8:content>
+														</v8:item>
+													</EditFormat>
+													<ContextMenu name="ЭтоСотрудникКонтекстноеМеню" id="181"/>
+													<ExtendedTooltip name="ЭтоСотрудникРасширеннаяПодсказка" id="182"/>
+												</CheckBoxField>
+												<InputField name="ОсновнойШтрихКод" id="460">
+													<DataPath>Объект.ОсновнойШтрихКод</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="ОсновнойШтрихКодКонтекстноеМеню" id="461"/>
+													<ExtendedTooltip name="ОсновнойШтрихКодРасширеннаяПодсказка" id="462"/>
+												</InputField>
+												<InputField name="Код" id="185">
+													<DataPath>Объект.Code</DataPath>
+													<SkipOnInput>true</SkipOnInput>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="КодКонтекстноеМеню" id="186"/>
+													<ExtendedTooltip name="КодРасширеннаяПодсказка" id="187"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="Родитель" id="5">
+											<DataPath>Объект.Parent</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа поставщиков</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Suppliers Group</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Grupul Furnizorilor</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>bl</v8:lang>
+													<v8:content>Група пастаўшчыкоў</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>zh</v8:lang>
+													<v8:content>供应国集团</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Група постачальників</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Доставчици Group</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Suppliers Group</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Grupa Dostawcy</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>kk</v8:lang>
+													<v8:content>Жеткізушінің тобы</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>th</v8:lang>
+													<v8:content>กลุ่มซัพพลายเออร์</v8:content>
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<HorizontalStretch>false</HorizontalStretch>
-											<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахЯзыкКонтекстноеМеню" id="399"/>
-											<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахЯзыкРасширеннаяПодсказка" id="400"/>
-										</InputField>
-										<InputField name="НаименованияДляПечатиНаДругихЯзыкахНаЯзыке" id="401">
-											<DataPath>НаименованияДляПечатиНаДругихЯзыках.НаЯзыке</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="НаименованияДляПечатиНаДругихЯзыкахНаЯзыкеКонтекстноеМеню" id="402"/>
-											<ExtendedTooltip name="НаименованияДляПечатиНаДругихЯзыкахНаЯзыкеРасширеннаяПодсказка" id="403"/>
+											<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+											<ExtendedTooltip name="РодительExtendedTooltip" id="48"/>
 											<Events>
-												<Event name="OnChange">НаименованияДляПечатиНаДругихЯзыкахНаЯзыкеПриИзменении</Event>
+												<Event name="OnChange">РодительПриИзменении</Event>
 											</Events>
 										</InputField>
-									</ChildItems>
-								</Table>
-								<InputField name="Склад" id="139">
-									<DataPath>Объект.Склад</DataPath>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="СкладКонтекстноеМеню" id="140"/>
-									<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="141"/>
-								</InputField>
-								<InputField name="Родитель" id="5">
-									<DataPath>Объект.Parent</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа поставщиков</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Suppliers Group</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ro</v8:lang>
-											<v8:content>Grupul Furnizorilor</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>bl</v8:lang>
-											<v8:content>Група пастаўшчыкоў</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>zh</v8:lang>
-											<v8:content>供应国集团</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Група постачальників</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>BG</v8:lang>
-											<v8:content>Доставчици Group</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Suppliers Group</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Grupa Dostawcy</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>kk</v8:lang>
-											<v8:content>Жеткізушінің тобы</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>th</v8:lang>
-											<v8:content>กลุ่มซัพพลายเออร์</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
-									<ExtendedTooltip name="РодительExtendedTooltip" id="48"/>
-									<Events>
-										<Event name="OnChange">РодительПриИзменении</Event>
-									</Events>
-								</InputField>
-								<UsualGroup name="БезналичныеРеквизиты" id="237">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Безналичные реквизиты</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>EN</v8:lang>
-											<v8:content>Cashless details</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ro</v8:lang>
-											<v8:content>Detalii fără numerar</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>bl</v8:lang>
-											<v8:content>Безнаяўныя рэквізіты</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>zh</v8:lang>
-											<v8:content>非现金的细节</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Безготівкові реквізити</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>BG</v8:lang>
-											<v8:content>Безкасово детайли</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Bargeldlose Details</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Szczegóły bezgotówkowe</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>kk</v8:lang>
-											<v8:content>Безналичные деректемелер</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>th</v8:lang>
-											<v8:content>รายละเอียดเงินสด</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Безналичные реквизиты</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>EN</v8:lang>
-											<v8:content>Cashless details</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ro</v8:lang>
-											<v8:content>Detalii fără numerar</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>bl</v8:lang>
-											<v8:content>Безнаяўныя рэквізіты</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>zh</v8:lang>
-											<v8:content>非现金的细节</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Безготівкові реквізити</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>BG</v8:lang>
-											<v8:content>Безкасово детайли</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Bargeldlose Details</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Szczegóły bezgotówkowe</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>kk</v8:lang>
-											<v8:content>Безналичные деректемелер</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>th</v8:lang>
-											<v8:content>รายละเอียดเงินสด</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Vertical</Group>
-									<Behavior>Collapsible</Behavior>
-									<Collapsed>true</Collapsed>
-									<Representation>None</Representation>
-									<ExtendedTooltip name="БезналичныеРеквизитыРасширеннаяПодсказка" id="238"/>
-									<ChildItems>
-										<InputField name="МФО" id="239">
-											<DataPath>Объект.МФО</DataPath>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ContextMenu name="МФОКонтекстноеМеню" id="240"/>
-											<ExtendedTooltip name="МФОРасширеннаяПодсказка" id="241"/>
+										<InputField name="СпособДоставки" id="624">
+											<DataPath>Объект.СпособДоставки</DataPath>
+											<ContextMenu name="СпособДоставкиКонтекстноеМеню" id="625"/>
+											<ExtendedTooltip name="СпособДоставкиРасширеннаяПодсказка" id="626"/>
 										</InputField>
-										<InputField name="НаименованиеБанка" id="242">
-											<DataPath>Объект.НаименованиеБанка</DataPath>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ContextMenu name="НаименованиеБанкаКонтекстноеМеню" id="243"/>
-											<ExtendedTooltip name="НаименованиеБанкаРасширеннаяПодсказка" id="244"/>
-										</InputField>
-										<InputField name="НомерСчета" id="245">
-											<DataPath>Объект.НомерСчета</DataPath>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ContextMenu name="НомерСчетаКонтекстноеМеню" id="246"/>
-											<ExtendedTooltip name="НомерСчетаРасширеннаяПодсказка" id="247"/>
-										</InputField>
-										<InputField name="ХранилищеДенег" id="338">
-											<DataPath>Объект.ХранилищеДенег</DataPath>
+										<InputField name="СрокОплатыВДняхПоУмолчанию" id="632">
+											<DataPath>Объект.СрокОплатыВДняхПоУмолчанию</DataPath>
 											<ClearButton>true</ClearButton>
-											<ContextMenu name="ХранилищеДенегКонтекстноеМеню" id="339"/>
-											<ExtendedTooltip name="ХранилищеДенегРасширеннаяПодсказка" id="340"/>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="СрокОплатыВДняхПоУмолчаниюКонтекстноеМеню" id="633"/>
+											<ExtendedTooltip name="СрокОплатыВДняхПоУмолчаниюРасширеннаяПодсказка" id="634"/>
 										</InputField>
 									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ГруппаСотрудникИКод" id="233">
+								</Page>
+								<Page name="ДляДокументов" id="520">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа сотрудник и код</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>In the group of horizontal</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ro</v8:lang>
-											<v8:content>Angajat și codul de grup</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>bl</v8:lang>
-											<v8:content>Група супрацоўнік і код</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>zh</v8:lang>
-											<v8:content>集团员工和代码</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Група співробітник і код</v8:content>
+											<v8:content>Для документов</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>BG</v8:lang>
-											<v8:content>Група служител и код</v8:content>
+											<v8:content>Документ</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Для документів</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Document</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>DE</v8:lang>
-											<v8:content>Gruppe Mitarbeiter und Code</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Pracownik Grupy i kod</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>kk</v8:lang>
-											<v8:content>Топ қызметкер және код</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>th</v8:lang>
-											<v8:content>พนักงานกลุ่มและรหัส</v8:content>
+											<v8:content>Dokument</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа сотрудник и код</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>In the group of horizontal</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ro</v8:lang>
-											<v8:content>Angajat și codul de grup</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>bl</v8:lang>
-											<v8:content>Група супрацоўнік і код</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>zh</v8:lang>
-											<v8:content>集团员工和代码</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Група співробітник і код</v8:content>
+											<v8:content>Для документов</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>BG</v8:lang>
-											<v8:content>Група служител и код</v8:content>
+											<v8:content>Документ</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Для документів</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Document</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>DE</v8:lang>
-											<v8:content>Gruppe Mitarbeiter und Code</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Pracownik Grupy i kod</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>kk</v8:lang>
-											<v8:content>Топ қызметкер және код</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>th</v8:lang>
-											<v8:content>พนักงานกลุ่มและรหัส</v8:content>
+											<v8:content>Dokument</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаСотрудникИКодРасширеннаяПодсказка" id="234"/>
+									<Picture>
+										<xr:Ref>StdPicture.Document</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ДляДокументовРасширеннаяПодсказка" id="521"/>
 									<ChildItems>
-										<CheckBoxField name="ЭтоСотрудник" id="180">
-											<DataPath>Объект.ЭтоСотрудник</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<CheckBoxType>Tumbler</CheckBoxType>
-											<EditFormat>
+										<InputField name="ОКПО" id="133">
+											<DataPath>Объект.ОКПО</DataPath>
+											<TextColor>#333399</TextColor>
+											<BorderColor>style:FieldBackColor</BorderColor>
+											<Font ref="style:NormalTextFont" kind="StyleItem"/>
+											<ContextMenu name="ОКПОКонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="ОКПОРасширеннаяПодсказка" id="135"/>
+										</InputField>
+										<InputField name="ИНН" id="525">
+											<DataPath>Объект.ИНН</DataPath>
+											<TextColor>#000080</TextColor>
+											<BorderColor>style:FieldBackColor</BorderColor>
+											<Font ref="style:NormalTextFont" kind="StyleItem"/>
+											<ContextMenu name="ИННКонтекстноеМеню" id="526"/>
+											<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="527"/>
+										</InputField>
+										<InputField name="ПравовойСтатус" id="7">
+											<DataPath>Объект.ПравовойСтатус</DataPath>
+											<Title>
 												<v8:item>
-													<v8:lang>en</v8:lang>
-													<v8:content>БЛ='This is a common supplier'; БИ='This is our employee'</v8:content>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Правовой статус</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>bl</v8:lang>
-													<v8:content>БЛ='Гэта звычайны пастаўшчык'; БИ='Гэта НАШ Супрацоўнік'</v8:content>
+													<v8:lang>en</v8:lang>
+													<v8:content>Legal status</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>ro</v8:lang>
-													<v8:content>БЛ='"Aceasta este furnizor de obicei"'; БИ='"Aceasta este angajat nostru"'</v8:content>
+													<v8:content>Statutul juridic</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>БЛ='Это обычный поставщик'; БИ='Это НАШ Сотрудник'</v8:content>
+													<v8:lang>bl</v8:lang>
+													<v8:content>Прававы статус</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>zh</v8:lang>
-													<v8:content>БЛ='“这是一般的供应商”'; БИ='“这是我们的员工”'</v8:content>
+													<v8:content>法律地位</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>uk</v8:lang>
-													<v8:content>БЛ='Це звичайний постачальник'; БИ='Це НАШ Співробітник'</v8:content>
+													<v8:content>Правовий статус</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>BG</v8:lang>
-													<v8:content>БЛ='"Това е обичайната доставчик"'; БИ='"Това е наш служител"'</v8:content>
+													<v8:content>Правен статут</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>DE</v8:lang>
-													<v8:content>БЛ='Dies ist die übliche Lieferanten'; БИ='"Das ist unser Mitarbeiter"'</v8:content>
+													<v8:content>Rechtsstand</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>PL</v8:lang>
-													<v8:content>БЛ='"To jest zwykły dostawca"'; БИ='"To jest nasz pracownik"'</v8:content>
+													<v8:content>Status prawny</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>kk</v8:lang>
-													<v8:content>БЛ='Осы әдеттегі жеткізуші'; БИ='Осы біздің қызметкеріміз'</v8:content>
+													<v8:content>Құқықтықтың мәртебесі</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>th</v8:lang>
-													<v8:content>БЛ='นี้เป็นผู้จัดจำหน่ายตามปกติ'; БИ='นี่คือการทำงานของพนักงานของเรา'</v8:content>
+													<v8:content>สถานะทางกฎหมาย</v8:content>
 												</v8:item>
-											</EditFormat>
-											<ContextMenu name="ЭтоСотрудникКонтекстноеМеню" id="181"/>
-											<ExtendedTooltip name="ЭтоСотрудникРасширеннаяПодсказка" id="182"/>
-										</CheckBoxField>
-										<LabelDecoration name="Декорация1" id="248">
-											<HorizontalStretch>true</HorizontalStretch>
-											<ContextMenu name="Декорация1КонтекстноеМеню" id="249"/>
-											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="250"/>
-										</LabelDecoration>
-										<InputField name="Код" id="185">
-											<DataPath>Объект.Code</DataPath>
-											<SkipOnInput>true</SkipOnInput>
-											<ContextMenu name="КодКонтекстноеМеню" id="186"/>
-											<ExtendedTooltip name="КодРасширеннаяПодсказка" id="187"/>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>24</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ПравовойСтатусКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="ПравовойСтатусРасширеннаяПодсказка" id="52"/>
 										</InputField>
+										<InputField name="НомерСвидетельстваПлательщикаНалогаНаДобавочнуюСтоимость" id="427">
+											<DataPath>Объект.НомерСвидетельстваПлательщикаНалогаНаДобавочнуюСтоимость</DataPath>
+											<TitleLocation>Left</TitleLocation>
+											<TitleHeight>2</TitleHeight>
+											<BorderColor>style:FieldBackColor</BorderColor>
+											<ContextMenu name="НомерСвидетельстваПлательщикаНалогаНаДобавочнуюСтоимостьКонтекстноеМеню" id="428"/>
+											<ExtendedTooltip name="НомерСвидетельстваПлательщикаНалогаНаДобавочнуюСтоимостьРасширеннаяПодсказка" id="429"/>
+										</InputField>
+										<UsualGroup name="БезналичныеРеквизиты" id="237">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Безналичные реквизиты</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>Cashless details</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Detalii fără numerar</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>bl</v8:lang>
+													<v8:content>Безнаяўныя рэквізіты</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>zh</v8:lang>
+													<v8:content>非现金的细节</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Безготівкові реквізити</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Безкасово детайли</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Bargeldlose Details</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Szczegóły bezgotówkowe</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>kk</v8:lang>
+													<v8:content>Безналичные деректемелер</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>th</v8:lang>
+													<v8:content>รายละเอียดเงินสด</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Безналичные реквизиты</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>Cashless details</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Detalii fără numerar</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>bl</v8:lang>
+													<v8:content>Безнаяўныя рэквізіты</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>zh</v8:lang>
+													<v8:content>非现金的细节</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Безготівкові реквізити</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Безкасово детайли</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Bargeldlose Details</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Szczegóły bezgotówkowe</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>kk</v8:lang>
+													<v8:content>Безналичные деректемелер</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>th</v8:lang>
+													<v8:content>รายละเอียดเงินสด</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Behavior>Collapsible</Behavior>
+											<Collapsed>true</Collapsed>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="БезналичныеРеквизитыРасширеннаяПодсказка" id="238"/>
+											<ChildItems>
+												<InputField name="МФО" id="239">
+													<DataPath>Объект.МФО</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="МФОКонтекстноеМеню" id="240"/>
+													<ExtendedTooltip name="МФОРасширеннаяПодсказка" id="241"/>
+												</InputField>
+												<InputField name="НаименованиеБанка" id="242">
+													<DataPath>Объект.НаименованиеБанка</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="НаименованиеБанкаКонтекстноеМеню" id="243"/>
+													<ExtendedTooltip name="НаименованиеБанкаРасширеннаяПодсказка" id="244"/>
+												</InputField>
+												<InputField name="НомерСчета" id="245">
+													<DataPath>Объект.НомерСчета</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="НомерСчетаКонтекстноеМеню" id="246"/>
+													<ExtendedTooltip name="НомерСчетаРасширеннаяПодсказка" id="247"/>
+												</InputField>
+												<InputField name="КорреспондентскийСчет" id="522">
+													<DataPath>Объект.КорреспондентскийСчет</DataPath>
+													<BorderColor>style:FieldBackColor</BorderColor>
+													<ContextMenu name="КорреспондентскийСчетКонтекстноеМеню" id="523"/>
+													<ExtendedTooltip name="КорреспондентскийСчетРасширеннаяПодсказка" id="524"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
-								</UsualGroup>
+								</Page>
+								<Page name="ГруппаДополнительнаяИнформация" id="530">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительная информация</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Додаткова інформація</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Additional information</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Zusätzliche Informationen</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа дополнительная информация</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Група додаткова інформація</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Additional Information Group</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Zusätzliche Informationen Gruppen</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Picture>
+										<xr:Ref>CommonPicture.ДополнительнаяИнформация</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ГруппаДополнительнаяИнформацияРасширеннаяПодсказка" id="531"/>
+									<ChildItems>
+										<Table name="ДополнительнаяИнформация" id="532">
+											<Representation>List</Representation>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ДополнительнаяИнформация</DataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="533"/>
+											<AutoCommandBar name="ДополнительнаяИнформацияКоманднаяПанель" id="534">
+												<ChildItems>
+													<Button name="ДополнительнаяИнформацияДобавить" id="557">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ДополнительнаяИнформация.StandardCommand.Add</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Добавить информацию</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Додати інформацію</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Add information</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Informationen hinzufügen</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДополнительнаяИнформацияДобавитьРасширеннаяПодсказка" id="558"/>
+													</Button>
+													<Button name="ДополнительнаяИнформацияУдалить" id="559">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ДополнительнаяИнформация.StandardCommand.Delete</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Удалить</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Видалити</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Remove</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Entfernen</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДополнительнаяИнформацияУдалитьРасширеннаяПодсказка" id="560"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ДополнительнаяИнформацияРасширеннаяПодсказка" id="535"/>
+											<SearchStringAddition name="ДополнительнаяИнформацияСтрокаПоиска" id="653">
+												<AdditionSource>
+													<Item>ДополнительнаяИнформация</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДополнительнаяИнформацияСтрокаПоискаКонтекстноеМеню" id="654"/>
+												<ExtendedTooltip name="ДополнительнаяИнформацияСтрокаПоискаРасширеннаяПодсказка" id="655"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ДополнительнаяИнформацияСостояниеПросмотра" id="656">
+												<AdditionSource>
+													<Item>ДополнительнаяИнформация</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДополнительнаяИнформацияСостояниеПросмотраКонтекстноеМеню" id="657"/>
+												<ExtendedTooltip name="ДополнительнаяИнформацияСостояниеПросмотраРасширеннаяПодсказка" id="658"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ДополнительнаяИнформацияУправлениеПоиском" id="659">
+												<AdditionSource>
+													<Item>ДополнительнаяИнформация</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ДополнительнаяИнформацияУправлениеПоискомКонтекстноеМеню" id="660"/>
+												<ExtendedTooltip name="ДополнительнаяИнформацияУправлениеПоискомРасширеннаяПодсказка" id="661"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnChange">ДополнительнаяИнформацияПриИзменении</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="ДополнительнаяИнформацияВидИнформации" id="551">
+													<DataPath>ДополнительнаяИнформация.ВидИнформации</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="ДополнительнаяИнформацияВидИнформацииКонтекстноеМеню" id="552"/>
+													<ExtendedTooltip name="ДополнительнаяИнформацияВидИнформацииРасширеннаяПодсказка" id="553"/>
+													<Events>
+														<Event name="StartChoice">ДополнительнаяИнформацияВидИнформацииНачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<InputField name="ДополнительнаяИнформацияИнформация" id="554">
+													<DataPath>ДополнительнаяИнформация.Информация</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ChooseType>false</ChooseType>
+													<ContextMenu name="ДополнительнаяИнформацияИнформацияКонтекстноеМеню" id="555"/>
+													<ExtendedTooltip name="ДополнительнаяИнформацияИнформацияРасширеннаяПодсказка" id="556"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
 							</ChildItems>
-						</UsualGroup>
+						</Pages>
 						<UsualGroup name="ГруппаК" id="235">
 							<Title>
 								<v8:item>
@@ -1795,7 +2396,8 @@
 								<InputField name="Комментарий" id="72">
 									<DataPath>Объект.Комментарий</DataPath>
 									<MultiLine>true</MultiLine>
-									<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+									<BorderColor>style:FieldBackColor</BorderColor>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
 									<ContextMenu name="КомментарийКонтекстноеМеню" id="73"/>
 									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="74"/>
 								</InputField>
@@ -2098,22 +2700,61 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОДолгеРасширеннаяПодсказка" id="201"/>
 									<ChildItems>
-										<LabelField name="ТекущийДолг" id="202">
-											<DataPath>ТекущийДолг</DataPath>
-											<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-											<HorizontalAlign>Right</HorizontalAlign>
-											<Width>12</Width>
-											<HorizontalStretch>false</HorizontalStretch>
-											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-											<ContextMenu name="ТекущийДолгКонтекстноеМеню" id="203"/>
-											<ExtendedTooltip name="ТекущийДолгРасширеннаяПодсказка" id="204"/>
-										</LabelField>
+										<UsualGroup name="ГруппаПросроченного" id="630">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа просроченного</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>Group</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>UK</v8:lang>
+													<v8:content>Група простроченого</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа просроченного</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>the Group expired expired</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>UK</v8:lang>
+													<v8:content>Група простроченого</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПросроченногоРасширеннаяПодсказка" id="631"/>
+											<ChildItems>
+												<LabelField name="ТекущийДолг" id="202">
+													<DataPath>ТекущийДолг</DataPath>
+													<Width>12</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ТекущийДолгКонтекстноеМеню" id="203"/>
+													<ExtendedTooltip name="ТекущийДолгРасширеннаяПодсказка" id="204"/>
+												</LabelField>
+												<LabelField name="ПросроченныйДолг" id="627">
+													<DataPath>ПросроченныйДолг</DataPath>
+													<Width>12</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ПросроченныйДолгКонтекстноеМеню" id="628"/>
+													<ExtendedTooltip name="ПросроченныйДолгРасширеннаяПодсказка" id="629"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
 										<LabelField name="НаименованиеОсновнойВалюты1" id="205">
 											<DataPath>НаименованиеОсновнойВалюты</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<HorizontalAlign>Left</HorizontalAlign>
 											<Width>10</Width>
-											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="НаименованиеОсновнойВалюты1КонтекстноеМеню" id="206"/>
 											<ExtendedTooltip name="НаименованиеОсновнойВалюты1РасширеннаяПодсказка" id="207"/>
 										</LabelField>
@@ -2295,6 +2936,7 @@
 									<v8:content>Беттің тобы справа</v8:content>
 								</v8:item>
 							</Title>
+							<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -2522,31 +3164,90 @@
 													</Button>
 												</ChildItems>
 											</ContextMenu>
-											<AutoCommandBar name="ДокументыПоставщикаКоманднаяПанель" id="122"/>
+											<AutoCommandBar name="ДокументыПоставщикаКоманднаяПанель" id="122">
+												<ChildItems>
+													<Button name="ДокументыПоставщикаНайти" id="438">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ДокументыПоставщика.StandardCommand.Find</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Найти..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BG</v8:lang>
+																<v8:content>Намери ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BL</v8:lang>
+																<v8:content>Знайсці ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Suche ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Find ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>PL</v8:lang>
+																<v8:content>Znaleźć ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>RO</v8:lang>
+																<v8:content>Găsi ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Знайти ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>TH</v8:lang>
+																<v8:content>ค้นหา ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ZH</v8:lang>
+																<v8:content>找到..</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДокументыПоставщикаНайтиРасширеннаяПодсказка" id="439"/>
+													</Button>
+													<Button name="ДокументыПоставщикаОтменитьПоиск" id="440">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ДокументыПоставщика.StandardCommand.CancelSearch</CommandName>
+														<ExtendedTooltip name="ДокументыПоставщикаОтменитьПоискРасширеннаяПодсказка" id="441"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
 											<ExtendedTooltip name="ДокументыПоставщикаРасширеннаяПодсказка" id="123"/>
-											<SearchStringAddition name="ДокументыПоставщикаСтрокаПоиска" id="445">
+											<SearchStringAddition name="ДокументыПоставщикаСтрокаПоиска" id="662">
 												<AdditionSource>
 													<Item>ДокументыПоставщика</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ДокументыПоставщикаСтрокаПоискаКонтекстноеМеню" id="446"/>
-												<ExtendedTooltip name="ДокументыПоставщикаСтрокаПоискаРасширеннаяПодсказка" id="447"/>
+												<ContextMenu name="ДокументыПоставщикаСтрокаПоискаКонтекстноеМеню" id="663"/>
+												<ExtendedTooltip name="ДокументыПоставщикаСтрокаПоискаРасширеннаяПодсказка" id="664"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ДокументыПоставщикаСостояниеПросмотра" id="448">
+											<ViewStatusAddition name="ДокументыПоставщикаСостояниеПросмотра" id="665">
 												<AdditionSource>
 													<Item>ДокументыПоставщика</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ДокументыПоставщикаСостояниеПросмотраКонтекстноеМеню" id="449"/>
-												<ExtendedTooltip name="ДокументыПоставщикаСостояниеПросмотраРасширеннаяПодсказка" id="450"/>
+												<ContextMenu name="ДокументыПоставщикаСостояниеПросмотраКонтекстноеМеню" id="666"/>
+												<ExtendedTooltip name="ДокументыПоставщикаСостояниеПросмотраРасширеннаяПодсказка" id="667"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ДокументыПоставщикаУправлениеПоиском" id="451">
+											<SearchControlAddition name="ДокументыПоставщикаУправлениеПоиском" id="668">
 												<AdditionSource>
 													<Item>ДокументыПоставщика</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ДокументыПоставщикаУправлениеПоискомКонтекстноеМеню" id="452"/>
-												<ExtendedTooltip name="ДокументыПоставщикаУправлениеПоискомРасширеннаяПодсказка" id="453"/>
+												<ContextMenu name="ДокументыПоставщикаУправлениеПоискомКонтекстноеМеню" id="669"/>
+												<ExtendedTooltip name="ДокументыПоставщикаУправлениеПоискомРасширеннаяПодсказка" id="670"/>
 											</SearchControlAddition>
 											<Events>
 												<Event name="Selection">ДокументыКлиентаВыбор</Event>
@@ -2763,41 +3464,126 @@
 													</Button>
 												</ChildItems>
 											</ContextMenu>
-											<AutoCommandBar name="ДоговораПоставщикаКоманднаяПанель" id="253"/>
+											<AutoCommandBar name="ДоговораПоставщикаКоманднаяПанель" id="253">
+												<ChildItems>
+													<Button name="ДоговораПоставщикаНайти" id="442">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ДоговораПоставщика.StandardCommand.Find</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Найти..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BG</v8:lang>
+																<v8:content>Намери ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BL</v8:lang>
+																<v8:content>Знайсці ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Suche ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Find ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>PL</v8:lang>
+																<v8:content>Znaleźć ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>RO</v8:lang>
+																<v8:content>Găsi ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Знайти ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>TH</v8:lang>
+																<v8:content>ค้นหา ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ZH</v8:lang>
+																<v8:content>找到..</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДоговораПоставщикаНайтиРасширеннаяПодсказка" id="443"/>
+													</Button>
+													<Button name="ДоговораПоставщикаОтменитьПоиск" id="444">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ДоговораПоставщика.StandardCommand.CancelSearch</CommandName>
+														<ExtendedTooltip name="ДоговораПоставщикаОтменитьПоискРасширеннаяПодсказка" id="445"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
 											<ExtendedTooltip name="ДоговораПоставщикаРасширеннаяПодсказка" id="254"/>
-											<SearchStringAddition name="ДоговораПоставщикаСтрокаПоиска" id="454">
+											<SearchStringAddition name="ДоговораПоставщикаСтрокаПоиска" id="671">
 												<AdditionSource>
 													<Item>ДоговораПоставщика</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ДоговораПоставщикаСтрокаПоискаКонтекстноеМеню" id="455"/>
-												<ExtendedTooltip name="ДоговораПоставщикаСтрокаПоискаРасширеннаяПодсказка" id="456"/>
+												<ContextMenu name="ДоговораПоставщикаСтрокаПоискаКонтекстноеМеню" id="672"/>
+												<ExtendedTooltip name="ДоговораПоставщикаСтрокаПоискаРасширеннаяПодсказка" id="673"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ДоговораПоставщикаСостояниеПросмотра" id="457">
+											<ViewStatusAddition name="ДоговораПоставщикаСостояниеПросмотра" id="674">
 												<AdditionSource>
 													<Item>ДоговораПоставщика</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ДоговораПоставщикаСостояниеПросмотраКонтекстноеМеню" id="458"/>
-												<ExtendedTooltip name="ДоговораПоставщикаСостояниеПросмотраРасширеннаяПодсказка" id="459"/>
+												<ContextMenu name="ДоговораПоставщикаСостояниеПросмотраКонтекстноеМеню" id="675"/>
+												<ExtendedTooltip name="ДоговораПоставщикаСостояниеПросмотраРасширеннаяПодсказка" id="676"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ДоговораПоставщикаУправлениеПоиском" id="460">
+											<SearchControlAddition name="ДоговораПоставщикаУправлениеПоиском" id="677">
 												<AdditionSource>
 													<Item>ДоговораПоставщика</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ДоговораПоставщикаУправлениеПоискомКонтекстноеМеню" id="461"/>
-												<ExtendedTooltip name="ДоговораПоставщикаУправлениеПоискомРасширеннаяПодсказка" id="462"/>
+												<ContextMenu name="ДоговораПоставщикаУправлениеПоискомКонтекстноеМеню" id="678"/>
+												<ExtendedTooltip name="ДоговораПоставщикаУправлениеПоискомРасширеннаяПодсказка" id="679"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ДоговораПоставщикаНаименование" id="261">
-													<DataPath>ДоговораПоставщика.Description</DataPath>
+													<DataPath>ДоговораПоставщика.Ref</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Наименование договоров</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Име Споразумения</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Найменування договорів</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Name Agreements</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Nazwa umowy</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Nennen Vereinbarungen</v8:content>
+														</v8:item>
+													</Title>
 													<Width>20</Width>
 													<ContextMenu name="ДоговораПоставщикаНаименованиеКонтекстноеМеню" id="262"/>
 													<ExtendedTooltip name="ДоговораПоставщикаНаименованиеРасширеннаяПодсказка" id="263"/>
 												</LabelField>
 												<LabelField name="ДоговораПоставщикаОрганизация" id="294">
-													<DataPath>8/14</DataPath>
+													<DataPath>ДоговораПоставщика.Организация</DataPath>
 													<TitleBackColor>#F5FFF5</TitleBackColor>
 													<ContextMenu name="ДоговораПоставщикаОрганизацияКонтекстноеМеню" id="295"/>
 													<ExtendedTooltip name="ДоговораПоставщикаОрганизацияРасширеннаяПодсказка" id="296"/>
@@ -3292,35 +4078,94 @@
 													</Button>
 												</ChildItems>
 											</ContextMenu>
-											<AutoCommandBar name="ЗаказыПоставщикуКоманднаяПанель" id="351"/>
+											<AutoCommandBar name="ЗаказыПоставщикуКоманднаяПанель" id="351">
+												<ChildItems>
+													<Button name="ЗаказыПоставщикуНайти" id="446">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ЗаказыПоставщику.StandardCommand.Find</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Найти..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BG</v8:lang>
+																<v8:content>Намери ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BL</v8:lang>
+																<v8:content>Знайсці ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Suche ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Find ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>PL</v8:lang>
+																<v8:content>Znaleźć ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>RO</v8:lang>
+																<v8:content>Găsi ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Знайти ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>TH</v8:lang>
+																<v8:content>ค้นหา ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ZH</v8:lang>
+																<v8:content>找到..</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ЗаказыПоставщикуНайтиРасширеннаяПодсказка" id="447"/>
+													</Button>
+													<Button name="ЗаказыПоставщикуОтменитьПоиск" id="448">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<OnlyInAllActions>true</OnlyInAllActions>
+														<CommandName>Form.Item.ЗаказыПоставщику.StandardCommand.CancelSearch</CommandName>
+														<ExtendedTooltip name="ЗаказыПоставщикуОтменитьПоискРасширеннаяПодсказка" id="449"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
 											<ExtendedTooltip name="ЗаказыПоставщикуРасширеннаяПодсказка" id="352"/>
-											<SearchStringAddition name="ЗаказыПоставщикуСтрокаПоиска" id="463">
+											<SearchStringAddition name="ЗаказыПоставщикуСтрокаПоиска" id="680">
 												<AdditionSource>
 													<Item>ЗаказыПоставщику</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ЗаказыПоставщикуСтрокаПоискаКонтекстноеМеню" id="464"/>
-												<ExtendedTooltip name="ЗаказыПоставщикуСтрокаПоискаРасширеннаяПодсказка" id="465"/>
+												<ContextMenu name="ЗаказыПоставщикуСтрокаПоискаКонтекстноеМеню" id="681"/>
+												<ExtendedTooltip name="ЗаказыПоставщикуСтрокаПоискаРасширеннаяПодсказка" id="682"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ЗаказыПоставщикуСостояниеПросмотра" id="466">
+											<ViewStatusAddition name="ЗаказыПоставщикуСостояниеПросмотра" id="683">
 												<AdditionSource>
 													<Item>ЗаказыПоставщику</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ЗаказыПоставщикуСостояниеПросмотраКонтекстноеМеню" id="467"/>
-												<ExtendedTooltip name="ЗаказыПоставщикуСостояниеПросмотраРасширеннаяПодсказка" id="468"/>
+												<ContextMenu name="ЗаказыПоставщикуСостояниеПросмотраКонтекстноеМеню" id="684"/>
+												<ExtendedTooltip name="ЗаказыПоставщикуСостояниеПросмотраРасширеннаяПодсказка" id="685"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ЗаказыПоставщикуУправлениеПоиском" id="469">
+											<SearchControlAddition name="ЗаказыПоставщикуУправлениеПоиском" id="686">
 												<AdditionSource>
 													<Item>ЗаказыПоставщику</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ЗаказыПоставщикуУправлениеПоискомКонтекстноеМеню" id="470"/>
-												<ExtendedTooltip name="ЗаказыПоставщикуУправлениеПоискомРасширеннаяПодсказка" id="471"/>
+												<ContextMenu name="ЗаказыПоставщикуУправлениеПоискомКонтекстноеМеню" id="687"/>
+												<ExtendedTooltip name="ЗаказыПоставщикуУправлениеПоискомРасширеннаяПодсказка" id="688"/>
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="ЗаказыПоставщикуДата" id="355">
-													<DataPath>ЗаказыПоставщику.Date</DataPath>
+													<DataPath>ЗаказыПоставщику.Ref</DataPath>
 													<Width>12</Width>
 													<HorizontalStretch>false</HorizontalStretch>
 													<Format>
@@ -3607,11 +4452,13 @@
 									<ChildItems>
 										<Table name="Изображения" id="406">
 											<Height>1</Height>
+											<Header>false</Header>
 											<UseAlternationRowColor>true</UseAlternationRowColor>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<DataPath>Изображения</DataPath>
 											<RowPictureDataPath>Изображения.DefaultPicture</RowPictureDataPath>
+											<BorderColor>style:FieldBackColor</BorderColor>
 											<SearchStringLocation>None</SearchStringLocation>
 											<ViewStatusLocation>None</ViewStatusLocation>
 											<SearchControlLocation>None</SearchControlLocation>
@@ -3649,6 +4496,48 @@
 														<Type>CommandBarButton</Type>
 														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Item.Изображения.StandardCommand.Find</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Найти..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BG</v8:lang>
+																<v8:content>Намери ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BL</v8:lang>
+																<v8:content>Знайсці ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Suche ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Find ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>PL</v8:lang>
+																<v8:content>Znaleźć ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>RO</v8:lang>
+																<v8:content>Găsi ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Знайти ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>TH</v8:lang>
+																<v8:content>ค้นหา ..</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ZH</v8:lang>
+																<v8:content>找到..</v8:content>
+															</v8:item>
+														</Title>
 														<ExtendedTooltip name="ИзображенияНайтиРасширеннаяПодсказка" id="416"/>
 													</Button>
 													<Button name="ИзображенияОтменитьПоиск" id="417">
@@ -3660,36 +4549,58 @@
 												</ChildItems>
 											</AutoCommandBar>
 											<ExtendedTooltip name="ИзображенияРасширеннаяПодсказка" id="409"/>
-											<SearchStringAddition name="ИзображенияСтрокаПоиска" id="472">
+											<SearchStringAddition name="ИзображенияСтрокаПоиска" id="689">
 												<AdditionSource>
 													<Item>Изображения</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ИзображенияСтрокаПоискаКонтекстноеМеню" id="473"/>
-												<ExtendedTooltip name="ИзображенияСтрокаПоискаРасширеннаяПодсказка" id="474"/>
+												<ContextMenu name="ИзображенияСтрокаПоискаКонтекстноеМеню" id="690"/>
+												<ExtendedTooltip name="ИзображенияСтрокаПоискаРасширеннаяПодсказка" id="691"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ИзображенияСостояниеПросмотра" id="475">
+											<ViewStatusAddition name="ИзображенияСостояниеПросмотра" id="692">
 												<AdditionSource>
 													<Item>Изображения</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ИзображенияСостояниеПросмотраКонтекстноеМеню" id="476"/>
-												<ExtendedTooltip name="ИзображенияСостояниеПросмотраРасширеннаяПодсказка" id="477"/>
+												<ContextMenu name="ИзображенияСостояниеПросмотраКонтекстноеМеню" id="693"/>
+												<ExtendedTooltip name="ИзображенияСостояниеПросмотраРасширеннаяПодсказка" id="694"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ИзображенияУправлениеПоиском" id="478">
+											<SearchControlAddition name="ИзображенияУправлениеПоиском" id="695">
 												<AdditionSource>
 													<Item>Изображения</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ИзображенияУправлениеПоискомКонтекстноеМеню" id="479"/>
-												<ExtendedTooltip name="ИзображенияУправлениеПоискомРасширеннаяПодсказка" id="480"/>
+												<ContextMenu name="ИзображенияУправлениеПоискомКонтекстноеМеню" id="696"/>
+												<ExtendedTooltip name="ИзображенияУправлениеПоискомРасширеннаяПодсказка" id="697"/>
 											</SearchControlAddition>
 											<Events>
 												<Event name="OnActivateRow">ИзображенияПриАктивизацииСтроки</Event>
 											</Events>
 											<ChildItems>
 												<LabelField name="ИзображенияНаименование" id="410">
-													<DataPath>Изображения.Description</DataPath>
+													<DataPath>Изображения.Ref</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Наименование изображений</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Име Images</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Найменування зображень</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Name Images</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Nennen Images</v8:content>
+														</v8:item>
+													</Title>
 													<ContextMenu name="ИзображенияНаименованиеКонтекстноеМеню" id="411"/>
 													<ExtendedTooltip name="ИзображенияНаименованиеРасширеннаяПодсказка" id="412"/>
 												</LabelField>
@@ -4034,125 +4945,6 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
-		</Attribute>
-		<Attribute name="ЗапросКРасчетам" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Запрос к расчетам</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>A request to the calculations</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>O cerere de calcule</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bl</v8:lang>
-					<v8:content>Запыт да разлікаў</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>zh</v8:lang>
-					<v8:content>计算的请求</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Запит до розрахунків</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Молба за изчисленията</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Eine Anfrage an den Berechnungen</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Wniosek do obliczeń</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>kk</v8:lang>
-					<v8:content>Сұраныс есептерге</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>th</v8:lang>
-					<v8:content>ขอให้คำนวณ</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:DynamicList</v8:Type>
-			</Type>
-			<FunctionalOptions>
-				<Item>FunctionalOption.ВестиУчетДвиженияДенег</Item>
-			</FunctionalOptions>
-			<Settings xsi:type="DynamicList">
-				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
-				<QueryText>ВЫБРАТЬ
-	СУММА(РасчетыСПоставщикамиОстаткиИОбороты.СуммаКонечныйОстаток) КАК ТекущийДолг,
-	СУММА(РасчетыСПоставщикамиОстаткиИОбороты.СуммаПриход) КАК ВсегоПриход,
-	СУММА(РасчетыСПоставщикамиОстаткиИОбороты.СуммаРасход) КАК ВсегоРасход
-ИЗ
-	РегистрНакопления.РасчетыСПоставщиками.ОстаткиИОбороты(,, , , Поставщик = &amp;Поставщик) КАК РасчетыСПоставщикамиОстаткиИОбороты</QueryText>
-				<MainTable>AccumulationRegister.РасчетыСПоставщиками.BalanceAndTurnovers</MainTable>
-				<ListSettings>
-					<dcsset:filter>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
-					</dcsset:filter>
-					<dcsset:order>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
-					</dcsset:order>
-					<dcsset:conditionalAppearance>
-						<dcsset:item>
-							<dcsset:selection>
-								<dcsset:item>
-									<dcsset:field>ТекущийДолг</dcsset:field>
-								</dcsset:item>
-							</dcsset:selection>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">ТекущийДолг</dcsset:left>
-									<dcsset:comparisonType>Greater</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#FF99CC</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:selection>
-								<dcsset:item>
-									<dcsset:field>ТекущийДолг</dcsset:field>
-								</dcsset:item>
-							</dcsset:selection>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">ТекущийДолг</dcsset:left>
-									<dcsset:comparisonType>Less</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#FFFF99</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
-					</dcsset:conditionalAppearance>
-				</ListSettings>
-			</Settings>
 		</Attribute>
 		<Attribute name="ДокументыПоставщика" id="5">
 			<Title>
@@ -4519,46 +5311,28 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<FunctionalOptions>
-				<Item>FunctionalOption.ВестиУчетОтдельныхДоговоровСИКонтрагентами</Item>
+				<Item>FunctionalOption.ВестиУчетОтдельныхДоговоровСКонтрагентами</Item>
 			</FunctionalOptions>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	СправочникДоговора.Ссылка,
-	СправочникДоговора.ПометкаУдаления,
-	СправочникДоговора.Предопределенный,
-	СправочникДоговора.Код,
-	СправочникДоговора.Наименование,
 	СправочникДоговора.Организация,
-	СправочникДоговора.КлиентПоставщик,
 	СправочникДоговора.ДатаЗаключения КАК ДатаЗаключения,
 	СправочникДоговора.ДатаНачала,
 	СправочникДоговора.ДатаОкончания КАК ДатаОкончания,
-	СправочникДоговора.НомерДоговора,
-	СправочникДоговора.ПредусматриваетСтрогиеЦены,
-	СправочникДоговора.ОграничиваетСуммуТоваров,
-	СправочникДоговора.ОграничиваетСуммуЗадолженности,
-	СправочникДоговора.ОграничиваетКоличествоТоваров,
-	СправочникДоговора.УстанавливаетСрокОплатыВДнях,
-	СправочникДоговора.ВидЦен,
 	СправочникДоговора.Комментарий,
 	СправочникДоговора.Ответственный,
 	СправочникДоговора.ДатаСоздания,
 	СправочникДоговора.ДатаРедакции,
-	СправочникДоговора.Товары.(
-		Ссылка,
-		НомерСтроки,
-		Номенклатура,
-		Цена,
-		Коментарий
-	)
+	СправочникДоговора.НомерДоговора
 ИЗ
 	Справочник.Договора КАК СправочникДоговора
 ГДЕ
 	СправочникДоговора.КлиентПоставщик = &amp;КлиентПоставщик
-
-</QueryText>
+	И СправочникДоговора.ЭтоГруппа = ЛОЖЬ
+	И СправочникДоговора.Предопределенный = ЛОЖЬ</QueryText>
 				<MainTable>Catalog.Договора</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -4696,17 +5470,9 @@
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	ДокументПоступленияТовара.Ссылка,
-	ДокументПоступленияТовара.ПометкаУдаления,
-	ДокументПоступленияТовара.Номер,
-	ДокументПоступленияТовара.Дата,
-	ДокументПоступленияТовара.Проведен,
 	ДокументПоступленияТовара.Склад,
-	ДокументПоступленияТовара.УстанавливатьЦенуУказаннуюВТаблицеВКачествеЦеныДляРеализацииТовара,
 	ДокументПоступленияТовара.ВыбылоДенег,
-	ДокументПоступленияТовара.КлиентПоставщик,
 	ДокументПоступленияТовара.ВидЦен,
-	ДокументПоступленияТовара.Валюта,
-	ДокументПоступленияТовара.Курс,
 	ДокументПоступленияТовара.Комментарий,
 	ДокументПоступленияТовара.ВидДокумента,
 	ДокументПоступленияТовара.ТовараНаСумму,
@@ -4716,15 +5482,11 @@
 	ДокументПоступленияТовара.Договор,
 	ДокументПоступленияТовара.ХранилищеДенег,
 	ДокументПоступленияТовара.ЗаказКлиента,
-	ДокументПоступленияТовара.ЭтоЗаказ,
 	ДокументПоступленияТовара.ЗаказСогласован,
 	ДокументПоступленияТовара.ЗаказОплачен,
 	ДокументПоступленияТовара.ЗаказДатаПлана,
 	ДокументПоступленияТовара.ЗаказДатаФакта,
 	ДокументПоступленияТовара.ЗаказПоставщику,
-	ДокументПоступленияТовара.Ответственный,
-	ДокументПоступленияТовара.ДатаСоздания,
-	ДокументПоступленияТовара.ДатаРедакции,
 	ЕСТЬNULL(ВложенныйЗапрос.Смена, "") КАК Смена,
 	ЕСТЬNULL(ВложенныйЗапрос.Состояние, "") КАК Состояние
 ИЗ
@@ -4814,6 +5576,9 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ЕстьПринтер</Item>
+			</FunctionalOptions>
 		</Attribute>
 		<Attribute name="НаименованиеИзменяли" id="12">
 			<Title>
@@ -5421,7 +6186,8 @@
 ИЗ
 	Справочник.Изображения КАК СправочникИзображения
 ГДЕ
-	СправочникИзображения.СвязанныйОбъект = &amp;Владелец</QueryText>
+	СправочникИзображения.СвязанныйОбъект = &amp;Владелец
+	И СправочникИзображения.ЭтоГруппа = ЛОЖЬ</QueryText>
 				<MainTable>Catalog.Изображения</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -5553,6 +6319,216 @@
 				<Field>СтраницаПанели</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="СтраницаОсновноеДополнительно" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СтраницаОсновноеДополнительно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dashboard</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Tablou de bord</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Старонка панэлі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>仪表盘</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторінка панелі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Табло</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Armaturenbrett</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Tablica rozdzielcza</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Панели беті</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>หน้าปัด</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>СтраницаОсновноеДополнительно</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДопИнформацияИзменена" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительная информация изменена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Додаткова інформація змінена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Additional information changed</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zusätzliche Informationen geändert</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДопИнфоТипВладельца" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп инфо тип владельца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Доп інфо тип власника</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Additional information owner type</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zusätzliche Informationen Besitzertyp</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ОбъектыДляДополнительныхРеквизитов</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДополнительнаяИнформация" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительная информация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Додаткова інформація</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Additional information</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Zusätzliche Informationen</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительнуюИнформациюДляОбъектовБазыДанных</Item>
+			</FunctionalOptions>
+			<Columns>
+				<Column name="ВидИнформации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид информации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вид інформації</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Type of Information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Art der Information</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДополнительныеРеквизиты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Информация" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Інформація</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Information</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПросроченныйДолг" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просрочено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>expired</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Прострочено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВестиУчетОтдельныхДоговоровСКонтрагентами</Item>
+			</FunctionalOptions>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -5626,7 +6602,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить даные о долге</v8:content>
+					<v8:content>Обновить данные о долге</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -5638,7 +6614,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>bl</v8:lang>
-					<v8:content>Абнавіць даные пра доўг</v8:content>
+					<v8:content>Абнавіць данные пра доўг</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>zh</v8:lang>
@@ -5662,7 +6638,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>kk</v8:lang>
-					<v8:content>Жаңала- даные туралы қарызда</v8:content>
+					<v8:content>Жаңала- данные туралы қарызда</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>th</v8:lang>
@@ -5672,7 +6648,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить даные о долге</v8:content>
+					<v8:content>Обновить данные о долге</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -5684,7 +6660,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>bl</v8:lang>
-					<v8:content>Абнавіць даные пра доўг</v8:content>
+					<v8:content>Абнавіць данные пра доўг</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>zh</v8:lang>
@@ -5708,7 +6684,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>kk</v8:lang>
-					<v8:content>Жаңала- даные туралы қарызда</v8:content>
+					<v8:content>Жаңала- данные туралы қарызда</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>th</v8:lang>
@@ -5821,7 +6797,7 @@
 			</Picture>
 			<Action>СоздатьНовыйДоговор</Action>
 			<FunctionalOptions>
-				<Item>FunctionalOption.ВестиУчетОтдельныхДоговоровСИКонтрагентами</Item>
+				<Item>FunctionalOption.ВестиУчетОтдельныхДоговоровСКонтрагентами</Item>
 			</FunctionalOptions>
 			<Representation>TextPicture</Representation>
 		</Command>
@@ -6338,6 +7314,156 @@
 			</FunctionalOptions>
 			<Representation>TextPicture</Representation>
 		</Command>
+		<Command name="СкопироватьИмяПолучателя" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать имя получателя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Копирайте името на получателя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Скапіяваць імя атрымальніка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Kopieren Sie den Namen des Empfängers</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Copy the name of the recipient</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Skopiuj nazwę odbiorcy</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Copiați numele destinatarului</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Скопіювати ім'я одержувача</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>คัดลอกชื่อของผู้รับ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>复制收件人的姓名</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать имя получателя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Копирайте името на получателя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Скапіяваць імя атрымальніка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Kopieren Sie den Namen des Empfängers</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Copy the name of the recipient</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Skopiuj nazwę odbiorcy</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Copiați numele destinatarului</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Скопіювати ім'я одержувача</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>คัดลอกชื่อของผู้รับ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>复制收件人的姓名</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкопироватьИмяПолучателя</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьКомандуПечатиПочтовогоБланкаДляКонтрагентов</Item>
+			</FunctionalOptions>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="СформироватьСложноеПолноеНаименование" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать сложное полное наименование</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Образуват комплекс пълно име</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Сформувати складне повне найменування</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Form a complex full name</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Bilden einen Komplex voller Name</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать сложное полное наименование</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Образуват комплекс пълно име</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Сформувати складне повне найменування</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Form a complex full name</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Bilden einen Komplex voller Name</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.БыстроСоздатьНовоеПоле</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СформироватьСложноеПолноеНаименование</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ЕстьПринтер</Item>
+			</FunctionalOptions>
+			<Representation>Picture</Representation>
+		</Command>
 	</Commands>
 	<CommandInterface>
 		<NavigationPanel>
@@ -6359,6 +7485,14 @@
 			</Item>
 			<Item>
 				<Command>InformationRegister.ЗначенияДополнительныхРеквизитов.StandardCommand.OpenByValue.ОбъектВладелец</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>
