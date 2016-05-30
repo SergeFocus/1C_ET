@@ -1,0 +1,2498 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выгрузка и загрузка данных XML</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>BG</v8:lang>
+			<v8:content>Разтоварване и товарене XML данни</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>BL</v8:lang>
+			<v8:content>Выгрузка і загрузка дадзеных XML</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>DE</v8:lang>
+			<v8:content>Entladen und Laden von XML-Daten</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>EN</v8:lang>
+			<v8:content>Unloading and loading XML data</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>PL</v8:lang>
+			<v8:content>Rozładunek i załadunek danych XML</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>RO</v8:lang>
+			<v8:content>Descărcare și încărcare a datelor XML</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>UK</v8:lang>
+			<v8:content>Вивантаження і завантаження даних XML</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>TH</v8:lang>
+			<v8:content>ขนถ่ายและการโหลดข้อมูล</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ZH</v8:lang>
+			<v8:content>卸载和加载XML数据</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoFillCheck>false</AutoFillCheck>
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаРежим" id="1">
+			<ExtendedTooltip name="ГруппаРежимРасширеннаяПодсказка" id="2"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ГруппаРежимПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="ГруппаВыгрузка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Разтоварване</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Выгрузка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Entladen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Unloading</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Rozładunek</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Descărcare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Вивантаження</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>การปลดปล่อย</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>卸载</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаВыгрузкаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИмяФайлаВыгрузки" id="104">
+							<Width>79</Width>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИмяФайлаВыгрузкиРасширеннаяПодсказка" id="105"/>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПериодВыгрузки" id="34">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодВыгрузкиРасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<InputField name="ПериодВыгрузки" id="19">
+									<DataPath>ПериодВыгрузки</DataPath>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ПериодВыгрузкиКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ПериодВыгрузкиРасширеннаяПодсказка" id="21"/>
+								</InputField>
+								<CheckBoxField name="ИспользоватьОтборПоДатеДляВсехОбъектов" id="36">
+									<DataPath>Объект.ИспользоватьОтборПоДатеДляВсехОбъектов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отбор по периоду для всех объектов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Изберете по период за всички обекти</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Адбор па перыядзе для ўсіх аб'ектаў</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Auswahl nach Periode für alle Objekte</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Select by period for all objects</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Wybierz przez okres dla wszystkich obiektów</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Selectați în funcție de perioada pentru toate obiectele</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Відбір по періоду для всіх об'єктів</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>เลือกตามระยะเวลาสำหรับวัตถุทั้งหมด</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>以期为所有对象选择</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьОтборПоДатеДляВсехОбъектовКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ИспользоватьОтборПоДатеДляВсехОбъектовРасширеннаяПодсказка" id="38"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ТипВыгрузкиПериодическихРегистров" id="22">
+							<DataPath>Объект.ТипВыгрузкиПериодическихРегистров</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбор для периодических регистров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Selection за периодични регистри</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Адбор для перыядычных рэгістраў</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Auswahl für periodische Register</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Selection for periodic registers</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Wybór dla rejestrów okresowych</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Selecție pentru registrele periodice</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Відбір для періодичних регістрів</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>การคัดเลือกลงทะเบียนเป็นระยะ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>选择的周期寄存器</v8:content>
+								</v8:item>
+							</Title>
+							<Width>27</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ListChoiceMode>true</ListChoiceMode>
+							<TextEdit>false</TextEdit>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отбор за период</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Срез последних на дату окончания</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Срез первых на дату начала</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Срез последних на дату начала + изменения за период</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">3</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ТипВыгрузкиПериодическихРегистровКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ТипВыгрузкиПериодическихРегистровРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<CheckBoxField name="ВыгружатьСДокументомЕгоДвижения" id="25">
+							<DataPath>Объект.ВыгружатьСДокументомЕгоДвижения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вместе с документами выгружать их движения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Заедно с документите разтоварват тяхното движение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Разам з дакументамі выгружаць іх руху</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Zusammen mit den Unterlagen entladen ihre Bewegung</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Together with the documents unload their movement</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Wraz z dokumentami, rozładować ich ruch</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Împreună cu documentele descarce libera circulație a acestora</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Разом з документами вивантажувати їх руху</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>พร้อมเอกสารขนเคลื่อนไหวของพวกเขา</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>连同文件卸载他们的运动</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыгружатьСДокументомЕгоДвиженияКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ВыгружатьСДокументомЕгоДвиженияРасширеннаяПодсказка" id="27"/>
+						</CheckBoxField>
+						<Pages name="ГруппаОбъектыВыгрузки" id="28">
+							<ExtendedTooltip name="ГруппаОбъектыВыгрузкиРасширеннаяПодсказка" id="29"/>
+							<ChildItems>
+								<Page name="ГруппаНастройкиВыгрузки" id="30">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки выгрузки</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Настройки на разтоварване</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Налады выгрузкі</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Einstellungen Entladen</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Settings unloading</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Ustawienia rozładunek</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Setările de descărcare</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Налаштування вивантаження</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>การตั้งค่าการขนถ่าย</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>设置卸载</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ГруппаНастройкиВыгрузкиРасширеннаяПодсказка" id="31"/>
+									<ChildItems>
+										<Table name="ДеревоМетаданных" id="39">
+											<Representation>Tree</Representation>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<InitialTreeView>ExpandAllLevels</InitialTreeView>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.ДеревоМетаданных</DataPath>
+											<RowPictureDataPath>Объект.ДеревоМетаданных.ИндексКартинки</RowPictureDataPath>
+											<RowsPicture>
+												<xr:Abs>RowsPicture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</RowsPicture>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="ДеревоМетаданныхКонтекстноеМеню" id="40"/>
+											<AutoCommandBar name="ДеревоМетаданныхКоманднаяПанель" id="41">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ДеревоМетаданныхПересчитатьВыгружаемыеПоСсылке" id="61">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ПересчитатьВыгружаемыеПоСсылке</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Определить данные, выгружаемые по ссылке</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BG</v8:lang>
+																<v8:content>Определя данни разтоварени връзката</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BL</v8:lang>
+																<v8:content>Вызначыць дадзеныя, Спампаваныя па спасылцы</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Bestimmen Sie die Daten entladen Link</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Determine the data unloaded link</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>PL</v8:lang>
+																<v8:content>Określenia danych wyładowane linku</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>RO</v8:lang>
+																<v8:content>Determinați descărcate link-ul de date</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Визначити дані, Вивантажувані за посиланням</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>TH</v8:lang>
+																<v8:content>ตรวจสอบข้อมูลการเชื่อมโยงการยกเลิกการโหลด</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ZH</v8:lang>
+																<v8:content>确定数据卸载链接</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДеревоМетаданныхПересчитатьВыгружаемыеПоСсылкеРасширеннаяПодсказка" id="62"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ДеревоМетаданныхРасширеннаяПодсказка" id="42"/>
+											<SearchStringAddition name="ДеревоМетаданныхСтрокаПоиска" id="139">
+												<AdditionSource>
+													<Item>ДеревоМетаданных</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДеревоМетаданныхСтрокаПоискаКонтекстноеМеню" id="140"/>
+												<ExtendedTooltip name="ДеревоМетаданныхСтрокаПоискаРасширеннаяПодсказка" id="141"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ДеревоМетаданныхСостояниеПросмотра" id="142">
+												<AdditionSource>
+													<Item>ДеревоМетаданных</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДеревоМетаданныхСостояниеПросмотраКонтекстноеМеню" id="143"/>
+												<ExtendedTooltip name="ДеревоМетаданныхСостояниеПросмотраРасширеннаяПодсказка" id="144"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ДеревоМетаданныхУправлениеПоиском" id="145">
+												<AdditionSource>
+													<Item>ДеревоМетаданных</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ДеревоМетаданныхУправлениеПоискомКонтекстноеМеню" id="146"/>
+												<ExtendedTooltip name="ДеревоМетаданныхУправлениеПоискомРасширеннаяПодсказка" id="147"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<ColumnGroup name="ГруппаВыбораОбъектов" id="59">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа выбора объектов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Choice Group на обекти</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>Група выбару аб'ектаў</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Auswahlgruppe von Objekten</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Choice Group of objects</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Wybór grupy obiektów</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>Alegerea grup de obiecte</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Група вибору об'єктів</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>เลือกกลุ่มของวัตถุ</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>对象选择组</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа выбора объектов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>Choice Group на обекти</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>Група выбару аб'ектаў</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Auswahlgruppe von Objekten</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>Choice Group of objects</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>Wybór grupy obiektów</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>Alegerea grup de obiecte</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>Група вибору об'єктів</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>เลือกกลุ่มของวัตถุ</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>对象选择组</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="ГруппаВыбораОбъектовРасширеннаяПодсказка" id="60"/>
+													<ChildItems>
+														<CheckBoxField name="ДеревоМетаданныхВыгружать" id="53">
+															<DataPath>Объект.ДеревоМетаданных.Выгружать</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<ThreeState>true</ThreeState>
+															<ContextMenu name="ДеревоМетаданныхВыгружатьКонтекстноеМеню" id="54"/>
+															<ExtendedTooltip name="ДеревоМетаданныхВыгружатьРасширеннаяПодсказка" id="55"/>
+															<Events>
+																<Event name="OnChange">ДеревоМетаданныхВыгружатьПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="ДеревоМетаданныхПолноеИмяМетаданных" id="50">
+															<DataPath>Объект.ДеревоМетаданных.ПолноеИмяМетаданных</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<TextEdit>false</TextEdit>
+															<ContextMenu name="ДеревоМетаданныхПолноеИмяМетаданныхКонтекстноеМеню" id="51"/>
+															<ExtendedTooltip name="ДеревоМетаданныхПолноеИмяМетаданныхРасширеннаяПодсказка" id="52"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<CheckBoxField name="ДеревоМетаданныхВыгружатьПриНеобходимости" id="56">
+													<DataPath>Объект.ДеревоМетаданных.ВыгружатьПриНеобходимости</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ThreeState>true</ThreeState>
+													<ContextMenu name="ДеревоМетаданныхВыгружатьПриНеобходимостиКонтекстноеМеню" id="57"/>
+													<ExtendedTooltip name="ДеревоМетаданныхВыгружатьПриНеобходимостиРасширеннаяПодсказка" id="58"/>
+													<Events>
+														<Event name="OnChange">ДеревоМетаданныхВыгружатьПриНеобходимостиПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаДополнительныеОбъекты" id="32">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительные объекты для выгрузки</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BG</v8:lang>
+											<v8:content>Допълнителни съоръжения за разтоварване</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>BL</v8:lang>
+											<v8:content>Дадатковыя аб'екты для выгрузкі</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>DE</v8:lang>
+											<v8:content>Weitere Einrichtungen zum Entladen</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>EN</v8:lang>
+											<v8:content>Additional facilities for unloading</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>PL</v8:lang>
+											<v8:content>Dodatkowe urządzenia do rozładunku</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>RO</v8:lang>
+											<v8:content>Facilități suplimentare de descărcare</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>UK</v8:lang>
+											<v8:content>Додаткові об'єкти для вивантаження</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>TH</v8:lang>
+											<v8:content>สิ่งอำนวยความสะดวกเพิ่มเติมสำหรับการขนถ่าย</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ZH</v8:lang>
+											<v8:content>卸货其他设施</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаДополнительныеОбъектыРасширеннаяПодсказка" id="33"/>
+									<ChildItems>
+										<InputField name="ТипОбъектовДляВыгрузки" id="84">
+											<DataPath>ТипОбъектовДляВыгрузки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BG</v8:lang>
+													<v8:content>Данни</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>BL</v8:lang>
+													<v8:content>Дадзеныя</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>DE</v8:lang>
+													<v8:content>Daten</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>EN</v8:lang>
+													<v8:content>Data</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>PL</v8:lang>
+													<v8:content>Dane</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>RO</v8:lang>
+													<v8:content>Date</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>UK</v8:lang>
+													<v8:content>Дані</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>TH</v8:lang>
+													<v8:content>ข้อมูล</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ZH</v8:lang>
+													<v8:content>数据</v8:content>
+												</v8:item>
+											</Title>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="ТипОбъектовДляВыгрузкиКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="ТипОбъектовДляВыгрузкиРасширеннаяПодсказка" id="86"/>
+										</InputField>
+										<Table name="ДополнительныеОбъектыДляВыгрузки" id="63">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.ДополнительныеОбъектыДляВыгрузки</DataPath>
+											<CommandSet>
+												<ExcludedCommand>Copy</ExcludedCommand>
+											</CommandSet>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ДополнительныеОбъектыДляВыгрузкиКонтекстноеМеню" id="64"/>
+											<AutoCommandBar name="ДополнительныеОбъектыДляВыгрузкиКоманднаяПанель" id="65">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ДополнительныеОбъектыДляВыгрузкиДобавить" id="124">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.ДополнительныеОбъектыДляВыгрузки.StandardCommand.Add</CommandName>
+														<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиДобавитьРасширеннаяПодсказка" id="125"/>
+													</Button>
+													<Button name="ДополнительныеОбъектыДляВыгрузкиДобавитьИзЗапроса" id="87">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Command.ДобавитьИзЗапроса</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Добавить запросом...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BG</v8:lang>
+																<v8:content>Добави заявка ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BL</v8:lang>
+																<v8:content>Дадаць запытам ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Fügen Anfrage ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Add request ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>PL</v8:lang>
+																<v8:content>Dodaj prośbę ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>RO</v8:lang>
+																<v8:content>Adauga cerere ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Додати запитом ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>TH</v8:lang>
+																<v8:content>เพิ่มคำขอ ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ZH</v8:lang>
+																<v8:content>添加的请求......</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиДобавитьИзЗапросаРасширеннаяПодсказка" id="88"/>
+													</Button>
+													<Button name="ДополнительныеОбъектыДляВыгрузкиНастройкиКонсолиЗапросов" id="130">
+														<Type>CommandBarButton</Type>
+														<OnlyInAllActions>false</OnlyInAllActions>
+														<CommandName>Form.Command.НастройкиКонсолиЗапросов</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.ReportSettings</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиНастройкиКонсолиЗапросовРасширеннаяПодсказка" id="131"/>
+													</Button>
+													<ButtonGroup name="ДополнительныеОбъектыДляВыгрузкиГруппа1" id="126">
+														<CommandSource>Item.ДополнительныеОбъектыДляВыгрузки</CommandSource>
+														<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиГруппа1РасширеннаяПодсказка" id="127"/>
+													</ButtonGroup>
+													<Button name="ДополнительныеОбъектыДляВыгрузкиОчиститьДополнительныеОбъектыВыгрузки" id="73">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ОчиститьДополнительныеОбъектыВыгрузки</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.Clear</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Удалить все</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BG</v8:lang>
+																<v8:content>Премахване на всички</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>BL</v8:lang>
+																<v8:content>Выдаліць усе</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>DE</v8:lang>
+																<v8:content>Entfernen Sie alle</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>EN</v8:lang>
+																<v8:content>Remove all</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>PL</v8:lang>
+																<v8:content>Usuń wszystko</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>RO</v8:lang>
+																<v8:content>Elimina toate</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>UK</v8:lang>
+																<v8:content>Видалити все</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>TH</v8:lang>
+																<v8:content>ลบทั้งหมด</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ZH</v8:lang>
+																<v8:content>删除所有</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиОчиститьДополнительныеОбъектыВыгрузкиРасширеннаяПодсказка" id="74"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиРасширеннаяПодсказка" id="66"/>
+											<SearchStringAddition name="ДополнительныеОбъектыДляВыгрузкиСтрокаПоиска" id="148">
+												<AdditionSource>
+													<Item>ДополнительныеОбъектыДляВыгрузки</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДополнительныеОбъектыДляВыгрузкиСтрокаПоискаКонтекстноеМеню" id="149"/>
+												<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="150"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ДополнительныеОбъектыДляВыгрузкиСостояниеПросмотра" id="151">
+												<AdditionSource>
+													<Item>ДополнительныеОбъектыДляВыгрузки</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДополнительныеОбъектыДляВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="152"/>
+												<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="153"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ДополнительныеОбъектыДляВыгрузкиУправлениеПоиском" id="154">
+												<AdditionSource>
+													<Item>ДополнительныеОбъектыДляВыгрузки</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ДополнительныеОбъектыДляВыгрузкиУправлениеПоискомКонтекстноеМеню" id="155"/>
+												<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="156"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">ДополнительныеОбъектыДляВыгрузкиПередНачаломДобавления</Event>
+												<Event name="OnChange">ДополнительныеОбъектыДляВыгрузкиПриИзменении</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="ДополнительныеОбъектыДляВыгрузкиОбъект" id="70">
+													<DataPath>Объект.ДополнительныеОбъектыДляВыгрузки.Объект</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДополнительныеОбъектыДляВыгрузкиОбъектКонтекстноеМеню" id="71"/>
+													<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиОбъектРасширеннаяПодсказка" id="72"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<UsualGroup name="Группа1" id="116">
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="117"/>
+							<ChildItems>
+								<UsualGroup name="Группа3" id="120">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="121"/>
+									<ChildItems>
+										<Button name="ВыгрузитьДанные" id="111">
+											<Type>UsualButton</Type>
+											<Height>1</Height>
+											<CommandName>Form.Command.ВыгрузитьДанные</CommandName>
+											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<ExtendedTooltip name="ВыгрузитьДанныеРасширеннаяПодсказка" id="112"/>
+										</Button>
+										<UsualGroup name="Группа4" id="122">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="123"/>
+											<ChildItems>
+												<UsualGroup name="Группа2" id="118">
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="119"/>
+													<ChildItems>
+														<RadioButtonField name="ВыгрузкаНаКлиентеИлиНаСервере" id="113">
+															<DataPath>РежимРаботыНаКлиентеИлиНаСервере</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>На клиентский компьютер</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">0</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>В файл на сервере:</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">1</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ВыгрузкаНаКлиентеИлиНаСервереКонтекстноеМеню" id="114"/>
+															<ExtendedTooltip name="ВыгрузкаНаКлиентеИлиНаСервереРасширеннаяПодсказка" id="115"/>
+															<Events>
+																<Event name="OnChange">ВыгрузкаНаКлиентеИлиНаСервереПриИзменении</Event>
+															</Events>
+														</RadioButtonField>
+														<InputField name="ИмяФайлаВыгрузки" id="7">
+															<DataPath>ИмяФайлаВыгрузки</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ChoiceButton>true</ChoiceButton>
+															<OpenButton>true</OpenButton>
+															<ContextMenu name="ИмяФайлаВыгрузкиКонтекстноеМеню" id="8"/>
+															<ExtendedTooltip name="ИмяФайлаВыгрузкиРасширеннаяПодсказка" id="9"/>
+															<Events>
+																<Event name="OnChange">ИмяФайлаВыгрузкиПриИзменении</Event>
+																<Event name="StartChoice">ИмяФайлаВыгрузкиНачалоВыбора</Event>
+																<Event name="Opening">ИмяФайлаВыгрузкиОткрытие</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<CheckBoxField name="ИспользоватьФорматFastInfoSet" id="16">
+													<DataPath>Объект.ИспользоватьФорматFastInfoSet</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>В формате FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BG</v8:lang>
+															<v8:content>В формат FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>BL</v8:lang>
+															<v8:content>У фармаце FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>DE</v8:lang>
+															<v8:content>Im Format FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>EN</v8:lang>
+															<v8:content>In format FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>PL</v8:lang>
+															<v8:content>W formacie FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>RO</v8:lang>
+															<v8:content>În format FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>UK</v8:lang>
+															<v8:content>У форматі FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>TH</v8:lang>
+															<v8:content>ในรูปแบบ FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ZH</v8:lang>
+															<v8:content>在格式FastInfoSet</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьФорматFastInfoSetКонтекстноеМеню" id="17"/>
+													<ExtendedTooltip name="ИспользоватьФорматFastInfoSetРасширеннаяПодсказка" id="18"/>
+													<Events>
+														<Event name="OnChange">ИспользоватьФорматFastInfoSetПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЗагрузка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BG</v8:lang>
+							<v8:content>Товарене</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>BL</v8:lang>
+							<v8:content>Загрузка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>DE</v8:lang>
+							<v8:content>Verladung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>EN</v8:lang>
+							<v8:content>Loading</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>PL</v8:lang>
+							<v8:content>Ładowanie</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>RO</v8:lang>
+							<v8:content>Încărcare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>UK</v8:lang>
+							<v8:content>Завантаження</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>TH</v8:lang>
+							<v8:content>กำลังโหลด</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ZH</v8:lang>
+							<v8:content>载入中</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаЗагрузкаРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<CheckBoxField name="ПриЗагрузкеИспользоватьРежимОбменаДанными" id="75">
+							<DataPath>Объект.ПриЗагрузкеИспользоватьРежимОбменаДанными</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загружать данные в режиме обмена (ОбменДанными.Загрузка = Истина)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Качване на данни в режим на обмен (ObmenDannymi.Zagruzka = True)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Загружаць дадзеныя ў рэжыме абмену (ОбменДанными.Загрузка = Ісціна)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Daten-Upload auf den Austausch-Modus (ObmenDannymi.Zagruzka = True)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Upload data to the exchange mode (ObmenDannymi.Zagruzka = True)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Załadowanie danych do trybu wymiany (ObmenDannymi.Zagruzka = true)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Încărcați de date la modul de schimb (ObmenDannymi.Zagruzka = True)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Завантажувати дані в режимі обміну (ОбменДаннимі.Загрузка = Істина)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>อัพโหลดข้อมูลไปที่โหมดการแลกเปลี่ยน (ObmenDannymi.Zagruzka = True)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>上传数据的交换模式（ObmenDannymi.Zagruzka =真）</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПриЗагрузкеИспользоватьРежимОбменаДаннымиКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="ПриЗагрузкеИспользоватьРежимОбменаДаннымиРасширеннаяПодсказка" id="77"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПродолжитьЗагрузкуВСлучаеВозникновенияОшибки" id="78">
+							<DataPath>Объект.ПродолжитьЗагрузкуВСлучаеВозникновенияОшибки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Продолжить загрузку объектов в случае возникновения ошибки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BG</v8:lang>
+									<v8:content>Продължи товарни съоръжения в случай на грешка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>BL</v8:lang>
+									<v8:content>Працягнуць загрузку аб'ектаў у выпадку ўзнікнення памылкі</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>DE</v8:lang>
+									<v8:content>Weiter Verladeanlagen im Fehlerfall</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>EN</v8:lang>
+									<v8:content>Continue loading facilities in the event of an error</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>PL</v8:lang>
+									<v8:content>Kontynuuj urządzeń ładunkowych w przypadku błędu</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>RO</v8:lang>
+									<v8:content>Continua de instalații de încărcare în caz de eroare</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>UK</v8:lang>
+									<v8:content>Продовж об'єктів у разі виникнення помилки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>TH</v8:lang>
+									<v8:content>ต่อสิ่งอำนวยความสะดวกในการโหลดในกรณีที่มีข้อผิดพลาด</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ZH</v8:lang>
+									<v8:content>继续装载设施在发生错误的情况下</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПродолжитьЗагрузкуВСлучаеВозникновенияОшибкиКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="ПродолжитьЗагрузкуВСлучаеВозникновенияОшибкиРасширеннаяПодсказка" id="80"/>
+						</CheckBoxField>
+						<UsualGroup name="Группа5" id="132">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="133"/>
+							<ChildItems>
+								<Button name="ЗагрузитьДанные" id="109">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗагрузитьДанные</CommandName>
+									<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ExtendedTooltip name="ЗагрузитьДанныеРасширеннаяПодсказка" id="110"/>
+								</Button>
+								<UsualGroup name="Группа6" id="134">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="135"/>
+								</UsualGroup>
+								<RadioButtonField name="ЗагрузкаНаКлиентеИлиНаСервере" id="136">
+									<DataPath>РежимРаботыНаКлиентеИлиНаСервере</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>С клиентского компьютера</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Из файла на сервере:</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ЗагрузкаНаКлиентеИлиНаСервереКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="ЗагрузкаНаКлиентеИлиНаСервереРасширеннаяПодсказка" id="138"/>
+									<Events>
+										<Event name="OnChange">ЗагрузкаНаКлиентеИлиНаСервереПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<InputField name="ИмяФайлаЗагрузки" id="10">
+									<DataPath>ИмяФайлаЗагрузки</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>true</ChoiceButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ИмяФайлаЗагрузкиКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ИмяФайлаЗагрузкиРасширеннаяПодсказка" id="12"/>
+									<Events>
+										<Event name="StartChoice">ИмяФайлаЗагрузкиНачалоВыбора</Event>
+										<Event name="Opening">ИмяФайлаЗагрузкиОткрытие</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ВыгрузкаЗагрузкаДанныхXML</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.ДеревоМетаданных">
+					<Column name="ПолноеИмяМетаданных" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Данные для выгрузки</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Данни за заустване</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BL</v8:lang>
+								<v8:content>Дадзеныя для выгрузкі</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Daten zum Ausstoßen</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Data for discharging</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>PL</v8:lang>
+								<v8:content>Dane dla rozładowania</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>RO</v8:lang>
+								<v8:content>Date pentru descărcare</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Дані для вивантаження</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>TH</v8:lang>
+								<v8:content>ข้อมูลสำหรับการปลดปล่อย</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ZH</v8:lang>
+								<v8:content>排放数据</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Выгружать" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выгружать</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Разтоварвам</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BL</v8:lang>
+								<v8:content>Выгружаць</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Entladen</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Unload</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>PL</v8:lang>
+								<v8:content>Wyładować</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>RO</v8:lang>
+								<v8:content>Descărca</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Вивантажувати</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>TH</v8:lang>
+								<v8:content>ปลดปล่อย</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ZH</v8:lang>
+								<v8:content>卸</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>1</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ВыгружатьПриНеобходимости" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выгружать при необходимости</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Разтоварете ако е необходимо</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BL</v8:lang>
+								<v8:content>Выгружаць пры неабходнасці</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Entladen Sie wenn nötig</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Unload if necessary</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>PL</v8:lang>
+								<v8:content>Rozładunku, jeśli niezbędne</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>RO</v8:lang>
+								<v8:content>Descărca dacă este necesar</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Вивантажувати при необхідності</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>TH</v8:lang>
+								<v8:content>ขนในกรณีที่จำเป็น</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ZH</v8:lang>
+								<v8:content>如果需要卸载</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>1</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИндексКартинки" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Индекс картинки</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Pictures Index</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BL</v8:lang>
+								<v8:content>Індэкс карцінкі</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Bilder Index</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Pictures Index</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>PL</v8:lang>
+								<v8:content>Zdjęcia Główna</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>RO</v8:lang>
+								<v8:content>Poze Index</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Індекс картинки</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>TH</v8:lang>
+								<v8:content>รูปภาพดัชนี</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ZH</v8:lang>
+								<v8:content>图片索引</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>2</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="Развернут" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Развернут</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BG</v8:lang>
+								<v8:content>Разположените</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>BL</v8:lang>
+								<v8:content>Разгорнуты</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>DE</v8:lang>
+								<v8:content>Bereit</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>EN</v8:lang>
+								<v8:content>Deployed</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>PL</v8:lang>
+								<v8:content>Wdrażane</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>RO</v8:lang>
+								<v8:content>Desfășurat</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>UK</v8:lang>
+								<v8:content>Розгорнуто</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>TH</v8:lang>
+								<v8:content>ที่นำไปใช้</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ZH</v8:lang>
+								<v8:content>部署</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИмяФайлаВыгрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла выгрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Велик разтоварване</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Імя файла выгрузкі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Dateiname Entladen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Filename unloading</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Nazwa pliku rozładunek</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Nume de fișier de descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Файл вивантаження</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ชื่อไฟล์ที่ขนถ่าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>名称卸</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ИмяФайлаВыгрузки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПериодВыгрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период выгрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Разтоварни период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Перыяд выгрузкі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entladen Zeitraum</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Unloading period</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Okres rozładunku</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Perioada de descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Період вивантаження</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ขนระยะเวลา</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>卸载周期</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПериодВыгрузки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РежимВыгрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим выгрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Режим Discharge</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Рэжым выгрузкі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Discharge-Modus</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Discharge mode</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Tryb rozładowania</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Modul de descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Режим вивантаження</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>โหมดการปล่อย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>放电模式</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>РежимВыгрузки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТипОбъектовДляВыгрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип объектов для выгрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Видът на предмети, за да се разтоварят</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Тып аб'ектаў для выгрузкі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Die Art der Objekte zu entladen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>The type of objects to unload</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Typ obiektów do rozładunku</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Tipul de obiecte pentru a descărca</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Тип об'єктів для вивантаження</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ประเภทของวัตถุในการขน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>对象卸载类型</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:TypeDescription</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяФайлаЗагрузки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла загрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изтегляне на име на файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Імя файла загрузкі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Laden Sie den Dateinamen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Download file name</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Pobierz nazwę pliku</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Descărcați nume de fișier</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Файл завантаження</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ดาวน์โหลดชื่อไฟล์</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>下载的文件名</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ИмяФайлаЗагрузки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВариантИспользованияКонсолиЗапросов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант использования консоли запросов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Опция за използване на конзолата заявки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Варыянт выкарыстання кансолі запытаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Option, um die Konsole-Abfragen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Option to use the console queries</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Możliwość korzystania z kwerend konsoli</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Opțiunea de a utiliza interogările consola</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Варіант використання консолі запитів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เลือกที่จะใช้คำสั่งคอนโซล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>选项​​可以使用控制台查询</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ВариантИспользованияКонсолиЗапросов</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПутьКВнешнейКонсолиЗапросов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к внешней консоли запросов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Път към външни заявки конзола</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Шлях да знешняй кансолі запытаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Pfad zur externen Konsole Abfragen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Path to external console queries</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Ścieżka do zewnętrznych zapytaniami konsoli</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Cale de interogări consola externe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Шлях до зовнішньої консолі запитів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เส้นทางไปยังคอนโซลคำสั่งภายนอก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>路径外部控制台查询</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ПутьКВнешнейКонсолиЗапросов</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РежимРаботыНаКлиентеИлиНаСервере" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы на клиенте или на сервере</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Настройката за режим на клиента или сървъра</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Рэжым працы на кліенце або на сэрвэры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Die Moduseinstellung auf der Client-oder Server</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>The mode setting on the client or server</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Ustawienie trybu na kliencie lub serwerze</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Setarea modului de pe client sau server</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Режим роботи на клієнті або на сервері</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>การตั้งค่าโหมดบนไคลเอ็นต์หรือเซิร์ฟเวอร์</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>在客户端或服务器上的模式设置</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>РежимРаботыНаКлиентеИлиНаСервере</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РежимРаботыНаКлиенте" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы на клиенте</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Режим на клиента</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Рэжым працы на кліенце</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Modus auf dem Client</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Mode on the client</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Sposób na kliencie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Modul pe client</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Режим роботи на клієнті</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>โหมดที่ลูกค้า</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>在客户端模式</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыгрузитьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Разтоварете данни</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выгрузіць дадзеныя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entladen von Daten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Unload data</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Rozładować danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Descărcarea de date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вивантажити дані</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ขนข้อมูล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>卸载数据</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Разтоварете данни</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Выгрузіць дадзеныя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Entladen von Daten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Unload data</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Rozładować danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Descărcarea de date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Вивантажити дані</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ขนข้อมูล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>卸载数据</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьДанные</Action>
+		</Command>
+		<Command name="ЗагрузитьДанные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изтегляне на данни</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Загрузіць дадзеныя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Download Daten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Download data</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Pobierz dane</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Descărcare a datelor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Завантажити дані</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ดาวน์โหลดข้อมูล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>下载数据</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изтегляне на данни</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Загрузіць дадзеныя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Download Daten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Download data</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Pobierz dane</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Descărcare a datelor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Завантажити дані</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ดาวน์โหลดข้อมูล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>下载数据</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьДанные</Action>
+		</Command>
+		<Command name="ПересчитатьВыгружаемыеПоСсылке" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать выгружаемые по ссылке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изчислява се разтоварват връзката</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Пералічыць Спампаваныя па спасылцы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Berechnen Sie die unbelasteten Link</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Calculate the unloaded link</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Oblicz wyładowane linku</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Calcula pe link-ul descărcat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Перерахувати Вивантажувані за посиланням</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>คำนวณการเชื่อมโยงการยกเลิกการโหลด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>计算卸载链接</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать выгружаемые по ссылке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Изчислява се разтоварват връзката</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Пералічыць Спампаваныя па спасылцы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Berechnen Sie die unbelasteten Link</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Calculate the unloaded link</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Oblicz wyładowane linku</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Calcula pe link-ul descărcat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Перерахувати Вивантажувані за посиланням</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>คำนวณการเชื่อมโยงการยกเลิกการโหลด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>计算卸载链接</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПересчитатьВыгружаемыеПоСсылке</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОчиститьДополнительныеОбъектыВыгрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить дополнительные объекты выгрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Ясно допълнителни съоръжения за разтоварване</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Ачысціць дадатковыя аб'екты выгрузкі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Klar zusätzliche Löscheinrichtungen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Clear additional unloading facilities</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Wyczyść dodatkowe udogodnienia rozładunek</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Clare facilități suplimentare descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Очистити додаткові об'єкти вивантаження</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ชัดเจนสิ่งอำนวยความสะดวกขนถ่ายเพิ่มเติม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>清除额外的装卸设施</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить дополнительные объекты выгрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Ясно допълнителни съоръжения за разтоварване</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Ачысціць дадатковыя аб'екты выгрузкі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Klar zusätzliche Löscheinrichtungen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Clear additional unloading facilities</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Wyczyść dodatkowe udogodnienia rozładunek</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Clare facilități suplimentare descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Очистити додаткові об'єкти вивантаження</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>ชัดเจนสิ่งอำนวยความสะดวกขนถ่ายเพิ่มเติม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>清除额外的装卸设施</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьДополнительныеОбъектыВыгрузки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ДобавитьИзЗапроса" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить из запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Добавяне на искане от</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Дадаць з запыту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Fügen Anfrage</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Add request from</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Dodaj żądania od</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Adauga cerere de la</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Додати із запиту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เพิ่มการร้องขอจาก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>添加请求从</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить из запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Добавяне на искане от</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Дадаць з запыту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Fügen Anfrage</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Add request from</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Dodaj żądania od</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Adauga cerere de la</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Додати із запиту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>เพิ่มการร้องขอจาก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>添加请求从</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьИзЗапроса</Action>
+		</Command>
+		<Command name="НастройкиКонсолиЗапросов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки консоли запросов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Console Settings запитвания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Налады кансолі запытаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Konsoleneinstellungen Abfragen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Console Settings queries</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Zapytania ustawienia konsoli</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Interogări consola de setări</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Налаштування консолі запитів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>คำสั่งการตั้งค่าคอนโซล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>控制台设置查询</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки консоли запросов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Console Settings запитвания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>BL</v8:lang>
+					<v8:content>Налады кансолі запытаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>DE</v8:lang>
+					<v8:content>Konsoleneinstellungen Abfragen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>EN</v8:lang>
+					<v8:content>Console Settings queries</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>PL</v8:lang>
+					<v8:content>Zapytania ustawienia konsoli</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>RO</v8:lang>
+					<v8:content>Interogări consola de setări</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>UK</v8:lang>
+					<v8:content>Налаштування консолі запитів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>TH</v8:lang>
+					<v8:content>คำสั่งการตั้งค่าคอนโซล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ZH</v8:lang>
+					<v8:content>控制台设置查询</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиКонсолиЗапросов</Action>
+		</Command>
+	</Commands>
+</Form>
