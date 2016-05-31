@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10586.162"></meta></head><body>
+<h1>Console requests for managed applications</h1>
+<p>Tool "Console requests" is intended for debugging and view query results in the 1C: Enterprise mode.This treatment is intended primarily for developers of configurations and implementation specialists.</p>
+<p>When developing queries in the configurator, as a rule, to debug a query on real data is necessary.This tool makes it possible to request the development (or query packet) parallel with the scan results.When working with the tool in a thick client, you can use the query designer, as you would in the configurator.Features Results analysis include:</p>
+<ul><li>derivation of data tables, 
+</li><li>measurement time of the query and the number of rows, 
+</li><li>highlighting these cells as a result of the request, 
+</li><li>interactive comparison of the two results of the query (in the thick client only) 
+</li><li>as well as the output result of the query in a new window. 
+</li><li>concluded query execution plan and SQL-query text generated in the database.For Microsoft SQL Server DBMS execution plan is displayed as a tree, and for the rest of the database - in text format technology magazine.To simplify the analysis of requests is also provided two text display mode queries with the names of database tables and columns, or with the names of metadata objects and configuration details.</li></ul><p>Upon completion of the debugging, the query text can be transferred to the code (by typing text form request for configurator) or in the configuration reports.For service capabilities include handling multiple requests (request packet), the preservation of the text and the query parameters in the file, auto-saving, export query results to a spreadsheet document, and more.</p>
+<p>If the query in the derivation of the results is required to use a semicolon, it should escape backslash - "<strong></strong><br>Example:<em>CHOOSE Nomenklatura.Naimenovanie + "\;" + Nomenklatura.Naimenovanie FROM Spravochnik.Nomenklatura</em></p>
+<h4>Fast data transfer request of the text and its parameters in the query from the debugger console.</h4>
+<p>The Standard Library Subsystems version 2.3.2 and above there is a function "ObschegoNaznacheniya.ZaprosVStrokuXML ", which allows you to quickly transfer request (all the text and the parameters) from the debugger to query the console.To do this:</p>
+<ul><li>The configurator to set a breakpoint immediately before calling the method "Run" to run the query and information base in debug mode. 
+</li><li>When code execution stops at the breakpoint, press Shift + F9 (or in the "Debug" menu, press "Calculate the expression").In the window "expression": 
+<ul><li>In the Expression box, enter "ObschegoNaznacheniya.ZaprosVStrokuXML (Request) ", where the" Request "is the name of a variable of type Request. 
+</li><li>The table results highlight bar will appear with the result of evaluating the expression and press F2 (or press the "Show values ​​in a separate window" from the context menu). 
+</li><li>In the window "View of the expression" to allocate all of the text and copy it to the clipboard.</li></ul></li><li>Click "OK" to close the window "expression", to disable a breakpoint, continue execution (F5) and enter the query in the Enterprise Console mode. 
+</li><li>The console queries paste the copied text into the query text and the menu "More" press "Fill out the XML".</li></ul></body></html>

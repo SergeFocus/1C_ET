@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10586.162"></meta></head><body>
+<h1>Konsole pieprasījumi pārvalda piemērošanai</h1>
+<p>Tools "Console pieprasījumi" ir paredzēts, lai izveidotu un pārskatīt šā vaicājumu 1C rezultātus: Enterprise.Šī apstrāde ir paredzēta galvenokārt izstrādātājiem konfigurācijas un ekspertu īstenošanu.</p>
+<p>Veidojot vaicājumus konstruktora parasti ir nepieciešams veikt korekcijas pieprasījumu uz reāliem datiem.Šis rīks ļauj jums veidot vaicājumu (vai vaicājumu pakešu) paralēli skatīšanās rezultātus.Lietojot rīku bieza klients var izmantot Query Builder, kā Jūs ar konstruktora.Iezīmes analīzes rezultātu pieprasījuma ietver:</p>
+<ul><li>atrast pagaidu datu tabulas 
+</li><li>mērīšanas laiks no pieprasījuma un līniju skaits 
+</li><li>uzsverot šīs šūnas, kā rezultātā pieprasījuma 
+</li><li>interaktīvs salīdzinot divas vaicājuma rezultātus (tikai biezs klients) 
+</li><li>un atrast vaicājumu rezultātu jaunā logā. 
+</li><li>radītais datubāzē noslēgts vaicājuma izpildes plānu un SQL-vaicājumu teksta.Microsoft SQL Server DBVS izpildes plānu tiek parādīts kā koks, un par pārējo datubāzes - teksta formātā tehnoloģiju žurnālā.Lai vienkāršotu analīze pieprasījuma sniedz arī divas displeja režīmi vārdu vaicājumu: nosaukumus datu bāzes tabulas un kolonnas vai objektu nosaukumiem un metadatu konfigurācijas informāciju.</li></ul><p>Pēc korekcijas, vaicājums var nodot ar kodu (izmantojot teksta veidošanas pieprasījumu konstruktora) vai ziņot konfigurāciju.Pakalpojumu iespējas iekļaut darbu ar vairākiem vaicājumus (vaicājumus paketes) saglabāt tekstu un vaicājuma parametru failu, automātiskās saglabāšanas, eksporta vaicājuma rezultātus uz izklājlapu dokumentu un vairāk.</p>
+<p>Ja vaicājuma rezultāti atvasināšanai jāizmanto semikolu, būtu izbēguši slīpsvītru - "<strong></strong><br>Piemērs:<em>IZVĒLIES Nomenklatura.Naimenovanie + "\"; + Ar Nomenklatura.Naimenovanie Spravochnik.Nomenklatura</em></p>
+<h4>Ātrā teksta ietīšana pieprasījumu un tās parametrus no konsole atkļūdotājs pieprasījumiem.</h4>
+<p>Bibliotēka apakšsistēmām Standarta versijas 2.3.2 un augstāk ir iespēja "ObschehoNaznacheniya.ZaprosVStrokuXML ", kas ļauj ātri pārsūtīt pieprasījumu (visu tekstu un iestatījumus) no konsole atkļūdotājs pieprasījumiem.Lai to izdarītu:</p>
+<ul><li>Jo konfigurēšana un noteikt pārtraukumpunkts tieši pirms zvana metodi "Izpildīt" un palaist vaicājumu informatīvo bāzi atkļūdošanas režīmā. 
+</li><li>Kad koda izpildi apstājas pie pieturas punkts nospiediet Shift + F9 (vai "Setting" noklikšķiniet uz "Aprēķināt izteiksmi").In "Expression": 
+<ul><li>Jo Expression laukā ievadiet "ObschehoNaznacheniya.ZaprosVStrokuXML (pieprasījums) ", kur" pieprasījums "ir nosaukums mainīgā tipa pieprasījuma. 
+</li><li>Tabulā rezultātu parādījās iezīmējiet līniju ar rezultātu aprēķinu izteiksmes un nospiediet F2 (vai īsinājumizvēlnē noklikšķiniet uz "Rādīt vērtību atsevišķā logā"). 
+</li><li>Tā kā "Viewing izteicienu" izvēlēties visus un kopēt tekstu starpliktuvē.</li></ul></li><li>Noklikšķiniet uz "OK", lai aizvērtu logu "izteiksme", atslēgt pārtraukumpunkts, turpināt izpildi (F5), un doties uz konsole vaicājumu Enterprise. 
+</li><li>Konsole pieprasījumi ielīmētu kopēto tekstu teksta laukā un vaicājumu "More" klikšķi "Piepildiet ar XML".</li></ul></body></html>

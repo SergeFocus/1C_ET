@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10586.162"></meta></head><body>
+<h1>Žádosti Console pro spravované aplikace</h1>
+<p>Nástroje "Žádosti Console" je určena ke zjištění a zkontrolovat výsledky dotazu v 1C: Enterprise.Tato léčba je určena především pro vývojáře konfigurací a odborníky na implementaci.</p>
+<p>Při vývoji dotazů v konfigurátoru je zpravidla nezbytné provést úpravu požadavek na reálných datech.Tento nástroj umožňuje navrhovat dotaz (nebo dotazy paketů) paralelní výsledky zobrazení.Při použití nástroje v tlustého klienta lze použít Tvůrce dotazu, jako byste v konfigurátoru.Rysy žádosti o výsledek analýzy patří:</p>
+<ul><li>zjištění dočasných datových tabulek 
+</li><li>měření času žádosti a počet řádků 
+</li><li>zvýraznění těchto buněk v důsledku požadavku, 
+</li><li>interaktivní porovnání dvou výsledků dotazu (pouze tlustý klient) 
+</li><li>a zjištění výsledek dotazu v novém okně. 
+</li><li>dospěl k závěru, dotaz plán vykonání a SQL-query text vytvořený v databázi.Pro Microsoft SQL Server DBMS plán vykonání je zobrazena jako strom, a pro zbytek databáze - v časopise textovém formátu technologií.Pro zjednodušení požadavek analýza také poskytuje dva režimy zobrazení slovo dotazů: názvy databázových tabulek a sloupců nebo názvy objektů a konfigurace metadata detailů.</li></ul><p>Po očištění se dotaz může být převedena v kódu (pomocí žádosti textu formace konfigurátoru) nebo hlášení konfiguraci.Schopnosti servisní zahrnout pracovat s několika dotazy (dotazy balení) zachovat textové a dotazu parametry v souboru autosave, výsledků export dotazu do tabulky dokumenty a další.</p>
+<p>Jsou-li výsledky dotazu při odvozování musí používat středník, mělo by být unikl zpětné lomítko - "<strong></strong><br>Příklad:<em>VYBERTE Nomenklatura.Naimenovanie + "\"; + S Nomenklatura.Naimenovanie Spravochnik.Nomenklatura</em></p>
+<h4>Rychlé obtékání textu žádosti a její parametry z žádostí konzoly debugger.</h4>
+<p>Knihovně subsystémy Standardní verze 2.3.2 a vyšší je zde možnost "ObschehoNaznacheniya.ZaprosVStrokuXML ", který vám umožní rychle přenášet požadavek (veškerý text a nastavení) z požadavků konzole debugger.Postupujte takto:</p>
+<ul><li>V Konfigurace a nastavit zarážku těsně před voláním metody "Execute" a spustit informační základnu dotazu v režimu ladění. 
+</li><li>Při spuštění kódu zastaví na zastávce bodu stiskněte Shift + F9 (nebo v "Nastavení" klepněte na tlačítko "Vypočítat výrazu").V "Expression": 
+<ul><li>V poli Výraz zadejte "ObschehoNaznacheniya.ZaprosVStrokuXML (Request) ", kde" Žádost "je název proměnné typu Request. 
+</li><li>V tabulce výsledků se objevily označte řádek s výsledkem výpočtu projevu a stiskněte klávesu F2 (nebo v místní nabídce, klepněte na tlačítko "Zobrazit hodnotu v samostatném okně"). 
+</li><li>V části "Prohlížení výrazu" Vybrat vše a kopírovat text do schránky.</li></ul></li><li>Klikněte na "OK" pro zavření okna "výraz", zakázat zarážku, pokračovat v realizaci (F5) a přejděte do dotazu konzoly v Enterprise. 
+</li><li>Žádosti Console zkopírovaný text do textového pole a dotaz v "More" click "Naplnit XML".</li></ul></body></html>

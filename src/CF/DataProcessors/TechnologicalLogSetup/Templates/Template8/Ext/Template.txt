@@ -1,0 +1,38 @@
+﻿Name:
+Errors and long actions
+Details:
+All errors and actions executed longer than 10 seconds will be written to the technological log. Select this option to find actions that require optimization. Action durations is shown in hundreds of microseconds.
+Actions:
+PathToTL
+Template:
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+	<dump create="false"/>
+	<log location="C:\Program Files\1cv82\logs" history="168">
+		<event>
+			<eq property="name" value="admin"/>
+			<gt property="duration" value="100000"/>
+		</event>
+		<event>
+			<eq property="name" value="conn"/>
+			<gt property="duration" value="100000"/>
+		</event>
+		<event>
+			<eq property="name" value="excp"/>
+			<gt property="duration" value="100000"/>
+		</event>
+		<event>
+			<eq property="name" value="proc"/>
+			<gt property="duration" value="100000"/>
+		</event>
+		<event>
+			<eq property="name" value="qerr"/>
+			<gt property="duration" value="100000"/>
+		</event>
+		<event>
+			<eq property="name" value="scom"/>
+			<gt property="duration" value="100000"/>
+		</event>
+		<property name="all"/>
+	</log>
+</config>

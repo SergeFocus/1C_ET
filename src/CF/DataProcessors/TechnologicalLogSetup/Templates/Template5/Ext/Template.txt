@@ -1,0 +1,29 @@
+﻿Name:
+DBMS calls
+Details:
+Only DBMS calls of 1C:Enterprise and exceptions will be written to the technological log. In this case the technological log might contain huge volume of data.
+Actions:
+PathToTL
+Template:
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+	<dump create="false"/>
+	<log location="c:\v82\logs" history="168">
+		<event>
+			<eq property="name" value="db2"/>
+		</event>
+		<event>
+			<eq property="name" value="dbmssql"/>
+		</event>
+		<event>
+			<eq property="name" value="dbpostgrs"/>
+		</event>
+		<event>
+			<eq property="name" value="dboracle"/>
+		</event>
+		<event>
+			<eq property="name" value="excp"/>
+		</event>
+		<property name="all"/>
+	</log>
+</config>

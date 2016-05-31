@@ -1,0 +1,18 @@
+﻿Name:
+Exceptions
+Details:
+All exceptions that cannot be handled normally and can cause abnormal termination of a server process or connected client process will be written to the technological log.
+Actions:
+PathToDump
+PathToTL
+Template:
+<?xml version="1.0"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+	<dump create="true" location="c:\v82\dumps" prntscrn="false" type="2"/>
+	<log history="168" location="c:\v82\logs">
+		<event>
+			<eq property="name" value="EXCP"/>
+		</event>
+		<property name="all"/>
+	</log>
+</config>

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10586.162"></meta></head><body>
+<h1>Yêu cầu cho giao diện điều khiển ứng dụng quản lý</h1>
+<p>Công cụ "yêu cầu điều khiển" được thiết kế để thiết lập và xem xét kết quả của truy vấn trong 1C: Doanh nghiệp.Cách xử lý này chủ yếu dành cho các nhà phát triển các cấu hình và các chuyên gia thực hiện.</p>
+<p>Khi phát triển các truy vấn trong các cấu hình thường là cần thiết để thực hiện yêu cầu điều chỉnh trên dữ liệu thực tế.Công cụ này cho phép bạn thiết kế các truy vấn (hoặc truy vấn gói) xem kết quả song song.Khi sử dụng công cụ này trong các khách hàng dày có thể sử dụng Trình tạo truy vấn, như bạn làm trong các cấu hình.Đặc điểm của các yêu cầu kết quả phân tích bao gồm:</p>
+<ul><li>việc tìm kiếm các bảng dữ liệu tạm thời 
+</li><li>thời gian đo được yêu cầu và số dòng 
+</li><li>làm nổi bật các tế bào này là kết quả của yêu cầu, 
+</li><li>tương tác so sánh hai kết quả truy vấn (chỉ khách hàng dày) 
+</li><li>và việc tìm kiếm các kết quả truy vấn trong cửa sổ mới. 
+</li><li>kết luận kế hoạch thực hiện truy vấn và SQL truy vấn văn bản được tạo ra trong cơ sở dữ liệu.Đối với kế hoạch thực hiện của Microsoft SQL Server DBMS được hiển thị như một cái cây, và cho phần còn lại của cơ sở dữ liệu - trong tạp chí công nghệ định dạng văn bản.Để đơn giản hóa các yêu cầu phân tích cũng cung cấp hai chế độ hiển thị các truy vấn từ: tên của các bảng cơ sở dữ liệu và các cột hoặc tên đối tượng và chi tiết cấu hình siêu dữ liệu.</li></ul><p>Sau khi điều chỉnh, các truy vấn có thể được chuyển giao trong mã (sử dụng yêu cầu hình thành văn bản cho cấu hình) hoặc báo cáo cấu hình.Khả năng dịch vụ bao gồm làm việc với một số truy vấn (truy vấn gói) bảo tồn văn bản và truy vấn các thông số trong tập tin, tự động lưu, kết quả truy vấn xuất khẩu sang một tài liệu bảng tính và nhiều hơn nữa.</p>
+<p>Nếu các kết quả truy vấn trong các dẫn xuất phải sử dụng một dấu chấm phẩy, nó nên được thoát xuyệc ngược - "<strong></strong><br>Thí dụ:<em>CHỌN Nomenklatura.Naimenovanie + "\"; + Với Nomenklatura.Naimenovanie Spravochnik.Nomenklatura</em></p>
+<h4>văn bản nhanh gói các yêu cầu và các thông số của nó từ các yêu cầu điều khiển chương trình gỡ rối.</h4>
+<p>Các hệ thống con Thư viện các phiên bản tiêu chuẩn 2.3.2 và ở trên có tùy chọn "ObschehoNaznacheniya.ZaprosVStrokuXML "cho phép bạn nhanh chóng chuyển yêu cầu (tất cả các văn bản và cài đặt) từ một yêu cầu giao diện điều khiển chương trình gỡ rối.Để làm điều này:</p>
+<ul><li>Trong Cấu hình và thiết lập một breakpoint ngay lập tức trước khi gọi phương thức "Execute" và chạy các cơ sở thông tin truy vấn trong chế độ gỡ lỗi. 
+</li><li>Khi thực thi mã dừng tại trạm điểm nhấn Shift + F9 (hoặc trong "Setting" click "Tính biểu").Trong "Expression": 
+<ul><li>Trong trường Expression nhập "ObschehoNaznacheniya.ZaprosVStrokuXML (Yêu cầu) ", ​​trong đó" yêu cầu "là tên của một biến kiểu Request. 
+</li><li>Trong bảng kết quả xuất hiện nổi bật sự phù hợp với các kết quả của biểu thức tính toán và nhấn F2 (hoặc menu chuột phải, nhấp vào "Hiển thị giá trị trong một cửa sổ riêng biệt"). 
+</li><li>Trong "Xem biểu thức" chọn tất cả và sao chép văn bản vào clipboard.</li></ul></li><li>Nhấp vào "OK" để đóng cửa sổ "biểu hiện", vô hiệu hóa Breakpoint, tiếp tục thực hiện (F5) và đi đến các truy vấn giao diện điều khiển trong doanh nghiệp. 
+</li><li>Yêu cầu điều khiển dán văn bản sao chép vào một trường văn bản và truy vấn trong phần "" click "Điền với XML".</li></ul></body></html>
