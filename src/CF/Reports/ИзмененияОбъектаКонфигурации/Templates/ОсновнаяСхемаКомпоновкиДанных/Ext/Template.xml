@@ -1,0 +1,1631 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеквизитОбъекта</dataPath>
+			<field>РеквизитОбъекта</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущееЗначение</dataPath>
+			<field>ПредыдущееЗначение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НовоеЗначение</dataPath>
+			<field>НовоеЗначение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектБазыДанных</dataPath>
+			<field>ОбъектБазыДанных</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеРеквизита</dataPath>
+			<field>НаименованиеРеквизита</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВерсииОбъектовБазыДанных.Период,
+	ВерсииОбъектовБазыДанных.ОбъектБазыДанных,
+	ВерсииОбъектовБазыДанных.РеквизитОбъекта,
+	ВерсииОбъектовБазыДанных.ПредыдущееЗначение,
+	ВерсииОбъектовБазыДанных.НовоеЗначение,
+	ВерсииОбъектовБазыДанных.Ответственный,
+	ВерсииОбъектовБазыДанных.Комментарий,
+	ВерсииОбъектовБазыДанных.НаименованиеРеквизита
+ИЗ
+	РегистрСведений.ВерсииОбъектовБазыДанных КАК ВерсииОбъектовБазыДанных
+ГДЕ
+	(НЕ &amp;ОтборПоОбъектБазыДанных
+			ИЛИ ВерсииОбъектовБазыДанных.ОбъектБазыДанных = &amp;ОбъектБазыДанных)
+	И ВерсииОбъектовБазыДанных.Период МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания</query>
+	</dataSet>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>start date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>дата початку</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>մեկնարկի ամսաթիվ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>تاريخ البدء</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>başlanğıc tarixi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>начална дата</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>дата пачатку</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>Datum zahájení</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Anfangsdatum</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>Algus kuupäev</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>date de début</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>תאריך התחלה</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>आरंभ करने की तिथि</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>kezdési időpont</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>data d'inizio</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>開始日</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>დაწყების თარიღი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>басталатын күн</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>시작 일</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>pradžios data</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>Sākuma datums</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Data rozpoczęcia</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>data de început</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>dátum začiatku</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>วันที่เริ่ม</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>başlangıç ​​tarihi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>boshlanish sanasi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>ngày bắt đầu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>саршавии Сана</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>开始日期</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>expiration date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>дата закінчення</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>Պիտանիության ժամկետ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>تاريخ إنتهاء الصلاحية</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>son istifadə etmə tarixi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>срок на годност</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>дата заканчэння тэрміну</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>Datum spotřeby</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Ablaufdatum</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>aegumiskuupäev</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>date d'expiration</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>תאריך תפוגה</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>समाप्ति तिथि</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>lejárati dátum</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>data di scadenza</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>有効期限</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>ვადის გასვლის თარიღი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>мерзімнің өту күні</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>만료일</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>galiojimo laikas</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>Beigu datums</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>termin ważności</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>data de expirare</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>dátum spotreby</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>วันหมดอายุ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>Son kullanma tarihi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>tugash muddati</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>ngày hết hạn</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>муҳлати тамомшави</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>截止日期</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>Крайний срок</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОтборПоОбъектБазыДанных</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор по объект базы данных</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>The selection of a database object</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Відбір за об'єкт бази даних</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>Ընտրությունը տվյալների բազայի օբյեկտի</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>اختيار كائن قاعدة بيانات</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>verilənlər bazası obyekt seçimi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>Изборът на обект на базата данни</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>Выбар аб'екта базы дадзеных</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>Výběr databázového objektu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Die Auswahl einer Datenbankobjekt</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>Valik andmebaasi objekt</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>La sélection d'un objet de base de données</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>הבחירה של אובייקט מסד נתונים</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>एक डेटाबेस वस्तु का चयन</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>A kiválasztás egy adatbázis-objektum</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>La selezione di un oggetto di database</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>データベースオブジェクトの選択</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>შერჩევა მონაცემთა ბაზის ობიექტი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>дерекқор нысанын таңдау</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>데이터베이스 오브젝트의 선택</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>Duomenų bazės objekto parinkimas</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>Par datu bāzes objekta atlase</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Wybór obiektu bazy</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Selectarea unui obiect bază de date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>Výber databázového objektu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>การเลือกวัตถ​​ุฐานข้อมูล</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>Bir veritabanı nesnesinin seçimi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>Agar ma'lumotlar bazasi ob'ektini tanlash</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Việc lựa chọn một đối tượng cơ sở dữ liệu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>Интихоби объекти базаи</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>一个数据库对象的选择</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>Выберите объект базы данных</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОбъектБазыДанных</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Объект базы данных</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Object Database</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Об'єкт бази даних</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>Object բազա</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>قاعدة بيانات الكائن</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>Object Database</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>Object Database</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>База дадзеных аб'ектаў</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>Databáze objektů</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Objektdatenbank</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>Objekti Database</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>Base de données de l'objet</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>אובייקט מסד נתונים</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>वस्तु डेटाबेस</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>Object Database</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>Object Database</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>オブジェクトデータベース</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>ობიექტის მონაცემთა ბაზა</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>Object Database</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>객체 데이터베이스</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>Objekto duomenų bazė</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>Objektu datu bāze</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Baza danych obiektu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Obiect bază de date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>Databázy objektov</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>วัตถุฐานข้อมูล</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>Nesne Veritabanı</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>Ob'ektni bazasi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Đối tượng cơ sở dữ liệu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>Махзани объекти</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>对象数据库</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>База данных объектов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:TypeSet xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:AnyRef</v8:TypeSet>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>1. Изменения объектов конфигурации</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>1. Changes configuration objects</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>1. Зміни об'єктів конфігурації</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>1. Changes կազմաձեւման օբյեկտները</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>1. التغييرات كائنات التكوين</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>1. dəyişikliklər konfiqurasiya obyektləri</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>1. Промени в конфигурацията обекти</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>1. Змены аб'ектаў канфігурацыі</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>1. Změny objektů konfigurace</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>1. Änderungen Konfigurationsobjekte</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>1. Muudatused konfiguratsiooni objektide</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>1. Changements __gVirt_NP_NNS_NNPS&lt;__ objets de configuration</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>1. שינויי אובייקטי תצורה</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>1. परिवर्तन विन्यास वस्तुओं</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>1. Változások konfigurációs objektumok</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>1. Modifiche oggetti di configurazione</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>1.変更の構成オブジェクト</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>1. ცვლილებები კონფიგურაციის ობიექტები</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>1. өзгерістер конфигурация объектілері</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>1. 변경 구성 개체</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>1. Pakeitimai konfigūracijos objektai</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>1. Izmaiņas konfigurācijas objekti</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>1. Zmiany obiektów konfiguracji</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>1. Modificări obiecte de configurare</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>1. Zmeny objektov konfigurácie</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>1. การเปลี่ยนแปลงการตั้งค่าวัตถุ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>1. Değişiklikler konfigürasyon nesneleri</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>1. o'zgarishlar konfiguratsiya ob'ektlar</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>1. Thay đổi các đối tượng cấu hình</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>1. Тағйироти объектҳои конфигуратсияи</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>1.更改配置对象</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>1. Изменение объекта конфигурации</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ответственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаименованиеРеквизита</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>РеквизитОбъекта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПредыдущееЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НовоеЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:use>false</dcsset:use>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance/>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменения объектов базы данных</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Changes to database objects</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Зміни об'єктів бази даних</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>am</v8:lang>
+							<v8:content>Փոփոխություններ բազայի օբյեկտների</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ar</v8:lang>
+							<v8:content>تغييرات على كائنات قاعدة البيانات</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Verilənlər bazası obyektləri dəyişikliklər</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Промени в обекти на базата данни</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Змены ў аб'ектах базы дадзеных</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>cs</v8:lang>
+							<v8:content>Změny databázových objektů</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Änderungen an Datenbankobjekten</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>et</v8:lang>
+							<v8:content>Muudatused andmebaasi objektid</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>fr</v8:lang>
+							<v8:content>Les modifications apportées à la base de données des objets</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>he</v8:lang>
+							<v8:content>שינויים באובייקטי מסד נתונים</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hi</v8:lang>
+							<v8:content>डेटाबेस वस्तुओं के लिए परिवर्तन</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hu</v8:lang>
+							<v8:content>Változások az adatbázis-objektumok</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>it</v8:lang>
+							<v8:content>Modifiche agli oggetti di database</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ja</v8:lang>
+							<v8:content>データベースオブジェクトへの変更</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>ცვლილებები მონაცემთა ბაზის ობიექტები</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Дерекқор нысандарына өзгерістер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ko</v8:lang>
+							<v8:content>데이터베이스 오브젝트에 대한 변경</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lt</v8:lang>
+							<v8:content>Pasikeitimai duomenų bazės objektų</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lv</v8:lang>
+							<v8:content>Izmaiņas datu bāzes objektus</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Zmiany obiektów bazy danych</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Modificări la obiectele bazei de date</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sk</v8:lang>
+							<v8:content>Zmeny databázových objektov</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การเปลี่ยนแปลงวัตถุฐานข้อมูล</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Veritabanı nesneleri değişiklikler</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uz</v8:lang>
+							<v8:content>Ma'lumotlar bazasi ob'ektlari o'zgarishlar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>vi</v8:lang>
+							<v8:content>Thay đổi đối tượng cơ sở dữ liệu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>yg</v8:lang>
+							<v8:content>Тағйирот ба объектњои базаи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>更改数据库对象</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zz</v8:lang>
+							<v8:content>Изменение объектов базы данных</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ОбъектБазыДанных</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПоПорядку</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>2. Все записи по порядку</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>2. All entries in the order</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>2. Усі записи по порядку</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>2. Բոլոր գրառումները կարգով</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>2. جميع القيود في النظام</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>2. üçün Bütün entries</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>2. Всички вписвания в поръчката</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>2. Усе запісы ў парадку</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>2. Všechny zápisy v pořadí</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>2. Alle Einträge in der Reihenfolge</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>2. Kõik kanded järjekorras</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>2. Toutes les entrées de l'ordre</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>2. כל הערכים בסדר</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>2. आदेश में सभी प्रविष्टियां</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>2. Minden bejegyzés sorrendjében</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>2. Tutte le voci in ordine</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>2.順番にすべてのエントリ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>2. ყველა მასალა, რათა</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>2. тәртіппен барлық жазбаларды</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>2. 순서대로 모든 항목</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>2. Visi tam įrašai</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>2. Visas secībā ierakstus</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>2. Wszystkie wpisy w kolejności</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>2. Toate înregistrările în ordinea</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>2. Všetky zápisy v poradí</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>2. รายการทั้งหมดในการสั่งซื้อ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>2. sırayla tüm girdiler</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>2. maqsadida barcha yozuvlari</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>2. Tất cả các mục theo thứ tự</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>2. Ҳамаи сабтҳои дар тартибот</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>2.在订单的所有条目</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>2. Все записи в ордена</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъектБазыДанных</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ответственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаименованиеРеквизита</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>РеквизитОбъекта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПредыдущееЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НовоеЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:use>false</dcsset:use>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance/>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменения объектов базы данных по порядку</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Changes to the database objects in order</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Зміни об'єктів бази даних по порядку</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>am</v8:lang>
+							<v8:content>Փոփոխություններ տվյալների բազայի օբյեկտների, որպեսզի</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ar</v8:lang>
+							<v8:content>تغييرات على كائنات قاعدة البيانات في النظام</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Məqsədilə bazası obyektlərin dəyişikliklər</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Промени в обектите на базата данни с цел</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Змены да аб'ектаў базы дадзеных у мэтах</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>cs</v8:lang>
+							<v8:content>Změny databázových objektů za účelem</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Änderungen an den Datenbankobjekte, um</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>et</v8:lang>
+							<v8:content>Muudatused andmebaasi objektid, et</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>fr</v8:lang>
+							<v8:content>Les modifications apportées aux objets de base de données dans l'ordre</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>he</v8:lang>
+							<v8:content>שינויים באובייקטי מסד נתונים כדי</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hi</v8:lang>
+							<v8:content>क्रम में डेटाबेस वस्तुओं के लिए परिवर्तन</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hu</v8:lang>
+							<v8:content>Változások az adatbázis-objektumok érdekében</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>it</v8:lang>
+							<v8:content>Le modifiche agli oggetti di database in ordine</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ja</v8:lang>
+							<v8:content>オーダー内のデータベース・オブジェクトへの変更</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>ცვლილებები მონაცემთა ბაზის ობიექტები, რათა</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Тәртіппен дерекқор нысандарына өзгерістер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ko</v8:lang>
+							<v8:content>순서대로 데이터베이스 오브젝트에 대한 변경</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lt</v8:lang>
+							<v8:content>Pokyčiai prie duomenų bazės objektus, siekiant</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lv</v8:lang>
+							<v8:content>Izmaiņas datu bāzes objektus, lai</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Zmiany obiektów bazy danych w celu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Modificările aduse obiectele bazei de date, în scopul de</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sk</v8:lang>
+							<v8:content>Zmeny databázových objektov za účelom</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การเปลี่ยนแปลงวัตถุฐานข้อมูลในการสั่งซื้อ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Sırayla veritabanı nesneleri değişiklikler</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uz</v8:lang>
+							<v8:content>Tartibda ma'lumotlar bazasi ob'ektlari o'zgarishlar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>vi</v8:lang>
+							<v8:content>Thay đổi để các đối tượng cơ sở dữ liệu theo thứ tự</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>yg</v8:lang>
+							<v8:content>Тағйирот ба объектњои базаи дар тартибот</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>为了更改数据库对象</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zz</v8:lang>
+							<v8:content>Для того, чтобы изменить объекты базы данных</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПоОтветственным</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>3. Изменения по ответственным</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>3. Changes charge</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>3. Зміни по відповідальним</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>3. Փոփոխություններ մեղադրանքը</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>3. التغييرات تهمة</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>3. dəyişikliklər pulsuz</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>3. Промени заряд</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>3. Змены зарад</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>3. Změny poplatek</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>3. Änderungen Ladung</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>3. Muudatused eest</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>Responsable 3. Modifications</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>תשלום 3. שינויים</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>3. परिवर्तन प्रभारी</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>3. Változások díj</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>Carica 3. Modifiche</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>3.変更料</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>3. ცვლილებების პასუხისმგებელი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>3. өзгерістер төлем</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>3. 변경 충전</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>3. Pokyčiai mokestis</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>3. Izmaiņas maksas</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>3. Zmiany opłat</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Taxa 3. Modificări</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>3. Zmeny poplatok</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>3. การเปลี่ยนแปลงค่าใช้จ่าย</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>3. Değişiklikler ücret</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>3. o'zgarishlar zaryad</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>3. Thay đổi phí</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>3. Тағйироти пардохти</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>3.更改费</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>3. Изменить Плата</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъектБазыДанных</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаименованиеРеквизита</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>РеквизитОбъекта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПредыдущееЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НовоеЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:use>false</dcsset:use>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance/>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменения объектов базы данных по ответственным</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Changes to the database objects for the responsible</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Зміни об'єктів бази даних по відповідальним</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>am</v8:lang>
+							<v8:content>Փոփոխություններ տվյալների բազայի օբյեկտների համար պատասխանատու</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ar</v8:lang>
+							<v8:content>تغييرات على كائنات قاعدة البيانات لالمسؤولين</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Məsul üçün verilənlər bazası obyektləri dəyişikliklər</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Промени в обектите на базата данни за отговорно</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Змены ў аб'ектах базы дадзеных для адказных</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>cs</v8:lang>
+							<v8:content>Změny databáze objektů pro odpovědné</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Änderungen an den Datenbankobjekte für die verantwortungs</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>et</v8:lang>
+							<v8:content>Muudatused andmebaasi objektid vastutustundlikuks</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>fr</v8:lang>
+							<v8:content>Les modifications apportées aux objets de base de données pour le responsable</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>he</v8:lang>
+							<v8:content>שינויים באובייקטי מסד נתונים לאחריות</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hi</v8:lang>
+							<v8:content>जिम्मेदार के लिए डेटाबेस वस्तुओं के लिए परिवर्तन</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hu</v8:lang>
+							<v8:content>Változások az adatbázis-objektumokat, a felelős</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>it</v8:lang>
+							<v8:content>Modificare gli oggetti di database per il responsabile</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ja</v8:lang>
+							<v8:content>責任のためのデータベース・オブジェクトに対する変更</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>ცვლილებების მონაცემთა ბაზის ობიექტები პასუხისმგებელი</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Жауапты арналған дерекқор объектілерін өзгерістер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ko</v8:lang>
+							<v8:content>책임에 대한 데이터베이스 오브젝트에 대한 변경</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lt</v8:lang>
+							<v8:content>Pokyčiai prie duomenų bazės objektų atsakingo</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lv</v8:lang>
+							<v8:content>Izmaiņas bāzes objektus, lai atbildīgā</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Zmiany obiektów bazy danych w zakresie odpowiedzialnego</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Modificările aduse obiectele bazei de date pentru responsabilul</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sk</v8:lang>
+							<v8:content>Zmeny databázy objektov pre zodpovedné</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การเปลี่ยนแปลงวัตถุฐานข้อมูลสำหรับการที่มีความรับผิดชอบ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Sorumlu veritabanı nesneleri değişiklikler</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uz</v8:lang>
+							<v8:content>Mas'ul uchun ma'lumotlar bazasi bandlarni o'zgarishlar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>vi</v8:lang>
+							<v8:content>Thay đổi để các đối tượng cơ sở dữ liệu cho các trách nhiệm</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>yg</v8:lang>
+							<v8:content>Тағйирот ба объектњои базаи барои масъул</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>更改数据库对象的责任</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zz</v8:lang>
+							<v8:content>Изменение ответственность объекты базы данных</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Ответственный</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

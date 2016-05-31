@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17126"></meta><style>
+
+
+{TEXT-kaunistamiseks: none}</style></head><body>
+<p><font size="3"><strong>Viide Kliendid</strong></font></p>
+<p><img src="CommonPicture.СправочникКлиенты"></img><strong><font size="3"></font></strong><font size="2"> Mõeldud esitamise klientidele. Kasutage, kui </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">sealhulgas integratsiooni kliendid</font></a><font size="2">.</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Annab eeldefineeritud Client "Eraisik" registreerimise mitte-isikuandmeid müük. See tähendab, et need, mille puhul ei ole vaja jälgida võla. Seda saab ümber.</font></p>
+<p><font size="2">Kataloog hierarhia. See tähendab, et saate grupp kliente.</font></p></blockquote>
+<p><font size="2">Rekvisiidid:</font></p>
+<p><strong><a href="Catalog.ВидыЦен/Help"><font size="2">Tüüp Hind</font></a></strong><font size="2"> (kui </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">kaasasolev posistema</font></a><font size="2"> Complex mehhanism kaalub hind) määrab selle tüübi default hinnad </font><a href="Document.РасходыТовара/Help"><font size="2">rakendamine</font></a><font size="2"> Punkt klient. Hind tüüp saab määrata sama kõigi kliendigruppide.</font></p>
+<p><strong><a href="Catalog.Регионы/Help"><font size="2">Ala</font></a></strong><font size="2"> (kui </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">sealhulgas raamatupidamine</font></a><font size="2"> Regioonide) määrab asukoha Kliendi. Selle põhjal saab grupp kliente aruanded.</font></p>
+<p><font size="2"><strong>Protsent soodustust</strong> - (<a href="CommonForm.НастройкиБазыДанных/Help">kui need sisalduvad</a> Raamatupidamine soodustust) kehtestab isiklikku allahindlust kliendi. Kui sama protsendi, siis müük </font><a href="Catalog.Номенклатура/Help"><font size="2">nomenklatuur</font></a><font size="2">In-kaart, mis näitab ka diskontomäära, programmi valib kõige suurem protsent soodustust. Protsent allahindlust saab liigitada rühmadesse kliente.</font></p>
+<p><font size="2"><strong>Aadress</strong>.<strong>Telefon</strong>.<strong>Okpo</strong>.<strong>Juriidiline staatus</strong>.<strong>E-mail üksikasjad sularahata makse</strong> - Lisainfo Klient.</font></p>
+<p><strong><a href="Catalog.Склады/Help"><font size="2">Varu</font></a><font size="2"> klient</font></strong><font size="2"></font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2"> Kui allsüsteemi</font></a><font size="2">  "Raamatupidamine varude," lubab teil määrata default ladustamise kliendile. Sel juhul valikul Kliendi dokumendid, ladu paigaldatakse automaatselt.</font></p>
+<p><font size="2"><strong>Vormel tekstipealdisi</strong> (kui </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">kasutada valemit</font></a><font size="2">) Määrab unikaalne valem teket teksti sildil printimisel siltide kliendile. Sellised valemid on salvestatud </font><a href="Catalog.ФормулыОписания/Help"><font size="2">Viide valemid</font></a><font size="2">. Näiteks, kui </font><a href="Document.РасходыТовара/Help"><font size="2">dokument "kaubavoo"</font></a><font size="2"> Määra kliendile tema valem tekstipealdisi, kui helistate </font><a href="DataProcessor.ПечатьЭтикетки/Help"><font size="2">alamprogrammi etikett trükkida </font></a><font size="2">printer etikett tekstiga loodud see valem. Kui valem tekstipealdisi klient ei ole täidetud, kuid </font><a href="Catalog.Склады/Help"><font size="2">kasutatud raamatupidamise laod</font></a><font size="2"> ja valem täielikult </font><a href="Catalog.Склады/Help"><font size="2">Ladu</font></a><font size="2"> rakendamise, seda kasutatakse. Viimane asi on kasutada põhilised valem moodustamise teksti etiketil </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Programmi seaded</font></a><font size="2">. Kui see ei ole täidetud ja seejärel tekstipealdise võrdub teksti </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">Lugu</font></a><font size="2"></font><a href="Catalog.Номенклатура/Help"><font size="2"> nomenklatuur</font></a><font size="2">.</font></p>
+<p align="justify"><font size="2">Näide valem tekstipealdisi:</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p class="SourceCode"><em><font size="2"><font color="#413003">SokrLP (Int (hind) + 1) + "" + Leo (Nomenklatura.NomenklaturnayaGruppa.Kod, 2) + Leo (Nomenklatura.Proizvoditel.Kod, 2) + "x" + Format (käibemaks, "CC = 9; CHDTS = 0 ")</font></font></em></p>
+<p class="SourceCode"><font size="2"> Valemid tuleb kirjutada programmeerimiskeelt 1C.</font></p></blockquote>
+<p><font size="2"><strong>Nimi Prindi</strong> - Tekst, kuvatakse "Klient" dokumentide printimisel programmi. See tekst võib erineda tavalisest kliendi nimi. Näiteks kliendi nimel kataloogist - Sail, Ltd, ja tema nimi trükkimine - OÜ "Sail", Odessa, Malaya Arnautskaya 9.</font></p>
+<p><strong><font size="2">Kodus </font><a href="Catalog.Валюты/Help"><font size="2">Valuuta</font></a></strong><font size="2"> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">kui need sisalduvad</font></a><font size="2"> Raamatupidamine valuuta) on seatud dokumentide valimisel kliendile automaatselt luuakse teatud valuutas.</font></p>
+<p><font size="2"><strong>Oma töötajatele</strong> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">kui need sisalduvad</font></a><font size="2"> palgaarvestus) saab klient. Sellised kliendid on loodud automaatselt, kui sisestate andmeid </font><a href="Catalog.Сотрудники/Help"><font size="2">personal</font></a><font size="2">. See on vajalik selleks, et anda töötajatele soodustust kaupade ostmisel ja arvestama asulad kliendile </font><a href="Document.ДвиженияДенег/Help"><font size="2">palgafond</font></a><font size="2"> töötaja. </font></p>
+<p><font size="2">Sest grupp kliente, saate protsent teenustasud. Ta töötab, kui te kasutate protsent <a href="Catalog.Договора/Help">Lepingu</a> Kliendiga.</font></p>
+<p><font size="2"></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2"> Pange tähele, et kui programm pidama klientidele, kuid ei vii </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">kontoraha</font></a><font size="2">, Analüüsis </font><a href="Report.РасчетыСКлиентами/Help"><font size="2">Aruande "Nõuded ostjate vastu"</font></a><font size="2"> pildi kvaliteet ühekülgne. Nagu siis, kui kaup on rakendatud, kuid ei maksa klient, sest puudub võimalus registreeruda programmi <a href="Document.ДвиженияДенег/Help">Laekumised ostjatelt</a> ühendamata registreeritud raha.</font></p>
+<p><font size="2">Kui see on vajalik, et korvata võla vahel klient ja / või <a href="Catalog.Поставщики/Help">Providers</a> võttes arvesse kättesaamise / väljavool raha, siis tuleb kasutada spetsiaalset vormi korrigeerimine "<a href="Document.КорректировкиИРегистрацияОстатков/Help">Tasaarvestuse võla vastaspoolte</a>".</font></p>
+<p><font size="2">Contractors - üldnimi klientidele ja tarnijatele.</font></p></blockquote><font size="2">
+<p></p>
+<p></p>
+<p><font size="2">
+<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" face="Calibri"><em>ELEMENTARY KAUBANDUS</em></font></a><font face="Calibri"><em>, 2013-2014</em></font>
+<dl><dt><pre><font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img></font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">   sza@ukr.net</font></a><font face="Calibri"></font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri"> http://www.ELTR.od.ua</font></a></pre></dt></dl></font>
+</p><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p></font></body></html>

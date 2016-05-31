@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17126"></meta><style>
+
+
+{Teksta noformējums: none}</style></head><body>
+<p><font size="3"><strong>Atsauces Klienti</strong></font></p>
+<p><img src="CommonPicture.СправочникКлиенты"></img><strong><font size="3"></font></strong><font size="2"> Paredzēti iesniegšanas klientiem. Izmantojiet ja </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">tostarp klientu integrāciju</font></a><font size="2">.</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Nodrošina iepriekš definētu klients "Privātpersona" par reģistrāciju nav personas datu pārdošanu. Tas ir, tiem, kuriem nav nepieciešams sekot parādu. To var pārdēvēt.</font></p>
+<p><font size="2">Directory hierarhija. Tas nozīmē, ka jūs varat grupu klientiem.</font></p></blockquote>
+<p><font size="2">Sīkāka informācija:</font></p>
+<p><strong><a href="Catalog.ВидыЦен/Help"><font size="2">Tips Cena</font></a></strong><font size="2"> (ja </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">iekļautā posistema</font></a><font size="2"> Sarežģīts mehānisms, ņemot vērā cenu) nosaka veidu noklusējuma cenas pie </font><a href="Document.РасходыТовара/Help"><font size="2">īstenošana</font></a><font size="2"> Prece klients. Cena tips var tikt piešķirts vienāds visiem klientu grupām.</font></p>
+<p><strong><a href="Catalog.Регионы/Help"><font size="2">Platība</font></a></strong><font size="2"> (ja </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">tostarp grāmatvedības</font></a><font size="2"> Reģioni) nosaka atrašanās vietu Klienta. Pamatojoties uz to, jūs varat grupu klientus ziņojumiem.</font></p>
+<p><font size="2"><strong>Par procentu atlaides</strong> - (<a href="CommonForm.НастройкиБазыДанных/Help">ja iekļauts</a> Grāmatvedības atlaides) izveido personīgo atlaidi Klientam. Ja tādu pašu procentuālo daļu, tad pārdošana </font><a href="Catalog.Номенклатура/Help"><font size="2">nomenklatūra</font></a><font size="2">In kartes, kas arī norāda uz diskonta likmi, programma izvēlas visaugstākās procentu atlaides. Procentuālā atlaide var tikt piešķirts uz klientu grupām.</font></p>
+<p><font size="2"><strong>Adrese</strong>.<strong>Telefons</strong>.<strong>OKPO</strong>.<strong>Juridiskais statuss</strong>.<strong>E-pasts, ziņas par bezskaidras naudas maksājumu</strong> - Papildus informācija par Klientu.</font></p>
+<p><strong><a href="Catalog.Склады/Help"><font size="2">Noliktava</font></a><font size="2"> klients</font></strong><font size="2"></font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2"> Kad apakšsistēma</font></a><font size="2">  "Grāmatvedības krājuma" ļauj norādīt noklusējuma uzglabāšanu klientam. Šajā gadījumā izvēle Klienta dokumentus, noliktava tiks uzstādīts automātiski.</font></p>
+<p><font size="2"><strong>Formula teksta etiķetes</strong> (ja </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">izmantot formulu</font></a><font size="2">) Definē unikālu formulu veidošanās teksta uz marķējuma, kad jūs drukāt uzlīmes klientam. Šādas formulas tiek glabāti </font><a href="Catalog.ФормулыОписания/Help"><font size="2">Atsauces formulas</font></a><font size="2">. Piemēram, ja </font><a href="Document.РасходыТовара/Help"><font size="2">dokuments "preču plūsmas"</font></a><font size="2"> Uzstādīt klients ar savu formulu teksta etiķetes, kad jūs zvanāt </font><a href="DataProcessor.ПечатьЭтикетки/Help"><font size="2">subroutine etiķetes izdrukāšana </font></a><font size="2">printeris etiķete ar tekstu šīs formulas radīts. Ja formula teksta etiķetes klients nav piepildīta, bet </font><a href="Catalog.Склады/Help"><font size="2">Lietoti grāmatvedības noliktavas</font></a><font size="2"> un formula pilna </font><a href="Catalog.Склады/Help"><font size="2">Noliktava</font></a><font size="2"> ieviešanu, tas tiks izmantots. Pēdējā lieta ir izmantot pamata formula veidošanās teksta etiķetes </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">programmas uzstādījumi</font></a><font size="2">. Ja tas nav piepildīta, un pēc tam tekstu, etiķete ir vienāda ar tekstu </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">Svītrkoda</font></a><font size="2"></font><a href="Catalog.Номенклатура/Help"><font size="2"> nomenklatūra</font></a><font size="2">.</font></p>
+<p align="justify"><font size="2">Piemērs formula teksta etiķetes:</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p class="SourceCode"><em><font size="2"><font color="#413003">SokrLP (Int (cena) + 1) + "" + Leo (Nomenklatura.NomenklaturnayaGruppa.Kod, 2) + Leo (Nomenklatura.Proizvoditel.Kod, 2) + "x" + Format (PVN, "CC = 9; CHDTS = 0 ")</font></font></em></p>
+<p class="SourceCode"><font size="2"> Formulas jāraksta programmēšanas valodu 1C.</font></p></blockquote>
+<p><font size="2"><strong>Name Print</strong> - Teksts tiks parādīts "klients", drukājot dokumentus no programmas. Šis teksts var atšķirties no parastās klienta vārda. Piemēram, nosaukums Klienta direktorijā - bura, SIA, un tā nosaukums drukāšanai - SIA "Buras", Odesā, Malaja Arnautskaya 9.</font></p>
+<p><strong><font size="2">Uz mājām </font><a href="Catalog.Валюты/Help"><font size="2">Valūta</font></a></strong><font size="2"> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">ja iekļauts</font></a><font size="2"> Uzskaite valūtā) ir noteikts dokumentiem atlases klienta automātiski izveido noteiktu valūtu.</font></p>
+<p><font size="2"><strong>Pašu personāls</strong> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">ja iekļauts</font></a><font size="2"> algu grāmatvedība), var būt klientu. Šādi Klienti tiek ģenerētas automātiski, kad jūs ievadīt informāciju </font><a href="Catalog.Сотрудники/Help"><font size="2">personāls</font></a><font size="2">. Tas ir nepieciešams, lai dotu darbiniekiem atlaides par preču iegādi un ņemt vērā norēķinus ar klientu pie </font><a href="Document.ДвиженияДенег/Help"><font size="2">algas</font></a><font size="2"> darbinieks. </font></p>
+<p><font size="2">Par klientu grupas, jūs varat iestatīt procentuālo komisijas maksas. Viņš darbosies, ja jūs izmantojat procentuālo <a href="Catalog.Договора/Help">Līgums</a> ar Klientu.</font></p>
+<p><font size="2"></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2"> Ņemiet vērā, ka gadījumā, ja programma uzskaiti par klientiem, bet nenoved </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">konta nauda</font></a><font size="2">, Analīzē </font><a href="Report.РасчетыСКлиентами/Help"><font size="2">ziņojumu "Debitori"</font></a><font size="2"> aina izskatīsies vienpusīgs. Kā tad, ja preces tika īstenots, bet ne ko klients maksā, jo nav iespējams reģistrēt programmā <a href="Document.ДвиженияДенег/Help">Naudas ieņēmumi no klientiem</a> ar atvienots reģistrēto naudu.</font></p>
+<p><font size="2">Ja tas ir nepieciešams, lai kompensētu parādu starp klientu un / vai <a href="Catalog.Поставщики/Help">Providers</a> ņemot vērā saņemšanas / aizplūde naudas, jums vajadzētu izmantot īpašu formu korekcijām "<a href="Document.КорректировкиИРегистрацияОстатков/Help">Ieskaitīšana parāda darījumu partneriem</a>".</font></p>
+<p><font size="2">Contractors - vispārējs nosaukums klientiem un piegādātājiem.</font></p></blockquote><font size="2">
+<p></p>
+<p></p>
+<p><font size="2">
+<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" face="Calibri"><em>ELEMENTARY TRADE</em></font></a><font face="Calibri"><em>, 2013-2014</em></font>
+<dl><dt><pre><font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img></font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">   sza@ukr.net</font></a><font face="Calibri"></font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri"> http://www.ELTR.od.ua</font></a></pre></dt></dl></font>
+</p><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p></font></body></html>

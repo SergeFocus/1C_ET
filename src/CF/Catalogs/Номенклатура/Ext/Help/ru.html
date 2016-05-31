@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17420"></meta><style>A {
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.18036"></meta><style>A {
 	TEXT-DECORATION: none
 }
 </style></head><body>
 <p align="justify"><strong><font size="4">Справочник Номенклатура (Товары, услуги)</font></strong></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr"><font size="2">
-<div><img src="CommonPicture.Номенклатура"></img> Под общим понятием "номенклатура" подразумеваются: товары, услуги (работы), элементы "наборов" из товаров и услуг и собственно сами "наборы". Номенклатура может быть собрана в группы.</div>
+<div><img src="CommonPicture.СправочникНоменклатура"></img> Под общим понятием "номенклатура" подразумеваются: товары, услуги (работы), элементы "наборов" из товаров и услуг и собственно сами "наборы". Номенклатура может быть собрана в группы.</div>
 <div>Номенклатура может учитываться в количественном учете или нет (работы или товары на сумму).</div>
 <div>Номенклатура должна быть оценена для реализации и иметь свою оценку при приобретении в случае, если необходимо выяснить валовую прибыль от ее реализации.</div>
 <div> </div>
@@ -39,6 +39,9 @@
 <div align="justify"><font size="2">Для анализа продаж "наборов" пользуйтесь вариантом <a href="Report.ОтчетПоПродажам/Help">отчета "Продажи"</a> для наборов.</font></div></dt></dt></dt></dt></dt></dt></dl></dl><blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p align="justify"><font size="2">Отличие набора от комплектации: При реализации набора списываются вся номенклатура его состава. При комплектации списываются материалы и формируется на складе новый экземпляр продукта. Который хранится и числится отдельно, отдельно реализуется, но может быть разукомплектован.</font></p></blockquote>
 <p align="justify"><font size="2">Номенклатура может вестись по <strong><a href="Catalog.СерииНоменклатуры/Help">Сериям</a></strong>. Это значит что каждую единицу номенклатуры будет сопровождать один элемент ее серии. Серию можно установить обязательной для выбора. В такой случае невозможно будет указывать количество товара. Он будет приходоваться, перемещаться и расходоваться по-серийно.</font></p>
+<p><font size="2">Предусмотрены "полный" и "простой" режимы учета серий номенклатуры.</font></p>
+<p><font size="2">В полном учете серию следует указывать во время всех событий - при поступлении, перемещении, реализации номенклатуры.</font></p>
+<p><font size="2">В "простом режиме" серию достаточно указать только при приобретении номенклатуры (потом использовать поиск). Таким образом можно только обнаружить где и как приобреталась данная серия.</font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p align="justify"><font size="2">Серии формируются на этапе приходного документа. Каждый серийный номер может быть оформлен собственным Штрих-кодом и кодом производителя.</font></p>
 <p align="justify"><font size="2">Если номенклатура уже использовалась, назначить ее серийной нельзя. Следует создавать новую номенклатуру.</font></p>
@@ -46,4 +49,10 @@
 <p align="justify"><font size="2">Невозможно использовать серии для номенклатуры с параметром "Не отслеживать остаток".</font></p>
 <p align="justify"><font size="2">Средняя цена приобретений это вся сумма стоимости приобретений поделенная на все количество приобретения. используется как оценка для расчета валовой прибыли в отсутствии партионного учета.</font></p>
 <p align="justify"><font size="2">Для группы номенклатуры может быть установлен <strong>Процент комиссионного вознаграждения </strong>для комиссионеров.</font></p></blockquote>
-<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" face="Calibri"><em>ЭЛЕМЕНТАРНАЯ ТОРГОВЛЯ</em></font></a><font face="Calibri"><em>, 2013-2014</em></font><br><p> <font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.SZ64" width="64" align="middle" height="64"></img>  </font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">sza@ukr.net</font></a><font face="Calibri"> </font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri">http://www.ELTR.od.ua</font></a> </p></body></html>
+<p>Партионный учет в конфигурации непредусмотрен.</p>
+<p>Используется средневзвешенный учете текущего остатка. В этом режиме валовая прибыль остаётся понятием управленческого характера, а не считается для регламентированной (установленной государством отчетности).</p>
+<p>Да, конечно товары купленные по разному курсу, дают "скачки" в показателях валовой прибыли в национальной валюте. Но с другой стороны, может следует валютой учёта взять доллар (или евро)? Тогда скачков не будет.</p>
+<p>Скачков "стираются" и при хороших оборотах и не слишком то и заметны. В программе можно прямо указать продажу при возврате (и поступление при возврате поставщику), чтобы избежать ошибок. </p>
+<p></p>
+<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" face="Calibri"><em>ЭЛЕМЕНТАРНАЯ ТОРГОВЛЯ</em></font></a><font face="Calibri"><em>, 2013-2014</em></font><br><p></p>
+<p> <font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img>  </font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">sza@ukr.net</font></a><font face="Calibri"> </font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri">http://www.ELTR.od.ua</font></a> </p></body></html>

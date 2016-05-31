@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17420"></meta><style>A {
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17924"></meta><style>A {
 	TEXT-DECORATION: none
 }
 </style></head><body>
 <p><font size="3"><strong>Документ "КОРРЕКТИРОВКА", "РЕГИСТРАЦИЯ ОСТАТКОВ", "ВЗАИМОЗАЧЕТ ДОЛГА КОНТРАГЕНТОВ"</strong></font></p>
-<p align="justify"><font size="2"></font> </p>
-<li><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Во время переноса данных учета в программу их легче всего зарегистрировать в документе "ввод остатков". Там предусмотрены механизмы для быстрой регистрации новых данных.</font></span> 
-</li><li><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Затем, во время работы, может быть понадобится внести корректировку в данные программы. Подразумевается такая корректировка, которую не предполагают другие документы программы. Например, это может быть переоценка долга контрагента без сопутствующего движения товаров и денег.</font></span> 
+<p align="justify"><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Во время переноса данных учета в программу их легче всего зарегистрировать в документе "ввод остатков". Там предусмотрены механизмы для быстрой регистрации новых данных.</font></span> </p>
+<li><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Затем, во время работы, может быть понадобится внести корректировку в данные программы. Подразумевается такая корректировка, которую не предполагают другие документы программы. Например, это может быть переоценка долга контрагента без сопутствующего движения товаров и денег.</font></span> 
 </li><li><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Третий режим документа - регистрация взаимозачетов контрагентов. Особенно может пригодиться, если есть поставщики, которые так же выступают клиентами и наоборот. Таким документом можно списать долг одного за счет долга перед другим.</font></span> 
 <p align="justify"><font size="2"><strong></strong></font> </p>
 <p align="justify"><font size="2"><strong>РЕГИСТРАЦИЯ ОСТАТКОВ, КОРРЕКТИРОВКА</strong></font></p>
@@ -13,7 +12,7 @@
 <p align="justify"><font size="2">Для начала работы с программой в документе следует отразить всю информацию о текущем состоянии по блокам учета, которые <a href="CommonForm.НастройкиБазыДанных/Help">включены в настройках</a> на <strong>дату/время документа</strong>.</font></p></blockquote>
 <p align="justify"><font size="2">Это блоки: </font></p>
 <ul><li>
-<div align="justify"><font size="2">"Остатки <a href="Catalog.Номенклатура/Help">товаров</a>" в закупочных ценах</font></div>
+<div align="justify"><font size="2">"Остатки <a href="Catalog.Номенклатура/Help">товаров</a>" в <strong>закупочных ценах</strong></font></div>
 </li><li>
 <div align="justify"><font size="2">Первоначальные "Цены" товаров в <a href="Catalog.ВидыЦен/Help">видах цен</a></font></div>
 </li><li>
@@ -36,7 +35,6 @@
 <p align="justify"><font size="2"><strong>Для блока Товары, Цены</strong></font></p></blockquote>
 <p dir="ltr" align="justify"><font size="2"><strong>Назначить Склад для всех строк</strong> - если<a href="CommonForm.НастройкиБазыДанных/Help"> используется учет</a> по <a href="Catalog.Склады/Help">складам</a>, при вводе остатков или их коррекции для товаров необходимо указывать склад.</font></p>
 <p dir="ltr" align="justify"><font size="2"><strong>Устанавливать <a href="Catalog.ВидыЦен/Help">Вид цен</a> - Закупочная. -</strong> для того, чтобы для всех товаров при вводе остатков зафикисровать цену в качестве закупочной цены, и , возможно, рассчитать из нее зависимые виды цен. Основным средством регистрации цен служит документ "<a href="Document.УстановкиЦен/Help">Установка цен</a>". При вводе остатков можно так же заполнить цены в закладе "Установка цен". </font><font size="2">При включенном флаге "не устанавливать зависимые цены" будут установлены только непосредственно указанные виды цен.</font></p>
-</li><li>
 <p dir="ltr" align="justify"><font size="2"><strong>Устанавливать цену из таблицы в качестве цены для реализации товара</strong> (равные цены). Иначе будет применена формула наценки. Если сложный учет цен не используется, цены из таблицы товаров можно зарегистрировать сразу в качестве цены для реализации (например когда учет цен предполагает цену постапления равной цене продажи).</font></p>
 <p dir="ltr" align="justify"><font size="2"><a href="Catalog.ЕдиницыИзмерения/Help">Единицу измерения</a> (при учете единиц измерения) следует указывать только в том случае, если в этот раз она отличная от основной единицы измерения номенклатуры. Это правило для всех документов конфигурации.</font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
@@ -56,7 +54,7 @@
 <div align="justify"><font size="2">"<strong>Установить Цены продаж</strong>" - для всех строк таблицы значение "цена" будет установлено такой ценой, которая зарегистрирована для продажи товара. По умолчанию цена в данной таблице должна быть ценой приобретения (закупочной).</font></div></li></ul><blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p align="justify"><font size="2">При регистрирации корректировки остатков товаров типа "набор" программа применит корректировку для всех элементов состава набора отдельно. Настоятельно рекомендуем все же производить корректировку для каждого элемента набора отдельно, чтобы четко установить закупочную цену для каждого компонента "набора", его стоимость и фактические показатели остатков. Если Вас не интересует в программе точный расчет показателей прибыли, то данной рекомендацией можно пренебречь.</font></p>
 <p align="justify"><font size="2">Корректировка этим документом не влияет на валовую прибыль. <strong>Списание</strong> следует выполнять документом </font><a href="Document.РасходыТовара/Help"><font size="2">Расход товара</font></a><font size="2"> без заполнения контрагента.</font></p>
-<p align="justify"><font size="2">По кнопке F10 доступен диалог быстрого ввода товара с количеством. При его использовании достаточно нажать F10, затем ввести сканером или вручную</font><a href="InformationRegister.ШтрихКоды/Help"><font size="2"> штрих код</font></a><font size="2"> (если </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">он используется</font></a><font size="2">) или выбрать номенклатуру, указать Количество и F10 - завершить ввод данных.</font></p>
+<p align="justify"><font size="2">По кнопке F9 доступен диалог быстрого ввода товара с количеством. При его использовании достаточно нажать F9, затем ввести сканером или вручную</font><a href="InformationRegister.ШтрихКоды/Help"><font size="2"> штрих код</font></a><font size="2"> (если </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">он используется</font></a><font size="2">) или выбрать номенклатуру, указать Количество и F9 - завершить ввод данных.</font></p>
 <p align="justify"><font size="2">По кнопке F11 ввод по </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">Штрих-коду</font></a><font size="2"> вручную (если </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">он используется</font></a><font size="2">), например для случаев когда сканер кода отключен или  не читает код.</font></p>
 <p align="justify"><font size="2"></font> </p>
 <p dir="ltr" align="justify"><font size="2"><strong>Для Блока Расчетов с Клиентами</strong></font></p></blockquote>
@@ -79,14 +77,17 @@
 <p style="MARGIN-RIGHT: 0px" dir="ltr" align="justify"><font size="2">Команда:</font></p>
 <ul dir="ltr"><li>
 <div style="MARGIN-RIGHT: 0px" align="justify"><font size="2">"<strong>Заполнить текущими остатками денег</strong>" - таблица остатков будет заполнена по данным программы на дату/время документа.</font></div></li></ul><p align="justify"><font size="2"></font> </p>
+<p align="justify"><font size="2">Если используются <a href="Catalog.Ваучеры/Help">ваучеры</a>, остатки их наличия регистрируются через обработку "<a href="DataProcessor.ОперацииСВаучерами/Help">Операции с ваучерами</a>" документом поступления.</font></p>
+<p align="justify"><font size="2"></font><font size="2"></font> </p>
 <p align="justify"><font size="2"><strong>ВЗАИМОЗАЧЕТ ДОЛГА КОНТРАГЕНТОВ</strong></font></p>
 <p align="justify"><font size="2">Это специальный Вид документа для регистрации взаимозачета долга Клиентов и/или Поставщиков. В это режиме можно списать долг одного Клиента в счет переплаты другого Клиента. Или когда, например, клиент и поставщик одно лицо, произвести для него взаимозачет долга.</font></p>
 <p align="justify"><font size="2">Так же можно отразить тут поступление или расход денег (если ведется учет денег).</font></p>
-<p align="justify"><font size="2">Команды:</font></p>
-<p align="justify"> </p>
-<p><font size="2">Данные "О строке" -заметки, информация пользоателя. На печать не выводятся, но хранятся в программе.</font></p>
+<p align="justify"><font size="2">Данные "О строке" -заметки, информация пользоателя. На печать не выводятся, но хранятся в программе.</font></p>
 <p><font size="2"></font></p><font size="2">
 <p></p>
+<p></p>
 <hr></hr><p></p>
+<p></p>
+<p></p>
 <p></p></font><em><a href="CommonForm.НастройкиБазыДанных/Help"><font color="#000000">ЭЛЕМЕНТАРНАЯ ТОРГОВЛЯ</font></a>, 2013</em> 
-<p><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.SZ64" width="64" align="middle" height="64"></img>  <a title="email to developer" href="mailto:sza@ukr.net">sza@ukr.net</a> <a title="developer product page" href="https://sites.google.com/site/szaodua/my_programs/drugie-razrabotki-1s/primitivnaa-torgovla">http://www.ELTR.od.ua</a></p></li></body></html>
+<p><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img>  <a title="email to developer" href="mailto:sza@ukr.net">sza@ukr.net</a> <a title="developer product page" href="https://sites.google.com/site/szaodua/my_programs/drugie-razrabotki-1s/primitivnaa-torgovla">http://www.ELTR.od.ua</a></p></li></body></html>

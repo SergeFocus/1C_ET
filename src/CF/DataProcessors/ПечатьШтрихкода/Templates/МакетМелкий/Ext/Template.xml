@@ -1,63 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <document xmlns="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<languageSettings>
-		<currentLanguage>ru</currentLanguage>
+		<currentLanguage/>
 		<defaultLanguage>ru</defaultLanguage>
-		<languageInfo>
-			<id>ru</id>
-			<code>Русский</code>
-			<description>Русский</description>
-		</languageInfo>
-		<languageInfo>
-			<id>en</id>
-			<code>English</code>
-			<description>Английский</description>
-		</languageInfo>
-		<languageInfo>
-			<id>bl</id>
-			<code>Белорусский</code>
-			<description>Белорусский</description>
-		</languageInfo>
-		<languageInfo>
-			<id>bg</id>
-			<code>Болгарский</code>
-			<description>Болгарский</description>
-		</languageInfo>
-		<languageInfo>
-			<id>kk</id>
-			<code>Казахский</code>
-			<description>Казахский</description>
-		</languageInfo>
-		<languageInfo>
-			<id>zh</id>
-			<code>Китайский</code>
-			<description>Китайский</description>
-		</languageInfo>
-		<languageInfo>
-			<id>de</id>
-			<code>Немецкий</code>
-			<description>Немецкий</description>
-		</languageInfo>
-		<languageInfo>
-			<id>pl</id>
-			<code>Польский</code>
-			<description>Польский</description>
-		</languageInfo>
-		<languageInfo>
-			<id>ro</id>
-			<code>Румынский</code>
-			<description>Румынский</description>
-		</languageInfo>
-		<languageInfo>
-			<id>th</id>
-			<code>Тайский</code>
-			<description>Тайский</description>
-		</languageInfo>
-		<languageInfo>
-			<id>uk</id>
-			<code>Українська</code>
-			<description>Украинский</description>
-		</languageInfo>
 	</languageSettings>
 	<columns>
 		<size>1</size>
@@ -79,10 +24,17 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>1</index>
+		<row>
+			<formatIndex>4</formatIndex>
+			<empty>true</empty>
+		</row>
+	</rowsItem>
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>1</id>
-		<formatIndex>4</formatIndex>
+		<formatIndex>5</formatIndex>
 		<beginRow>0</beginRow>
 		<beginRowOffset>24</beginRowOffset>
 		<endRow>0</endRow>
@@ -96,37 +48,54 @@
 		<zOrder>0</zOrder>
 		<pictureIndex>1</pictureIndex>
 	</drawing>
-	<picture>
-		<index>0</index>
-		<picture/>
-	</picture>
+	<drawing>
+		<drawingType>Picture</drawingType>
+		<id>3</id>
+		<formatIndex>5</formatIndex>
+		<beginRow>1</beginRow>
+		<beginRowOffset>0</beginRowOffset>
+		<endRow>1</endRow>
+		<endRowOffset>147</endRowOffset>
+		<beginColumn>0</beginColumn>
+		<beginColumnOffset>0</beginColumnOffset>
+		<endColumn>0</endColumn>
+		<endColumnOffset>582</endColumnOffset>
+		<autoSize>false</autoSize>
+		<pictureSize>Proportionally</pictureSize>
+		<zOrder>0</zOrder>
+		<pictureIndex>1</pictureIndex>
+	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>5</defaultFormatIndex>
-	<height>1</height>
-	<vgRows>1</vgRows>
+	<defaultFormatIndex>6</defaultFormatIndex>
+	<height>2</height>
+	<vgRows>2</vgRows>
 	<namedItem xsi:type="NamedItemCells">
-		<name>Колонка</name>
+		<name>ШтрихКод</name>
 		<area>
-			<type>Columns</type>
-			<beginRow>-1</beginRow>
-			<endRow>-1</endRow>
+			<type>Rectangle</type>
+			<beginRow>0</beginRow>
+			<endRow>0</endRow>
 			<beginColumn>0</beginColumn>
 			<endColumn>0</endColumn>
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
-		<name>Строка</name>
+		<name>ШтрихКодПоловина</name>
 		<area>
-			<type>Rows</type>
-			<beginRow>0</beginRow>
-			<endRow>0</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
+			<type>Rectangle</type>
+			<beginRow>1</beginRow>
+			<endRow>1</endRow>
+			<beginColumn>0</beginColumn>
+			<endColumn>0</endColumn>
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemDrawing">
-		<name>Штрихкод</name>
+		<name>ШтрихКодРисунок</name>
 		<drawingID>1</drawingID>
+	</namedItem>
+	<namedItem xsi:type="NamedItemDrawing">
+		<name>ШтрихКодРисунокПоловина</name>
+		<drawingID>3</drawingID>
 	</namedItem>
 	<printArea>
 		<type>Rectangle</type>
@@ -147,6 +116,13 @@
 	<format>
 		<height>609</height>
 		<width>405</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<picHorizontalAlignment>Center</picHorizontalAlignment>
+		<picVerticalAlignment>Center</picVerticalAlignment>
+	</format>
+	<format>
+		<height>162</height>
 	</format>
 	<format>
 		<drawingBorder>0</drawingBorder>
@@ -154,4 +130,8 @@
 	<format>
 		<width>72</width>
 	</format>
+	<picture>
+		<index>0</index>
+		<picture/>
+	</picture>
 </document>

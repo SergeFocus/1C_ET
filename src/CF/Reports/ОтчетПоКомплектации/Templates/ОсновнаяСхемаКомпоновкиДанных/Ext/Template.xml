@@ -1,0 +1,4843 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСтроки</dataPath>
+			<field>НомерСтроки</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>3</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МоментВремени</dataPath>
+			<field>МоментВремени</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>amount</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кількість</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>քանակ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>كمية</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>miqdar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>колькасць</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>částka</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Menge</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>summa</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>montant</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>כמות</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>मात्रा</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>mennyiség</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>importo</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>量</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>თანხა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>сомасы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>양</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>suma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Skaits</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>ilość</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>sumă</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>čiastka</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>จำนวน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>miktar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>miqdor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>lượng</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Маблағи</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>量</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВозвратКоличество</dataPath>
+			<field>ВозвратКоличество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Return the number of</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Повернення кількість</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Վերադարձնել թիվը</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>إرجاع عدد</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Sayı qayıt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Връщане на броя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Вяртае колькасць</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Vrátit číslo</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Gibt die Anzahl der</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Tagasi arv</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Retourne le nombre de</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>החזר את מספר</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>की संख्या में वापसी</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Visszatérni száma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Restituisce il numero di</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>の数を返します</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>დაბრუნება ნომერი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Санын оралу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>의 수를 돌려줍니다</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Grįžti į numerį</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Atgriezties skaitu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Powrót liczby</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Reveni numărul de</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Vrátiť číslo</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>กลับจำนวน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sayısını döndürmek</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Sonini qaytish</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Trả lại số</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Бозгашт шумораи</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>返回的数</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Количество возврата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВозвратСумма</dataPath>
+			<field>ВозвратСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат сумма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refund amount</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Повернення сума</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Փոխհատուցման գումարը</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>المبلغ المسترد</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Çəkilən məbləği</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Възстановяване сума</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Сума вяртання</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Výše náhrady</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Rückerstattungsbetrag</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Toetuse suurus</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Montant du remboursement</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>סכום החזר</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>वापसी राशि</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Visszatérítés összegét</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Importo rimborsato</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>払い戻し額</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>დაბრუნება თანხა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Қайтару сомасы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>환불 금액</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Grąžinamosios išmokos suma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Kompensāciju summa</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Kwota Refundacji</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Valoarea restituirii</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Výška náhrady</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>จำนวนเงินคืน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>İade Miktarı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Qaytaring miqdori</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Số tiền hoàn trả</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Маблағи чипта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>退款金额</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Сумма возмещения</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроданоКоличество</dataPath>
+			<field>ПроданоКоличество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продано количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sold amount</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Продано кількість</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Վաճառված գումարը</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>المبلغ المباع</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Satılır məbləği</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Продадено количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Прададзена колькасць</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Prodáno Částka</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verkaufte Menge</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Müüdud kogus</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Quantité vendue</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>כמות שנמכרה</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>बिक राशि</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Eladott összeg</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Quantità venduta</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>販売量</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>გაყიდული თანხა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Сатылған сомасы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>판매 금액</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Parduota suma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Pārdots summa</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Sprzedawane ilość</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Suma vândut</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Predané Suma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>จำนวนเงินที่ขาย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Satılan miktar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Sotilgan summasi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Số lượng bán</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Маблағи фурӯхта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>已销售数量</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Продано количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроданоСумма</dataPath>
+			<field>ПроданоСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продано сумма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sold amount</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Продано сума</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Վաճառված գումարը</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>المبلغ المباع</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Satılır məbləği</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Продадено количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Прададзена колькасць</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Prodáno Částka</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verkaufte Menge</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Müüdud kogus</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Quantité vendue</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>כמות שנמכרה</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>बिक राशि</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Eladott összeg</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Quantità venduta</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>販売量</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>გაყიდული თანხა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Сатылған сомасы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>판매 금액</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Parduota suma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Pārdots summa</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Sprzedawane ilość</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Suma vândut</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Predané Suma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>จำนวนเงินที่ขาย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Satılan miktar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Sotilgan summasi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Số lượng bán</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Маблағи фурӯхта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>已销售数量</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Продано количество</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Производитель</dataPath>
+			<field>Производитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Manufacturer</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виробник</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Արտադրող</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>الشركة المصنعة</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>İstehsalçı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Производител</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Вытворца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Výrobce</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Hersteller</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Tootja</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Fabricant</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>יצרן</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>उत्पादक</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Gyártó</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Produttore</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>メーカー</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მწარმოებელი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Өндіруші</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>제조업 자</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Gamintojas</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Ražotājs</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Producent</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Producător</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Výrobca</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ผู้ผลิต</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Üretici</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Ishlab chiqaruvchi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>nhà chế tạo</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Истеҳсолкунанда</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>生产商</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Производитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Состав</dataPath>
+			<field>Состав</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Состав.КоличествоНоменклатурыСоставаВЕдиницеНабора</dataPath>
+			<field>Состав.КоличествоНоменклатурыСоставаВЕдиницеНабора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав.Количество номенклатуры состава в единице набора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sostav.Kolichestvo nomenclature the composition in a unit set</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Состав.Колічество номенклатури складу в одиниці набору</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Sostav.Kolichestvo նոմենկլատուրան կազմը մի միավորի շարք</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>Sostav.Kolichestvo التسميات تكوين في مجموعة وحدة</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Sostav.Kolichestvo vahid dəsti tərkibi nomenklaturası</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Sostav.Kolichestvo номенклатурата на състава в комплект единица</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Sostav.Kolichestvo наменклатуры кампазіцыі ў адзінку набору</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Sostav.Kolichestvo nomenklatury kompozici v jednotkové sadě</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Sostav.Kolichestvo Einklang mit dem Inhalt in einem Einheitssatz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Sostav.Kolichestvo nomenklatuuris koosseisu üksus komplekt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Sostav.Kolichestvo Nomenclature la composition dans un ensemble unitaire</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>Sostav.Kolichestvo מינוח הרכב בסט יחידה</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>Sostav.Kolichestvo एक इकाई सेट में रचना नामकरण</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Sostav.Kolichestvo Nómenklatúra Az összetétel egy egység készlet</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Sostav.Kolichestvo Nomenclatura la composizione in un insieme un'unità</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>Sostav.Kolichestvo単位セットで組成物を命名法</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>Sostav.Kolichestvo ნომენკლატურის შემადგენლობაში ერთეული კომპლექტი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Sostav.Kolichestvo бірлігі жиынтығы құрамы номенклатурасы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>Sostav.Kolichestvo는 부 집합 조성물 명명법</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Sostav.Kolichestvo nomenklatūroje sudėtį į komplektaciją</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Sostav.Kolichestvo nomenklatūrā sastāvu vienības komplektā</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Sostav.Kolichestvo Scalonej kompozycja w zestawie jednostki</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Sostav.Kolichestvo Nomenclatura compoziția într-un set unitate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Sostav.Kolichestvo nomenklatúry kompozíciu v jednotkovej sade</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>Sostav.Kolichestvo ศัพท์องค์ประกอบในชุดหน่วย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sostav.Kolichestvo bir birim sette kompozisyon isimlendirme</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Sostav.Kolichestvo bir birlik to'siq tarkibi nomenklatura</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Sostav.Kolichestvo danh pháp các thành phần trong một bộ phận</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Sostav.Kolichestvo таркиби дар маҷмӯи воҳиди Номгўи</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>Sostav.Kolichestvo命名的组成单元集</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Sostav.Kolichestvo имени составной набор блок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Состав.НоменклатураСостава</dataPath>
+			<field>Состав.НоменклатураСостава</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав.Номенклатура состава</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Sostav.Nomenklatura composition</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Состав.Номенклатура складу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Sostav.Nomenklatura կազմը</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>تكوين Sostav.Nomenklatura</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Sostav.Nomenklatura tərkibi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Sostav.Nomenklatura състав</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Sostav.Nomenklatura склад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Sostav.Nomenklatura složení</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Sostav.Nomenklatura Zusammensetzung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Sostav.Nomenklatura koosseisu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Composition Sostav.Nomenklatura</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>הרכב Sostav.Nomenklatura</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>Sostav.Nomenklatura रचना</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Sostav.Nomenklatura összetétele</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Composizione Sostav.Nomenklatura</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>Sostav.Nomenklatura組成</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>Sostav.Nomenklatura შემადგენლობა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Sostav.Nomenklatura құрамы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>Sostav.Nomenklatura 조성</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Sostav.Nomenklatura sudėtis</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Sostav.Nomenklatura sastāvs</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Skład Sostav.Nomenklatura</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Compoziție Sostav.Nomenklatura</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Sostav.Nomenklatura zloženie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>องค์ประกอบ Sostav.Nomenklatura</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sostav.Nomenklatura kompozisyon</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Sostav.Nomenklatura tarkibi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Sostav.Nomenklatura thành phần</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Таркиби Sostav.Nomenklatura</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>Sostav.Nomenklatura组成</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Sostav.Nomenklatura состав</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоНабор</dataPath>
+			<field>ЭтоНабор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это набор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>This is a set</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Це набір</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Սա շարք</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>هذا هو مجموعة</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Bu dəsti</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Това е набор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Гэта набор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Jedná se o sadu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Dies ist ein Satz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>See on komplekt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Ceci est un ensemble</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>זוהי קבוצה</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>यह एक सेट है</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Ez egy sor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Questo è un set</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>これがセットされ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ეს არის კომპლექტი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Бұл жиынтығы болып табылады</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>이 세트입니다</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Tai yra rinkinys</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Tas ir komplekts</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Jest to zestaw</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Acesta este un set</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Jedná sa o sadu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>นี้เป็นชุด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bu bir dizi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Bu, bir qator</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đây là một tập hợp</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Ин маҷмӯи аст</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>这是一套</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Это</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеДляПечати</dataPath>
+			<field>НаименованиеДляПечати</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование для печати</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Name Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Найменування для друку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Անունը Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>اسم طباعة</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Adı Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Име Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Імя для друку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Jméno Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Name Drucken</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Nimi Prindi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Nom Imprimer</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>הדפסה שם</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>नाम प्रिंट</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Név Nyomtatás</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Nome Stampa</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>名前を印刷</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>სახელი Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Аты Басып шығару</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>이름 인쇄</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Vardas Spausdinti</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Name Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nazwa Drukuj</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Nume Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Meno Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ชื่อพิมพ์</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>İsim Yazdırma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Ism Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Tên Print</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Номи Чоп</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>名称打印</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Имя для печати</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковкаИлиФорма</dataPath>
+			<field>УпаковкаИлиФорма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковка или форма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Packing or shape</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Упаковка або форма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Փաթեթավորում եւ ձեւը</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>التعبئة أو شكل</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Qablaşdırma və ya forma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Опаковка или форма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Ўпакоўка або форма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Balení nebo tvar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verpackung oder Form</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Pakend või kuju</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Emballage ou la forme</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>אריזה או צורה</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>पैकिंग या आकार</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Csomagolás vagy a forma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Imballaggio o la forma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>包装や形状</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>შეფუთვა და ფორმის</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Қаптамасы немесе пішіні</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>포장 또는 모양</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Pakavimo ar formos</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Iepakošanas vai forma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Pakowanie lub kształt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Ambalare sau forma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Balenie alebo tvar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>การบรรจุหรือรูปร่าง</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Ambalaj veya şekil</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Paket yoki shakli</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đóng gói hoặc hình dạng</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Борбандӣ ё шакли</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>包装或形状</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Упаковка или форма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланкаКоличестваДляЛьготнойЦены</dataPath>
+			<field>ПланкаКоличестваДляЛьготнойЦены</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планка количества для льготной цены</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Planck amounts to preferential rates</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Планка кількості для пільгової ціни</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Պլանկի կազմում է արտոնյալ դրույքաչափերով</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>بلانك تبلغ أسعار تفضيلية</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Planck güzəştli dərəcələri edib</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Планк възлиза на преференциални цени</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Планка складае льготных стаўках</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>Planck činí preferenčních sazeb</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Planck beträgt Vorzugspreisen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Planck ulatub soodusmäära</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Planck revient à des tarifs préférentiels</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>פלאנק מסתכם בשיעורים מועדפים</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>प्लैंक तरजीही दरों के बराबर है</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>Planck összege kedvezményes</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Planck è pari a tariffe preferenziali</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>プランクは、優遇金利に達します</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>პლანკის შეადგენს შეღავათების</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Планк жеңілдікті ставкалар құрайды</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>플랑크는 우대 요금 금액</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Planko sudaro lengvatines palūkanas</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Planck sasniedz izdevīgākām likmēm</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Plancka wynosi preferencyjnych stawek</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Planck se ridică la tarife preferențiale</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>Planck činí preferenčných sadzieb</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>Planck จำนวนอัตราพิเศษ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Planck tercihli oranlar tutarı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>Plank imtiyozli stavkalar tashkil</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Planck số tiền lãi suất ưu đãi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Планк баробар ба сатҳи имтиёзнок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>普朗克达优惠利率</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>Пранг Дакота основная ставка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроСоставНабора</dataPath>
+			<field>ПроСоставНабора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Про состав набора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>Օգտվողի աղջիկների</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ar</v8:lang>
+					<v8:content>حول هذه المجموعة</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Dəsti haqqında</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>За комплекта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Аб камплекце</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>cs</v8:lang>
+					<v8:content>O kitu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Über dem Kit</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>About the kit</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Umbes komplekt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>A propos de la trousse</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>he</v8:lang>
+					<v8:content>על הערכה</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hi</v8:lang>
+					<v8:content>किट के बारे में</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>About the kit</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Circa il kit</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ja</v8:lang>
+					<v8:content>キットについて</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მომხმარებლის ნაკრები</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Жинағы туралы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ko</v8:lang>
+					<v8:content>키트 소개</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Apie komplektas</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Par komplektu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>O zestawie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Despre kitul</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sk</v8:lang>
+					<v8:content>O kitu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เกี่ยวกับชุด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kit Hakkında</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Про склад набору</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uz</v8:lang>
+					<v8:content>To'plam haqida</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Về bộ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>yg</v8:lang>
+					<v8:content>Дар бораи маҷмӯаи</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>关于套件</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zz</v8:lang>
+					<v8:content>О Kit</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Комплектации.Период,
+	Комплектации.Регистратор,
+	Комплектации.НомерСтроки,
+	Комплектации.Сумма КАК Сумма,
+	Комплектации.МоментВремени,
+	Комплектации.Количество КАК Количество,
+	Комплектации.Номенклатура,
+	ВЫБОР
+		КОГДА Комплектации.Сумма &gt; 0
+			ТОГДА Комплектации.Сумма
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПроданоСумма,
+	ВЫБОР
+		КОГДА Комплектации.Сумма &lt; 0
+			ТОГДА -Комплектации.Сумма
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВозвратСумма,
+	ВЫБОР
+		КОГДА Комплектации.Количество &gt; 0
+			ТОГДА Комплектации.Количество
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПроданоКоличество,
+	ВЫБОР
+		КОГДА Комплектации.Количество &lt; 0
+			ТОГДА -Комплектации.Количество
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВозвратКоличество,
+	Комплектации.Номенклатура.Производитель КАК Производитель,
+	Комплектации.Номенклатура.ЭтоНабор КАК ЭтоНабор,
+	Комплектации.Номенклатура.ПланкаКоличестваДляЛьготнойЦены КАК ПланкаКоличестваДляЛьготнойЦены,
+	Комплектации.Номенклатура.Состав.(
+		Номенклатура КАК НоменклатураСостава,
+		Количество КАК КоличествоНоменклатурыСоставаВЕдиницеНабора
+	) КАК Состав,
+	Комплектации.Номенклатура.НаименованиеДляПечати КАК НаименованиеДляПечати,
+	Комплектации.Номенклатура.УпаковкаИлиФорма КАК УпаковкаИлиФорма,
+	Комплектации.Номенклатура.ПроСостав КАК ПроСоставНабора
+ИЗ
+	РегистрНакопления.Комплектации КАК Комплектации
+ГДЕ
+	Комплектации.Период &gt;= &amp;ДатаНачала
+	И Комплектации.Период &lt;= КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ)
+	И (НЕ &amp;ОтборПоНоменклатуре
+			ИЛИ Комплектации.Номенклатура = &amp;Номенклатура)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВозвратКоличество</dataPath>
+		<expression>Сумма(ВозвратКоличество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВозвратСумма</dataPath>
+		<expression>Сумма(ВозвратСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроданоКоличество</dataPath>
+		<expression>Сумма(ПроданоКоличество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроданоСумма</dataPath>
+		<expression>Сумма(ПроданоСумма)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>start date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>дата початку</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>մեկնարկի ամսաթիվ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>تاريخ البدء</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>başlanğıc tarixi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>начална дата</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>дата пачатку</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>Datum zahájení</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Anfangsdatum</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>Algus kuupäev</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>date de début</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>תאריך התחלה</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>आरंभ करने की तिथि</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>kezdési időpont</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>data d'inizio</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>開始日</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>დაწყების თარიღი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>басталатын күн</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>시작 일</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>pradžios data</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>Sākuma datums</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Data rozpoczęcia</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>data de început</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>dátum začiatku</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>วันที่เริ่ม</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>başlangıç ​​tarihi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>boshlanish sanasi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>ngày bắt đầu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>саршавии Сана</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>开始日期</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>expiration date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>дата закінчення</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>Պիտանիության ժամկետ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>تاريخ إنتهاء الصلاحية</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>son istifadə etmə tarixi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>срок на годност</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>дата заканчэння тэрміну</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>Datum spotřeby</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Ablaufdatum</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>aegumiskuupäev</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>date d'expiration</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>תאריך תפוגה</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>समाप्ति तिथि</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>lejárati dátum</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>data di scadenza</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>有効期限</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>ვადის გასვლის თარიღი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>мерзімнің өту күні</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>만료일</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>galiojimo laikas</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>Beigu datums</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>termin ważności</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>data de expirare</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>dátum spotreby</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>วันหมดอายุ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>Son kullanma tarihi</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>tugash muddati</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>ngày hết hạn</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>муҳлати тамомшави</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>截止日期</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>Крайний срок</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Приход</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Приход</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Parish</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Прихід</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>Եկեղեցական ծուխ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>أبرشية</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>Parish</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>Енория</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>Прыход</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>Parish</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Pfarrbezirk</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>Vald</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>Paroisse</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>פאריש</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>पल्ली</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>Egyházközség</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>Parrocchia</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>パリッシュ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>Parish</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>Келуші</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>교구</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>Parapijos</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>Pagasts</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Parafia</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Parohie</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>Parish</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>ตำบล</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>Kilise</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>Okrug</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Giáo khu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>Даромад</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>教区</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>Приход</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise">d4p1:AccumulationRecordType</v8:Type>
+		</valueType>
+		<value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d3p1:AccumulationRecordType">Receipt</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Номенклатура</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Номенклатура</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Nomenclature</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Номенклатура</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>Նոմենկլատուրա</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>تسمية</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>Nomenklaturası</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>Терминология</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>Намэнклятура</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>Nomenklatura</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Nomenklatur</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>Nomenklatuur</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>La nomenclature</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>מִנוּחַ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>शब्दावली</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>Nómenklatúra</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>Nomenclatura</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>各部の名称</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>ნომენკლატურის</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>Номенклатурасы</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>명명법</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>Nomenklatūra</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>Nomenklatūra</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Nomenklatura</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Nomenclatură</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>Nomenklatúra</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>ศัพท์</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>İsimlendirme</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>Ismlar</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Danh mục này</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>Номгўи</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>命名</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>Имя</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОтборПоНоменклатуре</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор по номенклатуре</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Selection nomenclature</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Відбір за номенклатурою</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>Ընտրություն նոմենկլատուրա</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>اختيار التسميات</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>Seçki nomenklaturası</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>Номенклатура Selection</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>Намэнклятура Выбар</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>Výběr nomenklatura</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Auswahl Nomenklatur</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>Valik nomenklatuuri</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>Nomenclature de sélection</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>מינוח בחירה</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>चयन नामकरण</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>Válogatás nómenklatúra</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>Nomenclatura Selezione</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>選択命名</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>შერჩევა ნომენკლატურა</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>Таңдау номенклатурасы</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>선택 명명법</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>Atrankos nomenklatūra</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>Atlases nomenklatūra</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Nomenklatura wybór</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Nomenclatura de selecție</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>Výber nomenklatúra</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>การเลือกระบบการตั้งชื่อ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>Seçim isimlendirme</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>Tanlash ismlar</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Danh pháp lựa chọn</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>Номгўи интихоб</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>选择命名</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>Выберите имя</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>1. Комплектация по продуктам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>1. Acquisition Product</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>1. Комплектація по продуктах</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>1. Acquisition Product</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>1. اقتناء المنتج</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>1. Alınması Product</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>1. Придобиване на продукта</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>1. Набыццё тавараў</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>1. Pořízení produktů</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>1. Erwerb Produkt</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>1. omandamine Toode</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>1. Acquisition produit</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>מוצרי רכישת 1.</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>1. अधिग्रहण उत्पाद</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>1. Acquisition Termék</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>1. Acquisizione del prodotto</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>1.取得製品</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>1. შეძენა პროდუქტის</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>1. сатып алу Өнім</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>1. 취득 제품</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>1. įsigijimas Prekės</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>1. Acquisition Product</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>1. Nabycie wyrobów</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>1. Achiziționarea de produse</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>1. Obstaranie produktov</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>1. การได้มาซึ่งสินค้า</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>1. Toplama Ürün</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>1. olish Mahsulot</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>1. Mua sản phẩm</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>1. Ба даст овардани маҳсулоти</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>1.采集产品</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>1. Приобретение товаров</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроданоКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроданоСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВозвратКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВозвратСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>УпаковкаИлиФорма</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>InListByHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сумма</dcsset:left>
+					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВозвратСумма</dcsset:left>
+					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Производитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВозвратКоличество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроданоКоличество</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Номенклатура</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВозвратКоличество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВозвратСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроданоКоличество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроданоСумма</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Номенклатура.ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВозвратСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроданоСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Регистратор</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ссылка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>link</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>посилання</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>կապ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>حلقة الوصل</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>əlaqə</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>връзка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>спасылка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>internetový odkaz</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Link</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>link</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>lien</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>קישור</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>लिंक</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>link</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>collegamento</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>リンク</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ბმული</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>байланыс</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>링크</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ryšys</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>saite</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>powiązanie</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>legătură</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>odkaz</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ลิงค์</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>bağlantı</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>aloqa</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>liên kết</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>пайванд</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>链接</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>Ссылка</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комплектация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Equipment</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Комплектація</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>am</v8:lang>
+							<v8:content>Սարքավորում</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ar</v8:lang>
+							<v8:content>معدات</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Avadanlıq</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Оборудване</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Абсталяванне</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>cs</v8:lang>
+							<v8:content>Vybavení</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Ausrüstung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>et</v8:lang>
+							<v8:content>Varustus</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>fr</v8:lang>
+							<v8:content>Équipement</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>he</v8:lang>
+							<v8:content>ציוד</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hi</v8:lang>
+							<v8:content>उपकरण</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hu</v8:lang>
+							<v8:content>Berendezések</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>it</v8:lang>
+							<v8:content>Attrezzatura</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ja</v8:lang>
+							<v8:content>機器</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>ტექნიკა</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Жабдық</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ko</v8:lang>
+							<v8:content>장비</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lt</v8:lang>
+							<v8:content>Įranga</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lv</v8:lang>
+							<v8:content>Iespējas</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Sprzęt</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Echipament</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sk</v8:lang>
+							<v8:content>Vybavenie</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>อุปกรณ์</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Ekipman</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uz</v8:lang>
+							<v8:content>Uskunalar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>vi</v8:lang>
+							<v8:content>Trang thiết bị</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>yg</v8:lang>
+							<v8:content>Таҷҳизот</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>设备</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zz</v8:lang>
+							<v8:content>Оборудование</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Hierarchy</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>Подряд</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>2. Операции подряд</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>2. Operations in a row</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>2. Операції поспіль</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>am</v8:lang>
+				<v8:content>2. Operations անընդմեջ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ar</v8:lang>
+				<v8:content>2. العمليات في صف واحد</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>az</v8:lang>
+				<v8:content>Bir sıra 2. Operations</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>2. Операциите в един ред</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>2. Аперацыі запар</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>cs</v8:lang>
+				<v8:content>2. Operace v řadě</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>2. Operationen in einer Reihe</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>et</v8:lang>
+				<v8:content>2. Operatsioonide järjest</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>fr</v8:lang>
+				<v8:content>2. Les opérations d'affilée</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>he</v8:lang>
+				<v8:content>2. תפעול ברציפות</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hi</v8:lang>
+				<v8:content>एक पंक्ति में 2. संचालन</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>hu</v8:lang>
+				<v8:content>2. Műveletek egy sorban</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>it</v8:lang>
+				<v8:content>2. Le operazioni di fila</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ja</v8:lang>
+				<v8:content>行の2.事業</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>2. ოპერაციების in a row</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>Қатарынан 2. операциялар</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ko</v8:lang>
+				<v8:content>행 2. 작업</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lt</v8:lang>
+				<v8:content>2. Operacijos iš eilės</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>lv</v8:lang>
+				<v8:content>2. Darbības pēc kārtas</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>2. Operacje z rzędu</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>2. Operațiuni într-un rând</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>sk</v8:lang>
+				<v8:content>2. Operácie v rade</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>2. การดำเนินงานในแถว</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>tr</v8:lang>
+				<v8:content>Arka arkaya 2. Operasyon</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uz</v8:lang>
+				<v8:content>Ketma-ket 2. Operatsion</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>2. Hoạt động trong một hàng</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>yg</v8:lang>
+				<v8:content>2. Амалиёт дар як саф</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>2.操作在一排</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zz</v8:lang>
+				<v8:content>2. Эксплуатация подряд</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроданоКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроданоСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВозвратКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВозвратСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>УпаковкаИлиФорма</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>InListByHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сумма</dcsset:left>
+					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВозвратСумма</dcsset:left>
+					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Производитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>НомерСтроки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВозвратКоличество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроданоКоличество</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=12</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Номенклатура</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВозвратКоличество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВозвратСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроданоКоличество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроданоСумма</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Номенклатура.ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВозвратСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроданоСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Регистратор</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ссылка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>link</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>посилання</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>am</v8:lang>
+									<v8:content>կապ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ar</v8:lang>
+									<v8:content>حلقة الوصل</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>əlaqə</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>връзка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>спасылка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>cs</v8:lang>
+									<v8:content>internetový odkaz</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Link</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>et</v8:lang>
+									<v8:content>link</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>fr</v8:lang>
+									<v8:content>lien</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>he</v8:lang>
+									<v8:content>קישור</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hi</v8:lang>
+									<v8:content>लिंक</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>hu</v8:lang>
+									<v8:content>link</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>it</v8:lang>
+									<v8:content>collegamento</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ja</v8:lang>
+									<v8:content>リンク</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ბმული</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>байланыс</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ko</v8:lang>
+									<v8:content>링크</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lt</v8:lang>
+									<v8:content>ryšys</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>lv</v8:lang>
+									<v8:content>saite</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>powiązanie</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>legătură</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sk</v8:lang>
+									<v8:content>odkaz</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ลิงค์</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>bağlantı</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uz</v8:lang>
+									<v8:content>aloqa</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>vi</v8:lang>
+									<v8:content>liên kết</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>yg</v8:lang>
+									<v8:content>пайванд</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>链接</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zz</v8:lang>
+									<v8:content>Ссылка</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комплектация подряд</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Options Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Комплектація поспіль</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>am</v8:lang>
+							<v8:content>Ընտրանքներ շերտագիծ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ar</v8:lang>
+							<v8:content>خيارات الإنتصارات</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Seçimlər Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Опции Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Опцыі запар</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>cs</v8:lang>
+							<v8:content>Možnosti Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Optionen Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>et</v8:lang>
+							<v8:content>Valikud Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>fr</v8:lang>
+							<v8:content>Options de Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>he</v8:lang>
+							<v8:content>Streak אפשרויות</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hi</v8:lang>
+							<v8:content>विकल्प स्ट्रीक</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>hu</v8:lang>
+							<v8:content>Opciók Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>it</v8:lang>
+							<v8:content>Opzioni Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ja</v8:lang>
+							<v8:content>オプションのストリーク</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>პარამეტრები Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Опциялар Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ko</v8:lang>
+							<v8:content>옵션 행진</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lt</v8:lang>
+							<v8:content>Nustatymai serija</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>lv</v8:lang>
+							<v8:content>Iespējas Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Seria Opcje</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Opțiuni Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sk</v8:lang>
+							<v8:content>Možnosti Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ตัวเลือกริ้ว</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Seçenekler Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uz</v8:lang>
+							<v8:content>Options Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>vi</v8:lang>
+							<v8:content>Tùy chọn Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>yg</v8:lang>
+							<v8:content>Имконоти Streak</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>选项​​条纹</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zz</v8:lang>
+							<v8:content>Опции полосы</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

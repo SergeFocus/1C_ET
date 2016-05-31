@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17126"></meta><style>
+
+
+A {text-decoration: none}</style></head><body>
+<p><font size="3"><strong>Referenčná zákazníci</strong></font></p>
+<p><img src="CommonPicture.СправочникКлиенты"></img><strong><font size="3"></font></strong><font size="2"> Určené pre podanie klientov. Použite v prípade, </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">vrátane začlenenia zákazníkov</font></a><font size="2">,</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Poskytuje preddefinované klient "súkromné ​​osoby" pre registráciu neosobných údajov o predaji. To znamená, že pre tie, ktoré nie je potrebné sledovať dlhu. To môže byť premenovaný.</font></p>
+<p><font size="2">Adresárovej štruktúry. To znamená, že môžete klienti skupiny.</font></p></blockquote>
+<p><font size="2">Potreby:</font></p>
+<p><strong><a href="Catalog.ВидыЦен/Help"><font size="2">Typ Cena</font></a></strong><font size="2"> (ak </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Vrátane posistema</font></a><font size="2"> Komplexný mechanizmus vzhľadom k cene) určuje typ predvolené cien v </font><a href="Document.РасходыТовара/Help"><font size="2">implementácia</font></a><font size="2"> Klient Item. Typ Cena možno priradiť rovnaké pre všetky skupiny zákazníkov.</font></p>
+<p><strong><a href="Catalog.Регионы/Help"><font size="2">Area</font></a></strong><font size="2"> (ak </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">vrátane účtovníctva</font></a><font size="2"> Regióny) určuje umiestnenie klienta. Na tomto základe, môžete skupinové klientov v správach.</font></p>
+<p><font size="2"><strong>Percentuálnej zľavy</strong> - (<a href="CommonForm.НастройкиБазыДанных/Help">ak sú obsiahnuté</a> Účtovný zľavy) zavádza osobné zľavu pre klienta. Ak sa o rovnaké percento, potom predaj </font><a href="Catalog.Номенклатура/Help"><font size="2">názvoslovie</font></a><font size="2">V karte čo tiež naznačuje, diskontné sadzby, program vyberie najvyššie percentuálne zľavy. Percentuálnej zľavy môže byť zaradené do skupín klientov.</font></p>
+<p><font size="2"><strong>Adresa</strong>,<strong>Telefón</strong>,<strong>Okpo</strong>,<strong>Právny status</strong>,<strong>E-mail, údaje o bezhotovostné platby</strong> - Ďalšie informácie o zákazníkovi.</font></p>
+<p><strong><a href="Catalog.Склады/Help"><font size="2">Sklad</font></a><font size="2"> zákazník</font></strong><font size="2"></font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2"> Ak je subsystém</font></a><font size="2">  "Účtovanie o akcie," umožňuje zadať predvolený úložisko pre klienta. V tomto prípade je výber dokumentov Klienta, sklad bude automaticky nainštalovaný.</font></p>
+<p><font size="2"><strong>Textové popisky Formula</strong> (ak </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">používajú vzorce</font></a><font size="2">) Definuje jedinečný vzorec pre vytvorenie textu na štítku pri tlači etikiet pre zákazníka. Tieto vzorce sú uložené v </font><a href="Catalog.ФормулыОписания/Help"><font size="2">Referenčná vzorca</font></a><font size="2">, Napríklad, ak </font><a href="Document.РасходыТовара/Help"><font size="2">Dokument "tok tovaru"</font></a><font size="2"> Nastaviť klienta s jeho vzorcom textové popisky, pri volaní </font><a href="DataProcessor.ПечатьЭтикетки/Help"><font size="2">podprogram tlač etikiet </font></a><font size="2">tlačiareň štítok s textom generované týmto vzorcom. Ak text vzorec štítky klient nie je naplnený, ale </font><a href="Catalog.Склады/Help"><font size="2">použitých účtovných sklady</font></a><font size="2"> a vzorec pre plné </font><a href="Catalog.Склады/Help"><font size="2">Warehouse</font></a><font size="2"> implementácia, bude použitá. Posledné, čo je použiť základný vzorec pre vytvorenie textu štítku </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">nastavenie programu</font></a><font size="2">, Ak nie je naplnený, a potom bol štítok sa bude rovnať texte </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">Barcode</font></a><font size="2"></font><a href="Catalog.Номенклатура/Help"><font size="2"> názvoslovie</font></a><font size="2">,</font></p>
+<p align="justify"><font size="2">Príklad formula textové popisky:</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p class="SourceCode"><em><font size="2"><font color="#413003">SokrLP (Int (Price) + 1) + "" + Leo (Nomenklatura.NomenklaturnayaGruppa.Kod, 2) + Leo (Nomenklatura.Proizvoditel.Kod, 2) + "x" + Format (VAT, "CC = 9; CHDTS = 0 ")</font></font></em></p>
+<p class="SourceCode"><font size="2"> Vzorca by mal byť napísaný v programovacom jazyku 1C.</font></p></blockquote>
+<p><font size="2"><strong>Meno Print</strong> - Text, ktorý sa zobrazí v "Klient" pri tlači dokumentov z programu. Tento text sa môže líšiť od obvyklých meno klienta. Napríklad, meno klienta v adresári - Sail, sro, a jeho meno pre tlač - LLC "Sail", Odesa, Malaya Arnautskaya 9.</font></p>
+<p><strong><font size="2">Domov </font><a href="Catalog.Валюты/Help"><font size="2">Mena</font></a></strong><font size="2"> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">ak sú obsiahnuté</font></a><font size="2"> Účtovanie kurzových rozdielov) je nastavený na dokumenty vo výbere klienta automaticky nadviaže určitej mene.</font></p>
+<p><font size="2"><strong>Vlastní zamestnanci</strong> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">ak sú obsiahnuté</font></a><font size="2"> mzdové účtovníctvo), môže byť klient. Takých klientov sú generované automaticky, keď zadáte informácie </font><a href="Catalog.Сотрудники/Help"><font size="2">zamestnanci</font></a><font size="2">, To je nevyhnutné, aby zamestnancom zľavy na nákup tovaru a zohľadniť osady so zákazníkom na </font><a href="Document.ДвиженияДенег/Help"><font size="2">mzdy</font></a><font size="2"> zamestnancov. </font></p>
+<p><font size="2">Pre skupinu klientov, môžete nastaviť percento provízie. Bude fungovať, ak použijete percento <a href="Catalog.Договора/Help">Zmluva</a> s klientom.</font></p>
+<p><font size="2"></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2"> Všimnite si, že ak program viesť záznamy o zákazníkoch, ale nepovedie </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Účet peňazí</font></a><font size="2">, V analýze </font><a href="Report.РасчетыСКлиентами/Help"><font size="2">správa, "Pohľadávky"</font></a><font size="2"> obrázok bude vyzerať jednostranný. Ako by bol tovar realizovaný, ale nie hradí klient, pretože nie je možnosť registrácie v programe <a href="Document.ДвиженияДенег/Help">Platby od zákazníkov</a> s vypnutým registrovaným peniazmi.</font></p>
+<p><font size="2">Ak je potrebné na vyrovnanie dlhu medzi klientom a / alebo <a href="Catalog.Поставщики/Help">Poskytovatelia</a> s prihliadnutím na účtenky / odliv peňazí, mali by ste použiť špeciálne formu úprav "<a href="Document.КорректировкиИРегистрацияОстатков/Help">Kompenzácia dlhu protistrany</a>".</font></p>
+<p><font size="2">Dodávatelia - všeobecný názov pre zákazníkov a dodávateľmi.</font></p></blockquote><font size="2">
+<p></p>
+<p></p>
+<p><font size="2">
+<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" face="Calibri"><em>ELEMENTARY TRADE</em></font></a><font face="Calibri"><em>, 2013-2014</em></font>
+<dl><dt><pre><font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img></font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">   sza@ukr.net</font></a><font face="Calibri"></font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri"> http://www.ELTR.od.ua</font></a></pre></dt></dl></font>
+</p><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p></font></body></html>

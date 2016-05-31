@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17126"></meta><style>
+
+
+A {text-decoration: none}</style></head><body>
+<p><font size="3"><strong>Referans Müşteriler</strong></font></p>
+<p><img src="CommonPicture.СправочникКлиенты"></img><strong><font size="3"></font></strong><font size="2"> Müşterilerine dosyalama için tasarlanmıştır. Eğer kullanın </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">müşterilerinin entegrasyonu da dahil olmak üzere</font></a><font size="2">.</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Satış olmayan kişisel verilerin kayıt için önceden tanımlanmış Client "Özel kişi" sunar. O hangi borç takip etmek için gerek yok, olduğunu. Bu yeniden adlandırılabilir.</font></p>
+<p><font size="2">Dizin hiyerarşisi. Yani yapabilirsiniz grup müşteriler vardır.</font></p></blockquote>
+<p><font size="2">Koşul:</font></p>
+<p><strong><a href="Catalog.ВидыЦен/Help"><font size="2">Tipi Fiyat</font></a></strong><font size="2"> (Eğer </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Birlikte verilen posistema</font></a><font size="2"> ) Fiyat dikkate alınarak Kompleks mekanizma varsayılan fiyatlarının türünü de belirler </font><a href="Document.РасходыТовара/Help"><font size="2">uygulama</font></a><font size="2"> Ürün istemcisi. Fiyat türü tüm müşteri grupları için aynı atanabilir.</font></p>
+<p><strong><a href="Catalog.Регионы/Help"><font size="2">Alan</font></a></strong><font size="2"> (Eğer </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">dahil muhasebe</font></a><font size="2"> Bölgeler) İşverenin konumunu belirler. Bu temelde, sen raporlarda grup müşterilerine yapabilirsiniz.</font></p>
+<p><font size="2"><strong>Yüzde indirim</strong> - (<a href="CommonForm.НастройкиБазыДанных/Help">Dahil eğer</a> Muhasebe indirimler) Müşteri için kişisel bir indirim kurar. Aynı oranda, sonra satış </font><a href="Catalog.Номенклатура/Help"><font size="2">terminoloji</font></a><font size="2">Ayrıca iskonto oranı gösterir karta, program en yüksek oran indirimleri seçer. Yüzde indirim müşterilerin gruplara atanabilir.</font></p>
+<p><font size="2"><strong>Adres</strong>.<strong>Telefon</strong>.<strong>Okpo</strong>.<strong>Hukuki durum</strong>.<strong>E-posta, nakitsiz ödeme ayrıntıları</strong> - Müşteri hakkında ek bilgi.</font></p>
+<p><strong><a href="Catalog.Склады/Help"><font size="2">Hisse senedi</font></a><font size="2"> müşteri</font></strong><font size="2"></font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2"> Ne zaman alt</font></a><font size="2">  "Stokta Muhasebesi," istemci için varsayılan depolama belirlemenizi sağlar. Bu durumda, Müşteri belgelerin seçimi, depo otomatik olarak kurulacaktır.</font></p>
+<p><font size="2"><strong>Formula metin etiketleri</strong> (Eğer </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">formülü kullanabilirsiniz</font></a><font size="2">) Eğer müşteri için etiket yazdırabilirsiniz etiket üzerinde metnin oluşumu için benzersiz bir formülü tanımlar. Bu tür formüller saklanır </font><a href="Catalog.ФормулыОписания/Help"><font size="2">Referans Formüller</font></a><font size="2">. Örneğin, </font><a href="Document.РасходыТовара/Help"><font size="2">Belge "Malların akışı"</font></a><font size="2"> Aradığınızda metin etiketleri onun formülü ile müşteri Set </font><a href="DataProcessor.ПечатьЭтикетки/Help"><font size="2">altprogram etiket baskı </font></a><font size="2">Yazıcı bu formül ile üretilen metin ile etiketleyecektir. Formül metin etiketleri, istemci dolu değil, </font><a href="Catalog.Склады/Help"><font size="2">Kullanılan muhasebe depoları</font></a><font size="2"> ve tam bir formül </font><a href="Catalog.Склады/Help"><font size="2">Depo</font></a><font size="2"> Uygulama, bu kullanılacaktır. Son şey etiket metninin oluşturulması için temel formülü kullanmaktır </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">program ayarları</font></a><font size="2">. O zaman doldurulur ve değilse metin etiketi metin eşit olacaktır </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">Barkod</font></a><font size="2"></font><a href="Catalog.Номенклатура/Help"><font size="2"> terminoloji</font></a><font size="2">.</font></p>
+<p align="justify"><font size="2">Örnek formülü metin etiketleri:</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p class="SourceCode"><em><font size="2"><font color="#413003">SokrLP (Int (Fiyat) + 1) + "" + Aslan (Nomenklatura.NomenklaturnayaGruppa.Kod, 2) + Aslan (Nomenklatura.Proizvoditel.Kod, 2) + "x" + Biçimi (KDV, "CC = 9; CHDTS = 0 ")</font></font></em></p>
+<p class="SourceCode"><font size="2"> Formüller bir programlama dili 1C yazılmalıdır.</font></p></blockquote>
+<p><font size="2"><strong>İsim Yazdırma</strong> - Programın belgeleri yazdırırken metin "Client" görüntülenecek. Bu metin müşterinin her zamanki isminden farklı olabilir. Örneğin, dizindeki Müşteri adı - Yelken, Ltd., ve baskı için adını - LLC "Sail", Odessa, Malaya Arnautskaya 9.</font></p>
+<p><strong><font size="2">Ev </font><a href="Catalog.Валюты/Help"><font size="2">Para</font></a></strong><font size="2"> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Dahil eğer</font></a><font size="2"> ) Para için Muhasebe müşteri seçiminde belgeler için ayarlanmış otomatik olarak belirli bir para birimi kurar.</font></p>
+<p><font size="2"><strong>Kendi personel</strong> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Dahil eğer</font></a><font size="2"> bordro muhasebesi) bir istemci olabilir. Eğer bilgilerinizi girin Böyle Müşteriler otomatik olarak oluşturulur </font><a href="Catalog.Сотрудники/Help"><font size="2">personel</font></a><font size="2">. Sipariş müşteriye de sahip yerleşim mal satın çalışanlara indirim vermek ve dikkate almak için bu gereklidir </font><a href="Document.ДвиженияДенег/Help"><font size="2">bordro</font></a><font size="2"> Çalışanların. </font></p>
+<p><font size="2">Istemciler bir grup için, komisyon ücretleri yüzdesini ayarlayabilirsiniz. Eğer bir yüzdesini kullanmadığınız sürece O çalışacak <a href="Catalog.Договора/Help">Anlaşma</a> Müşteri ile.</font></p>
+<p><font size="2"></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2"> Program kurşun müşterilerinin kayıtlarını tutmak değil, eğer unutmayın </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Hesap para</font></a><font size="2">Analizde </font><a href="Report.РасчетыСКлиентами/Help"><font size="2">Raporda, "Alacak"</font></a><font size="2"> resim tek taraflı bakacağız. Programda kayıt imkanı yoktur gibi mal, müşteri tarafından ödenen uygulamaya değil, sanki <a href="Document.ДвиженияДенег/Help">Müşterilerden nakit girişleri</a> bağlantısız kayıtlı parayla.</font></p>
+<p><font size="2">O müşteri arasında borç dengelemek için gerekli olduğunda ve / veya <a href="Catalog.Поставщики/Help">Sağlayıcılar</a> dikkate para makbuzu / çıkış alarak, siz "ayarlamaları özel bir formu kullanmalısınız<a href="Document.КорректировкиИРегистрацияОстатков/Help">Borç counterparties netleştirilmesine</a>".</font></p>
+<p><font size="2">Müteahhitler - müşterilerin ve tedarikçilerin genel adıdır.</font></p></blockquote><font size="2">
+<p></p>
+<p></p>
+<p><font size="2">
+<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" face="Calibri"><em>İLKÖĞRETİM TİCARET</em></font></a><font face="Calibri"><em>, 2013-2014</em></font>
+<dl><dt><pre><font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img></font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">   sza@ukr.net</font></a><font face="Calibri"></font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri"> http://www.ELTR.od.ua</font></a></pre></dt></dl></font>
+</p><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p></font></body></html>

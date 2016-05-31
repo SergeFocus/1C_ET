@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17126"></meta><style>
+
+
+A {text-decoration: none}</style></head><body>
+<p><font size="3"><strong>Références clients</strong></font></p>
+<p><img src="CommonPicture.СправочникКлиенты"></img><strong><font size="3"></font></strong><font size="2"> Conçu pour le dépôt des clients. Utilisez si </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">y compris l'intégration des clients</font></a><font size="2">.</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Fournit prédéfini client «personne privée» pour l'enregistrement de données non personnelles sur les ventes. Autrement dit, ceux pour lesquels il n'y a pas besoin de garder une trace de la dette. Il peut être renommé.</font></p>
+<p><font size="2">Hiérarchie Directory. Voilà, vous pouvez regrouper les clients.</font></p></blockquote>
+<p><font size="2">Requis:</font></p>
+<p><strong><a href="Catalog.ВидыЦен/Help"><font size="2">Type Prix</font></a></strong><font size="2"> (si </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">posistema inclus</font></a><font size="2"> Mécanisme complexe vu le prix) détermine le type de prix par défaut à </font><a href="Document.РасходыТовара/Help"><font size="2">Exécution</font></a><font size="2"> Client d'objet. Type de prix peut être attribué le même pour tous les groupes de clients.</font></p>
+<p><strong><a href="Catalog.Регионы/Help"><font size="2">Région</font></a></strong><font size="2"> (si </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">y compris la comptabilité</font></a><font size="2"> Régions) détermine l'emplacement du client. Sur cette base, vous pouvez regrouper les clients dans les rapports.</font></p>
+<p><font size="2"><strong>Les réductions de pourcentage</strong> - (<a href="CommonForm.НастройкиБазыДанных/Help">si inclus</a> Réductions comptables) établit une réduction de personnel pour le client. Si le même pourcentage, puis la vente </font><a href="Catalog.Номенклатура/Help"><font size="2">la nomenclature</font></a><font size="2">Dans la carte qui indique également le taux d'actualisation, le programme sélectionne les réductions de pourcentage plus élevés. Le pourcentage de réduction peut être attribuée à des groupes de clients.</font></p>
+<p><font size="2"><strong>Adresse</strong>.<strong>Téléphone</strong>.<strong>Okpo</strong>.<strong>Statut légal</strong>.<strong>E-mail, les détails de paiement sans numéraire</strong> - Informations complémentaires sur le client.</font></p>
+<p><strong><a href="Catalog.Склады/Help"><font size="2">Stock</font></a><font size="2"> client</font></strong><font size="2"></font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2"> Lorsque le sous-système</font></a><font size="2">  «Comptabilisation du stock," vous permet de spécifier le stockage par défaut pour le client. Dans ce cas, le choix des documents du client, l'entrepôt sera installé automatiquement.</font></p>
+<p><font size="2"><strong>Étiquettes de texte de formule</strong> (si </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">utiliser la formule</font></a><font size="2">) Définit une formule unique pour la formation du texte sur l'étiquette lorsque vous imprimez des étiquettes pour le client. De telles formules sont stockés dans </font><a href="Catalog.ФормулыОписания/Help"><font size="2">Formules de référence</font></a><font size="2">. Par exemple, si </font><a href="Document.РасходыТовара/Help"><font size="2">document «flux de marchandises"</font></a><font size="2"> Réglez client avec sa formule d'étiquettes de texte, lorsque vous appelez </font><a href="DataProcessor.ПечатьЭтикетки/Help"><font size="2">impression d'étiquettes sous-programme </font></a><font size="2">l'imprimante étiquette avec le texte généré par cette formule. Si le texte de la formule étiquettes le client est pas rempli, mais </font><a href="Catalog.Склады/Help"><font size="2">entrepôts de comptabilité utilisé</font></a><font size="2"> et une formule pour le plein </font><a href="Catalog.Склады/Help"><font size="2">Entrepôt</font></a><font size="2"> mise en œuvre, il sera utilisé. La dernière chose est d'utiliser la formule de base pour la formation du texte de l'étiquette </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">les paramètres du programme</font></a><font size="2">. Dans le cas contraire rempli et ensuite l'étiquette de texte sera égal au texte </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">code à barre</font></a><font size="2"></font><a href="Catalog.Номенклатура/Help"><font size="2"> la nomenclature</font></a><font size="2">.</font></p>
+<p align="justify"><font size="2">Exemple Formule étiquettes de texte:</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p class="SourceCode"><em><font size="2"><font color="#413003">SokrLP (Int (Prix) + 1) + "" + Leo (Nomenklatura.NomenklaturnayaGruppa.Kod, 2) + Leo (Nomenklatura.Proizvoditel.Kod, 2) + "x" + Format (TVA, "CC = 9; CHDTS = 0 ")</font></font></em></p>
+<p class="SourceCode"><font size="2"> Formules doivent être rédigés dans un 1C du langage de programmation.</font></p></blockquote>
+<p><font size="2"><strong>Nom Imprimer</strong> - Le texte qui sera affiché dans le «Client» lors de l'impression des documents du programme. Ce texte peut être différent du nom habituel du client. Par exemple, le nom du client dans le répertoire - Voile, Ltd., et son nom pour l'impression - LLC "Voile", Odessa, Malaya Arnautskaya 9.</font></p>
+<p><strong><font size="2">Accueil </font><a href="Catalog.Валюты/Help"><font size="2">Devise</font></a></strong><font size="2"> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">si inclus</font></a><font size="2"> Comptabilisation des devises) est fixé pour les documents dans la sélection du client établit automatiquement une certaine monnaie.</font></p>
+<p><font size="2"><strong>Propre personnel</strong> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">si inclus</font></a><font size="2"> comptabilité de la paie) peut être un client. Ces clients sont générés automatiquement lorsque vous entrez les informations </font><a href="Catalog.Сотрудники/Help"><font size="2">Personnel</font></a><font size="2">. Ceci est nécessaire afin de donner aux employés les réductions sur l'achat de biens et de prendre en compte les colonies avec le client au </font><a href="Document.ДвиженияДенег/Help"><font size="2">paie</font></a><font size="2"> employé. </font></p>
+<p><font size="2">Pour un groupe de clients, vous pouvez définir le pourcentage de frais de commission. Il travaillera sauf si vous utilisez un pourcentage de <a href="Catalog.Договора/Help">Accord</a> avec le client.</font></p>
+<p><font size="2"></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2"> Notez que si le programme de tenir des registres de clients, mais ne conduira pas </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">compte de l'argent</font></a><font size="2">, Dans l'analyse </font><a href="Report.РасчетыСКлиентами/Help"><font size="2">rapport, «Débiteurs»</font></a><font size="2"> l'image sera unilatérale. Comme si les marchandises été mis en œuvre, mais pas payé par le client, car il n'y a pas de possibilité d'inscrire dans le programme <a href="Document.ДвиженияДенег/Help">Rentrées de fonds des clients</a> avec de l'argent enregistré déconnecté.</font></p>
+<p><font size="2">Quand il est nécessaire de compenser la dette entre le client et / ou <a href="Catalog.Поставщики/Help">Fournisseurs</a> en tenant compte de la réception / sorties d'argent, vous devez utiliser un formulaire spécial des ajustements "<a href="Document.КорректировкиИРегистрацияОстатков/Help">Compensation des contreparties de la dette</a>».</font></p>
+<p><font size="2">Entrepreneurs - nom général pour les clients et les fournisseurs.</font></p></blockquote><font size="2">
+<p></p>
+<p></p>
+<p><font size="2">
+<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" face="Calibri"><em>COMMERCE PRIMAIRE</em></font></a><font face="Calibri"><em>, 2013-2014</em></font>
+<dl><dt><pre><font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img></font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">   sza@ukr.net</font></a><font face="Calibri"></font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri"> http://www.ELTR.od.ua</font></a></pre></dt></dl></font>
+</p><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p></font></body></html>

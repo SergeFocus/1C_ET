@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17126"></meta></head><body>
+<h1>기술 저널의 구성 파일 (logcfg.xml)를 설정</h1>
+<dl><dt>이 처리 기술 저널의 구성 파일 (편집하도록 설계<strong>logcfg.xml</strong>).</dt></dl><p class="Important">이 처리의 특징은 생산 로그 북에 기록 된 이벤트의 설정에 파일 포맷에 의해 제공된 기회의 전체 사용하지만, 신속하게 요구의 상당 부분을 커버 구성 파일을 생성 할 수있는 충분한 기회를 제공하는 것을 허용하지 않는다.</p>
+<p>당신이 열 때 프로세스가 기존 구성 파일 기술 로그를 열려고 시도합니다. 파일 검색은 다음과 같은 방식으로 수행된다 :</p>
+<ul><li>디렉토리 <strong>빈 \ conf의</strong>
+ 도 1c의 발사 버전 : 엔터프라이즈 8. 파일이 발견 된 경우에는 - 그것은 처리 및 추가 탐색 prkraschaetsya를 연다. </li><li>파일 목록에서 발견되지 않으면 <strong>빈 \ conf의</strong> 위치 파일 <strong>conf.cfg</strong>,이 파일에 지정된 디렉토리에 파일을 찾기 위해 시도한다. 파일이있는 경우 - 그것은 치료를 엽니 다.</li></ul><p>이 치료로, 당신은 덤프, 메모리 누수 및 공정 변수 잡지의 제어를위한 설정을 지정할 수 있습니다.</p>
+<p>탭 <strong class="ControlElement">기술 로그 설정</strong> 기술 로그를 생성 발라 가능한 설정.</p>
+<p>탭 <strong class="ControlElement">설정은 메모리 누수를 모니터링 덤프</strong> 그것은 매개 변수를 설정할 수있다 :</p>
+<ul><li>
+덤프를 구축; </li><li>
+서버에서 메모리 누수를 해결; </li><li>누출에게 메모리 구성을 수정.</li></ul><p>탭 <strong>기본 및 시스템 이벤트의 기술 저널</strong> 당신은 과학 기술 기본 로그 생성을위한 설정을 구성합니다.</p>
+<p>이것은 템플릿 구성 파일을 형성하는 것도 가능하다.</p>
+<p>이렇게하려면 구성 파일의 필요한 매개 변수를 지정하고 명령을 실행해야합니다 <strong>더 - 템플릿으로 저장 ...</strong> 구성 파일의 이름은 일반적인 구성 파일의 카탈로그에 저장됩니다 <strong>구성 *의 .lct </strong>(* 대신 캐릭터의 템플릿 파일의 일련 번호로 대체 될 것이다).</p>
+<h2>저널의 매개 변수 편집기를 사용하여 작업</h2>
+<p>잡지의 매개 변수 편집기를 사용하여 작업하는 기술을 고려하십시오.</p>
+<h3>저널 기술의 편집기를 설정</h3>
+<p>편집기 위의 매개 변수의 그룹이다 <strong>설정</strong>. 이 그룹에서의 처리 일지, 그 위치 및 저장 기간뿐만 아니라, 편집 작업을보다 편리하게 할 수 있도록 옵션을 실시 할 필요가 주어진다. 그룹은 그것이 스크린 상에 적은 공간을 차지하는 모든 조정 후에, 최소화 될 수있다.</p>
+<p>확인란 <strong>기술 잡지를 형성</strong> 컨트롤은 "기업 1C"기술 로그 시스템을 만들어야합니다. </p>
+<p><strong>위치 기술 잡지</strong> 과 <strong>이력, 클럭의 저장 기간</strong> 위치를 결정하고 얼마나 오래 프로세스가 로그를 저장됩니다.</p>
+<p>설정이 편집 과정을보다 편리하게 할 수 있도록 보조 컨트롤을있는 그룹의 오른쪽에서. 스위치의 그룹 (<strong class="ControlElement">모든 속성</strong>.<strong class="ControlElement">선택된 속성</strong> 과 <strong class="ControlElement">선택한 이벤트의 모든 속성</strong>) 이벤트가 편집기 창에 표시됩니다 결정합니다 :</p>
+<ul><li>
+<div><strong>선택한 이벤트의 모든 속성</strong> - 동적 모드. 이것은 (첫 번째 열에 기록)을 선택 이벤트에 사용할 수있는 속성 만 보여줍니다. 추가 또는 이벤트를 제거 - 디스플레이 등록 정보의 구성에 이르기까지. 무시 표시되지 않은 컬럼에 대한 모든 속성으로 설정 될 수 있다는 사실을 표시 할 때.</div>
+</li><li>
+<div>
+<div><strong>선택된 속성</strong> -이 경우 마크에서 - 적어도 하나의 이벤트 로그 프로세스를 설정하는 속성 만 표시됩니다. 모드는 동적 없습니다.</div></div>
+</li><li>
+<div>
+<div><strong>모든 속성</strong> -이 경우 모든 이벤트 로그 프로세스의 모든 속성을 표시합니다. 모드는 동적 없습니다.</div></div></li></ul><p>당신은 (특정 이벤트의 열에 표시)를 선택하는 방식으로 만 해당 이벤트를 표시하려면, 당신은 플래그를 사용하여 수행 할 수 있습니다 <strong class="ControlElement">만 체크 이벤트</strong>.</p>
+<p>스위치 <strong>설명 표시</strong> 과 <strong>표시 이름</strong> 당신은 방법을 편집기에서 표시 속성 및 이벤트를 제어 할 수 있습니다.</p>
+<dl><dt>
+<div>또한, 현재의 이벤트 형태 otobrazhaemtsya 설명의 바닥 (아티스트 <strong>현재 이벤트</strong>) 그리고 현재의 재산 (그룹 <strong>현재 등록</strong>). 현재 이벤트의 ID 또는 속성이 일치하는 텍스트 뒤의 괄호에 표시됩니다. 예를 들어, 이벤트에 대해 "SQL, 마이크로 소프트 SQL 서버"그룹 헤더는 모양을 <strong>현재 이벤트 (dbmssql)</strong>. 이 보조 정보가 필요하지 않은 경우에는 그룹을 선회, 제거 될 수있다 <strong>추가 정보</strong>.</div></dt></dl><h3>일반 편집 규칙</h3>
+<p>이러한 이벤트의 속성 - 구성 편집기는 행 프로세스 로그에 입력하고, 열의 수있는 이벤트를 제공하는 행렬이다.</p>
+<p>당신이 그들을 클릭하면 흰색 배경과 원 프레임이 세포는 모든 작업을 수행합니다. 기호 "V"모양 - 셀을 클릭하면 표시됩니다. 다시 클릭하면 표시를 제거합니다.</p>
+<p>당신은 열에서 셀의 표시가있는 경우 <strong class="ControlElement">모든 이벤트</strong> 또는이 열의 오른쪽 모든 열은 (이벤트 로그의 공정을 포함한) 현재의 이벤트에서 첫번째 셀의 표시와 동시에 수행된다. 마크의 제거 등의 기능을 가지고 있지 않습니다.</p>
+<p>(하는 속성이 정의 된) 모든 이벤트에 대해 속성을 표시하면 상황에 맞는 메뉴를 사용하여 수행됩니다 <strong class="ControlElement">모든 이벤트에 대해 사용</strong>. 컨텍스트 메뉴 명령을 사용합니다 선택 해제하려면 <strong class="ControlElement">모든 이벤트에 대해 해제</strong>선택한 속성에 컬럼의 줄을 서.</p>
+<p>당신이 이벤트에 조건을 할당 할 경우, 이것은 상황에 맞는 메뉴를 사용하여 수행되어야한다 <strong class="ControlElement">이벤트에 대한 조건 ...</strong>선택한 이벤트의 열의한다. 조건이 설정되면, 마크 형태 "를 취득한<strong>V</strong>"편집기 환경의 모든 이벤트를 삭제해야하거나 이벤트에 대한 조건을 제거하거나 컨텍스트 메뉴 명령을 사용합니다. (굵은 글씨로 표시된) <strong class="ControlElement">이벤트 필터를 청소</strong>. 이 마크는 남아 있지만, 대담한 디자인을 잃게됩니다.</p>
+<p>당신은 이벤트 속성에 조건을 지정하려면,이는 상황에 맞는 메뉴를 사용하여 수행되어야한다 <strong class="ControlElement">재산의 조건 ...</strong>편집 할 수있는 셀 (흰색 배경 및 프레임)에있다. 조건이 설정되면, 마크 형태 "를 취득한<strong>V</strong>"편집기 환경의 모든 이벤트를 삭제해야하거나 이벤트에 대한 조건을 제거하거나 컨텍스트 메뉴 명령을 사용합니다. (굵은 글씨로 표시된) <strong class="ControlElement">필터 속성을 청소</strong>. 이 마크는 남아 있지만, 대담한 디자인을 잃게됩니다.</p>
+<p>당신은 모든 속성 설정 및 이벤트 로그 프로세스를 취소 할 경우, 상황에 맞는 메뉴 명령 편집기를 선택 <strong>기술 로그 지우기 매개 변수</strong>. 예,이 잡지는 모든 이벤트에 대한 모든 속성의 등록 설정됩니다. 기술 로그 (수명 및 기술 로그 디렉토리의 방법이 변경되지 않습니다) 다른 매개 변수가 없습니다.</p>
+<h3>패턴과 사용</h3>
+<p>전형적인 경우에 설정 파일의 생성을 단순화하기 위해, 구성 파일 에디터 빠르게 설정 설정 파일을 할 수있는 기술 로그 템플릿의 수 (미리 설정 파일)을 포함한다. 템플릿을 사용하려면, 명령을 선택 <strong>템플릿 ...</strong> 대화 상자에서 원하는 템플릿을 선택합니다.</p>
+<p>또한, 템플릿을 구성 파일을 생성 할 수있는 기회가있다. 이렇게하려면, (모두 탭에서 필요한 매개 변수를 설정<font color="#000040"><strong>기술 로그 설정</strong> 과 <strong>설정은 메모리 누수를 모니터링 덤프</strong></font>) 그리고 선택 <strong>모든 행동은 - 템플릿으로 저장 ...</strong> 템플릿을 지정한 후, 템플릿 파일은 카탈로그 시스템 구성 파일에 저장됩니다.</p>
+<p>템플릿을 선택하면 그 다음, 이러한 템플릿은 선택 상자에서 사용할 수 <strong>템플릿 ...</strong></p>
+<dl><dt>
+<h3>기술 잡지 편집자의 매개 변수의 일반적인 작업</h3></dt></dl><p>모든 이벤트와 이벤트의 모든 속성을 기록 기술에 포함 할 경우, 이벤트에 대한 "모든 이벤트"와 속성 "모든 속성"마크를 설정합니다. 파일 <strong>logcfg.xml</strong> 다음 텍스트를 가져옵니다</p><pre class="SyntaxDescription">&amp; LT; 이벤트한다<br> &amp; LT; NE 속성 = "이름"값 = ""/한다<br>&amp; LT; / 이벤트한다<br>&amp; LT; 속성 이름 = "모든"/한다<br></pre>
+<p>당신이 파일을하려면 항상 디자인을 가져옵니다 <strong>&amp; LT; 속성 이름 = "모든"/한다</strong>그것은 속성이 발견되었습니다 필요가있다, (이벤트 자체를 포함하지 않음) 이벤트에 대한 "모든 속성", "모든 이벤트".</p>
+<p>당신이 기술에 포함 속성의 모든 이벤트를 기록 할 경우, 선택한 속성 앞에있는 최초의 열을)주의 할 필요가있다. 예를 들어, 라벨 "은 마이크로 소프트 SQL 서버"속성에 직면하는 경우, 파일 <strong>logcfg.xml</strong> 다음을 얻을 :</p><pre class="SyntaxDescription">&amp; LT; 이벤트한다<br> &amp; LT; EQ 속성 = "이름"값 = "dbmssql"/한다<br>&amp; LT; / 이벤트한다<br></pre>
+<p dir="ltr">당신은 기술 잡지에 필요한 이벤트 (이벤트가 자동으로 표시되며,이 이벤트의 모든 사용 가능한 속성으로 표시됩니다에서 선택한 이벤트는 주목해야한다 속성을 "모든 속성"의 속성이 모두 포함하려면 특별한 배경 색상). 속성에서 열 "모든 속성" "SQL, 마이크로 소프트 SQL 서버"를 표시 예를 들어, 다음 파일로 <strong>logcfg.xml</strong> 다음 텍스트를 얻을 :</p><pre class="SyntaxDescription" dir="ltr">&amp; LT; 이벤트한다<br> &amp; LT; EQ 속성 = "이름"값 = "dbmssql"/한다<br>&amp; LT; / 이벤트한다<br>&amp; LT; 속성 이름 = "모든"한다<br> &amp; LT; 이벤트한다<br>  &amp; LT; EQ 속성 = "이름"값 = "dbmssql"/한다<br> &amp; LT; / 이벤트한다<br>&amp; LT; / 등록한다<br></pre>
+<p>이벤트는 기술 잡지에 들어갔을 원하는 경우 조건, 당신은 vpolnyaetsya 모든 컬럼의 경우에 상황에 맞는 메뉴를 호출하고 선택해야하는 경우에만 <strong>이벤트에 대한 조건 ...</strong> 다음 창에서 당신은 (설정하는 조건이 선택한 이벤트에 존재에서만 사용 가능 속성입니다) 필요한 조건을 설정할 수 있습니다. 파일 <strong>logcfg.xml</strong> 다음 (이벤트 등의 텍스트를 가져 <strong>dbmssql</strong> 이벤트 로그 속성이 경우에 프로세스에 도착 <strong>지속</strong> 이상 <strong>100000</strong>) :</p><pre class="SyntaxDescription" dir="ltr">&amp; LT; 이벤트한다<br> &amp; LT; EQ 속성 = "이름"값 = "dbmssql"/한다<br> &amp; LT; 있다 속성 = "기간"값 = "15000"/한다<br>&amp; LT; / 이벤트한다<br></pre>
+<p dir="ltr">당신이 원하는 경우 속성은 명령을 선택 상황에 맞는 메뉴에서 원하는 속성의 원하는 이벤트 열을 얻기 위해 특정 조건 경우에만,이 라인에 있어야 이벤트에 대한 기술 잡지에 떨어졌다 <strong>호텔의 조건 ...</strong> (이 경우,이 속성은 선택된 이벤트로 사용할 수 있습니다). 열린 창에서, 당신은 재산에 조건을 설정할 수 있습니다. 파일 <strong>logcfg.xml</strong> 다음 (재산 등의 텍스트를 가져 <strong>SQL</strong> 개발 <strong>dbmssql</strong> zhurnla 프로세스 만 재산에 도착 <strong>지속</strong> 개발 <strong>dbmssql</strong> 더 <strong>150000</strong>) :</p><pre class="SyntaxDescription">&amp; LT; 속성 이름 = "SQL"한다<br> &amp; LT; 이벤트한다<br>  &amp; LT; EQ 속성 = "이름"값 = "dbmssql"/한다<br>  &amp; LT; 있다 속성 = "기간"값 = "15000"/한다<br> &amp; LT; / 이벤트한다<br>&amp; LT; / 등록한다</pre>
+<p class="Usual">모든 이벤트에 대한 잡지 기술 특정 재산에 포함 할 경우, 명령을 선택 상황에 맞는 메뉴에 있어야합니다 <strong>모든 이벤트에 대해 사용</strong>. 파일 <strong>logcfg.xml</strong> 이 같은 텍스트를 얻을 :</p><pre class="SyntaxDescription">&amp; LT; 속성 이름 = "dbpid"한다<br> &amp; LT; 이벤트한다<br>  &amp; LT; NE 속성 = "이름"값 = ""/한다<br> &amp; LT; / 이벤트한다<br> &amp; LT; 이벤트한다<br>  &amp; LT; EQ 속성 = "이름"값 = "DB2"/한다<br> &amp; LT; / 이벤트한다<br> &amp; LT; 이벤트한다<br>  &amp; LT; EQ 속성 = "이름"값 = "dbmssql"/한다<br> &amp; LT; / 이벤트한다<br> &amp; LT; 이벤트한다<br>  &amp; LT; EQ 속성 = "이름"값 = "dboracle"/한다<br> &amp; LT; / 이벤트한다<br> &amp; LT; 이벤트한다<br>  &amp; LT; EQ 속성 = "이름"값 = "dbpostgrs"/한다<br> &amp; LT; / 이벤트한다<br>&amp; LT; / 등록한다</pre>
+<h2>설정을 사용하여 쿼리에 대한 메모리 누수 및 보존 계획의 추적을 덤프</h2>
+<h3>설정 덤프</h3>
+<p>1C 사람 : 엔터프라이즈 시스템 zaverschsheniyu 비상 사태를 일으키는 오류의 발생시 메모리 덤프를 생성, 당신은 체크 박스를 사용하도록 설정해야합니다 <strong>때 충돌 덤프 만들기</strong>, 위치 덤프 파일과 그 유형을 선택합니다. 대부분의 경우, 덤프 형, 디폴트를 남겨 (또는 명령을 사용 <strong>덤프의 최적 크기</strong> 같은 덤프와 같은 상황에 맞는 메뉴 편집 필드).</p>
+<h3>설정 쿼리 계획을 저장</h3>
+<p>기술의 쿼리 계획의 보존을위한 잡지는 상자를 응답 <strong>트랙 쿼리 계획 (LT; planSQL한다)</strong> 재산 <strong>planSQLText</strong> 다른 데이터베이스의 SQL 문의 이벤트 실행. 첫 번째 플래그의 설치는 쿼리 계획을 생성하고, 사용 또는 쿼리 관련 개발 계획에 대한 정보의 가용성에 의해 관리되는 속성을 해제의 가능성을 포함하고 있습니다. 당신이 쿼리 계획의 보존을 포함하는 경우, 그것은 또한 기록 속성을 포함하는 것이 좋습니다 <strong>SQL</strong> 다른 데이터베이스의 SQL 문 실행을위한 이벤트.</p><pre class="SyntaxDescription"> &amp; LT; plansql /한다<br> &amp; LT; 위치 로그 = "C : \ V82 \ 로그 \"역사 = "48"한다<br>  &amp; LT; 이벤트한다<br>   &amp; LT; EQ 속성 = "이름"값 = "dbmssql"/한다<br>  &amp; LT; / 이벤트한다<br>  &amp; LT; 속성 이름 = "plansqltext"한다<br>   &amp; LT; 이벤트한다<br>    &amp; LT; EQ 속성 = "이름"값 = "dbmssql"/한다<br>   &amp; LT; / 이벤트한다<br>  &amp; LT; / 등록한다<br>  &amp; LT; 속성 이름 = "SQL"한다<br>   &amp; LT; 이벤트한다<br>    &amp; LT; EQ 속성 = "이름"값 = "dbmssql"/한다<br>   &amp; LT; / 이벤트한다<br>  &amp; LT; / 등록한다<br> &amp; LT; / 로그인한다</pre>
+<p>이 예에서, 이벤트 데이터베이스 서버 MSSQL 대한 운영자의 성능 (이벤트 <strong>dbmssql</strong>) 포함 고정 텍스트 쿼리 언어 SQL (재산 <strong>SQL</strong>) 그리고 쿼리 실행 계획 (재산 <strong>plansqltext</strong>). 또한 포함 된 쿼리 실행 계획의 모음 (요소이다 <strong>plansql</strong>).</p>
+<p class="Important">쿼리 계획을 얻는 것은 데이터베이스를 조회 속도가 느려집니다. 일부 데이터베이스 침체은 중요 할 수 있습니다.</p>
+<h3>설정 메모리 누수</h3>
+<p class="Usual">메모리 누수의 제어를위한 두 가지 설정을 충족합니다 :</p>
+<ul><li>
+<div><strong>모니터 서버 메모리 사용량</strong>. 이것만으로도 하나, 이벤트 등 모든 이벤트의 프로세스 로그에 결론을 포함해야한다 <strong>(MEM)</strong> (<strong>메모리 누수 서버</strong>).</div>
+</li><li>
+<div><strong>코드 구성의 트랙 메모리 누수</strong>. 이 경우, 당신은 당신이 메모리 누수의 구성 여부를 제어 할 필요가있는 지역을 지정해야합니다. 이것은 플래그를 사용하여 수행 할 수있다 <strong>체크 포인트 스타트 / 클라이언트에서 코드 실행을 중지</strong>.<strong>체크 포인트 시작 / 서버에서 코드 실행을 중지</strong>그리고 제어 모듈에 대한 정보를 입력 나열합니다. 이것만으로도 하나, 이벤트 등 모든 이벤트의 프로세스 로그에 결론을 포함해야한다 <strong>누수</strong> (<strong>메모리 누수</strong>).</div></li></ul><h2>과학 기술 기본 로그의 설정</h2>
+<p>기본의 기술 저널 - ( ": 기업 1C"시스템의 관점에서) 중요한 상황에서 발생하는 이벤트의 기록 처리 로그의 특별한 종류이다. 이를 위해 잡지 플랫폼을 형성하는 변경할 수없는 고정 된 이벤트 필터를 만들었다.</p>
+<p>그러나, 구성 할 수있다 <strong>위치 시스템 기술 잡지</strong> 과 <strong>이력, 클럭의 저장 기간</strong>. 기본적으로 로그를 저장하는 과정을 설정하려면 기본 하이퍼 링크 <strong>시스템 구성 프로세스의 기본 로그 설정</strong>.</p>
+<p>테이블을 사용하여 <strong>시스템 이벤트</strong> 당신은 기록 된 이벤트의 세부 사항을 지정할 수 있습니다.</p></body></html>

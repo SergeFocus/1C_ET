@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17842"></meta></head><body>
+<p><font size="4"><strong>Справочник Подписки на события</strong></font></p>
+<p><font size="2"><img src="CommonPicture.СправочникПодпискиНаСобытия"></img> Справочник позволяет задавать сложные условия подписки на события с объектами базы данных: </font></p>
+<ul><li><font size="2">запись элемента справочника или документа;</font> 
+</li><li><font size="2">проведение документа;</font> 
+</li><li><font size="2">пометка на удаление элемента справочника или документа;</font> 
+</li><li><font size="2">открытие (попытка создать новый или ознакомление с существующим элементом справочника или документа);</font> 
+</li><li><font size="2">закрытие.</font></li></ul><p><font size="2">Условия подписки могут распространяться на все объекты одного типа или на конкретные объекты базы данных.</font></p>
+<p><font size="2">В программе условия можно задать такое условниена языке 1С, которое уточнит необходимость реакции на событие. Можно обращаться к объекту через ."<em>СсылкаНаОбъект</em>". </font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Например условие, <em>СсылкаНаОбъект.Проведен = ИСТИНА</em></font></p></blockquote>
+<p><font size="2">Предусмотрены следующие способы реакции на событие:</font></p>
+<ul><li><font size="2">Сообщение пользователю</font> 
+</li><li><font size="2">Запись в файл журнал</font> 
+</li><li><font size="2">Отправка email</font> 
+</li><li><font size="2">Выполнить программу</font></li></ul><p> </p>
+<p><font size="2">Могут быть заданы получатели сообщений из числа пользователей.</font></p>
+<p><font size="2">Особенности: </font></p>
+<p><font size="2">При написании программы следует учесть</font></p>
+<p><font size="2">Для выполняемой программы ссылка на объект подписки (для кода) называется: <em>Источник (но типа Ссылка)</em></font></p>
+<p><font size="2">Если выполняется программа с объектом, то его имя: <em>Источник (типа Объект)</em></font></p>
+<p><font size="2">Во время обработки программ подписки (реакции) все остальные подписки выключаются. То есть, например если реакция на подписку - выполнение программного кода создания нового товара, то подписки на события о создании нового товара не будут вызваны. Чтобы обойти это ограничение, нужно в начало такого программного кода вписать: </font><em>ПараметрыСеанса.ВыполнениеКодаЗаблокировано = ЛОЖЬ;</em></p>
+<p></p>
+<hr></hr><a href="about:../id05b8eb8b-39ca-44ef-8db0-c22c8f279abe/038b5c85-fb1c-4082-9c4c-e69f8928bf3a"><font color="#413003" size="2" face="Calibri"><em>ЭЛЕМЕНТАРНАЯ ТОРГОВЛЯ</em></font></a><font size="2"><font face="Calibri"><em>, 2015</em></font> </font>
+<p></p>
+<p><font size="2" face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img>  </font><a title="email to developer" href="mailto:sza@ukr.net"><font size="2" face="Calibri">sza@ukr.net</font></a><font size="2" face="Calibri"> </font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font size="2" face="Calibri">http://www.ELTR.od.ua</font></a></p></body></html>
