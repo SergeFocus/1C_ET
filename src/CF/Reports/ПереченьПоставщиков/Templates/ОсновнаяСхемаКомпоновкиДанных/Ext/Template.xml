@@ -67,10 +67,6 @@
 					<v8:content>Поставщик</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Supplier</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Снабдител</v8:content>
 				</v8:item>
@@ -79,20 +75,12 @@
 					<v8:content>Пастаўшчык</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Lieferant</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Dostawca</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>RO</v8:lang>
 					<v8:content>Furnizor</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Постачальник</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ZH</v8:lang>
@@ -105,6 +93,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>ผู้จัดจำหน่าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Supplier</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Lieferant</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Постачальник</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -140,6 +140,14 @@
 			<dataPath>НомерСчета</dataPath>
 			<field>НомерСчета</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Локация</dataPath>
+			<field>Локация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЮридическийАдрес</dataPath>
+			<field>ЮридическийАдрес</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	Поставщики.Ссылка КАК Поставщик,
@@ -149,7 +157,43 @@
 	Поставщики.Адрес,
 	Поставщики.НаименованиеДляПечати,
 	Поставщики.Регион,
-	Поставщики.Телефон,
+	Поставщики.Телефон + ВЫБОР
+		КОГДА Поставщики.Контакт = ""
+			ТОГДА ""
+		ИНАЧЕ " (" + Поставщики.Контакт + ") "
+	КОНЕЦ + ВЫБОР
+		КОГДА Поставщики.Телефон2 = ""
+			ТОГДА ""
+		ИНАЧЕ ", " + Поставщики.Телефон2
+	КОНЕЦ + ВЫБОР
+		КОГДА Поставщики.Контакт2 = ""
+			ТОГДА ""
+		ИНАЧЕ " (" + Поставщики.Контакт2 + ") "
+	КОНЕЦ + ВЫБОР
+		КОГДА Поставщики.Телефон3 = ""
+			ТОГДА ""
+		ИНАЧЕ ", " + Поставщики.Телефон3
+	КОНЕЦ + ВЫБОР
+		КОГДА Поставщики.Контакт3 = ""
+			ТОГДА ""
+		ИНАЧЕ " (" + Поставщики.Контакт3 + ") "
+	КОНЕЦ + ВЫБОР
+		КОГДА Поставщики.Телефон4 = ""
+			ТОГДА ""
+		ИНАЧЕ ", " + Поставщики.Телефон4
+	КОНЕЦ + ВЫБОР
+		КОГДА Поставщики.Контакт4 = ""
+			ТОГДА ""
+		ИНАЧЕ " (" + Поставщики.Контакт4 + ") "
+	КОНЕЦ + ВЫБОР
+		КОГДА Поставщики.Телефон5 = ""
+			ТОГДА ""
+		ИНАЧЕ ", " + Поставщики.Телефон5
+	КОНЕЦ + ВЫБОР
+		КОГДА Поставщики.Контакт5 = ""
+			ТОГДА ""
+		ИНАЧЕ " (" + Поставщики.Контакт5 + ") "
+	КОНЕЦ КАК Телефон,
 	Поставщики.ЭлектроннаяПочта,
 	Поставщики.ПравовойСтатус,
 	Поставщики.ОКПО,
@@ -163,7 +207,9 @@
 	Поставщики.ДатаРедакции,
 	Поставщики.МФО,
 	Поставщики.НаименованиеБанка,
-	Поставщики.НомерСчета
+	Поставщики.НомерСчета,
+	Поставщики.Локация,
+	Поставщики.ЮридическийАдрес
 ИЗ
 	Справочник.Поставщики КАК Поставщики
 ГДЕ
@@ -178,10 +224,6 @@
 				<v8:content>Перечень поставщиков</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>EN</v8:lang>
-				<v8:content>List of Suppliers</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>BG</v8:lang>
 				<v8:content>Списъка с доставчици</v8:content>
 			</v8:item>
@@ -190,20 +232,12 @@
 				<v8:content>Пералік пастаўшчыкоў</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>DE</v8:lang>
-				<v8:content>Liste der Anbieter</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>PL</v8:lang>
 				<v8:content>Lista partnerów</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>RO</v8:lang>
 				<v8:content>Lista furnizorilor</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>UK</v8:lang>
-				<v8:content>Перелік постачальників</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>ZH</v8:lang>
@@ -216,6 +250,18 @@
 			<v8:item>
 				<v8:lang>th</v8:lang>
 				<v8:content>รายชื่อของซัพพลายเออร์</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>List of Suppliers</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Liste der Lieferanten</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Перелік постачальників</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -234,6 +280,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Регион</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Локация</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>НаименованиеДляПечати</dcsset:field>
@@ -328,10 +377,6 @@
 							<v8:content>Это сотрудник</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>This employee</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Този служител</v8:content>
 						</v8:item>
@@ -340,20 +385,12 @@
 							<v8:content>Гэта супрацоўнік</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Dieser Mitarbeiter</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>PL</v8:lang>
 							<v8:content>Ten pracownik</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>RO</v8:lang>
 							<v8:content>Acest angajat</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Це співробітник</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ZH</v8:lang>
@@ -366,6 +403,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>พนักงานนี้</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>This employee</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Dieser Mitarbeiter</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Це співробітник</v8:content>
 						</v8:item>
 					</dcsset:presentation>
 				</dcsset:item>
@@ -407,14 +456,6 @@
 							<v8:content>Перечень поставщиков</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>List of Suppliers</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Перелік постачальників</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BL</v8:lang>
 							<v8:content>Пералік пастаўшчыкоў</v8:content>
 						</v8:item>
@@ -435,16 +476,24 @@
 							<v8:content>Списък на Доставчиците</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Liste der Lieferanten</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>kk</v8:lang>
 							<v8:content>Жеткізушінің тізбесі</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>รายชื่อของซัพพลายเออร์</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>List of Suppliers</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Liste der Lieferanten</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Перелік постачальників</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
@@ -484,10 +533,6 @@
 				<v8:content>Поставщики по регионам</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>EN</v8:lang>
-				<v8:content>Suppliers by Region</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>BG</v8:lang>
 				<v8:content>Доставчици по региони</v8:content>
 			</v8:item>
@@ -496,20 +541,12 @@
 				<v8:content>Пастаўшчыкі па рэгіёнах</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>DE</v8:lang>
-				<v8:content>Lieferanten nach Region</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>PL</v8:lang>
 				<v8:content>Dostawcy według regionów</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>RO</v8:lang>
 				<v8:content>Furnizori de regiune</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>UK</v8:lang>
-				<v8:content>Постачальники по регіонах</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>ZH</v8:lang>
@@ -522,6 +559,18 @@
 			<v8:item>
 				<v8:lang>th</v8:lang>
 				<v8:content>ซัพพลายเออร์รายภาค</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Suppliers by Region</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Lieferanten nach Region</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Постачальники по регіонах</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -540,6 +589,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Регион</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Локация</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>НаименованиеДляПечати</dcsset:field>
@@ -634,10 +686,6 @@
 							<v8:content>Это сотрудник</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>This employee</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Този служител</v8:content>
 						</v8:item>
@@ -646,20 +694,12 @@
 							<v8:content>Гэта супрацоўнік</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Dieser Mitarbeiter</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>PL</v8:lang>
 							<v8:content>Ten pracownik</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>RO</v8:lang>
 							<v8:content>Acest angajat</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Це співробітник</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ZH</v8:lang>
@@ -672,6 +712,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>พนักงานนี้</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>This employee</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Dieser Mitarbeiter</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Це співробітник</v8:content>
 						</v8:item>
 					</dcsset:presentation>
 				</dcsset:item>
@@ -727,14 +779,6 @@
 							<v8:content>Поставщики по регионам</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Suppliers by Region</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Постачальники по регіонах</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BL</v8:lang>
 							<v8:content>Пастаўшчыкі па рэгіёнах</v8:content>
 						</v8:item>
@@ -755,16 +799,24 @@
 							<v8:content>Доставчици по региони</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Lieferanten nach Region</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>kk</v8:lang>
 							<v8:content>Жеткізушілер ша аймақтарға</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>ซัพพลายเออร์รายภาค</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Suppliers by Region</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Lieferanten nach Region</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Постачальники по регіонах</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
@@ -821,10 +873,6 @@
 				<v8:content>Поставщики по видам цен</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>EN</v8:lang>
-				<v8:content>Suppliers by type of price</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>BG</v8:lang>
 				<v8:content>Доставчици по вид на цената</v8:content>
 			</v8:item>
@@ -833,20 +881,12 @@
 				<v8:content>Пастаўшчыкі па відах цэн</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>DE</v8:lang>
-				<v8:content>Lieferanten nach Art des Preises</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>PL</v8:lang>
 				<v8:content>Dostawcy według rodzaju cenie</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>RO</v8:lang>
 				<v8:content>Furnizori de tipul de preț</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>UK</v8:lang>
-				<v8:content>Постачальники за видами цін</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>ZH</v8:lang>
@@ -859,6 +899,18 @@
 			<v8:item>
 				<v8:lang>th</v8:lang>
 				<v8:content>ซัพพลายเออร์โดยราคาประเภท</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Suppliers by type prices</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Lieferanten nach Typ Preise</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Постачальники за видами цін</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -877,6 +929,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Регион</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Локация</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>НаименованиеДляПечати</dcsset:field>
@@ -971,10 +1026,6 @@
 							<v8:content>Это сотрудник</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>This employee</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Този служител</v8:content>
 						</v8:item>
@@ -983,20 +1034,12 @@
 							<v8:content>Гэта супрацоўнік</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Dieser Mitarbeiter</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>PL</v8:lang>
 							<v8:content>Ten pracownik</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>RO</v8:lang>
 							<v8:content>Acest angajat</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Це співробітник</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ZH</v8:lang>
@@ -1009,6 +1052,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>พนักงานนี้</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>This employee</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Dieser Mitarbeiter</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Це співробітник</v8:content>
 						</v8:item>
 					</dcsset:presentation>
 				</dcsset:item>
@@ -1064,14 +1119,6 @@
 							<v8:content>Поставщики по видам цен</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Suppliers by type prices</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Постачальники за видами цін</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BL</v8:lang>
 							<v8:content>Пастаўшчыкі па відах цэн</v8:content>
 						</v8:item>
@@ -1092,16 +1139,24 @@
 							<v8:content>Доставчици по цени тип</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Lieferanten nach Typ Preise</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>kk</v8:lang>
 							<v8:content>Жеткізушілер ша бағаның көріністеріне</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>ซัพพลายเออร์โดยราคาประเภท</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Suppliers by type prices</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Lieferanten nach Typ Preise</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Постачальники за видами цін</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
@@ -1158,10 +1213,6 @@
 				<v8:content>Телефоны поставщиков</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>EN</v8:lang>
-				<v8:content>Phone providers</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>BG</v8:lang>
 				<v8:content>Телефон доставчици</v8:content>
 			</v8:item>
@@ -1170,20 +1221,12 @@
 				<v8:content>Тэлефоны пастаўшчыкоў</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>DE</v8:lang>
-				<v8:content>Telefon-Anbieter</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>PL</v8:lang>
 				<v8:content>Dostawców telefonów</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>RO</v8:lang>
 				<v8:content>Furnizorii de telefon</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>UK</v8:lang>
-				<v8:content>Телефони постачальників</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>ZH</v8:lang>
@@ -1196,6 +1239,18 @@
 			<v8:item>
 				<v8:lang>th</v8:lang>
 				<v8:content>ผู้ให้บริการโทรศัพท์</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Phone providers</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Telefon-Anbieter</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Телефони постачальників</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -1304,10 +1359,6 @@
 							<v8:content>Это сотрудник</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>This employee</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Този служител</v8:content>
 						</v8:item>
@@ -1316,20 +1367,12 @@
 							<v8:content>Гэта супрацоўнік</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Dieser Mitarbeiter</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>PL</v8:lang>
 							<v8:content>Ten pracownik</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>RO</v8:lang>
 							<v8:content>Acest angajat</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Це співробітник</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ZH</v8:lang>
@@ -1342,6 +1385,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>พนักงานนี้</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>This employee</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Dieser Mitarbeiter</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Це співробітник</v8:content>
 						</v8:item>
 					</dcsset:presentation>
 				</dcsset:item>
@@ -1394,14 +1449,6 @@
 							<v8:content>Телефоны поставщиков</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Phone providers</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Телефони постачальників</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BL</v8:lang>
 							<v8:content>Тэлефоны пастаўшчыкоў</v8:content>
 						</v8:item>
@@ -1422,16 +1469,24 @@
 							<v8:content>Доставчици на телефон</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Telefon-Anbieter</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>kk</v8:lang>
 							<v8:content>Жеткізушінің телефондары</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>ผู้ให้บริการโทรศัพท์</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Phone providers</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Telefon-Anbieter</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Телефони постачальників</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>

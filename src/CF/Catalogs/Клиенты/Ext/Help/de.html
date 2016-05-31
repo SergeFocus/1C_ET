@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17420"></meta><style>
+
+
+A {text-decoration: none}</style></head><body>
+<p><font size="3"><strong>Verzeichnis "KUNDEN</strong></font><font size="3"><strong>"</strong></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Konzipiert für Client-Dateien. Wird verwendet, wenn </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">inklusive Buchhaltung Kunden</font></a><font size="2">.</font></p>
+<p><font size="2">Vordefinierte Client "Privatperson" für die Aufzeichnung von Daten auf nicht-persönlichen Verkauf. Dh jene, für die es keine Notwendigkeit, den Überblick über Schulden zu halten. Sie können es umbenennen.</font></p>
+<p><font size="2">Directory-Hierarchie. Das bedeutet, dass Kunden gruppiert werden.</font></p></blockquote>
+<p><font size="2">Details:</font></p>
+<p><strong><a href="Catalog.ВидыЦен/Help"><font size="2">Ansicht Preis</font></a></strong><font size="2"> (Es sei denn, </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Eingeschlossen posistema</font></a><font size="2"> Komplexe Mechanismen Bilanzierung Preise) bestimmt die Art von Preis, die standardmäßig </font><a href="Document.РасходыТовара/Help"><font size="2">Implementierung</font></a><font size="2"> Ware an den Kunden. Ansicht Preis für die gesamte Gruppe der Kunden die gleiche zuweisen.</font></p>
+<p><strong><a href="Catalog.Регионы/Help"><font size="2">Region</font></a></strong><font size="2"> (Es sei denn, </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">inklusive Buchhaltung</font></a><font size="2"> Regionen) bestimmt die Position des Kunden. Gemäß diesem Merkmal können Sie Gruppe Kunden in den Berichten.</font></p>
+<p><font size="2"><strong>Rabatt</strong> - (<a href="CommonForm.НастройкиБазыДанных/Help">wenn aktiviert</a> Anmeldungen) legt Prozent persönlichen Rabatt für den Kunden. Wird dieser Prozentsatz festgelegt ist, dann wird der Verkauf </font><a href="Catalog.Номенклатура/Help"><font size="2">Nomenklatur</font></a><font size="2">In Karten, die auch zeigt den prozentualen Rabatt, wählt das Programm den größten prozentualen Rabatt. Rabattsatz auf eine Gruppe von Kunden zugeordnet werden.</font></p>
+<p><font size="2"><strong>Adresse</strong>,<strong>Telefon</strong>,<strong>Enterprise</strong>,<strong>Rechtlicher Status</strong>,<strong>E-Mail, die Details des bargeldlosen Zahlungs</strong> - Zusätzliche Informationen über den Kunden.</font></p>
+<p><strong><a href="Catalog.Склады/Help"><font size="2">Lager</font></a><font size="2"> Auftraggeber</font></strong><font size="2"></font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2"> Wenn das Subsystem</font></a><font size="2"> "Bilanzierungs-Lager" können Sie die Standard-Warehouse für den Client festlegen. In diesem Fall ist die Auswahl der Dokumente des Kunden, diese Lager wird automatisch installiert.</font></p>
+<p><font size="2"><strong>Formel-Beschriftungen</strong> (Es sei denn, </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">verwenden Sie die Formel</font></a><font size="2">) Eine einzigartige Formel der Bildung des Textes auf dem Etikett beim Etikettendruck für den Client. Solche Formeln werden gespeichert </font><a href="Catalog.ФормулыОписания/Help"><font size="2">Handbuch Formeln</font></a><font size="2">. Zum Beispiel, wenn </font><a href="Document.РасходыТовара/Help"><font size="2">Dokument "Warenfluss"</font></a><font size="2"> Mit seinem Mandanten Set von Beschriftungen, fordern </font><a href="DataProcessor.ПечатьЭтикетки/Help"><font size="2">Unterprogramm-Etikettendruck </font></a><font size="2">der Drucker mit Text von dieser Formel erzeugt beschriften. Wenn Formel-Beschriftungen auf dem Client ist nicht gefüllt, aber </font><a href="Catalog.Склады/Help"><font size="2">gebrauchte Lagerbuchhaltung</font></a><font size="2"> und eine Formel für die volle </font><a href="Catalog.Склады/Help"><font size="2">Lager</font></a><font size="2"> Umsetzung, wird diese verwendet. Der letzte Schritt ist es, die Grundformel der Ausbildung der Beschriftungen verwenden </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Programmeinstellungen</font></a><font size="2">. Wenn sie nicht gefüllt wurde und dann die Text-Etiketten entspricht dem Text sein </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">Strichcode</font></a><font size="2"></font><a href="Catalog.Номенклатура/Help"><font size="2"> Nomenklatur</font></a><font size="2">.</font></p>
+<p align="justify"><font size="2">Beispiel Formel Label-Text:</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p class="SourceCode"><em><font size="2"><font color="#413003">SokrLP (Int (Preis) + 1) + "" + Leo (Номенклатура.НоменклатурнаяГруппа.Код, 2) + links (Номенклатура.Производитель.Код, 2) + "x" + Format (Preis, "CC = 9; CHDTS = 0 ")</font></font></em></p>
+<p class="SourceCode"><font size="2">Formeln sollten in der Sprache der Programmierung 1C geschrieben werden.</font></p></blockquote>
+<p><font size="2"><strong>Nennen Sie drucken</strong> - Der Text, der in der "Kunde" beim Drucken von Dokumenten aus dem Programm angezeigt wird. Dieser Text kann von den üblichen Namen des Clients unterscheiden. Zum Beispiel Kundenname in dem Verzeichnis - Segel, LLC, und sein Name für den Druck - "Parus", Odessa, Malaya Arnautskaya 9.</font></p>
+<p><strong><font size="2">Zusammenfassung </font><a href="Catalog.Валюты/Help"><font size="2">Währung</font></a></strong><font size="2"> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">wenn aktiviert</font></a><font size="2"> Buchhaltungskurse) wird in den Dokumenten festgelegt, wenn die Wahl dieses Client-setzt automatisch bestimmte Währung.</font></p>
+<p><font size="2"><strong>Net Mitarbeiter</strong> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">wenn aktiviert</font></a><font size="2"> Lohnbuchhaltung) kann den Client dienen. Solche Kunden werden automatisch erstellt, wenn Sie Informationen eingeben </font><a href="Catalog.Сотрудники/Help"><font size="2">Mitarbeiter</font></a><font size="2">. Dies ist notwendig, um die Mitarbeiter einen Rabatt auf den Kauf von Waren und berücksichtigen Siedlungen mit dem Kunden </font><a href="Document.ДвиженияДенег/Help"><font size="2">Gehaltsliste</font></a><font size="2"> Mitarbeiter. </font></p>
+<p><font size="2">Für eine Gruppe von Clients können Sie prozentuale Provision angeben. Er wird funktionieren, wenn Sie einen Prozentsatz verwenden <a href="Catalog.Договора/Help">Vertrag</a> mit dem Kunden.</font></p>
+<p><font size="2"></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Beachten Sie, dass, wenn das Programm, um Datensätze auf Kunden zu halten, aber nicht dazu führen, </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">halten Geld</font></a><font size="2">Dann in der Analyse </font><a href="Report.РасчетыСКлиентами/Help"><font size="2">Bericht "Forderungen"</font></a><font size="2"> Bild aussehen wird einseitig. Als ob die Ware umgesetzt wurde, aber nicht zu Lasten des Kunden, so dass es nicht möglich ist, in das Programm registrieren <a href="Document.ДвиженияДенег/Help">Einzahlungen von Kunden</a> wenn die Leistung des Geldkonto.</font></p>
+<p><font size="2">Wenn es erforderlich ist, um die Schulden zwischen dem Client und / oder Offset <a href="Catalog.Поставщики/Help">Lieferanten</a> unter Berücksichtigung der Erträge / Abfluss von Geld, sollten Sie eine spezielle Form von Korrekturen nutzen "<a href="Document.КорректировкиИРегистрацияОстатков/Help">Aufrechnung Schulden Kontrahenten</a>. "</font></p>
+<p><font size="2">Konten - den gemeinsamen Namen für Kunden und Lieferanten.</font></p></blockquote><font size="2">
+<p></p>
+<p></p>
+<p><font size="2">
+<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" face="Calibri"><em>GRUND TRADE</em></font></a><font face="Calibri"><em>2013</em></font> 
+<dl><dt><pre><font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.SZ64" width="64" align="middle" height="64"></img></font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">   sza@ukr.net</font></a><font face="Calibri"></font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri"> http://www.ELTR.od.ua</font></a></pre></dt></dl></font>
+</p><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p></font></body></html>

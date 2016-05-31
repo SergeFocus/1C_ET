@@ -6,10 +6,6 @@
 			<v8:content>Взаимозачет долга Контрагентов</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>en</v8:lang>
-			<v8:content>Offsetting debt Counterparties</v8:content>
-		</v8:item>
-		<v8:item>
 			<v8:lang>ro</v8:lang>
 			<v8:content>Compensare contractuali datoriei</v8:content>
 		</v8:item>
@@ -22,16 +18,8 @@
 			<v8:content>抵销债务对手的</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>uk</v8:lang>
-			<v8:content>Взаємозалік боргу Контрагентів</v8:content>
-		</v8:item>
-		<v8:item>
 			<v8:lang>BG</v8:lang>
 			<v8:content>Компенсиране Контрагентите дългови</v8:content>
-		</v8:item>
-		<v8:item>
-			<v8:lang>DE</v8:lang>
-			<v8:content>Aufrechnung Schulden Kontrahenten</v8:content>
 		</v8:item>
 		<v8:item>
 			<v8:lang>PL</v8:lang>
@@ -45,6 +33,18 @@
 			<v8:lang>th</v8:lang>
 			<v8:content>ชดเชยคู่สัญญาหนี้</v8:content>
 		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Offsetting debt Counterparties</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>de</v8:lang>
+			<v8:content>Aufrechnung Schulden Partner</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Взаємозалік боргу Контрагентів</v8:content>
+		</v8:item>
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
@@ -55,6 +55,17 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
+			<Button name="ФормаСторно" id="411">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.Command.Сторно</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Сторно</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаСторноРасширеннаяПодсказка" id="412"/>
+			</Button>
 			<Button name="ФормаПровестиИЗакрыть" id="260">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -75,24 +86,12 @@
 						<v8:content>Правесці і зачыніць</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>DE</v8:lang>
-						<v8:content>Verhalten und in der Nähe</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>EN</v8:lang>
-						<v8:content>Conduct and close</v8:content>
-					</v8:item>
-					<v8:item>
 						<v8:lang>PL</v8:lang>
 						<v8:content>Prowadzenia i blisko</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>RO</v8:lang>
 						<v8:content>Conduita și aproape</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>UK</v8:lang>
-						<v8:content>Провести і закрити</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>TH</v8:lang>
@@ -106,22 +105,25 @@
 						<v8:lang>kk</v8:lang>
 						<v8:content>Жаса- және жап-</v8:content>
 					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Conduct and close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>Verhalten und in der Nähe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Провести і закрити</v8:content>
+					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="261"/>
 			</Button>
-			<Button name="ФормаПровести" id="270">
+			<Button name="ФормаЗаписатьИЗакрыть" id="409">
 				<Type>CommandBarButton</Type>
-				<Representation>Picture</Representation>
-				<OnlyInAllActions>true</OnlyInAllActions>
-				<CommandName>Form.StandardCommand.Post</CommandName>
-				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="271"/>
-			</Button>
-			<Button name="ФормаОтменаПроведения" id="272">
-				<Type>CommandBarButton</Type>
-				<Representation>Picture</Representation>
-				<OnlyInAllActions>true</OnlyInAllActions>
-				<CommandName>Form.StandardCommand.UndoPosting</CommandName>
-				<ExtendedTooltip name="ФормаОтменаПроведенияРасширеннаяПодсказка" id="273"/>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="410"/>
 			</Button>
 			<Button name="ФормаЗаписать" id="262">
 				<Type>CommandBarButton</Type>
@@ -142,24 +144,12 @@
 						<v8:content>Запісаць</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>DE</v8:lang>
-						<v8:content>Rekord</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>EN</v8:lang>
-						<v8:content>Record</v8:content>
-					</v8:item>
-					<v8:item>
 						<v8:lang>PL</v8:lang>
 						<v8:content>Rekord</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>RO</v8:lang>
 						<v8:content>Record</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>UK</v8:lang>
-						<v8:content>Записати</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>TH</v8:lang>
@@ -173,8 +163,34 @@
 						<v8:lang>kk</v8:lang>
 						<v8:content>Жазып ал-</v8:content>
 					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Record</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>Rekord</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Записати</v8:content>
+					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="263"/>
+			</Button>
+			<Button name="ФормаПровести" id="270">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="271"/>
+			</Button>
+			<Button name="ФормаОтменаПроведения" id="272">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.UndoPosting</CommandName>
+				<ExtendedTooltip name="ФормаОтменаПроведенияРасширеннаяПодсказка" id="273"/>
 			</Button>
 			<Button name="ФормаСвязанныеИзображения" id="279">
 				<Type>CommandBarButton</Type>
@@ -205,24 +221,12 @@
 						<v8:content>Зачыніць</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>DE</v8:lang>
-						<v8:content>Schließen</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>EN</v8:lang>
-						<v8:content>Close</v8:content>
-					</v8:item>
-					<v8:item>
 						<v8:lang>PL</v8:lang>
 						<v8:content>Blisko</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>RO</v8:lang>
 						<v8:content>Închide</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>UK</v8:lang>
-						<v8:content>Закрити</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>TH</v8:lang>
@@ -235,6 +239,18 @@
 					<v8:item>
 						<v8:lang>kk</v8:lang>
 						<v8:content>Жап-</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>In der Nähe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Закрити</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="265"/>
@@ -273,10 +289,6 @@
 					<v8:content>Форма группа глоб</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Form a group of Globe</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Formează un grup de Globe</v8:content>
 				</v8:item>
@@ -289,16 +301,8 @@
 					<v8:content>地球形成一组</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Форма група глоб</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Образуват група от Globe</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Bilden eine Gruppe von Globe</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -311,6 +315,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>แบบกลุ่มของโลก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Form a group of Globe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bilden eine Gruppe von Globe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Форма група глоб</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -319,10 +335,6 @@
 					<v8:content>Форма группа глоб</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Form a group of Globe</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Formează un grup de Globe</v8:content>
 				</v8:item>
@@ -335,16 +347,8 @@
 					<v8:content>地球形成一组</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Форма група глоб</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Образуват група от Globe</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Bilden eine Gruppe von Globe</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -358,20 +362,386 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>แบบกลุ่มของโลก</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Form a group of Globe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bilden eine Gruppe von Globe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Форма група глоб</v8:content>
+				</v8:item>
 			</ToolTip>
 			<HorizontalLocation>Right</HorizontalLocation>
 			<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
 			<ExtendedTooltip name="ФормаГруппаГлобРасширеннаяПодсказка" id="275"/>
 		</CommandBar>
+		<UsualGroup name="ГруппаОписания" id="413">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа описания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Описание на групата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Група апісання</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Beschreibung der Gruppe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group description</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Группа описания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opis grupy</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descrierea grupului</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คำอธิบายกลุ่ม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група опису</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>集团介绍</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа описания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Описание на групата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Група апісання</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Beschreibung der Gruppe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group description</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Группа описания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opis grupy</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descrierea grupului</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คำอธิบายกลุ่ม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група опису</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>集团介绍</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОписанияРасширеннаяПодсказка" id="414"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаСторнирован" id="415">
+					<Visible>false</Visible>
+					<Width>4</Width>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сторнирован</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Reverse</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Сторнирован</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Rückwärts</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Reverse</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Сторнирован</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Rewers</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Reverse</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ย้อนกลับ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сторнований</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>反</v8:content>
+						</v8:item>
+					</Title>
+					<PictureSize>Proportionally</PictureSize>
+					<Picture>
+						<xr:Ref>CommonPicture.Сторнирован</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="КартинкаСторнированКонтекстноеМеню" id="416"/>
+					<ExtendedTooltip name="КартинкаСторнированРасширеннаяПодсказка" id="417"/>
+				</PictureDecoration>
+				<InputField name="ДокументСторнирован" id="418">
+					<DataPath>ДокументСторнирован</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+					<TextColor>style:SpecialTextColor</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
+					<Font ref="style:LargeTextFont" kind="StyleItem"/>
+					<ContextMenu name="ДокументСторнированКонтекстноеМеню" id="419"/>
+					<ExtendedTooltip name="ДокументСторнированРасширеннаяПодсказка" id="420"/>
+				</InputField>
+				<PictureDecoration name="КартинкаСторно" id="421">
+					<Visible>false</Visible>
+					<Width>4</Width>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сторный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Обръщане</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Сторно</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Umkehrung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Reversal</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Сторный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Odwrócenie</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Inversare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ความผกผัน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Сторно</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>翻转</v8:content>
+						</v8:item>
+					</Title>
+					<PictureSize>Proportionally</PictureSize>
+					<Picture>
+						<xr:Ref>CommonPicture.Сторно</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="КартинкаСторноКонтекстноеМеню" id="422"/>
+					<ExtendedTooltip name="КартинкаСторноРасширеннаяПодсказка" id="423"/>
+				</PictureDecoration>
+				<InputField name="ДокументСторно" id="424">
+					<DataPath>Объект.ДокументСторно</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+					<TextColor>style:SpecialTextColor</TextColor>
+					<BorderColor>style:FieldBackColor</BorderColor>
+					<Font ref="style:LargeTextFont" kind="StyleItem"/>
+					<ContextMenu name="ДокументСторноКонтекстноеМеню" id="425"/>
+					<ExtendedTooltip name="ДокументСторноРасширеннаяПодсказка" id="426"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПричиныСторнирования" id="427">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа причины сторнирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Група причинява обрат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Група прычыны сторнирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Gruppe bewirkt Umkehr</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group causes reversal</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Группа причины сторнирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Grupa powoduje odwrócenie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Grupul produce inversare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>กลุ่มที่ทำให้เกิดการพลิกกลับ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група причини сторнування</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>集团造成逆转</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа причины сторнирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Група причинява обрат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Група прычыны сторнирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Gruppe bewirkt Umkehr</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group causes reversal</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Группа причины сторнирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Grupa powoduje odwrócenie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Grupul produce inversare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>กลุ่มที่ทำให้เกิดการพลิกกลับ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група причини сторнування</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>集团造成逆转</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПричиныСторнированияРасширеннаяПодсказка" id="428"/>
+			<ChildItems>
+				<LabelField name="ПричинаСторнирования" id="429">
+					<DataPath>ПричинаСторнирования</DataPath>
+					<TitleTextColor>#800000</TitleTextColor>
+					<TextColor>#800000</TextColor>
+					<Font ref="style:LargeTextFont" kind="StyleItem"/>
+					<ContextMenu name="ПричинаСторнированияКонтекстноеМеню" id="430"/>
+					<ExtendedTooltip name="ПричинаСторнированияРасширеннаяПодсказка" id="431"/>
+				</LabelField>
+				<LabelField name="ПричинаСторнированияОписание" id="432">
+					<DataPath>ПричинаСторнирования.Описание</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Height>2</Height>
+					<ContextMenu name="ПричинаСторнированияОписаниеКонтекстноеМеню" id="433"/>
+					<ExtendedTooltip name="ПричинаСторнированияОписаниеРасширеннаяПодсказка" id="434"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ДатаИНомер" id="69">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Дата и номер</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Date and number of</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -386,16 +756,8 @@
 					<v8:content>日和编号</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Дата і номер</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Дата и номер на</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Datum und Nummer des</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -408,6 +770,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>วันที่และจำนวนของ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Date and number of</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Datum und Nummer des</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дата і номер</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -416,10 +790,6 @@
 					<v8:content>Дата и номер</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Date and number of</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Data și numărul de</v8:content>
 				</v8:item>
@@ -432,16 +802,8 @@
 					<v8:content>日和编号</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Дата і номер</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Дата и номер на</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Datum und Nummer des</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -454,6 +816,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>วันที่และจำนวนของ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Date and number of</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Datum und Nummer des</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дата і номер</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
@@ -463,6 +837,7 @@
 			<ChildItems>
 				<InputField name="Номер" id="1">
 					<DataPath>Объект.Number</DataPath>
+					<HorizontalAlign>Left</HorizontalAlign>
 					<EditMode>EnterOnInput</EditMode>
 					<BorderColor>style:FieldBackColor</BorderColor>
 					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
@@ -475,10 +850,6 @@
 					<EditMode>EnterOnInput</EditMode>
 					<SpinButton>true</SpinButton>
 					<EditFormat>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
 						<v8:item>
 							<v8:lang>bl</v8:lang>
 							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
@@ -496,10 +867,6 @@
 							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>de</v8:lang>
-							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>pl</v8:lang>
 							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
 						</v8:item>
@@ -512,17 +879,576 @@
 							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
 							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>ДФ='dd.MM.yy ЧЧ:мм'</v8:content>
+						</v8:item>
 					</EditFormat>
 					<Font ref="style:LargeTextFont" height="12" kind="StyleItem"/>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
 				</InputField>
 				<LabelDecoration name="ЗаполнитеДанныеПоКорректировкеИлиОстаткамПоБлокамУчета" id="206">
 					<TextColor>#003366</TextColor>
@@ -636,10 +1562,6 @@
 					<v8:content>Таблицы взаиморасчетов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Tables settlement</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Decontare tabele</v8:content>
 				</v8:item>
@@ -652,16 +1574,8 @@
 					<v8:content>表结算</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Таблиці взаєморозрахунків</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Маси селище</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Tabellen Siedlung</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -674,6 +1588,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>ตารางร่วมกัน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tables mutual</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Tabellen gegenseitigen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Таблиці взаєморозрахунків</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -682,10 +1608,6 @@
 					<v8:content>Таблицы взаиморасчетов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Tables settlement</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Decontare tabele</v8:content>
 				</v8:item>
@@ -698,16 +1620,8 @@
 					<v8:content>表结算</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Таблиці взаєморозрахунків</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Маси селище</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Tabellen Siedlung</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -720,6 +1634,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>ตารางร่วมกัน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tables mutual</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Tabellen gegenseitigen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Таблиці взаєморозрахунків</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
@@ -735,10 +1661,6 @@
 							<v8:content>Корректировка долга Клиентов</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Adjustment of debt Clients</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>ro</v8:lang>
 							<v8:content>Ajustarea Clienti datoriei</v8:content>
 						</v8:item>
@@ -751,16 +1673,8 @@
 							<v8:content>调整债务客户</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Коригування боргу Клієнтів</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Приспособяване на дългови Клиенти</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Anpassung der Schulden Clients</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -773,6 +1687,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>การปรับหนี้ของลูกค้า</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Customer debt adjustment</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Kundenschuldenanpassung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Коригування боргу Клієнтів</v8:content>
 						</v8:item>
 					</Title>
 					<Group>Vertical</Group>
@@ -792,10 +1718,6 @@
 									<v8:content>Укажите корректировки или остатки сумм долгов Клиентов. Переплаты отразите отрицательными цифрами.</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Enter corrections or residual amounts of customer debt. Overpayments reflect negative numbers.</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>ro</v8:lang>
 									<v8:content>Introduceți corecturi sau cantitățile reziduale de datoria clientului. Excedentare reflecta numere negative.</v8:content>
 								</v8:item>
@@ -808,16 +1730,8 @@
 									<v8:content>输入客户债务更正或残留量。多付的反映负数。</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Вкажіть коригування або залишки сум боргів Клієнтів. Переплати відобразіть негативними цифрами.</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>BG</v8:lang>
 									<v8:content>Въведете корекции или остатъчни количества от клиента дълг. Надплатени суми отразяват отрицателни числа.</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Geben Sie Korrekturen oder Restmengen Kunde Schulden. Überzahlungen spiegeln negative Zahlen.</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
@@ -831,12 +1745,85 @@
 									<v8:lang>th</v8:lang>
 									<v8:content>ระบุการปรับเปลี่ยนหรือจำนวนยอดหนี้ของลูกค้า overpayments สะท้อนให้เห็นถึงตัวเลขที่ติดลบ</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Specify adjustments or balances amount of customer debt. Overpayments reflect negative numbers.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Geben Sie Einstellungen oder Salden Menge von Kunden Schulden. Überzahlungen reflektieren negative Zahlen.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Вкажіть коригування або залишки сум боргів Клієнтів. Переплати відобразіть негативними цифрами.</v8:content>
+								</v8:item>
 							</Title>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="РасчетыКонтекстноеМеню" id="54"/>
+							<ContextMenu name="РасчетыКонтекстноеМеню" id="54">
+								<ChildItems>
+									<Button name="РасчетыДобавить1" id="393">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.Расчеты.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BG</v8:lang>
+												<v8:content>Добави</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BL</v8:lang>
+												<v8:content>Дадаць</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>PL</v8:lang>
+												<v8:content>Dodać</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>RO</v8:lang>
+												<v8:content>Adăuga</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>TH</v8:lang>
+												<v8:content>เพิ่ม</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ZH</v8:lang>
+												<v8:content>加</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Add</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>de</v8:lang>
+												<v8:content>Hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>kk</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Додати</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="РасчетыДобавить1РасширеннаяПодсказка" id="394"/>
+									</Button>
+									<Button name="РасчетыКонтекстноеМенюВывестиСписок" id="395">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Расчеты.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="РасчетыКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="396"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
 							<AutoCommandBar name="РасчетыКоманднаяПанель" id="55">
 								<ChildItems>
 									<Button name="РасчетыДобавить" id="283">
@@ -858,24 +1845,12 @@
 												<v8:content>Дадаць</v8:content>
 											</v8:item>
 											<v8:item>
-												<v8:lang>DE</v8:lang>
-												<v8:content>Hinzufügen</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>EN</v8:lang>
-												<v8:content>Add</v8:content>
-											</v8:item>
-											<v8:item>
 												<v8:lang>PL</v8:lang>
 												<v8:content>Dodać</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>RO</v8:lang>
 												<v8:content>Adăuga</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>UK</v8:lang>
-												<v8:content>Додати</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>TH</v8:lang>
@@ -885,15 +1860,29 @@
 												<v8:lang>ZH</v8:lang>
 												<v8:content>加</v8:content>
 											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Add</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>de</v8:lang>
+												<v8:content>Hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>kk</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Додати</v8:content>
+											</v8:item>
 										</Title>
 										<ExtendedTooltip name="РасчетыДобавитьРасширеннаяПодсказка" id="284"/>
 									</Button>
-									<Button name="РасчетыЗаполнитьОстаткамиРасчетовСКлиентами" id="241">
+									<Button name="РасчетыЗаполнитьОстаткамиРасчетовСКлиентами" id="391">
 										<Type>CommandBarButton</Type>
-										<Representation>PictureAndText</Representation>
-										<OnlyInAllActions>true</OnlyInAllActions>
 										<CommandName>Form.Command.ЗаполнитьОстаткамиРасчетовСКлиентами</CommandName>
-										<ExtendedTooltip name="РасчетыЗаполнитьОстаткамиРасчетовСКлиентамиРасширеннаяПодсказка" id="242"/>
+										<ExtendedTooltip name="РасчетыЗаполнитьОстаткамиРасчетовСКлиентамиРасширеннаяПодсказка" id="392"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -947,10 +1936,6 @@
 											<v8:content>Сумма</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Amount</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>ro</v8:lang>
 											<v8:content>Valoare</v8:content>
 										</v8:item>
@@ -963,16 +1948,8 @@
 											<v8:content>量</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Сума</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>BG</v8:lang>
 											<v8:content>Размер</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Betrag</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>PL</v8:lang>
@@ -985,6 +1962,18 @@
 										<v8:item>
 											<v8:lang>th</v8:lang>
 											<v8:content>จำนวน</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Amount</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Menge</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Сума</v8:content>
 										</v8:item>
 									</Title>
 									<TitleBackColor>#F5FFF5</TitleBackColor>
@@ -1013,10 +2002,6 @@
 									<v8:content>Группа подвал клиенты</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Group basement clients</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>ro</v8:lang>
 									<v8:content>Clientii subsol de grup</v8:content>
 								</v8:item>
@@ -1029,16 +2014,8 @@
 									<v8:content>组地下室客户的</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Група подвал клієнти</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>BG</v8:lang>
 									<v8:content>Клиенти Група мазе</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Gruppe Keller Kunden</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
@@ -1051,6 +2028,18 @@
 								<v8:item>
 									<v8:lang>th</v8:lang>
 									<v8:content>ลูกค้ากลุ่มใต้ดิน</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group basement clients</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Gruppe Keller Kunden</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група підвал клієнти</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -1059,10 +2048,6 @@
 									<v8:content>Группа подвал клиенты</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Group basement clients</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>ro</v8:lang>
 									<v8:content>Clientii subsol de grup</v8:content>
 								</v8:item>
@@ -1075,16 +2060,8 @@
 									<v8:content>组地下室客户的</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Група подвал клієнти</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>BG</v8:lang>
 									<v8:content>Клиенти Група мазе</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Gruppe Keller Kunden</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
@@ -1097,6 +2074,18 @@
 								<v8:item>
 									<v8:lang>th</v8:lang>
 									<v8:content>ลูกค้ากลุ่มใต้ดิน</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group basement clients</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Gruppe Keller Kunden</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група підвал клієнти</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
@@ -1113,10 +2102,6 @@
 											<v8:content>Итого</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>In total</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>ro</v8:lang>
 											<v8:content>In total</v8:content>
 										</v8:item>
@@ -1129,16 +2114,8 @@
 											<v8:content>总</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Разом</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>BG</v8:lang>
 											<v8:content>В общия</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Insgesamt</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>PL</v8:lang>
@@ -1151,6 +2128,18 @@
 										<v8:item>
 											<v8:lang>th</v8:lang>
 											<v8:content>เบ็ดเสร็จ</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>In total</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Insgesamt</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Разом</v8:content>
 										</v8:item>
 									</Title>
 									<HorizontalAlign>Left</HorizontalAlign>
@@ -1170,10 +2159,6 @@
 							<v8:content>Корр. долга перед Поставщиками</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Corr. debts to suppliers</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>ro</v8:lang>
 							<v8:content>Corr. Datoriile către furnizori</v8:content>
 						</v8:item>
@@ -1186,16 +2171,8 @@
 							<v8:content>更正向供应商的债务</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Кор. боргу перед Постачальниками</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Corr. дългове към доставчици</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Corr. Schulden bei Lieferanten</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -1209,15 +2186,23 @@
 							<v8:lang>th</v8:lang>
 							<v8:content>Corr หนี้ให้กับซัพพลายเออร์</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Corr. debts to suppliers</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Corr. Schulden bei Lieferanten</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Корр. боргу перед Постачальниками</v8:content>
+						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Группа расчеты с поставщиками</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Group payments to suppliers</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ro</v8:lang>
@@ -1232,16 +2217,8 @@
 							<v8:content>集团向供应商付款</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Група розрахунки з постачальниками</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Група плащания към доставчици</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Gruppe Anzahlungen an Lieferanten</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -1254,6 +2231,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>การชำระเงินกลุ่มกับซัพพลายเออร์</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group payments to suppliers</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Gruppe Zahlungen an Lieferanten</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група розрахунки з постачальниками</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Group>Vertical</Group>
@@ -1270,10 +2259,6 @@
 									<v8:content>Укажите корректировки или остатки сумм долгов перед Поставщиками. Переплаты отразите отрицательными цифрами.</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Enter corrections or residual amounts of debts to suppliers. Overpayments reflect negative numbers.</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>ro</v8:lang>
 									<v8:content>Introduceți corecturi sau cantitățile reziduale de datorii către furnizori. Excedentare reflecta numere negative.</v8:content>
 								</v8:item>
@@ -1286,16 +2271,8 @@
 									<v8:content>输入更正或残留量向供应商的债务。多付的反映负数。</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Вкажіть коригування або залишки сум боргів перед Постачальниками. Переплати відобразіть негативними цифрами.</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>BG</v8:lang>
 									<v8:content>Въведете корекции или остатъчни количества от дългове към доставчици. Надплатени суми отразяват отрицателни числа.</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Geben Sie Korrekturen oder Restmengen von Schulden gegenüber Lieferanten. Überzahlungen spiegeln negative Zahlen.</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
@@ -1309,12 +2286,85 @@
 									<v8:lang>th</v8:lang>
 									<v8:content>ระบุการปรับเปลี่ยนหรือยอดเงินของหนี้กับซัพพลายเออร์ overpayments สะท้อนให้เห็นถึงตัวเลขที่ติดลบ</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Specify adjustments or balances amounts of debts to suppliers. Overpayments reflect negative numbers.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Geben Sie Einstellungen oder Salden Mengen von Schulden an Lieferanten. Überzahlungen reflektieren negative Zahlen.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Вкажіть коригування або залишки сум боргів перед Постачальниками. Переплати відобразіть негативними цифрами.</v8:content>
+								</v8:item>
 							</Title>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="РасчетыСПоставщикамиКонтекстноеМеню" id="97"/>
+							<ContextMenu name="РасчетыСПоставщикамиКонтекстноеМеню" id="97">
+								<ChildItems>
+									<Button name="РасчетыСПоставщикамиДобавить1" id="397">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.РасчетыСПоставщиками.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BG</v8:lang>
+												<v8:content>Добави</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BL</v8:lang>
+												<v8:content>Дадаць</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>PL</v8:lang>
+												<v8:content>Dodać</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>RO</v8:lang>
+												<v8:content>Adăuga</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>TH</v8:lang>
+												<v8:content>เพิ่ม</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ZH</v8:lang>
+												<v8:content>加</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Add</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>de</v8:lang>
+												<v8:content>Hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>kk</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Додати</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="РасчетыСПоставщикамиДобавить1РасширеннаяПодсказка" id="398"/>
+									</Button>
+									<Button name="РасчетыСПоставщикамиКонтекстноеМенюВывестиСписок" id="399">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.РасчетыСПоставщиками.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="РасчетыСПоставщикамиКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="400"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
 							<AutoCommandBar name="РасчетыСПоставщикамиКоманднаяПанель" id="98">
 								<ChildItems>
 									<Button name="РасчетыСПоставщикамиДобавить" id="285">
@@ -1336,14 +2386,6 @@
 												<v8:content>Дадаць</v8:content>
 											</v8:item>
 											<v8:item>
-												<v8:lang>DE</v8:lang>
-												<v8:content>Hinzufügen</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>EN</v8:lang>
-												<v8:content>Add</v8:content>
-											</v8:item>
-											<v8:item>
 												<v8:lang>PL</v8:lang>
 												<v8:content>Dodać</v8:content>
 											</v8:item>
@@ -1352,16 +2394,28 @@
 												<v8:content>Adăuga</v8:content>
 											</v8:item>
 											<v8:item>
-												<v8:lang>UK</v8:lang>
-												<v8:content>Додати</v8:content>
-											</v8:item>
-											<v8:item>
 												<v8:lang>TH</v8:lang>
 												<v8:content>เพิ่ม</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>ZH</v8:lang>
 												<v8:content>加</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Add</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>de</v8:lang>
+												<v8:content>Hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>kk</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Додати</v8:content>
 											</v8:item>
 										</Title>
 										<ExtendedTooltip name="РасчетыСПоставщикамиДобавитьРасширеннаяПодсказка" id="286"/>
@@ -1425,10 +2479,6 @@
 											<v8:content>Сумма</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Amount</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>ro</v8:lang>
 											<v8:content>Valoare</v8:content>
 										</v8:item>
@@ -1441,16 +2491,8 @@
 											<v8:content>量</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Сума</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>BG</v8:lang>
 											<v8:content>Размер</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Betrag</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>PL</v8:lang>
@@ -1463,6 +2505,18 @@
 										<v8:item>
 											<v8:lang>th</v8:lang>
 											<v8:content>จำนวน</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Amount</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Menge</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Сума</v8:content>
 										</v8:item>
 									</Title>
 									<TitleBackColor>#FFF5F5</TitleBackColor>
@@ -1491,10 +2545,6 @@
 									<v8:content>Группа подвал поставщики</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Group basement suppliers</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>ro</v8:lang>
 									<v8:content>Furnizori de subsol de grup</v8:content>
 								</v8:item>
@@ -1507,16 +2557,8 @@
 									<v8:content>集团地下室供应商</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Група подвал постачальники</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>BG</v8:lang>
 									<v8:content>Доставчици Група мазе</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Gruppe Keller Lieferanten</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
@@ -1529,6 +2571,18 @@
 								<v8:item>
 									<v8:lang>th</v8:lang>
 									<v8:content>ซัพพลายเออร์ชั้นใต้ดินกลุ่ม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group basement suppliers</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Gruppe Keller Lieferanten</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група підвал постачальники</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -1537,10 +2591,6 @@
 									<v8:content>Группа подвал поставщики</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Group basement suppliers</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>ro</v8:lang>
 									<v8:content>Furnizori de subsol de grup</v8:content>
 								</v8:item>
@@ -1553,16 +2603,8 @@
 									<v8:content>集团地下室供应商</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Група подвал постачальники</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>BG</v8:lang>
 									<v8:content>Доставчици Група мазе</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Gruppe Keller Lieferanten</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
@@ -1575,6 +2617,18 @@
 								<v8:item>
 									<v8:lang>th</v8:lang>
 									<v8:content>ซัพพลายเออร์ชั้นใต้ดินกลุ่ม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group basement suppliers</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Gruppe Keller Lieferanten</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група підвал постачальники</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
@@ -1591,10 +2645,6 @@
 											<v8:content>Итого</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>In total</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>ro</v8:lang>
 											<v8:content>In total</v8:content>
 										</v8:item>
@@ -1607,16 +2657,8 @@
 											<v8:content>总</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Разом</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>BG</v8:lang>
 											<v8:content>В общия</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Insgesamt</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>PL</v8:lang>
@@ -1629,6 +2671,18 @@
 										<v8:item>
 											<v8:lang>th</v8:lang>
 											<v8:content>เบ็ดเสร็จ</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>In total</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Insgesamt</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Разом</v8:content>
 										</v8:item>
 									</Title>
 									<HorizontalAlign>Left</HorizontalAlign>
@@ -1648,10 +2702,6 @@
 							<v8:content>Движения Денег в связи с корректировкой</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Movement of money in connection with the adjustment</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>ro</v8:lang>
 							<v8:content>Mișcarea de bani în legătură cu ajustarea</v8:content>
 						</v8:item>
@@ -1664,16 +2714,8 @@
 							<v8:content>资金流动与调整</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Рухи Грошей у зв'язку з коригуванням</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Движение на пари във връзка с корекцията</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Bewegung von Geld im Zusammenhang mit der Einstellung</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -1687,15 +2729,23 @@
 							<v8:lang>th</v8:lang>
 							<v8:content>การเคลื่อนไหวของเงินในการเชื่อมต่อกับการปรับตัว</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Money movement in connection with the adjustment</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Geldbewegung in Verbindung mit der Einstellung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Рухи Грошей у зв'язку з коригуванням</v8:content>
+						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Группа остаток денег</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Group cash balance</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ro</v8:lang>
@@ -1710,16 +2760,8 @@
 							<v8:content>集团现金余额</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Група залишок грошей</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Баланс Group пари</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Konzern-Cash-Balance</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -1732,6 +2774,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>ความสมดุลของเงินกลุ่ม</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group balance of money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Konzernbilanz Geld</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група залишок грошей</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Group>Vertical</Group>
@@ -1749,10 +2803,6 @@
 									<v8:content>Укажите корректировки или остатки сумм денежных средств</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Enter corrections or residual amounts of cash</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>ro</v8:lang>
 									<v8:content>Introduceți corecturi sau cantitățile reziduale de numerar</v8:content>
 								</v8:item>
@@ -1765,16 +2815,8 @@
 									<v8:content>输入更正或剩余金额的现金</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Вкажіть коригування або залишки сум коштів</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>BG</v8:lang>
 									<v8:content>Въведете корекции или остатъчни суми пари в брой</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Geben Sie Korrekturen oder Restmengen von Bargeld</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
@@ -1788,12 +2830,85 @@
 									<v8:lang>th</v8:lang>
 									<v8:content>ระบุการปรับหรือความสมดุลของเงินทุน</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Specify the adjustment or the balance of funds</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Geben Sie die Einstellung oder das Gleichgewicht der Mittel</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Вкажіть коригування або залишки сум грошових коштів</v8:content>
+								</v8:item>
 							</Title>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ДеньгиКонтекстноеМеню" id="150"/>
+							<ContextMenu name="ДеньгиКонтекстноеМеню" id="150">
+								<ChildItems>
+									<Button name="ДеньгиДобавить1" id="401">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.Деньги.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BG</v8:lang>
+												<v8:content>Добави</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>BL</v8:lang>
+												<v8:content>Дадаць</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>PL</v8:lang>
+												<v8:content>Dodać</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>RO</v8:lang>
+												<v8:content>Adăuga</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>TH</v8:lang>
+												<v8:content>เพิ่ม</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ZH</v8:lang>
+												<v8:content>加</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Add</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>de</v8:lang>
+												<v8:content>Hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>kk</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Додати</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ДеньгиДобавить1РасширеннаяПодсказка" id="402"/>
+									</Button>
+									<Button name="ДеньгиКонтекстноеМенюВывестиСписок" id="403">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Деньги.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="ДеньгиКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="404"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
 							<AutoCommandBar name="ДеньгиКоманднаяПанель" id="151">
 								<ChildItems>
 									<Button name="ДеньгиДобавить" id="287">
@@ -1815,14 +2930,6 @@
 												<v8:content>Дадаць</v8:content>
 											</v8:item>
 											<v8:item>
-												<v8:lang>DE</v8:lang>
-												<v8:content>Hinzufügen</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>EN</v8:lang>
-												<v8:content>Add</v8:content>
-											</v8:item>
-											<v8:item>
 												<v8:lang>PL</v8:lang>
 												<v8:content>Dodać</v8:content>
 											</v8:item>
@@ -1831,16 +2938,28 @@
 												<v8:content>Adăuga</v8:content>
 											</v8:item>
 											<v8:item>
-												<v8:lang>UK</v8:lang>
-												<v8:content>Додати</v8:content>
-											</v8:item>
-											<v8:item>
 												<v8:lang>TH</v8:lang>
 												<v8:content>เพิ่ม</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>ZH</v8:lang>
 												<v8:content>加</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Add</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>de</v8:lang>
+												<v8:content>Hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>kk</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Додати</v8:content>
 											</v8:item>
 										</Title>
 										<ExtendedTooltip name="ДеньгиДобавитьРасширеннаяПодсказка" id="288"/>
@@ -1905,10 +3024,6 @@
 											<v8:content>Сумма</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Amount</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>ro</v8:lang>
 											<v8:content>Valoare</v8:content>
 										</v8:item>
@@ -1921,16 +3036,8 @@
 											<v8:content>量</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Сума</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>BG</v8:lang>
 											<v8:content>Размер</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Betrag</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>PL</v8:lang>
@@ -1943,6 +3050,18 @@
 										<v8:item>
 											<v8:lang>th</v8:lang>
 											<v8:content>จำนวน</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Amount</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Menge</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Сума</v8:content>
 										</v8:item>
 									</Title>
 									<TitleBackColor>#FFFFF5</TitleBackColor>
@@ -1967,6 +3086,566 @@
 									<EditFormat>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bg</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>bl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>kk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
 											<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
 										</v8:item>
 									</EditFormat>
@@ -1995,10 +3674,6 @@
 											<v8:content>Статья</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Article</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>ro</v8:lang>
 											<v8:content>Articol</v8:content>
 										</v8:item>
@@ -2011,16 +3686,8 @@
 											<v8:content>文章</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Стаття</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>BG</v8:lang>
 											<v8:content>Статия</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Beitrag</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>PL</v8:lang>
@@ -2033,6 +3700,18 @@
 										<v8:item>
 											<v8:lang>th</v8:lang>
 											<v8:content>บทความ</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Article</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Artikel</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Стаття</v8:content>
 										</v8:item>
 									</Title>
 									<EditMode>Directly</EditMode>
@@ -2055,10 +3734,6 @@
 									<v8:content>Группа итог денег</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Group total money</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>ro</v8:lang>
 									<v8:content>Bani total de grup</v8:content>
 								</v8:item>
@@ -2071,16 +3746,8 @@
 									<v8:content>集团总钱</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Група підсумок грошей</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>BG</v8:lang>
 									<v8:content>Общо за група пари</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Gruppe insgesamt Geld</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
@@ -2093,6 +3760,18 @@
 								<v8:item>
 									<v8:lang>th</v8:lang>
 									<v8:content>กลุ่มเงินรวม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group total money</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Konzern gesamt Geld</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група підсумок грошей</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -2101,10 +3780,6 @@
 									<v8:content>Группа итог денег</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Group total money</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>ro</v8:lang>
 									<v8:content>Bani total de grup</v8:content>
 								</v8:item>
@@ -2117,16 +3792,8 @@
 									<v8:content>集团总钱</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Група підсумок грошей</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>BG</v8:lang>
 									<v8:content>Общо за група пари</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Gruppe insgesamt Geld</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>PL</v8:lang>
@@ -2139,6 +3806,18 @@
 								<v8:item>
 									<v8:lang>th</v8:lang>
 									<v8:content>กลุ่มเงินรวม</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group total money</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Konzern gesamt Geld</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група підсумок грошей</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
@@ -2155,10 +3834,6 @@
 											<v8:content>Всего</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Only</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>ro</v8:lang>
 											<v8:content>Numai</v8:content>
 										</v8:item>
@@ -2171,16 +3846,8 @@
 											<v8:content>只</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>uk</v8:lang>
-											<v8:content>Всього</v8:content>
-										</v8:item>
-										<v8:item>
 											<v8:lang>BG</v8:lang>
 											<v8:content>Само</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Lediglich</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>PL</v8:lang>
@@ -2193,6 +3860,18 @@
 										<v8:item>
 											<v8:lang>th</v8:lang>
 											<v8:content>เพียง แต่</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Only</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Nur</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Всього</v8:content>
 										</v8:item>
 									</Title>
 									<HorizontalAlign>Right</HorizontalAlign>
@@ -2220,12 +3899,44 @@
 							<v8:content>Дополнительная информация</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Додаткова інформація</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>Additional information</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Additional information</v8:content>
+							<v8:lang>de</v8:lang>
+							<v8:content>Zusätzliche Informationen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Допълнителна информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Дадатковая інфармацыя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Informații suplimentare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ข้อมูลเพิ่มเติม</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Dodatkowe informacje</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>其他信息</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Дополнительная информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Додаткова інформація</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -2234,12 +3945,44 @@
 							<v8:content>Группа дополнительная информация</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Група додаткова інформація</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>Additional Information Group</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Additional Information Group</v8:content>
+							<v8:lang>de</v8:lang>
+							<v8:content>Zusätzliche Informationen Gruppen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Допълнителна Информация Group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Дадатковая інфармацыя Group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Informații suplimentare Group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ข้อมูลเพิ่มเติมกลุ่ม</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Dodatkowe Informacje Grupy</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>附加信息用户组</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Группа дополнительная информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група додаткова інформація</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Group>Vertical</Group>
@@ -2256,7 +3999,68 @@
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="321"/>
+							<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="321">
+								<ChildItems>
+									<Button name="ДополнительнаяИнформацияДобавить1" id="405">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ДополнительнаяИнформация.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить информацию</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Add information</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>de</v8:lang>
+												<v8:content>Informationen hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>bg</v8:lang>
+												<v8:content>Добави информация</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>bl</v8:lang>
+												<v8:content>Дадаць інфармацыю</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ro</v8:lang>
+												<v8:content>Adauga informatii</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>th</v8:lang>
+												<v8:content>เพิ่มข้อมูล</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>pl</v8:lang>
+												<v8:content>Dodaj informację</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>zh</v8:lang>
+												<v8:content>添加信息</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>kk</v8:lang>
+												<v8:content>Добавить информацию</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Додати інформацію</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ДополнительнаяИнформацияДобавить1РасширеннаяПодсказка" id="406"/>
+									</Button>
+									<Button name="ДополнительнаяИнформацияКонтекстноеМенюВывестиСписок" id="407">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ДополнительнаяИнформация.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="ДополнительнаяИнформацияКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="408"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
 							<AutoCommandBar name="ДополнительнаяИнформацияКоманднаяПанель" id="322">
 								<ChildItems>
 									<Button name="ДополнительнаяИнформацияДобавить" id="345">
@@ -2270,12 +4074,44 @@
 												<v8:content>Добавить информацию</v8:content>
 											</v8:item>
 											<v8:item>
-												<v8:lang>UK</v8:lang>
-												<v8:content>Додати інформацію</v8:content>
+												<v8:lang>en</v8:lang>
+												<v8:content>Add information</v8:content>
 											</v8:item>
 											<v8:item>
-												<v8:lang>EN</v8:lang>
-												<v8:content>Add information</v8:content>
+												<v8:lang>de</v8:lang>
+												<v8:content>Informationen hinzufügen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>bg</v8:lang>
+												<v8:content>Добави информация</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>bl</v8:lang>
+												<v8:content>Дадаць інфармацыю</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ro</v8:lang>
+												<v8:content>Adauga informatii</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>th</v8:lang>
+												<v8:content>เพิ่มข้อมูล</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>pl</v8:lang>
+												<v8:content>Dodaj informację</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>zh</v8:lang>
+												<v8:content>添加信息</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>kk</v8:lang>
+												<v8:content>Добавить информацию</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Додати інформацію</v8:content>
 											</v8:item>
 										</Title>
 										<ExtendedTooltip name="ДополнительнаяИнформацияДобавитьРасширеннаяПодсказка" id="346"/>
@@ -2291,12 +4127,44 @@
 												<v8:content>Удалить</v8:content>
 											</v8:item>
 											<v8:item>
-												<v8:lang>UK</v8:lang>
-												<v8:content>Видалити</v8:content>
+												<v8:lang>en</v8:lang>
+												<v8:content>Remove</v8:content>
 											</v8:item>
 											<v8:item>
-												<v8:lang>EN</v8:lang>
-												<v8:content>Remove</v8:content>
+												<v8:lang>de</v8:lang>
+												<v8:content>Entfernen</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>bg</v8:lang>
+												<v8:content>Премахнете</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>bl</v8:lang>
+												<v8:content>Выдаляць</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ro</v8:lang>
+												<v8:content>Îndepărta</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>th</v8:lang>
+												<v8:content>เอาออก</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>pl</v8:lang>
+												<v8:content>Usunąć</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>zh</v8:lang>
+												<v8:content>清除</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>kk</v8:lang>
+												<v8:content>Удалить</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>Видалити</v8:content>
 											</v8:item>
 										</Title>
 										<ExtendedTooltip name="ДополнительнаяИнформацияУдалитьРасширеннаяПодсказка" id="348"/>
@@ -2365,10 +4233,6 @@
 					<v8:content>Группа разницы</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Group differences</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Diferente de grup</v8:content>
 				</v8:item>
@@ -2381,16 +4245,8 @@
 					<v8:content>组间差异</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Група різниці</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Група разлики</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Unterschiede zwischen den Gruppen</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -2403,6 +4259,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>ความแตกต่างของกลุ่ม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group differences</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Gruppenunterschiede</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група різниці</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -2411,10 +4279,6 @@
 					<v8:content>Группа разницы</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Group differences</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Diferente de grup</v8:content>
 				</v8:item>
@@ -2427,16 +4291,8 @@
 					<v8:content>组间差异</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Група різниці</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Група разлики</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Unterschiede zwischen den Gruppen</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -2449,6 +4305,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>ความแตกต่างของกลุ่ม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group differences</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Gruppenunterschiede</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група різниці</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
@@ -2473,10 +4341,6 @@
 							<v8:content>Разница корректировки</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>The difference correction</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>ro</v8:lang>
 							<v8:content>Corecția Diferența</v8:content>
 						</v8:item>
@@ -2489,16 +4353,8 @@
 							<v8:content>差修正</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Різниця коригування</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Разликата корекция</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Der Unterschied Korrektur</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -2511,6 +4367,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>การแก้ไขความแตกต่าง</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Diff corrections</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Diff Korrekturen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Різниця коригування</v8:content>
 						</v8:item>
 					</Title>
 					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
@@ -2540,10 +4408,6 @@
 					<v8:content>Группа стандартных реквизитов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>A group of standard details</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Un grup de detaliu standard,</v8:content>
 				</v8:item>
@@ -2556,16 +4420,8 @@
 					<v8:content>A组的标​​准细节</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Група стандартних реквізитів</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Една група от фиксирани информация</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Eine Gruppe von Standard-Details</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -2578,6 +4434,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>กลุ่มของรายละเอียดมาตรฐาน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>A group of standard details</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Eine Gruppe von Standard-Details</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група стандартних реквізитів</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -2586,10 +4454,6 @@
 					<v8:content>Группа стандартных реквизитов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>A group of standard details</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Un grup de detaliu standard,</v8:content>
 				</v8:item>
@@ -2602,16 +4466,8 @@
 					<v8:content>A组的标​​准细节</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Група стандартних реквізитів</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Една група от фиксирани информация</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Eine Gruppe von Standard-Details</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -2624,6 +4480,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>กลุ่มของรายละเอียดมาตรฐาน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>A group of standard details</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Eine Gruppe von Standard-Details</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група стандартних реквізитів</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
@@ -2646,14 +4514,6 @@
 							<v8:content>Заметки Объекта</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Remarks</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Нотатки Об'єкту</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BL</v8:lang>
 							<v8:content>Нататкі Аб'екта</v8:content>
 						</v8:item>
@@ -2674,16 +4534,24 @@
 							<v8:content>Забележки</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Bemerkungen</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>kk</v8:lang>
 							<v8:content>Объекта заметки</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>ข้อคิดเห็น</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Remarks</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Bemerkungen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Нотатки Об'єкту</v8:content>
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="КнопкаЗаметокОбъектаРасширеннаяПодсказка" id="290"/>
@@ -2824,10 +4692,6 @@
 					<v8:content>Использовать подключаемое оборудование</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Use the connected equipment</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Utilizați echipamentul conectat</v8:content>
 				</v8:item>
@@ -2840,16 +4704,8 @@
 					<v8:content>使用连接的设备</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Використовувати підключається обладнання</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Използвайте свързаното оборудване</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Verwenden Sie die angeschlossenen Geräte</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -2863,6 +4719,18 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>ใช้อุปกรณ์ที่เชื่อมต่อ</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use the connected equipment</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verwenden Sie die angeschlossenen Geräte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Використовувати подключаемое обладнання</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -2873,10 +4741,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Назначить Склад для всех строк</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Assign Warehouse for all rows</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -2891,16 +4755,8 @@
 					<v8:content>指定仓库的所有行</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Призначити Склад для всіх рядків</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Присвояване Склад за всички редове</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Weisen Warehouse für alle Zeilen</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -2913,6 +4769,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>กำหนดโกดังแถวทั้งหมด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Assign Warehouse for all rows</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Weisen Warehouse für alle Zeilen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Призначити Склад для всіх рядків</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2929,10 +4797,6 @@
 					<v8:content>Документ заблокирован</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>The document is locked</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Documentul este blocat</v8:content>
 				</v8:item>
@@ -2945,16 +4809,8 @@
 					<v8:content>此文档已经锁定</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Документ заблоковано</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Документът е заключена</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Das Dokument ist gesperrt</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -2968,6 +4824,18 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>เอกสารถูกล็อค</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Document is locked</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Dokument ist gesperrt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Документ заблокований</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -2978,10 +4846,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Использовать сложный механизм цен</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Use a complex price mechanism</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -2996,16 +4860,8 @@
 					<v8:content>使用复杂的价格机制</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Використовувати складний механізм цін</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Използване на сложен механизъм цена</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Verwenden Sie einen komplexen Preismechanismus</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -3019,6 +4875,18 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>ใช้กลไกราคาที่ซับซ้อน</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use a complex price mechanism</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verwenden Sie eine komplexe Preismechanismus</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Використовувати складний механізм цін</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -3029,10 +4897,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Форма оплаты по умолчанию</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Form of payment default</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -3047,16 +4911,8 @@
 					<v8:content>拖欠货款的形式</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Форма оплати за замовчуванням</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Начин на плащане по подразбиране</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Form von Zahlungsausfällen</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -3070,20 +4926,28 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>รูปแบบของการเริ่มต้นการชำระเงิน</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Form of payment default</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Form von Zahlungsausfällen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Форма оплати за замовчуванням</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>cfg:EnumRef.ФормыОплаты</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ВестиУчетПоСкладу" id="8">
+		<Attribute name="ВестиУчетПоСкладам" id="8">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вести учет по складу</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Keep a record of the warehouse</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -3098,16 +4962,8 @@
 					<v8:content>保持创纪录的仓库</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Вести облік по складу</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Записвайте на склад</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Halten Sie eine Aufzeichnung des Lagers</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -3121,6 +4977,18 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>ให้มีการบันทึกของคลังสินค้า</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Keep records of the warehouse</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bewahren Sie die Aufzeichnungen des Lager</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вести облік по складу</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -3131,10 +4999,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Наименование основной валюты</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Name of the base currency</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -3149,16 +5013,8 @@
 					<v8:content>基础货币名称</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Найменування основної валюти</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Име на основна валута</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Name der Basiswährung</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -3171,6 +5027,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>ชื่อของสกุลเงินหลัก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Name of the base currency</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Name der Basiswährung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Найменування основної валюти</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -3186,14 +5054,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Учитывать деньги в нескольких хранилищах</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Consider money in multiple repositories</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Враховувати гроші в декількох сховищах</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>BL</v8:lang>
@@ -3216,16 +5076,24 @@
 					<v8:content>Zastanów się pieniądze w wielu repozytoriach</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Betrachten Sie Geld in mehrere Repositories</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>TH</v8:lang>
 					<v8:content>พิจารณาเก็บเงินในหลาย</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Ескер- ақшалар нескольких хранилищах</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Consider money in multiple repositories</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Betrachten Sie Geld in mehrere Repositories</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Враховувати гроші в декількох сховищах</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -3237,10 +5105,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Под ссылку</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Під посилання</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ZH</v8:lang>
@@ -3259,14 +5123,6 @@
 					<v8:content>Pod linkiem</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Under the link</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Unter dem Link</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BL</v8:lang>
 					<v8:content>Пад спасылку</v8:content>
 				</v8:item>
@@ -3277,6 +5133,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Сілтеменің астына</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Under the link</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Unter dem Link</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Під посилання</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -3301,14 +5169,6 @@
 					<v8:content>Сопровождать договора изображениями</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Images accompany contract</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Супроводжувати договору зображеннями</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ZH</v8:lang>
 					<v8:content>图片陪同合同</v8:content>
 				</v8:item>
@@ -3325,10 +5185,6 @@
 					<v8:content>Снимки придружават договор</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Bilder begleiten Vertrag</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Obrazy te towarzyszą umowy</v8:content>
 				</v8:item>
@@ -3340,6 +5196,18 @@
 					<v8:lang>kk</v8:lang>
 					<v8:content>Сопровождать келісімдер суреттермен</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Images accompany contract</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bilder begleiten Vertrag</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Супроводжувати договору зображеннями</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -3350,14 +5218,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сопровождать клиентов изображениями</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Accompany customer images</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Супроводжувати клієнтів зображеннями</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ZH</v8:lang>
@@ -3376,10 +5236,6 @@
 					<v8:content>Придружават изображения на клиентите</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Begleiten Kunden Bilder</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Towarzyszą obrazy klientów</v8:content>
 				</v8:item>
@@ -3391,6 +5247,18 @@
 					<v8:lang>kk</v8:lang>
 					<v8:content>Сопровождать клиентов суреттермен</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Accompany customer images</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Begleiten Kunden Bilder</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Супроводжувати клієнтів зображеннями</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -3401,14 +5269,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сопровождать номенклатуру изображениями</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Accompany range images</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Супроводжувати номенклатуру зображеннями</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ZH</v8:lang>
@@ -3427,10 +5287,6 @@
 					<v8:content>Придружават изображения диапазон</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Begleiten Bereich Bilder</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Towarzyszą obrazy zasięgu</v8:content>
 				</v8:item>
@@ -3442,6 +5298,18 @@
 					<v8:lang>kk</v8:lang>
 					<v8:content>Сопровождать жиынтық суреттермен</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Accompany range images</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Begleiten Bereich Bilder</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Супроводжувати номенклатуру зображеннями</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -3452,14 +5320,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сопровождать организации изображениями</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Organization accompany images</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Супроводжувати організації зображеннями</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ZH</v8:lang>
@@ -3478,10 +5338,6 @@
 					<v8:content>Организация придружава изображения</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Organisation begleiten Bilder</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Organizacja towarzyszą obrazy</v8:content>
 				</v8:item>
@@ -3493,6 +5349,18 @@
 					<v8:lang>kk</v8:lang>
 					<v8:content>Сопровождать ұйымдар суреттермен</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Organization accompany images</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Organisation begleiten Bilder</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Супроводжувати організації зображеннями</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -3503,14 +5371,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сопровождать поставщиков изображениями</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Images accompany suppliers</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Супроводжувати постачальників зображеннями</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ZH</v8:lang>
@@ -3529,10 +5389,6 @@
 					<v8:content>Снимки придружават доставчици</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Bilder begleiten Lieferanten</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Obrazy te towarzyszą dostawców</v8:content>
 				</v8:item>
@@ -3544,6 +5400,18 @@
 					<v8:lang>kk</v8:lang>
 					<v8:content>Сопровождать поставщиков суреттермен</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Images accompany suppliers</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bilder begleiten Lieferanten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Супроводжувати постачальників зображеннями</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -3554,14 +5422,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показывать изображения</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Show images</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Показувати зображення</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ZH</v8:lang>
@@ -3580,10 +5440,6 @@
 					<v8:content>Показване на изображения</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Bilder anzeigen</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Zobacz zdjęcia</v8:content>
 				</v8:item>
@@ -3594,6 +5450,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Көргіз- суреттер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show images</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bilder anzeigen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показувати зображення</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -3610,20 +5478,44 @@
 					<v8:content>Вести учет движения денег</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Вести облік руху грошей</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Ewidencji ruchu pieniądza</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>BG</v8:lang>
+					<v8:content>Записвайте си на движение на пари</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
 					<v8:content>Keep a record of the movement of money</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Записвайте си на движение на пари</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Halten Sie eine Aufzeichnung der Bewegung von Geld</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Вядзіце ўлік руху грошай</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Păstrați o evidență a mișcării de bani</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เก็บบันทึกของการเคลื่อนไหวของเงิน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>保持货币的运动的记录</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Вести учет движения денег</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вести облік руху грошей</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -3637,12 +5529,44 @@
 					<v8:content>Дополнительная информация изменена</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Додаткова інформація змінена</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Additional information changed</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Additional information changed</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Zusätzliche Informationen geändert</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Допълнителна информация променило</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Дадатковая інфармацыя змянілася</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Informații suplimentare schimbat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ข้อมูลเพิ่มเติมเปลี่ยนแปลง</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dodatkowe informacje o zmianie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>改变其他信息</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Дополнительная информация изменена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додаткова інформація змінена</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -3659,12 +5583,44 @@
 					<v8:content>Доп инфо тип владельца</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Доп інфо тип власника</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Additional information owner type</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Additional information owner type</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Zusätzliche Informationen Besitzertyp</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Допълнителна тип собственик информация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Дадатковая Тып ўладальнік інфармацыі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Suplimentar de tip proprietar informații</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เพิ่มเติมประเภทเจ้าของข้อมูล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Informacje dodatkowe Rodzaj właściciel</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>其他信息所有者类型</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Доп инфо тип владельца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Доп інфо тип власника</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -3681,12 +5637,44 @@
 					<v8:content>Дополнительная информация</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Додаткова інформація</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Additional information</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Additional information</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Zusätzliche Informationen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Допълнителна информация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Дадатковая інфармацыя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Informații suplimentare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ข้อมูลเพิ่มเติม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dodatkowe informacje</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>其他信息</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Дополнительная информация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додаткова інформація</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -3703,12 +5691,44 @@
 							<v8:content>Вид информации</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Вид інформації</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>Type of Information</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Type of Information</v8:content>
+							<v8:lang>de</v8:lang>
+							<v8:content>Art der Information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Вид на информацията</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Тып інфармацыі</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Tip de Informații</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ชนิดของข้อมูล</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Rodzaj informacji</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>信息类型</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Вид информации</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вид інформації</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -3722,17 +5742,208 @@
 							<v8:content>Информация</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Інформація</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>Information</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
+							<v8:lang>de</v8:lang>
 							<v8:content>Information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Інфармацыя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Informații</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ข้อมูล</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Informacja</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>信息</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Інформація</v8:content>
 						</v8:item>
 					</Title>
 					<Type/>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="ДокументСторнирован" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ СТОРНИРОВАН за счет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Документ осъществява посредством</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Дакумент СТОРНИРОВАН за кошт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Dokument über umgekehrt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Document reversed through</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Документ СТОРНИРОВАН за счет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dokument odwróceniu przez</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Document inversat prin</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เอกสารกลับรายการผ่าน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Документ Сторновані за рахунок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>文件通过逆转</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.КорректировкиИРегистрацияОстатков</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСторнированиеДокументов</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИспользоватьСторнированиеДокументов" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать сторнирование документов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Използвайте документи Обратът</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Выкарыстоўваць сторнирование дакументаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verwenden Sie die Stornobelege</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use the reversal documents</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Использовать сторнирование документов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Użyj dokumentów zwrotnych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Folosiți documentele de inversare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ใช้เอกสารการกลับรายการ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Використовувати сторнування документів</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>使用文件逆转</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПричинаСторнирования" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина сторнирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Причината за обръщането</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Прычына сторнирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Der Grund für die Umkehr</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The reason for the reversal</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Причина сторнирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Powodem odwracania</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Motivul pentru inversarea</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เหตุผลสำหรับการกลับรายการ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Причина сторнування</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>其理由为反转</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПричиныСторнированияДокументов</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСторнированиеДокументов</Item>
+			</FunctionalOptions>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -3741,10 +5952,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Остатки расчетов</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Remains of settlements</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -3759,16 +5966,8 @@
 					<v8:content>定居点的遗迹</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Залишки розрахунків</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Останки от селища</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Reste von Siedlungen</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -3782,15 +5981,23 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>ยอดคงค้าง</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Outstanding balances</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Ausstehende Salden</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Залишки розрахунків</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Заполнить остатками расчетов с клиентами</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Fill the remains of settlements with clients</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -3805,16 +6012,8 @@
 					<v8:content>填写与客户和解的遗骸</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Заповнити залишками розрахунків з клієнтами</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Попълнете останки от селища с клиенти</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Füllen Sie die Reste von Siedlungen mit Kunden</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -3828,6 +6027,18 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>เติมเศษของการตั้งถิ่นฐานกับลูกค้า</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill remnants of settlements with clients</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Füllen Reste von Siedlungen mit Kunden</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити залишками розрахунків з клієнтами</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.Клиенты</xr:Ref>
@@ -3838,16 +6049,13 @@
 				<Item>FunctionalOption.ВестиУчетПоКлиентам</Item>
 			</FunctionalOptions>
 			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 		<Command name="ЗаполнитьОстаткамиРасчетовСПоставщиками" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Остатки расчетов</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Remains of settlements</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -3862,16 +6070,8 @@
 					<v8:content>定居点的遗迹</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Залишки розрахунків</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Останки от селища</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Reste von Siedlungen</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -3885,15 +6085,23 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>ยอดคงค้าง</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Outstanding balances</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Ausstehende Salden</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Залишки розрахунків</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Заполнить остатками расчетов с поставщиками</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Filled in with payments to suppliers</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ro</v8:lang>
@@ -3908,16 +6116,8 @@
 					<v8:content>向供应商付款填写</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Заповнити залишками розрахунків з постачальниками</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Изпълнен с плащания към доставчици</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Gefüllt mit Zahlungen an Lieferanten</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -3931,6 +6131,18 @@
 					<v8:lang>th</v8:lang>
 					<v8:content>เต็มไปด้วยการชำระเงินกับซัพพลายเออร์</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Filled in with payments to suppliers</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Mit Zahlungen an Lieferanten ausgefüllt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити залишками розрахунків з постачальниками</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.Поставщики</xr:Ref>
@@ -3941,6 +6153,7 @@
 				<Item>FunctionalOption.ВестиУчетПоПоставщикам</Item>
 			</FunctionalOptions>
 			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 		<Command name="СвязанныеИзображения" id="3">
 			<Title>
@@ -3949,10 +6162,6 @@
 					<v8:content>Связанные изображения</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Пов'язані зображення</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ZH</v8:lang>
 					<v8:content>相关图片</v8:content>
 				</v8:item>
@@ -3969,14 +6178,6 @@
 					<v8:content>Powiązane obrazy</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Related Images</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Verwandte Bilder</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BL</v8:lang>
 					<v8:content>Звязаныя малюнка</v8:content>
 				</v8:item>
@@ -3987,6 +6188,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Тоқулы суреттер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Related Images</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verwandte Bilder</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Пов'язані зображення</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -3995,10 +6208,6 @@
 					<v8:content>Связанные изображения</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Пов'язані зображення</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ZH</v8:lang>
 					<v8:content>相关图片</v8:content>
 				</v8:item>
@@ -4015,14 +6224,6 @@
 					<v8:content>Powiązane obrazy</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Related Images</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Verwandte Bilder</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BL</v8:lang>
 					<v8:content>Звязаныя малюнка</v8:content>
 				</v8:item>
@@ -4033,6 +6234,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Тоқулы суреттер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Related Images</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verwandte Bilder</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Пов'язані зображення</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -4052,10 +6265,6 @@
 					<v8:content>Добавить изображение</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Додати зображення</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ZH</v8:lang>
 					<v8:content>添加图片</v8:content>
 				</v8:item>
@@ -4072,14 +6281,6 @@
 					<v8:content>Dodaj zdjęcia</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Add a picture</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Ein Bild hinzufügen</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BL</v8:lang>
 					<v8:content>Дадаць малюнак</v8:content>
 				</v8:item>
@@ -4090,6 +6291,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Үсте- сурет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add a picture</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Ein Bild hinzufügen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додати зображення</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -4098,10 +6311,6 @@
 					<v8:content>Добавить изображение</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Додати зображення</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ZH</v8:lang>
 					<v8:content>添加图片</v8:content>
 				</v8:item>
@@ -4118,14 +6327,6 @@
 					<v8:content>Dodaj zdjęcia</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Add a picture</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Ein Bild hinzufügen</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BL</v8:lang>
 					<v8:content>Дадаць малюнак</v8:content>
 				</v8:item>
@@ -4136,6 +6337,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Үсте- сурет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add a picture</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Ein Bild hinzufügen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додати зображення</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -4155,14 +6368,6 @@
 					<v8:content>Отключить изображения</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Turn off images</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Відключити зображення</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ZH</v8:lang>
 					<v8:content>关闭图像</v8:content>
 				</v8:item>
@@ -4179,10 +6384,6 @@
 					<v8:content>Изключете изображения</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Schalten Sie Bilder</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Wyłącz obrazy</v8:content>
 				</v8:item>
@@ -4193,6 +6394,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Отключить суреттер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Turn off images</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Schalten Sie Bilder</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відключити зображення</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -4201,14 +6414,6 @@
 					<v8:content>Отключить изображения</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Turn off images</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Відключити зображення</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ZH</v8:lang>
 					<v8:content>关闭图像</v8:content>
 				</v8:item>
@@ -4225,10 +6430,6 @@
 					<v8:content>Изключете изображения</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Schalten Sie Bilder</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Wyłącz obrazy</v8:content>
 				</v8:item>
@@ -4239,6 +6440,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Отключить суреттер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Turn off images</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Schalten Sie Bilder</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Відключити зображення</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -4255,6 +6468,215 @@
 			</FunctionalOptions>
 			<Representation>Picture</Representation>
 		</Command>
+		<Command name="ЗаписатьИЗакрыть" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Запишете и Close</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Запісаць і зачыніць</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Aufnahme und Schließen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Record and Close</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nagrywanie i Zamknij</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Înregistrare și închidere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>บันทึกและปิด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати і закрити</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>记录并关闭</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Запишете и Close</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Запісаць і зачыніць</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Aufnahme und Schließen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Record and Close</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nagrywanie i Zamknij</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Înregistrare și închidere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>บันทึกและปิด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Записати і закрити</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>记录并关闭</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+F6</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.EndEdit</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСторнированиеДокументов</Item>
+			</FunctionalOptions>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="Сторно" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Обръщане</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Сторно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Umkehrung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reversal</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Сторно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Odwrócenie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Inversare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ความผกผัน</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сторно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>翻转</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Произвести документ Сторно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Представят документ Reversal</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Вырабіць дакумент сторно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Produzieren eines Dokuments Reversal</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Produce a document Reversal</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Произвести документ Сторно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opracowanie Odwrócenie dokument</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Produce o inversare de document</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ผลิตกลับเอกสาร</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Провести документ Сторно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>出示文件逆转</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+F9</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture.Сторно</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Сторно</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСторнированиеДокументов</Item>
+			</FunctionalOptions>
+			<Representation>TextPicture</Representation>
+		</Command>
 	</Commands>
 	<CommandInterface>
 		<NavigationPanel>
@@ -4268,6 +6690,22 @@
 			</Item>
 			<Item>
 				<Command>3:8bf1b411-67c8-4ace-9bfa-558ffa5dc81e</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ЖурналСобытий.StandardCommand.OpenByValue.СсылкаНаОбъект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.СторнированныеДокументы.StandardCommand.OpenByValue.СторныйДокумент</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>

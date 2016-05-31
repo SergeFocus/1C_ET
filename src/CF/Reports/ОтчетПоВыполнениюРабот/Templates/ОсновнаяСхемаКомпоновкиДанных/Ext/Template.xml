@@ -243,14 +243,6 @@
 					<v8:content>Вынік розніца</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Ergebnis Unterschied</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Result difference</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Różnica wynik</v8:content>
 				</v8:item>
@@ -259,16 +251,28 @@
 					<v8:content>Diferența rezultat</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Результат різниця</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>TH</v8:lang>
 					<v8:content>ความแตกต่างผล</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ZH</v8:lang>
 					<v8:content>结果差异</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Result difference</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Ergebnis Unterschied</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Результат разница</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Результат різниця</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -447,7 +451,9 @@
 	ВыполненияРабот.Сотрудник,
 	ВыполненияРабот.ОбъектКлиента
 ИЗ
-	Документ.ВыполненияРабот КАК ВыполненияРабот</query>
+	Документ.ВыполненияРабот КАК ВыполненияРабот
+ГДЕ
+	ВыполненияРабот.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Результат</dataPath>
@@ -461,6 +467,120 @@
 		<dataPath>РезультатРазница</dataPath>
 		<expression>Сумма(РезультатРазница)</expression>
 	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>Начална дата</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>Дата пачатку</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Startdatum</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Start Date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Data rozpoczęcia</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Data începerii</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>วันที่เริ่มต้น</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>开始日期</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Дата початку</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bg</v8:lang>
+				<v8:content>Срок на годност</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>bl</v8:lang>
+				<v8:content>Тэрмін прыдатнасці</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Verfallsdatum</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Expiration date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>pl</v8:lang>
+				<v8:content>Data przydatności</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ro</v8:lang>
+				<v8:content>Dată de expirare</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>th</v8:lang>
+				<v8:content>วันหมดอายุ</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>截止日期</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Дата закінчення</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -477,14 +597,6 @@
 				<v8:content>Па Кліентам</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>DE</v8:lang>
-				<v8:content>Durch Clients</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>EN</v8:lang>
-				<v8:content>By Clients</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>PL</v8:lang>
 				<v8:content>Przez Klientów</v8:content>
 			</v8:item>
@@ -493,16 +605,28 @@
 				<v8:content>De Clienti</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>UK</v8:lang>
-				<v8:content>За Клієнтам</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>TH</v8:lang>
 				<v8:content>โดยลูกค้า</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>ZH</v8:lang>
 				<v8:content>通过客户端</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>By Clients</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Durch Clients</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>По Клиентам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>За Клієнтам</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -578,14 +702,6 @@
 									<v8:content>перайсці да дакумента</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>gehen, um Dokument</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>EN</v8:lang>
-									<v8:content>go to document</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>PL</v8:lang>
 									<v8:content>Do dokumentu</v8:content>
 								</v8:item>
@@ -594,16 +710,28 @@
 									<v8:content>du-te la documentul</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>UK</v8:lang>
-									<v8:content>перейти до документа</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>TH</v8:lang>
 									<v8:content>ไปที่เอกสาร</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>ZH</v8:lang>
 									<v8:content>去文件</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>go to document</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>gehen, um Dokument</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>перейти к документу</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>перейти до документа</v8:content>
 								</v8:item>
 							</dcscor:value>
 						</dcscor:item>
@@ -630,6 +758,566 @@
 									<v8:lang>ru</v8:lang>
 									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
 							</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
@@ -652,14 +1340,6 @@
 							<v8:content>Выкананне работ Па Кліентам</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Durchführen von Arbeiten durch den Kunden</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Performing works by customer</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>PL</v8:lang>
 							<v8:content>Wykonywania prac przez klienta</v8:content>
 						</v8:item>
@@ -668,16 +1348,28 @@
 							<v8:content>Efectuarea lucrărilor de către client</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Виконання робіт За Клієнтам</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>TH</v8:lang>
 							<v8:content>การแสดงผลงานของลูกค้า</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ZH</v8:lang>
 							<v8:content>由客户进行工程</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Performing works by customer</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Durchführen von Arbeiten durch den Kunden</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Выполнение работ По Клиентам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Виконання робіт За Клієнтам</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
@@ -725,14 +1417,6 @@
 				<v8:content>Па аб'ектах Кліентаў</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>DE</v8:lang>
-				<v8:content>Durch die Client-Objekte</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>EN</v8:lang>
-				<v8:content>By client objects</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>PL</v8:lang>
 				<v8:content>Przez obiekty klienckich</v8:content>
 			</v8:item>
@@ -741,16 +1425,28 @@
 				<v8:content>Pe obiecte de client</v8:content>
 			</v8:item>
 			<v8:item>
-				<v8:lang>UK</v8:lang>
-				<v8:content>По об'єктах Клієнтів</v8:content>
-			</v8:item>
-			<v8:item>
 				<v8:lang>TH</v8:lang>
 				<v8:content>โดยวัตถุที่ลูกค้า</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>ZH</v8:lang>
 				<v8:content>通过客户端对象</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>By client objects</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>de</v8:lang>
+				<v8:content>Durch die Client-Objekte</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>kk</v8:lang>
+				<v8:content>По объектам Клиентов</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>По об'єктах Клієнтів</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -826,14 +1522,6 @@
 									<v8:content>перайсці да дакумента</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>gehen, um Dokument</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>EN</v8:lang>
-									<v8:content>go to document</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>PL</v8:lang>
 									<v8:content>Do dokumentu</v8:content>
 								</v8:item>
@@ -842,16 +1530,28 @@
 									<v8:content>du-te la documentul</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>UK</v8:lang>
-									<v8:content>перейти до документа</v8:content>
-								</v8:item>
-								<v8:item>
 									<v8:lang>TH</v8:lang>
 									<v8:content>ไปที่เอกสาร</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>ZH</v8:lang>
 									<v8:content>去文件</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>go to document</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>gehen, um Dokument</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>перейти к документу</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>перейти до документа</v8:content>
 								</v8:item>
 							</dcscor:value>
 						</dcscor:item>
@@ -878,6 +1578,566 @@
 									<v8:lang>ru</v8:lang>
 									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=1</v8:content>
+								</v8:item>
 							</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
@@ -900,14 +2160,6 @@
 							<v8:content>Выкананне работ Па Кліентам</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Durchführen von Arbeiten durch den Kunden</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Performing works by customer</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>PL</v8:lang>
 							<v8:content>Wykonywania prac przez klienta</v8:content>
 						</v8:item>
@@ -916,16 +2168,28 @@
 							<v8:content>Efectuarea lucrărilor de către client</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Виконання робіт За Клієнтам</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>TH</v8:lang>
 							<v8:content>การแสดงผลงานของลูกค้า</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ZH</v8:lang>
 							<v8:content>由客户进行工程</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Performing works by customer</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Durchführen von Arbeiten durch den Kunden</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Выполнение работ По Клиентам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Виконання робіт За Клієнтам</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>

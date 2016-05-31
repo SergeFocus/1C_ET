@@ -6,39 +6,43 @@
 			<v8:content>Выгрузка и загрузка данных XML</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>BG</v8:lang>
-			<v8:content>Разтоварване и товарене XML данни</v8:content>
+			<v8:lang>bg</v8:lang>
+			<v8:content>Разтоварване и товарене на XML данни</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>BL</v8:lang>
+			<v8:lang>bl</v8:lang>
 			<v8:content>Выгрузка і загрузка дадзеных XML</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>DE</v8:lang>
+			<v8:lang>de</v8:lang>
 			<v8:content>Entladen und Laden von XML-Daten</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>EN</v8:lang>
-			<v8:content>Unloading and loading XML data</v8:content>
+			<v8:lang>en</v8:lang>
+			<v8:content>Unloading and loading of XML data</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>PL</v8:lang>
+			<v8:lang>kk</v8:lang>
+			<v8:content>Выгрузка и загрузка данных XML</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>pl</v8:lang>
 			<v8:content>Rozładunek i załadunek danych XML</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>RO</v8:lang>
-			<v8:content>Descărcare și încărcare a datelor XML</v8:content>
+			<v8:lang>ro</v8:lang>
+			<v8:content>Descărcarea și încărcarea datelor XML</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>UK</v8:lang>
+			<v8:lang>th</v8:lang>
+			<v8:content>ขนถ่ายและการโหลดข้อมูล XML</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
 			<v8:content>Вивантаження і завантаження даних XML</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>TH</v8:lang>
-			<v8:content>ขนถ่ายและการโหลดข้อมูล</v8:content>
-		</v8:item>
-		<v8:item>
-			<v8:lang>ZH</v8:lang>
+			<v8:lang>zh</v8:lang>
 			<v8:content>卸载和加载XML数据</v8:content>
 		</v8:item>
 	</Title>
@@ -52,12 +56,13 @@
 	<Events>
 		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
 		<Pages name="ГруппаРежим" id="1">
-			<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
 			<ExtendedTooltip name="ГруппаРежимРасширеннаяПодсказка" id="2"/>
 			<Events>
 				<Event name="OnCurrentPageChange">ГруппаРежимПриСменеСтраницы</Event>
@@ -70,40 +75,44 @@
 							<v8:content>Выгрузка</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BG</v8:lang>
+							<v8:lang>bg</v8:lang>
 							<v8:content>Разтоварване</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BL</v8:lang>
+							<v8:lang>bl</v8:lang>
 							<v8:content>Выгрузка</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Entladen</v8:content>
+							<v8:lang>de</v8:lang>
+							<v8:content>Entladung</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
+							<v8:lang>en</v8:lang>
 							<v8:content>Unloading</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>PL</v8:lang>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Выгрузка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
 							<v8:content>Rozładunek</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>RO</v8:lang>
+							<v8:lang>ro</v8:lang>
 							<v8:content>Descărcare</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Вивантаження</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
+							<v8:lang>th</v8:lang>
 							<v8:content>การปลดปล่อย</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>卸载</v8:content>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Вивантаження</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>卸</v8:content>
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="ГруппаВыгрузкаРасширеннаяПодсказка" id="4"/>
@@ -123,6 +132,7 @@
 							<ChildItems>
 								<InputField name="ПериодВыгрузки" id="19">
 									<DataPath>ПериодВыгрузки</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ПериодВыгрузкиКонтекстноеМеню" id="20"/>
 									<ExtendedTooltip name="ПериодВыгрузкиРасширеннаяПодсказка" id="21"/>
@@ -135,40 +145,44 @@
 											<v8:content>Отбор по периоду для всех объектов</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>BG</v8:lang>
-											<v8:content>Изберете по период за всички обекти</v8:content>
+											<v8:lang>bg</v8:lang>
+											<v8:content>Изборът на периода за всички обекти</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>BL</v8:lang>
+											<v8:lang>bl</v8:lang>
 											<v8:content>Адбор па перыядзе для ўсіх аб'ектаў</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Auswahl nach Periode für alle Objekte</v8:content>
+											<v8:lang>de</v8:lang>
+											<v8:content>Die Wahl des Zeitraumes für alle Objekte</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>EN</v8:lang>
-											<v8:content>Select by period for all objects</v8:content>
+											<v8:lang>en</v8:lang>
+											<v8:content>The selection of the period for all objects</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Wybierz przez okres dla wszystkich obiektów</v8:content>
+											<v8:lang>kk</v8:lang>
+											<v8:content>Отбор по периоду для всех объектов</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>RO</v8:lang>
-											<v8:content>Selectați în funcție de perioada pentru toate obiectele</v8:content>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Wybranie okresu w odniesieniu do wszystkich obiektów</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>UK</v8:lang>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Selectarea perioadei pentru toate obiectele</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>การเลือกช่วงเวลาสำหรับวัตถุทั้งหมด</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
 											<v8:content>Відбір по періоду для всіх об'єктів</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>TH</v8:lang>
-											<v8:content>เลือกตามระยะเวลาสำหรับวัตถุทั้งหมด</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ZH</v8:lang>
-											<v8:content>以期为所有对象选择</v8:content>
+											<v8:lang>zh</v8:lang>
+											<v8:content>期间的所有对象的选择</v8:content>
 										</v8:item>
 									</Title>
 									<TitleLocation>Right</TitleLocation>
@@ -186,40 +200,44 @@
 									<v8:content>Отбор для периодических регистров</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BG</v8:lang>
-									<v8:content>Selection за периодични регистри</v8:content>
+									<v8:lang>bg</v8:lang>
+									<v8:content>Избор за периодични регистри</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BL</v8:lang>
+									<v8:lang>bl</v8:lang>
 									<v8:content>Адбор для перыядычных рэгістраў</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Auswahl für periodische Register</v8:content>
+									<v8:lang>de</v8:lang>
+									<v8:content>Die Auswahl für die regelmäßige Register</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>EN</v8:lang>
+									<v8:lang>en</v8:lang>
 									<v8:content>Selection for periodic registers</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>PL</v8:lang>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Отбор для периодических регистров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
 									<v8:content>Wybór dla rejestrów okresowych</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>RO</v8:lang>
-									<v8:content>Selecție pentru registrele periodice</v8:content>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Selecția pentru registre periodice</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>UK</v8:lang>
+									<v8:lang>th</v8:lang>
+									<v8:content>ตัวเลือกสำหรับการลงทะเบียนเป็นระยะ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
 									<v8:content>Відбір для періодичних регістрів</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>TH</v8:lang>
-									<v8:content>การคัดเลือกลงทะเบียนเป็นระยะ</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ZH</v8:lang>
-									<v8:content>选择的周期寄存器</v8:content>
+									<v8:lang>zh</v8:lang>
+									<v8:content>选择定期寄存器</v8:content>
 								</v8:item>
 							</Title>
 							<Width>27</Width>
@@ -291,40 +309,44 @@
 									<v8:content>Вместе с документами выгружать их движения</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BG</v8:lang>
+									<v8:lang>bg</v8:lang>
 									<v8:content>Заедно с документите разтоварват тяхното движение</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BL</v8:lang>
+									<v8:lang>bl</v8:lang>
 									<v8:content>Разам з дакументамі выгружаць іх руху</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Zusammen mit den Unterlagen entladen ihre Bewegung</v8:content>
+									<v8:lang>de</v8:lang>
+									<v8:content>Zusammen mit den Dokumenten zu entladen ihre Bewegung</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>EN</v8:lang>
+									<v8:lang>en</v8:lang>
 									<v8:content>Together with the documents unload their movement</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>PL</v8:lang>
-									<v8:content>Wraz z dokumentami, rozładować ich ruch</v8:content>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Вместе с документами выгружать их движения</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>RO</v8:lang>
-									<v8:content>Împreună cu documentele descarce libera circulație a acestora</v8:content>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Wraz z dokumentami zwalnianie ich ruch</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>UK</v8:lang>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Împreună cu documentele descarce circulație a acestora</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>พร้อมเอกสารขนการเคลื่อนไหวของพวกเขา</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
 									<v8:content>Разом з документами вивантажувати їх руху</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>TH</v8:lang>
-									<v8:content>พร้อมเอกสารขนเคลื่อนไหวของพวกเขา</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ZH</v8:lang>
-									<v8:content>连同文件卸载他们的运动</v8:content>
+									<v8:lang>zh</v8:lang>
+									<v8:content>连同文件卸载自己的运动</v8:content>
 								</v8:item>
 							</Title>
 							<TitleLocation>Right</TitleLocation>
@@ -342,39 +364,43 @@
 											<v8:content>Настройки выгрузки</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>BG</v8:lang>
-											<v8:content>Настройки на разтоварване</v8:content>
+											<v8:lang>bg</v8:lang>
+											<v8:content>Настройки разтоварване</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>BL</v8:lang>
+											<v8:lang>bl</v8:lang>
 											<v8:content>Налады выгрузкі</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>DE</v8:lang>
+											<v8:lang>de</v8:lang>
 											<v8:content>Einstellungen Entladen</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>EN</v8:lang>
+											<v8:lang>en</v8:lang>
 											<v8:content>Settings unloading</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Ustawienia rozładunek</v8:content>
+											<v8:lang>kk</v8:lang>
+											<v8:content>Настройки выгрузки</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>RO</v8:lang>
-											<v8:content>Setările de descărcare</v8:content>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Ustawienia rozładunku</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>UK</v8:lang>
-											<v8:content>Налаштування вивантаження</v8:content>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Setări descărcare</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>TH</v8:lang>
+											<v8:lang>th</v8:lang>
 											<v8:content>การตั้งค่าการขนถ่าย</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>ZH</v8:lang>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Налаштування вивантаження</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>zh</v8:lang>
 											<v8:content>设置卸载</v8:content>
 										</v8:item>
 									</Title>
@@ -409,40 +435,44 @@
 																<v8:content>Определить данные, выгружаемые по ссылке</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>BG</v8:lang>
-																<v8:content>Определя данни разтоварени връзката</v8:content>
+																<v8:lang>bg</v8:lang>
+																<v8:content>Определете данни разтоварени връзка</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>BL</v8:lang>
-																<v8:content>Вызначыць дадзеныя, Спампаваныя па спасылцы</v8:content>
+																<v8:lang>bl</v8:lang>
+																<v8:content>Вызначыць дадзеныя, выгружае па спасылцы</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>DE</v8:lang>
-																<v8:content>Bestimmen Sie die Daten entladen Link</v8:content>
+																<v8:lang>de</v8:lang>
+																<v8:content>Definieren Sie Daten entladen Link</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>EN</v8:lang>
-																<v8:content>Determine the data unloaded link</v8:content>
+																<v8:lang>en</v8:lang>
+																<v8:content>Define data unloaded link</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>PL</v8:lang>
-																<v8:content>Określenia danych wyładowane linku</v8:content>
+																<v8:lang>kk</v8:lang>
+																<v8:content>Определить данные, выгружаемые по ссылке</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>RO</v8:lang>
-																<v8:content>Determinați descărcate link-ul de date</v8:content>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Definiowanie danych wyładowane linku</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>UK</v8:lang>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Definirea datelor descărcate legătură</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>th</v8:lang>
+																<v8:content>กำหนดข้อมูลการเชื่อมโยงการขนถ่าย</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>uk</v8:lang>
 																<v8:content>Визначити дані, Вивантажувані за посиланням</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>TH</v8:lang>
-																<v8:content>ตรวจสอบข้อมูลการเชื่อมโยงการยกเลิกการโหลด</v8:content>
-															</v8:item>
-															<v8:item>
-																<v8:lang>ZH</v8:lang>
-																<v8:content>确定数据卸载链接</v8:content>
+																<v8:lang>zh</v8:lang>
+																<v8:content>定义数据卸载链接</v8:content>
 															</v8:item>
 														</Title>
 														<ExtendedTooltip name="ДеревоМетаданныхПересчитатьВыгружаемыеПоСсылкеРасширеннаяПодсказка" id="62"/>
@@ -482,40 +512,44 @@
 															<v8:content>Группа выбора объектов</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>BG</v8:lang>
-															<v8:content>Choice Group на обекти</v8:content>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Избор на обекти Група</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>BL</v8:lang>
+															<v8:lang>bl</v8:lang>
 															<v8:content>Група выбару аб'ектаў</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>DE</v8:lang>
-															<v8:content>Auswahlgruppe von Objekten</v8:content>
+															<v8:lang>de</v8:lang>
+															<v8:content>Gruppe Auswahl von Objekten</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>EN</v8:lang>
-															<v8:content>Choice Group of objects</v8:content>
+															<v8:lang>en</v8:lang>
+															<v8:content>Group selection of objects</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>PL</v8:lang>
+															<v8:lang>kk</v8:lang>
+															<v8:content>Группа выбора объектов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
 															<v8:content>Wybór grupy obiektów</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>RO</v8:lang>
-															<v8:content>Alegerea grup de obiecte</v8:content>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Selecție grup de obiecte</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>UK</v8:lang>
-															<v8:content>Група вибору об'єктів</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>TH</v8:lang>
+															<v8:lang>th</v8:lang>
 															<v8:content>เลือกกลุ่มของวัตถุ</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>ZH</v8:lang>
-															<v8:content>对象选择组</v8:content>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Група вибору об'єктів</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>zh</v8:lang>
+															<v8:content>对象组选择</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -524,40 +558,44 @@
 															<v8:content>Группа выбора объектов</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>BG</v8:lang>
-															<v8:content>Choice Group на обекти</v8:content>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Избор на обекти Група</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>BL</v8:lang>
+															<v8:lang>bl</v8:lang>
 															<v8:content>Група выбару аб'ектаў</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>DE</v8:lang>
-															<v8:content>Auswahlgruppe von Objekten</v8:content>
+															<v8:lang>de</v8:lang>
+															<v8:content>Gruppe Auswahl von Objekten</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>EN</v8:lang>
-															<v8:content>Choice Group of objects</v8:content>
+															<v8:lang>en</v8:lang>
+															<v8:content>Group selection of objects</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>PL</v8:lang>
+															<v8:lang>kk</v8:lang>
+															<v8:content>Группа выбора объектов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
 															<v8:content>Wybór grupy obiektów</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>RO</v8:lang>
-															<v8:content>Alegerea grup de obiecte</v8:content>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Selecție grup de obiecte</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>UK</v8:lang>
-															<v8:content>Група вибору об'єктів</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>TH</v8:lang>
+															<v8:lang>th</v8:lang>
 															<v8:content>เลือกกลุ่มของวัตถุ</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>ZH</v8:lang>
-															<v8:content>对象选择组</v8:content>
+															<v8:lang>uk</v8:lang>
+															<v8:content>Група вибору об'єктів</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>zh</v8:lang>
+															<v8:content>对象组选择</v8:content>
 														</v8:item>
 													</ToolTip>
 													<Group>InCell</Group>
@@ -604,39 +642,43 @@
 											<v8:content>Дополнительные объекты для выгрузки</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>BG</v8:lang>
+											<v8:lang>bg</v8:lang>
 											<v8:content>Допълнителни съоръжения за разтоварване</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>BL</v8:lang>
+											<v8:lang>bl</v8:lang>
 											<v8:content>Дадатковыя аб'екты для выгрузкі</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>DE</v8:lang>
-											<v8:content>Weitere Einrichtungen zum Entladen</v8:content>
+											<v8:lang>de</v8:lang>
+											<v8:content>Zu den weiteren Einrichtungen für die Entladung</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>EN</v8:lang>
+											<v8:lang>en</v8:lang>
 											<v8:content>Additional facilities for unloading</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>PL</v8:lang>
-											<v8:content>Dodatkowe urządzenia do rozładunku</v8:content>
+											<v8:lang>kk</v8:lang>
+											<v8:content>Дополнительные объекты для выгрузки</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>RO</v8:lang>
-											<v8:content>Facilități suplimentare de descărcare</v8:content>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Dodatkowe wyposażenie dla rozładunku</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>UK</v8:lang>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Facilități suplimentare pentru descărcare</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>th</v8:lang>
+											<v8:content>สิ่งอำนวยความสะดวกเพิ่มเติมสำหรับขนถ่าย</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
 											<v8:content>Додаткові об'єкти для вивантаження</v8:content>
 										</v8:item>
 										<v8:item>
-											<v8:lang>TH</v8:lang>
-											<v8:content>สิ่งอำนวยความสะดวกเพิ่มเติมสำหรับการขนถ่าย</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>ZH</v8:lang>
+											<v8:lang>zh</v8:lang>
 											<v8:content>卸货其他设施</v8:content>
 										</v8:item>
 									</Title>
@@ -650,39 +692,43 @@
 													<v8:content>Данные</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>BG</v8:lang>
+													<v8:lang>bg</v8:lang>
 													<v8:content>Данни</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>BL</v8:lang>
+													<v8:lang>bl</v8:lang>
 													<v8:content>Дадзеныя</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>DE</v8:lang>
+													<v8:lang>de</v8:lang>
 													<v8:content>Daten</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>EN</v8:lang>
+													<v8:lang>en</v8:lang>
 													<v8:content>Data</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>PL</v8:lang>
+													<v8:lang>kk</v8:lang>
+													<v8:content>Данные</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
 													<v8:content>Dane</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>RO</v8:lang>
+													<v8:lang>ro</v8:lang>
 													<v8:content>Date</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>UK</v8:lang>
-													<v8:content>Дані</v8:content>
-												</v8:item>
-												<v8:item>
-													<v8:lang>TH</v8:lang>
+													<v8:lang>th</v8:lang>
 													<v8:content>ข้อมูล</v8:content>
 												</v8:item>
 												<v8:item>
-													<v8:lang>ZH</v8:lang>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Дані</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>zh</v8:lang>
 													<v8:content>数据</v8:content>
 												</v8:item>
 											</Title>
@@ -725,40 +771,44 @@
 																<v8:content>Добавить запросом...</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>BG</v8:lang>
-																<v8:content>Добави заявка ...</v8:content>
+																<v8:lang>bg</v8:lang>
+																<v8:content>Добави искане ...</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>BL</v8:lang>
+																<v8:lang>bl</v8:lang>
 																<v8:content>Дадаць запытам ...</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>DE</v8:lang>
-																<v8:content>Fügen Anfrage ...</v8:content>
+																<v8:lang>de</v8:lang>
+																<v8:content>Anfrage hinzufügen ...</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>EN</v8:lang>
+																<v8:lang>en</v8:lang>
 																<v8:content>Add request ...</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>PL</v8:lang>
-																<v8:content>Dodaj prośbę ...</v8:content>
+																<v8:lang>kk</v8:lang>
+																<v8:content>Добавить запросом...</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>RO</v8:lang>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Dodaj zapytanie ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ro</v8:lang>
 																<v8:content>Adauga cerere ...</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>UK</v8:lang>
+																<v8:lang>th</v8:lang>
+																<v8:content>เพิ่มการร้องขอ ...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>uk</v8:lang>
 																<v8:content>Додати запитом ...</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>TH</v8:lang>
-																<v8:content>เพิ่มคำขอ ...</v8:content>
-															</v8:item>
-															<v8:item>
-																<v8:lang>ZH</v8:lang>
-																<v8:content>添加的请求......</v8:content>
+																<v8:lang>zh</v8:lang>
+																<v8:content>加入请求......</v8:content>
 															</v8:item>
 														</Title>
 														<ExtendedTooltip name="ДополнительныеОбъектыДляВыгрузкиДобавитьИзЗапросаРасширеннаяПодсказка" id="88"/>
@@ -790,39 +840,43 @@
 																<v8:content>Удалить все</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>BG</v8:lang>
-																<v8:content>Премахване на всички</v8:content>
+																<v8:lang>bg</v8:lang>
+																<v8:content>Премахни всички</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>BL</v8:lang>
+																<v8:lang>bl</v8:lang>
 																<v8:content>Выдаліць усе</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>DE</v8:lang>
-																<v8:content>Entfernen Sie alle</v8:content>
+																<v8:lang>de</v8:lang>
+																<v8:content>Alle entfernen</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>EN</v8:lang>
+																<v8:lang>en</v8:lang>
 																<v8:content>Remove all</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>PL</v8:lang>
+																<v8:lang>kk</v8:lang>
+																<v8:content>Удалить все</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>pl</v8:lang>
 																<v8:content>Usuń wszystko</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>RO</v8:lang>
-																<v8:content>Elimina toate</v8:content>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Eliminați toate</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>UK</v8:lang>
-																<v8:content>Видалити все</v8:content>
-															</v8:item>
-															<v8:item>
-																<v8:lang>TH</v8:lang>
+																<v8:lang>th</v8:lang>
 																<v8:content>ลบทั้งหมด</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>ZH</v8:lang>
+																<v8:lang>uk</v8:lang>
+																<v8:content>Видалити все</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>zh</v8:lang>
 																<v8:content>删除所有</v8:content>
 															</v8:item>
 														</Title>
@@ -964,40 +1018,44 @@
 															<v8:content>В формате FastInfoSet</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>BG</v8:lang>
-															<v8:content>В формат FastInfoSet</v8:content>
+															<v8:lang>bg</v8:lang>
+															<v8:content>В FastInfoSet формат</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>BL</v8:lang>
+															<v8:lang>bl</v8:lang>
 															<v8:content>У фармаце FastInfoSet</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>DE</v8:lang>
+															<v8:lang>de</v8:lang>
 															<v8:content>Im Format FastInfoSet</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>EN</v8:lang>
-															<v8:content>In format FastInfoSet</v8:content>
+															<v8:lang>en</v8:lang>
+															<v8:content>In the format FastInfoSet</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>PL</v8:lang>
-															<v8:content>W formacie FastInfoSet</v8:content>
+															<v8:lang>kk</v8:lang>
+															<v8:content>В формате FastInfoSet</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>RO</v8:lang>
-															<v8:content>În format FastInfoSet</v8:content>
+															<v8:lang>pl</v8:lang>
+															<v8:content>W FastInfoSet formacie</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>UK</v8:lang>
-															<v8:content>У форматі FastInfoSet</v8:content>
+															<v8:lang>ro</v8:lang>
+															<v8:content>În FastInfoSet format</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>TH</v8:lang>
+															<v8:lang>th</v8:lang>
 															<v8:content>ในรูปแบบ FastInfoSet</v8:content>
 														</v8:item>
 														<v8:item>
-															<v8:lang>ZH</v8:lang>
-															<v8:content>在格式FastInfoSet</v8:content>
+															<v8:lang>uk</v8:lang>
+															<v8:content>У форматі FastInfoSet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>zh</v8:lang>
+															<v8:content>格式FastInfoSet</v8:content>
 														</v8:item>
 													</Title>
 													<TitleLocation>Right</TitleLocation>
@@ -1023,39 +1081,43 @@
 							<v8:content>Загрузка</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BG</v8:lang>
+							<v8:lang>bg</v8:lang>
 							<v8:content>Товарене</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BL</v8:lang>
+							<v8:lang>bl</v8:lang>
 							<v8:content>Загрузка</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Verladung</v8:content>
+							<v8:lang>de</v8:lang>
+							<v8:content>Laden</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
+							<v8:lang>en</v8:lang>
 							<v8:content>Loading</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>PL</v8:lang>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Загрузка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
 							<v8:content>Ładowanie</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>RO</v8:lang>
+							<v8:lang>ro</v8:lang>
 							<v8:content>Încărcare</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
+							<v8:lang>th</v8:lang>
+							<v8:content>โหลด</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
 							<v8:content>Завантаження</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>กำลังโหลด</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
+							<v8:lang>zh</v8:lang>
 							<v8:content>载入中</v8:content>
 						</v8:item>
 					</Title>
@@ -1069,40 +1131,44 @@
 									<v8:content>Загружать данные в режиме обмена (ОбменДанными.Загрузка = Истина)</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BG</v8:lang>
-									<v8:content>Качване на данни в режим на обмен (ObmenDannymi.Zagruzka = True)</v8:content>
+									<v8:lang>bg</v8:lang>
+									<v8:content>Изтегляне на данни в замяна (ObmenDannymi.Zagruzka = True)</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BL</v8:lang>
+									<v8:lang>bl</v8:lang>
 									<v8:content>Загружаць дадзеныя ў рэжыме абмену (ОбменДанными.Загрузка = Ісціна)</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>DE</v8:lang>
-									<v8:content>Daten-Upload auf den Austausch-Modus (ObmenDannymi.Zagruzka = True)</v8:content>
+									<v8:lang>de</v8:lang>
+									<v8:content>Download-Daten im Austausch (ObmenDannymi.Zagruzka = True)</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>EN</v8:lang>
-									<v8:content>Upload data to the exchange mode (ObmenDannymi.Zagruzka = True)</v8:content>
+									<v8:lang>en</v8:lang>
+									<v8:content>Download data in exchange (ObmenDannymi.Zagruzka = True)</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>PL</v8:lang>
-									<v8:content>Załadowanie danych do trybu wymiany (ObmenDannymi.Zagruzka = true)</v8:content>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Загружать данные в режиме обмена (ОбменДанными.Загрузка = Истина)</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>RO</v8:lang>
-									<v8:content>Încărcați de date la modul de schimb (ObmenDannymi.Zagruzka = True)</v8:content>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Pobierz dane w zamian (ObmenDannymi.Zagruzka = True)</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>UK</v8:lang>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Descărcați date în schimbul (ObmenDannymi.Zagruzka = True)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ดาวน์โหลดข้อมูลในการแลกเปลี่ยน (ObmenDannymi.Zagruzka = True)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
 									<v8:content>Завантажувати дані в режимі обміну (ОбменДаннимі.Загрузка = Істина)</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>TH</v8:lang>
-									<v8:content>อัพโหลดข้อมูลไปที่โหมดการแลกเปลี่ยน (ObmenDannymi.Zagruzka = True)</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>ZH</v8:lang>
-									<v8:content>上传数据的交换模式（ObmenDannymi.Zagruzka =真）</v8:content>
+									<v8:lang>zh</v8:lang>
+									<v8:content>作为交换下载数据（ObmenDannymi.Zagruzka =真）</v8:content>
 								</v8:item>
 							</Title>
 							<TitleLocation>Right</TitleLocation>
@@ -1118,40 +1184,44 @@
 									<v8:content>Продолжить загрузку объектов в случае возникновения ошибки</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BG</v8:lang>
+									<v8:lang>bg</v8:lang>
 									<v8:content>Продължи товарни съоръжения в случай на грешка</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BL</v8:lang>
+									<v8:lang>bl</v8:lang>
 									<v8:content>Працягнуць загрузку аб'ектаў у выпадку ўзнікнення памылкі</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>DE</v8:lang>
+									<v8:lang>de</v8:lang>
 									<v8:content>Weiter Verladeanlagen im Fehlerfall</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>EN</v8:lang>
+									<v8:lang>en</v8:lang>
 									<v8:content>Continue loading facilities in the event of an error</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>PL</v8:lang>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Продолжить загрузку объектов в случае возникновения ошибки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
 									<v8:content>Kontynuuj urządzeń ładunkowych w przypadku błędu</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>RO</v8:lang>
-									<v8:content>Continua de instalații de încărcare în caz de eroare</v8:content>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Continua instalații de încărcare în caz de eroare</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>UK</v8:lang>
-									<v8:content>Продовж об'єктів у разі виникнення помилки</v8:content>
+									<v8:lang>th</v8:lang>
+									<v8:content>สิ่งอำนวยความสะดวกในการโหลดต่อเนื่องในกรณีที่มีข้อผิดพลาด</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>TH</v8:lang>
-									<v8:content>ต่อสิ่งอำนวยความสะดวกในการโหลดในกรณีที่มีข้อผิดพลาด</v8:content>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Продовжити завантаження об'єктів у разі виникнення помилки</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>ZH</v8:lang>
-									<v8:content>继续装载设施在发生错误的情况下</v8:content>
+									<v8:lang>zh</v8:lang>
+									<v8:content>继续装载设施在错误的情况下</v8:content>
 								</v8:item>
 							</Title>
 							<TitleLocation>Right</TitleLocation>
@@ -1249,39 +1319,43 @@
 								<v8:content>Данные для выгрузки</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BG</v8:lang>
+								<v8:lang>bg</v8:lang>
 								<v8:content>Данни за заустване</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BL</v8:lang>
+								<v8:lang>bl</v8:lang>
 								<v8:content>Дадзеныя для выгрузкі</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>DE</v8:lang>
-								<v8:content>Daten zum Ausstoßen</v8:content>
+								<v8:lang>de</v8:lang>
+								<v8:content>Daten zum Entladen</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>EN</v8:lang>
+								<v8:lang>en</v8:lang>
 								<v8:content>Data for discharging</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>PL</v8:lang>
+								<v8:lang>kk</v8:lang>
+								<v8:content>Данные для выгрузки</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
 								<v8:content>Dane dla rozładowania</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>RO</v8:lang>
-								<v8:content>Date pentru descărcare</v8:content>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Datele pentru descărcare</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>UK</v8:lang>
+								<v8:lang>th</v8:lang>
+								<v8:content>ข้อมูลสำหรับการปฏิบัติ</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
 								<v8:content>Дані для вивантаження</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>TH</v8:lang>
-								<v8:content>ข้อมูลสำหรับการปลดปล่อย</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>ZH</v8:lang>
+								<v8:lang>zh</v8:lang>
 								<v8:content>排放数据</v8:content>
 							</v8:item>
 						</Title>
@@ -1300,39 +1374,43 @@
 								<v8:content>Выгружать</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BG</v8:lang>
+								<v8:lang>bg</v8:lang>
 								<v8:content>Разтоварвам</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BL</v8:lang>
+								<v8:lang>bl</v8:lang>
 								<v8:content>Выгружаць</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>DE</v8:lang>
+								<v8:lang>de</v8:lang>
 								<v8:content>Entladen</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>EN</v8:lang>
+								<v8:lang>en</v8:lang>
 								<v8:content>Unload</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>PL</v8:lang>
+								<v8:lang>kk</v8:lang>
+								<v8:content>Выгружать</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
 								<v8:content>Wyładować</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>RO</v8:lang>
+								<v8:lang>ro</v8:lang>
 								<v8:content>Descărca</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>UK</v8:lang>
-								<v8:content>Вивантажувати</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>TH</v8:lang>
+								<v8:lang>th</v8:lang>
 								<v8:content>ปลดปล่อย</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>ZH</v8:lang>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Вивантажувати</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>zh</v8:lang>
 								<v8:content>卸</v8:content>
 							</v8:item>
 						</Title>
@@ -1352,40 +1430,44 @@
 								<v8:content>Выгружать при необходимости</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BG</v8:lang>
-								<v8:content>Разтоварете ако е необходимо</v8:content>
+								<v8:lang>bg</v8:lang>
+								<v8:content>Оставете при необходимост</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BL</v8:lang>
+								<v8:lang>bl</v8:lang>
 								<v8:content>Выгружаць пры неабходнасці</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>DE</v8:lang>
-								<v8:content>Entladen Sie wenn nötig</v8:content>
+								<v8:lang>de</v8:lang>
+								<v8:content>Entladen bei Notwendigkeit</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>EN</v8:lang>
-								<v8:content>Unload if necessary</v8:content>
+								<v8:lang>en</v8:lang>
+								<v8:content>Unload at necessity</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>PL</v8:lang>
-								<v8:content>Rozładunku, jeśli niezbędne</v8:content>
+								<v8:lang>kk</v8:lang>
+								<v8:content>Выгружать при необходимости</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>RO</v8:lang>
-								<v8:content>Descărca dacă este necesar</v8:content>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Wyładować na konieczność</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>UK</v8:lang>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Descărcați la necesitate</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>th</v8:lang>
+								<v8:content>Unload ที่จำเป็น</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
 								<v8:content>Вивантажувати при необхідності</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>TH</v8:lang>
-								<v8:content>ขนในกรณีที่จำเป็น</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>ZH</v8:lang>
-								<v8:content>如果需要卸载</v8:content>
+								<v8:lang>zh</v8:lang>
+								<v8:content>在卸载必要性</v8:content>
 							</v8:item>
 						</Title>
 						<Type>
@@ -1404,40 +1486,44 @@
 								<v8:content>Индекс картинки</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BG</v8:lang>
-								<v8:content>Pictures Index</v8:content>
+								<v8:lang>bg</v8:lang>
+								<v8:content>Index Pictures</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BL</v8:lang>
+								<v8:lang>bl</v8:lang>
 								<v8:content>Індэкс карцінкі</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>DE</v8:lang>
-								<v8:content>Bilder Index</v8:content>
+								<v8:lang>de</v8:lang>
+								<v8:content>Indexbilder</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>EN</v8:lang>
-								<v8:content>Pictures Index</v8:content>
+								<v8:lang>en</v8:lang>
+								<v8:content>Index Pictures</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>PL</v8:lang>
-								<v8:content>Zdjęcia Główna</v8:content>
+								<v8:lang>kk</v8:lang>
+								<v8:content>Индекс картинки</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>RO</v8:lang>
-								<v8:content>Poze Index</v8:content>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Główna Zdjęcia</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>UK</v8:lang>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Index Fotografii</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>th</v8:lang>
+								<v8:content>ดัชนีรูปภาพ</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
 								<v8:content>Індекс картинки</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>TH</v8:lang>
-								<v8:content>รูปภาพดัชนี</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>ZH</v8:lang>
-								<v8:content>图片索引</v8:content>
+								<v8:lang>zh</v8:lang>
+								<v8:content>指数图片</v8:content>
 							</v8:item>
 						</Title>
 						<Type>
@@ -1456,39 +1542,43 @@
 								<v8:content>Развернут</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BG</v8:lang>
-								<v8:content>Разположените</v8:content>
+								<v8:lang>bg</v8:lang>
+								<v8:content>Внедрена</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>BL</v8:lang>
+								<v8:lang>bl</v8:lang>
 								<v8:content>Разгорнуты</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>DE</v8:lang>
-								<v8:content>Bereit</v8:content>
+								<v8:lang>de</v8:lang>
+								<v8:content>Einsatz</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>EN</v8:lang>
+								<v8:lang>en</v8:lang>
 								<v8:content>Deployed</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>PL</v8:lang>
-								<v8:content>Wdrażane</v8:content>
+								<v8:lang>kk</v8:lang>
+								<v8:content>Развернут</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>RO</v8:lang>
-								<v8:content>Desfășurat</v8:content>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Wdrożone</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>UK</v8:lang>
-								<v8:content>Розгорнуто</v8:content>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Distribuit</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>TH</v8:lang>
-								<v8:content>ที่นำไปใช้</v8:content>
+								<v8:lang>th</v8:lang>
+								<v8:content>นำไปใช้งาน</v8:content>
 							</v8:item>
 							<v8:item>
-								<v8:lang>ZH</v8:lang>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Розгорнуть</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>zh</v8:lang>
 								<v8:content>部署</v8:content>
 							</v8:item>
 						</Title>
@@ -1506,40 +1596,44 @@
 					<v8:content>Имя файла выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Велик разтоварване</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Име изпращането на файла</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Імя файла выгрузкі</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Dateiname Entladen</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Benennen Sie die Datei-Upload</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Filename unloading</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Name the file upload</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Nazwa pliku rozładunek</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Имя файла выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Nume de fișier de descărcare</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Imię przesyłanie plików</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Nume upload fișier</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ชื่ออัปโหลดไฟล์</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Файл вивантаження</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ชื่อไฟล์ที่ขนถ่าย</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>名称卸</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>命名文件上传</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1560,40 +1654,44 @@
 					<v8:content>Период выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Разтоварни период</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Период Discharge</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Перыяд выгрузкі</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Entladen Zeitraum</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Spendezeit</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Unloading period</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Discharge period</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Okres rozładunku</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Период выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Okres absolutorium</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
 					<v8:content>Perioada de descărcare</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>th</v8:lang>
+					<v8:content>ระยะเวลาปลดประจำการ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Період вивантаження</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ขนระยะเวลา</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>卸载周期</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>放电周期</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1610,40 +1708,44 @@
 					<v8:content>Режим выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Режим Discharge</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Режим Разтоварване</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Рэжым выгрузкі</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Discharge-Modus</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Entladen-Modus</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Discharge mode</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Unloading mode</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Tryb rozładowania</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Режим выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Modul de descărcare</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Tryb Rozładunek</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Mod de descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>โหมดการขนถ่าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Режим вивантаження</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>โหมดการปล่อย</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>放电模式</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>卸载模式</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1660,40 +1762,44 @@
 					<v8:content>Тип объектов для выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
+					<v8:lang>bg</v8:lang>
 					<v8:content>Видът на предмети, за да се разтоварят</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Тып аб'ектаў для выгрузкі</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Die Art der Objekte zu entladen</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Die Art von Objekten zu entladen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>The type of objects to unload</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Тип объектов для выгрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
 					<v8:content>Typ obiektów do rozładunku</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
+					<v8:lang>ro</v8:lang>
 					<v8:content>Tipul de obiecte pentru a descărca</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>th</v8:lang>
+					<v8:content>ประเภทของวัตถุที่จะยกเลิกการโหลด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Тип об'єктів для вивантаження</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ประเภทของวัตถุในการขน</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>对象卸载类型</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>对象的类型来卸载</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1707,40 +1813,44 @@
 					<v8:content>Имя файла загрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Изтегляне на име на файл</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Име на файла с мишката на</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Імя файла загрузкі</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Laden Sie den Dateinamen</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Benennen Sie die Datei herunterladen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Download file name</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Name the file download</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Pobierz nazwę pliku</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Имя файла загрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Descărcați nume de fișier</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Imię pobieranie plików</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Nume descărcarea de fișiere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ชื่อการดาวน์โหลดไฟล์</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Файл завантаження</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ดาวน์โหลดชื่อไฟล์</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>下载的文件名</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>命名文件下载</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1761,40 +1871,44 @@
 					<v8:content>Вариант использования консоли запросов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Опция за използване на конзолата заявки</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Възможност за използване на конзолата заявки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Варыянт выкарыстання кансолі запытаў</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Option, um die Konsole-Abfragen</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Die Möglichkeit, mit Hilfe der Konsole Anfragen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Option to use the console queries</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>The option of using the console queries</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Możliwość korzystania z kwerend konsoli</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Вариант использования консоли запросов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Opțiunea de a utiliza interogările consola</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Możliwość stosowania zapytań konsoli</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Opțiunea de a utiliza interogări consola</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ตัวเลือกในการใช้คำสั่งคอนโซล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Варіант використання консолі запитів</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>เลือกที่จะใช้คำสั่งคอนโซล</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>选项​​可以使用控制台查询</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>使用控制台查询的选项</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1816,40 +1930,44 @@
 					<v8:content>Путь к внешней консоли запросов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Път към външни заявки конзола</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Пътят към външни исканията на конзолата</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Шлях да знешняй кансолі запытаў</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Pfad zur externen Konsole Abfragen</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Der Pfad zu den externen Konsole Anfragen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Path to external console queries</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>The path to the external console requests</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Ścieżka do zewnętrznych zapytaniami konsoli</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Путь к внешней консоли запросов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Cale de interogări consola externe</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ścieżka do zewnętrznych wniosków konsoli</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Calea spre cererile consola externe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เส้นทางไปยังการร้องขอคอนโซลภายนอก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Шлях до зовнішньої консолі запитів</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>เส้นทางไปยังคอนโซลคำสั่งภายนอก</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>路径外部控制台查询</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>的路径外部的控制台请求</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1870,39 +1988,43 @@
 					<v8:content>Режим работы на клиенте или на сервере</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Настройката за режим на клиента или сървъра</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Режимът на клиента или сървъра</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Рэжым працы на кліенце або на сэрвэры</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Die Moduseinstellung auf der Client-oder Server</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Die Moduseinstellung auf der Client oder Server</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>The mode setting on the client or server</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Ustawienie trybu na kliencie lub serwerze</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Режим работы на клиенте или на сервере</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ustawienie trybu na klienta lub serwera</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
 					<v8:content>Setarea modului de pe client sau server</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Режим роботи на клієнті або на сервері</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>TH</v8:lang>
+					<v8:lang>th</v8:lang>
 					<v8:content>การตั้งค่าโหมดบนไคลเอ็นต์หรือเซิร์ฟเวอร์</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Режим роботи на клієнті або на сервері</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
 					<v8:content>在客户端或服务器上的模式设置</v8:content>
 				</v8:item>
 			</Title>
@@ -1925,39 +2047,43 @@
 					<v8:content>Режим работы на клиенте</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
+					<v8:lang>bg</v8:lang>
 					<v8:content>Режим на клиента</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Рэжым працы на кліенце</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
+					<v8:lang>de</v8:lang>
 					<v8:content>Modus auf dem Client</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>Mode on the client</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Sposób na kliencie</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Режим работы на клиенте</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Tryb na kliencie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
 					<v8:content>Modul pe client</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>th</v8:lang>
+					<v8:content>โหมดบนไคลเอนต์</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Режим роботи на клієнті</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>โหมดที่ลูกค้า</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>zh</v8:lang>
 					<v8:content>在客户端模式</v8:content>
 				</v8:item>
 			</Title>
@@ -1974,39 +2100,43 @@
 					<v8:content>Выгрузить данные</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Разтоварете данни</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Оставете данни</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Выгрузіць дадзеныя</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
+					<v8:lang>de</v8:lang>
 					<v8:content>Entladen von Daten</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>Unload data</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Rozładować danych</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Выгрузить данные</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Descărcarea de date</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Rozładunku danych</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descărcați date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ยกเลิกการโหลดข้อมูล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Вивантажити дані</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ขนข้อมูล</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>zh</v8:lang>
 					<v8:content>卸载数据</v8:content>
 				</v8:item>
 			</Title>
@@ -2016,39 +2146,43 @@
 					<v8:content>Выгрузить данные</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Разтоварете данни</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Оставете данни</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Выгрузіць дадзеныя</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
+					<v8:lang>de</v8:lang>
 					<v8:content>Entladen von Daten</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>Unload data</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Rozładować danych</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Выгрузить данные</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Descărcarea de date</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Rozładunku danych</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descărcați date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ยกเลิกการโหลดข้อมูล</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Вивантажити дані</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ขนข้อมูล</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>zh</v8:lang>
 					<v8:content>卸载数据</v8:content>
 				</v8:item>
 			</ToolTip>
@@ -2061,39 +2195,43 @@
 					<v8:content>Загрузить данные</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
+					<v8:lang>bg</v8:lang>
 					<v8:content>Изтегляне на данни</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Загрузіць дадзеныя</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Download Daten</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Daten herunterladen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>Download data</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
 					<v8:content>Pobierz dane</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Descărcare a datelor</v8:content>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descărcați date</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>th</v8:lang>
+					<v8:content>ข้อมูลดาวน์โหลด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Завантажити дані</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ดาวน์โหลดข้อมูล</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>zh</v8:lang>
 					<v8:content>下载数据</v8:content>
 				</v8:item>
 			</Title>
@@ -2103,39 +2241,43 @@
 					<v8:content>Загрузить данные</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
+					<v8:lang>bg</v8:lang>
 					<v8:content>Изтегляне на данни</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Загрузіць дадзеныя</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Download Daten</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Daten herunterladen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>Download data</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
 					<v8:content>Pobierz dane</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Descărcare a datelor</v8:content>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descărcați date</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>th</v8:lang>
+					<v8:content>ข้อมูลดาวน์โหลด</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Завантажити дані</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ดาวน์โหลดข้อมูล</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>zh</v8:lang>
 					<v8:content>下载数据</v8:content>
 				</v8:item>
 			</ToolTip>
@@ -2148,39 +2290,43 @@
 					<v8:content>Пересчитать выгружаемые по ссылке</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
+					<v8:lang>bg</v8:lang>
 					<v8:content>Изчислява се разтоварват връзката</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
-					<v8:content>Пералічыць Спампаваныя па спасылцы</v8:content>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Пералічыць выгружае па спасылцы</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Berechnen Sie die unbelasteten Link</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Berechnen Sie den unbelasteten Link</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>Calculate the unloaded link</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Пересчитать выгружаемые по ссылке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
 					<v8:content>Oblicz wyładowane linku</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Calcula pe link-ul descărcat</v8:content>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Calculați link-ul descărcat</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>th</v8:lang>
+					<v8:content>คำนวณการเชื่อมโยงการขนถ่าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Перерахувати Вивантажувані за посиланням</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>คำนวณการเชื่อมโยงการยกเลิกการโหลด</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>zh</v8:lang>
 					<v8:content>计算卸载链接</v8:content>
 				</v8:item>
 			</Title>
@@ -2190,39 +2336,43 @@
 					<v8:content>Пересчитать выгружаемые по ссылке</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
+					<v8:lang>bg</v8:lang>
 					<v8:content>Изчислява се разтоварват връзката</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
-					<v8:content>Пералічыць Спампаваныя па спасылцы</v8:content>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Пералічыць выгружае па спасылцы</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Berechnen Sie die unbelasteten Link</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Berechnen Sie den unbelasteten Link</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>Calculate the unloaded link</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Пересчитать выгружаемые по ссылке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
 					<v8:content>Oblicz wyładowane linku</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Calcula pe link-ul descărcat</v8:content>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Calculați link-ul descărcat</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>th</v8:lang>
+					<v8:content>คำนวณการเชื่อมโยงการขนถ่าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Перерахувати Вивантажувані за посиланням</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>คำนวณการเชื่อมโยงการยกเลิกการโหลด</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>zh</v8:lang>
 					<v8:content>计算卸载链接</v8:content>
 				</v8:item>
 			</ToolTip>
@@ -2240,40 +2390,44 @@
 					<v8:content>Очистить дополнительные объекты выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Ясно допълнителни съоръжения за разтоварване</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Ясно допълнителни обекти разтоварване</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Ачысціць дадатковыя аб'екты выгрузкі</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Klar zusätzliche Löscheinrichtungen</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Klar weitere Objekte Entladen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Clear additional unloading facilities</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear additional objects unloading</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Wyczyść dodatkowe udogodnienia rozładunek</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Очистить дополнительные объекты выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Clare facilități suplimentare descărcare</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wyczyść dodatkowe obiekty rozładunku</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Șterge obiecte suplimentare descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>วัตถุเพิ่มเติมที่ชัดเจนขนถ่าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Очистити додаткові об'єкти вивантаження</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ชัดเจนสิ่งอำนวยความสะดวกขนถ่ายเพิ่มเติม</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>清除额外的装卸设施</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>卸载清除其他对象</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -2282,40 +2436,44 @@
 					<v8:content>Очистить дополнительные объекты выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Ясно допълнителни съоръжения за разтоварване</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Ясно допълнителни обекти разтоварване</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Ачысціць дадатковыя аб'екты выгрузкі</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Klar zusätzliche Löscheinrichtungen</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Klar weitere Objekte Entladen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Clear additional unloading facilities</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear additional objects unloading</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Wyczyść dodatkowe udogodnienia rozładunek</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Очистить дополнительные объекты выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Clare facilități suplimentare descărcare</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wyczyść dodatkowe obiekty rozładunku</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Șterge obiecte suplimentare descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>วัตถุเพิ่มเติมที่ชัดเจนขนถ่าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Очистити додаткові об'єкти вивантаження</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>ชัดเจนสิ่งอำนวยความสะดวกขนถ่ายเพิ่มเติม</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>清除额外的装卸设施</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>卸载清除其他对象</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОчиститьДополнительныеОбъектыВыгрузки</Action>
@@ -2328,40 +2486,44 @@
 					<v8:content>Добавить из запроса</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Добавяне на искане от</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Добави запитването</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Дадаць з запыту</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Fügen Anfrage</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Fügen Sie die Abfrage</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Add request from</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add the query</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Dodaj żądania od</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Добавить из запроса</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Adauga cerere de la</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dodaj do zapytania</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Adauga interogare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เพิ่มแบบสอบถาม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Додати із запиту</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>เพิ่มการร้องขอจาก</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>添加请求从</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>加入查询</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -2370,40 +2532,44 @@
 					<v8:content>Добавить из запроса</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Добавяне на искане от</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Добави запитването</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Дадаць з запыту</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Fügen Anfrage</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Fügen Sie die Abfrage</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Add request from</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add the query</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Dodaj żądania od</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Добавить из запроса</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Adauga cerere de la</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dodaj do zapytania</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Adauga interogare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เพิ่มแบบสอบถาม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Додати із запиту</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>เพิ่มการร้องขอจาก</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>添加请求从</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>加入查询</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьИзЗапроса</Action>
@@ -2415,40 +2581,44 @@
 					<v8:content>Настройки консоли запросов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Console Settings запитвания</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Искания Console Настройки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Налады кансолі запытаў</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Konsoleneinstellungen Abfragen</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Konsoleneinstellungen Anfragen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Console Settings queries</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Console Settings requests</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Zapytania ustawienia konsoli</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Настройки консоли запросов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Interogări consola de setări</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wnioski Ustawienia konsoli</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Solicitări consola de setări</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คอนโซลการร้องขอการตั้งค่า</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Налаштування консолі запитів</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>คำสั่งการตั้งค่าคอนโซล</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>控制台设置查询</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>控制台设置请求</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -2457,40 +2627,44 @@
 					<v8:content>Настройки консоли запросов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Console Settings запитвания</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Искания Console Настройки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Налады кансолі запытаў</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Konsoleneinstellungen Abfragen</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Konsoleneinstellungen Anfragen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Console Settings queries</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Console Settings requests</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Zapytania ustawienia konsoli</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Настройки консоли запросов</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Interogări consola de setări</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wnioski Ustawienia konsoli</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Solicitări consola de setări</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คอนโซลการร้องขอการตั้งค่า</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Налаштування консолі запитів</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>คำสั่งการตั้งค่าคอนโซล</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>控制台设置查询</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>控制台设置请求</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>НастройкиКонсолиЗапросов</Action>

@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Group>Horizontal</Group>
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="81">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>bg</v8:lang>
+						<v8:content>Близо</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>bl</v8:lang>
+						<v8:content>Блізка</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>In der Nähe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>pl</v8:lang>
+						<v8:content>Blisko</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Închide</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>th</v8:lang>
+						<v8:content>ใกล้</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>zh</v8:lang>
+						<v8:content>关闭</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>kk</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Закрити</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="82"/>
+			</Button>
+			<Button name="ФормаИзменитьФорму" id="79">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="80"/>
+			</Button>
+			<Button name="ФормаСправка" id="77">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="78"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="КолонкаСлева" id="139">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонка слева</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Лява колона</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Левая калонка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Linke Spalte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Left column</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Lewa kolumna</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Coloana din stânga</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คอลัมน์ด้านซ้าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>左栏</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Left column</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Колонка зліва</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонка слева</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Лява колона</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Левая калонка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Linke Spalte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Left column</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Lewa kolumna</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Coloana din stânga</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คอลัมน์ด้านซ้าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>左栏</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Left column</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Колонка зліва</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КолонкаСлеваРасширеннаяПодсказка" id="140"/>
+			<ChildItems>
+				<UsualGroup name="ГоризонтСверху" id="141">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Горизонт сверху</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Horizon началото</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Гарызонт лепшых</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Horizon oben</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Horizon top</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Horyzont góry</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Horizon top</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ขอบฟ้าด้านบน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>地平线上方</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Horizon top</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Горизонт зверху</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Горизонт сверху</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Horizon началото</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Гарызонт лепшых</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Horizon oben</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Horizon top</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Horyzont góry</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Horizon top</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>ขอบฟ้าด้านบน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>地平线上方</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Horizon top</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Горизонт зверху</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГоризонтСверхуРасширеннаяПодсказка" id="142"/>
+					<ChildItems>
+						<UsualGroup name="УчетРеализации" id="101">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Учет реализации</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>Счетоводство за продажба</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Ўлік продажу</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Bilanzierung zum Verkauf</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Accounting for sale</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Rachunkowość na sprzedaż</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Contabilitatea de vânzare</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>การบัญชีสำหรับการขาย</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>占销售</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Accounting for sale</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Облік реалізації</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Учет реализации</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>Счетоводство за продажба</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Ўлік продажу</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Bilanzierung zum Verkauf</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Accounting for sale</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Rachunkowość na sprzedaż</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Contabilitatea de vânzare</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>การบัญชีสำหรับการขาย</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>占销售</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Accounting for sale</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Облік реалізації</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="УчетРеализацииРасширеннаяПодсказка" id="102"/>
+							<ChildItems>
+								<Button name="ЖурналДокументовДокументыКлиентаОткрытьСписок" id="97">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>DocumentJournal.ДокументыКлиента.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.Клиенты</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ЖурналДокументовДокументыКлиентаОткрытьСписокРасширеннаяПодсказка" id="98"/>
+								</Button>
+								<Button name="ДокументРасходыТовараОткрытьСписок" id="85">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Document.РасходыТовара.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.КрасныйМинус</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ДокументРасходыТовараОткрытьСписокРасширеннаяПодсказка" id="86"/>
+								</Button>
+								<Button name="ДокументВыполненияРаботОткрытьСписок" id="87">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Document.ВыполненияРабот.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.ВыполненияРабот</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ДокументВыполненияРаботОткрытьСписокРасширеннаяПодсказка" id="88"/>
+								</Button>
+								<Button name="ДокументОказанияУслугЗаВремяУслугиЗаВремя" id="89">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Document.ОказанияУслугЗаВремя.Command.УслугиЗаВремя</CommandName>
+									<ExtendedTooltip name="ДокументОказанияУслугЗаВремяУслугиЗаВремяРасширеннаяПодсказка" id="90"/>
+								</Button>
+								<Button name="ДокументОтчетКомиссионераОткрытьСписок" id="117">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Document.ОтчетКомиссионера.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.ПередачаНаКомиссию</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ДокументОтчетКомиссионераОткрытьСписокРасширеннаяПодсказка" id="118"/>
+								</Button>
+								<Button name="ДокументРасходыТовараЗаказыКлиентов" id="113">
+									<Type>UsualButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="ДокументРасходыТовараЗаказыКлиентовРасширеннаяПодсказка" id="114"/>
+								</Button>
+								<Button name="ДокументПланыПродажОткрытьСписок" id="119">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Document.ПланыПродаж.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.План</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ДокументПланыПродажОткрытьСписокРасширеннаяПодсказка" id="120"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="УчетТоваров" id="83">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Учет товаров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>Счетоводно отчитане на стоки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Ўлік тавараў,</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Bilanzierung von Waren</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Accounting for goods</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Księgowanie towarów</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>De contabilitate pentru produse</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>การบัญชีสำหรับสินค้า</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>占商品</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Accounting for goods</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Облік товарів</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Учет товаров</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>Счетоводно отчитане на стоки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Ўлік тавараў,</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Bilanzierung von Waren</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Accounting for goods</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Księgowanie towarów</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>De contabilitate pentru produse</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>การบัญชีสำหรับสินค้า</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>占商品</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Accounting for goods</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Облік товарів</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="УчетТоваровРасширеннаяПодсказка" id="84"/>
+							<ChildItems>
+								<Button name="ЖурналДокументовДокументыПоставщикаОткрытьСписок" id="107">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>DocumentJournal.ДокументыПоставщика.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.Поставщики</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ЖурналДокументовДокументыПоставщикаОткрытьСписокРасширеннаяПодсказка" id="108"/>
+								</Button>
+								<Button name="ДокументПоступленияТовараОткрытьСписок" id="99">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Document.ПоступленияТовара.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.ЗеленыйПлюс</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ДокументПоступленияТовараОткрытьСписокРасширеннаяПодсказка" id="100"/>
+								</Button>
+								<Button name="ДокументПеремещенияТовараОткрытьСписок" id="95">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Document.ПеремещенияТовара.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.Склад</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ДокументПеремещенияТовараОткрытьСписокРасширеннаяПодсказка" id="96"/>
+								</Button>
+								<Button name="ДокументУстановкиЦенОткрытьСписок" id="109">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Document.УстановкиЦен.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.УстановкаЦен</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ДокументУстановкиЦенОткрытьСписокРасширеннаяПодсказка" id="110"/>
+								</Button>
+								<Button name="ДокументПоступленияТовараЗаказыПоставщикам" id="115">
+									<Type>UsualButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="ДокументПоступленияТовараЗаказыПоставщикамРасширеннаяПодсказка" id="116"/>
+								</Button>
+								<Button name="ЖурналДокументовДокументыДвиженийТовараОткрытьСписок" id="125">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>DocumentJournal.ДокументыДвиженийТовара.StandardCommand.OpenList</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.Номенклатура</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ЖурналДокументовДокументыДвиженийТовараОткрытьСписокРасширеннаяПодсказка" id="126"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="УчетДенег" id="105">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учет денег</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Счетоводно отчитане на пари</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Ўлік грошай</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Bilanzierung von Geld</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting for money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Księgowanie pieniędzy</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>De contabilitate pentru bani</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การบัญชีสำหรับเงิน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>占资金</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Accounting for money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Облік грошей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учет денег</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Счетоводно отчитане на пари</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Ўлік грошай</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Bilanzierung von Geld</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting for money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Księgowanie pieniędzy</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>De contabilitate pentru bani</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การบัญชีสำหรับเงิน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>占资金</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Accounting for money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Облік грошей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="УчетДенегРасширеннаяПодсказка" id="106"/>
+					<ChildItems>
+						<Button name="ДокументДвиженияДенегОткрытьСписок" id="91">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Document.ДвиженияДенег.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.УчетДенег</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ДокументДвиженияДенегОткрытьСписокРасширеннаяПодсказка" id="92"/>
+						</Button>
+						<Button name="ДокументДвиженияДенегДокументыЗаработнойПлаты" id="137">
+							<Type>UsualButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ДокументДвиженияДенегДокументыЗаработнойПлатыРасширеннаяПодсказка" id="138"/>
+						</Button>
+						<Button name="ДокументПланыДоходовИРасходовДенегОткрытьСписок" id="121">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Document.ПланыДоходовИРасходовДенег.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ПланыДоходовИРасходов</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ДокументПланыДоходовИРасходовДенегОткрытьСписокРасширеннаяПодсказка" id="122"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Прочее" id="103">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочее</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Други</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Іншыя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Andere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Others</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Inne</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Alții</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คนอื่น ๆ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>他人</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Others</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Інше</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочее</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Други</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Іншыя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Andere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Others</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Inne</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Alții</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คนอื่น ๆ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>他人</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Others</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Інше</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПрочееРасширеннаяПодсказка" id="104"/>
+			<ChildItems>
+				<Button name="ЖурналДокументовПолныйЖурналОткрытьСписок" id="127">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>DocumentJournal.ПолныйЖурнал.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.DocumentJournal</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ЖурналДокументовПолныйЖурналОткрытьСписокРасширеннаяПодсказка" id="128"/>
+				</Button>
+				<Button name="ДокументКомплектацияОткрытьСписок" id="143">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Document.Комплектация.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Комплектация</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ДокументКомплектацияОткрытьСписокРасширеннаяПодсказка" id="144"/>
+				</Button>
+				<Button name="ДокументКорректировкиИРегистрацияОстатковОткрытьСписок" id="93">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Document.КорректировкиИРегистрацияОстатков.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Корректировки</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ДокументКорректировкиИРегистрацияОстатковОткрытьСписокРасширеннаяПодсказка" id="94"/>
+				</Button>
+				<Button name="ДокументКорректировкиИРегистрацияОстатковВзаимозачетыДолгаКонтрагентов" id="131">
+					<Type>UsualButton</Type>
+					<CommandName>Document.КорректировкиИРегистрацияОстатков.Command.ВзаимозачетыДолгаКонтрагентов</CommandName>
+					<ExtendedTooltip name="ДокументКорректировкиИРегистрацияОстатковВзаимозачетыДолгаКонтрагентовРасширеннаяПодсказка" id="132"/>
+				</Button>
+				<Button name="ДокументИнвентаризацииОткрытьСписок" id="111">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Document.Инвентаризации.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Инвентаризация</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ДокументИнвентаризацииОткрытьСписокРасширеннаяПодсказка" id="112"/>
+				</Button>
+				<Button name="ДокументТаблицыДанныхОткрытьСписок" id="129">
+					<Type>UsualButton</Type>
+					<CommandName>Document.ТаблицыДанных.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="ДокументТаблицыДанныхОткрытьСписокРасширеннаяПодсказка" id="130"/>
+				</Button>
+				<Button name="ОтчетЖурналСобытийЖурналСобытий" id="133">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ЖурналСобытий.Command.ЖурналСобытий</CommandName>
+					<ExtendedTooltip name="ОтчетЖурналСобытийЖурналСобытийРасширеннаяПодсказка" id="134"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+</Form>

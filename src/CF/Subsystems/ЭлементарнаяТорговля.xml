@@ -9,10 +9,6 @@
 					<v8:content>Элементарная торговля</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Elementary sale</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Vânzare elementar</v8:content>
 				</v8:item>
@@ -25,16 +21,8 @@
 					<v8:content>初级销售</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Елементарна торгівля</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>BG</v8:lang>
 					<v8:content>Начално продажба</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Elementary Verkauf</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>PL</v8:lang>
@@ -47,6 +35,18 @@
 				<v8:item>
 					<v8:lang>th</v8:lang>
 					<v8:content>ขายประถม</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Elementary sale</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Елементарна торгівля</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Grund Verkauf</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -163,7 +163,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЭлементарнаяТорговля32</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗаставкаЭлементарнаяТорговля</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Пользователи</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольЗапросов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольЗапросовДляУправляемогоПриложения</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonAttribute.Ответственный</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonAttribute.ДатаРедакции</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonAttribute.ДатаСоздания</xr:Item>
@@ -484,7 +484,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЛистА5Повернутый</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ЕстьПринтер</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЕстьПринтер</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.Полный</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.РазрешеноПриниматьПриРеализацииДеньгиСразуВНесколькихВалютах</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОбработкаИАнализ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ТаблицыДанных</xr:Item>
@@ -527,11 +526,64 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СпособыДоставки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.НеСпрашиватьПодтверждениеПриВыходеИзПрограммы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаВопроса</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВыдыРазмеров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыРазмеров</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Ассортимент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОбменВалют</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Edit</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.directions</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЗначенияЯчеекТаблицДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПодсветитьФонПолей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РеестрДвиженияДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДатаВремяПоследнегоЗапросаКНовойВерсии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ТекстЗаголовкаСчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.УчитыватьЛокациюКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.УчитыватьЛокациюКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Локации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьРегионыДляУчетаСтранАЛокацииГородов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Локация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.МакетДоступныхРегионовДляЗагрузкиГородовВКлассификатореПоЯзыкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.МакетКлассификаторГородов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.МакетКлассификаторСтран</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДетализироватьОтчетРуководителю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПериодыОтчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоВаловойПрибылиОтносительноПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборСправочника</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоТаблицамДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РазмерШрифтаЗаголовкаЭтикетки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЯзыкПечатныхФорм</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЗапретитьОдинаковыеНомераТелефоновУКлиентовИПоставщиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЧислоЭтикетокНаЛистеПоВертикали</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаВыбораЯзыка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВыводитьВРасходномДокументеАртикулВНаименованииЧерезЗапятую</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РаспределятьДополнительныеРасходыПропорциональноКоличествуАНеСумме</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СебестоимостьТоваровБезКоличественногоУчетаИУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СменаОсновнойВалютыУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВключитьПерсонифицированныйУчетВаловойПрибыли</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ФормулаДополнительнойСтрокиЭтикетки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДополнительнаяСтрокаЭтикетки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РазмещениеДополнительнойСтрокиЭтикетки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВторойВидЦенДляЭтикетки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РазмерШрифтаДополнительнойСтрокиЭтикетки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НеПредупреждатьЕслиКлиентНеДоплатилИлиПереплатил</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПроизвольнаяПечатьТаблицыТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПечатьТаблицыТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ФормироватьНовыйШтрихКодТолькоВЕгоОтсутствии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВыборОбработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РаспределятьДополнительныеРасходыПропорциональноНаЕдиницуНоменклатурыНезависимоОтЕеСтоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДополнительныеРасходы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетОЧистойПрибыли</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Пол</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОтображатьКомандыСнизу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВыводитьВПечатиПеремещенияАртикулыИСуммы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьСторнированиеДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьСторнированиеДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Сторно</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Сторнирован</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДобавлятьИмяПользователяВЗаголовокОкна</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЗапретитьУстановкуКурсаЗаднимЧислом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоСторнированнымДокументам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПричиныСторнированияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СторнированныеДокументы</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>

@@ -15,40 +15,44 @@
 						<v8:content>Выбрать результат</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>BG</v8:lang>
-						<v8:content>Подреди резултатите</v8:content>
+						<v8:lang>bg</v8:lang>
+						<v8:content>Изберете резултати</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>BL</v8:lang>
+						<v8:lang>bl</v8:lang>
 						<v8:content>Выбраць вынік</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>DE</v8:lang>
-						<v8:content>Ergebnisse sortieren</v8:content>
+						<v8:lang>de</v8:lang>
+						<v8:content>Wählen Sie Ergebnisse</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>EN</v8:lang>
-						<v8:content>Order results</v8:content>
+						<v8:lang>en</v8:lang>
+						<v8:content>Select results</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>PL</v8:lang>
-						<v8:content>Wyniki Zamówienie</v8:content>
+						<v8:lang>kk</v8:lang>
+						<v8:content>Выбрать результат</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>RO</v8:lang>
-						<v8:content>Rezultate de ordine</v8:content>
+						<v8:lang>pl</v8:lang>
+						<v8:content>Wybierz wyniki</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>UK</v8:lang>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Selectați rezultate</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>th</v8:lang>
+						<v8:content>ผลการเลือก</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
 						<v8:content>Вибрати результат</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>TH</v8:lang>
-						<v8:content>ผลการสั่งซื้อ</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>ZH</v8:lang>
-						<v8:content>为了结果</v8:content>
+						<v8:lang>zh</v8:lang>
+						<v8:content>选择结果</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ФормаДобавитьВРезультатВыгрузкиРасширеннаяПодсказка" id="51"/>
@@ -62,39 +66,43 @@
 						<v8:content>Выполнить</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>BG</v8:lang>
+						<v8:lang>bg</v8:lang>
 						<v8:content>Тичам</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>BL</v8:lang>
+						<v8:lang>bl</v8:lang>
 						<v8:content>Выканаць</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>DE</v8:lang>
+						<v8:lang>de</v8:lang>
 						<v8:content>Run</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>EN</v8:lang>
+						<v8:lang>en</v8:lang>
 						<v8:content>Run</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>PL</v8:lang>
+						<v8:lang>kk</v8:lang>
+						<v8:content>Выполнить</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>pl</v8:lang>
 						<v8:content>Run</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>RO</v8:lang>
+						<v8:lang>ro</v8:lang>
 						<v8:content>Alerga</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>UK</v8:lang>
-						<v8:content>Виконати</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>TH</v8:lang>
+						<v8:lang>th</v8:lang>
 						<v8:content>วิ่ง</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>ZH</v8:lang>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Виконати</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>zh</v8:lang>
 						<v8:content>运行</v8:content>
 					</v8:item>
 				</Title>
@@ -107,6 +115,10 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
 	<ChildItems>
 		<Table name="ПараметрыЗапроса" id="3">
 			<Representation>List</Representation>
@@ -164,40 +176,44 @@
 							<v8:content>Необходимо установить флажок для параметров значения которых будут задаваться выражениями на встроенном языке.</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Вие трябва да изберете параметрите, чиито стойности ще бъдат дадени от изразите в сценария.</v8:content>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Вие трябва да изберете параметрите, чиито стойности са определени от изразите в сценария.</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>Неабходна ўсталяваць сцяжок для параметраў значэнні якіх будуць задавацца выразамі на ўбудаваным мове.</v8:content>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Неабходна ўсталяваць сцяжок для параметраў значэння якіх будуць задавацца выразамі на ўбудаваным мове.</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Sie müssen die Parameter, deren Werte durch die Ausdrücke in dem Skript gegeben werden soll.</v8:content>
+							<v8:lang>de</v8:lang>
+							<v8:content>Sie müssen die Parameter, deren Werte durch die Ausdrücke im Skript angegebenen auszuwählen.</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>You need to select the parameters whose values ​​will be given by the expressions in the script.</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>You need to select the parameters whose values ​​are specified by the expressions in the script.</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Musisz wybrać parametry, których wartości będą przez wyrażenia w skrypcie.</v8:content>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Необходимо установить флажок для параметров значения которых будут задаваться выражениями на встроенном языке.</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Ai nevoie pentru a selecta parametrii ale căror valori vor fi date de expresiile în script-ul.</v8:content>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Musisz wybrać parametry, których wartości są określone przez wyrażeń w skrypcie.</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Необхідно встановити прапорець для параметрів значення яких будуть здаватися виразами на вбудованій мові.</v8:content>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Ai nevoie pentru a selecta parametrii ale căror valori sunt specificate de expresiile din scenariu.</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>คุณต้องเลือกพารามิเตอร์ที่มีค่าจะถูกกำหนดโดยการแสดงออกในสคริปต์</v8:content>
+							<v8:lang>th</v8:lang>
+							<v8:content>คุณต้องเลือกพารามิเตอร์ที่มีค่าที่ระบุไว้โดยการแสดงออกในสคริปต์</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>您需要选择其值将由表达式在脚本中给出的参数。</v8:content>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Необхідно встановити прапорець для параметрів значення яких будуть задаватися виразами на вбудованій мові.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>您需要选择在脚本中的表达式指定其值的参数。</v8:content>
 						</v8:item>
 					</ToolTip>
 					<EditMode>EnterOnInput</EditMode>
@@ -225,39 +241,43 @@
 					<v8:content>Текст запроса</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Текст Query</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Query текст</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Тэкст запыту</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
+					<v8:lang>de</v8:lang>
 					<v8:content>Abfragetext</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>Query text</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Tekst zapytania</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Текст запроса</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Text de interogare</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Treść zapytania</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Текст запиту</v8:content>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Text interogare</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
+					<v8:lang>th</v8:lang>
 					<v8:content>ข้อความแบบสอบถาม</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Текст запиту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
 					<v8:content>查询文本</v8:content>
 				</v8:item>
 			</Title>
@@ -286,39 +306,43 @@
 									<v8:content>Запрос не выполнен</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BG</v8:lang>
-									<v8:content>Заявката не бе успешна</v8:content>
+									<v8:lang>bg</v8:lang>
+									<v8:content>Неуспешна заявка</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>BL</v8:lang>
+									<v8:lang>bl</v8:lang>
 									<v8:content>Запыт не выкананы</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>DE</v8:lang>
+									<v8:lang>de</v8:lang>
 									<v8:content>Die Anforderung ist fehlgeschlagen</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>EN</v8:lang>
+									<v8:lang>en</v8:lang>
 									<v8:content>Request failed</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>PL</v8:lang>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Запрос не выполнен</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
 									<v8:content>Żądanie nie powiodło się</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>RO</v8:lang>
-									<v8:content>Solicitarea nu a reușit</v8:content>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Solicitarea a eșuat</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>UK</v8:lang>
-									<v8:content>Запит не вдався</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>TH</v8:lang>
+									<v8:lang>th</v8:lang>
 									<v8:content>ขอล้มเหลว</v8:content>
 								</v8:item>
 								<v8:item>
-									<v8:lang>ZH</v8:lang>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Запит не</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
 									<v8:content>请求失败</v8:content>
 								</v8:item>
 							</Title>
@@ -336,40 +360,44 @@
 							<v8:content>Группа результат запроса</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Резултат Group заявка</v8:content>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Група резултат на заявката</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BL</v8:lang>
+							<v8:lang>bl</v8:lang>
 							<v8:content>Група вынік запыту</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Gruppe Abfrageergebnis</v8:content>
+							<v8:lang>de</v8:lang>
+							<v8:content>Konzern Ergebnis der Abfrage</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Group query result</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group result of the query</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Wynik kwerendy grupy</v8:content>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Группа результат запроса</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Rezultate de interogare grup</v8:content>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Wynik Grupy zapytania</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Rezultatul Grupul interogare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>กลุ่มผลของแบบสอบถาม</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
 							<v8:content>Група результат запиту</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>ผลการสอบถามกลุ่ม</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>集团查询结果</v8:content>
+							<v8:lang>zh</v8:lang>
+							<v8:content>查询的结果组</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -378,40 +406,44 @@
 							<v8:content>Группа результат запроса</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Резултат Group заявка</v8:content>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Група резултат на заявката</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BL</v8:lang>
+							<v8:lang>bl</v8:lang>
 							<v8:content>Група вынік запыту</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Gruppe Abfrageergebnis</v8:content>
+							<v8:lang>de</v8:lang>
+							<v8:content>Konzern Ergebnis der Abfrage</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>Group query result</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group result of the query</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Wynik kwerendy grupy</v8:content>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Группа результат запроса</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Rezultate de interogare grup</v8:content>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Wynik Grupy zapytania</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Rezultatul Grupul interogare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>กลุ่มผลของแบบสอบถาม</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
 							<v8:content>Група результат запиту</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>ผลการสอบถามกลุ่ม</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>集团查询结果</v8:content>
+							<v8:lang>zh</v8:lang>
+							<v8:content>查询的结果组</v8:content>
 						</v8:item>
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаРезультатЗапросаРасширеннаяПодсказка" id="43"/>
@@ -433,40 +465,44 @@
 					<v8:content>Документ текст запроса</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Документ текст заявка</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Заявка документ Текст</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Дакумент тэкст запыту</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
+					<v8:lang>de</v8:lang>
 					<v8:content>Document Abfragetext</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
+					<v8:lang>en</v8:lang>
 					<v8:content>Document query text</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Документ текст запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
 					<v8:content>Tekst zapytania dokument</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Document text interogare</v8:content>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Text interogare Document</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Документ текст запиту</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>TH</v8:lang>
+					<v8:lang>th</v8:lang>
 					<v8:content>ข้อความแบบสอบถามเอกสาร</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>文档的查询文本</v8:content>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Документ текст запиту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>文档查询文本</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -480,40 +516,44 @@
 					<v8:content>Параметры запроса</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Параметри на заявката</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Опции Запитване</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Параметры запыту</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Abfrageparameter</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bestelloptionen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Query parameters</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Request Options</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Parametry zapytania</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Параметры запроса</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Parametri de interogare</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opcje żądania</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Opțiuni de cerere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>ขอตัวเลือก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Параметри запиту</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>พารามิเตอร์</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>查询参数</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>请求选项</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -527,39 +567,43 @@
 							<v8:content>Имя параметра</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BG</v8:lang>
-							<v8:content>Име на параметър</v8:content>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Името на параметъра</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BL</v8:lang>
+							<v8:lang>bl</v8:lang>
 							<v8:content>Імя параметру</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
+							<v8:lang>de</v8:lang>
 							<v8:content>Parametername</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
+							<v8:lang>en</v8:lang>
 							<v8:content>Parameter name</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>PL</v8:lang>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Имя параметра</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
 							<v8:content>Nazwa parametru</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Nume parametru</v8:content>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Numele parametru</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Ім'я параметра</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
+							<v8:lang>th</v8:lang>
 							<v8:content>ชื่อพารามิเตอร์</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>ZH</v8:lang>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Ім'я параметра</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
 							<v8:content>参数名称</v8:content>
 						</v8:item>
 					</Title>
@@ -578,39 +622,43 @@
 							<v8:content>Значение параметра</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BG</v8:lang>
+							<v8:lang>bg</v8:lang>
 							<v8:content>Стойност на параметъра</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BL</v8:lang>
+							<v8:lang>bl</v8:lang>
 							<v8:content>Значэнне параметру</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
+							<v8:lang>de</v8:lang>
 							<v8:content>Parameterwert</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
+							<v8:lang>en</v8:lang>
 							<v8:content>Parameter value</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>PL</v8:lang>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Значение параметра</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
 							<v8:content>Wartość parametru</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Valoare parametru</v8:content>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Valoarea parametrului</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>Значення параметра</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
+							<v8:lang>th</v8:lang>
 							<v8:content>ค่าพารามิเตอร์</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>ZH</v8:lang>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Значення параметра</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
 							<v8:content>参数值</v8:content>
 						</v8:item>
 					</Title>
@@ -623,40 +671,44 @@
 							<v8:content>В</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BG</v8:lang>
+							<v8:lang>bg</v8:lang>
+							<v8:content>B</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>У</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>B</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>B</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
 							<v8:content>В</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BL</v8:lang>
-							<v8:content>У</v8:content>
+							<v8:lang>pl</v8:lang>
+							<v8:content>B</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>In</v8:content>
+							<v8:lang>ro</v8:lang>
+							<v8:content>B</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
-							<v8:content>In</v8:content>
+							<v8:lang>th</v8:lang>
+							<v8:content>B</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>W</v8:content>
+							<v8:lang>uk</v8:lang>
+							<v8:content>В</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>În</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
-							<v8:content>У</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>TH</v8:lang>
-							<v8:content>ใน</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ZH</v8:lang>
-							<v8:content>在</v8:content>
+							<v8:lang>zh</v8:lang>
+							<v8:content>B</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -670,39 +722,43 @@
 							<v8:content>Тип параметра</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BG</v8:lang>
+							<v8:lang>bg</v8:lang>
 							<v8:content>Параметър Type</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>BL</v8:lang>
+							<v8:lang>bl</v8:lang>
 							<v8:content>Тып параметру</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>DE</v8:lang>
+							<v8:lang>de</v8:lang>
 							<v8:content>Parameter Typ</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>EN</v8:lang>
+							<v8:lang>en</v8:lang>
 							<v8:content>Parameter Type</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>PL</v8:lang>
-							<v8:content>Typ parametru</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>RO</v8:lang>
-							<v8:content>Tip parametru</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>UK</v8:lang>
+							<v8:lang>kk</v8:lang>
 							<v8:content>Тип параметра</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>TH</v8:lang>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Typ parametru</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Tip Parametru</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
 							<v8:content>ประเภทพารามิเตอร์</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>ZH</v8:lang>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Тип параметра</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
 							<v8:content>参数类型</v8:content>
 						</v8:item>
 					</Title>
@@ -714,46 +770,50 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="ВыполнитьЗапрос" id="1">
+		<Command name="ВыполнитьЗапрос" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Выполнить запрос</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Изпълнете заявката</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Run Query</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Выканаць запыт</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Führen Sie die Abfrage</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Abfrage ausführen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Run the query</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Run Query</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Uruchom kwerendę</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Executați interogarea</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Uruchom zapytanie</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Виконати запит</v8:content>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Executare interogare</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
+					<v8:lang>th</v8:lang>
 					<v8:content>เรียกใช้แบบสอบถาม</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виконати запит</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
 					<v8:content>运行查询</v8:content>
 				</v8:item>
 			</Title>
@@ -763,39 +823,43 @@
 					<v8:content>Выполнить запрос</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Изпълнете заявката</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Run Query</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Выканаць запыт</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Führen Sie die Abfrage</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Abfrage ausführen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Run the query</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Run Query</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Uruchom kwerendę</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Executați interogarea</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Uruchom zapytanie</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Виконати запит</v8:content>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Executare interogare</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
+					<v8:lang>th</v8:lang>
 					<v8:content>เรียกใช้แบบสอบถาม</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>ZH</v8:lang>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виконати запит</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
 					<v8:content>运行查询</v8:content>
 				</v8:item>
 			</ToolTip>
@@ -806,47 +870,51 @@
 			<Action>ВыполнитьЗапрос</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
-		<Command name="ЗаполнитьПараметры" id="2">
+		<Command name="ЗаполнитьПараметры" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Заполнить параметры</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Попълнете параметрите</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Попълнете Options</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Запоўніць параметры</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Tragen Sie die Parameter</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Füllen Optionen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Fill in the parameters</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill Options</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Wypełnij parametry</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Заполнить параметры</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Completați în parametrii</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opcje wypełnienia</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Completați Opțiuni</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>กรอกตัวเลือก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Заповнити параметри</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>กรอกข้อมูลในพารามิเตอร์</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>在参数填</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>填充选项</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -855,40 +923,44 @@
 					<v8:content>Заполнить параметры</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Попълнете параметрите</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Попълнете Options</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Запоўніць параметры</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Tragen Sie die Parameter</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>Füllen Optionen</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Fill in the parameters</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill Options</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Wypełnij parametry</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Заполнить параметры</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Completați în parametrii</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opcje wypełnienia</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Completați Opțiuni</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>กรอกตัวเลือก</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Заповнити параметри</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>กรอกข้อมูลในพารามิเตอร์</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>在参数填</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>填充选项</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -905,40 +977,44 @@
 					<v8:content>Добавить в результат выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Добави в резултат от изхвърлянето</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Добави в резултат на разтоварване</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Дадаць у вынік выгрузкі</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Zum Ergebnis der Entladungs</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>In der Folge der Entladung</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Add to the result of the discharge</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add to the result of unloading</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Dodawać na skutek wyładowania</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Добавить в результат выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Adăugați la rezultatul descărcării</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dodanie wyniku wyładowania</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Adăugați la rezultatul descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เพิ่มเป็นผลมาจากการขนถ่าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Додати в результат вивантаження</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>เพิ่มผลของการปล่อย</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>添加到放电的结果</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>添加到卸货的结果</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -947,40 +1023,44 @@
 					<v8:content>Добавить в результат выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BG</v8:lang>
-					<v8:content>Добави в резултат от изхвърлянето</v8:content>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Добави в резултат на разтоварване</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>BL</v8:lang>
+					<v8:lang>bl</v8:lang>
 					<v8:content>Дадаць у вынік выгрузкі</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Zum Ergebnis der Entladungs</v8:content>
+					<v8:lang>de</v8:lang>
+					<v8:content>In der Folge der Entladung</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Add to the result of the discharge</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add to the result of unloading</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>PL</v8:lang>
-					<v8:content>Dodawać na skutek wyładowania</v8:content>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Добавить в результат выгрузки</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>RO</v8:lang>
-					<v8:content>Adăugați la rezultatul descărcării</v8:content>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dodanie wyniku wyładowania</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>UK</v8:lang>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Adăugați la rezultatul descărcare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>เพิ่มเป็นผลมาจากการขนถ่าย</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
 					<v8:content>Додати в результат вивантаження</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>TH</v8:lang>
-					<v8:content>เพิ่มผลของการปล่อย</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ZH</v8:lang>
-					<v8:content>添加到放电的结果</v8:content>
+					<v8:lang>zh</v8:lang>
+					<v8:content>添加到卸货的结果</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>

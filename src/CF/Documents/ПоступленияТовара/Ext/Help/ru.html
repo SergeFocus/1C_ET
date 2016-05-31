@@ -1,17 +1,16 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.16663"></meta><style>A {
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17420"></meta><style>A {
 	TEXT-DECORATION: none
 }
 </style></head><body>
-<p align="justify"><strong><font size="3">Документ "ПРИХОД ТОВАРА", "ПРИЕМ ВОЗВРАТА ОТ ПОКУПАТЕЛЯ", "ОПРИХОДОВАНИЕ ТОВАРА"</font></strong></p>
+<p align="justify"><strong><font size="3">Документ "Поступление ТОВАРА", "ПРИЕМ ВОЗВРАТА ОТ ПОКУПАТЕЛЯ", "ОПРИХОДОВАНИЕ ТОВАРА"</font></strong></p>
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <div><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Это документ в общем о поступлении, поэтому в нем также несколько видов:</font></span></div></blockquote>
 <div>
 <ul><li><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Если указан Поставщик, - это прием товаров и услуг от поставщика. Если указана сумма выбытия денег - оплата поставщику, то это поступление товаров. Может быть заполнена таблица дополнительных сопутствующих расходов.</font></span> 
 </li><li><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Если указан Клиент то это документ о приеме товаров назад от клиента. Если указана сумма - возврат покупателя и передача ему денег.</font></span> 
-</li><li><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Если контрагент не указан, то это "оприходование" товара.</font></span></li></ul></div>
+</li><li><span style="FONT-SIZE: 18px; BACKGROUND-COLOR: transparent"><font size="2">Если контрагент не указан, то это "оприходование" товара (безвозмездное принятие к учету). Оприходованный товар не отражается в отчетах по закупкам.</font></span></li></ul></div>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p align="justify"><font size="2">Для оприходования можно указывать товар типа "Набор". При этом будут оприходованы все его элементы по тем закупочным ценам, которые у них установлены. Однако рекомендуется все же приходовать компоненты состава набора отдельными самомстоятельными позициями, чтобы фиксировать фактическую цену при поступлении и их действительный остаток.</font></p>
-<p align="justify"><font size="2"></font> </p>
 <p align="justify"><font size="2">При рассчете с клиентом или поставщиком прямо в документе Поступление Товара (при использовании подсистемы Учета Денег), форма оплаты берется из настроек программы. Если расчет производится в иной форме оплаты, или расчет выходит сложным (например, движение по нескольким валютам), то следует создать на основании этого документа новый документ движения денег и заполнить там форму оплаты или табличную часть для отражения действительно фактического движения денег</font></p></blockquote>
 <p align="justify"><font size="2"></font> </p>
 <p align="justify"><font size="2"><strong>ВОЗВРАТ товара от покупателя</strong></font></p>
@@ -28,6 +27,7 @@
 <p align="justify"><font size="2">В<a href="Report.ДвиженияДокумента/Help"> отчете по движению</a> документа всегда можно проверить правильно ли поняла Вас программа.</font></p>
 <p align="justify"><font size="2">Курс документа можно скорректировать, если взаиморасчеты с клиентом или поставщиком принимаются по иному курсу, чем установленный общий курс дня. Однако оприходование товаров производится без учета курса документа. Если Вид цен оприходования "валютный", то товары оприходуются с учетом текущего общего курса валюты. </font></p>
 <p align="justify"><font size="2">Коррекция курса так же будет учтена при анализе собственных остатков денег выраженных в базовой валюте.</font></p>
+<p dir="ltr" align="justify"><font size="2"><a href="Catalog.ЕдиницыИзмерения/Help">Единицу измерения</a> (при учете единиц измерения) следует указывать только в том случае, если в этот раз она отличная от основной единицы измерения номенклатуры. Это правило для всех документов конфигурации.</font></p>
 <p align="justify"><font size="2">По кнопке F10 доступен диалог быстрого ввода товара с количеством. При его использовании достаточно нажать F10, затем ввести сканером или вручную штрих код (если </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">он используется</font></a><font size="2">) или выбрать номенклатуру, указать Количество и F10 - завершить ввод данных.</font></p>
 <p align="justify"><font size="2">По кнопке F11 ввод по Штрих-коду вручную (если </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">он используется</font></a><font size="2">), например для случаев когда сканер кода отключен или  не читает код.</font></p>
 <p align="justify"><font size="2">Если указать номенклатуру набор, в составе которого есть <a href="Catalog.СерииНоменклатуры/Help">серийная</a> номенклатура, то программа заполнит таблицу всеми элементами набора, чтобы была возможность указать серию для каждой компоненты.</font></p>

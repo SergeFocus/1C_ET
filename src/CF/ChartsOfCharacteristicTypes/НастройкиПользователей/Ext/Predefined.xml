@@ -70,6 +70,15 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="ff6901d6-91d0-41c2-90be-3c6f41f736e1">
+				<Name>ВсеРеквизитыШапкиДокументовВПервуюЗакладкуРежимБольшихТаблицДляМалыхМониторов</Name>
+				<Code>00129</Code>
+				<Description>Все реквизиты шапки документов в первую закладку (режим больших таблиц для малых мониторов)</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="72f5cb88-6449-4a11-96c9-1d28f06756e5">
 				<Name>ДемонстрироватьИнформационнуюКолонкуОстатокТовараСУчетомДокументаВНепроведенныхДокументах</Name>
 				<Code>00011</Code>
@@ -92,6 +101,15 @@
 				<Name>ДемонстрироватьПриВыбореНоменклатурыПриРасходованииИПеремещенииТолькоСОстатками</Name>
 				<Code>00012</Code>
 				<Description>Демонстрировать при выборе номенклатуры при расходовании и перемещении только с остатками</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5397240d-8c30-48e8-8ef5-c275387ac936">
+				<Name>ДобавлятьИмяПользователяВЗаголовокОкна</Name>
+				<Code>00152</Code>
+				<Description>Добавлять имя пользователя в заголовок окна</Description>
 				<Type>
 					<v8:Type>xs:boolean</v8:Type>
 				</Type>
@@ -142,10 +160,28 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="1405c830-876c-4873-b493-805aeb401468">
+				<Name>ОтображатьКомандыСнизу</Name>
+				<Code>00138</Code>
+				<Description>Отображать команды снизу</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="f1723d03-bafd-40a7-992c-4d0ace45a01c">
 				<Name>ПоддерживатьИныеЯзыкиКромеРусского</Name>
 				<Code>00060</Code>
 				<Description>Поддерживать иные языки кроме русского</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="bcd08afe-189d-4f1a-ba29-f711f0daea97">
+				<Name>ПодсветитьФонПолей</Name>
+				<Code>00128</Code>
+				<Description>Подсветить фон полей (каждое поле выделить цветом)</Description>
 				<Type>
 					<v8:Type>xs:boolean</v8:Type>
 				</Type>
@@ -339,6 +375,15 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="03cc3329-8661-4398-8cf4-b834ede18cdd">
+				<Name>ВидЦенРеализатораПоУмолчанию</Name>
+				<Code>00151</Code>
+				<Description>Вид цен реализатора по умолчанию</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыЦен</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="810aadfa-4005-471c-a13f-194019ddfb64">
 				<Name>КлиентПоУмолчанию</Name>
 				<Code>00014</Code>
@@ -376,6 +421,28 @@
 				<Description>Организация по умолчанию</Description>
 				<Type>
 					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7f9e73f8-5995-46c5-b33e-6a1520432469">
+				<Name>ОтветственныйЗаДоставкуПоУмолчанию</Name>
+				<Code>NF129</Code>
+				<Description>Ответственный за доставку по-умолчанию</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Сотрудники</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="74a15bf7-c0dc-47c1-a236-c512476667e2">
+				<Name>ПапкаСИзображениями</Name>
+				<Code>NF128</Code>
+				<Description>Папка с изображениями Номенклатуры по-умолчанию</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
@@ -478,6 +545,19 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="b694d949-61fc-467b-b362-2232b0c04542">
+				<Name>ТипРаботПоУмолчанию</Name>
+				<Code>00143</Code>
+				<Description>Тип работ по умолчанию</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="e73eaea1-0bf0-4003-8f8e-a864b1ef877d">
 				<Name>ТипШтрихКодов</Name>
 				<Code>00063</Code>
@@ -548,6 +628,15 @@
 						<v8:FractionDigits>3</v8:FractionDigits>
 						<v8:AllowedSign>Any</v8:AllowedSign>
 					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b492839c-353c-4698-a11c-1876f180af56">
+				<Name>НеПредупреждатьЕслиКлиентНеДоплатилИлиПереплатил</Name>
+				<Code>00150</Code>
+				<Description>Не предупреждать, если клиент не доплатил или переплатил</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
@@ -624,12 +713,70 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="21668f98-a874-4e03-9e03-e4cf44f7b99f">
+				<Name>ВторойВидЦенДляЭтикетки</Name>
+				<Code>NF133</Code>
+				<Description>Второй вид цен для этикетки</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыЦен</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="22a00b3f-2ed4-41c9-b0d4-c36f0d209acf">
+				<Name>ВывестиДополнительнуюСтрокуЭтикетки</Name>
+				<Code>NF131</Code>
+				<Description>Вывести дополнительную строку этикетки</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="eeed20e9-f3b0-4b8a-86d1-a939d7bde403">
+				<Name>ВыводитьВПечатиПеремещенияАртикулыИСуммы</Name>
+				<Code>00139</Code>
+				<Description>Выводить в печати перемещения артикулы и суммы</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="d978dbfe-c509-4aa9-ae99-dbede767e80a">
+				<Name>ВыводитьВРасходномДокументеАртикулВНаименованииЧерезЗапятую</Name>
+				<Code>00142</Code>
+				<Description>Выводить в расходном документе артикул в наименовании через запятую</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="acb920ab-3d58-4a0f-9705-16805333147e">
 				<Name>ВыводитьВРасходномДокументеЕдиницуИзмеренияОтдельнойКолонкой</Name>
 				<Code>NF096</Code>
 				<Description>Выводить в расходном документе единицу измерения отдельной колонкой</Description>
 				<Type>
 					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="40b32c98-c4a8-4300-891e-8b2b7895c69b">
+				<Name>ДетализироватьОтчетРуководителю</Name>
+				<Code>00131</Code>
+				<Description>Детализировать отчет руководителю</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e34db7a1-6bb0-41f8-8871-c84f4fe50364">
+				<Name>ДополнительнаяСтрокаЭтикетки</Name>
+				<Code>NF132</Code>
+				<Description>Дополнительная строка этикетки</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
@@ -717,6 +864,34 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="6ac8b200-e60c-4606-9d11-50b58cd78bf5">
+				<Name>РазмерШрифтаДополнительнойСтрокиЭтикетки</Name>
+				<Code>NF134</Code>
+				<Description>Размер шрифта дополнительной строки этикетки</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8bf873a0-1502-4bd4-8be1-17aeff32f5de">
+				<Name>РазмерШрифтаЗаголовкаЭтикетки</Name>
+				<Code>00130</Code>
+				<Description>Размер шрифта текста этикетки</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="b1fa6194-9a64-44e5-901e-691c173ac119">
 				<Name>РазрешеноПриниматьПриРеализацииДеньгиСразуВНесколькихВалютах</Name>
 				<Code>00084</Code>
@@ -765,12 +940,85 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="2c218023-0a5b-4076-9c93-ae24df7f4e11">
+				<Name>ТекстУсловииПродажиРегламентированногоДокумента</Name>
+				<Code>NF137</Code>
+				<Description>Текст условии продажи регламентированного документа</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="001d8451-26ee-47dd-aa7a-5998bd3b61c2">
 				<Name>ФорматЭтикетки</Name>
 				<Code>00042</Code>
 				<Description>Формат этикетки</Description>
 				<Type>
 					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ФорматыЭтикеток</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="14093634-6eb5-4015-b427-94fc6fe89f6d">
+				<Name>ЦенаТоваровСодержитНДС</Name>
+				<Code>NF135</Code>
+				<Description>Цена товаров содержит НДС</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a62a624e-9db0-4876-a885-7221a82d6bd2">
+				<Name>ЧислоДнейДействительностиСчетаФактурыДляОплаты</Name>
+				<Code>NF136</Code>
+				<Description>Число дней действительности счета фактуры для оплаты</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="3dc1e63c-6853-44ec-a839-7baca3283940">
+				<Name>ЧислоЭтикетокНаЛистеПоВертикали</Name>
+				<Code>00141</Code>
+				<Description>Число этикеток на листе по вертикали</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="032deb9d-c1f7-4340-aac9-8ffe74bdf19c">
+				<Name>ЧислоЭтикетокНаЛистеПоГоризонтали</Name>
+				<Code>00140</Code>
+				<Description>Число этикеток на листе по горизонтали</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5aac097a-aedf-42ef-8d83-81ceeb89c177">
+				<Name>ЯзыкПечатныхФорм</Name>
+				<Code>00133</Code>
+				<Description>Язык печатных форм</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Языки</v8:Type>
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
@@ -918,6 +1166,15 @@
 				<Name>ОтключитьПланированиеВДокументеВыполненияРабот</Name>
 				<Code>00076</Code>
 				<Description>Отключить планирование в документе выполнение работ</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ad595e77-d656-41d7-80d7-1d32eab97662">
+				<Name>ПараметрыЗначенийДополнительныхРеквизитовДатыПредставлятьВГодах</Name>
+				<Code>NF130</Code>
+				<Description>Параметры значений дополнительных реквизитов даты представлять в годах</Description>
 				<Type>
 					<v8:Type>xs:boolean</v8:Type>
 				</Type>

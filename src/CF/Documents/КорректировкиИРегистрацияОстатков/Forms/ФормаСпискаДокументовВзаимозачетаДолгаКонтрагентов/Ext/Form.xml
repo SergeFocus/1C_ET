@@ -6,10 +6,6 @@
 			<v8:content>Документы взаимозачета долга контрагентов</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>en</v8:lang>
-			<v8:content>Documents offsetting debt counterparties</v8:content>
-		</v8:item>
-		<v8:item>
 			<v8:lang>ro</v8:lang>
 			<v8:content>Documente de compensare contrapartidele datoriei</v8:content>
 		</v8:item>
@@ -22,16 +18,8 @@
 			<v8:content>抵销债务对手的文件</v8:content>
 		</v8:item>
 		<v8:item>
-			<v8:lang>uk</v8:lang>
-			<v8:content>Документи взаємозаліку боргу контрагентів</v8:content>
-		</v8:item>
-		<v8:item>
 			<v8:lang>BG</v8:lang>
 			<v8:content>Документи прихващане дългови контрагенти</v8:content>
-		</v8:item>
-		<v8:item>
-			<v8:lang>DE</v8:lang>
-			<v8:content>Dokumente Verrechnung Schulden Kontrahenten</v8:content>
 		</v8:item>
 		<v8:item>
 			<v8:lang>PL</v8:lang>
@@ -45,6 +33,18 @@
 			<v8:lang>th</v8:lang>
 			<v8:content>เอกสารการหักล้างหนี้คู่สัญญา</v8:content>
 		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Documents offsetting debt counterparties</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>de</v8:lang>
+			<v8:content>Dokumente Verrechnung Schulden Kontrahenten</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>uk</v8:lang>
+			<v8:content>Документи взаємозаліку боргу контрагентів</v8:content>
+		</v8:item>
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
@@ -52,20 +52,22 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
+			<Button name="ФормаНовыйДокументВзаимозачетаКонтрагентов" id="71">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.НовыйДокументВзаимозачетаКонтрагентов</CommandName>
+				<ExtendedTooltip name="ФормаНовыйДокументВзаимозачетаКонтрагентовРасширеннаяПодсказка" id="72"/>
+			</Button>
 			<Button name="ФормаСоздать" id="29">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<Representation>PictureAndText</Representation>
-				<DefaultButton>true</DefaultButton>
 				<OnlyInAllActions>true</OnlyInAllActions>
 				<CommandName>Form.Item.Список.StandardCommand.Create</CommandName>
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
 						<v8:content>Новый ВзаимоЗачет контрагентов</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>EN</v8:lang>
-						<v8:content>New contractors Offsetting</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>ro</v8:lang>
@@ -80,16 +82,8 @@
 						<v8:content>抵销新承办商</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>uk</v8:lang>
-						<v8:content>Новий взаємозаліків контрагентів</v8:content>
-					</v8:item>
-					<v8:item>
 						<v8:lang>BG</v8:lang>
 						<v8:content>Компенсиране на нови изпълнители</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>DE</v8:lang>
-						<v8:content>Aufrechnung neuen Vertragspartner</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>PL</v8:lang>
@@ -102,6 +96,18 @@
 					<v8:item>
 						<v8:lang>th</v8:lang>
 						<v8:content>คู่สัญญาตาข่ายใหม่</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>New netting counterparties</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>New Kontrahenten Netting</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Новий взаємозаліків контрагентів</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="30"/>
@@ -152,10 +158,6 @@
 						<v8:content>За период</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>en</v8:lang>
-						<v8:content>Over a period</v8:content>
-					</v8:item>
-					<v8:item>
 						<v8:lang>ro</v8:lang>
 						<v8:content>Peste o perioadă</v8:content>
 					</v8:item>
@@ -168,16 +170,8 @@
 						<v8:content>过了一段</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>uk</v8:lang>
-						<v8:content>За період</v8:content>
-					</v8:item>
-					<v8:item>
 						<v8:lang>BG</v8:lang>
 						<v8:content>През определен период</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>DE</v8:lang>
-						<v8:content>Über einen Zeitraum</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>PL</v8:lang>
@@ -190,6 +184,18 @@
 					<v8:item>
 						<v8:lang>th</v8:lang>
 						<v8:content>ในช่วง</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Over a period</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>Über einen Zeitraum</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>За період</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="36"/>
@@ -227,24 +233,12 @@
 						<v8:content>Зачыніць</v8:content>
 					</v8:item>
 					<v8:item>
-						<v8:lang>DE</v8:lang>
-						<v8:content>Schließen</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>EN</v8:lang>
-						<v8:content>Close</v8:content>
-					</v8:item>
-					<v8:item>
 						<v8:lang>PL</v8:lang>
 						<v8:content>Blisko</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>RO</v8:lang>
 						<v8:content>Închide</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>UK</v8:lang>
-						<v8:content>Закрити</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>TH</v8:lang>
@@ -257,6 +251,18 @@
 					<v8:item>
 						<v8:lang>kk</v8:lang>
 						<v8:content>Жап-</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>In der Nähe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Закрити</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="48"/>
@@ -298,24 +304,12 @@
 					<v8:content>Група гарызонт каманд</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Horizon Group-Teams</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Horizon Group teams</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Kluby Horizon Group</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>RO</v8:lang>
 					<v8:content>Echipele Horizon Group</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Група горизонт команд</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>TH</v8:lang>
@@ -328,6 +322,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Топ команд көкжиегі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Horizon Group teams</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Horizon Group-Teams</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група горизонт команд</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -344,24 +350,12 @@
 					<v8:content>Група гарызонт каманд</v8:content>
 				</v8:item>
 				<v8:item>
-					<v8:lang>DE</v8:lang>
-					<v8:content>Horizon Group-Teams</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>EN</v8:lang>
-					<v8:content>Horizon Group teams</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>PL</v8:lang>
 					<v8:content>Kluby Horizon Group</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>RO</v8:lang>
 					<v8:content>Echipele Horizon Group</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>UK</v8:lang>
-					<v8:content>Група горизонт команд</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>TH</v8:lang>
@@ -374,6 +368,18 @@
 				<v8:item>
 					<v8:lang>kk</v8:lang>
 					<v8:content>Топ команд көкжиегі</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Horizon Group teams</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Horizon Group-Teams</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група горизонт команд</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
@@ -393,10 +399,6 @@
 							<v8:content>Форма группа глоб</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Form a group of Globe</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>ro</v8:lang>
 							<v8:content>Formează un grup de Globe</v8:content>
 						</v8:item>
@@ -409,16 +411,8 @@
 							<v8:content>地球形成一组</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Форма група глоб</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Образуват група от Globe</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Bilden eine Gruppe von Globe</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -431,6 +425,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>แบบกลุ่มของโลก</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Form a group of Globe</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Bilden eine Gruppe von Globe</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Форма група глоб</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -439,10 +445,6 @@
 							<v8:content>Форма группа глоб</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Form a group of Globe</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>ro</v8:lang>
 							<v8:content>Formează un grup de Globe</v8:content>
 						</v8:item>
@@ -455,16 +457,8 @@
 							<v8:content>地球形成一组</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Форма група глоб</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Образуват група от Globe</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Bilden eine Gruppe von Globe</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -477,6 +471,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>แบบกลุ่มของโลก</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Form a group of Globe</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Bilden eine Gruppe von Globe</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Форма група глоб</v8:content>
 						</v8:item>
 					</ToolTip>
 					<HorizontalStretch>false</HorizontalStretch>
@@ -517,6 +523,57 @@
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Item.Список.StandardCommand.OutputList</CommandName>
 						<ExtendedTooltip name="СписокКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="56"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюСоздать" id="73">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Create</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать документ взаимозачета</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>bg</v8:lang>
+								<v8:content>Създайте документ офсет</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>bl</v8:lang>
+								<v8:content>Стварыць дакумент ўзаемазаліку</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>Erstellen Sie ein Dokument-Offset</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Create a document offset</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>kk</v8:lang>
+								<v8:content>Создать документ взаимозачета</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Tworzenie dokumentu przesunięcia</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Creați un document de compensare</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>th</v8:lang>
+								<v8:content>สร้างเอกสารชดเชย</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>Створити документ взаємозаліку</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>zh</v8:lang>
+								<v8:content>创建一个文件偏移量</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокКонтекстноеМенюСоздатьРасширеннаяПодсказка" id="74"/>
 					</Button>
 				</ChildItems>
 			</ContextMenu>
@@ -611,16 +668,18 @@
 					<ContextMenu name="НомерКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="10"/>
 				</LabelField>
+				<CheckBoxField name="Сторный" id="75">
+					<DataPath>Список.Сторный</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СторныйКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="СторныйРасширеннаяПодсказка" id="77"/>
+				</CheckBoxField>
 				<LabelField name="ТовараНаСумму" id="23">
 					<DataPath>Список.ТовараНаСумму</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>На сумму</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>To the amount of</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ro</v8:lang>
@@ -635,16 +694,8 @@
 							<v8:content>的量</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>На суму</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>В размер на</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Um die Menge an</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -657,6 +708,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>กับปริมาณของ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>To the amount of</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Auf die Menge an</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>На суму</v8:content>
 						</v8:item>
 					</Title>
 					<TitleBackColor>#FFFFF5</TitleBackColor>
@@ -673,10 +736,6 @@
 							<v8:content>Деньги</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Money</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>ro</v8:lang>
 							<v8:content>Bani</v8:content>
 						</v8:item>
@@ -689,16 +748,8 @@
 							<v8:content>钱</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Гроші</v8:content>
-						</v8:item>
-						<v8:item>
 							<v8:lang>BG</v8:lang>
 							<v8:content>Пари</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>DE</v8:lang>
-							<v8:content>Geld</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>PL</v8:lang>
@@ -711,6 +762,18 @@
 						<v8:item>
 							<v8:lang>th</v8:lang>
 							<v8:content>เงิน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Geld</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Гроші</v8:content>
 						</v8:item>
 					</Title>
 					<Width>12</Width>
@@ -845,16 +908,36 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументКорректировкиИРегистрацияОстатков.Ссылка,
+	ДокументКорректировкиИРегистрацияОстатков.ПометкаУдаления,
+	ДокументКорректировкиИРегистрацияОстатков.Номер,
+	ДокументКорректировкиИРегистрацияОстатков.Дата,
+	ДокументКорректировкиИРегистрацияОстатков.Проведен,
+	ДокументКорректировкиИРегистрацияОстатков.ВидЦен,
+	ДокументКорректировкиИРегистрацияОстатков.ТовараНаСумму,
+	ДокументКорректировкиИРегистрацияОстатков.ТовараВКоличестве,
+	ДокументКорректировкиИРегистрацияОстатков.УстанавливатьЦенуУказаннуюВТаблицеВКачествеЦеныДляРеализацииТовара,
+	ДокументКорректировкиИРегистрацияОстатков.ОстатокДенег,
+	ДокументКорректировкиИРегистрацияОстатков.ОстатокЗарплаты,
+	ДокументКорректировкиИРегистрацияОстатков.ВзаимозачетДолгаКонтрагентов,
+	ДокументКорректировкиИРегистрацияОстатков.НеУстанавливатьЗависимыеЦены,
+	ДокументКорректировкиИРегистрацияОстатков.Комментарий,
+	ДокументКорректировкиИРегистрацияОстатков.НеПроводить,
+	ДокументКорректировкиИРегистрацияОстатков.Сторный,
+	ДокументКорректировкиИРегистрацияОстатков.ДокументСторно,
+	ДокументКорректировкиИРегистрацияОстатков.Ответственный,
+	ДокументКорректировкиИРегистрацияОстатков.ДатаСоздания,
+	ДокументКорректировкиИРегистрацияОстатков.ДатаРедакции
+ИЗ
+	Документ.КорректировкиИРегистрацияОстатков КАК ДокументКорректировкиИРегистрацияОстатков
+ГДЕ
+	ДокументКорректировкиИРегистрацияОстатков.ВзаимозачетДолгаКонтрагентов = ИСТИНА</QueryText>
 				<MainTable>Document.КорректировкиИРегистрацияОстатков</MainTable>
 				<ListSettings>
 					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">ВзаимозачетДолгаКонтрагентов</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
@@ -863,6 +946,29 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Дата</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Сторный</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Сторный</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#FFEBEB</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
@@ -870,4 +976,106 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="НовыйДокументВзаимозачетаКонтрагентов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый документ взаимозачета контрагентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Новите документи за нетиране контрагентите</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Новы дакумент ўзаемазаліку контрагентаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Das neue Dokument Netting Kontrahenten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The new document netting counterparties</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nowi kontrahenci kompensowania dokument</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Noile contractuali document de compensare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คู่สัญญาตาข่ายเอกสารใหม่</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>新文档网对手</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Новый документ взаимозачета контрагентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Новий документ взаємозаліку контрагентів</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый документ взаимозачета контрагентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Новите документи за нетиране контрагентите</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Новы дакумент ўзаемазаліку контрагентаў</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Das neue Dokument Netting Kontrahenten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The new document netting counterparties</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nowi kontrahenci kompensowania dokument</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Noile contractuali document de compensare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คู่สัญญาตาข่ายเอกสารใหม่</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>新文档网对手</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Новый документ взаимозачета контрагентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Новий документ взаємозаліку контрагентів</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НовыйДокументВзаимозачетаКонтрагентов</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
 </Form>

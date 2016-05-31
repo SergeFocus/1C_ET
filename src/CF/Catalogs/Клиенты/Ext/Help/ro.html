@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17420"></meta><style>
+
+
+Un {text-decoration: none}</style></head><body>
+<p><font size="3"><strong>Director "CLIENTI</strong></font><font size="3"><strong>"</strong></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Proiectat pentru fișiere client. Utilizat în cazul în care </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">incluse clienti contabile</font></a><font size="2">.</font></p>
+<p><font size="2">Oferă client predefinit "Persoană fizică" pentru înregistrarea de date privind vânzările non-personale. De exemplu, cele pentru care nu este nevoie pentru a ține evidența datoriei. Puteți să-l redenumiți.</font></p>
+<p><font size="2">Director ierarhie. Că este, clienții pot fi grupate.</font></p></blockquote>
+<p><font size="2">Detalii:</font></p>
+<p><strong><a href="Catalog.ВидыЦен/Help"><font size="2">Vezi Pret</font></a></strong><font size="2"> (Cu excepția cazului </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">Posistema inclus</font></a><font size="2"> Mecanisme complexe de contabilitate prețurile) determină tipul de preț, în mod implicit </font><a href="Document.РасходыТовара/Help"><font size="2">punerea în aplicare a</font></a><font size="2"> bunuri de la client. Vezi Prețul poate atribui aceeași pentru întregul grup de clienți.</font></p>
+<p><strong><a href="Catalog.Регионы/Help"><font size="2">Regiune</font></a></strong><font size="2"> (Cu excepția cazului </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">inclus contabilitate</font></a><font size="2"> regiuni) determină locația Clientului. În conformitate cu această caracteristică, puteți clienti de grup în rapoarte.</font></p>
+<p><font size="2"><strong>Reducere</strong> - (<a href="CommonForm.НастройкиБазыДанных/Help">dacă este activat</a> reduceri de înregistrare) stabilește procentul personal discount pentru Client. În cazul în care acest procent este stabilit, apoi de vânzare </font><a href="Catalog.Номенклатура/Help"><font size="2">Nomenclatură</font></a><font size="2">În carduri care arată, de asemenea, reducerea procentuală, programul alege cel mai mare discount procentual. Procent de reducere pot fi atribuite la un grup de clienti.</font></p>
+<p><font size="2"><strong>Adresa</strong>,<strong>Telefon</strong>,<strong>De Intreprindere</strong>,<strong>Statutul juridic</strong>,<strong>E-mail, detalii de plată fără numerar</strong> - Informații suplimentare despre client.</font></p>
+<p><strong><a href="Catalog.Склады/Help"><font size="2">Depozit</font></a><font size="2"> Client</font></strong><font size="2"></font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2"> Când subsistemul</font></a><font size="2"> "Contabilitate Warehouse" vă permite să specificați depozit implicit pentru Client. În acest caz, alegerea de documente Clientului, acest depozit va fi instalat automat.</font></p>
+<p><font size="2"><strong>Etichete text formula</strong> (Cu excepția cazului </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">se folosește formula</font></a><font size="2">) Definește o formulă unică de formare a textului de pe etichetă atunci când se imprimă etichete pentru client. Astfel de formule sunt stocate în </font><a href="Catalog.ФормулыОписания/Help"><font size="2">formule Manualul</font></a><font size="2">. De exemplu, dacă </font><a href="Document.РасходыТовара/Help"><font size="2">document "flux de bunuri"</font></a><font size="2"> Set cu clientul său de etichete text, de asteptare </font><a href="DataProcessor.ПечатьЭтикетки/Help"><font size="2">imprimare etichete subrutină </font></a><font size="2">imprimanta va eticheta cu textul generat de această formulă. Dacă etichete text Formula pe care clientul nu este umplut, dar </font><a href="Catalog.Склады/Help"><font size="2">Depozit de contabilitate folosit</font></a><font size="2"> și o formulă pentru deplin </font><a href="Catalog.Склады/Help"><font size="2">Depozit</font></a><font size="2"> punerea în aplicare, acesta va fi utilizat. Ultimul pas este de a folosi formula de bază a formării etichetele text </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">setările de program</font></a><font size="2">. Dacă nu a fost umplut și apoi etichetele text va fi egal cu textul </font><a href="InformationRegister.ШтрихКоды/Help"><font size="2">Coduri de bare</font></a><font size="2"></font><a href="Catalog.Номенклатура/Help"><font size="2"> Nomenclatură</font></a><font size="2">.</font></p>
+<p align="justify"><font size="2">Textul etichetei formulă exemplu:</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p class="SourceCode"><em><font size="2"><font color="#413003">SokrLP (Int (Pret) + 1) + "" + Leo (Номенклатура.НоменклатурнаяГруппа.Код, 2) + stânga (Номенклатура.Производитель.Код, 2) + "x" + Format (preț, "CC = 9; CHDTS = 0 ")</font></font></em></p>
+<p class="SourceCode"><font size="2">Formulele trebuie să fie scrise în limbaj de programare 1C.</font></p></blockquote>
+<p><font size="2"><strong>Nume Print</strong> - Textul care va fi afișat în "Clientul" atunci când se imprimă documente din program. Acest text poate diferi de denumirea obișnuită a clientului. De exemplu, numele clientului în directorul - Sail, LLC, iar numele său pentru print - "Parus", Odesa, Malaya Arnautskaya 9.</font></p>
+<p><strong><font size="2">Rezumat </font><a href="Catalog.Валюты/Help"><font size="2">Valută</font></a></strong><font size="2"> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">dacă este activat</font></a><font size="2"> Ratele de contabilitate), este stabilit în documentele atunci când alegeți această Client setează automat anumită valută.</font></p>
+<p><font size="2"><strong>Angajat net</strong> (</font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">dacă este activat</font></a><font size="2"> contabil salarizare) poate servi clientul. Astfel de clienți sunt create în mod automat atunci când introduceți informații </font><a href="Catalog.Сотрудники/Help"><font size="2">angajați</font></a><font size="2">. Acest lucru este necesar pentru a oferi angajaților un discount la achiziționarea de bunuri și să țină seama de așezări cu clientul la </font><a href="Document.ДвиженияДенег/Help"><font size="2">stat de plată</font></a><font size="2"> angajat. </font></p>
+<p><font size="2">Pentru un grup de clienți, puteți specifica comision procentual. El va funcționa dacă nu folosiți un procent de <a href="Catalog.Договора/Help">Tratat</a> cu Clientul.</font></p>
+<p><font size="2"></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="2">Rețineți că, în cazul în care programul să țină evidența pe clienți, dar nu conduce </font><a href="CommonForm.НастройкиБазыДанных/Help"><font size="2">păstrarea banilor</font></a><font size="2">Apoi, în analiza </font><a href="Report.РасчетыСКлиентами/Help"><font size="2">Raportul "Conturi de încasat"</font></a><font size="2"> imagine va arata unilateral. Ca și în cazul în care mărfurile au fost puse în aplicare, dar nu sunt plătite de către client, astfel încât nu este posibil să se înregistreze în program <a href="Document.ДвиженияДенег/Help">Încasări de la clienți</a> atunci când puterea de cont cu bani.</font></p>
+<p><font size="2">Atunci când este necesară pentru a compensa datoria între client și / sau <a href="Catalog.Поставщики/Help">Furnizori</a> ținând cont de venituri / ieșire de bani, ar trebui să utilizați o formă specială de corecții "<a href="Document.КорректировкиИРегистрацияОстатков/Help">Compensare contrapartide datoriei</a>. "</font></p>
+<p><font size="2">Conturi - denumirea comună pentru clienții și furnizorii.</font></p></blockquote><font size="2">
+<p></p>
+<p></p>
+<p><font size="2">
+<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" face="Calibri"><em>TRADE ELEMENTARY</em></font></a><font face="Calibri"><em>, 2013</em></font> 
+<dl><dt><pre><font face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.SZ64" width="64" align="middle" height="64"></img></font><a title="email to developer" href="mailto:sza@ukr.net"><font face="Calibri">   sza@ukr.net</font></a><font face="Calibri"></font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font face="Calibri"> http://www.ELTR.od.ua</font></a></pre></dt></dl></font>
+</p><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p></font></body></html>

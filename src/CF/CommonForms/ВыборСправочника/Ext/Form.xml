@@ -1,0 +1,1073 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Group>Horizontal</Group>
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="81">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>bg</v8:lang>
+						<v8:content>Близо</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>bl</v8:lang>
+						<v8:content>Блізка</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>In der Nähe</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>pl</v8:lang>
+						<v8:content>Blisko</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Închide</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>th</v8:lang>
+						<v8:content>ใกล้</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>zh</v8:lang>
+						<v8:content>关闭</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>kk</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Закрити</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="82"/>
+			</Button>
+			<Button name="ФормаИзменитьФорму" id="79">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="80"/>
+			</Button>
+			<Button name="ФормаСправка" id="77">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="78"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="УчетНоменклатуры" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Счетоводство номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Бухгалтарскі ўлік наменклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Accounting-Nomenklatur</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Accounting nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nomenklatura rachunkowości</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Nomenclatura de contabilitate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>บัญชีการตั้งชื่อ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>会计术语</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Accounting nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Облік номенклатури</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Счетоводство номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Бухгалтарскі ўлік наменклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Accounting-Nomenklatur</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Accounting nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nomenklatura rachunkowości</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Nomenclatura de contabilitate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>บัญชีการตั้งชื่อ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>会计术语</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Accounting nomenclature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Облік номенклатури</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="УчетНоменклатурыРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Button name="СправочникНоменклатураОткрытьСписок" id="5">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.Номенклатура.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Номенклатура</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникНоменклатураОткрытьСписокРасширеннаяПодсказка" id="6"/>
+				</Button>
+				<Button name="СправочникЕдиницыИзмеренияОткрытьСписок" id="55">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.ЕдиницыИзмерения.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ЕдиницыИзмерения</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникЕдиницыИзмеренияОткрытьСписокРасширеннаяПодсказка" id="56"/>
+				</Button>
+				<Button name="СправочникНоменклатурныеГруппыОткрытьСписок" id="9">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.НоменклатурныеГруппы.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.НоменклатурнаяГруппа</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникНоменклатурныеГруппыОткрытьСписокРасширеннаяПодсказка" id="10"/>
+				</Button>
+				<Button name="СправочникГруппыАналоговОткрытьСписок" id="57">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.ГруппыАналогов.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Аналоги</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникГруппыАналоговОткрытьСписокРасширеннаяПодсказка" id="58"/>
+				</Button>
+				<Button name="СправочникПроизводителиОткрытьСписок" id="11">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.Производители.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Производитель</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникПроизводителиОткрытьСписокРасширеннаяПодсказка" id="12"/>
+				</Button>
+				<Button name="РегистрСведенийНоменклатураЧастогоСпросаОткрытьСписок" id="29">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>InformationRegister.НоменклатураЧастогоСпроса.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.НоменклатураЧастогоСпроса</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="РегистрСведенийНоменклатураЧастогоСпросаОткрытьСписокРасширеннаяПодсказка" id="30"/>
+				</Button>
+				<Button name="СправочникСкладыОткрытьСписок" id="15">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.Склады.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Склад</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникСкладыОткрытьСписокРасширеннаяПодсказка" id="16"/>
+				</Button>
+				<Button name="СправочникВидыЦенОткрытьСписок" id="1">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.ВидыЦен.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ВидыЦен</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникВидыЦенОткрытьСписокРасширеннаяПодсказка" id="2"/>
+				</Button>
+				<Button name="СправочникСпецификацииОткрытьСписок" id="63">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.Спецификации.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Комплектация</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникСпецификацииОткрытьСписокРасширеннаяПодсказка" id="64"/>
+				</Button>
+				<Button name="СправочникСертификатыГигиеническиеЗаключенияОткрытьСписок" id="45">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.СертификатыГигиеническиеЗаключения.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Сертификаты</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникСертификатыГигиеническиеЗаключенияОткрытьСписокРасширеннаяПодсказка" id="46"/>
+				</Button>
+				<Button name="СправочникПозицииДляОказанияУслугЗаВремяНомераОткрытьСписок" id="53">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.ПозицииДляОказанияУслугЗаВремяНомера.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ПозицияНомер</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникПозицииДляОказанияУслугЗаВремяНомераОткрытьСписокРасширеннаяПодсказка" id="54"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СредняяКолонка" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя колонка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Средната колона</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>У сярэдняй калонцы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Die mittlere Spalte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The middle column</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Środkowa kolumna</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Coloana din mijloc</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คอลัมน์กลาง</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>中间一栏</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>The middle column</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Середня колонка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя колонка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Средната колона</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>У сярэдняй калонцы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Die mittlere Spalte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The middle column</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Środkowa kolumna</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Coloana din mijloc</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>คอลัมน์กลาง</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>中间一栏</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>The middle column</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Середня колонка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СредняяКолонкаРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<UsualGroup name="УчетДенег" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учет денег</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Счетоводно отчитане на пари</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Ўлік грошай</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Bilanzierung von Geld</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting for money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Księgowanie pieniędzy</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>De contabilitate pentru bani</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การบัญชีสำหรับเงิน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>占资金</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Accounting for money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Облік грошей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учет денег</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Счетоводно отчитане на пари</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Ўлік грошай</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Bilanzierung von Geld</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting for money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Księgowanie pieniędzy</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>De contabilitate pentru bani</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การบัญชีสำหรับเงิน</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>占资金</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Accounting for money</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Облік грошей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="УчетДенегРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<Button name="СправочникВалютыОткрытьСписок" id="25">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.Валюты.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Валюты</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникВалютыОткрытьСписокРасширеннаяПодсказка" id="26"/>
+						</Button>
+						<Button name="СправочникХранилищаДенегОткрытьСписок" id="35">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.ХранилищаДенег.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ХранилищаДенег</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникХранилищаДенегОткрытьСписокРасширеннаяПодсказка" id="36"/>
+						</Button>
+						<Button name="СправочникСтатьиДвиженияДенегОткрытьСписок" id="17">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.СтатьиДвиженияДенег.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.СтатьиДвиженияДенег</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникСтатьиДвиженияДенегОткрытьСписокРасширеннаяПодсказка" id="18"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="УчетВзаиморасчетов" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учет взаиморасчетов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Отчитане на населените места</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Ўлік разлікаў</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Bilanzierung von Siedlungen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting for settlements</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Rozliczanie rozrachunków</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>De contabilitate pentru așezări</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การบัญชีสำหรับการชำระหนี้</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>占定居点</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Accounting for settlements</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Облік взаєморозрахунків</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учет взаиморасчетов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Отчитане на населените места</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Ўлік разлікаў</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Bilanzierung von Siedlungen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting for settlements</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Rozliczanie rozrachunków</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>De contabilitate pentru așezări</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>การบัญชีสำหรับการชำระหนี้</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>占定居点</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Accounting for settlements</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Облік взаєморозрахунків</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="УчетВзаиморасчетовРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<Button name="СправочникПоставщикиОткрытьСписок" id="7">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.Поставщики.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Поставщики</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникПоставщикиОткрытьСписокРасширеннаяПодсказка" id="8"/>
+						</Button>
+						<Button name="СправочникКлиентыОткрытьСписок" id="3">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.Клиенты.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Клиенты</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникКлиентыОткрытьСписокРасширеннаяПодсказка" id="4"/>
+						</Button>
+						<Button name="СправочникОрганизацииОткрытьСписок" id="33">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.Организации.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Организации</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникОрганизацииОткрытьСписокРасширеннаяПодсказка" id="34"/>
+						</Button>
+						<Button name="СправочникДоговораОткрытьСписок" id="51">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.Договора.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Договор</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникДоговораОткрытьСписокРасширеннаяПодсказка" id="52"/>
+						</Button>
+						<Button name="СправочникОбъектыКлиентовОткрытьСписок" id="91">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>Catalog.ОбъектыКлиентов.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ОбъектыКлиентов</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникОбъектыКлиентовОткрытьСписокРасширеннаяПодсказка" id="92"/>
+						</Button>
+						<Button name="СправочникПартииПриобретенияОткрытьСписок" id="31">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.ПартииПриобретения.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ПартииПриобретения</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникПартииПриобретенияОткрытьСписокРасширеннаяПодсказка" id="32"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Прочие" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Друг</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Іншы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Andere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Inny</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Alte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>อื่น ๆ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>其他</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Інші</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Друг</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bl</v8:lang>
+					<v8:content>Іншы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Andere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Inny</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Alte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>th</v8:lang>
+					<v8:content>อื่น ๆ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>其他</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>kk</v8:lang>
+					<v8:content>Other</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Інші</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПрочиеРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<Button name="СправочникСотрудникиОткрытьСписок" id="27">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.Сотрудники.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Сотрудники</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникСотрудникиОткрытьСписокРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="СправочникПодразделенияОткрытьСписок" id="59">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.Подразделения.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Подразделения</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникПодразделенияОткрытьСписокРасширеннаяПодсказка" id="60"/>
+				</Button>
+				<Button name="СправочникСредстваПредприятияОткрытьСписок" id="61">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.СредстваПредприятия.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Средства</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникСредстваПредприятияОткрытьСписокРасширеннаяПодсказка" id="62"/>
+				</Button>
+				<Button name="СправочникРегионыОткрытьСписок" id="13">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.Регионы.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Регион</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникРегионыОткрытьСписокРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="СправочникЛокацииОткрытьСписок" id="73">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.Локации.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Локация</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникЛокацииОткрытьСписокРасширеннаяПодсказка" id="74"/>
+				</Button>
+				<Button name="СправочникФормулыОписанияОткрытьСписок" id="19">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.ФормулыОписания.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Формула_</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникФормулыОписанияОткрытьСписокРасширеннаяПодсказка" id="20"/>
+				</Button>
+				<Button name="СправочникПодсистемаИЭИмпортЭкспортФСШаблоныОткрытьСписок" id="21">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.ПодсистемаИЭИмпортЭкспортФСШаблоны.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ПодсистемаИЭШаблон</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникПодсистемаИЭИмпортЭкспортФСШаблоныОткрытьСписокРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="СправочникИзображенияОткрытьСписок" id="47">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Catalog.Изображения.StandardCommand.OpenList</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.Изображение</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправочникИзображенияОткрытьСписокРасширеннаяПодсказка" id="48"/>
+				</Button>
+				<UsualGroup name="ДругиеСправочники" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Другие справочники</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Други справочници</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Іншыя даведнікі</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Weitere Referenz-Bücher</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Other reference books</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Другие справочники</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Inne leksykony</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Alte cărți de referință</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>หนังสืออ้างอิงอื่น ๆ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Інші довідники</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>其他参考书</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Другие справочники</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bg</v8:lang>
+							<v8:content>Други справочници</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>bl</v8:lang>
+							<v8:content>Іншыя даведнікі</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Weitere Referenz-Bücher</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Other reference books</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>kk</v8:lang>
+							<v8:content>Другие справочники</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Inne leksykony</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Alte cărți de referință</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>th</v8:lang>
+							<v8:content>หนังสืออ้างอิงอื่น ๆ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Інші довідники</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>其他参考书</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<ExtendedTooltip name="ДругиеСправочникиРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<Button name="РегистрСведенийСебестоимостьТоваровБезКоличественногоУчетаИУслугОткрытьСписок" id="83">
+							<Type>UsualButton</Type>
+							<CommandName>InformationRegister.СебестоимостьТоваровБезКоличественногоУчетаИУслуг.StandardCommand.OpenList</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Себестоимость услуг и товаров без количественного учета</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bg</v8:lang>
+									<v8:content>Разходите за услуги и стоки без количествено</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>bl</v8:lang>
+									<v8:content>Сабекошт паслуг і тавараў без колькаснага ўліку</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Kosten für Dienstleistungen und Waren ohne Quantifizierung</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Cost of services and goods without quantifying</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>kk</v8:lang>
+									<v8:content>Себестоимость услуг и товаров без количественного учета</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Koszt usług i towarów bez ilościowego</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Costul de servicii și bunuri fără a cuantifica</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>th</v8:lang>
+									<v8:content>ต้นทุนการให้บริการและสินค้าโดยไม่ต้องเชิงปริมาณ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Собівартість послуг і товарів без кількісного обліку</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>服务和商品的成本没有量化</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="РегистрСведенийСебестоимостьТоваровБезКоличественногоУчетаИУслугОткрытьСписокРасширеннаяПодсказка" id="84"/>
+						</Button>
+						<Button name="СправочникАссортиментДляРабочегоМестаКассираОткрытьСписок" id="67">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.АссортиментДляРабочегоМестаКассира.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Ассортимент</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникАссортиментДляРабочегоМестаКассираОткрытьСписокРасширеннаяПодсказка" id="68"/>
+						</Button>
+						<Button name="СправочникСпособыДоставкиОткрытьСписок" id="65">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.СпособыДоставки.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.СпособыДоставки</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникСпособыДоставкиОткрытьСписокРасширеннаяПодсказка" id="66"/>
+						</Button>
+						<Button name="СправочникВидыДокументаСертификатаИлиГигиеническогоЗаключенияОткрытьСписок" id="49">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.ВидыДокументаСертификатаИлиГигиеническогоЗаключения.StandardCommand.OpenList</CommandName>
+							<ExtendedTooltip name="СправочникВидыДокументаСертификатаИлиГигиеническогоЗаключенияОткрытьСписокРасширеннаяПодсказка" id="50"/>
+						</Button>
+						<Button name="СправочникПричиныОтменыЗаказовКлиентовОткрытьСписок" id="85">
+							<Type>UsualButton</Type>
+							<CommandName>Catalog.ПричиныОтменыЗаказовКлиентов.StandardCommand.OpenList</CommandName>
+							<ExtendedTooltip name="СправочникПричиныОтменыЗаказовКлиентовОткрытьСписокРасширеннаяПодсказка" id="86"/>
+						</Button>
+						<Button name="СправочникПричиныСторнированияДокументовОткрытьСписок" id="89">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.ПричиныСторнированияДокументов.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Сторно</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникПричиныСторнированияДокументовОткрытьСписокРасширеннаяПодсказка" id="90"/>
+						</Button>
+						<Button name="СправочникЯзыкиОткрытьСписок" id="23">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.Языки.StandardCommand.OpenList</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Языки</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СправочникЯзыкиОткрытьСписокРасширеннаяПодсказка" id="24"/>
+						</Button>
+						<Button name="СправочникЗначенияЯчеекТаблицДанныхОткрытьСписок" id="71">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Catalog.ЗначенияЯчеекТаблицДанных.StandardCommand.OpenList</CommandName>
+							<ExtendedTooltip name="СправочникЗначенияЯчеекТаблицДанныхОткрытьСписокРасширеннаяПодсказка" id="72"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+</Form>
