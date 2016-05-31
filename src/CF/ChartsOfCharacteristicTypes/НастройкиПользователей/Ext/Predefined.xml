@@ -97,6 +97,15 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="6455ab0e-ed2f-4582-83ad-c0f5ece56d3f">
+				<Name>ГруппаНовыхКлиентовПоУмолчанию</Name>
+				<Code>00303</Code>
+				<Description>Группа новых клиентов по умолчанию</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Клиенты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="810aadfa-4005-471c-a13f-194019ddfb64">
 				<Name>КлиентПоУмолчанию</Name>
 				<Code>00014</Code>
@@ -593,7 +602,7 @@
 			<Item id="f39ba1a3-b198-4202-a8d2-e050da7bff13">
 				<Name>ПредставлятьСерииНоменклатурыВДокументахОтдельнымОкном</Name>
 				<Code>NF072</Code>
-				<Description>Представлять серии номенклатуры в документах отдельным окном</Description>
+				<Description>Представлять серии товара в документах отдельным окном</Description>
 				<Type>
 					<v8:Type>xs:boolean</v8:Type>
 				</Type>
@@ -848,7 +857,7 @@
 			<Item id="21668f98-a874-4e03-9e03-e4cf44f7b99f">
 				<Name>ВторойВидЦенДляЭтикетки</Name>
 				<Code>NF133</Code>
-				<Description>Второй вид цен для этикетки</Description>
+				<Description>Второй Вид цен для этикетки</Description>
 				<Type>
 					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыЦен</v8:Type>
 				</Type>
@@ -1142,7 +1151,7 @@
 			<Item id="14093634-6eb5-4015-b427-94fc6fe89f6d">
 				<Name>ЦенаТоваровСодержитНДС</Name>
 				<Code>NF135</Code>
-				<Description>Цена товаров содержит НДС</Description>
+				<Description>Цена номенклатуры содержит НДС</Description>
 				<Type>
 					<v8:Type>xs:boolean</v8:Type>
 				</Type>
@@ -1306,7 +1315,7 @@
 			<Item id="66f7e7b2-0ec2-48e4-9a78-415adb47589d">
 				<Name>ФормаОплатыДляДенегВДокументахРасходаИПриходаТоваров</Name>
 				<Code>00040</Code>
-				<Description>Форма оплаты для денег в документах расхода и прихода товаров</Description>
+				<Description>Форма оплаты для денег в документах расхода и прихода товара</Description>
 				<Type>
 					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ФормыОплаты</v8:Type>
 				</Type>
@@ -1366,6 +1375,15 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="79cc3886-5378-47e9-8391-3f19eea97d67">
+				<Name>ЗаписыватьВсеСообщенияПользователюОтСистемыВЖурналСобытий</Name>
+				<Code>00330</Code>
+				<Description>Записывать все сообщения пользователю от системы в журнал событий</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="9a98a8e6-3da2-4122-b82f-9ff082bfec80">
 				<Name>ИспользоватьWebcam</Name>
 				<Code>NF195</Code>
@@ -1379,6 +1397,15 @@
 				<Name>ИспользоватьОтдельныеПоляАдресаИТелефонаВЗаказахКлиентов</Name>
 				<Code>NF093</Code>
 				<Description>Использовать отдельные поля адреса и телефона в заказах клиентов</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8a412976-2a65-4e55-9f34-6de6a3c99e9e">
+				<Name>НаправитьВсеСообщенияПользователямОтСистемыВОдноОкно</Name>
+				<Code>00321</Code>
+				<Description>Направить все сообщения пользователям от системы в одно окно</Description>
 				<Type>
 					<v8:Type>xs:boolean</v8:Type>
 				</Type>
@@ -1439,16 +1466,16 @@
 				<IsFolder>false</IsFolder>
 			</Item>
 			<Item id="95309bbb-d75e-473f-a6e6-361eb61a91fb">
-				<Name>ПоказыватьПриСтартеСписокКлиентовУКоторыхСгодняЗавтраПослезавтраДеньРождения</Name>
+				<Name>ПоказыватьПриСтартеСписокКлиентовУКоторыхСегодняЗавтраПослезавтраДеньРождения</Name>
 				<Code>00070</Code>
-				<Description>Показывать при старте список клиентов, у которых сгодня завтра послезавтра день рождения</Description>
+				<Description>Показывать при старте список клиентов, у которых сегодня завтра послезавтра день рождения</Description>
 				<Type>
 					<v8:Type>xs:boolean</v8:Type>
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
 			<Item id="33b592fd-5eda-45ea-ba39-3dcafb1d7fce">
-				<Name>ПредлагатьВосстВалПрибПриПровПрихДокЗадним</Name>
+				<Name>ПредлагатьВосстанавливатьВаловуюПриПроведенииПриходаЗадним</Name>
 				<Code>00075</Code>
 				<Description>Предлагать восстанавливать показатели валовой прибыли сразу при проведении приходного документа задн</Description>
 				<Type>
@@ -1537,10 +1564,10 @@
 		<Type/>
 		<IsFolder>true</IsFolder>
 		<ChildItems>
-			<Item id="01601650-63c1-4f54-a236-f4d5cd31ff66">
-				<Name>ЭлектроннаяПочтаАдресСервераPOP3</Name>
-				<Code>NF301</Code>
-				<Description>Адрес сервера POP3</Description>
+			<Item id="5bc95ef6-a3a9-430a-b3dc-f7a476b44ec2">
+				<Name>ЭлектроннаяПочтаАдресСервераIMAP</Name>
+				<Code>NF315</Code>
+				<Description>IMAP Адрес сервера</Description>
 				<Type>
 					<v8:Type>xs:string</v8:Type>
 					<v8:StringQualifiers>
@@ -1550,16 +1577,212 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
-			<Item id="3e5af16f-c9fb-4dcd-9176-7a0174827cb7">
-				<Name>ЭлектроннаяПочтаАдресСервераSMTP</Name>
-				<Code>NF302</Code>
-				<Description>Адрес сервера SMTP</Description>
+			<Item id="43f6a778-3b60-4db5-ba8e-40e6b452365f">
+				<Name>ЭлектроннаяПочтаИспользоватьSSLIMAP</Name>
+				<Code>NF318</Code>
+				<Description>IMAP Использовать SSL</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="cbedff97-0cd9-4f9b-8ad4-39d426f2a04d">
+				<Name>ЭлектроннаяПочтаПарольIMAP</Name>
+				<Code>NF319</Code>
+				<Description>IMAP Пароль</Description>
 				<Type>
 					<v8:Type>xs:string</v8:Type>
 					<v8:StringQualifiers>
 						<v8:Length>100</v8:Length>
 						<v8:AllowedLength>Variable</v8:AllowedLength>
 					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="659074e0-74aa-451e-88dc-dd1a19e41452">
+				<Name>ЭлектроннаяПочтаПользовательIMAP</Name>
+				<Code>NF320</Code>
+				<Description>IMAP Пользователь</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e0a4123c-10cb-488e-a33b-3f11bd2ef57f">
+				<Name>ЭлектроннаяПочтаПортIMAP</Name>
+				<Code>NF321</Code>
+				<Description>IMAP Порт</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="f748c5d3-2a17-423b-a3a5-b2dcd62539c6">
+				<Name>ЭлектроннаяПочтаТолькоЗащищеннаяАутентификацияIMAP</Name>
+				<Code>NF322</Code>
+				<Description>IMAP Только защищенная аутентификация</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="01601650-63c1-4f54-a236-f4d5cd31ff66">
+				<Name>ЭлектроннаяПочтаАдресСервераPOP3</Name>
+				<Code>NF301</Code>
+				<Description>POP3 Адрес сервера</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="08546be9-38f4-4ce9-b0a6-ab22762475ec">
+				<Name>ЭлектроннаяПочтаАутентификацияPOP3</Name>
+				<Code>NF316</Code>
+				<Description>POP3 Аутентификация</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="2886a539-86f6-432b-85c5-7c8225d30d27">
+				<Name>ЭлектроннаяПочтаИспользоватьSSLPOP3</Name>
+				<Code>NF304</Code>
+				<Description>POP3 Использовать SSL</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="d9c5d8a7-6007-42dc-a80f-257f5916ef26">
+				<Name>ЭлектроннаяПочтаPOP3ПередSMTP</Name>
+				<Code>NF314</Code>
+				<Description>POP3 перед SMTP</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e1bc6753-45c5-4c99-96a5-f5b96ac08d35">
+				<Name>ЭлектроннаяПочтаПортPOP3</Name>
+				<Code>NF312</Code>
+				<Description>POP3 Порт</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5ee64596-116b-4b58-8153-7988f98a682a">
+				<Name>ЭлектроннаяПочтаТолькоЗащищеннаяАутентификацияPOP3</Name>
+				<Code>NF323</Code>
+				<Description>POP3 Только защищенная аутентификация</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="3e5af16f-c9fb-4dcd-9176-7a0174827cb7">
+				<Name>ЭлектроннаяПочтаАдресСервераSMTP</Name>
+				<Code>NF302</Code>
+				<Description>SMTP Адрес сервера</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="d7c3ea81-1be3-4558-a180-cca8205601d0">
+				<Name>ЭлектроннаяПочтаАутентификацияSMTP</Name>
+				<Code>NF317</Code>
+				<Description>SMTP Аутентификация</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="80e5d446-a0de-473b-acf9-fb26e72e291c">
+				<Name>ЭлектроннаяПочтаИспользоватьSSLSMTP</Name>
+				<Code>NF305</Code>
+				<Description>SMTP Использовать SSL</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="69474980-82c4-4648-93fa-5b09643b1fcc">
+				<Name>ЭлектроннаяПочтаПарольSMTP</Name>
+				<Code>NF308</Code>
+				<Description>SMTP Пароль</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1f254e3d-3c8c-43ad-8c95-5d57a0ecc0ff">
+				<Name>ЭлектроннаяПочтаПользовательSMTP</Name>
+				<Code>NF311</Code>
+				<Description>SMTP Пользователь</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="42655774-13fc-4fb7-b06e-138d72ab64d8">
+				<Name>ЭлектроннаяПочтаПортSMTP</Name>
+				<Code>NF313</Code>
+				<Description>SMTP Порт</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>15</v8:Digits>
+						<v8:FractionDigits>3</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="df3f7f24-fa71-4be7-ba19-e8b88bf22725">
+				<Name>ЭлектроннаяПочтаТолькоЗащищеннаяАутентификацияSMTP</Name>
+				<Code>NF324</Code>
+				<Description>SMTP Только защищенная аутентификация</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
@@ -1573,24 +1796,6 @@
 						<v8:Length>100</v8:Length>
 						<v8:AllowedLength>Variable</v8:AllowedLength>
 					</v8:StringQualifiers>
-				</Type>
-				<IsFolder>false</IsFolder>
-			</Item>
-			<Item id="2886a539-86f6-432b-85c5-7c8225d30d27">
-				<Name>ЭлектроннаяПочтаИспользоватьSSLPOP3</Name>
-				<Code>NF304</Code>
-				<Description>Использовать SSL POP3</Description>
-				<Type>
-					<v8:Type>xs:boolean</v8:Type>
-				</Type>
-				<IsFolder>false</IsFolder>
-			</Item>
-			<Item id="80e5d446-a0de-473b-acf9-fb26e72e291c">
-				<Name>ЭлектроннаяПочтаИспользоватьSSLSMTP</Name>
-				<Code>NF305</Code>
-				<Description>Использовать SSL SMTP</Description>
-				<Type>
-					<v8:Type>xs:boolean</v8:Type>
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
@@ -1629,19 +1834,6 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
-			<Item id="69474980-82c4-4648-93fa-5b09643b1fcc">
-				<Name>ЭлектроннаяПочтаПарольSMTP</Name>
-				<Code>NF308</Code>
-				<Description>Пароль SMTP</Description>
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>100</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-				<IsFolder>false</IsFolder>
-			</Item>
 			<Item id="892c3dc9-6f6e-4ff6-817d-7b27f52e6375">
 				<Name>ЭлектроннаяПочтаПодпись</Name>
 				<Code>NF309</Code>
@@ -1665,47 +1857,6 @@
 						<v8:Length>100</v8:Length>
 						<v8:AllowedLength>Variable</v8:AllowedLength>
 					</v8:StringQualifiers>
-				</Type>
-				<IsFolder>false</IsFolder>
-			</Item>
-			<Item id="1f254e3d-3c8c-43ad-8c95-5d57a0ecc0ff">
-				<Name>ЭлектроннаяПочтаПользовательSMTP</Name>
-				<Code>NF311</Code>
-				<Description>Пользователь SMTP</Description>
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>100</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-				<IsFolder>false</IsFolder>
-			</Item>
-			<Item id="e1bc6753-45c5-4c99-96a5-f5b96ac08d35">
-				<Name>ЭлектроннаяПочтаПортPOP3</Name>
-				<Code>NF312</Code>
-				<Description>Порт POP3</Description>
-				<Type>
-					<v8:Type>xs:decimal</v8:Type>
-					<v8:NumberQualifiers>
-						<v8:Digits>15</v8:Digits>
-						<v8:FractionDigits>3</v8:FractionDigits>
-						<v8:AllowedSign>Any</v8:AllowedSign>
-					</v8:NumberQualifiers>
-				</Type>
-				<IsFolder>false</IsFolder>
-			</Item>
-			<Item id="42655774-13fc-4fb7-b06e-138d72ab64d8">
-				<Name>ЭлектроннаяПочтаПортSMTP</Name>
-				<Code>NF313</Code>
-				<Description>Порт SMTP</Description>
-				<Type>
-					<v8:Type>xs:decimal</v8:Type>
-					<v8:NumberQualifiers>
-						<v8:Digits>15</v8:Digits>
-						<v8:FractionDigits>3</v8:FractionDigits>
-						<v8:AllowedSign>Any</v8:AllowedSign>
-					</v8:NumberQualifiers>
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>

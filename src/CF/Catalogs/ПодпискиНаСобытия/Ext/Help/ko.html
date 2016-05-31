@@ -1,26 +1,26 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.17842"></meta></head><body>
-<p><font size="4"><strong>이벤트 디렉토리 구독</strong></font></p>
-<p><font size="2"><img src="CommonPicture.СправочникПодпискиНаСобытия"></img> 디렉토리는 복잡한 조건이 데이터베이스 개체와 이벤트를 구독 지정할 수 있습니다 : </font></p>
-<ul><li><font size="2">요소 디렉토리 또는 문서를 기록하는 단계;</font>
-</li><li><font size="2"> 문서를 들고;</font>
-</li><li><font size="2"> 회원 수첩 또는 문서의 제거에 표시;</font>
-</li><li><font size="2"> 발견 (또는 기존 디렉토리 또는 문서의 요소와 새로운 지인을 만들려고)</font>
-</li><li><font size="2"> 폐쇄.</font></li></ul><p><font size="2">가입 조건은 동일한 유형, 또는 특정 데이터베이스 개체의 모든 개체에 적용 할 수 있습니다.</font></p>
-<p><font size="2">프로그램에서는 조건에게 이벤트에 반응 할 필요성을 명확히 것 같은 조건부 언어 (1C)를 설정할 수있다. 당신은을 통해 객체를 참조 할 수 있습니다. "<em>SsylkaNaObekt</em>". </font></p>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10586.103"></meta></head><body>
+<p><font size="4"><strong>디렉토리 구독 이벤트</strong></font></p>
+<p><font size="2"><img src="CommonPicture.СправочникПодпискиНаСобытия"></img> 디렉토리는 복잡한 조건이 데이터베이스 오브젝트와 이벤트를 구독 정의 할 수 있습니다 :</font></p>
+<ul><li><font size="2">디렉토리 항목 기록 또는 문서;</font> 
+</li><li><font size="2">문서를 들고;</font> 
+</li><li><font size="2">마크 제거 책이나 문서 요소;</font> 
+</li><li><font size="2">발견 (또는 기존 디렉토리 또는 문서 요소와 새로운 지인을 만드는 시도);</font> 
+</li><li><font size="2">폐쇄.</font></li></ul><p><font size="2">가입 조건은 동일한 유형, 또는 특정 데이터베이스 개체의 모든 개체에 적용 할 수있다.</font></p>
+<p><font size="2">프로그램의 관점에서는 이벤트에 반응 할 필요성을 명확히하는 조건부 언어 (1C)를 지정할 수있다.당신은을 통해 개체에 액세스 할 수 있습니다. "<em>SsylkaNaObekt</em></font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p><font size="2">예를 들어, 상태, <em>SsylkaNaObekt.Proveden = TRUE</em></font></p></blockquote>
-<p><font size="2">이벤트에 대한 반응의 다음과 같은 방법 :</font></p>
-<ul><li><font size="2">보고서 사용자</font>
-</li><li><font size="2"> 로그 파일을 녹음</font>
-</li><li><font size="2"> 이메일 보내기</font>
-</li><li><font size="2"> 프로그램을 실행</font></li></ul><p></p>
-<p><font size="2"> 사용자의 메시지의 수신자가있을 수 있습니다.</font></p>
-<p><font size="2">특징 : </font></p>
+<p><font size="2">예를 들어, 조건<em>SsylkaNaObekt.Proveden = TRUE</em></font></p></blockquote>
+<p><font size="2">다음과 같은 방법으로 이벤트에 응답합니다 :</font></p>
+<ul><li><font size="2">사용자에게 메시지</font> 
+</li><li><font size="2">저널 파일에 쓰기</font> 
+</li><li><font size="2">이메일 보내기</font> 
+</li><li><font size="2">프로그램을 실행</font></li></ul><p></p>
+<p><font size="2">사용자 수의 메시지의 수신자가 설정 될 수있다.</font></p>
+<p><font size="2">풍모:</font></p>
 <p><font size="2">고려해야하는 프로그램을 작성할 때</font></p>
-<p><font size="2">(코드) 실행중인 프로그램 객체 참조 가입의 경우라고합니다 : <em>소스 (하지만 형 링크)</em></font></p>
-<p><font size="2">프로그램 오브젝트를 실행하면, 그 이름 : <em>소스 (개체 유형)</em></font></p>
-<p><font size="2">소프트웨어 등록 (반응) 떨어져 다른 모든 구독을 처리하는 동안. 가입의 경우 즉, 반응은, 예를 들면, - 부호의 구현이 새로운 제품을 만들기 위해, 새로운 제품에 대한 이벤트 구독 호출되지 않을 것이다. 이 문제를 해결하려면이 코드를 작성하기 시작해야합니다 </font><em>ParametrySeansa.VypolnenieKodaZablokirovano = FALSE;</em></p>
+<p><font size="2">호출되는 프로그램 (코드) 가입 개체에 실행되는 연결하려면 :<em>소스 (그러나 링크 타입)</em></font></p>
+<p><font size="2">프로그램이 개체와 실행되면, 당신은 그것을 이름 :<em>소스 (개체 유형)</em></font></p>
+<p><font size="2">가입 (반응) 동안 다른 모든 가입 프로그램은 처리 중에 꺼집니다.새로운 제품을 만드는 코드 구현 신제품 이벤트 구독 호출되지 - 가입에 대한 응답이있는 경우 즉, 예를 들면,이다.이 문제를 해결하려면, 당신은 코드를 입력, 이러한 프로그램을 시작해야합니다</font><em>ParametrySeansa.VypolnenieKodaZablokirovano = FALSE;</em></p>
 <p></p>
-<hr></hr><a href="about:../id05b8eb8b-39ca-44ef-8db0-c22c8f279abe/038b5c85-fb1c-4082-9c4c-e69f8928bf3a"><font color="#413003" size="2" face="Calibri"><em>ELEMENTARY 무역</em></font></a><font size="2"><font face="Calibri"><em>2015 년</em></font></font>
+<hr></hr><a href="Configuration.ElementalTrade/Help"><font color="#413003" size="2" face="Calibri"><em>초등학교 판매</em></font></a><font size="2"><font face="Calibri"><em></em></font></font> 
 <p></p>
-<p><font size="2" face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img></font><a title="email to developer" href="mailto:sza@ukr.net"><font size="2" face="Calibri">   sza@ukr.net</font></a><font size="2" face="Calibri"></font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font size="2" face="Calibri"> http://www.ELTR.od.ua</font></a></p></body></html>
+<p><font size="2" face="Calibri"><img style="HEIGHT: 30px; WIDTH: 30px" src="CommonPicture.ЗнакSZ64" width="64" align="middle" height="64"></img></font><a title="email to developer" href="mailto:sza@ukr.net"><font size="2" face="Calibri"></font></a><font size="2" face="Calibri"></font><a title="developer product page" href="https://sites.google.com/site/elementarytrade/home"><font size="2" face="Calibri"></font></a></p></body></html>
